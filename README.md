@@ -17,15 +17,18 @@ QUICK START (linux)
 3) fetch the database driver:
 ./ant download-PG-JDBC
 
-4) configure database connection:
+4) build it:
+./ant build
+
+5) configure database connection:
 look up CHANGEME in ./framework/entity/config/entityengine.xml
 
-5) load initial data:
+6) load initial data:
 ./ant load-demo
 OR
 ./ant load-seed
 
-6) start:
+7) start:
 ./ant start
 
 Access it by connecting to localhost:8080/catalog and logging in as admin with password ofbiz.
