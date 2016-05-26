@@ -21,7 +21,7 @@ under the License.
 <simple-methods xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/simple-methods-v2.xsd">
     <!-- CustomTimePeriod Services -->
-    <simple-method method-name="createCustomTimePeriod" short-description="Create a CustomTimePeriod">
+    <simple-method method-name="createCustomTimePeriod" short-description="Create a CustomTimePeriod" login-required="false">
         <check-permission permission="PERIOD_MAINT">
             <fail-property resource="CommonUiLabels" property="CommonGenericPermissionError"/>
         </check-permission>

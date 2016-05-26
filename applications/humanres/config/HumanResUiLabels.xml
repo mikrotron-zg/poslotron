@@ -198,15 +198,6 @@
         <value xml:lang="zh">沟通日期</value>
         <value xml:lang="zh_TW">溝通日期</value>
     </property>
-    <property key="FormFieldTitle_company">
-        <value xml:lang="en">Company</value>
-        <value xml:lang="it">Azienda</value>
-        <value xml:lang="ja">会社</value>
-        <value xml:lang="pt_BR">Companhia</value>
-        <value xml:lang="vi">Doanh nghiệp</value>
-        <value xml:lang="zh">公司</value>
-        <value xml:lang="zh_TW">公司</value>
-    </property>
     <property key="FormFieldTitle_dateModified">
         <value xml:lang="en">Date Modified</value>
         <value xml:lang="fr">Date modifiée</value>

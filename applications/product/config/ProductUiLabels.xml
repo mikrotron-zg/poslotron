@@ -3514,21 +3514,6 @@
         <value xml:lang="zh">佣金百分比</value>
         <value xml:lang="zh_TW">佣金百分比</value>
     </property>
-    <property key="FormFieldTitle_companyName">
-        <value xml:lang="de">Unternehmensname</value>
-        <value xml:lang="en">Company Name</value>
-        <value xml:lang="es">Nombre de la empresa</value>
-        <value xml:lang="fr">Nom de l'entreprise</value>
-        <value xml:lang="it">Nome Azienda</value>
-        <value xml:lang="ja">会社名称</value>
-        <value xml:lang="nl">Winkelnaam</value>
-        <value xml:lang="ro">Nume Firma</value>
-        <value xml:lang="ru">Имя компании</value>
-        <value xml:lang="th">ชื่อบริษัท</value>
-        <value xml:lang="vi">Tên Doanh nghiệp</value>
-        <value xml:lang="zh">公司名称</value>
-        <value xml:lang="zh_TW">公司名稱</value>
-    </property>
     <property key="FormFieldTitle_companyPartyId">
         <value xml:lang="de">Unternehmen Akteur ID</value>
         <value xml:lang="en">Comp. Party Id</value>

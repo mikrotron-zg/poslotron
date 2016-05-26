@@ -981,11 +981,21 @@ under the License.
         <security https="true" auth="false"/>
         <response name="success" type="view" value="newcustomer"/>
     </request-map>
+    <request-map uri="newcompany">
+        <security https="true" auth="false"/>
+        <response name="success" type="view" value="newcompany"/>
+    </request-map>
     <request-map uri="createcustomer">
         <security https="true" auth="false"/>
         <event type="simple" path="component://ecommerce/script/org/ofbiz/ecommerce/customer/CustomerEvents.xml" invoke="createCustomer"/>
         <response name="success" type="view" value="main"/>
         <response name="error" type="view" value="newcustomer"/>
+    </request-map>
+    <request-map uri="createcompany">
+        <security https="true" auth="false"/>
+        <event type="simple" path="component://commonext/script/org/ofbiz/setup/SetupEvents.xml" invoke="createOrganization"/>
+        <response name="success" type="view" value="main"/>
+        <response name="error" type="view" value="newcompany"/>
     </request-map>
 
     <!-- ======================= Customer Profile Requests ======================= -->
@@ -1019,7 +1029,7 @@ under the License.
     <request-map uri="editcontactmechnosave"><security https="true" auth="true"/><response name="success" type="view" value="editcontactmech"/></request-map>
 
     <request-map uri="createContactMech">
-        <security https="true" auth="true"/>
+        <security https="true" auth="false"/>
         <event type="service" invoke="createPartyContactMech"/>
         <response name="success" type="view" value="editcontactmech"/>
         <response name="error" type="view" value="editcontactmech"/>
@@ -1038,19 +1048,19 @@ under the License.
     </request-map>
 
     <request-map uri="createPostalAddressAndPurpose">
-        <security https="true" auth="true"/>
+        <security https="true" auth="false"/>
         <event type="service" invoke="createPartyPostalAddress"/>
         <response name="success" type="view" value="editcontactmech"/>
         <response name="error" type="view" value="editcontactmech"/>
     </request-map>
     <request-map uri="createPostalAddress">
-        <security https="true" auth="true"/>
+        <security https="true" auth="false"/>
         <event type="service" invoke="createPartyPostalAddress"/>
         <response name="success" type="view" value="editcontactmech"/>
         <response name="error" type="view" value="editcontactmech"/>
     </request-map>
     <request-map uri="updatePostalAddress">
-        <security https="true" auth="true"/>
+        <security https="true" auth="false"/>
         <event type="service" invoke="updatePartyPostalAddress"/>
         <response name="success" type="view" value="editcontactmech"/>
         <response name="error" type="view" value="editcontactmech"/>
@@ -1083,7 +1093,7 @@ under the License.
     </request-map>
 
     <request-map uri="createPartyContactMechPurpose">
-        <security https="true" auth="true"/>
+        <security https="true" auth="false"/>
         <event type="service" invoke="createPartyContactMechPurpose"/>
         <response name="success" type="view" value="editcontactmech"/>
         <response name="error" type="view" value="editcontactmech"/>
@@ -1852,14 +1862,14 @@ under the License.
     </request-map>
 
     <request-map uri="createPartyPostalAddress">
-        <security https="true" auth="true"/>
+        <security https="true" auth="false"/>
         <event type="service" invoke="createPostalAddressAndPurposes"/>
         <response name="success" type="request" value="json"/>
         <response name="error" type="request" value="json"/>
     </request-map>
 
     <request-map uri="updatePartyPostalAddress">
-        <security https="true" auth="true"/>
+        <security https="true" auth="false"/>
         <event type="service" invoke="updateContactMechAndPurposes"/>
         <response name="success" type="request" value="json"/>
         <response name="error" type="request" value="json"/>
@@ -2092,6 +2102,7 @@ under the License.
     <!-- Customer Info Views -->
     <view-map name="survey" type="screen" page="component://mikrotron/widget/CustomerScreens.xml#survey"/>
     <view-map name="newcustomer" type="screen" page="component://mikrotron/widget/CustomerScreens.xml#newcustomer"/>
+    <view-map name="newcompany" type="screen" page="component://mikrotron/widget/CustomerScreens.xml#newcompany"/>
 
     <view-map name="viewprofile" type="screen" page="component://mikrotron/widget/CustomerScreens.xml#viewprofile"/>
     <view-map name="editcontactmech" type="screen" page="component://mikrotron/widget/CustomerScreens.xml#editcontactmech"/>

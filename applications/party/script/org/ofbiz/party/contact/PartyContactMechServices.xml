@@ -20,7 +20,7 @@ under the License.
 
 <simple-methods xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/simple-methods-v2.xsd">
-    <simple-method method-name="createPartyContactMech" short-description="Create a PartyContactMech">
+    <simple-method method-name="createPartyContactMech" short-description="Create a PartyContactMech" login-required="false">
         <make-value entity-name="PartyContactMech" value-field="newValue"/>
         <if-empty field="parameters.partyId">
             <set field="parameters.partyId" from-field="userLogin.partyId"/>
@@ -163,7 +163,7 @@ under the License.
         <store-value value-field="partyContactMech"/>
     </simple-method>
 
-    <simple-method method-name="createPartyPostalAddress" short-description="Create a PostalAddress for party">
+    <simple-method method-name="createPartyPostalAddress" short-description="Create a PostalAddress for party" login-required="false">
         <if-empty field="parameters.partyId">
             <set field="parameters.partyId" from-field="userLogin.partyId"/>
         </if-empty>
@@ -258,7 +258,7 @@ under the License.
         <field-to-result field="newPartyContactMech.contactMechId" result-name="contactMechId"/>
     </simple-method>
 
-    <simple-method method-name="createPartyEmailAddress" short-description="Create an email address for party">
+    <simple-method method-name="createPartyEmailAddress" short-description="Create an email address for party" login-required="false">
         <if-empty field="parameters.partyId">
             <set field="parameters.partyId" from-field="userLogin.partyId"/>
         </if-empty>

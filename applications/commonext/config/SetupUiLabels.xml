@@ -211,6 +211,7 @@
     </property>
     <property key="SetupOrganizationNameIsMissing">
         <value xml:lang="en">Organization name is missing</value>
+        <value xml:lang="hr">Nedostaje naziv firme</value>
         <value xml:lang="it">Nome organizzazione è mancante</value>
         <value xml:lang="ja"></value>
         <value xml:lang="pt_BR">Nome da organização está faltando</value>

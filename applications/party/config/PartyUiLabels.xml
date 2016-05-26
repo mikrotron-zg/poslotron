@@ -130,6 +130,32 @@
         <value xml:lang="zh">通用名</value>
         <value xml:lang="zh_TW">通用名</value>
     </property>
+    <property key="FormFieldTitle_company">
+        <value xml:lang="en">Company</value>
+        <value xml:lang="hr">Tvrtka</value>
+        <value xml:lang="it">Azienda</value>
+        <value xml:lang="ja">会社</value>
+        <value xml:lang="pt_BR">Companhia</value>
+        <value xml:lang="vi">Doanh nghiệp</value>
+        <value xml:lang="zh">公司</value>
+        <value xml:lang="zh_TW">公司</value>
+    </property>
+    <property key="FormFieldTitle_companyName">
+        <value xml:lang="de">Unternehmensname</value>
+        <value xml:lang="en">Company Name</value>
+        <value xml:lang="es">Nombre de la empresa</value>
+        <value xml:lang="fr">Nom de l'entreprise</value>
+        <value xml:lang="hr">Naziv firme</value>
+        <value xml:lang="it">Nome Azienda</value>
+        <value xml:lang="ja">会社名称</value>
+        <value xml:lang="nl">Winkelnaam</value>
+        <value xml:lang="ro">Nume Firma</value>
+        <value xml:lang="ru">Имя компании</value>
+        <value xml:lang="th">ชื่อบริษัท</value>
+        <value xml:lang="vi">Tên Doanh nghiệp</value>
+        <value xml:lang="zh">公司名称</value>
+        <value xml:lang="zh_TW">公司名稱</value>
+    </property>
     <property key="FormFieldTitle_communicationEventId">
         <value xml:lang="de">Kommunikationsereignis ID</value>
         <value xml:lang="en">Communication Event Id</value>

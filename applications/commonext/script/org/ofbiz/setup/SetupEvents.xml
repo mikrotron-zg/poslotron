@@ -28,14 +28,18 @@
         <!-- this parameter must be set to true or the createUser method below will use a default password instead of the one entered by user -->
         <set field="create_allow_password" value="true"/>
 
-        <set field="parameters.roleTypeId" value="INTERNAL_ORGANIZATIO"/>
+        <if-compare field="parameters.roleTypeId" operator="equals" value="false">
+	        <!-- by default, party group gets internal organization role -->
+        	<set field="parameters.roleTypeId" value="INTERNAL_ORGANIZATIO"/>
+		</if-compare>
+		
         <now-timestamp field="nowStamp"/>
 
         <!-- Create the PartyGroup -->
         <call-map-processor in-map-name="parameters" out-map-name="partyGroupContext">
             <simple-map-processor name="newPartyGroup">
                 <process field="partyId"><copy/></process>
-                <process field="groupName"><copy to-field="groupName"/><not-empty><fail-property resource="" property="SetupOrganizationNameIsMissing"/></not-empty></process>
+                <process field="groupName"><copy to-field="groupName"/><not-empty><fail-property resource="SetupUiLabels" property="SetupOrganizationNameIsMissing"/></not-empty></process>
             </simple-map-processor>
         </call-map-processor>
 
@@ -161,21 +165,24 @@
         <set field="partyGroupContext.partyId" from-field="tempMap.partyId"/>
         <set field="partyRoleContext.partyId" from-field="tempMap.partyId"/>
         <set field="addressContext.partyId" from-field="tempMap.partyId"/>
+        <set field="addressPurposeContext.partyId" from-field="tempMap.partyId"/>
         <set field="workPhoneContext.partyId" from-field="tempMap.partyId"/>
         <set field="faxPhoneContext.partyId" from-field="tempMap.partyId"/>
         <set field="mobilePhoneContext.partyId" from-field="tempMap.partyId"/>
         <set field="emailContext.partyId" from-field="tempMap.partyId"/>
         
+        <!-- add Carrier roletype -->
+        <!-- why? 
         <call-service service-name="createPartyRole" in-map-name="partyRoleContext"/>
-        <!-- add Carrier roletype  -->
         <set field="partyRoleContext.roleTypeId" value="CARRIER"/>
         <call-service service-name="createPartyRole" in-map-name="partyRoleContext"/>
-        
+        -->
+          
         <!-- billing address -->
         <if-compare field="parameters.USE_ADDRESS" operator="equals" value="false">
             <!-- address not used, do nothing -->
             <else>
-                <call-service service-name="createPartyPostalAddress" in-map-name="addressContext">
+                <call-service service-name="createPostalAddressAndPurposes" in-map-name="addressContext">
                     <result-to-field result-name="contactMechId" field="addressPurposeContext.contactMechId"/>
                 </call-service>
                 <set field="addressPurposeContext.partyId" from-field="tempMap.partyId"/>
@@ -239,7 +246,8 @@
         <!-- General Ledger Setup for the new organization -->
         <!--<call-simple-method method-name="setupDefaultGeneralLedger"/>-->
         
-        <!-- create CustomTimePeriod within one years -->
+        <!-- create CustomTimePeriod within one years
+        why?
         <now-timestamp field="nowTimestamp"/>
         <set field="endMonth" value="12"/>
         <set field="endDate" value="31"/>
@@ -255,6 +263,7 @@
         <set field="customTimePeriodCtx.periodNum" value="1" type="Long"/>
         <set field="customTimePeriodCtx.periodTypeId" value="FISCAL_YEAR"/>
         <call-service service-name="createCustomTimePeriod" in-map-name="customTimePeriodCtx"/>
+        -->
 
         <!-- Create partyId for UserLogin -->
         <session-to-field field="userLoginCtx" session-name="userLogin"/>

@@ -794,8 +794,12 @@ public class ContactMechServices {
         Delegator delegator = ctx.getDelegator();
         Security security = ctx.getSecurity();
         GenericValue userLogin = (GenericValue) context.get("userLogin");
-
-        String partyId = ServiceUtil.getPartyIdCheckSecurity(userLogin, security, context, result, "PARTYMGR", "_PCM_CREATE");
+        String partyId = (String) context.get("partyId");
+        
+        if ( partyId == null ) {
+        	partyId = ServiceUtil.getPartyIdCheckSecurity(userLogin, security, context, result, "PARTYMGR", "_PCM_CREATE");
+        }
+        
         String errMsg = null;
         Locale locale = (Locale) context.get("locale");
 

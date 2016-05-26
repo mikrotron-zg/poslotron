@@ -170,7 +170,7 @@ under the License.
 
     <!-- CustomTimePeriod Services -->
     <service name="createCustomTimePeriod" default-entity-name="CustomTimePeriod" engine="simple"
-            location="component://common/script/org/ofbiz/common/period/PeriodServices.xml" invoke="createCustomTimePeriod" auth="true">
+            location="component://common/script/org/ofbiz/common/period/PeriodServices.xml" invoke="createCustomTimePeriod" auth="false">
         <description>Create a CustomTimePeriod record</description>
         <auto-attributes mode="OUT" include="pk" optional="false"/>
         <auto-attributes mode="IN" include="nonpk" optional="true"/>
