@@ -31,6 +31,7 @@ OR
 7) start:
 ./ant start
 
-Access it by connecting to localhost:8080/catalog and logging in as admin with password ofbiz.
+Access it by connecting to http://localhost:8080/catalog and logging in as admin with password ofbiz.
+Access web shop on http://localhost:8080/
 
 MORE TO COME!

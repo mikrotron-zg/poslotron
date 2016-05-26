@@ -525,10 +525,10 @@ access. For a detailed description see the core/docs/entityconfig.html file.
         <read-data reader-name="ext"/>
         <read-data reader-name="ext-test"/>
         <read-data reader-name="ext-demo"/>
+		<!-- CHANGEME: your connection data here -->
         <inline-jdbc
             jdbc-driver="org.postgresql.Driver"
             jdbc-uri="jdbc:postgresql://127.0.0.1/ofbizdb"
-            <!-- CHANGEME: your connection data here -->
             jdbc-username="ofbiz"
             jdbc-password="ofbiz"
             isolation-level="ReadCommitted"
@@ -562,10 +562,10 @@ access. For a detailed description see the core/docs/entityconfig.html file.
         <read-data reader-name="ext"/>
         <read-data reader-name="ext-test"/>
         <read-data reader-name="ext-demo"/>
+		<!-- CHANGEME: your connection data here -->
         <inline-jdbc
                 jdbc-driver="org.postgresql.Driver"
                 jdbc-uri="jdbc:postgresql://127.0.0.1/ofbizolap"
-                <!-- CHANGEME: your connection data here -->
                 jdbc-username="ofbiz"
                 jdbc-password="ofbiz"
                 isolation-level="ReadCommitted"
@@ -599,10 +599,10 @@ access. For a detailed description see the core/docs/entityconfig.html file.
         <read-data reader-name="ext"/>
         <read-data reader-name="ext-test"/>
         <read-data reader-name="ext-demo"/>
+		<!-- CHANGEME: your connection data here -->
         <inline-jdbc
                 jdbc-driver="org.postgresql.Driver"
                 jdbc-uri="jdbc:postgresql://127.0.0.1/ofbiztenant"
-                <!-- CHANGEME: your connection data here -->
                 jdbc-username="ofbiz"
                 jdbc-password="ofbiz"
                 isolation-level="ReadCommitted"
