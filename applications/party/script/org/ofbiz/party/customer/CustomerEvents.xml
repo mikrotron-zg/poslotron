@@ -250,7 +250,7 @@ under the License.
         <set field="partyDataSource.isCreate" value="Y"/>
         <!-- get the visit from the session to get the visitId -->
         <session-to-field field="visit"/>
-    <set from-field="visit.visitId" field="partyDataSource.visitId"/>
+        <set from-field="visit.visitId" field="partyDataSource.visitId"/>
 
 
         <!-- now that everything is validated & setup, check to see if there are errors, then call the services -->

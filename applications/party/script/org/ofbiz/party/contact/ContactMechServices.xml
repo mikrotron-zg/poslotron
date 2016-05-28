@@ -167,7 +167,7 @@ under the License.
         <field-to-result field="newValue.contactMechId" result-name="contactMechId"/>
     </simple-method>
 
-    <simple-method method-name="createTelecomNumber" short-description="Create Contact Mechanism with Telecom Number">
+    <simple-method method-name="createTelecomNumber" short-description="Create Contact Mechanism with Telecom Number" login-required="false">
         <make-value entity-name="TelecomNumber" value-field="newValue"/>
         <set field="context.contactMechTypeId" value="TELECOM_NUMBER"/>
         <set field="context.contactMechId" from-field="parameters.contactMechId"/>

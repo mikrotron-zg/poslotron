@@ -504,7 +504,7 @@ under the License.
         <override name="postalCode" optional="false"/>
     </service>
     <service name="createTelecomNumber" engine="simple"
-            location="component://party/script/org/ofbiz/party/contact/ContactMechServices.xml" invoke="createTelecomNumber" auth="true">
+            location="component://party/script/org/ofbiz/party/contact/ContactMechServices.xml" invoke="createTelecomNumber" auth="false">
         <description>Create a Telecommunications Number</description>
         <auto-attributes entity-name="TelecomNumber" include="all" mode="IN" optional="true"/>
         <attribute name="contactMechId" type="String" mode="OUT" optional="false"/>

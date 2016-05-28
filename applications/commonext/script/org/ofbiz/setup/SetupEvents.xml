@@ -21,7 +21,7 @@
 <simple-methods xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/simple-methods-v2.xsd">
 
-    <simple-method method-name="createOrganization" short-description="Create Customer" login-required="false">
+    <simple-method method-name="createOrganization" short-description="Create Organization" login-required="false">
         <set field="require_email" value="true"/>
         <set field="require_phone" value="false"/>
         <set field="require_login" value="false"/>
@@ -268,18 +268,41 @@
         <!-- Create partyId for UserLogin -->
         <session-to-field field="userLoginCtx" session-name="userLogin"/>
         <if-empty field="userLoginCtx.partyId">
+        	<!--
             <make-value value-field="newEntity" entity-name="Party"/>
-            <set field="newEntity.partyId" from-field="userLoginCtx.userLoginId"/>
-            <set field="newEntity.partyTypeId" value="PERSON"/>
-            <create-value value-field="newEntity"/>
+			<set field="newEntity.partyId" from-field="userLoginCtx.userLoginId"/>
+			<set field="newEntity.partyTypeId" value="PERSON"/>
+			<create-value value-field="newEntity"/>
             <clear-field field="newEntity"/>
             <make-value value-field="newPerson" entity-name="Person"/>
             <set field="newPerson.partyId" from-field="userLoginCtx.userLoginId"/>
             <create-value value-field="newPerson"/>
             <clear-field field="newPerson"/>
-            
-            <set field="userLoginCtx.partyId" from-field="userLoginCtx.userLoginId"/>
-            <store-value value-field="userLoginCtx"/>
+            -->
+        	<!-- this creates login but needs to hash password
+            <make-value value-field="newUserLogin" entity-name="UserLogin"/>
+            <set field="newUserLogin.partyId" from-field="tempMap.partyId"/>
+            <set field="newUserLogin.userLoginId" from-field="parameters.USERNAME"/>
+            <set field="newUserLogin.currentPassword" from-field="parameters.PASSWORD"/>
+            <create-value value-field="newUserLogin"/>
+            <clear-field field="newUserLogin"/>
+            -->
+			<!-- call the service with the system account to get around security constraints for this special create -->
+			<entity-one entity-name="UserLogin" value-field="userLoginContext.userLogin" auto-field-map="false">
+				<field-map field-name="userLoginId" value="system"/>
+			</entity-one>
+	
+            <set field="userLoginContext.userLoginId" from-field="parameters.USERNAME"/>
+            <set field="userLoginContext.currentPassword" from-field="parameters.PASSWORD"/>
+            <set field="userLoginContext.currentPasswordVerify" from-field="parameters.CONFIRM_PASSWORD"/>
+            <set field="userLoginContext.partyId" from-field="tempMap.partyId"/>
+			<call-service service-name="createUserLogin" in-map-name="userLoginContext"/>
+			
+			<entity-one entity-name="UserLogin" value-field="newUserLogin" auto-field-map="false">
+				<field-map field-name="userLoginId" from-field="userLoginContext.userLoginId"/>
+			</entity-one>
+			<set-current-user-login value-field="newUserLogin"/>
+			
         </if-empty>
 
         <!-- set the partyId in the request -->
