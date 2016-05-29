@@ -28,10 +28,12 @@
         <!-- this parameter must be set to true or the createUser method below will use a default password instead of the one entered by user -->
         <set field="create_allow_password" value="true"/>
 
+	    <!-- by default, party group gets internal organization role
         <if-compare field="parameters.roleTypeId" operator="equals" value="false">
-	        <!-- by default, party group gets internal organization role -->
         	<set field="parameters.roleTypeId" value="INTERNAL_ORGANIZATIO"/>
 		</if-compare>
+		-->
+		<set field="parameters.roleTypeId" value="CUSTOMER"/>
 		
         <now-timestamp field="nowStamp"/>
 
@@ -171,9 +173,9 @@
         <set field="mobilePhoneContext.partyId" from-field="tempMap.partyId"/>
         <set field="emailContext.partyId" from-field="tempMap.partyId"/>
         
+        <call-service service-name="createPartyRole" in-map-name="partyRoleContext" include-user-login="true"/>
         <!-- add Carrier roletype -->
         <!-- why? 
-        <call-service service-name="createPartyRole" in-map-name="partyRoleContext"/>
         <set field="partyRoleContext.roleTypeId" value="CARRIER"/>
         <call-service service-name="createPartyRole" in-map-name="partyRoleContext"/>
         -->
@@ -194,6 +196,9 @@
                 <call-service service-name="createPartyContactMechPurpose" in-map-name="addressPurposeContext"/>
                 <!-- create the billing location -->
                 <set field="addressPurposeContext.contactMechPurposeTypeId" value="BILLING_LOCATION"/>
+                <call-service service-name="createPartyContactMechPurpose" in-map-name="addressPurposeContext"/>
+                <!-- create the shipping location -->
+                <set field="addressPurposeContext.contactMechPurposeTypeId" value="SHIPPING_LOCATION"/>
                 <call-service service-name="createPartyContactMechPurpose" in-map-name="addressPurposeContext"/>
             </else>
         </if-compare>
@@ -243,28 +248,6 @@
             <call-service service-name="createPartyContactMechPurpose" in-map-name="emailPurposeContext"/>
         </if-not-empty>
 
-        <!-- General Ledger Setup for the new organization -->
-        <!--<call-simple-method method-name="setupDefaultGeneralLedger"/>-->
-        
-        <!-- create CustomTimePeriod within one years
-        why?
-        <now-timestamp field="nowTimestamp"/>
-        <set field="endMonth" value="12"/>
-        <set field="endDate" value="31"/>
-        <call-class-method class-name="org.ofbiz.base.util.UtilDateTime" method-name="getYearStart" ret-field="fromDateStamp">
-            <field field="nowTimestamp" type="java.sql.Timestamp"/>
-        </call-class-method>
-        <set field="curYearString" value="${str:toString(date:year(fromDateStamp, util:defaultTimeZone(), util:defaultLocale()))}"/>
-        <set field="customTimePeriodCtx.fromDate" from-field="fromDateStamp" type="Date"/>
-        <set field="customTimePeriodCtx.thruDate" value="${groovy:org.ofbiz.base.util.UtilDateTime.toSqlDate(endMonth ,endDate , curYearString)}" type="Date"/>
-        <set field="customTimePeriodCtx.isClosed" value="N"/>
-        <set field="customTimePeriodCtx.organizationPartyId" from-field="tempMap.partyId"/>
-        <set field="customTimePeriodCtx.periodName" from-field="curYearString"/>
-        <set field="customTimePeriodCtx.periodNum" value="1" type="Long"/>
-        <set field="customTimePeriodCtx.periodTypeId" value="FISCAL_YEAR"/>
-        <call-service service-name="createCustomTimePeriod" in-map-name="customTimePeriodCtx"/>
-        -->
-
         <!-- Create partyId for UserLogin -->
         <session-to-field field="userLoginCtx" session-name="userLogin"/>
         <if-empty field="userLoginCtx.partyId">
@@ -297,16 +280,65 @@
             <set field="userLoginContext.currentPasswordVerify" from-field="parameters.CONFIRM_PASSWORD"/>
             <set field="userLoginContext.partyId" from-field="tempMap.partyId"/>
 			<call-service service-name="createUserLogin" in-map-name="userLoginContext"/>
-			
+
 			<entity-one entity-name="UserLogin" value-field="newUserLogin" auto-field-map="false">
 				<field-map field-name="userLoginId" from-field="userLoginContext.userLoginId"/>
 			</entity-one>
 			<set-current-user-login value-field="newUserLogin"/>
 			
+			<!-- now finished, log in the user and set the cart's partyId to that of the newly created customer ... -->
+			<call-bsh><![CDATA[
+				org.ofbiz.webapp.control.LoginWorker.doBasicLogin(newUserLogin, request);
+				org.ofbiz.webapp.control.LoginWorker.autoLoginSet(request, response);
+				session = request.getSession();
+				cart = session.getAttribute("shoppingCart");
+				if (cart != null) {
+					cart.setOrderPartyId(tempMap.get("partyId"));
+				}
+			]]></call-bsh>
+	
+			<!-- Associated to Product Store -->
+			<entity-one entity-name="UserLogin" value-field="userLogin">
+				<field-map field-name="userLoginId" value="system"/>
+			</entity-one>
+			<set field="createProductStoreRoleMap.userLogin" from-field="userLogin"/>
+			<set field="createProductStoreRoleMap.partyId" from-field="tempMap.partyId"/>
+			<set field="createProductStoreRoleMap.roleTypeId" from-field="parameters.roleTypeId"/>
+			<set field="createProductStoreRoleMap.productStoreId" from-field="parameters.emailProductStoreId"/>
+			<call-service service-name="createProductStoreRole" in-map-name="createProductStoreRoleMap"/>
+	
+			<!-- send off the registration email
+			TODO - this requires a person
+			<if-not-empty field="emailContext.emailAddress">
+				<set from-field="parameters.emailProductStoreId" field="storeEmailLookup.productStoreId"/>
+				<set value="PRDS_CUST_REGISTER" field="storeEmailLookup.emailType"/>
+				<find-by-primary-key map="storeEmailLookup" entity-name="ProductStoreEmailSetting"  value-field="storeEmail"/>
+				<if-not-empty field="storeEmail.bodyScreenLocation">
+					<get-related-one value-field="createdUserLogin" relation-name="Person" to-value-field="person"/>
+					<set field="bodyParameters.person" from-field="person"/>
+					<set field="emailParams.bodyParameters" from-field="bodyParameters"/>
+					<set field="emailParams.sendTo" from-field="emailContext.emailAddress"/>
+					<set field="emailParams.subject" from-field="storeEmail.subject"/>
+					<set field="emailParams.sendFrom" from-field="storeEmail.fromAddress"/>
+					<set field="emailParams.sendCc" from-field="storeEmail.ccAddress"/>
+					<set field="emailParams.sendBcc" from-field="storeEmail.bccAddress"/>
+					<set field="emailParams.contentType" from-field="storeEmail.contentType"/>
+					<set field="emailParams.bodyScreenUri" from-field="storeEmail.bodyScreenLocation"/>
+					<set field="emailParams.emailType" from-field="storeEmailLookup.emailType"/>
+					<call-service-asynch service-name="sendMailFromScreen" in-map-name="emailParams" include-user-login="true"/>
+				</if-not-empty>
+			</if-not-empty>
+			-->
+        
         </if-empty>
 
         <!-- set the partyId in the request -->
         <field-to-request field="tempMap.partyId" request-name="partyId"/>
+
+        <!-- tell the control servlet that we just logged in the user... -->
+        <set value="TRUE" field="_LOGIN_PASSED_"/>
+        <field-to-request field="_LOGIN_PASSED_"/>
+        
     </simple-method>
 
     <simple-method method-name="setupDefaultGeneralLedger" short-description="General Ledger Setup for the new organization">
