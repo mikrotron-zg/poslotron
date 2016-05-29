@@ -21,25 +21,21 @@
 <simple-methods xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/simple-methods-v2.xsd">
 
-    <simple-method method-name="createOrganization" short-description="Create Organization" login-required="false">
+    <simple-method method-name="createOrganization" short-description="Create Customer" login-required="false">
         <set field="require_email" value="true"/>
         <set field="require_phone" value="false"/>
         <set field="require_login" value="false"/>
         <!-- this parameter must be set to true or the createUser method below will use a default password instead of the one entered by user -->
         <set field="create_allow_password" value="true"/>
 
-        <if-compare field="parameters.roleTypeId" operator="equals" value="false">
-	        <!-- by default, party group gets internal organization role -->
-        	<set field="parameters.roleTypeId" value="INTERNAL_ORGANIZATIO"/>
-		</if-compare>
-		
+        <set field="parameters.roleTypeId" value="INTERNAL_ORGANIZATIO"/>
         <now-timestamp field="nowStamp"/>
 
         <!-- Create the PartyGroup -->
         <call-map-processor in-map-name="parameters" out-map-name="partyGroupContext">
             <simple-map-processor name="newPartyGroup">
                 <process field="partyId"><copy/></process>
-                <process field="groupName"><copy to-field="groupName"/><not-empty><fail-property resource="SetupUiLabels" property="SetupOrganizationNameIsMissing"/></not-empty></process>
+                <process field="groupName"><copy to-field="groupName"/><not-empty><fail-property resource="" property="SetupOrganizationNameIsMissing"/></not-empty></process>
             </simple-map-processor>
         </call-map-processor>
 
@@ -165,24 +161,21 @@
         <set field="partyGroupContext.partyId" from-field="tempMap.partyId"/>
         <set field="partyRoleContext.partyId" from-field="tempMap.partyId"/>
         <set field="addressContext.partyId" from-field="tempMap.partyId"/>
-        <set field="addressPurposeContext.partyId" from-field="tempMap.partyId"/>
         <set field="workPhoneContext.partyId" from-field="tempMap.partyId"/>
         <set field="faxPhoneContext.partyId" from-field="tempMap.partyId"/>
         <set field="mobilePhoneContext.partyId" from-field="tempMap.partyId"/>
         <set field="emailContext.partyId" from-field="tempMap.partyId"/>
         
-        <!-- add Carrier roletype -->
-        <!-- why? 
         <call-service service-name="createPartyRole" in-map-name="partyRoleContext"/>
+        <!-- add Carrier roletype  -->
         <set field="partyRoleContext.roleTypeId" value="CARRIER"/>
         <call-service service-name="createPartyRole" in-map-name="partyRoleContext"/>
-        -->
-          
+        
         <!-- billing address -->
         <if-compare field="parameters.USE_ADDRESS" operator="equals" value="false">
             <!-- address not used, do nothing -->
             <else>
-                <call-service service-name="createPostalAddressAndPurposes" in-map-name="addressContext">
+                <call-service service-name="createPartyPostalAddress" in-map-name="addressContext">
                     <result-to-field result-name="contactMechId" field="addressPurposeContext.contactMechId"/>
                 </call-service>
                 <set field="addressPurposeContext.partyId" from-field="tempMap.partyId"/>
@@ -246,8 +239,7 @@
         <!-- General Ledger Setup for the new organization -->
         <!--<call-simple-method method-name="setupDefaultGeneralLedger"/>-->
         
-        <!-- create CustomTimePeriod within one years
-        why?
+        <!-- create CustomTimePeriod within one years -->
         <now-timestamp field="nowTimestamp"/>
         <set field="endMonth" value="12"/>
         <set field="endDate" value="31"/>
@@ -263,46 +255,22 @@
         <set field="customTimePeriodCtx.periodNum" value="1" type="Long"/>
         <set field="customTimePeriodCtx.periodTypeId" value="FISCAL_YEAR"/>
         <call-service service-name="createCustomTimePeriod" in-map-name="customTimePeriodCtx"/>
-        -->
 
         <!-- Create partyId for UserLogin -->
         <session-to-field field="userLoginCtx" session-name="userLogin"/>
         <if-empty field="userLoginCtx.partyId">
-        	<!--
             <make-value value-field="newEntity" entity-name="Party"/>
-			<set field="newEntity.partyId" from-field="userLoginCtx.userLoginId"/>
-			<set field="newEntity.partyTypeId" value="PERSON"/>
-			<create-value value-field="newEntity"/>
+            <set field="newEntity.partyId" from-field="userLoginCtx.userLoginId"/>
+            <set field="newEntity.partyTypeId" value="PERSON"/>
+            <create-value value-field="newEntity"/>
             <clear-field field="newEntity"/>
             <make-value value-field="newPerson" entity-name="Person"/>
             <set field="newPerson.partyId" from-field="userLoginCtx.userLoginId"/>
             <create-value value-field="newPerson"/>
             <clear-field field="newPerson"/>
-            -->
-        	<!-- this creates login but needs to hash password
-            <make-value value-field="newUserLogin" entity-name="UserLogin"/>
-            <set field="newUserLogin.partyId" from-field="tempMap.partyId"/>
-            <set field="newUserLogin.userLoginId" from-field="parameters.USERNAME"/>
-            <set field="newUserLogin.currentPassword" from-field="parameters.PASSWORD"/>
-            <create-value value-field="newUserLogin"/>
-            <clear-field field="newUserLogin"/>
-            -->
-			<!-- call the service with the system account to get around security constraints for this special create -->
-			<entity-one entity-name="UserLogin" value-field="userLoginContext.userLogin" auto-field-map="false">
-				<field-map field-name="userLoginId" value="system"/>
-			</entity-one>
-	
-            <set field="userLoginContext.userLoginId" from-field="parameters.USERNAME"/>
-            <set field="userLoginContext.currentPassword" from-field="parameters.PASSWORD"/>
-            <set field="userLoginContext.currentPasswordVerify" from-field="parameters.CONFIRM_PASSWORD"/>
-            <set field="userLoginContext.partyId" from-field="tempMap.partyId"/>
-			<call-service service-name="createUserLogin" in-map-name="userLoginContext"/>
-			
-			<entity-one entity-name="UserLogin" value-field="newUserLogin" auto-field-map="false">
-				<field-map field-name="userLoginId" from-field="userLoginContext.userLoginId"/>
-			</entity-one>
-			<set-current-user-login value-field="newUserLogin"/>
-			
+            
+            <set field="userLoginCtx.partyId" from-field="userLoginCtx.userLoginId"/>
+            <store-value value-field="userLoginCtx"/>
         </if-empty>
 
         <!-- set the partyId in the request -->
