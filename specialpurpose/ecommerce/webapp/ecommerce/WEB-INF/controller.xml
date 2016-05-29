@@ -993,7 +993,7 @@ under the License.
     </request-map>
     <request-map uri="createcompany">
         <security https="true" auth="false"/>
-        <event type="simple" path="component://commonext/script/org/ofbiz/setup/SetupEvents.xml" invoke="createOrganization"/>
+        <event type="simple" path="component://mikrotron/script/CustomEvents.xml" invoke="createCompany"/>
         <response name="success" type="view" value="main"/>
         <response name="error" type="view" value="newcompany"/>
     </request-map>
