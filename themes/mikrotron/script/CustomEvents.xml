@@ -281,22 +281,6 @@
             <set field="userLoginContext.partyId" from-field="tempMap.partyId"/>
 			<call-service service-name="createUserLogin" in-map-name="userLoginContext"/>
 
-			<entity-one entity-name="UserLogin" value-field="newUserLogin" auto-field-map="false">
-				<field-map field-name="userLoginId" from-field="userLoginContext.userLoginId"/>
-			</entity-one>
-			<set-current-user-login value-field="newUserLogin"/>
-			
-			<!-- now finished, log in the user and set the cart's partyId to that of the newly created customer ... -->
-			<call-bsh><![CDATA[
-				org.ofbiz.webapp.control.LoginWorker.doBasicLogin(newUserLogin, request);
-				org.ofbiz.webapp.control.LoginWorker.autoLoginSet(request, response);
-				session = request.getSession();
-				cart = session.getAttribute("shoppingCart");
-				if (cart != null) {
-					cart.setOrderPartyId(tempMap.get("partyId"));
-				}
-			]]></call-bsh>
-	
 			<!-- Associated to Product Store -->
 			<entity-one entity-name="UserLogin" value-field="userLogin">
 				<field-map field-name="userLoginId" value="system"/>
@@ -332,6 +316,39 @@
         
         </if-empty>
 
+        <!-- doesn't work - countryGeoId is not primary key
+		<entity-one entity-name="TaxAuthority" value-field="taxAuthority" auto-field-map="false">
+			<field-map field-name="taxAuthGeoId" from-field="parameters.USER_COUNTRY"/>
+		</entity-one>
+		-->
+		<set field="whatever.taxAuthGeoId" from-field="parameters.USER_COUNTRY"/>
+		<find-by-and entity-name="TaxAuthority" list="taxAuthorities" map="whatever" />
+		<first-from-list entry="taxAuthority" list="taxAuthorities"/>
+		
+		<set field="partyTaxAuthInfo.taxAuthPartyId" from-field="taxAuthority.taxAuthPartyId"/>
+		<set field="partyTaxAuthInfo.partyId" from-field="tempMap.partyId"/>
+		<set field="partyTaxAuthInfo.taxAuthGeoId" from-field="parameters.USER_COUNTRY"/>
+		<set field="partyTaxAuthInfo.partyTaxId" from-field="parameters.TAX_ID"/>
+		
+        <set-service-fields service-name="createPartyTaxAuthInfo" map="partyTaxAuthInfo" to-map="createPartyTaxAuthInfoMap"/>
+        <call-service service-name="createPartyTaxAuthInfo" in-map-name="partyTaxAuthInfo" include-user-login="true"/>
+        
+		<!-- now finished, log in the user and set the cart's partyId to that of the newly created customer ... -->
+		<entity-one entity-name="UserLogin" value-field="newUserLogin" auto-field-map="false">
+			<field-map field-name="userLoginId" from-field="userLoginContext.userLoginId"/>
+		</entity-one>
+		<set-current-user-login value-field="newUserLogin"/>
+		
+		<call-bsh><![CDATA[
+			org.ofbiz.webapp.control.LoginWorker.doBasicLogin(newUserLogin, request);
+			org.ofbiz.webapp.control.LoginWorker.autoLoginSet(request, response);
+			session = request.getSession();
+			cart = session.getAttribute("shoppingCart");
+			if (cart != null) {
+				cart.setOrderPartyId(tempMap.get("partyId"));
+			}
+		]]></call-bsh>
+	
         <!-- set the partyId in the request -->
         <field-to-request field="tempMap.partyId" request-name="partyId"/>
 

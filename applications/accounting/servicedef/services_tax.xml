@@ -169,7 +169,7 @@ under the License.
     </service>
 
     <!-- PartyTaxAuthInfo -->
-    <service name="createPartyTaxAuthInfo" default-entity-name="PartyTaxAuthInfo" engine="simple" auth="true"
+    <service name="createPartyTaxAuthInfo" default-entity-name="PartyTaxAuthInfo" engine="simple" auth="false"
         location="component://accounting/script/org/ofbiz/accounting/tax/TaxAuthorityServices.xml" invoke="createPartyTaxAuthInfo">
         <description>Create PartyTaxAuthInfo</description>
         <auto-attributes include="pk" mode="IN" optional="false"/>
