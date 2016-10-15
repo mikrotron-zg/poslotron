@@ -129,13 +129,11 @@
     HP: od 7.90 kn, ovisno o masi<br/>
     HP Express: od 40 kn, + iznos koji plaćate po isporuci direktno njima
     za pošiljke preko 2 kg<br/>
-    Tisak paket: od 15 kn, ovisno volumenu<br/>
     <br/>
     Robu isporučujemo na dnevnoj bazi, odmah po uplati.<br/>
     HP: stiže za par dana. Koliko je točno tih "par dana", zna samo
     Hrvatska pošta.<br/>
     HP express: sutradan do 15h.<br/>
-    Tisak paket: do tri dana<br/>
     <br/>
     Ako neki naručeni artikl trenutno nemamo u dućanu, rokove isporuke
     javljamo mailom ili telefonski. U tom slučaju, po dogovoru, možete
