@@ -78,7 +78,7 @@ if (category) {
         metaKeywords = delegator.findOne("ElectronicText", [dataResourceId : categoryMetaKeywords.get(0).dataResourceId], true);
     }
     categoryContentWrapper = new CategoryContentWrapper(category, request);
-    
+
     categoryDescription = categoryContentWrapper.DESCRIPTION;
 
     if (pageTitle) {
@@ -115,5 +115,5 @@ if (templatePathPrefix) {
 context.detailScreen = detailScreen;
 
 request.setAttribute("productCategoryId", productCategoryId);
-request.setAttribute("defaultViewSize", 10);
+request.setAttribute("defaultViewSize", 100);
 request.setAttribute("limitView", true);
