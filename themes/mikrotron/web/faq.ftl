@@ -13,7 +13,7 @@
       <li><a href="#tocCheap">Kako ste tako jeftini?</a></li>
       <li><a href="#tocPickup">Kako da osobno preumem robu?</a></li>
       <li><a href="#tocBuy">Kako da kupim? (kupovina: fizičke
-          osobe) </a></li>                                    
+          osobe) </a></li>
       <li><a href="#tocQuote">Molimo ponudu (kupovina: pravne
           osobe)</a></li>
       <li><a href="#tocCard">Zašto ne mogu platiti karticom?</a></li>
@@ -53,7 +53,7 @@
 </div>
     <h2><a class="mozTocH1" name="tocPickup"></a>Kako da osobno
       preumem robu?</h2>
-    1) Registrirajte se u dućan<br/>
+    1) Registrirajte se u dućan (Registracija: Osoba)<br/>
     2) Popunite košaru i kliknite <b>Narudžba</b><br/>
     3) Kod potvrde narudžbe, izaberite <b>osobno preuzimanje</b><b> u
       uredu</b><br/>
@@ -66,7 +66,7 @@
     <h2><a class="mozTocH1" name="tocBuy"></a>Kako da kupim?
       (kupovina: fizičke osobe)<br/>
     </h2>
-    1) Registrirajte se u dućan<br/>
+    1) Registrirajte se u dućan (Registracija: Osoba)<br/>
     2) Popunite košaru i kliknite <b>Narudžba</b><br/>
     3) Potvrdite narudžbu<br/>
     4) Platite narudžbu<br/>
@@ -80,7 +80,7 @@
 <div>
     <h2><a class="mozTocH1" name="tocQuote"></a>Molimo ponudu
       (kupovina: pravne osobe)</h2>
-    1) Registrirajte se u dućan; u sufiks napišite ime firme<br/>
+    1) Registrirajte se u dućan (Registracija: Tvrtka)<br/>
     2) Popunite košaru<br/>
     3) Kliknite <b>Ponuda za firmu</b><br/>
     <br/>
@@ -167,7 +167,7 @@
     <h2><a class="mozTocH1" name="tocMail"></a>Zašto ne odgovarate na upite mailom?</h2>
     Odgovaramo; provjerite svoj spam folder (neželjena pošta).
     <br/>
-    Sasvim je moguće da će naše poruke biti označene kao neželjena pošta, jer sadrže riječi koje koriste spammeri - ponuda, narudžba, račun... 
+    Sasvim je moguće da će naše poruke biti označene kao neželjena pošta, jer sadrže riječi koje koriste spammeri - ponuda, narudžba, račun...
     <br/>
     Gmail korisnici to mogu izbjeći tako da našu mail adresu dodaju u kontaktnu listu.
     <br/>
@@ -206,14 +206,14 @@
 <div>
     <h2><a class="mozTocH1" name="tocCard"></a>Why don't you accept credit cards?</h2>
     Payment gateways request additional charges. To make long story short, our prices would have to go up by 10-20%.<br/>
-    Credit cards also bring security risks along.  
+    Credit cards also bring security risks along.
 <br/>
 <br/>
 </div>
 <div>
     <h2><a class="mozTocH1" name="tocDelivery"></a>What are shipping prices and durations?</h2>
     Shipping prices are calculated automatically when you make an order.</br>
-    All EU countries are supported. For countries outside EU we may need to calculate prices separatelly - if you can't make an order, request a quote instead, and we'll send you details by e-mail.</br>  
+    All EU countries are supported. For countries outside EU we may need to calculate prices separatelly - if you can't make an order, request a quote instead, and we'll send you details by e-mail.</br>
     EU is divided into 4 zones, and shipping may last 3 to 10 days, depending on zone.</br>
     Please contact us if shipping options do not display.</br>
     </br>
