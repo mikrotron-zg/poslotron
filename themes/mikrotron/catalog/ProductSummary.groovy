@@ -67,14 +67,25 @@ if (!product && productId) {
 if (product) {
     //if order is purchase then don't calculate available inventory for product.
     if (cart.isSalesOrder()) {
-        resultOutput = dispatcher.runSync("getInventoryAvailableByFacility", [productId : product.productId, facilityId : facilityId, useCache : true]);
-        totalAvailableToPromise = resultOutput.availableToPromiseTotal;
-        if (totalAvailableToPromise && totalAvailableToPromise.doubleValue() > 0) {
-            productFacility = delegator.findOne("ProductFacility", [productId : product.productId, facilityId : facilityId], true);
-            if (productFacility?.daysToShip != null) {
-                context.daysToShip = productFacility.daysToShip;
-            }
-        }
+
+    	// if the product is a MARKETING_PKG_AUTO/PICK, then also get the quantity which can be produced from components
+		boolean isMarketingPackage = EntityTypeUtil.hasParentType(delegator, "ProductType", "productTypeId", product.productTypeId, "parentTypeId", "MARKETING_PKG");
+		context.isMarketingPackage = (isMarketingPackage? "true": "false");
+
+		if ( isMarketingPackage ) {
+			resultOutput = dispatcher.runSync("getMktgPackagesAvailable", [productId : productId]);
+			totalAvailableToPromise = resultOutput.availableToPromiseTotal;
+		} else {
+			// we assume finished product here
+			resultOutput = dispatcher.runSync("getInventoryAvailableByFacility", [productId : product.productId, facilityId : facilityId, useCache : true]);
+			totalAvailableToPromise = resultOutput.availableToPromiseTotal;
+			if (totalAvailableToPromise && totalAvailableToPromise.doubleValue() > 0) {
+				productFacility = delegator.findOne("ProductFacility", [productId : product.productId, facilityId : facilityId], true);
+				if (productFacility?.daysToShip != null) {
+					context.daysToShip = productFacility.daysToShip;
+				}
+			}
+		}
     } else {
        supplierProducts = delegator.findByAnd("SupplierProduct", [productId : product.productId], ["-availableFromDate"], true);
        supplierProduct = EntityUtil.getFirst(supplierProducts);
@@ -130,7 +141,7 @@ if (product) {
 
     // get the product review(s)
     reviews = product.getRelated("ProductReview", null, ["-postedDateTime"], true);
-    
+
     // get product variant for Box/Case/Each
     productVariants = [];
     boolean isAlternativePacking = ProductWorker.isAlternativePacking(delegator, product.productId, null);
@@ -148,11 +159,11 @@ if (product) {
                 mainProducts.add(mainProductMap);
             }
         }
-        
-        // get alternative product price when product doesn't have any feature 
+
+        // get alternative product price when product doesn't have any feature
         jsBuf = new StringBuffer();
         jsBuf.append("<script language=\"JavaScript\" type=\"text/javascript\">");
-        
+
         // make a list of variant sku with requireAmount
         virtualVariantsRes = dispatcher.runSync("getAssociatedProducts", [productIdTo : productId, type : "ALTERNATIVE_PACKAGE", checkViewAllow : true, prodCatalogId : categoryId]);
         virtualVariants = virtualVariantsRes.assocProducts;
@@ -165,13 +176,13 @@ if (product) {
         }
         variantPriceList = [];
         numberFormat = NumberFormat.getCurrencyInstance(locale);
-        
+
         if(virtualVariants){
             amt = new StringBuffer();
             // Create the javascript to return the price for each variant
             variantPriceJS = new StringBuffer();
             variantPriceJS.append("function getVariantPrice(sku) { ");
-            
+
             virtualVariants.each { virtualAssoc ->
                 virtual = virtualAssoc.getRelatedOne("MainProduct", false);
                 // Get price from a virtual product
@@ -188,7 +199,7 @@ if (product) {
                 variantPriceJS.append("  if (sku == \"" + virtual.productId + "\") return \"" + numberFormat.format(virtualPriceMap.basePrice) + "\"; ");
             }
             variantPriceJS.append(" } ");
-            
+
             context.variantPriceList = variantPriceList;
             jsBuf.append(amt.toString());
             jsBuf.append(variantPriceJS.toString());

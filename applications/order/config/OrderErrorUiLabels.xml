@@ -5452,6 +5452,7 @@
         <value xml:lang="en">Please select a method of payment.</value>
         <value xml:lang="es">Por favor, seleccione un método de pago.</value>
         <value xml:lang="fr">S'il vous plaît choisissez un moyen de paiement.</value>
+        <value xml:lang="hr">Odaberite način plaćanja.</value>
         <value xml:lang="it">Per favore selezionare un metodo di pagamento.</value>
         <value xml:lang="ja">支払の方法を選択してください。</value>
         <value xml:lang="nl">Please select a method of payment.</value>
@@ -5469,6 +5470,7 @@
         <value xml:lang="en">Please Select a Shipping Destination.</value>
         <value xml:lang="es">Por favor, seleccione una dirección de envío.</value>
         <value xml:lang="fr">S'il vous plaît choisissez une destination d'expédition.</value>
+        <value xml:lang="hr">Odaberite adresu isporuke.</value>
         <value xml:lang="it">Per favore seleziona una destinazione per la spedizione.</value>
         <value xml:lang="ja">発送先を選択してください。</value>
         <value xml:lang="nl">Please Select a Shipping Destination.</value>

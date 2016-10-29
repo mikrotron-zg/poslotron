@@ -237,7 +237,7 @@ color:#666;
 }
 
 #ecom-header-bar {
-background:#F8C133; 
+background:#F8C133;
 height:15px;
 overflow:visible;
 text-align:center;
@@ -295,6 +295,12 @@ background:#fff;
 float:right;
 width:240px;
 margin:0 10px 0 0;
+}
+
+#content-messages {
+color:red;
+font-size:12pt;
+font-weight:700;
 }
 
 #ecom-mainarea .center,#ecom-mainarea .leftonly,#ecom-mainarea .rightonly,#ecom-mainarea .nocolumns {
@@ -485,7 +491,7 @@ font-weight:700;
 }
 /* CHECKME */
 a.buttontext,.buttontextdisabled {
-background:#F8C133; 
+background:#F8C133;
 border:#000 solid 1px;
 font-weight:700;
 margin:2px 1px;
@@ -597,7 +603,7 @@ font-weight:700;
 }
 
 a.buttontextbig,.buttontextbigdisabled {
-background:#F8C133; 
+background:#F8C133;
 border:#999 solid 1px;
 font-size:15px;
 font-weight:700;
@@ -705,7 +711,7 @@ margin:2px;
 }
 
 .smallsubmit {
-background:#F8C133; 
+background:#F8C133;
 border:#000 solid 1px;
 color:#000;
 font-size:8pt;
@@ -714,7 +720,7 @@ margin:2px;
 }
 
 .mediumsubmit,.largesubmit,.loginbutton {
-background:#F8C133; 
+background:#F8C133;
 border:#000 solid 1px;
 color:#000;
 font-size:10pt;
