@@ -62,8 +62,8 @@ under the License.
 </#if>
 
 <#------------------------------------------------------------------------------
-NOTE: all page headings should start with an h2 tag, not an H1 tag, as 
-there should generally always only be one h1 tag on the page and that 
+NOTE: all page headings should start with an h2 tag, not an H1 tag, as
+there should generally always only be one h1 tag on the page and that
 will generally always be reserved for the logo at the top of the page.
 ------------------------------------------------------------------------------->
 
@@ -98,10 +98,10 @@ will generally always be reserved for the logo at the top of the page.
   &nbsp;<a href="javascript:document.getElementById('newuserform').submit()" class="button">${uiLabelMap.CommonSave}</a>
 
 <form method="post" action="<@ofbizUrl>createcompany${previousParams}</@ofbizUrl>" id="newuserform" name="newuserform">
-  
-  
+
+
   <#----------------------------------------------------------------------
-  If you need to include a brief explanation of the form, or certain 
+  If you need to include a brief explanation of the form, or certain
   elements in the form (such as explaining asterisks denote REQUIRED),
   then you should use a <p></p> tag with a class name of "desc"
   ----------------------------------------------------------------------->
@@ -120,7 +120,7 @@ will generally always be reserved for the logo at the top of the page.
     <input type="hidden" name="roleTypeId" value="CUSTOMER"/>
     -->
     <#----------------------------------------------------------------------
-    Each input row should be enclosed in a <div></div>. 
+    Each input row should be enclosed in a <div></div>.
     This will ensure than each input field clears the one
     above it. Alternately, if you want several inputs to float next to
     each other, you can enclose them in a table as illustrated below for
@@ -144,11 +144,11 @@ will generally always be reserved for the logo at the top of the page.
       <input type="text" name="groupName" id="groupName" value="${requestParameters.groupName?if_exists}" />
     </div>
     <div>
-      <label for="VAT_ID">${uiLabelMap.OrderSalesTax} ${uiLabelMap.CommonId}</label>
+      <label for="VAT_ID">${uiLabelMap.OrderSalesTax} ${uiLabelMap.CommonId}*</label>
       <@fieldErrors fieldName="TAX_ID"/>
       <input type="text" name="TAX_ID" id="TAX_ID" value="${requestParameters.TAX_ID?if_exists}" />
     </div>
-    
+
     <div>
       <label for="USER_TITLE">${uiLabelMap.CommonTitle}</label>
       <@fieldErrors fieldName="USER_TITLE"/>
@@ -217,12 +217,12 @@ will generally always be reserved for the logo at the top of the page.
       <@fieldErrors fieldName="USER_POSTAL_CODE"/>
       <input type="text" name="USER_POSTAL_CODE" id="USER_POSTAL_CODE" value="${requestParameters.USER_POSTAL_CODE?if_exists}" />
     </div>
-  
+
     <div>
         <label for="customerCountry">${uiLabelMap.CommonCountry}*</label>
         <@fieldErrors fieldName="USER_COUNTRY"/>
         <select name="USER_COUNTRY" id="newuserform_countryGeoId">
-            ${screens.render("component://common/widget/CommonScreens.xml#countries")}        
+            ${screens.render("component://common/widget/CommonScreens.xml#countries")}
             <#assign defaultCountryGeoId = Static["org.ofbiz.base.util.UtilProperties"].getPropertyValue("general.properties", "country.geo.id.default")>
             <option selected="selected" value="${defaultCountryGeoId}">
                 <#assign countryGeo = delegator.findByPrimaryKey("Geo",Static["org.ofbiz.base.util.UtilMisc"].toMap("geoId",defaultCountryGeoId))>
@@ -230,7 +230,7 @@ will generally always be reserved for the logo at the top of the page.
             </option>
         </select>
     <div/>
-    
+
 <!--
     <div>
         <label for="customerState">${uiLabelMap.PartyState}*</label>
@@ -417,14 +417,14 @@ will generally always be reserved for the logo at the top of the page.
 </form>
 
 <#------------------------------------------------------------------------------
-To create a consistent look and feel for all buttons, input[type=submit], 
-and a tags acting as submit buttons, all button actions should have a 
-class name of "button". No other class names should be used to style 
+To create a consistent look and feel for all buttons, input[type=submit],
+and a tags acting as submit buttons, all button actions should have a
+class name of "button". No other class names should be used to style
 button actions.
 ------------------------------------------------------------------------------->
-<div class="buttons">  
+<div class="buttons">
   &nbsp;<a href="<@ofbizUrl>${donePage}</@ofbizUrl>" class="button">${uiLabelMap.CommonCancel}</a>
-  &nbsp;<a href="javascript:document.getElementById('newuserform').submit()" class="button">${uiLabelMap.CommonSave}</a>   
+  &nbsp;<a href="javascript:document.getElementById('newuserform').submit()" class="button">${uiLabelMap.CommonSave}</a>
 </div>
 
 <script type="text/javascript">

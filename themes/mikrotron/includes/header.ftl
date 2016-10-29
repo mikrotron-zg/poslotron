@@ -13,7 +13,7 @@ Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
 "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
 KIND, either express or implied.  See the License for the
-specific language governing permissions and limitations                  
+specific language governing permissions and limitations
 under the License.
 -->
 
@@ -31,7 +31,7 @@ under the License.
   </#if>
   ga('send', 'pageview');
 
-</script>  
+</script>
     <div id="left">
       <#if sessionAttributes.overrideLogo?exists>
         <img src="<@ofbizContentUrl>${sessionAttributes.overrideLogo}</@ofbizContentUrl>" alt="Logo"/>
@@ -62,7 +62,7 @@ under the License.
       <div class="fb-like" data-href="https://www.facebook.com/DIYkitsSHOP" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
     </div>
     <div id="middle">
-    
+
       <#if !productStore?exists>
         <h2>${uiLabelMap.EcommerceNoProductStore}</h2>
       </#if>
@@ -94,7 +94,7 @@ under the License.
         <li id="header-bar-logout"><a href="<@ofbizUrl>logout</@ofbizUrl>">${uiLabelMap.CommonLogout}</a></li>
       <#else/>
         <li id="header-bar-login"><a href="<@ofbizUrl>${checkLoginUrl}</@ofbizUrl>">${uiLabelMap.CommonLogin}</a></li>
-        <li id="header-bar-register"><a href="<@ofbizUrl>newcustomer</@ofbizUrl>">${uiLabelMap.EcommerceRegister}</a></li>
+        <li id="header-bar-register">${uiLabelMap.EcommerceRegister}: <a href="<@ofbizUrl>newcustomer</@ofbizUrl>">${uiLabelMap.CommonPerson}</a> / <a href="<@ofbizUrl>newcompany</@ofbizUrl>">${uiLabelMap.FormFieldTitle_company}</a></li>
       </#if>
     </ul>
     <ul id="right-links">
