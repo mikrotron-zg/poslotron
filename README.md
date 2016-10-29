@@ -34,4 +34,7 @@ OR
 Access it by connecting to http://localhost:8080/catalog and logging in as admin with password ofbiz.
 Access web shop on http://localhost:8080/
 
+Before deployment, you will also need to modify framework/common/config/general.properties, and probably applications/accounting/config/payment.properties.
+To reconfigure embeded Tomcat, edit ./framework/catalina/ofbiz-component.xml.
+
 MORE TO COME!
