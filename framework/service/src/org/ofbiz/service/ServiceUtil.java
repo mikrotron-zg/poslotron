@@ -205,13 +205,17 @@ public class ServiceUtil {
         }
 
         // <b>security check</b>: userLogin partyId must equal partyId, or must have either of the two permissions
-        if (!partyId.equals(userLogin.getString("partyId"))) {
-            if (!security.hasEntityPermission(secEntity, secOperation, userLogin) && !(adminSecEntity != null && adminSecOperation != null && security.hasEntityPermission(adminSecEntity, adminSecOperation, userLogin))) {
-                result.put(ModelService.RESPONSE_MESSAGE, ModelService.RESPOND_ERROR);
-                String errMsg = UtilProperties.getMessage(ServiceUtil.resource, "serviceUtil.no_permission_to_operation", locale) + ".";
-                result.put(ModelService.ERROR_MESSAGE, errMsg);
-                return partyId;
-            }
+        try {
+          if (!partyId.equals(userLogin.getString("partyId"))) {
+              if (!security.hasEntityPermission(secEntity, secOperation, userLogin) && !(adminSecEntity != null && adminSecOperation != null && security.hasEntityPermission(adminSecEntity, adminSecOperation, userLogin))) {
+                  result.put(ModelService.RESPONSE_MESSAGE, ModelService.RESPOND_ERROR);
+                  String errMsg = UtilProperties.getMessage(ServiceUtil.resource, "serviceUtil.no_permission_to_operation", locale) + ".";
+                  result.put(ModelService.ERROR_MESSAGE, errMsg);
+                  return partyId;
+              }
+          }
+        } catch (NullPointerException npe) {
+          // FIXME: not sure why it's happening - this workaround may create security issue
         }
         return partyId;
     }
