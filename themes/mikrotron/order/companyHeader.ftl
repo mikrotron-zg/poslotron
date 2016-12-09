@@ -51,7 +51,7 @@ ${companyName}
 	</#if>
 	<#if website?exists>
 		<div>
-			${uiLabelMap.CommonWebsite}:<a href="http://${website.infoString?if_exists}">${website.infoString?if_exists}</a>
+			${uiLabelMap.CommonWebsite}:<a target="_blank" href="http://${website.infoString?if_exists}">${website.infoString?if_exists}</a>
 		</div>
 	</#if>
 	<#if eftAccount?exists>
