@@ -23,6 +23,6 @@ under the License.
   <br />
   <div class="footer">
       <div class="tabletext">
-        <div class="tabletext">Powered by <a href="http://ofbiz.apache.org" class="tabletext">Apache OFBiz</a></div>
+        <div class="tabletext">Powered by <a href="http://www.mikrotron.hr/" class="tabletext">Mikrotron</a> <a href="https://github.com/mikrotron-zg/poslotron" class="tabletext">Poslotron</a></div>
       </div>
   </div>
