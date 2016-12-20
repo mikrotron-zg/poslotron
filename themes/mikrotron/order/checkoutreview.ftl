@@ -38,9 +38,9 @@ under the License.
 <#if !isDemoStore?exists && isDemoStore><p>${uiLabelMap.OrderDemoFrontNote}.</p></#if>
 
 <#if cart?exists && 0 < cart.size()>
-  ${screens.render("component://ecommerce/widget/OrderScreens.xml#orderheader")}
+  ${screens.render("component://mikrotron/widget/OrderScreens.xml#orderheader")}
   <br />
-  ${screens.render("component://ecommerce/widget/OrderScreens.xml#orderitems")}
+  ${screens.render("component://mikrotron/widget/OrderScreens.xml#orderitems")}
   <table border="0" cellpadding="1" width="100%">
    <tr>
       <td colspan="4">
