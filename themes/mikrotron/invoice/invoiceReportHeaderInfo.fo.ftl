@@ -82,7 +82,7 @@ under the License.
     <fo:table-cell>
       <fo:block font-family="LiberationSans">PayPal</fo:block>
     </fo:table-cell>
-  </#if>  
+  </#if>
 </fo:table-row>
 
 <fo:table-row>
@@ -108,7 +108,7 @@ under the License.
   </fo:table-cell>
   <fo:table-cell>
   <fo:block font-family="LiberationSerif">
-    <#if countryGeo?has_content && "HR" == countryGeo.geoCode?if_exists>
+    <#if countryGeo?has_content && "HR" == countryGeo.geoCode?if_exists && invoiceTotal == invoiceNoTaxTotal >
       Oslobođeno PDV-a po članku 90 Zakona o porezu na dodanu vrijednost.
     </#if>
   </fo:block>
