@@ -257,8 +257,15 @@ under the License.
       <#list itemAdjustments as orderItemAdjustment>
         <tr>
           <td>
-            ${uiLabelMap.EcommerceAdjustment}: ${StringUtil.wrapString(localOrderReadHelper.getAdjustmentType(orderItemAdjustment))}
-            <#if orderItemAdjustment.description?has_content>: ${StringUtil.wrapString(orderItemAdjustment.description)}</#if>
+            <#if "VAT_TAX" == orderItemAdjustment.orderAdjustmentTypeId >
+              ${uiLabelMap.OrderSalesTaxIncluded}: ${orderItemAdjustment.comments?if_exists}
+            <#else>
+              <#if orderItemAdjustment.description?has_content>
+              ${StringUtil.wrapString(orderItemAdjustment.description)}
+              <#else>
+              ${uiLabelMap.EcommerceAdjustment}: ${StringUtil.wrapString(localOrderReadHelper.getAdjustmentType(orderItemAdjustment))}
+              </#if>
+            </#if>
             <#if orderItemAdjustment.orderAdjustmentTypeId == "SALES_TAX">
               <#if orderItemAdjustment.primaryGeoId?has_content>
                 <#assign primaryGeo = orderItemAdjustment.getRelatedOne("PrimaryGeo", true)/>
