@@ -344,12 +344,12 @@ under the License.
         <section>
             <actions>
                 <set field="titleProperty" value="PageTitleOrderSummary"/>
-                <script location="component://ecommerce/webapp/ecommerce/WEB-INF/actions/order/OrderStatus.groovy"/>
+                <script location="component://mikrotron/order/OrderStatus.groovy"/>
             </actions>
             <widgets>
                 <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
                     <decorator-section name="body">
-                        <platform-specific><html><html-template location="component://ecommerce/webapp/ecommerce/order/ordercomplete.ftl"/></html></platform-specific>
+                        <platform-specific><html><html-template location="component://mikrotron/order/ordercomplete.ftl"/></html></platform-specific>
                     </decorator-section>
                 </decorator-screen>
             </widgets>
@@ -383,7 +383,7 @@ under the License.
 
                 <set field="maySelectItems" value="Y"/>
                 <set field="titleProperty" value="PageTitleOrderStatus"/>
-                <script location="component://ecommerce/webapp/ecommerce/WEB-INF/actions/order/OrderStatus.groovy"/>
+                <script location="component://mikrotron/order/OrderStatus.groovy"/>
             </actions>
             <widgets>
                 <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">

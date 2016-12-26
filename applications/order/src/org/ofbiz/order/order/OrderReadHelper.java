@@ -2498,7 +2498,19 @@ public class OrderReadHelper {
         rentalAdjustment = rentalAdjustment.divide(new BigDecimal(100), scale, rounding).multiply(new BigDecimal(String.valueOf(length)));
 //        Debug.logInfo("rental parameters....Nbr of persons:" + persons + " extra% 2nd person:" + secondPersonPerc + " extra% Nth person:" + nthPersonPerc + " Length: " + length + "  total rental adjustment:" + rentalAdjustment ,module);
         return rentalAdjustment; // return total rental adjustment
-        }
+    }
+
+    public static BigDecimal getVatTotal(List<GenericValue> orderItems, List<GenericValue> adjustments) {
+        BigDecimal result = ZERO;
+        //Iterator<GenericValue> itemIter = UtilMisc.toIterator(orderItems);
+        //while (itemIter != null && itemIter.hasNext()) {
+            for(GenericValue orderAdjustment : adjustments) {
+                BigDecimal vat = orderAdjustment.getBigDecimal("amountAlreadyIncluded");
+                if ( vat != null ) result = result.add(vat);
+            }
+        //}
+        return result.setScale(scale, rounding);
+    }
 
     public static BigDecimal getAllOrderItemsAdjustmentsTotal(List<GenericValue> orderItems, List<GenericValue> adjustments, boolean includeOther, boolean includeTax, boolean includeShipping) {
         BigDecimal result = ZERO;
