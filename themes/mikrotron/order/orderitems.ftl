@@ -95,7 +95,7 @@ under the License.
     </tr>
     <#if orderVatTotal?has_content && orderVatTotal != 0 >
     <tr>
-      <th colspan="7">${uiLabelMap.OrderSalesTaxIncluded}</th>
+      <th colspan="7">${uiLabelMap.OrderTotalSalesTax}</th>
       <td><@ofbizCurrency amount=orderVatTotal isoCode=currencyUomId/></td>
       <#if maySelectItems?default("N") == "Y"><td colspan="3"></td></#if>
     </tr>

@@ -58,8 +58,10 @@ under the License.
                     <fo:table-row>
                       <fo:table-cell>
                       <fo:block font-family="LiberationSerif">
+                      <#if vatAmount == 0>
                         <#--    Here is a good place to put policies and return information. -->
                         Oslobođeno PDV-a po članku 90 Zakona o porezu na dodanu vrijednost.
+                      </#if>
                       </fo:block>
                       </fo:table-cell>
                       <fo:table-cell>

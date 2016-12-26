@@ -181,6 +181,18 @@ under the License.
                         </fo:table-cell>
                     </fo:table-row>
                 </#if>
+                <#if vatAmount != 0>
+                    <fo:table-row>
+                        <fo:table-cell><fo:block></fo:block></fo:table-cell>
+                        <fo:table-cell><fo:block></fo:block></fo:table-cell>
+                        <fo:table-cell number-columns-spanned="2">
+                            <fo:block font-weight="bold">${uiLabelMap.OrderTotalSalesTax}</fo:block>
+                        </fo:table-cell>
+                        <fo:table-cell text-align="right">
+                            <fo:block><@ofbizCurrency amount=vatAmount isoCode=currencyUomId/></fo:block>
+                        </fo:table-cell>
+                    </fo:table-row>
+                </#if>
                 <#-- notes -->
                 <#if orderNotes?has_content>
                     <#if showNoteHeadingOnPDF>
