@@ -197,7 +197,7 @@ under the License.
             <actions>
                 <set field="titleProperty" value="PageTitleCheckoutReview"/>
                 <set field="parameters.formNameValue" value="orderreview" global="true"/>
-                <script location="component://ecommerce/webapp/ecommerce/WEB-INF/actions/order/CheckoutReview.groovy"/>
+                <script location="component://mikrotron/order/CheckoutReview.groovy"/>
             </actions>
             <widgets>
                 <decorator-screen name="anonymousCheckoutDecorator">
@@ -328,7 +328,7 @@ under the License.
             <actions>
                 <set field="titleProperty" value="PageTitleCheckoutReview"/>
                 <set field="parameters.formNameValue" value="orderreview" global="true"/>
-                <script location="component://ecommerce/webapp/ecommerce/WEB-INF/actions/order/CheckoutReview.groovy"/>
+                <script location="component://mikrotron/order/CheckoutReview.groovy"/>
             </actions>
             <widgets>
                 <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
@@ -516,7 +516,7 @@ under the License.
             <actions>
                 <set field="titleProperty" value="PageTitleCheckoutReview"/>
                 <set field="parameters.formNameValue" value="quickAnonOrderReview" global="true"/>
-                <script location="component://ecommerce/webapp/ecommerce/WEB-INF/actions/order/CheckoutReview.groovy"/>
+                <script location="component://mikrotron/order/CheckoutReview.groovy"/>
             </actions>
             <widgets>
                 <decorator-screen name="quickAnonCheckoutDecorator">
@@ -598,7 +598,7 @@ under the License.
                 <property-map resource="AccountingUiLabels" map-name="uiLabelMap" global="true"/>
                 <property-map resource="PartyUiLabels" map-name="uiLabelMap" global="true"/>
                 <property-map resource="OrderUiLabels" map-name="uiLabelMap" global="true"/>
-                <script location="component://ecommerce/webapp/ecommerce/WEB-INF/actions/order/CheckoutReview.groovy"/>
+                <script location="component://mikrotron/order/CheckoutReview.groovy"/>
                 <script location="component://ecommerce/webapp/ecommerce/WEB-INF/actions/order/QuickAnonPaymentInformation.groovy"/>
             </actions>
             <widgets>

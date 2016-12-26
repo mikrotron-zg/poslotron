@@ -1905,7 +1905,7 @@ public class ShoppingCart implements Iterable<ShoppingCartItem>, Serializable {
     /**
      * Returns ProductStoreFinActSetting based on cart's productStoreId and FinAccountHelper's defined giftCertFinAcctTypeId
      * @param delegator the delegator
-     * @return returns ProductStoreFinActSetting based on cart's productStoreId 
+     * @return returns ProductStoreFinActSetting based on cart's productStoreId
      * @throws GenericEntityException
      */
     public GenericValue getGiftCertSettingFromStore(Delegator delegator) throws GenericEntityException {
@@ -2239,7 +2239,7 @@ public class ShoppingCart implements Iterable<ShoppingCartItem>, Serializable {
         }
         csi.setContactMechId(shippingContactMechId);
     }
-    
+
     /**
      * Sets @param shippingContactMechId in all ShipInfo(ShipGroups) associated
      * with this ShoppingCart
@@ -2251,7 +2251,7 @@ public class ShoppingCart implements Iterable<ShoppingCartItem>, Serializable {
             this.setShippingContactMechId(x, shippingContactMechId);
         }
     }
-    
+
     /** Returns the shipping contact mech id. */
     public String getShippingContactMechId(int idx) {
         CartShipInfo csi = this.getShipInfo(idx);
@@ -2267,7 +2267,7 @@ public class ShoppingCart implements Iterable<ShoppingCartItem>, Serializable {
         CartShipInfo csi = this.getShipInfo(idx);
         csi.shipmentMethodTypeId = shipmentMethodTypeId;
     }
-    
+
     /**
      * Sets @param shipmentMethodTypeId in all ShipInfo(ShipGroups) associated
      * with this ShoppingCart
@@ -2279,7 +2279,7 @@ public class ShoppingCart implements Iterable<ShoppingCartItem>, Serializable {
             this.setShipmentMethodTypeId(x, shipmentMethodTypeId);
         }
     }
-    
+
     /** Returns the shipment method type ID */
     public String getShipmentMethodTypeId(int idx) {
         CartShipInfo csi = this.getShipInfo(idx);
@@ -2323,7 +2323,7 @@ public class ShoppingCart implements Iterable<ShoppingCartItem>, Serializable {
         CartShipInfo csi = this.getShipInfo(idx);
         csi.shippingInstructions = shippingInstructions;
     }
-    
+
     /**
      * Sets @param shippingInstructions in all ShipInfo(ShipGroups) associated
      * with this ShoppingCart
@@ -2352,7 +2352,7 @@ public class ShoppingCart implements Iterable<ShoppingCartItem>, Serializable {
             csi.setMaySplit(maySplit);
         }
     }
-    
+
     /**
      * Sets @param maySplit in all ShipInfo(ShipGroups) associated
      * with this ShoppingCart
@@ -2364,7 +2364,7 @@ public class ShoppingCart implements Iterable<ShoppingCartItem>, Serializable {
             this.setMaySplit(x, maySplit);
         }
     }
-    
+
 
     /** Returns Boolean.TRUE if the order may be split (null if unspecified) */
     public String getMaySplit(int idx) {
@@ -2392,7 +2392,7 @@ public class ShoppingCart implements Iterable<ShoppingCartItem>, Serializable {
             this.setGiftMessage(x, giftMessage);
         }
     }
-    
+
     public String getGiftMessage(int idx) {
         CartShipInfo csi = this.getShipInfo(idx);
         return csi.giftMessage;
@@ -2420,7 +2420,7 @@ public class ShoppingCart implements Iterable<ShoppingCartItem>, Serializable {
             this.setIsGift(x, isGift);
         }
     }
-    
+
     public String getIsGift(int idx) {
         CartShipInfo csi = this.getShipInfo(idx);
         return csi.isGift;
@@ -2434,7 +2434,7 @@ public class ShoppingCart implements Iterable<ShoppingCartItem>, Serializable {
         CartShipInfo csi = this.getShipInfo(idx);
         csi.carrierPartyId = carrierPartyId;
     }
-    
+
     /**
      * Sets @param carrierPartyId in all ShipInfo(ShipGroups) associated
      * with this ShoppingCart
@@ -2446,7 +2446,7 @@ public class ShoppingCart implements Iterable<ShoppingCartItem>, Serializable {
             this.setCarrierPartyId(x, carrierPartyId);
         }
     }
-    
+
     public String getCarrierPartyId(int idx) {
         CartShipInfo csi = this.getShipInfo(idx);
         return csi.carrierPartyId;
@@ -2469,7 +2469,7 @@ public class ShoppingCart implements Iterable<ShoppingCartItem>, Serializable {
         CartShipInfo csi = this.getShipInfo(idx);
         csi.productStoreShipMethId = productStoreShipMethId;
     }
-    
+
     /**
      * Sets @param productStoreShipMethId in all ShipInfo(ShipGroups) associated
      * with this ShoppingCart
@@ -2622,6 +2622,16 @@ public class ShoppingCart implements Iterable<ShoppingCartItem>, Serializable {
     public BigDecimal getTotalSalesTax(int shipGroup) {
         CartShipInfo csi = this.getShipInfo(shipGroup);
         return csi.getTotalTax(this);
+    }
+
+    /** mikrotron: returns the tax amount from the cart object. */
+    public BigDecimal getTotalVAT() {
+        BigDecimal totalTax = ZERO;
+        for (int i = 0; i < shipInfo.size(); i++) {
+            CartShipInfo csi = this.getShipInfo(i);
+            totalTax = totalTax.add(csi.getTotalVAT(this)).setScale(taxCalcScale, taxRounding);
+        }
+        return totalTax.setScale(taxFinalScale, taxRounding);
     }
 
     /** Returns the tax amount from the cart object. */
@@ -2829,7 +2839,7 @@ public class ShoppingCart implements Iterable<ShoppingCartItem>, Serializable {
         orderTerm.put("textValue", textValue);
         return addOrderTerm(orderTerm);
     }
-    
+
     public int addOrderTerm(String termTypeId, String orderItemSeqId,BigDecimal termValue, Long termDays, String textValue, String description) {
         GenericValue orderTerm = this.getDelegator().makeValue("OrderTerm");
         orderTerm.put("termTypeId", termTypeId);
@@ -3442,7 +3452,7 @@ public class ShoppingCart implements Iterable<ShoppingCartItem>, Serializable {
             else {
                 serviceContext.put("productTypeId", "AGGREGATED_CONF");
             }
-            
+
             serviceContext.put("configId", configId);
             if (UtilValidate.isNotEmpty(product.getString("requirementMethodEnumId"))) {
                 serviceContext.put("requirementMethodEnumId", product.getString("requirementMethodEnumId"));
@@ -4271,7 +4281,7 @@ public class ShoppingCart implements Iterable<ShoppingCartItem>, Serializable {
                 shipInfo = this.shipInfo.get(newShipGroupIndex);
             }
             shipInfo.supplierPartyId = supplierPartyId;
-            
+
             Map<ShoppingCartItem, Map<Integer, BigDecimal>> supplierCartItems = UtilGenerics.checkMap(dropShipItems.get(supplierPartyId));
             for(ShoppingCartItem cartItem : supplierCartItems.keySet()) {
                 Map<Integer, BigDecimal> cartItemGroupQuantities = UtilGenerics.checkMap(supplierCartItems.get(cartItem));
@@ -4703,6 +4713,18 @@ public class ShoppingCart implements Iterable<ShoppingCartItem>, Serializable {
             return taxTotal;
         }
 
+        // mikrotron: VAT is treated separatelly, we don't want it added to order totals, only displayed
+        public BigDecimal getTotalVAT(ShoppingCart cart) {
+            List<GenericValue> taxAdjustments = FastList.newInstance();
+            taxAdjustments.addAll(shipTaxAdj);
+            for (CartShipItemInfo info : shipItemInfo.values()) {
+                taxAdjustments.addAll(info.itemTaxAdj);
+            }
+            Map<String, Object> taxByAuthority = OrderReadHelper.getOrderTaxByTaxAuthGeoAndPartyForDisplay(taxAdjustments);
+            BigDecimal taxTotal = (BigDecimal) taxByAuthority.get("taxGrandTotal");
+            return taxTotal;
+        }
+
         public BigDecimal getTotal() {
             BigDecimal shipItemTotal = ZERO;
             for (CartShipItemInfo info : shipItemInfo.values()) {
@@ -4723,6 +4745,19 @@ public class ShoppingCart implements Iterable<ShoppingCartItem>, Serializable {
                 for (int i = 0; i < itemTaxAdj.size(); i++) {
                     GenericValue v = itemTaxAdj.get(i);
                     itemTax = itemTax.add(OrderReadHelper.calcItemAdjustment(v, quantity, item.getBasePrice()));
+                }
+
+                return itemTax.setScale(taxCalcScale, taxRounding);
+            }
+
+            // mikrotron: VAT is only displayed, not added to price
+            // CHECKME: this doesn't seem to be used anywhere
+            public BigDecimal getItemVAT(ShoppingCart cart) {
+                BigDecimal itemTax = ZERO;
+
+                for (int i = 0; i < itemTaxAdj.size(); i++) {
+                    GenericValue v = itemTaxAdj.get(i);
+                    itemTax = itemTax.add(OrderReadHelper.calcItemVAT(v, quantity, item.getBasePrice()));
                 }
 
                 return itemTax.setScale(taxCalcScale, taxRounding);
@@ -5038,7 +5073,7 @@ public class ShoppingCart implements Iterable<ShoppingCartItem>, Serializable {
 
     public static BigDecimal getMinimumOrderQuantity(Delegator delegator, BigDecimal itemBasePrice, String itemProductId) throws GenericEntityException {
         BigDecimal minQuantity = BigDecimal.ZERO;
-        BigDecimal minimumOrderPrice = BigDecimal.ZERO; 
+        BigDecimal minimumOrderPrice = BigDecimal.ZERO;
 
         List<EntityExpr> exprs = FastList.newInstance();
         exprs.add(EntityCondition.makeCondition("productId", EntityOperator.EQUALS, itemProductId));

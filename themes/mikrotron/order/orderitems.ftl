@@ -70,6 +70,7 @@ under the License.
       <td><@ofbizCurrency amount=orderShippingTotal isoCode=currencyUomId/></td>
       <#if maySelectItems?default("N") == "Y"><td colspan="3"></td></#if>
     </tr>
+    <#if orderTaxTotal?has_content && orderTaxTotal != 0 >
     <tr>
       <th colspan="7">${uiLabelMap.OrderSalesTax}</th>
       <td><@ofbizCurrency amount=orderTaxTotal isoCode=currencyUomId/></td>
@@ -84,6 +85,7 @@ under the License.
         <td colspan="${numColumns - 3}"></td>
       </#if>
     </tr>
+    </#if>
     <tr>
       <th colspan="7">${uiLabelMap.OrderGrandTotal}</th>
       <td>
@@ -91,6 +93,13 @@ under the License.
       </td>
       <#if maySelectItems?default("N") == "Y"><td colspan="3"></td></#if>
     </tr>
+    <#if orderVatTotal?has_content && orderVatTotal != 0 >
+    <tr>
+      <th colspan="7">${uiLabelMap.OrderSalesTaxIncluded}</th>
+      <td><@ofbizCurrency amount=orderVatTotal isoCode=currencyUomId/></td>
+      <#if maySelectItems?default("N") == "Y"><td colspan="3"></td></#if>
+    </tr>
+    </#if>
     </tfoot>
     <tbody>
     <#list orderItems as orderItem>
@@ -268,7 +277,12 @@ under the License.
           </td>
           <td colspan="5"></td>
           <td>
-            <@ofbizCurrency amount=localOrderReadHelper.getOrderItemAdjustmentTotal(orderItem, orderItemAdjustment) isoCode=currencyUomId/>
+            <#-- mikrotron: we need to display VAT amount -->
+            <#if orderItemAdjustment.orderAdjustmentTypeId == "VAT_TAX">
+              <@ofbizCurrency amount=orderItemAdjustment.amountAlreadyIncluded isoCode=currencyUomId/>
+            <#else>
+              <@ofbizCurrency amount=localOrderReadHelper.getOrderItemAdjustmentTotal(orderItem, orderItemAdjustment) isoCode=currencyUomId/>
+            </#if>
           </td>
           <td></td>
           <#if maySelectItems?default("N") == "Y"><td colspan="3"></td></#if>

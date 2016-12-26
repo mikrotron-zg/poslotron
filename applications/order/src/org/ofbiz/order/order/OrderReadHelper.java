@@ -1649,7 +1649,7 @@ public class OrderReadHelper {
             if (orderItem.get("productId") != null) {
                 productIds.add(orderItem.getString("productId"));
             }
-        }        
+        }
         return productIds;
     }
 
@@ -1759,7 +1759,7 @@ public class OrderReadHelper {
             if ((returnedItem.get("returnPrice") != null) && (returnedItem.get("returnQuantity") != null)) {
                 returnedAmount = returnedAmount.add(returnedItem.getBigDecimal("returnPrice").multiply(returnedItem.getBigDecimal("returnQuantity")).setScale(scale, rounding));
             }
-            Map<String, Object> itemAdjustmentCondition = UtilMisc.toMap("returnId", returnedItem.get("returnId"), "returnItemSeqId", returnedItem.get("returnItemSeqId"));; 
+            Map<String, Object> itemAdjustmentCondition = UtilMisc.toMap("returnId", returnedItem.get("returnId"), "returnItemSeqId", returnedItem.get("returnItemSeqId"));;
             if (UtilValidate.isNotEmpty(returnTypeId)) {
                 itemAdjustmentCondition.put("returnTypeId", returnTypeId);
             }
@@ -2445,7 +2445,7 @@ public class OrderReadHelper {
         BigDecimal promoAdjTotal = ZERO;
 
         List<GenericValue> promoAdjustments = EntityUtil.filterByAnd(allOrderAdjustments, UtilMisc.toMap("orderAdjustmentTypeId", "PROMOTION_ADJUSTMENT"));
-        
+
         if (UtilValidate.isNotEmpty(promoAdjustments)) {
             Iterator<GenericValue> promoAdjIter = promoAdjustments.iterator();
             while (promoAdjIter.hasNext()) {
@@ -2566,6 +2566,20 @@ public class OrderReadHelper {
 
     public static BigDecimal calcItemAdjustment(GenericValue itemAdjustment, GenericValue item) {
         return calcItemAdjustment(itemAdjustment, getOrderItemQuantity(item), item.getBigDecimal("unitPrice"));
+    }
+
+    // mikrotron: we use different method to calculate item for VAT, to avoid VAT addition order totals
+    public static BigDecimal calcItemVAT(GenericValue itemAdjustment, BigDecimal quantity, BigDecimal unitPrice) {
+        BigDecimal adjustment = ZERO;
+        if (itemAdjustment.get("amountAlreadyIncluded") != null) {
+            adjustment = adjustment.add(itemAdjustment.getBigDecimal("amountAlreadyIncluded"));
+        } else if (itemAdjustment.get("sourcePercentage") != null) {
+            // probably dead code
+            // but anyway: VAT = price/(1+percent/100) so this calculation is obviously wrong - FIXME
+            adjustment = adjustment.add(itemAdjustment.getBigDecimal("sourcePercentage").multiply(quantity).multiply(unitPrice).multiply(percentage));
+        }
+        if (Debug.verboseOn()) Debug.logVerbose("calcItemVAT: " + itemAdjustment + ", quantity=" + quantity + ", unitPrice=" + unitPrice + ", adjustment=" + adjustment, module);
+        return adjustment;
     }
 
     public static BigDecimal calcItemAdjustment(GenericValue itemAdjustment, BigDecimal quantity, BigDecimal unitPrice) {
@@ -2802,10 +2816,12 @@ public class OrderReadHelper {
         }
         return attributeValue;
     }
-    
+
 
    public static Map<String, Object> getOrderTaxByTaxAuthGeoAndParty(List<GenericValue> orderAdjustments) {
+       // mikrotron: we wan't VAT amount displayed, but not added to totals
        BigDecimal taxGrandTotal = BigDecimal.ZERO;
+       BigDecimal vatGrandTotal = BigDecimal.ZERO;
        List<Map<String, Object>> taxByTaxAuthGeoAndPartyList = FastList.newInstance();
        if (UtilValidate.isNotEmpty(orderAdjustments)) {
            // get orderAdjustment where orderAdjustmentTypeId is SALES_TAX.
@@ -2825,18 +2841,22 @@ public class OrderReadHelper {
                    List<GenericValue> orderAdjByTaxAuthGeoAndPartyIds = EntityUtil.filterByAnd(orderAdjustments, UtilMisc.toMap("taxAuthGeoId", taxAuthGeoId, "taxAuthPartyId", taxAuthPartyId));
                    if (UtilValidate.isNotEmpty(orderAdjByTaxAuthGeoAndPartyIds)) {
                        BigDecimal totalAmount = BigDecimal.ZERO;
+                       BigDecimal totalVAT = BigDecimal.ZERO;
                        //Now for each orderAdjustment record get and add amount.
                        for (GenericValue orderAdjustment : orderAdjByTaxAuthGeoAndPartyIds) {
                            BigDecimal amount = orderAdjustment.getBigDecimal("amount");
-                           if (amount == null) {
-                               amount = ZERO;
-                           }
+                           if (amount == null) amount = ZERO;
+                           BigDecimal amountIncluded = orderAdjustment.getBigDecimal("amountAlreadyIncluded");
+                           if (amountIncluded == null) amountIncluded = ZERO;
                            totalAmount = totalAmount.add(amount).setScale(taxCalcScale, taxRounding);
+                           totalVAT = totalVAT.add(amountIncluded).setScale(taxCalcScale, taxRounding);
                            processedAdjustments.add(orderAdjustment);
                        }
                        totalAmount = totalAmount.setScale(taxFinalScale, taxRounding);
+                       totalVAT = totalVAT.setScale(taxFinalScale, taxRounding);
                        taxByTaxAuthGeoAndPartyList.add(UtilMisc.<String, Object>toMap("taxAuthPartyId", taxAuthPartyId, "taxAuthGeoId", taxAuthGeoId, "totalAmount", totalAmount));
                        taxGrandTotal = taxGrandTotal.add(totalAmount);
+                       vatGrandTotal = vatGrandTotal.add(totalVAT);
                    }
                }
            }
@@ -2852,6 +2872,7 @@ public class OrderReadHelper {
        Map<String, Object> result = FastMap.newInstance();
        result.put("taxByTaxAuthGeoAndPartyList", taxByTaxAuthGeoAndPartyList);
        result.put("taxGrandTotal", taxGrandTotal);
+       result.put("vatGrandTotal", vatGrandTotal);
        return result;
    }
 
@@ -2888,7 +2909,7 @@ public class OrderReadHelper {
                            if (amount != null) {
                                totalAmount = totalAmount.add(amount);
                            }
-                           if ("VAT_TAX".equals(orderAdjustment.getString("orderAdjustmentTypeId")) && 
+                           if ("VAT_TAX".equals(orderAdjustment.getString("orderAdjustmentTypeId")) &&
                                    orderAdjustment.get("amountAlreadyIncluded") != null) {
                                // this is the only case where the VAT_TAX amountAlreadyIncluded should be added in, and should just be for display and not to calculate the order grandTotal
                                totalAmount = totalAmount.add(orderAdjustment.getBigDecimal("amountAlreadyIncluded"));
