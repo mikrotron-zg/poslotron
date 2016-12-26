@@ -167,7 +167,7 @@ public class TaxAuthorityServices {
         if (productStore == null && payToPartyId == null) {
             throw new IllegalArgumentException("Could not find payToPartyId [" + payToPartyId + "] or ProductStore [" + productStoreId + "] for tax calculation");
         }
-        
+
         if (shippingAddress == null && facility != null) {
             // if there is no shippingAddress and there is a facility it means it is a face-to-face sale so get facility's address
             try {
@@ -263,9 +263,9 @@ public class TaxAuthorityServices {
         //Debug.logInfo("Tax calc taxAuthoritySet after expand:" + taxAuthoritySet, module);
     }
 
-    private static List<GenericValue> getTaxAdjustments(Delegator delegator, GenericValue product, GenericValue productStore, 
-            String payToPartyId, String billToPartyId, Set<GenericValue> taxAuthoritySet, 
-            BigDecimal itemPrice, BigDecimal itemQuantity, BigDecimal itemAmount, 
+    private static List<GenericValue> getTaxAdjustments(Delegator delegator, GenericValue product, GenericValue productStore,
+            String payToPartyId, String billToPartyId, Set<GenericValue> taxAuthoritySet,
+            BigDecimal itemPrice, BigDecimal itemQuantity, BigDecimal itemAmount,
             BigDecimal shippingAmount, BigDecimal orderPromotionsAmount) {
         Timestamp nowTimestamp = UtilDateTime.nowTimestamp();
         List<GenericValue> adjustments = FastList.newInstance();
@@ -343,7 +343,7 @@ public class TaxAuthorityServices {
                 productCategoryCond = EntityCondition.makeCondition("productCategoryId", EntityOperator.EQUALS, null);
             }
 
-            // FIXME handles shipping and promo tax. Simple solution, see https://issues.apache.org/jira/browse/OFBIZ-4160 for a better one 
+            // FIXME handles shipping and promo tax. Simple solution, see https://issues.apache.org/jira/browse/OFBIZ-4160 for a better one
             if (product == null && shippingAmount != null) {
                 EntityCondition taxShippingCond = EntityCondition.makeCondition(
                             EntityCondition.makeCondition("taxShipping", EntityOperator.EQUALS, null),
@@ -426,20 +426,24 @@ public class TaxAuthorityServices {
                 GenericValue productPrice = null;
                 if (product != null && taxAuthPartyId != null && taxAuthGeoId != null) {
                     // find a ProductPrice for the productId and taxAuth* valxues, and see if it has a priceWithTax value
-                    Map<String, String> priceFindMap = UtilMisc.toMap("productId", product.getString("productId"), 
-                            "taxAuthPartyId", taxAuthPartyId, "taxAuthGeoId", taxAuthGeoId, 
+                    Map<String, String> priceFindMap = UtilMisc.toMap("productId", product.getString("productId"),
+                            "taxAuthPartyId", taxAuthPartyId, "taxAuthGeoId", taxAuthGeoId,
                             "productPricePurposeId", "PURCHASE");
                     List<GenericValue> productPriceList = delegator.findByAnd("ProductPrice", priceFindMap, UtilMisc.toList("-fromDate"), false);
                     productPriceList = EntityUtil.filterByDate(productPriceList, true);
                     productPrice = (productPriceList != null && productPriceList.size() > 0) ? productPriceList.get(0): null;
                     //Debug.logInfo("=================== productId=" + product.getString("productId"), module);
                     //Debug.logInfo("=================== productPrice=" + productPrice, module);
-                    
+
                 }
 
                 GenericValue taxAdjValue = delegator.makeValue("OrderAdjustment");
 
-                if (productPrice != null && "Y".equals(productPrice.getString("taxInPrice"))) {
+                // mikrotron: find TaxAuthority - we need to process global parameters like 'tax in price'
+                GenericValue taxAuthority = delegator.findOne("TaxAuthority", UtilMisc.toMap("taxAuthPartyId", taxAuthPartyId, "taxAuthGeoId", taxAuthGeoId), false);
+                String taxInPrice = taxAuthority.getString("includeTaxInPrice");
+
+                if ("Y".equals(taxInPrice) || (productPrice != null && "Y".equals(productPrice.getString("taxInPrice")))) {
                     // tax is in the price already, so we want the adjustment to be a VAT_TAX adjustment to be subtracted instead of a SALES_TAX adjustment to be added
                     taxAdjValue.set("orderAdjustmentTypeId", "VAT_TAX");
 
@@ -452,7 +456,7 @@ public class TaxAuthorityServices {
                     taxAdjValue.set("orderAdjustmentTypeId", "SALES_TAX");
                     taxAdjValue.set("amount", taxAmount);
                 }
-                
+
                 taxAdjValue.set("sourcePercentage", taxRate);
                 taxAdjValue.set("taxAuthorityRateSeqId", taxAuthorityRateProduct.getString("taxAuthorityRateSeqId"));
                 // the primary Geo should be the main jurisdiction that the tax is for, and the secondary would just be to define a parent or wrapping jurisdiction of the primary
@@ -479,8 +483,8 @@ public class TaxAuthorityServices {
 
                 adjustments.add(taxAdjValue);
 
-                if (productPrice != null && itemQuantity != null && 
-                        productPrice.getBigDecimal("priceWithTax") != null && 
+                if (productPrice != null && itemQuantity != null &&
+                        productPrice.getBigDecimal("priceWithTax") != null &&
                         !"Y".equals(productPrice.getString("taxInPrice"))) {
                     BigDecimal priceWithTax = productPrice.getBigDecimal("priceWithTax");
                     BigDecimal price = productPrice.getBigDecimal("price");
@@ -489,27 +493,27 @@ public class TaxAuthorityServices {
                     //Debug.logInfo("=================== priceWithTax=" + priceWithTax, module);
                     //Debug.logInfo("=================== enteredTotalPriceWithTax=" + enteredTotalPriceWithTax, module);
                     //Debug.logInfo("=================== calcedTotalPriceWithTax=" + calcedTotalPriceWithTax, module);
-                    
+
                     // tax is not already in price so we want to add it in, but this is a VAT situation so adjust to make it as accurate as possible
 
-                    // for VAT taxes if the calculated total item price plus calculated taxes is different from what would be 
+                    // for VAT taxes if the calculated total item price plus calculated taxes is different from what would be
                     // expected based on the original entered price with taxes (if the price was entered this way), then create
-                    // an adjustment that corrects for the difference, and this correction will be effectively subtracted from the 
+                    // an adjustment that corrects for the difference, and this correction will be effectively subtracted from the
                     // price and not from the tax (the tax is meant to be calculated based on Tax Authority rules and so should
                     // not be shorted)
-                    
+
                     // TODO (don't think this is needed, but just to keep it in mind): get this to work with multiple VAT tax authorities instead of just one (right now will get incorrect totals if there are multiple taxes included in the price)
                     // TODO add constraint to ProductPrice lookup by any productStoreGroupId associated with the current productStore
-                    
+
                     BigDecimal enteredTotalPriceWithTax = priceWithTax.multiply(itemQuantity);
                     BigDecimal calcedTotalPriceWithTax = (baseSubtotal).add(baseTaxAmount);
                     if (!enteredTotalPriceWithTax.equals(calcedTotalPriceWithTax)) {
-                        // if the calced amount is higher than the entered amount we want the value to be negative 
+                        // if the calced amount is higher than the entered amount we want the value to be negative
                         //     to get it down to match the entered amount
                         // so, subtract the calced amount from the entered amount (ie: correction = entered - calced)
                         BigDecimal correctionAmount = enteredTotalPriceWithTax.subtract(calcedTotalPriceWithTax);
                         //Debug.logInfo("=================== correctionAmount=" + correctionAmount, module);
-                        
+
                         GenericValue correctionAdjValue = delegator.makeValue("OrderAdjustment");
                         correctionAdjValue.set("taxAuthorityRateSeqId", taxAuthorityRateProduct.getString("taxAuthorityRateSeqId"));
                         correctionAdjValue.set("amount", correctionAmount);
