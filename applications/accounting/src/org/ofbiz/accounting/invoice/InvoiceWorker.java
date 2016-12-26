@@ -60,7 +60,7 @@ public class InvoiceWorker {
      * Return the total amount of the invoice (including tax) using the the invoiceId as input.
      * @param delegator the delegator
      * @param invoiceId the invoice id
-     * @return Return the total amount of the invoice 
+     * @return Return the total amount of the invoice
      */
     public static BigDecimal getInvoiceTotal(Delegator delegator, String invoiceId) {
         return getInvoiceTotal(delegator, invoiceId, Boolean.TRUE);
@@ -176,7 +176,10 @@ public class InvoiceWorker {
                 invoiceTotal = invoiceTotal.add(getInvoiceItemTotal(invoiceItem)).setScale(decimals,rounding);
             }
         }
-        invoiceTotal = invoiceTotal.add(invoiceTaxTotal).setScale(decimals, rounding);
+        // mikrotron: what if we do have tax in price? VAT - FIXME!!!
+        // TaxAuthority.includeTaxInPrice = Y
+        // ProductStore.showPricesWithVatTax = Y
+        //invoiceTotal = invoiceTotal.add(invoiceTaxTotal).setScale(decimals, rounding);
         if (UtilValidate.isNotEmpty(invoiceTotal) && !actualCurrency) {
             invoiceTotal = invoiceTotal.multiply(getInvoiceCurrencyConversionRate(invoice)).setScale(decimals,rounding);
         }
