@@ -264,7 +264,7 @@ under the License.
           <fo:block/>
         </fo:table-cell>
         <fo:table-cell number-columns-spanned="1">
-            <fo:block>${taxRate.description}</fo:block>
+            <fo:block>${taxRate.description?if_exists}</fo:block>
         </fo:table-cell>
         <fo:table-cell number-columns-spanned="1" text-align="right">
             <fo:block font-weight="bold"><@ofbizCurrency amount=vatTaxesByType[vatTaxId] isoCode=invoice.currencyUomId?if_exists/></fo:block>
@@ -285,6 +285,6 @@ under the License.
     <#if countryGeo?has_content && "HR" == countryGeo.geoCode?if_exists>
       Oslobođeno PDV-a po članku 90 Zakona o porezu na dodanu vrijednost.
     </#if>
-    -->    
+    -->
   </fo:block>
 </#escape>

@@ -564,7 +564,7 @@ public class InvoiceServices {
                             amount = amount.setScale(invoiceTypeDecimals, ROUNDING);
                         }
                     }
-                    Debug.logInfo("INVOICE adjustment "+adj.getString("orderAdjustmentTypeId")+":"+amount+" "+adjAlreadyInvoicedAmount+" "+adj, module);
+                    //Debug.logInfo("INVOICE adjustment1 "+adj.getString("orderAdjustmentTypeId")+":"+amount+" "+adjAlreadyInvoicedAmount+" "+adj, module);
 
                     if (amount.signum() != 0) {
                         Map<String, Object> createInvoiceItemAdjContext = FastMap.newInstance();
@@ -679,7 +679,7 @@ public class InvoiceServices {
                     continue;
                 }
 
-                Debug.logInfo("INVOICE adjustment "+adj.getString("orderAdjustmentTypeId")+":"+adjAlreadyInvoicedAmount+" "+adj, module);
+                //Debug.logInfo("INVOICE adjustment2 "+adj.getString("orderAdjustmentTypeId")+":"+adjAlreadyInvoicedAmount+" "+adj, module);
                 if ("SHIPPING_CHARGES".equals(adj.getString("orderAdjustmentTypeId"))) {
                     shipAdjustments.put(adj, adjAlreadyInvoicedAmount);
                 } else if ("SALES_TAX".equals(adj.getString("orderAdjustmentTypeId"))) {
@@ -708,8 +708,6 @@ public class InvoiceServices {
                 BigDecimal adjAlreadyInvoicedAmount = shipAdjustments.get(adj);
 
                 if ("N".equalsIgnoreCase(prorateShipping)) {
-                    Debug.logInfo("INVOICE adjAmount 2", module);
-
                     // Set the divisor and multiplier to 1 to avoid prorating
                     BigDecimal divisor = BigDecimal.ONE;
                     BigDecimal multiplier = BigDecimal.ONE;
@@ -720,8 +718,6 @@ public class InvoiceServices {
                     calcHeaderAdj(delegator, adj, invoiceType, invoiceId, invoiceItemSeqId, divisor, multiplier, baseAmount,
                             invoiceTypeDecimals, ROUNDING, userLogin, dispatcher, locale);
                 } else {
-                    Debug.logInfo("INVOICE adjAmount 3", module);
-
                     // Pro-rate the shipping amount based on shippable information
                     BigDecimal divisor = shippableAmount;
                     BigDecimal multiplier = invoiceShipProRateAmount;
@@ -747,8 +743,10 @@ public class InvoiceServices {
                 BigDecimal adjAlreadyInvoicedAmount = entry.getValue();
                 BigDecimal adjAmount = null;
 
+                // mikrotron:
+                // we don't need to take care of amountAlreadyIncluded here, as it does not influence invoice subtotal
+                // adjAmount returned by calcHeader() needs to be 0
                 if ("N".equalsIgnoreCase(prorateTaxes)) {
-                    Debug.logInfo("INVOICE adjAmount 4: "+adj+" "+adjAlreadyInvoicedAmount, module);
 
                     // Set the divisor and multiplier to 1 to avoid prorating
                     BigDecimal divisor = BigDecimal.ONE;
@@ -759,8 +757,8 @@ public class InvoiceServices {
                     BigDecimal baseAmount = adj.getBigDecimal("amount").setScale(TAX_DECIMALS, TAX_ROUNDING).subtract(adjAlreadyInvoicedAmount);
                     adjAmount = calcHeaderAdj(delegator, adj, invoiceType, invoiceId, invoiceItemSeqId,
                              divisor, multiplier, baseAmount, TAX_DECIMALS, TAX_ROUNDING, userLogin, dispatcher, locale);
+                    //Debug.logInfo("INVOICE tax adjAmount: "+adjAlreadyInvoicedAmount+" "+baseAmount+" "+adjAmount+" "+adj, module);
                 } else {
-                    Debug.logInfo("INVOICE adjAmount 5", module);
 
                     // Pro-rate the tax amount based on shippable information
                     BigDecimal divisor = orderSubTotal;
@@ -770,6 +768,7 @@ public class InvoiceServices {
                     BigDecimal baseAmount = adj.getBigDecimal("amount");
                     adjAmount = calcHeaderAdj(delegator, adj, invoiceType, invoiceId, invoiceItemSeqId,
                             divisor, multiplier, baseAmount, TAX_DECIMALS, TAX_ROUNDING, userLogin, dispatcher, locale);
+                    //Debug.logInfo("INVOICE tax prorate adjAmount: "+adjAlreadyInvoicedAmount+" "+baseAmount+" "+adjAmount+" "+adj, module);
                 }
                 invoiceSubTotal = invoiceSubTotal.add(adjAmount).setScale(invoiceTypeDecimals, ROUNDING);
 
@@ -2241,10 +2240,67 @@ public class InvoiceServices {
         return ServiceUtil.returnSuccess();
     }
 
+    // mikrotron FIXME: we need to take care of amountAlreadyIncluded here!
     private static BigDecimal calcHeaderAdj(Delegator delegator, GenericValue adj, String invoiceTypeId, String invoiceId, String invoiceItemSeqId,
             BigDecimal divisor, BigDecimal multiplier, BigDecimal baseAmount, int decimals, int rounding, GenericValue userLogin, LocalDispatcher dispatcher, Locale locale) {
         BigDecimal adjAmount = ZERO;
-        if (adj.get("amount") != null) {
+        if (adj.get("amountAlreadyIncluded") != null) {
+            // VAT already included in price
+            BigDecimal amountAlreadyIncluded = (BigDecimal) adj.get("amountAlreadyIncluded");
+            // pro-rate the amount
+            BigDecimal amount = ZERO;
+            // make sure the divisor is not 0 to avoid NaN problems; just leave the amount as 0 and skip it in essense
+            if (divisor.signum() != 0) {
+                // multiply first then divide to avoid rounding errors
+                amount = baseAmount.multiply(multiplier).divide(divisor, decimals, rounding);
+            }
+            if (amountAlreadyIncluded.signum() != 0) {
+                Map<String, Object> createInvoiceItemContext = FastMap.newInstance();
+                createInvoiceItemContext.put("invoiceId", invoiceId);
+                createInvoiceItemContext.put("invoiceItemSeqId", invoiceItemSeqId);
+                createInvoiceItemContext.put("invoiceItemTypeId", getInvoiceItemType(delegator, adj.getString("orderAdjustmentTypeId"), null, invoiceTypeId, "INVOICE_ADJ"));
+                createInvoiceItemContext.put("description", adj.get("description"));
+                createInvoiceItemContext.put("quantity", BigDecimal.ONE);
+                createInvoiceItemContext.put("amount", amountAlreadyIncluded);
+                createInvoiceItemContext.put("overrideGlAccountId", adj.get("overrideGlAccountId"));
+                //createInvoiceItemContext.put("productId", orderItem.get("productId"));
+                //createInvoiceItemContext.put("productFeatureId", orderItem.get("productFeatureId"));
+                //createInvoiceItemContext.put("uomId", "");
+                //createInvoiceItemContext.put("taxableFlag", product.get("taxable"));
+                createInvoiceItemContext.put("taxAuthPartyId", adj.get("taxAuthPartyId"));
+                createInvoiceItemContext.put("taxAuthGeoId", adj.get("taxAuthGeoId"));
+                createInvoiceItemContext.put("taxAuthorityRateSeqId", adj.get("taxAuthorityRateSeqId"));
+                createInvoiceItemContext.put("userLogin", userLogin);
+
+                Map<String, Object> createInvoiceItemResult = null;
+                try {
+                    createInvoiceItemResult = dispatcher.runSync("createInvoiceItem", createInvoiceItemContext);
+                } catch (GenericServiceException e) {
+                    Debug.logError(e, "Service/other problem creating InvoiceItem from order header adjustment", module);
+                    return adjAmount;
+                }
+                if (ServiceUtil.isError(createInvoiceItemResult)) {
+                    return adjAmount;
+                }
+
+                // Create the OrderAdjustmentBilling record
+                Map<String, Object> createOrderAdjustmentBillingContext = FastMap.newInstance();
+                createOrderAdjustmentBillingContext.put("orderAdjustmentId", adj.getString("orderAdjustmentId"));
+                createOrderAdjustmentBillingContext.put("invoiceId", invoiceId);
+                createOrderAdjustmentBillingContext.put("invoiceItemSeqId", invoiceItemSeqId);
+                createOrderAdjustmentBillingContext.put("amount", amount);
+                createOrderAdjustmentBillingContext.put("userLogin", userLogin);
+
+                try {
+                    dispatcher.runSync("createOrderAdjustmentBilling", createOrderAdjustmentBillingContext);
+                } catch (GenericServiceException e) {
+                    return adjAmount;
+                }
+
+            }
+            amount = amount.setScale(decimals, rounding);
+            adjAmount = amount;
+        } else if (adj.get("amount") != null) {
 
             // pro-rate the amount
             BigDecimal amount = ZERO;
@@ -2282,19 +2338,7 @@ public class InvoiceServices {
                     return adjAmount;
                 }
 
-                // Create the OrderAdjustmentBilling record
-                Map<String, Object> createOrderAdjustmentBillingContext = FastMap.newInstance();
-                createOrderAdjustmentBillingContext.put("orderAdjustmentId", adj.getString("orderAdjustmentId"));
-                createOrderAdjustmentBillingContext.put("invoiceId", invoiceId);
-                createOrderAdjustmentBillingContext.put("invoiceItemSeqId", invoiceItemSeqId);
-                createOrderAdjustmentBillingContext.put("amount", amount);
-                createOrderAdjustmentBillingContext.put("userLogin", userLogin);
-
-                try {
-                    dispatcher.runSync("createOrderAdjustmentBilling", createOrderAdjustmentBillingContext);
-                } catch (GenericServiceException e) {
-                    return adjAmount;                }
-
+                // Create the OrderAdjustmentBilling record not required for tax is included in price
             }
             amount = amount.setScale(decimals, rounding);
             adjAmount = amount;

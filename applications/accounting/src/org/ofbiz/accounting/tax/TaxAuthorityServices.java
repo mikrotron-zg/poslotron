@@ -355,6 +355,7 @@ public class TaxAuthorityServices {
                             EntityOperator.OR,
                             taxShippingCond);
                 }
+                Debug.logWarning("In TaxAuthority Product Rate shipping amount found: "+shippingAmount+" condition:"+productCategoryCond, module);
             }
 
             if (product == null && orderPromotionsAmount != null) {
@@ -390,6 +391,7 @@ public class TaxAuthorityServices {
 
             // find the right entry(s) based on purchase amount
             for(GenericValue taxAuthorityRateProduct : filteredList) {
+                Debug.logInfo("TaxSomething: "+taxAuthorityRateProduct, module);
                 BigDecimal taxRate = taxAuthorityRateProduct.get("taxPercentage") != null ? taxAuthorityRateProduct.getBigDecimal("taxPercentage") : ZERO_BASE;
                 BigDecimal taxable = ZERO_BASE;
 
@@ -446,10 +448,22 @@ public class TaxAuthorityServices {
                 if ("Y".equals(taxInPrice) || (productPrice != null && "Y".equals(productPrice.getString("taxInPrice")))) {
                     // tax is in the price already, so we want the adjustment to be a VAT_TAX adjustment to be subtracted instead of a SALES_TAX adjustment to be added
                     taxAdjValue.set("orderAdjustmentTypeId", "VAT_TAX");
+                    Debug.logWarning("Tax itemAmount="+itemAmount+" shippingAmount="+shippingAmount, module);
+                    BigDecimal amount=ZERO_BASE;
+                    if (itemAmount.compareTo(BigDecimal.ZERO) == 0) {
+                      amount=shippingAmount;
+                      Debug.logInfo("Tax calculated on shipping",module);
+                    } else if (shippingAmount.compareTo(BigDecimal.ZERO) == 0){
+                      amount=itemAmount;
+                      Debug.logInfo("Tax calculated on items",module);
+                    } else {
+                      // TODO: promotions!
+                      // ERROR!
+                    }
 
                     // the amount will be different because we want to figure out how much of the price was tax, and not how much tax needs to be added
                     // the formula is: taxAmount = priceWithTax - (priceWithTax/(1+taxPercentage/100))
-                    BigDecimal taxAmountIncluded = itemAmount.subtract(itemAmount.divide(BigDecimal.ONE.add(taxRate.divide(PERCENT_SCALE, 4, BigDecimal.ROUND_HALF_UP)), 3, BigDecimal.ROUND_HALF_UP));
+                    BigDecimal taxAmountIncluded = amount.subtract(amount.divide(BigDecimal.ONE.add(taxRate.divide(PERCENT_SCALE, 4, BigDecimal.ROUND_HALF_UP)), 3, BigDecimal.ROUND_HALF_UP));
                     taxAdjValue.set("amountAlreadyIncluded", taxAmountIncluded);
                     taxAdjValue.set("amount", BigDecimal.ZERO);
                 } else {

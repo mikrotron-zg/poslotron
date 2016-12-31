@@ -2863,6 +2863,7 @@ public class OrderReadHelper {
                            totalAmount = totalAmount.add(amount).setScale(taxCalcScale, taxRounding);
                            totalVAT = totalVAT.add(amountIncluded).setScale(taxCalcScale, taxRounding);
                            processedAdjustments.add(orderAdjustment);
+                           Debug.logInfo("Processed adjustment "+orderAdjustment+" totalAmount="+totalAmount+" totalVAT="+totalVAT, module);
                        }
                        totalAmount = totalAmount.setScale(taxFinalScale, taxRounding);
                        totalVAT = totalVAT.setScale(taxFinalScale, taxRounding);
