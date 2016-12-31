@@ -81,14 +81,17 @@ under the License.
     </#if>
      -->
 
-    <fo:table table-layout="fixed" width="100%" space-before="0.2in">
-    <fo:table-column column-width="20mm"/>
-    <fo:table-column column-width="85mm"/>
-    <fo:table-column column-width="15mm"/>
-    <fo:table-column column-width="25mm"/>
-    <fo:table-column column-width="25mm"/>
+    <fo:table table-layout="fixed" width="100%" space-before="0.2in" >
+    <fo:table-column column-width="15mm"/> <#-- product id -->
+    <fo:table-column column-width="60mm"/> <#-- product description -->
+    <fo:table-column column-width="5mm"/> <#-- quantity -->
+    <fo:table-column column-width="20mm"/> <#-- price -->
+    <fo:table-column column-width="20mm"/> <#-- amount -->
+    <fo:table-column column-width="15mm"/> <#-- tax rate -->
+    <fo:table-column column-width="15mm"/> <#-- tax amount -->
+    <fo:table-column column-width="20mm"/> <#-- amount excl. tax -->
 
-    <fo:table-header height="14px">
+    <fo:table-header height="14px" font-size="10px">
       <fo:table-row border-bottom-style="solid" border-bottom-width="thin" border-bottom-color="black">
         <fo:table-cell>
           <fo:block font-weight="bold">${uiLabelMap.AccountingProduct}</fo:block>
@@ -105,17 +108,37 @@ under the License.
         <fo:table-cell>
           <fo:block font-weight="bold" text-align="right">${uiLabelMap.CommonAmount}</fo:block>
         </fo:table-cell>
+        <fo:table-cell>
+          <fo:block font-weight="bold" text-align="right">${uiLabelMap.AccountingRates}</fo:block>
+        </fo:table-cell>
+        <fo:table-cell>
+          <fo:block font-weight="bold" text-align="right">${uiLabelMap.AccountingVat}</fo:block>
+        </fo:table-cell>
+        <fo:table-cell>
+          <fo:block font-weight="bold" text-align="right">${uiLabelMap.AccountingTotalExclTax}</fo:block>
+        </fo:table-cell>
       </fo:table-row>
     </fo:table-header>
 
 
-    <fo:table-body font-size="10pt">
+    <fo:table-body font-size="8pt">
         <#assign currentShipmentId = "">
         <#assign newShipmentId = "">
+
+        <#assign itemState = "">
+        <#assign itemTax = "">
+        <#assign productId = "">
+        <#assign productDescription = "">
+        <#assign productQuantity = "">
+        <#assign productPrice = "">
+        <#assign productValue = 0>
+        <#assign taxAmount = 0>
         <#-- if the item has a description, then use its description.  Otherwise, use the description of the invoiceItemType -->
         <#list invoiceItems as invoiceItem>
             <#assign itemType = invoiceItem.getRelatedOne("InvoiceItemType", false)>
             <#assign isItemAdjustment = Static["org.ofbiz.entity.util.EntityTypeUtil"].hasParentType(delegator, "InvoiceItemType", "invoiceItemTypeId", itemType.getString("invoiceItemTypeId"), "parentTypeId", "INVOICE_ADJ")/>
+            <#assign isItemShipping = itemType.getString("invoiceItemTypeId").contains("SHIPPING")/>
+            <#assign isItemTax = (itemType.getString("invoiceItemTypeId").contains("TAX") || itemType.getString("invoiceItemTypeId").contains("VAT")) />
 
             <#assign taxRate = invoiceItem.getRelatedOne("TaxAuthorityRateProduct", false)?if_exists>
             <#assign itemBillings = invoiceItem.getRelated("OrderItemBilling", null, null, false)?if_exists>
@@ -137,10 +160,10 @@ under the License.
                 <#assign description=itemType.get("description",locale)>
             </#if>
 
+            <#-- the shipment id is printed at the beginning for each
+                 group of invoice items created for the same shipment
+                 mikrotron: we are not printing shipments on invoices
             <#if newShipmentId?exists & newShipmentId != currentShipmentId>
-                <#-- the shipment id is printed at the beginning for each
-                     group of invoice items created for the same shipment
-                -->
                 <fo:table-row height="14px">
                     <fo:table-cell number-columns-spanned="5">
                             <fo:block></fo:block>
@@ -158,6 +181,8 @@ under the License.
                 </fo:table-row>
                 <#assign currentShipmentId = newShipmentId>
             </#if>
+            -->
+            <#-- mikrotron: we want taxes and displayed in the same row
             <#if !isItemAdjustment>
                 <fo:table-row height="14px" space-start=".15in">
                     <fo:table-cell>
@@ -193,12 +218,62 @@ under the License.
                     </fo:table-cell>
                 </fo:table-row>
             </#if>
+            -->
+            <#if isItemShipping>
+              <#assign itemState = "item">
+              <#assign productId ="">
+              <#assign productQuantity = "">
+              <#assign productDescription = description?if_exists>
+              <#assign productValue = (Static["org.ofbiz.accounting.invoice.InvoiceWorker"].getInvoiceItemTotal(invoiceItem))/>
+              <#assign productPrice = "">
+            <#elseif !isItemAdjustment>
+              <#assign itemState = "item">
+              <#assign productId = invoiceItem.productId?if_exists>
+              <#assign productDescription = description?if_exists>
+              <#assign productQuantity = invoiceItem.quantity?if_exists>
+              <#if invoiceItem.quantity?exists>
+                <#assign productPrice>
+                  <@ofbizCurrency amount=invoiceItem.amount?if_exists isoCode=invoice.currencyUomId?if_exists/>
+                </#assign>
+              </#if>
+              <#assign productValue = (Static["org.ofbiz.accounting.invoice.InvoiceWorker"].getInvoiceItemTotal(invoiceItem))/>
+            <#else>
+              <#assign itemTax = "tax">
+              <#assign taxName = description>
+              <#assign taxAmount=(Static["org.ofbiz.accounting.invoice.InvoiceWorker"].getInvoiceItemTotal(invoiceItem))/>
+            </#if>
+            <#if itemState?has_content && itemTax?has_content>
+              <#assign productValueNoTax = productValue - taxAmount/>
+                <fo:table-row height="14px" space-start=".15in">
+                    <fo:table-cell>
+                        <fo:block text-align="left">${productId?if_exists}</fo:block>
+                    </fo:table-cell>
+                    <fo:table-cell>
+                        <fo:block font-family="LiberationSerif" text-align="left">${productDescription?if_exists}</fo:block>
+                    </fo:table-cell>
+                      <fo:table-cell>
+                        <fo:block text-align="right"><#if productQuantity?has_content>${productQuantity?string.number}</#if> </fo:block>
+                    </fo:table-cell>
+                    <fo:table-cell text-align="right">
+                        <fo:block>${productPrice?if_exists}</fo:block>
+                    </fo:table-cell>
+                    <fo:table-cell text-align="right">
+                        <fo:block> <@ofbizCurrency amount=productValue?if_exists isoCode=invoice.currencyUomId?if_exists/> </fo:block>
+                    </fo:table-cell>
+                    <fo:table-cell text-align="right">
+                        <fo:block> ${taxName?if_exists}</fo:block>
+                    </fo:table-cell>
+                    <fo:table-cell text-align="right">
+                        <fo:block><@ofbizCurrency amount=taxAmount?if_exists isoCode=invoice.currencyUomId?if_exists/> </fo:block>
+                    </fo:table-cell>
+                    <fo:table-cell text-align="right">
+                        <fo:block> <@ofbizCurrency amount=productValueNoTax?if_exists isoCode=invoice.currencyUomId?if_exists/> </fo:block>
+                    </fo:table-cell>
+                </fo:table-row>
+              <#assign itemState = "">
+              <#assign itemTax = "">
+            </#if>
         </#list>
-
-        <#-- blank line -->
-        <fo:table-row height="7px">
-            <fo:table-cell number-columns-spanned="5"><fo:block><#-- blank line --></fo:block></fo:table-cell>
-        </fo:table-row>
 
         <#-- the grand total -->
         <fo:table-row>
@@ -209,7 +284,16 @@ under the License.
               <fo:block font-weight="bold">${uiLabelMap.AccountingTotalCapital}</fo:block>
            </fo:table-cell>
            <fo:table-cell text-align="right" border-top-style="solid" border-top-width="thin" border-top-color="black">
-              <fo:block><@ofbizCurrency amount=invoiceTotal isoCode=invoice.currencyUomId?if_exists/></fo:block>
+              <fo:block font-weight="bold"><@ofbizCurrency amount=invoiceTotal isoCode=invoice.currencyUomId?if_exists/></fo:block>
+           </fo:table-cell>
+           <fo:table-cell text-align="right" border-top-style="solid" border-top-width="thin" border-top-color="black">
+              <fo:block> </fo:block>
+           </fo:table-cell>
+           <fo:table-cell text-align="right" border-top-style="solid" border-top-width="thin" border-top-color="black">
+              <fo:block><@ofbizCurrency amount=invoiceTaxTotal isoCode=invoice.currencyUomId?if_exists/></fo:block>
+           </fo:table-cell>
+           <fo:table-cell text-align="right" border-top-style="solid" border-top-width="thin" border-top-color="black">
+              <fo:block><@ofbizCurrency amount=invoiceNoTaxTotal isoCode=invoice.currencyUomId?if_exists/></fo:block>
            </fo:table-cell>
         </fo:table-row>
         <fo:table-row height="7px">
@@ -247,7 +331,7 @@ under the License.
           <fo:block/>
         </fo:table-cell>
         <fo:table-cell border-bottom-style="solid" border-bottom-width="thin" border-bottom-color="black">
-          <fo:block font-weight="bold">${uiLabelMap.AccountingVat}</fo:block>
+          <fo:block font-weight="bold">${uiLabelMap.AccountingRateAmounts}</fo:block>
         </fo:table-cell>
         <fo:table-cell text-align="right" border-bottom-style="solid" border-bottom-width="thin" border-bottom-color="black">
           <fo:block font-weight="bold">${uiLabelMap.AccountingAmount}</fo:block>

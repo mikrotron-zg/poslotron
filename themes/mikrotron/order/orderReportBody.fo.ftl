@@ -181,6 +181,7 @@ under the License.
                         </fo:table-cell>
                     </fo:table-row>
                 </#if>
+                <#-- mikrotron: we don't need to display VAT amount on order
                 <#if vatAmount != 0>
                     <fo:table-row>
                         <fo:table-cell><fo:block></fo:block></fo:table-cell>
@@ -193,6 +194,7 @@ under the License.
                         </fo:table-cell>
                     </fo:table-row>
                 </#if>
+                -->
                 <#-- notes -->
                 <#if orderNotes?has_content>
                     <#if showNoteHeadingOnPDF>

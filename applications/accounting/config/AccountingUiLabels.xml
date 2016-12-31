@@ -979,6 +979,7 @@
         <value xml:lang="en">Amount</value>
         <value xml:lang="es">Monto</value>
         <value xml:lang="fr">Montant</value>
+        <value xml:lang="hr">Iznos</value>
         <value xml:lang="hi_IN">कुल मुल्य</value>
         <value xml:lang="it">Importo</value>
         <value xml:lang="ja">金額</value>
@@ -12584,6 +12585,7 @@
         <value xml:lang="en">Product Rates</value>
         <value xml:lang="es">Tarífas de producto</value>
         <value xml:lang="fr">Taux applicables aux produits</value>
+        <value xml:lang="hr">Porezni razred</value>
         <value xml:lang="hi_IN">उत्पाद मूल्य</value>
         <value xml:lang="it">Percentuali Prodotto</value>
         <value xml:lang="ja">製品税率</value>
@@ -12650,6 +12652,7 @@
         <value xml:lang="de">Tarife (Stundensätze)</value>
         <value xml:lang="en">Rate Amounts</value>
         <value xml:lang="fr">Valeurs de taux</value>
+        <value xml:lang="hr">Porezni razred</value>
         <value xml:lang="hi_IN">दर राशियाँ</value>
         <value xml:lang="it">Importi Tassi</value>
         <value xml:lang="ja">税額</value>
@@ -12662,6 +12665,7 @@
         <value xml:lang="de">Tarife</value>
         <value xml:lang="en">Rates</value>
         <value xml:lang="fr">Taux</value>
+        <value xml:lang="hr">Razred</value>
         <value xml:lang="hi_IN">मूल्य</value>
         <value xml:lang="it">Tassi</value>
         <value xml:lang="ja">レート</value>
@@ -14150,7 +14154,7 @@
         <value xml:lang="en">Total excl. tax</value>
         <value xml:lang="fr">Total HT</value>
         <value xml:lang="hi_IN">टैक्स छोड़कर कुल</value>
-        <value xml:lang="hr">Ukupno bez poreza</value>
+        <value xml:lang="hr">Osnovica</value>
         <value xml:lang="it">Totale escluso tasse</value>
         <value xml:lang="ja">合計(税抜)</value>
         <value xml:lang="nl">Totaal excl. BTW</value>
@@ -14959,6 +14963,7 @@
     </property>
     <property key="AccountingVat">
     	<value xml:lang="en">VAT</value>
+    	<value xml:lang="hr">PDV</value>
     	<value xml:lang="nl">BTW</value>
     </property>
     <property key="AccountingVendorParty">

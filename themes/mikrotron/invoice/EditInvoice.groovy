@@ -96,8 +96,10 @@ if (invoice) {
 
     invoiceTotal = InvoiceWorker.getInvoiceTotal(invoice).multiply(conversionRate).setScale(decimals, rounding);
     invoiceNoTaxTotal = InvoiceWorker.getInvoiceNoTaxTotal(invoice).multiply(conversionRate).setScale(decimals, rounding);
+    invoiceTaxTotal = invoiceTotal.subtract(invoiceNoTaxTotal);
     context.invoiceTotal = invoiceTotal;
     context.invoiceNoTaxTotal = invoiceNoTaxTotal;
+    context.invoiceTaxTotal = invoiceTaxTotal;
 
                 //*________________this snippet was added for adding Tax ID in invoice header if needed _________________
 
@@ -148,12 +150,12 @@ if (invoice) {
 
     if ( hasOrder ) {
       context.orderItems = orderItems;
-  
+
       orderItems.each {
         orderItem -> if ( orderItem.quoteId ) context.orderQuote = orderItem.quoteId;
       }
     }
-    
+
     invoiceStatus = invoice.getRelatedOne("StatusItem", false);
     context.invoiceStatus = invoiceStatus;
 
