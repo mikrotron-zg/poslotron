@@ -91,7 +91,7 @@ under the License.
     <fo:table-column column-width="15mm"/> <#-- tax amount -->
     <fo:table-column column-width="20mm"/> <#-- amount excl. tax -->
 
-    <fo:table-header height="14px" font-size="10px">
+    <fo:table-header height="14px" font-size="8px">
       <fo:table-row border-bottom-style="solid" border-bottom-width="thin" border-bottom-color="black">
         <fo:table-cell>
           <fo:block font-weight="bold">${uiLabelMap.AccountingProduct}</fo:block>
