@@ -111,7 +111,7 @@ under the License.
                     </#list>
                 </fo:table-body>
             </fo:table>
-            
+
 <fo:block-container height="30mm">
  <fo:block>
  </fo:block>
@@ -158,12 +158,14 @@ under the License.
                 </fo:table>
             </fo:block>
         </fo:block>
-        
+
 <fo:block></fo:block>
  <fo:block space-after="0.2in"/>
   <fo:block font-family="LiberationSerif">
-    <#--    Here is a good place to put policies and return information. -->
+    <#--    Here is a good place to put policies and return information.
     Oslobođeno PDV-a po članku 90 Zakona o porezu na dodanu vrijednost.
+    -->
+    Iskazane cijene uključuju PDV.
 </fo:block>
-        
+
 </#escape>
