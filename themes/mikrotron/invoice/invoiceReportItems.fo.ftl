@@ -133,6 +133,7 @@ under the License.
         <#assign productPrice = "">
         <#assign productValue = 0>
         <#assign taxAmount = 0>
+        <#assign noTax = (invoiceTotal == invoiceNoTaxTotal) />
         <#-- if the item has a description, then use its description.  Otherwise, use the description of the invoiceItemType -->
         <#list invoiceItems as invoiceItem>
             <#assign itemType = invoiceItem.getRelatedOne("InvoiceItemType", false)>
@@ -242,7 +243,7 @@ under the License.
               <#assign taxName = description>
               <#assign taxAmount=(Static["org.ofbiz.accounting.invoice.InvoiceWorker"].getInvoiceItemTotal(invoiceItem))/>
             </#if>
-            <#if itemState?has_content && itemTax?has_content>
+            <#if noTax || (itemState?has_content && itemTax?has_content) >
               <#assign productValueNoTax = productValue - taxAmount/>
                 <fo:table-row height="14px" space-start=".15in">
                     <fo:table-cell>
