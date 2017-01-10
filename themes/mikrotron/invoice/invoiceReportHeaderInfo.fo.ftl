@@ -108,8 +108,12 @@ under the License.
   </fo:table-cell>
   <fo:table-cell>
   <fo:block font-family="LiberationSerif">
-    <#if countryGeo?has_content && "HR" == countryGeo.geoCode?if_exists && invoiceTotal == invoiceNoTaxTotal >
-      Oslobođeno PDV-a po članku 90 Zakona o porezu na dodanu vrijednost.
+    <#if countryGeo?has_content && "HR" == countryGeo.geoCode?if_exists>
+      <#if invoiceTotal == invoiceNoTaxTotal >
+        Oslobođeno PDV-a po članku 90 Zakona o porezu na dodanu vrijednost.
+      <#else>
+        Obračun PDV-a prema naplaćenoj naknadi.
+      </#if>
     </#if>
   </fo:block>
   </fo:table-cell>

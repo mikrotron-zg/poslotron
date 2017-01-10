@@ -326,7 +326,7 @@ under the License.
     <fo:table-column column-width="40mm"/>
     <fo:table-column column-width="25mm"/>
 
-    <fo:table-header>
+    <fo:table-header font-size ="10pt">
       <fo:table-row>
         <fo:table-cell>
           <fo:block/>
