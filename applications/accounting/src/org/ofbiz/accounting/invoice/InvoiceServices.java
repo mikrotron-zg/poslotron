@@ -525,8 +525,16 @@ public class InvoiceServices {
                     if (adj.get("amount") == null) { // JLR 17/4/7 : fix a bug coming from POS in case of use of a discount (on item(s) or sale, item(s) here) and a cash amount higher than total (hence issuing change)
                         continue;
                     }
+                    // mikrotron - CHECKME
+                    // this fails miserably on VAT adjustments, for they have 0 amount, and more than 0 amountAlreadyIncluded
+                    // so we are just going to skip this check for VAT adjustments, and log some info
                     if (adjAlreadyInvoicedAmount.abs().compareTo(adj.getBigDecimal("amount").setScale(invoiceTypeDecimals, ROUNDING).abs()) > 0) {
-                        continue;
+                        Debug.logInfo("Already invoiced amount: "+adjAlreadyInvoicedAmount+" adjustment amount: "+adj.getBigDecimal("amount")+" adjustment: "+adj, module);
+                        if (adj.getString("orderAdjustmentTypeId").equals("VAT_TAX")) {
+                          Debug.logInfo("Not skipping tax calculation", module);
+                        } else {
+                          continue;
+                        }
                     }
 
                     BigDecimal originalOrderItemQuantity = OrderReadHelper.getOrderItemQuantity(originalOrderItem);
@@ -689,7 +697,6 @@ public class InvoiceServices {
                 } else {
                     // these will effect the shipping pro-rate (unless commented)
                     // other adjustment type
-                    Debug.logInfo("INVOICE adjAmount 1", module);
                     calcHeaderAdj(delegator, adj, invoiceType, invoiceId, invoiceItemSeqId, orderSubTotal, invoiceSubTotal,
                             adj.getBigDecimal("amount").setScale(invoiceTypeDecimals, ROUNDING), invoiceTypeDecimals, ROUNDING, userLogin, dispatcher, locale);
                     // invoiceShipProRateAmount += adjAmount;
