@@ -21,7 +21,7 @@ under the License.
 <#if shoppingCart?has_content>
     <#assign shoppingCartSize = shoppingCart.size()>
 <#else>
-    <#assign shoppingCartSize = 0>       
+    <#assign shoppingCartSize = 0>
 </#if>
 
 <div id="minicart">
@@ -90,12 +90,14 @@ under the License.
 <#--
 <div class="shrsl_ShareASale_productShowCaseTarget_3837"></div>
 <script type="text/javascript"  src="http://showcase.shareasale.com/shareASale_liveWidget_loader.js?dt=11242014064552"></script>
-<script type="text/javascript">shrsl_ShareASale_liveWid_Init(3837, 1023126, 'shrsl_ShareASale_liveWid_wideSkyScraper_populate');</script> 
+<script type="text/javascript">shrsl_ShareASale_liveWid_Init(3837, 1023126, 'shrsl_ShareASale_liveWid_wideSkyScraper_populate');</script>
 -->
+<#--
 <div>
 <a href="http://www.majstor.hr/" target="_blank">
 <img src="/images/majstor-banner.gif" />
 </a>
 </div>
+-->
 </div>
 
