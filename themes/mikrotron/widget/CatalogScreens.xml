@@ -279,7 +279,7 @@ under the License.
             <actions>
                 <set field="productsummaryScreen" value="component://mikrotron/widget/CatalogScreens.xml#productsummary"/>
 
-                <script location="component://mikrotron/order/ProductDetail.groovy"/>
+                <script location="component://mikrotron/catalog/ProductDetail.groovy"/>
             </actions>
             <widgets>
                 <include-screen name="breadcrumbs"/>
@@ -490,7 +490,7 @@ under the License.
             </widgets>
         </section>
     </screen>
-    
+
     <screen name="bestSellingCategory">
         <section>
             <widgets>
@@ -517,7 +517,7 @@ under the License.
         <section>
             <actions>
                 <set field="tabButtonItem" value="LookupProductCategories"/>
-                
+
                 <script location="component://ecommerce/webapp/ecommerce/WEB-INF/actions/catalog/ProductCategories.groovy"/>
             </actions>
             <widgets>

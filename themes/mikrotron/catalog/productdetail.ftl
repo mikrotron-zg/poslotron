@@ -610,8 +610,8 @@ $(function(){
               </#if>
             </#if>
             <#if availableInventory?exists && 0.00 < availableInventory?double>
-			  <b>${uiLabelMap.ProductQuantityOnHand}:${availableInventory?if_exists}</b>
-			<#else>
+              <b>${uiLabelMap.ProductQuantityOnHand}:${availableInventory?if_exists}</b>
+			      <#else>
               <b>${uiLabelMap.FacilityNoItemsAvailableToShip}</b>
             </#if>
             <#if variantPriceList?exists>
