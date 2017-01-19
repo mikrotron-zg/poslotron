@@ -187,7 +187,7 @@ if (product) {
         context.priceMap = priceMap;
     }
 
-    // get the product review(s) 
+    // get the product review(s)
     // get all product review in case of Purchase Order.
     reviewByAnd = [:];
     reviewByAnd.statusId = "PRR_APPROVED";
@@ -206,7 +206,7 @@ if (product) {
     }
 
     // get the days to ship
-    // if order is purchase then don't calculate available inventory for product. 
+    // if order is purchase then don't calculate available inventory for product.
     if (cart.isSalesOrder()) {
         facilityId = productStore.inventoryFacilityId;
         /*
@@ -238,7 +238,7 @@ if (product) {
     // an example of getting features of a certain type to show
     sizeProductFeatureAndAppls = delegator.findByAnd("ProductFeatureAndAppl", [productId : productId, productFeatureTypeId : "SIZE"], ["sequenceNum", "defaultSequenceNum"], false);
     context.sizeProductFeatureAndAppls = sizeProductFeatureAndAppls;
-    
+
     // get product variant for Box/Case/Each
     productVariants = [];
     boolean isAlternativePacking = ProductWorker.isAlternativePacking(delegator, product.productId, null);
@@ -258,7 +258,7 @@ if (product) {
         }
     }
     context.mainProducts = mainProducts;
-    
+
     // Special Variant Code
     if ("Y".equals(product.isVirtual)) {
         if ("VV_FEATURETREE".equals(ProductWorker.getProductVirtualVariantMethod(delegator, productId))) {
@@ -427,7 +427,7 @@ if (product) {
                                                 break;
                                             }
                                         }
-                                    } else if (UtilValidate.isNotEmpty(entry.getValue())) { 
+                                    } else if (UtilValidate.isNotEmpty(entry.getValue())) {
                                         if (variant.get("productId").equals(entry.getValue().get(0))) {
                                             variantPriceMap.put("variantName", entry.getKey());
                                             break;
@@ -442,11 +442,11 @@ if (product) {
                             if (variantPriceMap && variantPriceMap.basePrice) {
                                 variantPriceJS.append("  if (sku == \"" + variant.productId + "\") return \"" + numberFormat.format(variantPriceMap.basePrice) + "\"; ");
                             }
-                            
+
                             // make a list of virtual variants sku with requireAmount
                             virtualVariantsRes = dispatcher.runSync("getAssociatedProducts", [productIdTo : variant.productId, type : "ALTERNATIVE_PACKAGE", checkViewAllow : true, prodCatalogId : currentCatalogId]);
                             virtualVariants = virtualVariantsRes.assocProducts;
-                            
+
                             if(virtualVariants){
                                 virtualVariants.each { virtualAssoc ->
                                     virtual = virtualAssoc.getRelatedOne("MainProduct", false);
@@ -471,7 +471,7 @@ if (product) {
                                                         break;
                                                     }
                                                 }
-                                            } else if (UtilValidate.isNotEmpty(entry.getValue())) { 
+                                            } else if (UtilValidate.isNotEmpty(entry.getValue())) {
                                                 if (virtual.get("productId").equals(entry.getValue().get(0))) {
                                                     virtualPriceMap.put("variantName", entry.getKey());
                                                     break;
@@ -485,7 +485,7 @@ if (product) {
                                         variantPriceJS.append("  if (sku == \"" + virtual.productId + "\") return \"" + numberFormat.format(virtualPriceMap.price) + "\"; ");
                                     }
                                 }
-                                
+
                             }
                         }
                         amt.append(" } ");
@@ -503,10 +503,10 @@ if (product) {
     } else {
         context.minimumQuantity= ShoppingCart.getMinimumOrderQuantity(delegator, priceMap.price, productId);
         if(isAlternativePacking){
-            // get alternative product price when product doesn't have any feature 
+            // get alternative product price when product doesn't have any feature
             jsBuf = new StringBuffer();
             jsBuf.append("<script language=\"JavaScript\" type=\"text/javascript\">");
-            
+
             // make a list of variant sku with requireAmount
             virtualVariantsRes = dispatcher.runSync("getAssociatedProducts", [productIdTo : productId, type : "ALTERNATIVE_PACKAGE", checkViewAllow : true, prodCatalogId : categoryId]);
             virtualVariants = virtualVariantsRes.assocProducts;
@@ -519,13 +519,13 @@ if (product) {
             }
             virtualVariantPriceList = [];
             numberFormat = NumberFormat.getCurrencyInstance(locale);
-            
+
             if(virtualVariants){
                 amt = new StringBuffer();
                 // Create the javascript to return the price for each variant
                 variantPriceJS = new StringBuffer();
                 variantPriceJS.append("function getVariantPrice(sku) { ");
-                
+
                 virtualVariants.each { virtualAssoc ->
                     virtual = virtualAssoc.getRelatedOne("MainProduct", false);
                     // Get price from a virtual product
@@ -543,7 +543,7 @@ if (product) {
                     }
                 }
                 variantPriceJS.append(" } ");
-                
+
                 context.virtualVariantPriceList = virtualVariantPriceList;
                 jsBuf.append(amt.toString());
                 jsBuf.append(variantPriceJS.toString());
@@ -561,7 +561,7 @@ if (product) {
         availableInventory = resultOutput.availableToPromiseTotal;
     } else {
         //get last inventory count from product facility for the product
-        facilities = delegator.findList("ProductFacility", EntityCondition.makeCondition([productId : product.productId]), null, null, null, false)
+        //facilities = delegator.findList("ProductFacility", EntityCondition.makeCondition([productId : product.productId]), null, null, null, false)
         facilities = delegator.findList("InventoryItem", EntityCondition.makeCondition([productId : product.productId]), null, null, null, false);
         if(facilities) {
             facilities.each { facility ->
@@ -574,6 +574,7 @@ if (product) {
         }
     }
     context.availableInventory = availableInventory;
+    context.totalAvailableToPromise = totalAvailableToPromise;
 
     // get product associations
     alsoBoughtProducts = dispatcher.runSync("getAssociatedProducts", [productId : productId, type : "ALSO_BOUGHT", checkViewAllow : true, prodCatalogId : currentCatalogId, bidirectional : false, sortDescending : true]);
@@ -664,12 +665,12 @@ if (product) {
         }
         context.productImageList = productImageList;
     }
-    
+
     // get reservation start date for rental product
     if("ASSET_USAGE".equals(productTypeId) || "ASSET_USAGE_OUT_IN".equals(productTypeId)){
         context.startDate = UtilDateTime.addDaysToTimestamp(UtilDateTime.nowTimestamp(), 1).toString().substring(0,10); // should be tomorrow.
     }
-    
+
     // get product tags
     productKeywords = delegator.findByAnd("ProductKeyword", ["productId": productId, "keywordTypeId" : "KWT_TAG", "statusId" : "KW_APPROVED"], null, false);
     keywordMap = [:];

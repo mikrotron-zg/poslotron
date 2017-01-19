@@ -609,8 +609,11 @@ $(function(){
                   </#if>
               </#if>
             </#if>
-            <#if availableInventory?exists && 0.00 < availableInventory?double>
-              <b>${uiLabelMap.ProductQuantityOnHand}:${availableInventory?if_exists}</b>
+            <#if totalAvailableToPromise?exists>
+              <b>${uiLabelMap.ProductQuantityOnHand}:${totalAvailableToPromise?if_exists}</b>
+            <#elseif availableInventory?exists && 0.00 < availableInventory?double>
+              <#-- We do have it in inventory, but may be reserved - this only activates if totalAvailableToPromise is undefined, should never happen -->
+              <b>${uiLabelMap.ProductQuantityOnHand}:${totalAvailableToPromise?if_exists}/${availableInventory?if_exists}</b>
 			      <#else>
               <b>${uiLabelMap.FacilityNoItemsAvailableToShip}</b>
             </#if>
