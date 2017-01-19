@@ -205,7 +205,7 @@ under the License.
                 <set field="productsummaryScreen" value="component://mikrotron/widget/CatalogScreens.xml#productsummary"/>
                 <set field="productCategoryLinkScreen" value="component://mikrotron/widget/CatalogScreens.xml#ProductCategoryLink"/>
 
-                <script location="component://mikrotron/order/CategoryDetail.groovy"/>
+                <script location="component://mikrotron/catalog/CategoryDetail.groovy"/>
 
                 <entity-and entity-name="ProductCategoryLink" list="productCategoryLinks" use-cache="true" filter-by-date="true">
                     <field-map field-name="productCategoryId" from-field="productCategoryId"/>

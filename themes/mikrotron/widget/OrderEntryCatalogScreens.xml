@@ -126,7 +126,7 @@ under the License.
         <section>
             <actions>
                 <set field="productsummaryScreen" value="component://mikrotron/widget/OrderEntryCatalogScreens.xml#productsummary"/>
-                <script location="component://mikrotron/order/CategoryDetail.groovy"/>
+                <script location="component://mikrotron/catalog/CategoryDetail.groovy"/>
             </actions>
             <widgets>
                 <platform-specific><html><html-template location="component://order/webapp/ordermgr/entry/catalog/categorydetail.ftl"/></html></platform-specific>
@@ -289,7 +289,7 @@ under the License.
             </widgets>
         </section>
     </screen>
-    
+
     <screen name="ProductUomDropDownOnly">
         <section>
             <actions>
