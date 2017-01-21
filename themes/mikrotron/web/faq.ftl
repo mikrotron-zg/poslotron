@@ -48,7 +48,7 @@
 <div>
     <h2><a class="mozTocH1" name="tocCheap"></a>Kako ste tako
       jeftini?</h2>
-    Radimo za rabat, i nismo u sustavu PDV-a<br/>
+    Radimo za rabat.<br/>
 <br/>
 </div>
     <h2><a class="mozTocH1" name="tocPickup"></a>Kako da osobno

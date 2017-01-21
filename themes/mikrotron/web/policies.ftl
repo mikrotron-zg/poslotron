@@ -37,8 +37,7 @@
   </p>
   <h2>Cijene</h2>
   <p > Cijene su izražene u kunama (HRK)
-    i eurima (EUR), i ne sadrže PDV, jer Mikrotron nije
-    u sustavu PDV-a.<br>
+    i eurima (EUR), i uključuju PDV.<br>
     Valuta plaćanja za kupce iz Hrvatske su kune, a za
     kupce iz inozemstva euri.<br>
   </p>
@@ -136,12 +135,12 @@
     u tom slučaju, Mikrotron ne dijeli podatke sa
     trećim osobama.<br>
   </p>
-  
+
 <#else>
   <h1>Terms and conditions</h1>
-  
+
   <h2>Prices</h2>
-  <p >Prices are displayed in EUR and HRK, and do not include VAT.
+  <p >Prices are displayed in EUR and HRK, and include VAT.
   <br/>
   Mikrotron keeps right to change prices at it's discretion, without prior notice.
   <p/>
@@ -165,7 +164,7 @@
   <p > If you are unsatisfied by purchased products for whatever reason,
   you can order replacment or money return within 7 days of receiving it.
   <br/>
-  You have to send back original product along with all originally included 
+  You have to send back original product along with all originally included
   equipment and documentation.
   <br/>
   Request return by mail to mikrotron@mikrotron.hr, please do include order number.
@@ -177,7 +176,7 @@
   </p>
   <h2><strong>Privacy Statement</strong></h2>
   <p  style="margin-bottom: 0cm;">Mikrotron
-    collects user's personal data for purposes of collecting payments and delivery of goods. 
+    collects user's personal data for purposes of collecting payments and delivery of goods.
     <br/>
     User's sole responsibility is to enter valid data, and maintan them in case of any changes.
     <br/>
@@ -197,5 +196,5 @@
     Except in that case, Mikrotron does not share personal data with anybody.
     <br>
   </p>
-  
+
 </#if>
