@@ -33,7 +33,7 @@ ${virtualJavaScript?if_exists}
         } else {
             elem.appendChild(txt);
         }
-        
+
         var priceElem = document.getElementById('variant_price_display');
         var price = getVariantPrice(variantId);
         var priceTxt = null;
@@ -42,7 +42,7 @@ ${virtualJavaScript?if_exists}
         }else{
             priceTxt = document.createTextNode('');
         }
-        
+
         if(priceElem.hasChildNodes()) {
             priceElem.replaceChild(priceTxt, priceElem.firstChild);
         } else {
@@ -139,17 +139,17 @@ ${virtualJavaScript?if_exists}
                     </div>
                 </#if>
               </form>
-  
-              <#if totalAvailableToPromise?exists && (totalAvailableToPromise?double > 0) >
-              <#-- this is filled by ProductSummary.groovy, available during in search -->
-              <div><b>${uiLabelMap.ProductQuantityOnHand}: ${totalAvailableToPromise?string.number}</b></div>
+
+              <#if totalAvailableToPromise?exists && (0.00 < totalAvailableToPromise?double)>
+                <div><b>${uiLabelMap.ProductQuantityOnHand}: ${totalAvailableToPromise?string.number}</b></div>
+                <#-- available when displaying product category members
               <#elseif prodCatMem?exists && prodCatMem.quantity?exists && (0.00 < prodCatMem.quantity?double)>
-              <#-- available when displaying product category members -->
-              <div><b>${uiLabelMap.ProductQuantityOnHand}: ${prodCatMem.quantity?string.number}</b></div>
+                <div><b>${uiLabelMap.ProductQuantityOnHand}: ${prodCatMem.quantity?string.number}</b></div>
+                -->
               <#else>
-              ${uiLabelMap.FacilityNoItemsAvailableToShip}
+                ${uiLabelMap.FacilityNoItemsAvailableToShip}
               </#if>
-            
+
             <#else>
               ${uiLabelMap.ProductNoLongerAvailable}
             </#if>
@@ -175,7 +175,7 @@ ${virtualJavaScript?if_exists}
               </#if>
             </#if>
             -->
-              
+
           </#if>
         </div>
         <div class="productinfo">
