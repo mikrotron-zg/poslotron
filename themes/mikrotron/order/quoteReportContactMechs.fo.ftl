@@ -45,6 +45,15 @@ under the License.
                         </fo:block>
                     </fo:table-cell>
                 </fo:table-row>
+                <#if partyTaxInfo?has_content>
+                <fo:table-row>
+                    <fo:table-cell>
+                        <fo:block>
+                          ${uiLabelMap.PartyTaxId}: ${partyTaxInfo.partyTaxId}
+                        </fo:block>
+                    </fo:table-cell>
+                </fo:table-row>
+                </#if>
             </fo:table-body>
         </fo:table>
 

@@ -173,6 +173,7 @@ under the License.
                 <get-related value-field="quote" relation-name="QuoteAdjustment" list="quoteAdjustments"/>
 
                 <script location="component://order/webapp/ordermgr/WEB-INF/actions/quote/GetPartyAddress.groovy"/>
+                <script location="component://mikrotron/order/GetPartyTaxInfo.groovy"/>
                 <!--
                 <get-related value-name="quote" relation-name="QuoteRole" list-name="quoteRoles"/>
                 <get-related value-name="quote" relation-name="QuoteAttribute" list-name="quoteAttributes"/>
