@@ -17,6 +17,8 @@ specific language governing permissions and limitations
 under the License.
 -->
 <#escape x as x?xml>
+
+<#if hasPermission >
                   <fo:table table-layout="fixed">
                     <fo:table-column column-width="2.0in"/>
                     <fo:table-column column-width="2.0in"/>
@@ -69,4 +71,6 @@ under the License.
                     </fo:table-row>
                     </fo:table-body>
                   </fo:table>
+</#if>
+
 </#escape>

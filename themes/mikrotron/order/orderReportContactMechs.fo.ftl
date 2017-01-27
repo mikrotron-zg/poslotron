@@ -18,6 +18,9 @@ under the License.
 -->
 <#escape x as x?xml>
 <fo:block space-after="1.1in"/>
+
+<#if hasPermission>
+
 <#if orderHeader.getString("orderTypeId") == "PURCHASE_ORDER">
     <#if supplierGeneralContactMechValueMap?exists>
         <#assign contactMech = supplierGeneralContactMechValueMap.contactMech>
@@ -37,7 +40,7 @@ under the License.
                     <#assign countryGeo = (delegator.findOne("Geo", {"geoId", postalAddress.countryGeoId?if_exists}, false))?if_exists />
                     <#if countryGeo?has_content>${countryGeo.geoName?if_exists}</#if>
                 </fo:block>
-            </fo:block>                
+            </fo:block>
         </#if>
     <#else>
         <#-- here we just display the name of the vendor, since there is no address -->
@@ -85,7 +88,7 @@ under the License.
                 <#assign creditCard = orderPaymentPreference.getRelatedOne("PaymentMethod", false).getRelatedOne("CreditCard", false)>
                 ${Static["org.ofbiz.party.contact.ContactHelper"].formatCreditCard(creditCard)}
             <#else>
-                ${paymentMethodType.get("description",locale)?if_exists} 
+                ${paymentMethodType.get("description",locale)?if_exists}
             </#if>
         </fo:block>
     </#list>
@@ -115,4 +118,8 @@ under the License.
 </#if>
 
 <fo:block space-after="0.2in"/>
+
+
+</#if>
+
 </#escape>

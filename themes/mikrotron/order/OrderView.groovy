@@ -58,36 +58,53 @@ orderAdjustments = null;
 if (orderId) {
     orderHeader = delegator.findOne("OrderHeader", [orderId : orderId], false);
 
-    // mikrotron: copied from OrderStatus.groovy
+    // mikrotron: copied from OrderStatus.groovy and OrderViewWebSecure.groovy
     // check OrderRole to make sure the user can view this order.  This check must be done for any order which is not anonymously placed and
     // any anonymous order when the allowAnonymousView security flag (see above) is not set to Y, to prevent peeking
-    if (orderHeader && (!"anonymous".equals(orderHeader.createdBy) || ("anonymous".equals(orderHeader.createdBy)))) {
-        if ("PURCHASE_ORDER".equals(orderHeader?.orderTypeId)) {
-            //drop shipper or supplier
-            roleTypeId = "SUPPLIER_AGENT";
+    if (orderHeader && (!"anonymous".equals(orderHeader.createdBy) || ("anonymous".equals(orderHeader.createdBy)) )) {
+
+        hasPermission = false;
+        canViewInternalDetails = false;
+
+        if (("SALES_ORDER".equals(orderHeader.orderTypeId) && security.hasEntityPermission("ORDERMGR", "_VIEW", session))
+            || ("PURCHASE_ORDER".equals(orderHeader.orderTypeId) && security.hasEntityPermission("ORDERMGR", "_PURCHASE_VIEW", session))) {
+            hasPermission = true;
+            canViewInternalDetails = true;
+        } else if (security.hasEntityPermission("ORDERMGR_ROLE", "_VIEW", session)) {
+            currentUserOrderRoles = orderHeader.getRelated("OrderRole", [partyId : userLogin.partyId], null, false);
+            if (currentUserOrderRoles) {
+                hasPermission = true;
+                canViewInternalDetails = true;
+            }
         } else {
-            //customer
-            roleTypeId = "PLACING_CUSTOMER";
+            if ("PURCHASE_ORDER".equals(orderHeader?.orderTypeId)) {
+                //drop shipper or supplier
+                roleTypeId = "SUPPLIER_AGENT";
+            } else {
+                //customer
+                roleTypeId = "PLACING_CUSTOMER";
+            }
+            orderRole = EntityUtil.getFirst(delegator.findByAnd("OrderRole", [orderId : orderId, partyId : userLogin.partyId, roleTypeId : roleTypeId], null, false));
+            //Debug.logInfo("OrderView.groovy before getting order detail info: role and user userLogin=[" + userLogin + "], role: "+orderRole, "orderstatus");
+            if ( orderRole ) {
+                hasPermission = true;
+                canViewInternalDetails = true;
+            }
         }
 
-        orderRole = EntityUtil.getFirst(delegator.findByAnd("OrderRole", [orderId : orderId, partyId : userLogin.partyId, roleTypeId : roleTypeId], null, false));
-        //Debug.logInfo("OrderView.groovy before getting order detail info: role and user userLogin=[" + userLogin + "], role: "+orderRole, "orderstatus");
-
-        if (!userLogin || !orderRole) {
+        if ( !hasPermission ) {
             context.remove("orderHeader");
             orderHeader = null;
             Debug.logWarning("Warning: in OrderView.groovy before getting order detail info: role not found or user not logged in; partyId=[" + userLogin.partyId + "], userLoginId=[" + (userLogin == null ? "null" : userLogin.get("userLoginId")) + "]", "orderstatus");
         }
+        context.hasPermission = hasPermission;
+        context.canViewInternalDetails = canViewInternalDetails;
     }
 }
 
 def partyId = null;
 
 if (orderHeader) {
-    // note these are overridden in the OrderViewWebSecure.groovy script if run
-    context.hasPermission = true;
-    context.canViewInternalDetails = true;
-
     orderReadHelper = new OrderReadHelper(orderHeader);
     orderItems = orderReadHelper.getOrderItems();
     orderAdjustments = orderReadHelper.getAdjustments();
