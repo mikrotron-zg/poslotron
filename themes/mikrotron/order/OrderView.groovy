@@ -50,7 +50,6 @@ context.assignRoleTypeId = assignRoleTypeId;
 context.fromDate = fromDate;
 context.delegate = delegate;
 context.todayDate = new java.sql.Date(System.currentTimeMillis()).toString();
-def partyId = null;
 
 orderHeader = null;
 orderItems = null;
@@ -58,7 +57,31 @@ orderAdjustments = null;
 
 if (orderId) {
     orderHeader = delegator.findOne("OrderHeader", [orderId : orderId], false);
+
+    // mikrotron: copied from OrderStatus.groovy
+    // check OrderRole to make sure the user can view this order.  This check must be done for any order which is not anonymously placed and
+    // any anonymous order when the allowAnonymousView security flag (see above) is not set to Y, to prevent peeking
+    if (orderHeader && (!"anonymous".equals(orderHeader.createdBy) || ("anonymous".equals(orderHeader.createdBy)))) {
+        if ("PURCHASE_ORDER".equals(orderHeader?.orderTypeId)) {
+            //drop shipper or supplier
+            roleTypeId = "SUPPLIER_AGENT";
+        } else {
+            //customer
+            roleTypeId = "PLACING_CUSTOMER";
+        }
+
+        orderRole = EntityUtil.getFirst(delegator.findByAnd("OrderRole", [orderId : orderId, partyId : userLogin.partyId, roleTypeId : roleTypeId], null, false));
+        //Debug.logInfo("OrderView.groovy before getting order detail info: role and user userLogin=[" + userLogin + "], role: "+orderRole, "orderstatus");
+
+        if (!userLogin || !orderRole) {
+            context.remove("orderHeader");
+            orderHeader = null;
+            Debug.logWarning("Warning: in OrderView.groovy before getting order detail info: role not found or user not logged in; partyId=[" + userLogin.partyId + "], userLoginId=[" + (userLogin == null ? "null" : userLogin.get("userLoginId")) + "]", "orderstatus");
+        }
+    }
 }
+
+def partyId = null;
 
 if (orderHeader) {
     // note these are overridden in the OrderViewWebSecure.groovy script if run
