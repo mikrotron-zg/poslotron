@@ -391,7 +391,7 @@ public class TaxAuthorityServices {
 
             // find the right entry(s) based on purchase amount
             for(GenericValue taxAuthorityRateProduct : filteredList) {
-                Debug.logInfo("TaxSomething: "+taxAuthorityRateProduct, module);
+                //Debug.logInfo("TaxSomething: "+taxAuthorityRateProduct, module);
                 BigDecimal taxRate = taxAuthorityRateProduct.get("taxPercentage") != null ? taxAuthorityRateProduct.getBigDecimal("taxPercentage") : ZERO_BASE;
                 BigDecimal taxable = ZERO_BASE;
 
@@ -448,14 +448,14 @@ public class TaxAuthorityServices {
                 if ("Y".equals(taxInPrice) || (productPrice != null && "Y".equals(productPrice.getString("taxInPrice")))) {
                     // tax is in the price already, so we want the adjustment to be a VAT_TAX adjustment to be subtracted instead of a SALES_TAX adjustment to be added
                     taxAdjValue.set("orderAdjustmentTypeId", "VAT_TAX");
-                    Debug.logWarning("Tax itemAmount="+itemAmount+" shippingAmount="+shippingAmount, module);
+                    //Debug.logWarning("Tax itemAmount="+itemAmount+" shippingAmount="+shippingAmount, module);
                     BigDecimal amount=ZERO_BASE;
                     if (itemAmount.compareTo(BigDecimal.ZERO) == 0) {
                       amount=shippingAmount;
-                      Debug.logInfo("Tax calculated on shipping",module);
-                    } else if (shippingAmount.compareTo(BigDecimal.ZERO) == 0){
+                      //Debug.logInfo("Tax calculated on shipping",module);
+                    } else if (shippingAmount == null || shippingAmount.compareTo(BigDecimal.ZERO) == 0){
                       amount=itemAmount;
-                      Debug.logInfo("Tax calculated on items",module);
+                      //Debug.logInfo("Tax calculated on items",module);
                     } else {
                       // TODO: promotions!
                       // ERROR!
