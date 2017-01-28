@@ -161,24 +161,53 @@ public class InvoiceWorker {
         BigDecimal invoiceTaxTotal = ZERO;
         invoiceTaxTotal = InvoiceWorker.getInvoiceTaxTotal(invoice);
 
+        Delegator delegator = invoice.getDelegator();
+
         List<GenericValue> invoiceItems = null;
+        List<String> invoiceTaxes = null;
         try {
             invoiceItems = invoice.getRelated("InvoiceItem", null, null, false);
+            /*
+            mikrotron: we are not going to exclude tax items - we are going to need them later
             invoiceItems = EntityUtil.filterByAnd(
                     invoiceItems, UtilMisc.toList(
                             EntityCondition.makeCondition("invoiceItemTypeId", EntityOperator.NOT_IN, getTaxableInvoiceItemTypeIds(invoice.getDelegator()))
                     ));
+            */
+            invoiceTaxes = getTaxableInvoiceItemTypeIds(invoice.getDelegator());
         } catch (GenericEntityException e) {
             Debug.logError(e, "Trouble getting InvoiceItem list", module);
         }
         if (invoiceItems != null) {
             for (GenericValue invoiceItem : invoiceItems) {
+                if ( invoiceTaxes.contains(invoiceItem.getString("invoiceItemTypeId"))) {
+                    // mikrotron: fetch tax authority and see if tax is included in prices
+                    try {
+                        boolean taxInPrice = false;
+                        String geo = invoiceItem.getString("taxAuthGeoId");
+                        String party = invoiceItem.getString("taxAuthPartyId");
+                        GenericValue taxAuthority = delegator.findOne("TaxAuthority", UtilMisc.toMap("taxAuthGeoId", geo, "taxAuthPartyId", party), true);
+                        if ( taxAuthority != null ) {
+                          taxInPrice = "Y".equals(taxAuthority.getString("includeTaxInPrice"));
+                          Debug.logInfo("InvoiceWorker tax authority found, taxInPrice: "+taxInPrice, module);
+                        } else {
+                          Debug.logWarning("InvoiceWorker tax authority not found for "+invoiceItem.get("invoiceId")+" party: "+party+" geo: "+geo, module);
+                        }
+                        if ( taxInPrice ) {
+                          continue;
+                        }
+                    } catch (GenericEntityException e) {
+                        Debug.logError(e, "Trouble getting TaxAuthority", module);
+                    }
+                }
                 invoiceTotal = invoiceTotal.add(getInvoiceItemTotal(invoiceItem)).setScale(decimals,rounding);
             }
         }
-        // mikrotron: what if we do have tax in price? VAT - FIXME!!!
-        // TaxAuthority.includeTaxInPrice = Y
+        // mikrotron: we cannot add taxes to totals just like that - prices might already contain tax
+        // how can we get to ProductStore from invoice?
         // ProductStore.showPricesWithVatTax = Y
+        // we certantly can fetch TaxAuthority from invoice items
+        // TaxAuthority.includeTaxInPrice = Y
         //invoiceTotal = invoiceTotal.add(invoiceTaxTotal).setScale(decimals, rounding);
         if (UtilValidate.isNotEmpty(invoiceTotal) && !actualCurrency) {
             invoiceTotal = invoiceTotal.multiply(getInvoiceCurrencyConversionRate(invoice)).setScale(decimals,rounding);
