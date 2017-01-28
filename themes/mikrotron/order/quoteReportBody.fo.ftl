@@ -54,13 +54,21 @@ under the License.
                         </#list>
                         <#assign totalQuoteItemAmount = quoteItemAmount + totalQuoteItemAdjustmentAmount>
                         <#assign totalQuoteAmount = totalQuoteAmount + totalQuoteItemAmount>
+                        <#assign productName = Static["org.ofbiz.product.product.ProductContentWrapper"].getProductContentAsText(product,"PRODUCT_NAME",request)>
 
                         <fo:table-row>
                             <fo:table-cell padding="2pt" background-color="${rowColor}">
                                 <fo:block>${quoteItem.quoteItemSeqId}</fo:block>
                             </fo:table-cell>
                             <fo:table-cell padding="2pt" background-color="${rowColor}">
-                                <fo:block>${(product.internalName)?if_exists} [${quoteItem.productId?if_exists}]</fo:block>
+                                <fo:block>
+                                  <#if productName?has_content>
+                                      ${productName}
+                                  <#else>
+                                      ${(product.internalName)?if_exists}
+                                  </#if>
+                                  [${quoteItem.productId?if_exists}]
+                                </fo:block>
                             </fo:table-cell>
                             <fo:table-cell padding="2pt" background-color="${rowColor}">
                                 <fo:block text-align="right">${quoteItem.quantity?if_exists}</fo:block>
