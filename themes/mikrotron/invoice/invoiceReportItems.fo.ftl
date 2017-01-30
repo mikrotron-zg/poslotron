@@ -227,6 +227,21 @@ under the License.
               <#assign productDescription = description?if_exists>
               <#assign productValue = (Static["org.ofbiz.accounting.invoice.InvoiceWorker"].getInvoiceItemTotal(invoiceItem))/>
               <#assign productPrice = "">
+            <#elseif isItemTax>
+              <#assign itemTax = "tax">
+              <#assign taxName = description>
+              <#assign taxAmount=(Static["org.ofbiz.accounting.invoice.InvoiceWorker"].getInvoiceItemTotal(invoiceItem))/>
+            <#elseif isItemAdjustment>
+              <#assign itemState = "adjustment">
+              <#assign productId = invoiceItem.productId?if_exists>
+              <#assign productDescription = description?if_exists>
+              <#assign productQuantity = invoiceItem.quantity?if_exists>
+              <#if invoiceItem.quantity?exists>
+                <#assign productPrice>
+                  <@ofbizCurrency amount=invoiceItem.amount?if_exists isoCode=invoice.currencyUomId?if_exists/>
+                </#assign>
+              </#if>
+              <#assign productValue = (Static["org.ofbiz.accounting.invoice.InvoiceWorker"].getInvoiceItemTotal(invoiceItem))/>
             <#elseif !isItemAdjustment>
               <#assign itemState = "item">
               <#assign productId = invoiceItem.productId?if_exists>
@@ -238,10 +253,6 @@ under the License.
                 </#assign>
               </#if>
               <#assign productValue = (Static["org.ofbiz.accounting.invoice.InvoiceWorker"].getInvoiceItemTotal(invoiceItem))/>
-            <#else>
-              <#assign itemTax = "tax">
-              <#assign taxName = description>
-              <#assign taxAmount=(Static["org.ofbiz.accounting.invoice.InvoiceWorker"].getInvoiceItemTotal(invoiceItem))/>
             </#if>
             <#if noTax || (itemState?has_content && itemTax?has_content) >
               <#assign productValueNoTax = productValue - taxAmount/>
