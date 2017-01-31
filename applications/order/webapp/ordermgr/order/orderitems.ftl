@@ -721,9 +721,9 @@ under the License.
                     </td>
                     <td align="right" nowrap="nowrap">
                       <#if vatAmount?exists && vatAmount != 0>
-                        vat <@ofbizCurrency amount=vatAmount isoCode=currencyUomId/>
+                        <@ofbizCurrency amount=vatAmount isoCode=currencyUomId/>
                       <#elseif taxAmount?exists>
-                        tax <@ofbizCurrency amount=taxAmount isoCode=currencyUomId/>
+                        <@ofbizCurrency amount=taxAmount isoCode=currencyUomId/>
                       </#if>
                     </td>
                     <td>&nbsp;</td>
