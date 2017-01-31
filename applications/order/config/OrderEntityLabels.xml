@@ -236,6 +236,7 @@
         <value xml:lang="en">Additional Feature</value>
         <value xml:lang="es">Característica adicional</value>
         <value xml:lang="fr">Caractéristique additionnelle</value>
+        <value xml:lang="hr">Dodatna svojstva</value>
         <value xml:lang="it">Caratteristica aggiuntiva</value>
         <value xml:lang="ja">追加機能</value>
         <value xml:lang="pt_BR">Característica adicional</value>
@@ -251,6 +252,7 @@
         <value xml:lang="en">Discount</value>
         <value xml:lang="es">Descuento</value>
         <value xml:lang="fr">Remise</value>
+        <value xml:lang="hr">Popust</value>
         <value xml:lang="it">Sconto</value>
         <value xml:lang="ja">割引</value>
         <value xml:lang="pt_BR">Desconto</value>
@@ -266,6 +268,7 @@
         <value xml:lang="en">Fee</value>
         <value xml:lang="es">Tasa</value>
         <value xml:lang="fr">Honoraires</value>
+        <value xml:lang="hr">Honorar</value>
         <value xml:lang="it">Tassa</value>
         <value xml:lang="ja">手数料</value>
         <value xml:lang="pt_BR">Taxa</value>
@@ -281,6 +284,7 @@
         <value xml:lang="en">Miscellaneous Charges</value>
         <value xml:lang="es">Gastos diversos</value>
         <value xml:lang="fr">Frais divers</value>
+        <value xml:lang="hr">Razni troškovi</value>
         <value xml:lang="it">Ricarico vario</value>
         <value xml:lang="ja">その他費用</value>
         <value xml:lang="pt_BR">Gastos diversos</value>
@@ -296,6 +300,7 @@
         <value xml:lang="en">Marketing Package Adjustment</value>
         <value xml:lang="es">Ajuste de paquete de marketing</value>
         <value xml:lang="fr">Offre marketing (ajustement)</value>
+        <value xml:lang="hr">Prilagodbe paketa</value>
         <value xml:lang="it">Aggiustamento paccho di vendita</value>
         <value xml:lang="ja">パッケージ/セット販売調整</value>
         <value xml:lang="pt_BR">Ajuste de pacote de marketing</value>
@@ -311,6 +316,7 @@
         <value xml:lang="en">Promotion</value>
         <value xml:lang="es">Promoción</value>
         <value xml:lang="fr">Promotion</value>
+        <value xml:lang="hr">Promocija</value>
         <value xml:lang="it">Promozione</value>
         <value xml:lang="ja">プロモーション</value>
         <value xml:lang="pt_BR">Promoção</value>
@@ -326,6 +332,7 @@
         <value xml:lang="en">Replacement</value>
         <value xml:lang="es">Reemplazo</value>
         <value xml:lang="fr">Remplacement</value>
+        <value xml:lang="hr">Zamjena</value>
         <value xml:lang="it">Sostituzione</value>
         <value xml:lang="ja">交換</value>
         <value xml:lang="pt_BR">Reposição</value>
@@ -341,6 +348,7 @@
         <value xml:lang="en">Sales Tax</value>
         <value xml:lang="es">Impuestos de venta</value>
         <value xml:lang="fr">Taxes de vente</value>
+        <value xml:lang="hr">Porez</value>
         <value xml:lang="it">Tassa di vendita</value>
         <value xml:lang="ja">消費税</value>
         <value xml:lang="pt_BR">Taxas de venda</value>
@@ -372,6 +380,7 @@
         <value xml:lang="en">Surcharge</value>
         <value xml:lang="es">Recargo</value>
         <value xml:lang="fr">Supplément</value>
+        <value xml:lang="hr">Doplata</value>
         <value xml:lang="it">Sovraccarico</value>
         <value xml:lang="ja">追加料金</value>
         <value xml:lang="pt_BR">Sobretaxa</value>
@@ -387,6 +396,7 @@
         <value xml:lang="en">Warranty</value>
         <value xml:lang="es">Garantía</value>
         <value xml:lang="fr">Garantie</value>
+        <value xml:lang="hr">Garancija</value>
         <value xml:lang="it">Garanzia</value>
         <value xml:lang="ja">保証</value>
         <value xml:lang="pt_BR">Garantia</value>
