@@ -95,7 +95,7 @@ under the License.
                     <b><i>${uiLabelMap.OrderAdjustment}</i>:</b> <b>${localOrderReadHelper.getAdjustmentType(orderItemAdjustment)}</b>&nbsp;
                     <#if orderItemAdjustment.description?has_content>: ${StringUtil.wrapString(orderItemAdjustment.get("description",locale))}</#if>
 
-                    <#if orderItemAdjustment.orderAdjustmentTypeId == "SALES_TAX">
+                    <#if orderItemAdjustment.orderAdjustmentTypeId == "SALES_TAX" || orderItemAdjustment.orderAdjustmentTypeId == "VAT_TAX">
                       <#if orderItemAdjustment.primaryGeoId?has_content>
                         <#assign primaryGeo = orderItemAdjustment.getRelatedOne("PrimaryGeo", true)/>
                         <#if primaryGeo.geoName?has_content>
@@ -115,7 +115,11 @@ under the License.
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
                 <td align="right">
-                  <div style="font-size: xx-small;"><@ofbizCurrency amount=localOrderReadHelper.getOrderItemAdjustmentTotal(orderItem, orderItemAdjustment) isoCode=currencyUomId/></div>
+                  <#if orderItemAdjustment.orderAdjustmentTypeId == "VAT_TAX">
+                    <div style="font-size: xx-small;"><@ofbizCurrency amount=localOrderReadHelper.getOrderItemVatTotal(orderItem, orderItemAdjustment) isoCode=currencyUomId/></div>
+                  <#else>
+                    <div style="font-size: xx-small;"><@ofbizCurrency amount=localOrderReadHelper.getOrderItemAdjustmentTotal(orderItem, orderItemAdjustment) isoCode=currencyUomId/></div>
+                  </#if>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -144,7 +148,14 @@ under the License.
           </tr>
           <tr>
             <td align="right" colspan="4"><div><b>${uiLabelMap.OrderSalesTax}</b></div></td>
-            <td align="right" nowrap="nowrap"><div><#if orderTaxTotal?exists><@ofbizCurrency amount=orderTaxTotal isoCode=currencyUomId/></#if></div></td>
+            <td align="right" nowrap="nowrap">
+            <div>
+              <#if orderVatTotal?exists && orderVatTotal != 0>
+                <@ofbizCurrency amount=orderVatTotal isoCode=currencyUomId/>
+              <#elseif orderTaxTotal?exists>
+                <@ofbizCurrency amount=orderTaxTotal isoCode=currencyUomId/>
+              </#if>
+            </div></td>
           </tr>
 
           <tr><td colspan=2></td><td colspan="8"><hr /></td></tr>

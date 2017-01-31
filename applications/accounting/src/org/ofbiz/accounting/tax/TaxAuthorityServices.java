@@ -466,6 +466,7 @@ public class TaxAuthorityServices {
                     BigDecimal taxAmountIncluded = amount.subtract(amount.divide(BigDecimal.ONE.add(taxRate.divide(PERCENT_SCALE, 4, BigDecimal.ROUND_HALF_UP)), 3, BigDecimal.ROUND_HALF_UP));
                     taxAdjValue.set("amountAlreadyIncluded", taxAmountIncluded);
                     taxAdjValue.set("amount", BigDecimal.ZERO);
+                    taxAmount = ZERO_BASE;
                 } else {
                     taxAdjValue.set("orderAdjustmentTypeId", "SALES_TAX");
                     taxAdjValue.set("amount", taxAmount);

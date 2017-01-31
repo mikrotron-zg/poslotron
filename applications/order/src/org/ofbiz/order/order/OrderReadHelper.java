@@ -2096,6 +2096,11 @@ public class OrderReadHelper {
         return calcItemAdjustment(adjustment, orderItem);
     }
 
+    // mikrotron: this is not accessible from FTL
+    public BigDecimal getOrderItemVatTotal(GenericValue orderItem, GenericValue adjustment) {
+        return calcItemVAT(adjustment, orderItem);
+    }
+
     public String getAdjustmentType(GenericValue adjustment) {
         GenericValue adjustmentType = null;
         try {
@@ -2576,8 +2581,8 @@ public class OrderReadHelper {
         return adjTotal;
     }
 
-    public static BigDecimal calcItemAdjustment(GenericValue itemAdjustment, GenericValue item) {
-        return calcItemAdjustment(itemAdjustment, getOrderItemQuantity(item), item.getBigDecimal("unitPrice"));
+    public static BigDecimal calcItemVAT(GenericValue itemAdjustment, GenericValue item) {
+        return calcItemVAT(itemAdjustment, getOrderItemQuantity(item), item.getBigDecimal("unitPrice"));
     }
 
     // mikrotron: we use different method to calculate item for VAT, to avoid VAT addition order totals
@@ -2592,6 +2597,10 @@ public class OrderReadHelper {
         }
         if (Debug.verboseOn()) Debug.logVerbose("calcItemVAT: " + itemAdjustment + ", quantity=" + quantity + ", unitPrice=" + unitPrice + ", adjustment=" + adjustment, module);
         return adjustment;
+    }
+
+    public static BigDecimal calcItemAdjustment(GenericValue itemAdjustment, GenericValue item) {
+        return calcItemAdjustment(itemAdjustment, getOrderItemQuantity(item), item.getBigDecimal("unitPrice"));
     }
 
     public static BigDecimal calcItemAdjustment(GenericValue itemAdjustment, BigDecimal quantity, BigDecimal unitPrice) {
@@ -2837,7 +2846,7 @@ public class OrderReadHelper {
        List<Map<String, Object>> taxByTaxAuthGeoAndPartyList = FastList.newInstance();
        if (UtilValidate.isNotEmpty(orderAdjustments)) {
            // get orderAdjustment where orderAdjustmentTypeId is SALES_TAX.
-           orderAdjustments = EntityUtil.filterByAnd(orderAdjustments, UtilMisc.toMap("orderAdjustmentTypeId","SALES_TAX"));
+           orderAdjustments = EntityUtil.filterByAnd(orderAdjustments, UtilMisc.toMap("orderAdjustmentTypeId","SALES_TAX","orderAdjustmentTypeId","VAT_TAX"));
            orderAdjustments = EntityUtil.orderBy(orderAdjustments, UtilMisc.toList("taxAuthGeoId","taxAuthPartyId"));
 
            // get the list of all distinct taxAuthGeoId and taxAuthPartyId. It is for getting the number of taxAuthGeo and taxAuthPartyId in adjustments.
@@ -2879,8 +2888,10 @@ public class OrderReadHelper {
            missedAdjustments.removeAll(processedAdjustments);
            for (GenericValue orderAdjustment : missedAdjustments) {
                taxGrandTotal = taxGrandTotal.add(orderAdjustment.getBigDecimal("amount").setScale(taxCalcScale, taxRounding));
+               vatGrandTotal = vatGrandTotal.add(orderAdjustment.getBigDecimal("amountAlreadyIncluded").setScale(taxCalcScale, taxRounding));
            }
            taxGrandTotal = taxGrandTotal.setScale(taxFinalScale, taxRounding);
+           vatGrandTotal = vatGrandTotal.setScale(taxFinalScale, taxRounding);
        }
        Map<String, Object> result = FastMap.newInstance();
        result.put("taxByTaxAuthGeoAndPartyList", taxByTaxAuthGeoAndPartyList);

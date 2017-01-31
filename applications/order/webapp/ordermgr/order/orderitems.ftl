@@ -421,7 +421,7 @@ under the License.
                                             <a href="/catalog/control/EditProductPromo?productPromoId=${orderItemAdjustment.productPromoId}${StringUtil.wrapString(externalKeyParam)}"
                                                 >${orderItemAdjustment.getRelatedOne("ProductPromo", false).getString("promoName")}</a>
                                         </#if>
-                                        <#if orderItemAdjustment.orderAdjustmentTypeId == "SALES_TAX">
+                                        <#if orderItemAdjustment.orderAdjustmentTypeId == "SALES_TAX" || orderItemAdjustment.orderAdjustmentTypeId == "VAT_TAX">
                                             <#if orderItemAdjustment.primaryGeoId?has_content>
                                                 <#assign primaryGeo = orderItemAdjustment.getRelatedOne("PrimaryGeo", true)/>
                                                 <#if primaryGeo.geoName?has_content>
@@ -446,7 +446,11 @@ under the License.
                                     <td>&nbsp;</td>
                                     <td>&nbsp;</td>
                                     <td align="right">
+                                      <#if orderItemAdjustment.orderAdjustmentTypeId == "VAT_TAX">
+                                        <@ofbizCurrency amount=Static["org.ofbiz.order.order.OrderReadHelper"].calcItemVAT(orderItemAdjustment, orderItem) isoCode=currencyUomId/>
+                                      <#else>
                                         <@ofbizCurrency amount=Static["org.ofbiz.order.order.OrderReadHelper"].calcItemAdjustment(orderItemAdjustment, orderItem) isoCode=currencyUomId/>
+                                      </#if>
                                     </td>
                                     <td colspan="2">&nbsp;</td>
                                 </tr>
@@ -716,7 +720,11 @@ under the License.
                         <span class="label">${uiLabelMap.OrderTotalSalesTax}</span>
                     </td>
                     <td align="right" nowrap="nowrap">
-                        <@ofbizCurrency amount=taxAmount isoCode=currencyUomId/>
+                      <#if vatAmount?exists && vatAmount != 0>
+                        vat <@ofbizCurrency amount=vatAmount isoCode=currencyUomId/>
+                      <#elseif taxAmount?exists>
+                        tax <@ofbizCurrency amount=taxAmount isoCode=currencyUomId/>
+                      </#if>
                     </td>
                     <td>&nbsp;</td>
                 </tr>

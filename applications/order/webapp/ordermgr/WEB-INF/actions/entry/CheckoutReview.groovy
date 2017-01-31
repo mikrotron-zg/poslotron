@@ -130,8 +130,11 @@ shippingAmount = OrderReadHelper.getAllOrderItemsAdjustmentsTotal(orderItems, or
 shippingAmount = shippingAmount.add(OrderReadHelper.calcOrderAdjustments(orderHeaderAdjustments, orderSubTotal, false, false, true));
 context.orderShippingTotal = shippingAmount;
 
-taxAmount = OrderReadHelper.getOrderTaxByTaxAuthGeoAndParty(orderAdjustments).taxGrandTotal;
+taxInfo = OrderReadHelper.getOrderTaxByTaxAuthGeoAndParty(orderAdjustments);
+taxAmount = taxInfo.taxGrandTotal;
+vatAmount = taxInfo.vatGrandTotal;
 context.orderTaxTotal = taxAmount;
+context.orderVatTotal = vatAmount;
 context.orderGrandTotal = OrderReadHelper.getOrderGrandTotal(orderItems, orderAdjustments);
 
 orderName = cart.getOrderName();
