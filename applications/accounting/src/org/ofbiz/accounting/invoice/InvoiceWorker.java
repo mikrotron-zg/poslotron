@@ -189,7 +189,7 @@ public class InvoiceWorker {
                         GenericValue taxAuthority = delegator.findOne("TaxAuthority", UtilMisc.toMap("taxAuthGeoId", geo, "taxAuthPartyId", party), true);
                         if ( taxAuthority != null ) {
                           taxInPrice = "Y".equals(taxAuthority.getString("includeTaxInPrice"));
-                          Debug.logInfo("InvoiceWorker tax authority found, taxInPrice: "+taxInPrice, module);
+                          //Debug.logInfo("InvoiceWorker tax authority found, taxInPrice: "+taxInPrice, module);
                         } else {
                           Debug.logWarning("InvoiceWorker tax authority not found for "+invoiceItem.get("invoiceId")+" party: "+party+" geo: "+geo, module);
                         }

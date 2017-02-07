@@ -2840,7 +2840,7 @@ public class OrderReadHelper {
 
 
    public static Map<String, Object> getOrderTaxByTaxAuthGeoAndParty(List<GenericValue> orderAdjustments) {
-       // mikrotron: we wan't VAT amount displayed, but not added to totals
+       // mikrotron: we want VAT amount displayed, but not added to totals
        BigDecimal taxGrandTotal = BigDecimal.ZERO;
        BigDecimal vatGrandTotal = BigDecimal.ZERO;
        List<Map<String, Object>> taxByTaxAuthGeoAndPartyList = FastList.newInstance();
