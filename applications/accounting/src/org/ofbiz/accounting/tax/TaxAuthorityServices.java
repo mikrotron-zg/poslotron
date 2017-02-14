@@ -385,8 +385,9 @@ public class TaxAuthorityServices {
             List<GenericValue> filteredList = EntityUtil.filterByDate(lookupList, true);
 
             if (filteredList.size() == 0) {
-                Debug.logWarning("In TaxAuthority Product Rate no records were found for condition:" + mainCondition.toString(), module);
-                return adjustments;
+                throw new RuntimeException("In TaxAuthority Product Rate no records were found for condition:" + mainCondition.toString() + " taxAuthoritySet: "+taxAuthoritySet);
+                //Debug.logWarning("In TaxAuthority Product Rate no records were found for condition:" + mainCondition.toString() + " taxAuthoritySet: "+taxAuthoritySet, module);
+                //return adjustments;
             }
 
             // find the right entry(s) based on purchase amount
