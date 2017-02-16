@@ -144,7 +144,7 @@ will generally always be reserved for the logo at the top of the page.
       <input type="text" name="groupName" id="groupName" value="${requestParameters.groupName?if_exists}" />
     </div>
     <div>
-      <label for="VAT_ID">${uiLabelMap.OrderSalesTax} ${uiLabelMap.CommonId}*</label>
+      <label for="VAT_ID">${uiLabelMap.AccountingVatId}*</label>
       <@fieldErrors fieldName="TAX_ID"/>
       <input type="text" name="TAX_ID" id="TAX_ID" value="${requestParameters.TAX_ID?if_exists}" />
     </div>

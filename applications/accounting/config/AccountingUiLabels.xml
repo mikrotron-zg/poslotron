@@ -14966,6 +14966,10 @@
     	<value xml:lang="hr">PDV</value>
     	<value xml:lang="nl">BTW</value>
     </property>
+    <property key="AccountingVatId">
+    	<value xml:lang="en">VAT ID</value>
+    	<value xml:lang="hr">OIB</value>
+    </property>
     <property key="AccountingVendorParty">
         <value xml:lang="en">Vendor Party</value>
         <value xml:lang="fr">Réf. vendeur</value>
