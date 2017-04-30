@@ -67,57 +67,63 @@ under the License.
   </fo:table-row>
 </#if>
 
-<fo:table-row>
-  <#if countryGeo?has_content && "HR" == countryGeo.geoCode?if_exists>
-    <fo:table-cell>
-      <fo:block font-family="LiberationSans">Plaćanje:</fo:block>
-    </fo:table-cell>
-    <fo:table-cell>
-      <fo:block font-family="LiberationSans">transakcijski račun</fo:block>
-    </fo:table-cell>
-  <#else>
-    <fo:table-cell>
-      <fo:block font-family="LiberationSans">Payment:</fo:block>
-    </fo:table-cell>
-    <fo:table-cell>
-      <fo:block font-family="LiberationSans">PayPal</fo:block>
-    </fo:table-cell>
-  </#if>
-</fo:table-row>
+<#-- dirty hack: mikrotron only code -->
 
-<fo:table-row>
-  <fo:table-cell><fo:block font-family="LiberationSans">${uiLabelMap.FacilityShip}:</fo:block></fo:table-cell>
-  <fo:table-cell><fo:block font-family="LiberationSans">${invoiceDate}</fo:block></fo:table-cell>
-</fo:table-row>
+<#if "10000" == sendingParty.partyId >
 
-<fo:table-row>
-  <fo:table-cell>
-    <fo:block font-family="LiberationSans">Operater:</fo:block>
-  </fo:table-cell>
-  <fo:table-cell>
-    <fo:block font-family="LiberationSans">OfBizOp</fo:block>
-  </fo:table-cell>
-</fo:table-row>
-
-<fo:table-row>
-  <fo:table-cell><fo:block><fo:leader /></fo:block></fo:table-cell>
-  <fo:table-cell><fo:block></fo:block></fo:table-cell>
-</fo:table-row>
-<fo:table-row>
-  <fo:table-cell>
-  </fo:table-cell>
-  <fo:table-cell>
-  <fo:block font-family="LiberationSerif">
+  <fo:table-row>
     <#if countryGeo?has_content && "HR" == countryGeo.geoCode?if_exists>
-      <#if invoiceTotal == invoiceNoTaxTotal >
-        Oslobođeno PDV-a po članku 90 Zakona o porezu na dodanu vrijednost.
-      <#else>
-        Obračun PDV-a prema naplaćenoj naknadi.
-      </#if>
+      <fo:table-cell>
+        <fo:block font-family="LiberationSans">Plaćanje:</fo:block>
+      </fo:table-cell>
+      <fo:table-cell>
+        <fo:block font-family="LiberationSans">transakcijski račun</fo:block>
+      </fo:table-cell>
+    <#else>
+      <fo:table-cell>
+        <fo:block font-family="LiberationSans">Payment:</fo:block>
+      </fo:table-cell>
+      <fo:table-cell>
+        <fo:block font-family="LiberationSans">PayPal</fo:block>
+      </fo:table-cell>
     </#if>
-  </fo:block>
-  </fo:table-cell>
-</fo:table-row>
+  </fo:table-row>
+
+  <fo:table-row>
+    <fo:table-cell><fo:block font-family="LiberationSans">${uiLabelMap.FacilityShip}:</fo:block></fo:table-cell>
+    <fo:table-cell><fo:block font-family="LiberationSans">${invoiceDate}</fo:block></fo:table-cell>
+  </fo:table-row>
+
+  <fo:table-row>
+    <fo:table-cell>
+      <fo:block font-family="LiberationSans">Operater:</fo:block>
+    </fo:table-cell>
+    <fo:table-cell>
+      <fo:block font-family="LiberationSans">OfBizOp</fo:block>
+    </fo:table-cell>
+  </fo:table-row>
+
+  <fo:table-row>
+    <fo:table-cell><fo:block><fo:leader /></fo:block></fo:table-cell>
+    <fo:table-cell><fo:block></fo:block></fo:table-cell>
+  </fo:table-row>
+  <fo:table-row>
+    <fo:table-cell>
+    </fo:table-cell>
+    <fo:table-cell>
+    <fo:block font-family="LiberationSerif">
+      <#if countryGeo?has_content && "HR" == countryGeo.geoCode?if_exists>
+        <#if invoiceTotal == invoiceNoTaxTotal >
+          Oslobođeno PDV-a po članku 90 Zakona o porezu na dodanu vrijednost.
+        <#else>
+          Obračun PDV-a prema naplaćenoj naknadi.
+        </#if>
+      </#if>
+    </fo:block>
+    </fo:table-cell>
+  </fo:table-row>
+
+</#if>
 
 <#--fo:table-row>
   <fo:table-cell><fo:block>${uiLabelMap.CommonStatus}</fo:block></fo:table-cell>
