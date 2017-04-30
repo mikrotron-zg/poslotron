@@ -20,7 +20,9 @@ under the License.
 
 <fo:block text-align="left">
 <#-- FIXME - HARDCODED HOST -->
-    <#if logoImageUrl?has_content><fo:external-graphic src="http://www.diykits.eu<@ofbizContentUrl>${logoImageUrl}</@ofbizContentUrl>" overflow="hidden" height="40px" content-height="scale-to-fit" content-width="2.00in"/></#if>
+    <#if logoImageUrl?has_content>
+      <fo:external-graphic src="<@ofbizContentUrl>${logoImageUrl}</@ofbizContentUrl>" overflow="hidden" height="40px" content-height="scale-to-fit" content-width="2.00in"/>
+    </#if>
 </fo:block>
 
 <fo:block font-family="LiberationSerif" font-size="8pt">

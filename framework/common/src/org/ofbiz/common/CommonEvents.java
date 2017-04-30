@@ -305,6 +305,7 @@ public class CommonEvents {
 
         // This was added for security reason (OFBIZ-5409), you might need to remove the "//" prefix when handling the JSON response
         // Though normally you simply have to access the data you want, so should not be annoyed by the "//" prefix
+        /* long live security
         if ("GET".equalsIgnoreCase(httpMethod)) {
             Debug.logWarning("for security reason (OFBIZ-5409) the the '//' prefix was added handling the JSON response.  " +
                     "Normally you simply have to access the data you want, so should not be annoyed by the '//' prefix." +
@@ -312,6 +313,7 @@ public class CommonEvents {
                     "In case, the util.js scrpt is there to help you", module);
             jsonStr = "//" + jsonStr;
         }
+        */
 
         // set the X-JSON content type
         response.setContentType("application/x-json");
