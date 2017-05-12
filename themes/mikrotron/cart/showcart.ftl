@@ -144,7 +144,7 @@ function setAlternateGwp(field) {
 <div>
     <div>
         <div>
-            <div class="lightbuttontextdisabled">
+            <div class="lightbuttontext">
               <#--<a href="<@ofbizUrl>main</@ofbizUrl>" class="lightbuttontext">[${uiLabelMap.EcommerceContinueShopping}]</a>-->
               <#if (shoppingCartSize > 0)>
                 <a href="javascript:document.cartform.submit();" class="submenutext">${uiLabelMap.EcommerceRecalculateCart}</a>

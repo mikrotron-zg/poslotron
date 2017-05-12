@@ -50,7 +50,7 @@ padding:4px;
 form table thead th {padding:0 .5em;}
 form td {padding:.5em;}
 
-input[type=text],input[type=password]{vertical-align:middle}
+input[type=text],input[type=password]{vertical-align:middle; margin-bottom: 2px;}
 input.radio {vertical-align: top;}
 input.checkbox {vertical-align: middle;}
 label, button, input.submit, input.image {cursor: pointer;}
