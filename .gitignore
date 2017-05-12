@@ -4,6 +4,7 @@ framework/base/lib/cobertura-*.jar
 framework/base/lib/asm*.jar
 framework/base/lib/oro*.jar
 framework/entity/lib/jdbc/postgresql-*.jar
+framework/images/webapp/images/products
 hot-deploy/*/build
 specialpurpose/*/build
 applications/content/index/
