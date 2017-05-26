@@ -81,7 +81,7 @@ function submitForm(form, mode, value) {
   <table width="100%" border="0" cellpadding="0" cellspacing="0">
     <tr valign="top">
       <td height="100%">
-        <div class="screenlet" style="height: 100%;">
+        <div class="screenlet" style="height: 100%; min-width:350px;">
             <div class="screenlet-title-bar">
                 <#if shipping == true>
                     <div class="h3">1)&nbsp;${uiLabelMap.OrderWhereShallWeShipIt}?</div>
@@ -167,7 +167,7 @@ function submitForm(form, mode, value) {
       </td>
       <td bgcolor="white" width="1">&nbsp;&nbsp;</td>
       <td height="100%">
-        <div class="screenlet" style="height: 100%;">
+        <div class="screenlet" style="height: 100%; min-width:350px;">
             <div class="screenlet-title-bar">
                 <#if shipping == true>
                     <div class="h3">2)&nbsp;${uiLabelMap.OrderHowShallWeShipIt}?</div>
@@ -323,7 +323,7 @@ function submitForm(form, mode, value) {
       <td height="100%">
           <#-- Payment Method Selection -->
 
-        <div class="screenlet" style="height: 100%;">
+        <div class="screenlet" style="height: 100%; min-width:350px;">
             <div class="screenlet-title-bar">
                 <div class="h3">3)${uiLabelMap.OrderHowShallYouPay}?</div>
             </div>
