@@ -44,9 +44,11 @@ under the License.
     <div id="right">
       <a href="/shophr/control/setSessionLocale?newLocale=hr"><img src="/mikrotron/flag_hr.gif" alt="" /></a>
       <a href="/control/setSessionLocale?newLocale=en"><img src="/mikrotron/flag_en.gif" alt="" /></a>
+	<#-- Uncomment to use other languages
       <a href="/control/setSessionLocale?newLocale=de"><img src="/mikrotron/flag_de.gif" alt="" /></a>
       <a href="/control/setSessionLocale?newLocale=fr"><img src="/mikrotron/flag_fr.gif" alt="" /></a>
       <a href="/control/setSessionLocale?newLocale=it"><img src="/mikrotron/flag_it.gif" alt="" /></a>
+	-->
       <#-- facebook -->
       <div id="fb-root">&nbsp</div>
       <script>(function(d, s, id) {
