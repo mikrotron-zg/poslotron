@@ -38,19 +38,25 @@ form ul li {list-style-type: none; margin: 0;}
 form .inline li, form .inline label {display: inline;}
 form .inline li {padding: 0 .75em 0 0;}
 
-form .form-row input, form .form-row select, form .form-row textarea, form table input, form table select,select { 
-border-style:solid; 
-border-width:1px; 
-background-color:#fbfbfb; 
+form .form-row input, form .form-row select, form .form-row textarea, form table input, form table select,select {
+border-style:solid;
+border-width:1px;
+background-color:#fbfbfb;
 border-color: #7a7a7a #B4B4B4 #DADADA #B4B4B4;
 font:12px Arial, Helvetica, sans-serif;
-padding:4px; 
+padding:4px;
 }
 
 form table thead th {padding:0 .5em;}
 form td {padding:.5em;}
 
 input[type=text],input[type=password]{vertical-align:middle; margin-bottom: 2px;}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  input[type=text],input[type=password],select {
+    font-size: 1.1em;
+    margin-bottom: 3px;
+    }
+}
 input.radio {vertical-align: top;}
 input.checkbox {vertical-align: middle;}
 label, button, input.submit, input.image {cursor: pointer;}

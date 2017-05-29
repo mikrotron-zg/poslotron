@@ -27,7 +27,7 @@
 
 <script language="javascript" type="text/javascript" src="<@ofbizContentUrl>/images/jquery/plugins/jsTree/jquery.jstree.js</@ofbizContentUrl>"></script>
 <script type="text/javascript" src="<@ofbizContentUrl>/images/jquery/ui/js/jquery.cookie-1.4.0.js</@ofbizContentUrl>"></script>
-  
+
 <script type="text/javascript">
 <#-- some labels are not unescaped in the JSON object so we have to do this manuely -->
 function unescapeHtmlText(text) {
@@ -44,7 +44,7 @@ var rawdata = [
   <#if (topLevelList?has_content)>
     <@fillTree rootCat=completedTree/>
   </#if>
-  
+
   <#macro fillTree rootCat>
   <#if (rootCat?has_content)>
     <#list rootCat?sort_by("productCategoryId") as root>
@@ -53,7 +53,7 @@ var rawdata = [
                 "title" : unescapeHtmlText(
                     "<#if root.categoryName?exists>${root.categoryName?js_string}<#elseif root.categoryDescription?exists>${root.categoryDescription?js_string}<#else>${root.productCategoryId?js_string}</#if>"
                     ),
-                "attr": { 
+                "attr": {
                   "href":"<@ofbizUrl>/category/~category_id=${root.productCategoryId}/~pcategory=${root.parentCategoryId}</@ofbizUrl>",
                   "class" : "${root.cssClass?if_exists}"
                 }
@@ -89,7 +89,7 @@ var rawdata = [
             "icons" : false
         },
         "cookies" : {
-            "cookie_options" : {path: '/'} 
+            "cookie_options" : {path: '/'}
         },
        "plugins" : [ "themes", "json_data", "cookies"],
             "json_data" : {
@@ -220,8 +220,30 @@ var rawdata = [
     </noscript>
     </div>
 </div>
+
 <#--
 <div class="shrsl_ShareASale_productShowCaseTarget_3838"></div>
 <script type="text/javascript"  src="http://showcase.shareasale.com/shareASale_liveWidget_loader.js?dt=11242014065825"></script>
-<script type="text/javascript">shrsl_ShareASale_liveWid_Init(3838, 1023126, 'shrsl_ShareASale_liveWid_wideSkyScraper_populate');</script> 
+<script type="text/javascript">shrsl_ShareASale_liveWid_Init(3838, 1023126, 'shrsl_ShareASale_liveWid_wideSkyScraper_populate');</script>
 -->
+
+<button onclick="topFunction()" id="back2top" title="Back to top">&#10140;</button>
+<script type="text/javascript">
+  <#------------------------------------------------------back2top function -->
+
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+          document.getElementById("back2top").style.display = "block";
+      } else {
+          document.getElementById("back2top").style.display = "none";
+      }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+  }
+</script>

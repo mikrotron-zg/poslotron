@@ -307,6 +307,42 @@ max-width:270px;
 margin:0 10px 0 0;
 }
 
+#back2top {
+    width: 50px;
+    /*line-height: 40px;*/
+    overflow: hidden;
+    z-index: 999;
+    display: none;
+    cursor: pointer;
+    -moz-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    border: none;
+    outline: none;
+    padding: 5px;
+    background-color: #DDD;
+    border-radius: 5px;
+    color: #555;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  #back2top {
+    width: 65px;
+    font-size: 40px;
+    }
+}
+#back2top:hover {
+    background-color: #F8C133;
+    color: #000;
+}
+
 #content-messages {
 color:red;
 font-size:12pt;
@@ -825,7 +861,7 @@ height:50px;
 float:right;
 margin:5px;
 text-align:right;
-width:160px;
+width:180px;
 }
 
 .matrix .productsummary {
