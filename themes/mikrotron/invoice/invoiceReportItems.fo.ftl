@@ -289,13 +289,13 @@ under the License.
 
         <#-- the grand total -->
         <fo:table-row>
-           <fo:table-cell number-columns-spanned="2">
+           <fo:table-cell border-top-style="solid" border-top-width="thin">
               <fo:block/>
            </fo:table-cell>
-           <fo:table-cell number-columns-spanned="2">
+           <fo:table-cell number-columns-spanned="2" text-align="right" border-top-style="solid" border-top-width="thin">
               <fo:block font-weight="bold" font-size ="10pt">${uiLabelMap.AccountingTotalCapital}</fo:block>
            </fo:table-cell>
-           <fo:table-cell text-align="right" border-top-style="solid" border-top-width="thin" border-top-color="black">
+           <fo:table-cell number-columns-spanned="2" text-align="right" border-top-style="solid" border-top-width="thin" border-top-color="black">
               <fo:block font-weight="bold" font-size ="10pt"><@ofbizCurrency amount=invoiceTotal isoCode=invoice.currencyUomId?if_exists/></fo:block>
            </fo:table-cell>
            <fo:table-cell text-align="right" border-top-style="solid" border-top-width="thin" border-top-color="black">
