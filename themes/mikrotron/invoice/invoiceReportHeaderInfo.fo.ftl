@@ -26,13 +26,13 @@ under the License.
 <fo:table-body>
 <fo:table-row>
   <fo:table-cell>
-     <fo:block font-family="LiberationSans-Bold" number-columns-spanned="2">${invoice.getRelatedOne("InvoiceType", false).get("description",locale)}</fo:block>
+     <fo:block font-family="LiberationSans-Bold" font-size="20" number-columns-spanned="2" padding-bottom="10">${invoice.getRelatedOne("InvoiceType", false).get("description",locale)}</fo:block>
   </fo:table-cell>
 </fo:table-row>
 
 <fo:table-row>
   <fo:table-cell><fo:block>${uiLabelMap.AccountingInvNr}:</fo:block></fo:table-cell>
-  <fo:table-cell><fo:block><#if invoice?has_content>${invoice.invoiceId}-1-1</#if></fo:block></fo:table-cell>
+  <fo:table-cell><fo:block font-family="LiberationSans-Bold"><#if invoice?has_content>${invoice.invoiceId}-1-1</#if></fo:block></fo:table-cell>
 </fo:table-row>
 
 <#assign dateFormat = Static["java.text.DateFormat"].LONG>
@@ -109,9 +109,10 @@ under the License.
   </fo:table-row>
   <fo:table-row>
     <fo:table-cell>
+    <fo:block font-family="LiberationSans">Napomena:</fo:block>
     </fo:table-cell>
     <fo:table-cell>
-    <fo:block font-family="LiberationSerif">
+    <fo:block font-family="LiberationSans-Italic">
       <#if countryGeo?has_content && "HR" == countryGeo.geoCode?if_exists>
         <#if invoiceTotal == invoiceNoTaxTotal >
           Oslobođeno PDV-a po članku 90 Zakona o porezu na dodanu vrijednost.

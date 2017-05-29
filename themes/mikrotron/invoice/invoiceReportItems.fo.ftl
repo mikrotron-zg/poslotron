@@ -27,10 +27,10 @@ under the License.
           <fo:table-row>
           	<#if orderQuote?exists >
             <fo:table-cell>
-              <fo:block font-weight="bold">${uiLabelMap.OrderOrderQuote}:</fo:block>
+              <fo:block>${uiLabelMap.OrderOrderQuote}:</fo:block>
             </fo:table-cell>
             <fo:table-cell>
-              <fo:block font-size ="10pt" font-weight="bold">
+              <fo:block>
               	<#list orderItems as item>
               		${item.quoteId?if_exists}
               		<#break>
@@ -39,10 +39,10 @@ under the License.
             </fo:table-cell>
             <#else>
             <fo:table-cell>
-              <fo:block font-weight="bold">${uiLabelMap.AccountingOrderNr}:</fo:block>
+              <fo:block>${uiLabelMap.AccountingOrderNr}:</fo:block>
             </fo:table-cell>
             <fo:table-cell>
-              <fo:block font-size ="10pt" font-weight="bold">
+              <fo:block>
               	<#list orders as order>
               		${order}
               	</#list>
@@ -293,10 +293,10 @@ under the License.
               <fo:block/>
            </fo:table-cell>
            <fo:table-cell number-columns-spanned="2">
-              <fo:block font-weight="bold">${uiLabelMap.AccountingTotalCapital}</fo:block>
+              <fo:block font-weight="bold" font-size ="10pt">${uiLabelMap.AccountingTotalCapital}</fo:block>
            </fo:table-cell>
            <fo:table-cell text-align="right" border-top-style="solid" border-top-width="thin" border-top-color="black">
-              <fo:block font-weight="bold"><@ofbizCurrency amount=invoiceTotal isoCode=invoice.currencyUomId?if_exists/></fo:block>
+              <fo:block font-weight="bold" font-size ="10pt"><@ofbizCurrency amount=invoiceTotal isoCode=invoice.currencyUomId?if_exists/></fo:block>
            </fo:table-cell>
            <fo:table-cell text-align="right" border-top-style="solid" border-top-width="thin" border-top-color="black">
               <fo:block> </fo:block>
@@ -332,12 +332,12 @@ under the License.
  </fo:table>
 
 <#if vatTaxIds?has_content>
- <fo:table>
+ <fo:table space-before="0.25in" >
     <fo:table-column column-width="105mm"/>
     <fo:table-column column-width="40mm"/>
     <fo:table-column column-width="25mm"/>
 
-    <fo:table-header font-size ="10pt">
+    <fo:table-header font-size ="8pt">
       <fo:table-row>
         <fo:table-cell>
           <fo:block/>
@@ -351,7 +351,7 @@ under the License.
       </fo:table-row>
     </fo:table-header>
 
-    <fo:table-body font-size="10pt">
+    <fo:table-body font-size="8pt">
 
     <#list vatTaxIds as vatTaxId>
     <#assign taxRate = delegator.findOne("TaxAuthorityRateProduct", Static["org.ofbiz.base.util.UtilMisc"].toMap("taxAuthorityRateSeqId", vatTaxId), true)/>
@@ -363,7 +363,7 @@ under the License.
             <fo:block>${taxRate.description?if_exists}</fo:block>
         </fo:table-cell>
         <fo:table-cell number-columns-spanned="1" text-align="right">
-            <fo:block font-weight="bold"><@ofbizCurrency amount=vatTaxesByType[vatTaxId] isoCode=invoice.currencyUomId?if_exists/></fo:block>
+            <fo:block><@ofbizCurrency amount=vatTaxesByType[vatTaxId] isoCode=invoice.currencyUomId?if_exists/></fo:block>
         </fo:table-cell>
     </fo:table-row>
     </#list>

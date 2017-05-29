@@ -26,7 +26,7 @@ under the License.
         <fo:block>${uiLabelMap.CommonTo}: </fo:block>
         <#if billingAddress?has_content>
           <#assign billingPartyNameResult = dispatcher.runSync("getPartyNameForDate", Static["org.ofbiz.base.util.UtilMisc"].toMap("partyId", billingParty.partyId, "compareDate", invoice.invoiceDate, "userLogin", userLogin))/>
-          <fo:block font-family="LiberationSans">${billingPartyNameResult.fullName?default(billingAddress.toName)?default("Billing Name Not Found")}</fo:block>
+          <fo:block font-family="LiberationSans-Bold">${billingPartyNameResult.fullName?default(billingAddress.toName)?default("Billing Name Not Found")}</fo:block>
           <#if billingAddress.attnName?exists>
               <fo:block font-family="LiberationSans">${billingAddress.attnName}</fo:block>
           </#if>
@@ -35,7 +35,7 @@ under the License.
               <fo:block font-family="LiberationSans">${billingAddress.address2}</fo:block>
           </#if>
           <fo:block font-family="LiberationSans">
-            ${billingAddress.postalCode?if_exists} ${billingAddress.city?if_exists} 
+            ${billingAddress.postalCode?if_exists} ${billingAddress.city?if_exists}
             <#if billingAddress.stateProvinceGeoId?exists && billingAddress.stateProvinceGeoId != "_NA_">
               ${billingAddress.stateProvinceGeoId}
             </#if>
