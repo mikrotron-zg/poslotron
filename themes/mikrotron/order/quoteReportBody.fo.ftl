@@ -19,13 +19,17 @@ under the License.
 <#escape x as x?xml>
         <fo:block font-family="LiberationSerif">
             <fo:table font-size="9pt">
-                <fo:table-column column-width="40pt"/>
-                <fo:table-column column-width="160pt"/>
+                <fo:table-column column-width="50pt"/>
+                <fo:table-column column-width="260pt"/>
                 <fo:table-column column-width="58pt"/>
+                <#--
                 <fo:table-column column-width="58pt"/>
+                -->
+                <fo:table-column column-width="75pt"/>
+                <#--
                 <fo:table-column column-width="58pt"/>
-                <fo:table-column column-width="58pt"/>
-                <fo:table-column column-width="58pt"/>
+                -->
+                <fo:table-column column-width="75pt"/>
                 <fo:table-header>
                     <fo:table-row>
                         <fo:table-cell border-bottom="thin solid grey"><fo:block font-weight="bold">${uiLabelMap.ProductItem}</fo:block></fo:table-cell>
@@ -35,7 +39,9 @@ under the License.
                         <fo:table-cell border-bottom="thin solid grey"><fo:block font-weight="bold" text-align="right">${uiLabelMap.OrderAmount}</fo:block></fo:table-cell>
                         -->
                         <fo:table-cell border-bottom="thin solid grey"><fo:block font-weight="bold" text-align="right">${uiLabelMap.OrderOrderQuoteUnitPrice}</fo:block></fo:table-cell>
+                        <#--
                         <fo:table-cell border-bottom="thin solid grey"><fo:block font-weight="bold" text-align="right">${uiLabelMap.OrderAdjustments}</fo:block></fo:table-cell>
+                      -->
                         <fo:table-cell border-bottom="thin solid grey"><fo:block font-weight="bold" text-align="right">${uiLabelMap.CommonSubtotal}</fo:block></fo:table-cell>
                     </fo:table-row>
                 </fo:table-header>
@@ -81,9 +87,11 @@ under the License.
                             <fo:table-cell padding="2pt" background-color="${rowColor}">
                                 <fo:block text-align="right"><@ofbizCurrency amount=quoteItem.quoteUnitPrice isoCode=quote.currencyUomId/></fo:block>
                             </fo:table-cell>
+                            <#--
                             <fo:table-cell padding="2pt" background-color="${rowColor}">
                                 <fo:block text-align="right"><@ofbizCurrency amount=totalQuoteItemAdjustmentAmount isoCode=quote.currencyUomId/></fo:block>
                             </fo:table-cell>
+                            -->
                             <fo:table-cell padding="2pt" background-color="${rowColor}">
                                 <fo:block text-align="right"><@ofbizCurrency amount=totalQuoteItemAmount isoCode=quote.currencyUomId/></fo:block>
                             </fo:table-cell>
@@ -120,19 +128,19 @@ under the License.
                 </fo:table-body>
             </fo:table>
 
-<fo:block-container height="30mm">
+<fo:block-container height="10mm">
  <fo:block>
  </fo:block>
 </fo:block-container>
 
             <fo:block text-align="right">
                 <fo:table>
-                    <fo:table-column column-width="100pt"/>
+                    <fo:table-column column-width="400pt"/>
                     <fo:table-column column-width="100pt"/>
                     <fo:table-body>
                         <fo:table-row>
                             <fo:table-cell padding="2pt">
-                                <fo:block font-weight="bold" text-align="right">${uiLabelMap.CommonSubtotal}</fo:block>
+                                <fo:block text-align="right">${uiLabelMap.CommonSubtotal}</fo:block>
                             </fo:table-cell>
                             <fo:table-cell padding="2pt">
                                 <fo:block text-align="right"><@ofbizCurrency amount=totalQuoteAmount isoCode=quote.currencyUomId/></fo:block>
@@ -145,7 +153,7 @@ under the License.
                                 <#assign totalQuoteHeaderAdjustmentAmount = quoteAdjustment.amount?default(0) + totalQuoteHeaderAdjustmentAmount>
                                 <fo:table-row>
                                     <fo:table-cell padding="2pt">
-                                        <fo:block font-weight="bold" text-align="right">${adjustmentType.get("description", locale)?if_exists}</fo:block>
+                                        <fo:block text-align="right">${adjustmentType.get("description", locale)?if_exists}</fo:block>
                                     </fo:table-cell>
                                     <fo:table-cell padding="2pt">
                                         <fo:block text-align="right"><@ofbizCurrency amount=quoteAdjustment.amount isoCode=quote.currencyUomId/></fo:block>
@@ -159,7 +167,7 @@ under the License.
                                 <fo:block font-weight="bold" text-align="right">${uiLabelMap.OrderGrandTotal}</fo:block>
                             </fo:table-cell>
                             <fo:table-cell padding="2pt">
-                                <fo:block text-align="right"><@ofbizCurrency amount=grandTotalQuoteAmount isoCode=quote.currencyUomId/></fo:block>
+                                <fo:block text-align="right" font-family="LiberationSerif-Bold"><@ofbizCurrency amount=grandTotalQuoteAmount isoCode=quote.currencyUomId/></fo:block>
                             </fo:table-cell>
                         </fo:table-row>
                     </fo:table-body>
@@ -169,11 +177,11 @@ under the License.
 
 <fo:block></fo:block>
  <fo:block space-after="0.2in"/>
-  <fo:block font-family="LiberationSerif">
+  <fo:block font-family="LiberationSerif" text-align="right">
     <#--    Here is a good place to put policies and return information.
     Oslobođeno PDV-a po članku 90 Zakona o porezu na dodanu vrijednost.
     -->
-    Iskazane cijene uključuju PDV.
+    Iskazane cijene uključuju PDV!
 </fo:block>
 
 </#escape>

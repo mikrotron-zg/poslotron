@@ -25,10 +25,10 @@ under the License.
                 <fo:table-row>
                     <fo:table-cell>
                         <fo:block>
-                            <fo:block font-weight="bold">${uiLabelMap.OrderAddress}: </fo:block>
+                            <fo:block>${uiLabelMap.OrderAddress}: </fo:block>
                             <#if quote.partyId?exists>
                                 <#assign quotePartyNameResult = dispatcher.runSync("getPartyNameForDate", Static["org.ofbiz.base.util.UtilMisc"].toMap("partyId", quote.partyId, "compareDate", quote.issueDate, "userLogin", userLogin))/>
-                                <fo:block font-family="LiberationSerif">${quotePartyNameResult.fullName?default("[${uiLabelMap.OrderPartyNameNotFound}]")}</fo:block>
+                                <fo:block font-weight="bold">${quotePartyNameResult.fullName?default("[${uiLabelMap.OrderPartyNameNotFound}]")}</fo:block>
                             <#else>
                                 <fo:block>[${uiLabelMap.OrderPartyNameNotFound}]</fo:block>
                             </#if>
@@ -77,12 +77,12 @@ under the License.
                 </fo:table-row>
                 -->
                 <fo:table-row>
-                    <fo:table-cell><fo:block>${uiLabelMap.CommonValidFromDate}:</fo:block></fo:table-cell>
-                    <fo:table-cell><fo:block>${(quote.validFromDate.toString())?if_exists}</fo:block></fo:table-cell>
+                    <fo:table-cell><fo:block font-family="LiberationSerif">${uiLabelMap.CommonValidFromDate}:</fo:block></fo:table-cell>
+                    <fo:table-cell><fo:block font-family="LiberationSerif">${(quote.validFromDate.toString())?if_exists}</fo:block></fo:table-cell>
                 </fo:table-row>
                 <fo:table-row>
-                    <fo:table-cell><fo:block>${uiLabelMap.CommonValidThruDate}:</fo:block></fo:table-cell>
-                    <fo:table-cell><fo:block>${(quote.validThruDate.toString())?if_exists}</fo:block></fo:table-cell>
+                    <fo:table-cell><fo:block font-family="LiberationSerif">${uiLabelMap.CommonValidThruDate}:</fo:block></fo:table-cell>
+                    <fo:table-cell><fo:block font-family="LiberationSerif">${(quote.validThruDate.toString())?if_exists}</fo:block></fo:table-cell>
                 </fo:table-row>
             </fo:table-body>
         </fo:table>

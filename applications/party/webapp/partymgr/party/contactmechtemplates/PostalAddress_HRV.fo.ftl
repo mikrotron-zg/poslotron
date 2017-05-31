@@ -16,9 +16,9 @@ KIND, either express or implied.  See the License for the
 specific language governing permissions and limitations
 under the License.
 -->
-  <fo:block font-family="LiberationSerif">${postalAddress.address1?if_exists}</fo:block>
-  <#if postalAddress.address2?has_content><fo:block font-family="LiberationSerif">${postalAddress.address2?if_exists}</fo:block></#if>
-  <fo:block font-family="LiberationSerif">${postalAddress.postalCode?if_exists} ${postalAddress.city?if_exists}</fo:block>
+  <fo:block>${postalAddress.address1?if_exists}</fo:block>
+  <#if postalAddress.address2?has_content><fo:block>${postalAddress.address2?if_exists}</fo:block></#if>
+  <fo:block>${postalAddress.postalCode?if_exists} ${postalAddress.city?if_exists}</fo:block>
   <#if postalAddress.countryGeoId?has_content>
     <fo:block>
       <#assign country = postalAddress.getRelatedOne("CountryGeo", true)>
