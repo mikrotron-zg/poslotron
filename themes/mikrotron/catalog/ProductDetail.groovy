@@ -213,20 +213,24 @@ if (product) {
         productFacility = delegator.findOne("ProductFacility", [productId : productId, facilityId : facilityId, true);
         context.daysToShip = productFacility?.daysToShip
         */
-
-        resultOutput = dispatcher.runSync("getInventoryAvailableByFacility", [productId : productId, facilityId : facilityId, useCache : false]);
-        totalAvailableToPromise = resultOutput.availableToPromiseTotal;
-        if (totalAvailableToPromise) {
-            productFacility = delegator.findOne("ProductFacility", [productId : productId, facilityId : facilityId], true);
-            context.daysToShip = productFacility?.daysToShip
+        if ( isMarketingPackage ) {
+    			resultOutput = dispatcher.runSync("getMktgPackagesAvailable", [productId : productId]);
+    			totalAvailableToPromise = resultOutput.availableToPromiseTotal;
+    		} else {
+          resultOutput = dispatcher.runSync("getInventoryAvailableByFacility", [productId : productId, facilityId : facilityId, useCache : false]);
+          totalAvailableToPromise = resultOutput.availableToPromiseTotal;
+          if (totalAvailableToPromise) {
+              productFacility = delegator.findOne("ProductFacility", [productId : productId, facilityId : facilityId], true);
+              context.daysToShip = productFacility?.daysToShip
+          }
         }
     } else {
-       supplierProducts = delegator.findByAnd("SupplierProduct", [productId : productId], ["-availableFromDate"], true);
-       supplierProduct = EntityUtil.getFirst(supplierProducts);
-       if (supplierProduct?.standardLeadTimeDays) {
-           standardLeadTimeDays = supplierProduct.standardLeadTimeDays;
-           daysToShip = standardLeadTimeDays + 1;
-           context.daysToShip = daysToShip;
+         supplierProducts = delegator.findByAnd("SupplierProduct", [productId : productId], ["-availableFromDate"], true);
+         supplierProduct = EntityUtil.getFirst(supplierProducts);
+         if (supplierProduct?.standardLeadTimeDays) {
+             standardLeadTimeDays = supplierProduct.standardLeadTimeDays;
+             daysToShip = standardLeadTimeDays + 1;
+             context.daysToShip = daysToShip;
        }
     }
 
