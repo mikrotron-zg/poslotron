@@ -33,12 +33,6 @@ text-align:center;
 min-width:1000px;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  body {
-    font-size: 1em;
-    }
-}
-
 img {display: inline-block; vertical-align: bottom;}
 
 h1,h2,h3,h4,h5,h6,strong,b,dt,th {font-weight: 700;}
@@ -332,12 +326,7 @@ margin:0 10px 0 0;
     font-size: 30px;
     text-decoration: none;
 }
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  #back2top {
-    width: 65px;
-    font-size: 40px;
-    }
-}
+
 #back2top:hover {
     background-color: #F8C133;
     color: #000;
