@@ -28,7 +28,7 @@ under the License.
                             <fo:block>${uiLabelMap.OrderAddress}: </fo:block>
                             <#if quote.partyId?exists>
                                 <#assign quotePartyNameResult = dispatcher.runSync("getPartyNameForDate", Static["org.ofbiz.base.util.UtilMisc"].toMap("partyId", quote.partyId, "compareDate", quote.issueDate, "userLogin", userLogin))/>
-                                <fo:block font-weight="bold">${quotePartyNameResult.fullName?default("[${uiLabelMap.OrderPartyNameNotFound}]")}</fo:block>
+                                <fo:block font-family="LiberationSans-Bold">${quotePartyNameResult.fullName?default("[${uiLabelMap.OrderPartyNameNotFound}]")}</fo:block>
                             <#else>
                                 <fo:block>[${uiLabelMap.OrderPartyNameNotFound}]</fo:block>
                             </#if>
@@ -37,7 +37,7 @@ under the License.
                 </fo:table-row>
                 <fo:table-row>
                     <fo:table-cell>
-                        <fo:block>
+                        <fo:block font-family="LiberationSans">
                             <#if toPostalAddress?exists>
                                 ${setContextField("postalAddress", toPostalAddress)}
                                 ${screens.render("component://mikrotron/widget/PartyScreens.xml#postalAddressPdfFormatter")}
@@ -48,7 +48,7 @@ under the License.
                 <#if partyTaxInfo?has_content>
                 <fo:table-row>
                     <fo:table-cell>
-                        <fo:block>
+                        <fo:block font-family="LiberationSans">
                           ${uiLabelMap.PartyTaxId}: ${partyTaxInfo.partyTaxId}
                         </fo:block>
                     </fo:table-cell>
@@ -58,17 +58,17 @@ under the License.
         </fo:table>
 
 
-        <fo:table border-spacing="3pt" space-before="0.5in" space-after="0.5in">
+        <fo:table border-spacing="3pt" space-before="0.25in" space-after="0.5in" font-size="0.8em">
             <fo:table-column column-width="1.5in"/>
             <fo:table-column column-width="3.75in"/>
             <fo:table-body>
                 <fo:table-row>
-                    <fo:table-cell><fo:block font-family="LiberationSerif">${uiLabelMap.OrderOrderQuoteName}:</fo:block></fo:table-cell>
-                    <fo:table-cell><fo:block font-family="LiberationSerif">${quote.quoteName?if_exists}</fo:block></fo:table-cell>
+                    <fo:table-cell><fo:block font-family="LiberationSans">${uiLabelMap.OrderOrderQuoteName}:</fo:block></fo:table-cell>
+                    <fo:table-cell><fo:block font-family="LiberationSans">${quote.quoteName?if_exists}</fo:block></fo:table-cell>
                 </fo:table-row>
                 <fo:table-row>
-                    <fo:table-cell><fo:block font-family="LiberationSerif">${uiLabelMap.CommonDescription}:</fo:block></fo:table-cell>
-                    <fo:table-cell><fo:block font-family="LiberationSerif">${quote.description?if_exists}</fo:block></fo:table-cell>
+                    <fo:table-cell><fo:block font-family="LiberationSans">${uiLabelMap.CommonDescription}:</fo:block></fo:table-cell>
+                    <fo:table-cell><fo:block font-family="LiberationSans">${quote.description?if_exists}</fo:block></fo:table-cell>
                 </fo:table-row>
                 <#--
                 <fo:table-row>
@@ -77,12 +77,12 @@ under the License.
                 </fo:table-row>
                 -->
                 <fo:table-row>
-                    <fo:table-cell><fo:block font-family="LiberationSerif">${uiLabelMap.CommonValidFromDate}:</fo:block></fo:table-cell>
-                    <fo:table-cell><fo:block font-family="LiberationSerif">${(quote.validFromDate.toString())?if_exists}</fo:block></fo:table-cell>
+                    <fo:table-cell><fo:block font-family="LiberationSans">${uiLabelMap.CommonValidFromDate}:</fo:block></fo:table-cell>
+                    <fo:table-cell><fo:block font-family="LiberationSans">${(quote.validFromDate.toString())?if_exists}</fo:block></fo:table-cell>
                 </fo:table-row>
                 <fo:table-row>
-                    <fo:table-cell><fo:block font-family="LiberationSerif">${uiLabelMap.CommonValidThruDate}:</fo:block></fo:table-cell>
-                    <fo:table-cell><fo:block font-family="LiberationSerif">${(quote.validThruDate.toString())?if_exists}</fo:block></fo:table-cell>
+                    <fo:table-cell><fo:block font-family="LiberationSans">${uiLabelMap.CommonValidThruDate}:</fo:block></fo:table-cell>
+                    <fo:table-cell><fo:block font-family="LiberationSans">${(quote.validThruDate.toString())?if_exists}</fo:block></fo:table-cell>
                 </fo:table-row>
             </fo:table-body>
         </fo:table>
