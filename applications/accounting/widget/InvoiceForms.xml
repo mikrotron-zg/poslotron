@@ -18,7 +18,7 @@ specific language governing permissions and limitations
 under the License.
 -->
 
-<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-form.xsd">
     <!-- Invoice forms -->
     <form name="FindInvoices" type="single" target="findInvoices" title="Find and list invoices"
@@ -380,6 +380,9 @@ under the License.
        </field>
        <field name="amount" title="${uiLabelMap.AccountingUnitPrice}"><text size="7"/></field>
        <field name="total" widget-area-style="align-text"><display type="currency" currency="${invoice.currencyUomId}"/></field>  <!-- this should not look like something you can modify, hence display -->
+       <field name="taxAuthPartyId"><lookup target-form-name="LookupPartyName"/></field>
+       <field name="taxAuthGeoId"><lookup target-form-name="LookupGeo"/></field>
+       <field name="taxAuthorityRateSeqId"><text size="10"/></field>
        <field name="updateButton" title="${uiLabelMap.CommonUpdate}" widget-style="buttontext" ><submit button-type="text-link"/></field>
        <field name="removeButton" title=" " widget-style="buttontext">
             <hyperlink description="${uiLabelMap.CommonRemove}" target="removeInvoiceItem">
@@ -428,6 +431,9 @@ under the License.
             <option key="N" description="${uiLabelMap.CommonNo}"/>
         </drop-down>
         </field>
+        <field position="1" name="taxAuthPartyId"><lookup target-form-name="LookupPartyName"/></field>
+        <field position="1" name="taxAuthGeoId"><lookup target-form-name="LookupGeo"/></field>
+        <field position="1" name="taxAuthorityRateSeqId"><text size="10"/></field>
         <field name="addButton" title="${uiLabelMap.CommonAdd}" widget-style="smallSubmit" use-when="invoiceItem==null">
             <submit button-type="button"/>
         </field>
@@ -661,7 +667,7 @@ under the License.
         <field name="partyIdFrom"><ignored/></field>
         <field name="partyIdTo"><ignored/></field>
     </form>
-    
+
     <form name="ListSupplierInvoices" extends="ListInvoices" list-name="invoiceslistexternal"
         odd-row-style="alternate-row" default-table-style="basic-table hover-bar">
         <field name="partyIdFrom"><ignored/></field>
