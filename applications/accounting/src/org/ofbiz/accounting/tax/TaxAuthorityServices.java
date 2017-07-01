@@ -24,6 +24,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
+import java.util.Iterator;
 
 import javolution.util.FastList;
 import javolution.util.FastMap;
@@ -275,6 +276,30 @@ public class TaxAuthorityServices {
                 payToPartyId = productStore.getString("payToPartyId");
             }
         }
+
+        // TODO:
+        // 1. find tax authority for payToPartyId - party_tax_auth_info
+        try {
+          // PK only
+          //GenericValue partyTaxAuthInfo = delegator.findOne("PartyTaxAuthInfo", UtilMisc.toMap("partyId", payToPartyId), true);
+          EntityCondition someCondition = EntityCondition.makeCondition("partyId", EntityOperator.EQUALS, payToPartyId);
+          List<GenericValue> partyTaxAuthInfo = delegator.findList("PartyTaxAuthInfo", someCondition, null, null, null, false);
+          if ( partyTaxAuthInfo == null || partyTaxAuthInfo.size() == 0 ) {
+            throw new RuntimeException("Party tax authority info is null for payToPartyId "+payToPartyId+" - cannot calculate taxes!");
+          }
+          String payToTaxAuthPartyId = partyTaxAuthInfo.get(0).getString("taxAuthPartyId");
+          // 2. filter tax authorities by tax authority party id
+          Iterator<GenericValue> it = taxAuthoritySet.iterator();
+          while (it.hasNext()) {
+            GenericValue taxAuthority = it.next();
+            if ( ! payToTaxAuthPartyId.equals(taxAuthority.getString("taxAuthPartyId"))) {
+              it.remove();
+            }
+          }
+        } catch (GenericEntityException e) {
+          throw new RuntimeException(e);
+        }
+        // CHECKME: do that in getTaxAuthorities() ?
 
         // store expr
         EntityCondition storeCond = null;
