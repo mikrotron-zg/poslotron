@@ -61,7 +61,7 @@ public class WidgetFactory {
     /**
      * Returns a <code>ModelScreenWidget</code> instance that implements the specified
      * XML element.
-     * 
+     *
      * @param modelScreen The containing screen for the widget
      * @param element The widget XML element
      * @return a <code>ModelScreenWidget</code> instance that implements the specified
@@ -79,7 +79,7 @@ public class WidgetFactory {
         } catch (Exception e) {
             // log the original exception since the rethrown exception doesn't include much info about it and hides the cause
             Debug.logError(e, "Error getting widget for element " + element.getTagName(), module);
-            throw new IllegalArgumentException(e.getMessage() + " for element " + element.getTagName());
+            throw new IllegalArgumentException(e + " for element " + element.getTagName());
         }
     }
 
@@ -116,7 +116,7 @@ public class WidgetFactory {
      * registered, the new widget replaces the existing one.<p>The class supplied
      * to the method must have a public two-argument constructor that takes a
      * <code>ModelScreen</code> instance and an <code>Element</code> instance.</p>
-     * 
+     *
      * @param tagName The XML element tag name for this widget
      * @param widgetClass The class that implements the widget element
      * @throws SecurityException

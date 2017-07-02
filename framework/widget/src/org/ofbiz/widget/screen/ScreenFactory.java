@@ -171,14 +171,18 @@ public class ScreenFactory {
         if (screenFileDoc != null) {
             // read document and construct ModelScreen for each screen element
             Element rootElement = screenFileDoc.getDocumentElement();
-            List<? extends Element> screenElements = UtilXml.childElementList(rootElement, "screen");
-            for (Element screenElement: screenElements) {
-                ModelScreen modelScreen = new ModelScreen(screenElement, modelScreenMap, sourceLocation);
-                //Debug.logInfo("Read Screen with name: " + modelScreen.getName(), module);
-                modelScreenMap.put(modelScreen.getName(), modelScreen);
-            }
+            processScreens(rootElement,"screen",modelScreenMap,sourceLocation);
+            processScreens(rootElement,"screenxml",modelScreenMap,sourceLocation);
         }
         return modelScreenMap;
+    }
+    private static void processScreens(Element rootElement, String screenType, Map modelScreenMap, String sourceLocation) {
+        List<? extends Element> screenElements = UtilXml.childElementList(rootElement, screenType);
+        for (Element screenElement: screenElements) {
+            ModelScreen modelScreen = new ModelScreen(screenElement, modelScreenMap, sourceLocation);
+            Debug.logInfo("Read Screen with name: " + modelScreen.getName(), module);
+            modelScreenMap.put(modelScreen.getName(), modelScreen);
+        }
     }
 
     public static void renderReferencedScreen(String name, String location, ModelScreenWidget parentWidget, Appendable writer, Map<String, Object> context, ScreenStringRenderer screenStringRenderer) throws GeneralException, IOException {

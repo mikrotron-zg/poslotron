@@ -101,6 +101,7 @@ public abstract class ModelScreenWidget extends ModelWidget {
         }
         for (ModelScreenWidget subWidget: subWidgets) {
             if (Debug.verboseOn()) Debug.logVerbose("Rendering screen " + subWidget.modelScreen.getName() + "; widget class is " + subWidget.getClass().getName(), module);
+            //System.out.println("Rendering screen " + subWidget.modelScreen.getName() + "; widget class is " + subWidget.getClass().getName()+ " renderer "+ screenStringRenderer.getClass().getName());
 
             // render the sub-widget itself
             subWidget.renderWidgetString(writer, context, screenStringRenderer);
@@ -995,7 +996,7 @@ public abstract class ModelScreenWidget extends ModelWidget {
             subWidget = subWidgets.get(screenStringRenderer.getRendererName());
             if (subWidget == null) {
                 // This is here for backward compatibility
-                Debug.logWarning("In platform-dependent could not find template for " + screenStringRenderer.getRendererName() + ", using the one for html.", module);
+                Debug.logWarning(new Exception(), "In platform-dependent could not find template for " + screenStringRenderer.getRendererName() + "("+screenStringRenderer+"), using the one for html. "+subWidgets, module);
                 subWidget = subWidgets.get("html");
             }
             if (subWidget != null) {
@@ -1508,11 +1509,11 @@ public abstract class ModelScreenWidget extends ModelWidget {
                 fullParameterMap.putAll(addlParamMap);
             }
             */
-            
+
             for (WidgetWorker.Parameter parameter: this.parameterList) {
                 fullParameterMap.put(parameter.getName(), parameter.getValue(context));
             }
-            
+
             return fullParameterMap;
         }
 
@@ -1737,22 +1738,22 @@ public abstract class ModelScreenWidget extends ModelWidget {
 
                 // Renders the portalPage header
                 screenStringRenderer.renderPortalPageBegin(writer, context, this);
-                
+
                 // First column has no previous column
                 String prevColumnSeqId = "";
-                
+
                 // Iterates through the PortalPage columns
                 ListIterator <GenericValue>columnsIterator = portalPageColumns.listIterator();
                 while(columnsIterator.hasNext()) {
                     GenericValue columnValue = columnsIterator.next();
                     String columnSeqId = columnValue.getString("columnSeqId");
-                    
+
                     // Renders the portalPageColumn header
                     screenStringRenderer.renderPortalPageColumnBegin(writer, context, this, columnValue);
 
                     // Get the Portlets located in the current column
                     portalPagePortlets = delegator.findByAnd("PortalPagePortletView", UtilMisc.toMap("portalPageId", portalPage.getString("portalPageId"), "columnSeqId", columnSeqId), UtilMisc.toList("sequenceNum"), false);
-                    
+
                     // First Portlet in a Column has no previous Portlet
                     String prevPortletId = "";
                     String prevPortletSeqId = "";
@@ -1762,7 +1763,7 @@ public abstract class ModelScreenWidget extends ModelWidget {
                     if (columnsIterator.hasNext()) {
                         nextColumnSeqId = portalPageColumns.get(columnsIterator.nextIndex()).getString("columnSeqId");
                     }
-                    
+
                     // Iterates through the Portlets in the Column
                     ListIterator <GenericValue>portletsIterator = portalPagePortlets.listIterator();
                     while(portletsIterator.hasNext()) {
@@ -1783,7 +1784,7 @@ public abstract class ModelScreenWidget extends ModelWidget {
                         context.put("nextPortletSeqId", nextPortletSeqId);
                         context.put("prevColumnSeqId", prevColumnSeqId);
                         context.put("nextColumnSeqId", nextColumnSeqId);
-                       
+
                         // Get portlet's attributes
                         portletAttributes = delegator.findList("PortletAttribute",
                             EntityCondition.makeCondition(UtilMisc.toMap("portalPageId", portletValue.get("portalPageId"), "portalPortletId", portletValue.get("portalPortletId"), "portletSeqId", portletValue.get("portletSeqId"))),
@@ -1793,7 +1794,7 @@ public abstract class ModelScreenWidget extends ModelWidget {
                             GenericValue attribute = attributesIterator.next();
                             context.put(attribute.getString("attrName"), attribute.getString("attrValue"));
                         }
-                        
+
                         // Renders the portalPagePortlet
                         screenStringRenderer.renderPortalPagePortletBegin(writer, context, this, portletValue);
                         screenStringRenderer.renderPortalPagePortletBody(writer, context, this, portletValue);
@@ -1804,7 +1805,7 @@ public abstract class ModelScreenWidget extends ModelWidget {
                             GenericValue attribute = attributesIterator.previous();
                             context.remove(attribute.getString("attrName"));
                         }
-                        
+
                         // Uses the actual portlet as prevPortlet for next iteration
                         prevPortletId = (String) portletValue.get("portalPortletId");
                         prevPortletSeqId = (String) portletValue.get("portletSeqId");
@@ -1835,7 +1836,7 @@ public abstract class ModelScreenWidget extends ModelWidget {
         public String getOriginalPortalPageId() {
             return this.originalPortalPageId;
         }
-        
+
         public String getActualPortalPageId() {
             return this.actualPortalPageId;
         }

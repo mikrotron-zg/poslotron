@@ -37,6 +37,8 @@ under the License.
     <handler name="simplecontent" type="view" class="org.ofbiz.content.view.SimpleContentViewHandler"/>
     <handler name="screenfop" type="view" class="org.ofbiz.widget.screen.ScreenFopViewHandler"/>
 
+    <handler name="screenxml" type="view" class="org.ofbiz.widget.screen.MacroScreenViewHandler"/>
+
     <!-- Events run from here for the first hit in a visit -->
     <firstvisit>
         <event name="autoLoginCheck" type="java" path="org.ofbiz.webapp.control.LoginWorker" invoke="autoLoginCheck"/>
@@ -132,7 +134,7 @@ under the License.
     <request-map uri="setSessionLocale">
         <security https="false" auth="false"/>
         <event type="java" path="org.ofbiz.common.CommonEvents" invoke="setSessionLocale"/>
-        <response name="success" type="request-redirect" value="fromSetSessionLocale"/>        
+        <response name="success" type="request-redirect" value="fromSetSessionLocale"/>
         <response name="error" type="view" value="main"/>
     </request-map>
 
@@ -1895,21 +1897,21 @@ under the License.
         <response name="success" type="request" value="json"/>
         <response name="error" type="request" value="json"/>
     </request-map>
-    
+
     <!--  Old request that calls the services written in Minilang -->
     <request-map uri="cartToGoogleCheckout">
         <security auth="false" https="false"/>
         <event type="service" invoke="transmitRequest"/>
         <response type="view" name="success" value="cartToGoogleCheckout"/>
     </request-map>
-    
+
     <!-- New request that prepare data in the Java code -->
    <request-map uri="googleCheckout">
         <security auth="false" https="false" />
         <event type="service" invoke="sendGoogleCheckoutRequest" />
         <response type="view" name="success" value="redirectToGoogleCheckout" />
-    </request-map>    
-    
+    </request-map>
+
     <!-- This will be used in production instance to provide secure communication -->
     <request-map uri="secureGoogleCheckoutNotification">
         <security auth="false" https="true"/>
@@ -1925,14 +1927,14 @@ under the License.
         <response name="success" type="none"/>
         <response name="error" type="none"/>
     </request-map>
-    
+
     <request-map uri="returnBackFromGoogle">
         <security https="false" auth="false"/>
         <event type="java" path="org.ofbiz.order.shoppingcart.ShoppingCartEvents" invoke="clearCart"/>
         <response name="success" type="view" value="main"/>
         <response name="error" type="view" value="main"/>
     </request-map>
-    
+
     <!-- Product Comparison Requests -->
     <request-map uri="addToCompare">
         <security https="false" auth="false"/>
@@ -1953,12 +1955,12 @@ under the License.
         <security https="false" auth="false"/>
         <response name="success" type="view" value="compareProducts" save-last-view="true"/>
     </request-map>
-    
+
     <request-map uri="ProductUomDropDownOnly">
         <security auth="false" https="false"/>
         <response name="success" type="view" value="ProductUomDropDownOnly" save-last-view="true"/>
     </request-map>
-    
+
     <!-- Captcha: Image request, the captcha code is stored in the session using _CAPTCHA_CODE_ as the key -->
     <request-map uri="captcha.jpg">
         <security https="true" auth="false"/>
@@ -2033,12 +2035,17 @@ under the License.
         <security https="false" auth="false"/>
         <response name="success" type="view" value="AboutUs"/>
     </request-map>
-    
+
     <request-map uri="faq">
         <security https="false" auth="false"/>
         <response name="success" type="view" value="FAQ"/>
     </request-map>
-    
+
+    <request-map uri="sitemap">
+        <security https="false" auth="false"/>
+        <response name="success" type="view" value="SiteMap"/>
+    </request-map>
+
     <!-- View Mappings -->
     <view-map name="error" page="/error/error.jsp"/>
     <view-map name="main" type="screen" page="component://mikrotron/widget/CommonScreens.xml#main"/>
@@ -2179,26 +2186,28 @@ under the License.
     <!-- Google Checkout View Mapping -->
     <view-map name="cartToGoogleCheckout" type="screen" page="component://googlecheckout/widget/GoogleCheckoutScreens.xml#redirect"/>
     <view-map name="redirectToGoogleCheckout" type="screen" page="component://googlecheckout/widget/GoogleCheckoutScreens.xml#redirect"/>
-    
+
     <view-map name="compareProducts" type="screen" page="component://mikrotron/widget/OrderEntryCatalogScreens.xml#compareProducts"/>
-    
+
     <!-- Product in the different UOM -->
     <view-map name="ProductUomDropDownOnly" type="screen" page="component://mikrotron/widget/OrderEntryCatalogScreens.xml#ProductUomDropDownOnly"/>
-    
+
     <!-- Contact List -->
     <view-map name="ContactListOptOut" type="screen" page="component://marketing/widget/ContactListScreens.xml#OptOutResponse"/>
 
     <!-- Product Category 's Ajax -->
     <view-map name="productCategoryList" type="screen" page="component://mikrotron/widget/CatalogScreens.xml#productCategoryList"/>
-    
+
     <!-- Shopping List 's Ajax -->
     <view-map name="showShoppingList" type="screen" page="component://ecommerce/widget/ShoppingListScreens.xml#showShoppingList"/>
-    
+
     <!-- End of View Mappings -->
-    
+
     <!-- Mikrotron custom stuff -->
     <view-map name="AboutUs" type="screen" page="component://mikrotron/widget/CommonScreens.xml#aboutus"/>
 
     <view-map name="FAQ" type="screen" page="component://mikrotron/widget/CommonScreens.xml#faq"/>
+
+    <view-map name="SiteMap" type="screenxml" content-type="xml" page="component://mikrotron/widget/CommonScreens.xml#sitemap"/>
 
 </site-conf>

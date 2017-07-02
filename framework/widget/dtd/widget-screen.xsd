@@ -790,7 +790,7 @@ under the License.
                         <xs:enumeration value="auto">
                             <xs:annotation>
                                 <xs:documentation>
-                                    If selected the hidden-form type will be used if the url-mode is intra-app 
+                                    If selected the hidden-form type will be used if the url-mode is intra-app
                                     and the request specified has an event, otherwise the anchor type will be used,
                                     except if the ajax-window mode is specified.
                                 </xs:documentation>
@@ -1146,6 +1146,38 @@ under the License.
         </xs:complexType>
     </xs:element>
     <xs:element name="html-template-decorator-section">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="AllWidgets" />
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="name" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <!-- mikrotron xml-template -->
+    <xs:element name="xml-template" substitutionGroup="HtmlWidgets">
+        <xs:complexType>
+            <xs:attributeGroup ref="attlist.xml-template"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="attlist.xml-template">
+        <xs:attribute type="xs:string" name="location" use="required"/>
+    </xs:attributeGroup>
+    <xs:element name="xml-template-decorator" substitutionGroup="HtmlWidgets">
+        <xs:annotation>
+            <xs:documentation>
+                We don't really want to encourage the use of the html-template-decorator, should be done on the screen level.
+                To include the sections in the decorator template just use the "render(sectionName)" method "sections" object, FTL example: ${sections.render("main")}.
+                For more efficient use the sections.render(sectionName, writer) method should be used, in FTL this would be in a transform or something.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="xml-template-decorator-section"/>
+            </xs:sequence>
+        <xs:attribute type="xs:string" name="location" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="xml-template-decorator-section">
         <xs:complexType>
             <xs:sequence>
                 <xs:element minOccurs="0" maxOccurs="unbounded" ref="AllWidgets" />

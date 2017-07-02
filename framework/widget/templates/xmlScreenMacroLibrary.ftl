@@ -19,11 +19,11 @@ under the License.
 
 <#macro renderScreenBegin>
 <?xml version="1.0" encoding="UTF-8"?>
-<export>
+<!-- <export> -->
 </#macro>
 
 <#macro renderScreenEnd>
-</export>
+<!-- </export> -->
 </#macro>
 
 <#macro renderSectionBegin boundaryComment>

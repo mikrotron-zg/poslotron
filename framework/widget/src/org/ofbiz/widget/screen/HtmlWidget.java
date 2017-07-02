@@ -117,6 +117,11 @@ public class HtmlWidget extends ModelScreenWidget {
                 this.subWidgets.add(new HtmlTemplate(modelScreen, childElement));
             } else if ("html-template-decorator".equals(childElement.getNodeName())) {
                 this.subWidgets.add(new HtmlTemplateDecorator(modelScreen, childElement));
+            // CHECKME:
+            } else if ("xml-template".equals(childElement.getNodeName())) {
+                this.subWidgets.add(new XmlTemplate(modelScreen, childElement));
+            } else if ("xml-template-decorator".equals(childElement.getNodeName())) {
+                this.subWidgets.add(new XmlTemplateDecorator(modelScreen, childElement));
             } else {
                 throw new IllegalArgumentException("Tag not supported under the platform-specific -> html tag with name: " + childElement.getNodeName());
             }
@@ -343,4 +348,144 @@ public class HtmlWidget extends ModelScreenWidget {
             return "<html-template-decorator-section name=\"" + this.name + "\"/>";
         }
     }
+
+    // mikrotron stuff - CHECKME
+    public static class XmlTemplate extends ModelScreenWidget {
+        protected FlexibleStringExpander locationExdr;
+
+        public XmlTemplate(ModelScreen modelScreen, Element htmlTemplateElement) {
+            super(modelScreen, htmlTemplateElement);
+            this.locationExdr = FlexibleStringExpander.getInstance(htmlTemplateElement.getAttribute("location"));
+        }
+
+        @Override
+        public void renderWidgetString(Appendable writer, Map<String, Object> context, ScreenStringRenderer screenStringRenderer) {
+            renderXmlTemplate(writer, this.locationExdr, context);
+        }
+
+        @Override
+        public String rawString() {
+            return "<xml-template location=\"" + this.locationExdr.getOriginal() + "\"/>";
+        }
+    }
+
+    public static class XmlTemplateDecorator extends ModelScreenWidget {
+        protected FlexibleStringExpander locationExdr;
+        protected Map<String, XmlTemplateDecoratorSection> sectionMap = FastMap.newInstance();
+
+        public XmlTemplateDecorator(ModelScreen modelScreen, Element htmlTemplateDecoratorElement) {
+            super(modelScreen, htmlTemplateDecoratorElement);
+            this.locationExdr = FlexibleStringExpander.getInstance(htmlTemplateDecoratorElement.getAttribute("location"));
+
+            List<? extends Element> htmlTemplateDecoratorSectionElementList = UtilXml.childElementList(htmlTemplateDecoratorElement, "xml-template-decorator-section");
+            for (Element htmlTemplateDecoratorSectionElement: htmlTemplateDecoratorSectionElementList) {
+                String name = htmlTemplateDecoratorSectionElement.getAttribute("name");
+                this.sectionMap.put(name, new XmlTemplateDecoratorSection(modelScreen, htmlTemplateDecoratorSectionElement));
+            }
+        }
+
+        @Override
+        public void renderWidgetString(Appendable writer, Map<String, Object> context, ScreenStringRenderer screenStringRenderer) {
+            // isolate the scope
+            MapStack<String> contextMs;
+            if (!(context instanceof MapStack<?>)) {
+                contextMs = MapStack.create(context);
+                context = contextMs;
+            } else {
+                contextMs = UtilGenerics.cast(context);
+            }
+
+            // create a standAloneStack, basically a "save point" for this SectionsRenderer, and make a new "screens" object just for it so it is isolated and doesn't follow the stack down
+            MapStack<String> standAloneStack = contextMs.standAloneChildStack();
+            standAloneStack.put("screens", new ScreenRenderer(writer, standAloneStack, screenStringRenderer));
+            SectionsRenderer sections = new SectionsRenderer(this.sectionMap, standAloneStack, writer, screenStringRenderer);
+
+            // put the sectionMap in the context, make sure it is in the sub-scope, ie after calling push on the MapStack
+            contextMs.push();
+            context.put("sections", sections);
+
+            renderXmlTemplate(writer, this.locationExdr, context);
+            contextMs.pop();
+        }
+
+        @Override
+        public String rawString() {
+            return "<xml-template-decorator location=\"" + this.locationExdr.getOriginal() + "\"/>";
+        }
+    }
+
+    public static class XmlTemplateDecoratorSection extends ModelScreenWidget {
+        protected String name;
+        protected List<ModelScreenWidget> subWidgets;
+
+        public XmlTemplateDecoratorSection(ModelScreen modelScreen, Element htmlTemplateDecoratorSectionElement) {
+            super(modelScreen, htmlTemplateDecoratorSectionElement);
+            this.name = htmlTemplateDecoratorSectionElement.getAttribute("name");
+            // read sub-widgets
+            List<? extends Element> subElementList = UtilXml.childElementList(htmlTemplateDecoratorSectionElement);
+            this.subWidgets = ModelScreenWidget.readSubWidgets(this.modelScreen, subElementList);
+        }
+
+        @Override
+        public void renderWidgetString(Appendable writer, Map<String, Object> context, ScreenStringRenderer screenStringRenderer) throws GeneralException, IOException {
+            // render sub-widgets
+            renderSubWidgetsString(this.subWidgets, writer, context, screenStringRenderer);
+        }
+
+        @Override
+        public String rawString() {
+            return "<xml-template-decorator-section name=\"" + this.name + "\"/>";
+        }
+    }
+
+    public static void renderXmlTemplate(Appendable writer, FlexibleStringExpander locationExdr, Map<String, Object> context) {
+        String location = locationExdr.expandString(context);
+        //Debug.logInfo("Rendering template at location [" + location + "] with context: \n" + context, module);
+
+        if (UtilValidate.isEmpty(location)) {
+            throw new IllegalArgumentException("Template location is empty");
+        }
+
+        if (location.endsWith(".ftl")) {
+            try {
+                Map<String, ? extends Object> parameters = UtilGenerics.checkMap(context.get("parameters"));
+                boolean insertWidgetBoundaryComments = ModelWidget.widgetBoundaryCommentsEnabled(parameters);
+                if (insertWidgetBoundaryComments) {
+                    writer.append(HtmlWidgetRenderer.formatBoundaryComment("Begin", "Template", location));
+                }
+
+                //FreeMarkerWorker.renderTemplateAtLocation(location, context, writer);
+                Template template = null;
+                if (location.endsWith(".fo.ftl")) { // FOP can't render correctly escaped characters
+                    template = FreeMarkerWorker.getTemplate(location);
+                } else {
+                    template = FreeMarkerWorker.getTemplate(location, specialTemplateCache, specialConfig);
+                }
+                FreeMarkerWorker.renderTemplate(template, context, writer);
+
+                if (insertWidgetBoundaryComments) {
+                    writer.append(HtmlWidgetRenderer.formatBoundaryComment("End", "Template", location));
+                }
+            } catch (IllegalArgumentException e) {
+                String errMsg = "Error rendering included template at location [" + location + "]: " + e.toString();
+                Debug.logError(e, errMsg, module);
+                writeError(writer, errMsg);
+            } catch (MalformedURLException e) {
+                String errMsg = "Error rendering included template at location [" + location + "]: " + e.toString();
+                Debug.logError(e, errMsg, module);
+                writeError(writer, errMsg);
+            } catch (TemplateException e) {
+                String errMsg = "Error rendering included template at location [" + location + "]: " + e.toString();
+                Debug.logError(e, errMsg, module);
+                writeError(writer, errMsg);
+            } catch (IOException e) {
+                String errMsg = "Error rendering included template at location [" + location + "]: " + e.toString();
+                Debug.logError(e, errMsg, module);
+                writeError(writer, errMsg);
+            }
+        } else {
+            throw new IllegalArgumentException("Rendering not yet supported for the template at location: " + location);
+        }
+    }
+
 }
