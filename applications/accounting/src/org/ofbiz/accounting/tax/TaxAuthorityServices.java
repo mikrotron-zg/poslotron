@@ -271,6 +271,7 @@ public class TaxAuthorityServices {
         Timestamp nowTimestamp = UtilDateTime.nowTimestamp();
         List<GenericValue> adjustments = FastList.newInstance();
 
+        // CHECKME: this payToPartyId contains customer's party ID while creating orders in backend!!!
         if (payToPartyId == null) {
             if (productStore != null) {
                 payToPartyId = productStore.getString("payToPartyId");
@@ -285,15 +286,17 @@ public class TaxAuthorityServices {
           EntityCondition someCondition = EntityCondition.makeCondition("partyId", EntityOperator.EQUALS, payToPartyId);
           List<GenericValue> partyTaxAuthInfo = delegator.findList("PartyTaxAuthInfo", someCondition, null, null, null, false);
           if ( partyTaxAuthInfo == null || partyTaxAuthInfo.size() == 0 ) {
-            throw new RuntimeException("Party tax authority info is null for payToPartyId "+payToPartyId+" - cannot calculate taxes!");
-          }
-          String payToTaxAuthPartyId = partyTaxAuthInfo.get(0).getString("taxAuthPartyId");
-          // 2. filter tax authorities by tax authority party id
-          Iterator<GenericValue> it = taxAuthoritySet.iterator();
-          while (it.hasNext()) {
-            GenericValue taxAuthority = it.next();
-            if ( ! payToTaxAuthPartyId.equals(taxAuthority.getString("taxAuthPartyId"))) {
-              it.remove();
+            // this leads to issues while creating orders in backend
+            //throw new RuntimeException("Party tax authority info is null for payToPartyId "+payToPartyId+" - cannot calculate taxes!");
+          } else {
+            String payToTaxAuthPartyId = partyTaxAuthInfo.get(0).getString("taxAuthPartyId");
+            // 2. filter tax authorities by tax authority party id
+            Iterator<GenericValue> it = taxAuthoritySet.iterator();
+            while (it.hasNext()) {
+              GenericValue taxAuthority = it.next();
+              if ( ! payToTaxAuthPartyId.equals(taxAuthority.getString("taxAuthPartyId"))) {
+                it.remove();
+              }
             }
           }
         } catch (GenericEntityException e) {
