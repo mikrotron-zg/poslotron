@@ -554,7 +554,7 @@ under the License.
         </section>
     </screen>
 
-    <screenxml name="sitemap">
+    <screen name="sitemap">
         <section>
             <actions>
                 <script location="component://mikrotron/web/sitemap.groovy"/>
@@ -563,6 +563,6 @@ under the License.
     			<platform-specific><xml><xml-template location="component://mikrotron/web/sitemap.ftl"/></xml></platform-specific>
             </widgets>
         </section>
-    </screenxml>
+    </screen>
 
 </screens>
