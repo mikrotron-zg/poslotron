@@ -1312,7 +1312,7 @@ public class ModelViewEntity extends ModelEntity {
         protected final ViewEntityCondition viewEntityCondition;
         protected final String entityAlias;
         protected final String fieldName;
-        protected final EntityComparisonOperator<?, ?> operator;
+        protected EntityComparisonOperator<?, ?> operator = null;
         protected final String relEntityAlias;
         protected final String relFieldName;
         protected final Object value;
