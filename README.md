@@ -7,7 +7,7 @@ By default, it uses PostgreSQL database.
 
 QUICK START (linux)
 
-1) create user ofbiz
+1) createuser ofbiz
 
 2) create database(s): 
 - createdb ofbizdb -O ofbiz
