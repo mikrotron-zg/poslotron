@@ -19,7 +19,11 @@
 <#macro showCategoryLink category parentLink>
     <#list category as rootLvl>
         <div style="margin-left:10px;">
-        <a href="<@ofbizUrl/>..${parentLink}/${rootLvl.productCategoryId}">${rootLvl.categoryName}</a>
+        <#assign base><@ofbizUrl/></#assign>
+        <#if base?index_of(";") != -1>
+        	<#assign base=base?substring(0,base?index_of(";"))/>
+        </#if>
+        <a href="${base}..${parentLink}/${rootLvl.productCategoryId}">${rootLvl.categoryName}</a>
         <@showCategoryLink rootLvl.child "${parentLink}/${rootLvl.productCategoryId}"/>
         </div>
     </#list>
