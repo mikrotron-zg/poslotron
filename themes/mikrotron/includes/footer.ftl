@@ -18,11 +18,9 @@ under the License.
 -->
 
 <#assign nowTimestamp = Static["org.ofbiz.base.util.UtilDateTime"].nowTimestamp()>
-  <br />
-<!-- JavaScript Only --><script type="text/javascript" src="http://adfarm.mediaplex.com/ad/js/27730-212148-12439-38?mpt=[CACHEBUSTER]&mpvc="></script><noscript><a href="http://adfarm.mediaplex.com/ad/nc/27730-212148-12439-38?mpt=[CACHEBUSTER]"><img src="http://adfarm.mediaplex.com/ad/nb/27730-212148-12439-38?mpt=[CACHEBUSTER]" alt="Refunded Returns" border="0"></a></noscript>
-  <br />
   <div class="footer">
       <div class="tabletext">
         <div class="tabletext">Powered by <a href="http://www.mikrotron.hr/" class="tabletext">Mikrotron</a> <a href="https://github.com/mikrotron-zg/poslotron" class="tabletext">Poslotron</a></div>
       </div>
   </div>
+<br/>
