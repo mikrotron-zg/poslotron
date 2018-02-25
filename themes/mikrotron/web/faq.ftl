@@ -19,6 +19,8 @@
       <li><a href="#tocCard">Zašto ne mogu platiti karticom?</a></li>
       <li><a href="#tocPaypal">Zašto nemate paypal?</a></li>
       <li><a href="#tocDelivery">Koje su cijene i rokovi isporuke?</a></li>
+      <li><a href="#tocHP">Koju vrstu pošiljke šaljete kada izaberem stavku dostave
+         'Hrvatska pošta'?</a></li>
       <li><a href="#tocPouzece">Zašto ne mogu platiti kod prijema
           isporuke (pouzećem)?</a></li>
       <li><a href="#tocRegister">Zašto se moram registrirati?</a></li>
@@ -39,10 +41,10 @@
     <h2><a class="mozTocH1" name="tocPay"></a>Kako da platim?</h2>
     Uplatite na račun firme: HR8023400091110675464.<br/>
     Ovaj IBAN možete naći u zaglavlju narudžbenice (klik: PDF) i na
-    stranici <a href="http://www.mikrotron.hr/shophr/control/aboutus">O
+    stranici <a href="http://www.diykits.eu/shophr/control/aboutus">O
       nama</a>.<br/>
     U model i poziv na broj primatelja upišite HR 00 broj narudžbe.<br/>
-    (nama to ne treba ali bankarske aplikacije na tome insistiraju)<br/>
+    (nama to ne treba, ali bankarske aplikacije na tome insistiraju)<br/>
 <br/>
 </div>
 <div>
@@ -59,7 +61,8 @@
       uredu</b><br/>
     4) Potvrdite narudžbu<br/>
     5) Platite narudžbu<br/>
-    6) Vidimo se u uredu! Ne zaboravite kopiju uplatnice;)<br/>
+    6) Vidimo se u uredu! Ako narudžbu podižete isti dan, ne zaboravite kopiju
+    uplatnice (na email <a href="mailto:shop@diykits.eu">shop@diykits.eu</a> ili ponesite sa sobom) ;)<br/>
 <br/>
 </div>
 <div>
@@ -71,10 +74,12 @@
     3) Potvrdite narudžbu<br/>
     4) Platite narudžbu<br/>
     <br/>
-    I to je to - robu dostavi poštar.<br/>
+    I to je to - roba stiže na adresu.<br/>
     <br/>
-    Ako ne plaćate u PBZ, uplatu dobijemo tek sutra. Isporuku možete
-    skratiti za jedan dan ako nam pošaljete potvrdu o uplati.<br/>
+    Ako ne plaćate u PBZ, uplatu dobijemo kasnije ili tek sutra pa se može dogoditi da
+    neće biti poslana isti dan. Isporuku možete
+    skratiti za jedan dan ako nam pošaljete potvrdu o uplati na email
+    <a href="mailto:shop@diykits.eu">shop@diykits.eu</a>.<br/>
 <br/>
 </div>
 <div>
@@ -84,7 +89,10 @@
     2) Popunite košaru<br/>
     3) Kliknite <b>Ponuda za firmu</b><br/>
     <br/>
-    I to je to - dobijete e-mail sa ponudom.<br/>
+    I to je to - dobijete e-mail sa ponudom. Naravno, ukoliko Vam nije potrebna
+    ponuda, možete skratiti priču tako da kliknete <b>Narudžba</b> i napravite
+    uplatu prema narudžbenici. Ne brinite, pošto ste registrirani kao tvrtka, i na ovaj način
+    dobivate R1 račun (btw. taj ne postoji već par godina, ali nas to ne sprječava da ga tako zovemo).<br/>
 <br/>
 </div>
 <div>
@@ -126,28 +134,54 @@
     osnovu cijena Hrvatske pošte i cijena ambalaže. Izračunata cijena
     prikazuje se kada u narudžbi izaberete adresu dostave.<br/>
     <br/>
-    HP: od 7.90 kn, ovisno o masi<br/>
-    HP Express: od 40 kn, + iznos koji plaćate po isporuci direktno njima
-    za pošiljke preko 2 kg<br/>
+    HP: od 10.00 kn naviše<br/>
+    HP Express: od 38 kn naviše<br/>
+    GLS: od 40 kn naviše</br>
     <br/>
-    Robu isporučujemo na dnevnoj bazi, odmah po uplati.<br/>
-    HP: stiže za par dana. Koliko je točno tih "par dana", zna samo
-    Hrvatska pošta.<br/>
-    HP express: sutradan do 15h.<br/>
+    Za uplate vidljive na našem računu (ili ako pošaljete potvrdu na email) do 12 sati
+    pošiljku predajemo na dostavu do kraja dana. Ne brinite ako ste zakasnili, u 99%
+    slučajeva i za uplate iza 12 sati isporuka kreće isti dan :)<br/></br>
+    HP: Vrste pošiljki i rokovi dostave detaljnije su objašnjeni <a href="#tocHP">ovdje</a><br/>
+    HP express: idući radni dan do 15h (ne, subota <b>nije</b> radni dan)<br/>
+    GLS: idući radni dan (iznimno dva, izuzetci su nabrojani na GLS-ovoj web stranici)</br>
     <br/>
     Ako neki naručeni artikl trenutno nemamo u dućanu, rokove isporuke
     javljamo mailom ili telefonski. U tom slučaju, po dogovoru, možete
     poništiti narudžbu u cijelosti ili djelomično, a cijenu otkazane
     robe refundiramo odmah.<br/>
-    U pravilu, od dobavljača robu dobijamo u roku 3-7 dana.<br/>
     <br/>
 <br/>
+</div>
+<div>
+    <h2><a class="mozTocH1" name="tocHP"></a>Koju vrstu pošiljke šaljete kada izaberem stavku dostave
+       'Hrvatska pošta'?</h2>
+    Kako bi dobili optimalnu (ako je to ikako moguće) poštansku dostavu bez previše stavki kod
+    izbora dostave i uz najmanje moguće troškove, isporuka poštom podjeljena je u tri kategorije,
+    ovisno o težini pošiljke:</br></br>
+
+      1) Pošiljke <b>do 250 g</b> šalju se kao prioritetno pismo. Obično pismo više ne šaljemo
+        jer je znalo putovati i do dva tjedna. Prema tvrdnjama pošte 85% ovih pošiljaka uručuje se
+        za jedan radni dan (D+1), 95% za dva (D+2), a sve ostale za tri (D+3). Za otoke, svi rokovi su duži za jedan dan.
+        Pomnožite navedene rokove s faktorom 2 - 4 pa je to onda bliže stvarnosti.</br>
+      2) Pošiljke u rasponu <b>od 251-1000 g</b> šaljemo kao preporučenu pošiljku. Iznimno, pošiljku do
+        250 g ćemo također poslati kao preporučenu pošiljku ako joj vrijednost prelazi 200 kuna. Razlika u
+        cijeni u tom slučaju ide na naš trošak. Rok dostave = D+3 puta faktor iz točke 1)</br>
+      3) Pošiljke <b>teže od 1 kg</b> šaljemo kao paket s dostavom na adresu, tamo gdje je takva vrsta
+      dostave moguća (<a target="_blank" href="http://bit.ly/2CI42Ew">Popis mjesta s dostavom na adresu</a>).
+      Tamo gdje nije, nažalost morati ćete otići po Vašu pošiljku u poštanski ured. Rok dostave za pakete je
+      tri radna dana (D+3).</br></br>
+      Vrijedi napomenuti da za pakete koji su uručeni s prekoračenjem roka dostave, možete pokrenuti
+      <a target="_blank" href="https://www.posta.hr/reklamacije-275/275">Potražni postupak</a> (iako
+      zapravo znate gdje je pošiljka, pošta ne poznaje pojam žalbe ili reklamacije), a na isti način
+      možete se žaliti i na bilo kakve druge nepravilnosti u isporuci. Ako Vam uvaže žalbu, imate pravo i
+      na naknadu u iznosu trostruke poštarine :)
 </div>
 <div>
     <h2><a class="mozTocH1" name="tocPouzece"></a>Zašto ne mogu
       platiti kod prijema isporuke (pouzećem)?</h2>
     Pouzeće je dodatni trošak i nepouzdan sustav naplate: ako Vas poštar
-    ne nađe doma, a do pošte ne odete u tjedan dana, gubimo novac.<br/>
+    ne nađe doma, a do pošte ne odete u tjedan dana, gubimo novac. S obzirom na
+    (ne)pouzdanost pošte, gubitak je garantiran.<br/>
 <br/>
 </div>
 <div>
@@ -159,13 +193,14 @@
 <div>
     <h2><a class="mozTocH1" name="tocRejected"></a>Zašto je moja
       narudžba odbijena?</h2>
-    Pokušali smo Vas kontaktirati ali niste odgovorili ni na mail ni na
-    telefonski poziv.<br/>
+    Narudžbe koje nisu realizirane u roku od mjesec dana, poništavaju se, osim
+    ako se nismo drugačije dogovorili. Najčešće ćemo Vas kontaktirati prije isteka
+    emailom, za slučaj da ste zaboravili da ste napravili narudžbu.<br/>
 <br/>
 </div>
 <div>
     <h2><a class="mozTocH1" name="tocMail"></a>Zašto ne odgovarate na upite mailom?</h2>
-    Odgovaramo; provjerite svoj spam folder (neželjena pošta).
+    Odgovaramo - provjerite svoj spam folder (neželjena pošta).
     <br/>
     Sasvim je moguće da će naše poruke biti označene kao neželjena pošta, jer sadrže riječi koje koriste spammeri - ponuda, narudžba, račun...
     <br/>
@@ -212,8 +247,10 @@
 </div>
 <div>
     <h2><a class="mozTocH1" name="tocDelivery"></a>What are shipping prices and durations?</h2>
-    Shipping prices are calculated automatically when you make an order.</br>
-    All EU countries are supported. For countries outside EU we may need to calculate prices separatelly - if you can't make an order, request a quote instead, and we'll send you details by e-mail.</br>
+    Shipping prices are calculated automatically when you make an order. At this moment, shipping by post is the only option,
+    but this should be updated shortly. Your order will be sent as a registered letter if under 2 kg, or as an international
+    package if over 2 kg.</br>
+    Currently we ship to EU countries only. All EU countries are supported.
     EU is divided into 4 zones, and shipping may last 3 to 10 days, depending on zone.</br>
     Please contact us if shipping options do not display.</br>
     </br>
