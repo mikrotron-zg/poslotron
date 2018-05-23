@@ -57,21 +57,32 @@ under the License.
              document.getElementById('customerState').style.display = "none";
          }
      }
+
+     function hideShowSubmit() {
+       if (document.getElementById('PRIVACY').checked) {
+         document.getElementById('SUBMITBTN').style.display = "inline";
+         document.getElementById('SUBMITDISABLED').style.display = "none";
+
+       } else {
+         document.getElementById('SUBMITBTN').style.display = "none";
+         document.getElementById('SUBMITDISABLED').style.display = "inline";
+       }
+     }
    //]]>
 </script>
 </#if>
 
 <#------------------------------------------------------------------------------
-NOTE: all page headings should start with an h2 tag, not an H1 tag, as 
-there should generally always only be one h1 tag on the page and that 
+NOTE: all page headings should start with an h2 tag, not an H1 tag, as
+there should generally always only be one h1 tag on the page and that
 will generally always be reserved for the logo at the top of the page.
 ------------------------------------------------------------------------------->
 
-<h2>${uiLabelMap.PartyRequestNewAccount}
+<h2>${uiLabelMap.PartyRequestNewAccount}</h2>
   <span>
     ${uiLabelMap.PartyAlreadyHaveAccount}, <a href='<@ofbizUrl>checkLogin/main</@ofbizUrl>'>${uiLabelMap.CommonLoginHere}</a>
   </span>
-</h2>
+
 
 <#macro fieldErrors fieldName>
   <#if errorMessageList?has_content>
@@ -93,15 +104,15 @@ will generally always be reserved for the logo at the top of the page.
     </ul>
   </#if>
 </#macro>
-
+<#--
   &nbsp;<a href="<@ofbizUrl>${donePage}</@ofbizUrl>" class="button">${uiLabelMap.CommonCancel}</a>
   &nbsp;<a href="javascript:document.getElementById('newuserform').submit()" class="button">${uiLabelMap.CommonSave}</a>
-
+-->
 <form method="post" action="<@ofbizUrl>createcustomer${previousParams}</@ofbizUrl>" id="newuserform" name="newuserform">
-  
-  
+
+
   <#----------------------------------------------------------------------
-  If you need to include a brief explanation of the form, or certain 
+  If you need to include a brief explanation of the form, or certain
   elements in the form (such as explaining asterisks denote REQUIRED),
   then you should use a <p></p> tag with a class name of "desc"
   ----------------------------------------------------------------------->
@@ -118,7 +129,7 @@ will generally always be reserved for the logo at the top of the page.
     <legend>${uiLabelMap.PartyFullName}</legend>
     <input type="hidden" name="emailProductStoreId" value="${productStoreId}"/>
     <#----------------------------------------------------------------------
-    Each input row should be enclosed in a <div></div>. 
+    Each input row should be enclosed in a <div></div>.
     This will ensure than each input field clears the one
     above it. Alternately, if you want several inputs to float next to
     each other, you can enclose them in a table as illustrated below for
@@ -204,12 +215,12 @@ will generally always be reserved for the logo at the top of the page.
       <@fieldErrors fieldName="CUSTOMER_POSTAL_CODE"/>
       <input type="text" name="CUSTOMER_POSTAL_CODE" id="CUSTOMER_POSTAL_CODE" value="${requestParameters.CUSTOMER_POSTAL_CODE?if_exists}" />
     </div>
-  
+
     <div>
         <label for="customerCountry">${uiLabelMap.CommonCountry}*</label>
         <@fieldErrors fieldName="CUSTOMER_COUNTRY"/>
         <select name="CUSTOMER_COUNTRY" id="newuserform_countryGeoId">
-            ${screens.render("component://common/widget/CommonScreens.xml#countries")}        
+            ${screens.render("component://common/widget/CommonScreens.xml#countries")}
             <#assign defaultCountryGeoId = Static["org.ofbiz.base.util.UtilProperties"].getPropertyValue("general.properties", "country.geo.id.default")>
             <option selected="selected" value="${defaultCountryGeoId}">
                 <#assign countryGeo = delegator.findByPrimaryKey("Geo",Static["org.ofbiz.base.util.UtilMisc"].toMap("geoId",defaultCountryGeoId))>
@@ -217,7 +228,7 @@ will generally always be reserved for the logo at the top of the page.
             </option>
         </select>
     <div/>
-    
+
 <!--
     <div>
         <label for="customerState">${uiLabelMap.PartyState}*</label>
@@ -403,15 +414,43 @@ will generally always be reserved for the logo at the top of the page.
   </fieldset>
 </form>
 
+<div style="float:left; clear:both;">
+  <#if ( locale == "hr" )>
+    <legend>Opći uvjeti i privatnost</legend>
+    <div class="form-row inline">
+
+        Molimo Vas da pročitate <a target="_blank" href="/shophr/control/policies">Opće uvjete poslovanja i Izjavu o privatnosti</a>
+        koja je sastavni dio Uvjeta te nam eksplicitno dozvolite prikupljanje i obradu Vaših osobnih podataka u skladu s njima kako bi mogli dovršiti postupak registracije</br></br>
+        <label>
+          <input type="checkbox" class="checkbox" name="PRIVACY" id="PRIVACY" value="on" onclick="hideShowSubmit();" onfocus="setLastFocused(this);"/>
+          Prihvaćam Opće uvjete poslovanja i dajem privolu za prikupljanje i obradu osobnih podataka u skladu s Izjavom o privatnosti
+        </label>
+
+    </div>
+  <#else>
+    <legend>Privacy Statement, Terms and Conditions</legend>
+    <div class="form-row inline">
+
+        Please read our <a target="_blank" href="/control/policies">Terms &amp; Conditions and Privacy Statement</a>
+         (which is an integral part of Terms &amp; Conditions) and give us the explicit permission to collect and process your
+        personal data in order to complete the registration process.</br></br>
+        <label><input type="checkbox" class="checkbox" name="PRIVACY" id="PRIVACY" value="on" onclick="hideShowSubmit();" onfocus="setLastFocused(this);"/>
+        I have read and accepted Terms &amp; Conditions and hereby give the permission to collect and process my personal data
+        in accordace to the Privacy Statement</br></label>
+
+    </div>
+  </#if>
+</div>
 <#------------------------------------------------------------------------------
-To create a consistent look and feel for all buttons, input[type=submit], 
-and a tags acting as submit buttons, all button actions should have a 
-class name of "button". No other class names should be used to style 
+To create a consistent look and feel for all buttons, input[type=submit],
+and a tags acting as submit buttons, all button actions should have a
+class name of "button". No other class names should be used to style
 button actions.
 ------------------------------------------------------------------------------->
-<div class="buttons">  
+<div class="buttons">
   &nbsp;<a href="<@ofbizUrl>${donePage}</@ofbizUrl>" class="button">${uiLabelMap.CommonCancel}</a>
-  &nbsp;<a href="javascript:document.getElementById('newuserform').submit()" class="button">${uiLabelMap.CommonSave}</a>   
+  &nbsp;<a href="javascript:document.getElementById('newuserform').submit()" class="button" id="SUBMITBTN" style="display:none">${uiLabelMap.CommonSave}</a>
+  <a href="#" class="button" style="pointer-events: none; cursor: default; text-decoration: none; color: #A0A0A0;" id="SUBMITDISABLED">${uiLabelMap.CommonSave}</a>
 </div>
 
 <script type="text/javascript">
