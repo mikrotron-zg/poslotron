@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <#if ( locale == "hr" )>
-
+  <div style="max-width:800px;">
   <h1>Opći uvjeti poslovanja</h1>
   <h2>Opće odredbe</h2>
   Mikrotron d.o.o. za trgovinu i usluge (u daljem
@@ -37,106 +37,146 @@
   </p>
   <h2>Cijene</h2>
   <p > Cijene su izražene u kunama (HRK)
-    i eurima (EUR), i uključuju PDV.<br>
+    i eurima (EUR), i <b>uključuju PDV</b>.
     Valuta plaćanja za kupce iz Hrvatske su kune, a za
     kupce iz inozemstva euri.<br>
-  </p>
-  <p >Mikrotron zadržava pravo promjene
+    Mikrotron zadržava pravo promjene
     cijena bez prethodne najave - cijene ovise o
     dobavljačima, proizvođačima, tečajevima itd.<br>
   </p>
-  <h2><strong>Načini plaćanja</strong></h2>
-  <p >Državljani Republike Hrvatske
+  <h2>Načini plaćanja</h2>
+  <p>Državljani Republike Hrvatske
     naručenu robu plaćaju u kunama na žiro račun: <br>
-    IBAN HR8023400091110675464 otvoren kod Privredne
+    <b>IBAN HR8023400091110675464</b> otvoren kod Privredne
     banke Zagreb.<br>
     Plaćanje možete izvršiti općom uplatnicom, internet
     ili mobilnim bankarstvom.<br>
-  </p>
-  <p >Stranci plaćaju kao i obično, u
+    Stranci plaćaju kao i obično, u
     eurima, putem PayPal servisa.<br>
   </p>
-  Proizvode isporučujemo po primljenoj uplati.<br>
-  <br>
-  Ukoliko naručenu robu preuzimate osobno u našem uredu,
+  <p>Proizvode isporučujemo po primljenoj uplati.<br>
+  Ako naručenu robu preuzimate osobno u našem uredu,
   molimo:<br>
-  - nazovite prije dolaska<br>
+  - nazovite prije dolaska ukoliko dolazite izvan vremena za
+  preuzimanje navedenog na narudžbenici<br>
   - sa sobom ponesite ili pošaljite mailom potvrdu o
-  plaćanju<br>
+  plaćanju ukoliko narudžbu želite podići isti dan kada ste
+  izvršili uplatu</p>
   <h2>Narudžba</h2>
-  Zbog dinamike poslovanja (narudžbi, isporuka i
-  naplate), može se dogoditi da količina raspoložive
-  robe prikazana u web dućanu ne odgovara stvarnom
-  stanju skladišta.<br>
-  Svaka narudžba se stoga potvrđuje ručno, i kupcu se
-  automatski šalje e-mail sa promjenom stanja narudžbe,
-  iz "izdana" u "odobrena".<br>
-  Nakon odobrenja narudžbe, naručene količine
-  rezervirane su 24 sata.<br>
-  Skladište se razdužuje kada primimo uplatu i izdamo
-  račun.<br>
-  <h2><strong>Reklamacije</strong></h2>
-  <p > U slučaju da ste iz bilo kojeg
-    razloga nezadovoljni proizvodom, isti možete
-    zamijeniti ili vratiti u zamjenu za novac unutar 7
-    dana od primitka. <br>
-    Za ostvarivanje ovog prava, potrebno je neoštećeni
-    proizvod poslati u originalnom pakiranju sa svom
-    opremom i dokumentacijom s kojim je proizvod bio
-    originalno isporučen.</p>
-  <p >U slučaju da je pošiljka oštećena u
-    transportu, oštećenja su vidljiva pri preuzimanju, i
-    molimo da
-    oštećenu pošiljku ne preuzimate.<br>
+  <p>Nakon izdavanja narudžbe, roba po narudžbi je rezervirana. Ukoliko
+     ste naručili robu koju trenutno nemamo na skladištu ili u količini
+     većoj nego što je trenutno raspoloživa, kontaktirati ćemo Vas kako
+     bi se dogovorili o roku i načinu isporuke. Narudžbenica je važeća
+     sedam dana, nakon toga ćemo ju stornirati bez prethodne obavijesti.
+     Ako ne želite da se to dogodi, molimo Vas da nas kontaktirate prije
+     isteka gore navedenog roka. Skladište se razdužuje kada primimo
+     uplatu i izdamo račun. </p>
+  <h2>Povrat robe</h2>
+  <p>U slučaju da ste iz bilo kojeg razloga nezadovoljni proizvodom, isti
+    možete zamijeniti ili vratiti u zamjenu za novac u roku od 14 dana od
+    dana primitka naručene robe. Za povrat robe nije potrebno navoditi nikakav
+    razlog, a za ostvarivanje prava na povrat robe u zamjenu za novac potrebno
+    je poslati obavijest o povratu robe na e-mail <a href="mailto:shop@diykits.eu">
+      shop@diykits.eu</a> i neoštećeni proizvod poslati na našu adresu u
+      originalnom pakiranju i sa svom opremom i dokumentacijom s kojim je
+      proizvod bio originalno isporučen. Troškove pošiljke u slučaju povrata
+      i zamjene snosi kupac. Mikrotron će izvršiti povrat uplate (uključujući
+      i originalne troškove isporuke) nakon zaprimanja i provjere vraćenog proizvoda.
   </p>
-  <p >Ukoliko prilikom prve uporabe
-    ustanovite da ste dobili neispravan uređaj,
-    kontaktirajte nas odmah kako bi u što kraćem roku
-    izvršili zamjenu za ispravan uređaj.<br>
+  <h2>Reklamacije, garancija i servis</h2>
+  <p>Reklamacije primamo telefonom (01/7999194) i mailom (<a href="mailto:shop@diykits.eu">
+    shop@diykits.eu</a>). Kako bi smo ubrzali postupak, molimo pripremite broj
+    narudžbenice ili računa prije javljanja.</br>
+    U slučaju da je pošiljka oštećena u transportu, a oštećenja su vidljiva
+    pri preuzimanju, i molimo Vas da oštećenu pošiljku ne preuzimate.</br>
+    Za elektroničke komponente, sklopove i kitove namjenjene samogradnji nema
+    jamstvenog roka, tj. garancija važi samo za prvu uporabu. Ukoliko prilikom
+    prve uporabe ustanovite da je uređaj neispravan, javite nam se na neki od
+    gore navedenih načina kako bi dogovorili zamjenu za ispravan uređaj.</br>
+    Mikrotron u pravilu ne vrši servisiranje uređaja. Iznimke su moguće -
+    kontaktirajte nas mailom ili telefonom.
   </p>
-  <p >Reklamacije primamo telefonom
-    (01/7999194) i mailom (mikrotron@mikrotron.hr). Kako
-    bi smo ubrzali postupak, molimo pripremite broj
-    narudžbenice ili računa prije javljanja.<br>
+  <h2>Izjava o privatnosti</h2>
+  <p>
+    Izjava o privatnosti odnosi se na povjerljivost osobnih podataka koji se
+    prikupljaju za potrebe korištenja web trgovine i sastavni je dio <b>Općih
+      uvjeta poslovanja</b>. Mikrotron prikuplja osobne podatke o korisnicima
+      web trgovine u svrhu izdavanja dokumenata vezanih uz proces prodaje
+      (narudžbenica i račun) i u svrhu isporuke robe.
   </p>
-  <h2><strong>Garancija i servis</strong></h2>
-  <p >Za elektroničke komponente,
-    sklopove i kitove namjenjene samogradnji nema
-    jamstvenog roka.<br>
-    Odnosno, garancija važi samo za prvu uporabu.<br>
+  <p>
+    Osobnim podacima pristupa se isključivo preko enkriptiranih komunikacijskih
+    kanala (HTTPS). Odgovornost je svakog korisnika upisati točne podatke pri
+    prijavi u trgovinu, i u slučaju promjene, održavati podatke ažurnima.
+    Registracija u web trgovini moguća je samo za osobe starije od 16 godina,
+    ukoliko ustanovimo da je registrirani korisnik mlađi od 16 godina, odmah
+    ćemo obrisati sve osobne podatke tog korisnika. Upisani osobni podaci
+    ispisuju se na narudžbenici i računu, koji se kupcu šalju elektroničkom
+    poštom automatski, ili u iznimnim slučajevima ručno. Sigurnost odredišnog
+    sandučića i poslužitelja elektronske pošte odgovornost je kupca.
   </p>
-  <p >Mikrotron u pravilu ne vrši
-    servisiranje uređaja. Iznimke su moguće -
-    kontaktirajte nas mailom ili telefonom.<br>
+  <p>
+    Osobni podaci kupaca čuvaju se na serveru koji se nalazi na teritoriju EU
+    i zaštićeni su od neovlaštenog pristupa. Mikrotron može podijeliti osobne
+    podatke kupca (ime i prezime, adresu i broj telefona) sa pružateljima usluge
+    isporuke kao i sa poduzećem s kojim Mikrotron ima sklopljen ugovor o obavljanju
+    knjigovodstvenih i računovodstvenih usluga. Osim u navedenim slučajevima ili
+    u slučaju propisanim zakonom (npr. sudski nalog), Mikrotron ne dijeli podatke
+    s trećim osobama. Osobni podaci korisnika čuvaju se u skladu s hrvatskim
+    zakonskim propisima o roku čuvanja određene dokumentacije.
   </p>
-  <h2><strong>Izjava o povjerljivosti</strong></h2>
-  <p  style="margin-bottom: 0cm;">Mikrotron
-    prikuplja osobne podatke o korisnicima web
-    trgovine u svrhu isporuke robe.<br>
-    Odgovornost je svakog korisnika upisati točne
-    podatke pri prijavi u trgovinu, i u slučaju
-    promjene, održavati podatke ažurnima.<br>
-    Osobnim podacima pristupa se isključivo preko
-    enkriptiranih komunikacijskih kanala (HTTPS).<br>
+  <p>
+    Svaki registrirani korisnik ima pravo na potpuni i bezuvjetni uvid u sve
+    prikupljene osobne podatke koje se odnose na tog korisnika, njihovu obradu
+    i korištenje. Pravo se ostvaruje pisanim zahtjevom na e-mail <a href="mailto:shop@diykits.eu">
+    shop@diykits.eu</a> poslanim s e-mail adrese koju je korisnik koristio
+    prilikom registracije u web trgovini. Na isti način registrirani korisnik
+    može zatražiti i ispravak osobnih podataka, kao i brisanje svih osobnih
+    podataka. Brisanje osobnih podataka Mikrotron može u potpunosti ili djelomično
+    odbiti uz pisano obrazloženje ukoliko bi to brisanje bilo u suprotnosti s
+    trenutno važećim hrvatskim zakonskim i podzakonskim aktima o čuvanju
+    određene vrste dokumentacije (npr. računa).
   </p>
-  <p  style="margin-bottom: 0cm;">Upisani
-    osobni podaci ispisuju se na narudžbenici i
-    računu, koji se kupcu šalju elektroničkom poštom
-    automatski, ili u iznimnim slučajevima ručno.<br>
-    Sigurnost odredišnog sandučića i poslužitelja
-    elektronske pošte je odgovornost kupca.<br>
+  <p>
+    Ukoliko smatrate da smo na bilo koji način prekršili važeće zakonske odredbe
+    koje se tiču privatnosti i prikupljanja i obrade osobnih podataka, prigovor
+    možete podnijeti na e-mail adresu <a href="mailto:shop@diykits.eu">shop@diykits.eu</a>.
+     Ako iz bilo kojeg razloga niste zadovoljni riješenjem Vašeg prigovora, imate
+     pravo uložiti pritužbu Agenciji za zaštitu osobnih podataka, a od 25. svibnja
+     2018. godine i nadzornom tijelu unutar EU-a.
   </p>
-  <p  style="margin-bottom: 0cm;">Mikrotron
-    može podijeliti osobne podatke kupca (ime i
-    prezime, adresu i broj telefona) sa pružateljima
-    usluge isporuke.<br>
+  <p>
+    Tijekom Vaše posjete web trgovini prikupljaju se i analitčki podaci koji
+    sadrže isključivo neidentifikacijske osobne podatke kao što su IP adresa,
+    web preglednik, web stranica s koje ste došli na ovu stranicu, Vaš internet
+    provider itsl. Mikrotron web trgovina koristi Google Analytics kao vanjskog
+    prikupitelja tih podataka, a isti se mogu koristiti i u marketinške svrhe –
+    više o tome pročitajte na <a href="https://policies.google.com/privacy/partners"
+    target="_blank">https://policies.google.com/privacy/partners</a>.
   </p>
-  <p  style="margin-bottom: 0cm;">Osim
-    u tom slučaju, Mikrotron ne dijeli podatke sa
-    trećim osobama.<br>
+  <p>
+    Mikrotron web trgovina koristi tzv. 'kolačiće' (eng. cookies) za osiguravanje
+    pune funkcionalnosti, ukoliko isključite korištenje 'kolačića' u Vašem web
+    pregledniku, web trgovina možda neće biti u stanju funkcionirati kako je
+    predviđeno te ju nećete moći koristiti za naručivanje roba i usluga.
+    Analitički i marketinški alati spomenuti u prethodnom poglavlju također
+    koriste 'kolačiće' za svoju funkcionalnost, onemogućavanje ovih 'kolačića'
+    ne utječe na funkcionalnost web trgovine.</br>
+    U sklopu web trgovine postoje linkovi koji vode na druge web stranice,
+    Mikrotron ne odgovara za sadržaj i pravila privatnosti tih stranica.
   </p>
+  <p>
+    Ovu Izjavu o privatnosti Mikrotron može izmijeniti u bez prethodne obavijesti,
+    a obavijest o izmjeni biti će istaknuta na početnoj stranici web trgovine u
+    trajanju od 30 dana. Mikrotron može koristiti i druge načine obavještavanja
+    korisnika (npr. putem društvenih mreža) o izmjeni ove Izjave, ukoliko smatra
+    da je to potrebno. Korisnici se pozivaju da pročitaju izmjene i ako se s njima
+    ne slažu da ne koriste usluge ove web trgovine.
+  </p>
+</div>
 
 <#else>
+
   <h1>Terms and conditions</h1>
 
   <h2>Prices</h2>
