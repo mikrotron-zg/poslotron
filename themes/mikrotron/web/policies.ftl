@@ -176,7 +176,7 @@
 </div>
 
 <#else>
-
+  <div style="max-width:800px;">
   <h1>Terms and conditions</h1>
 
   <h2>Prices</h2>
@@ -202,39 +202,92 @@
   </p>
   <h2><strong>Returns</strong></h2>
   <p > If you are unsatisfied by purchased products for whatever reason,
-  you can order replacment or money return within 7 days of receiving it.
+  you can order replacment or money return within 14 days of receiving it.
   <br/>
   You have to send back original product along with all originally included
-  equipment and documentation.
+  equipment and documentation. The return shipment cost is to be payed by the customer
+   in full, Mikrotron will not cover any additional charges.
   <br/>
-  Request return by mail to mikrotron@mikrotron.hr, please do include order number.
+  Request return by mail to <a href="mailto:shop@diykits.eu">shop@diykits.eu</a>,
+  please do include order number.
   </p>
   <h2><strong>Limited Warranty</strong></h2>
   <p >For all products intent for experimentation and building do-it-yourself devices, there is no warranty of any kind.
   <br>
   Products are only guaranteed to be functioning during first usage.
   </p>
-  <h2><strong>Privacy Statement</strong></h2>
-  <p  style="margin-bottom: 0cm;">Mikrotron
-    collects user's personal data for purposes of collecting payments and delivery of goods.
-    <br/>
-    User's sole responsibility is to enter valid data, and maintan them in case of any changes.
-    <br/>
-    Personal data is accessed only via encrypted chanells (HTTPS).<br/>
+  <h2>Privacy Statement</h2>
+  <p>
+    This statement addresses privacy of personal data collected and processed in
+    use of this web shop and is an integral part of Terms and Conditions. Mikrotron
+    collects web shop users personal data needed for the implementation of the online
+    sales process and shipping of the purchased goods.
   </p>
-  <p  style="margin-bottom: 0cm;">
-    Entered personal data are printed on order and invoice, send to user
-    by e-mail automatically.<br/>
-    Security of destination mailbox and mail server are sole responsibility of user.
-    <br/>
+  <p>
+    Personal data is accessed only via encrypted chanells (HTTPS). User's sole
+    responsibility is to enter valid data, and maintain them in case of any
+    changes. Only persons over 16 years of age are allowed to register. If Mikrotron
+    finds out about any person under 16 years of age being registered, Mikrotron
+    will erase all personal data for that person.
   </p>
-  <p  style="margin-bottom: 0cm;">Mikrotron
-    may share user's personal data (name, address and phone) with carrier companies.
-    <br>
+  <p>
+    Personal data is being used for order form and invoice and are send to user
+    by e-mail automatically or manually. Security of destination mailbox and
+    mail server are sole responsibility of user.
   </p>
-  <p  style="margin-bottom: 0cm;">
-    Except in that case, Mikrotron does not share personal data with anybody.
-    <br>
+  <p>
+    User personal date is being kept on a EU based server(s) and can be accessed
+    by authorized personnel only. Mikrotron can share personal data needed for
+    the shipment of the goods (name, address, phone number or e-mail address)
+    with the post office or the delivery company. Also, personal data will be
+    shared with the authorized accounting company for the accounting purposes
+    only. Apart from the cases stated, your personal data will not be shared
+    with anyone else. Your personal data may be shared with the third party when
+    obligated by the applicable law. Personal data is being kept at least for
+    the period prescribed by the Croatian applicable laws.
   </p>
-
+  <p>
+    Every registered user has the right to full and unlimited report on the
+    collection, processing and personal data usage for the user in question.
+    This right can be carried out by sending an e-mail to <a
+    href="mailto:shop@diykits.eu">shop@diykits.eu</a> from the registered
+    e-mail address. This contact can be used to require personal data
+    corrections or the deletion of personal data. Mikrotron can decline
+    deletion fully or partially when the request is in the opposition of
+    applicable laws.
+  </p>
+  <p>
+    If you feel that we're in any way misusing your privacy rights, you can
+    send us formal complaint by sending an e-mail to <a
+    href="mailto:shop@diykits.eu">shop@diykits.eu</a> from the registered
+    e-mail address and we'll get back to you. If you're in any way
+    dissatisfied with the answer you have the right to the EU supervisory
+    agency as of May 25, 2018.
+  </p>
+  <p>
+    During your visit to the web shop, some analytic data is being collected
+    which contain only the non-identifying personal data (e.g. your IP address,
+    your web browser type, web site you came from). Our web shop uses Google
+    Analytics to do the job, and this data can be used in the advertising –
+    you can find out more about it at <a href="https://policies.google.com/privacy/partners"
+    target="_blank">https://policies.google.com/privacy/partners</a>.
+  </p>
+  <p>
+    Mikrotron web shop uses cookies for the full web shop functionality – if
+    you turn of cookies in your web browser, web shop might not have full
+    functionality and you might not be able to complete an order in the web
+    shop. Analytical tools also use cookies, disabling this cookies has no
+    impact on the web shop functionality. Web shop may contain links to the
+    other web sites, Mikrotron is in no way responsible for those site's
+    content and privacy policy.
+  </p>
+  <p>
+    This Privacy Statement can be changed by Mikrotron with no prior notice,
+    users will be informed of the change on the web shop main page. This notice
+    will be visible for at least 30 days from the day of change. Mikrotron can
+    use other means of communication (e.g. social media) to inform users of the
+    change, if necessary. Users are invited to read this Statement in full, and
+    if they don't agree with any part of it, to stop using this web shop.
+  </p>
+</div>
 </#if>
