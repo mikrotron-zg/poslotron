@@ -81,7 +81,7 @@ public class OfbizUrlTransform implements TemplateTransformModel {
     public Writer getWriter(final Writer out, Map args) {
         final StringBuilder buf = new StringBuilder();
         final boolean fullPath = checkArg(args, "fullPath", false);
-        final boolean secure = checkArg(args, "secure", false);
+        final boolean secure = checkArg(args, "secure", true);
         final boolean encode = checkArg(args, "encode", true);
         final String webSiteId = getArg(args, "webSiteId");
 
