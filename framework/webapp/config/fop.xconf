@@ -77,7 +77,7 @@ java -cp fop-1.1.jar:xmlgraphics-commons-1.5.jar:commons/commons-logging-1.1.2.j
       </filterList>
 
       <fonts>
-        <directory recursive="true">/usr/share/fonts/liberation</directory>
+        <directory recursive="true">/usr/share/fonts</directory>
         <!-- automatically detect operating system installed fonts -->
         <!-- embedded fonts -->
         <!--
