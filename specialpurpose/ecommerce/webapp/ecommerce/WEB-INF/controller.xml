@@ -791,7 +791,7 @@ under the License.
         <response name="error" type="view" value="checkoutreview"/>
     </request-map>
     <request-map uri="payPalNotify">
-        <security https="false"/>
+        <security https="true"/>
         <event type="java" path="org.ofbiz.accounting.thirdparty.paypal.PayPalEvents" invoke="payPalIPN"/>
         <response name="success" type="none"/>
         <response name="error" type="none"/>
