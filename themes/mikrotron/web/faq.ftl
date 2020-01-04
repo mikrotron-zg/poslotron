@@ -10,7 +10,6 @@
     <ol id="faqToc">
       <li><a href="#tocCache">Može keš?</a></li>
       <li><a href="#tocPay">Kako da platim?</a></li>
-      <li><a href="#tocCheap">Kako ste tako jeftini?</a></li>
       <li><a href="#tocPickup">Kako da osobno preumem robu?</a></li>
       <li><a href="#tocBuy">Kako da kupim? (kupovina: fizičke
           osobe) </a></li>
@@ -18,6 +17,7 @@
           osobe)</a></li>
       <li><a href="#tocCard">Zašto ne mogu platiti karticom?</a></li>
       <li><a href="#tocPaypal">Zašto nemate paypal?</a></li>
+	  <li><a href="#tocHPE">Zašto više nemate HP Express?</a></li>
       <li><a href="#tocDelivery">Koje su cijene i rokovi isporuke?</a></li>
       <li><a href="#tocHP">Koju vrstu pošiljke šaljete kada izaberem stavku dostave
          'Hrvatska pošta'?</a></li>
@@ -48,11 +48,6 @@
 <br/>
 </div>
 <div>
-    <h2><a class="mozTocH1" name="tocCheap"></a>Kako ste tako
-      jeftini?</h2>
-    Radimo za rabat.<br/>
-<br/>
-</div>
     <h2><a class="mozTocH1" name="tocPickup"></a>Kako da osobno
       preumem robu?</h2>
     1) Registrirajte se u dućan (Registracija: Osoba)<br/>
@@ -128,6 +123,20 @@
 <br/>
 </div>
 <div>
+    <h2><a class="mozTocH1" name="tocHPE"></a>Zašto više nemate HP Express?</h2>
+	Hrvatska pošta je s 1.1.2020. godine, bez prethodne najave, ukinula uslugu "HP Express" 
+	i zamjenila ju "novom" uslugom "Paket 24". Uz to, dosadašnji rokovi isporuke (do 10, 15 i 20 sati) 
+	zamjenjeni su novim rokovima (do 9, 11 i 20 sati). Kako smo mi do sada koristili opciju 'do 15 sati' 
+	kao najoptimalniju, provjerili smo cijene za opciju 'do 11 sati' i, naravno, ona je sada oko 
+	60% skuplja! Ali, čak niti uz opciju 'do 20 sati' cijene ne bi mogle ostati na nivou prijašnje 
+	opcije 'do 15 sati', nego bi morale porasti za 15-20%. <br/>
+	S obzirom na to da je HP Express i do sada bila najskuplja vrsta dostave, zaključili smo da 
+	nema smisla zadržati je u ponudi, pa je s 04.01.2020. ova opcija uklonjena iz web dućana. Naravno, 
+	ukoliko dođe do pozitivnih promjena po pitanju cijene ove usluge, ponovno ćemo razmisliti o njenom 
+	uvođenju, ma kako se ona tada zvala.<br/>
+<br/>
+</div>
+<div>
     <h2><a class="mozTocH1" name="tocDelivery"></a>Koje su cijene i
       rokovi isporuke?</h2>
     Cijena isporuke računa se prema težini, uključujući ambalažu, na
@@ -135,14 +144,12 @@
     prikazuje se kada u narudžbi izaberete adresu dostave.<br/>
     <br/>
     HP: od 10.00 kn naviše<br/>
-    HP Express: od 38 kn naviše<br/>
     GLS: od 40 kn naviše</br>
     <br/>
     Za uplate vidljive na našem računu (ili ako pošaljete potvrdu na email) do 12 sati
     pošiljku predajemo na dostavu do kraja dana. Ne brinite ako ste zakasnili, u 99%
     slučajeva i za uplate iza 12 sati isporuka kreće isti dan :)<br/></br>
     HP: Vrste pošiljki i rokovi dostave detaljnije su objašnjeni <a href="#tocHP">ovdje</a><br/>
-    HP express: idući radni dan do 15h (ne, subota <b>nije</b> radni dan)<br/>
     GLS: idući radni dan (iznimno dva, izuzetci su nabrojani na GLS-ovoj web stranici)</br>
     <br/>
     Ako neki naručeni artikl trenutno nemamo u dućanu, rokove isporuke
@@ -175,6 +182,7 @@
       zapravo znate gdje je pošiljka, pošta ne poznaje pojam žalbe ili reklamacije), a na isti način
       možete se žaliti i na bilo kakve druge nepravilnosti u isporuci. Ako Vam uvaže žalbu, imate pravo i
       na naknadu u iznosu trostruke poštarine :)
+	<br/>
 </div>
 <div>
     <h2><a class="mozTocH1" name="tocPouzece"></a>Zašto ne mogu
