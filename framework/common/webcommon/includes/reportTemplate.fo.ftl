@@ -23,26 +23,26 @@ under the License.
 >
     <fo:layout-master-set>
         <fo:simple-page-master master-name="main-page"
-              page-width="8.5in" page-height="11in"
-              margin-top="0.4in" margin-bottom="0.4in"
-              margin-left="0.6in" margin-right="0.4in">
+              page-width="21.0cm" page-height="29.7cm"
+              margin-top="1.0cm" margin-bottom="1.0cm"
+              margin-left="1.5cm" margin-right="0.5cm">
             <#-- main body -->
-            <fo:region-body margin-top="1.5in" margin-bottom="0.4in"/>
+            <fo:region-body margin-top="3.0cm" margin-bottom="1.0cm"/>
             <#-- the header -->
-            <fo:region-before extent="1.2in"/>
+            <fo:region-before extent="2.5cm"/>
             <#-- the footer -->
-            <fo:region-after extent="0.4in"/>
+            <fo:region-after extent="0.5cm"/>
         </fo:simple-page-master>
         <fo:simple-page-master master-name="main-page-landscape"
-              page-width="11in" page-height="8.5in"
-              margin-top="0.4in" margin-bottom="0.4in"
-              margin-left="0.6in" margin-right="0.4in">
+              page-width="29.7cm" page-height="21.0cm"
+              margin-top="1.5cm" margin-bottom="0.5cm"
+              margin-left="1.0cm" margin-right="1.0cm">
             <#-- main body -->
-            <fo:region-body margin-top="1.2in" margin-bottom="0.4in"/>
+            <fo:region-body margin-top="3.0cm" margin-bottom="1.0cm"/>
             <#-- the header -->
-            <fo:region-before extent="1.2in"/>
+            <fo:region-before extent="2.5cm"/>
             <#-- the footer -->
-            <fo:region-after extent="0.4in"/>
+            <fo:region-after extent="0.5cm"/>
         </fo:simple-page-master>
     </fo:layout-master-set>
 
