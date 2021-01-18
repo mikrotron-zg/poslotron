@@ -18,8 +18,10 @@ under the License.
 -->
 <#escape x as x?xml>
 <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format"
+	font-family="Liberation Sans, Arial, sans-serif"
+	font-size="10pt"
     <#-- inheritance -->
-    <#if defaultFontFamily?has_content>font-family="${defaultFontFamily}"</#if>
+    <#-- <#if defaultFontFamily?has_content>font-family="${defaultFontFamily}"</#if> -->
 >
     <fo:layout-master-set>
         <fo:simple-page-master master-name="main-page"
