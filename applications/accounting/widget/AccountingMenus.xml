@@ -163,7 +163,7 @@ under the License.
         </menu-item>
         <menu-item name="copyInvoice" title="${uiLabelMap.CommonCopy}">
             <condition>
-                <not><if-empty field="invoice.invoiceId"/></not>
+                <if-empty field="invoice.invoiceId"/>
             </condition>
             <link target="copyInvoice">
                 <parameter param-name="invoiceIdToCopyFrom" from-field="invoiceId"/>
