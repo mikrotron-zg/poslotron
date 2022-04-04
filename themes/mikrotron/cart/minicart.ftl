@@ -66,7 +66,7 @@ under the License.
                     <strong>${cartLine.getItemTypeDescription()?if_exists}</strong>
                   </#if>
                 </td>
-                <td><@ofbizCurrency amount=cartLine.getDisplayItemSubTotal() isoCode=shoppingCart.getCurrency()/></td>
+                <td><@ofbizCurrency amount=cartLine.getDisplayItemSubTotal() isoCode=shoppingCart.getCurrency()/> (<@ofbizCurrency amount=cartLine.getDisplayItemSubTotal()/exchangeRate isoCode=euro/>)</td>
               </tr>
               <#if cartLine.getReservStart()?exists>
                 <tr><td>&nbsp;</td><td colspan="2">(${cartLine.getReservStart()?string("yyyy-MM-dd")}, ${cartLine.getReservLength()} <#if cartLine.getReservLength() == 1>${uiLabelMap.CommonDay}<#else>${uiLabelMap.CommonDays}</#if>)</td></tr>
