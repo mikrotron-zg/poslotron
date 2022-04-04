@@ -339,7 +339,7 @@ $(function(){
     <#assign productAdditionalImage2 = productContentWrapper.get("ADDITIONAL_IMAGE_2")?if_exists />
     <#assign productAdditionalImage3 = productContentWrapper.get("ADDITIONAL_IMAGE_3")?if_exists />
     <#assign productAdditionalImage4 = productContentWrapper.get("ADDITIONAL_IMAGE_4")?if_exists />
-    <#include "common.ftl">
+    <#include "../includes/common.ftl">
 
       <#-- Category next/previous -->
       <#if category?exists>

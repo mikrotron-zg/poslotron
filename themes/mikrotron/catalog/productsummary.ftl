@@ -69,7 +69,7 @@ ${virtualJavaScript?if_exists}
     <#assign productInfoLinkId = productInfoLinkId + product.productId/>
     <#assign productDetailId = "productDetailId"/>
     <#assign productDetailId = productDetailId + product.productId/>
-    <#include "common.ftl">
+    <#include "../includes/common.ftl">
     <div class="productsummary">
         <div class="smallimage">
             <a href="${productUrl}">

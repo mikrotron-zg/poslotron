@@ -23,6 +23,7 @@ under the License.
 <#else>
     <#assign shoppingCartSize = 0>
 </#if>
+<#include "../includes/common.ftl">
 
 <div id="minicart">
     <h3>${uiLabelMap.OrderCartSummary}</h3>
@@ -46,7 +47,7 @@ under the License.
             <tfoot>
               <tr>
                 <td colspan="3">
-                  ${uiLabelMap.OrderTotal}: <@ofbizCurrency amount=shoppingCart.getDisplayGrandTotal() isoCode=shoppingCart.getCurrency()/>
+                  ${uiLabelMap.OrderTotal}: <@ofbizCurrency amount=shoppingCart.getDisplayGrandTotal() isoCode=shoppingCart.getCurrency()/> (<@ofbizCurrency amount=shoppingCart.getDisplayGrandTotal()/exchangeRate isoCode=euro/>)
                 </td>
               </tr>
             </tfoot>
