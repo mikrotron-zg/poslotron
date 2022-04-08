@@ -323,7 +323,7 @@ under the License.
     </tr>
     <#if currencyUomId == "HRK">
         <th colspan="6">Fiksni tečaj konverzije:</th>
-        <td>${exchangeRate}</td>
+        <td>${exchangeRate?string("0.00000")}</td>
     </#if>
     <#--
     <#if orderVatTotal?has_content && orderVatTotal != 0 >

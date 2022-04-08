@@ -47,7 +47,7 @@ under the License.
             <tfoot>
               <tr>
                 <td colspan="3">
-                  ${uiLabelMap.OrderTotal}: <@ofbizCurrency amount=shoppingCart.getDisplayGrandTotal() isoCode=shoppingCart.getCurrency()/> (<@ofbizCurrency amount=shoppingCart.getDisplayGrandTotal()/exchangeRate isoCode=euro/>)
+                  ${uiLabelMap.OrderTotal}: <@ofbizCurrency amount=shoppingCart.getDisplayGrandTotal() isoCode=shoppingCart.getCurrency()/><#if shoppingCart.getCurrency() == "HRK">&nbsp; (<@ofbizCurrency amount=shoppingCart.getDisplayGrandTotal()/exchangeRate isoCode=euro/>)</#if>
                 </td>
               </tr>
             </tfoot>
@@ -66,7 +66,7 @@ under the License.
                     <strong>${cartLine.getItemTypeDescription()?if_exists}</strong>
                   </#if>
                 </td>
-                <td><@ofbizCurrency amount=cartLine.getDisplayItemSubTotal() isoCode=shoppingCart.getCurrency()/> (<@ofbizCurrency amount=cartLine.getDisplayItemSubTotal()/exchangeRate isoCode=euro/>)</td>
+                <td><@ofbizCurrency amount=cartLine.getDisplayItemSubTotal() isoCode=shoppingCart.getCurrency()/><#if shoppingCart.getCurrency() == "HRK">&nbsp;(<@ofbizCurrency amount=cartLine.getDisplayItemSubTotal()/exchangeRate isoCode=euro/>)</#if></td>
               </tr>
               <#if cartLine.getReservStart()?exists>
                 <tr><td>&nbsp;</td><td colspan="2">(${cartLine.getReservStart()?string("yyyy-MM-dd")}, ${cartLine.getReservLength()} <#if cartLine.getReservLength() == 1>${uiLabelMap.CommonDay}<#else>${uiLabelMap.CommonDays}</#if>)</td></tr>
@@ -88,6 +88,9 @@ under the License.
           <p>${uiLabelMap.OrderShoppingCartEmpty}</p>
         </#if>
     </div>
+    <#if shoppingCart.getCurrency() == "HRK">
+        <div><strong>Fiksni tečaj konverzije: <br> 1€ = ${exchangeRate?string("0.00000")}kn</strong></div>
+    </#if>
 <#--
 <div class="shrsl_ShareASale_productShowCaseTarget_3837"></div>
 <script type="text/javascript"  src="http://showcase.shareasale.com/shareASale_liveWidget_loader.js?dt=11242014064552"></script>

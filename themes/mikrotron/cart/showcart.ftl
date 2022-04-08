@@ -366,9 +366,13 @@ function setAlternateGwp(field) {
                     </#if>
                 </#if>
             </td>
-            <td><@ofbizCurrency amount=cartLine.getDisplayPrice() isoCode=shoppingCart.getCurrency()/> <br> (<@ofbizCurrency amount=cartLine.getDisplayPrice()/exchangeRate isoCode=euro/>)</td>
+            <td><@ofbizCurrency amount=cartLine.getDisplayPrice() isoCode=shoppingCart.getCurrency()/>
+                <#if shoppingCart.getCurrency() == "HRK"><br>(<@ofbizCurrency amount=cartLine.getDisplayPrice()/exchangeRate isoCode=euro/>)</#if>
+            </td>
             <!--<td><@ofbizCurrency amount=cartLine.getOtherAdjustments() isoCode=shoppingCart.getCurrency()/></td>-->
-            <td><@ofbizCurrency amount=cartLine.getDisplayItemSubTotal() isoCode=shoppingCart.getCurrency()/> <br> (<@ofbizCurrency amount=cartLine.getDisplayItemSubTotal()/exchangeRate isoCode=euro/>)</td>
+            <td><@ofbizCurrency amount=cartLine.getDisplayItemSubTotal() isoCode=shoppingCart.getCurrency()/>
+                <#if shoppingCart.getCurrency() == "HRK"><br>(<@ofbizCurrency amount=cartLine.getDisplayItemSubTotal()/exchangeRate isoCode=euro/>)</#if>
+            </td>
             <td><#if !cartLine.getIsPromo()><input type="checkbox" name="selectedItem" value="${cartLineIndex}" onclick="javascript:checkToggle(this);" /><#else>&nbsp;</#if></td>
           </tr>
         </#list>
@@ -402,7 +406,9 @@ function setAlternateGwp(field) {
         </#if>
         <tr>
           <th>${uiLabelMap.EcommerceCartTotal}:</th>
-          <td><@ofbizCurrency amount=shoppingCart.getDisplayGrandTotal() isoCode=shoppingCart.getCurrency()/> (<@ofbizCurrency amount=shoppingCart.getDisplayGrandTotal()/exchangeRate isoCode=euro/>)</td>
+          <td><@ofbizCurrency amount=shoppingCart.getDisplayGrandTotal() isoCode=shoppingCart.getCurrency()/>
+            <#if shoppingCart.getCurrency() == "HRK">&nbsp;(<@ofbizCurrency amount=shoppingCart.getDisplayGrandTotal()/exchangeRate isoCode=euro/>)</#if>
+          </td>
         </tr>
         <#if itemsFromList>
         <tr>
@@ -461,6 +467,9 @@ function setAlternateGwp(field) {
         -->
       </table>
       </fieldset>
+      <#if shoppingCart.getCurrency() == "HRK">
+        <strong>Fiksni tečaj konverzije: ${exchangeRate?string("0.00000")}</strong>
+      </#if>
     </form>
   <#else>
     <h2>${uiLabelMap.EcommerceYourShoppingCartEmpty}.</h2>
