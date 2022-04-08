@@ -20,6 +20,7 @@ under the License.
 <#-- NOTE: this template is used for the orderstatus screen in ecommerce AND for order notification emails through the OrderNoticeEmail.ftl file -->
 <#-- the "urlPrefix" value will be prepended to URLs by the ofbizUrl transform if/when there is no "request" object in the context -->
 <#if baseEcommerceSecureUrl?exists><#assign urlPrefix = baseEcommerceSecureUrl/></#if>
+<#include "../includes/common.ftl">
 <div class="screenlet">
   <h3>
       <#assign numColumns = 8>
@@ -45,7 +46,6 @@ under the License.
         <th>${uiLabelMap.OrderQtyOrdered}</th>
       </#if>
       <th >${uiLabelMap.EcommerceUnitPrice}</th>
-      <th >${uiLabelMap.OrderAdjustments}</th>
       <th >${uiLabelMap.CommonSubtotal}</th>
       <#if maySelectItems?default("N") == "Y" && roleTypeId?if_exists == "PLACING_CUSTOMER">
         <th colspan="3"></th>
@@ -160,9 +160,6 @@ under the License.
           </#if>
           <td>
             <@ofbizCurrency amount=orderItem.unitPrice isoCode=currencyUomId/>
-          </td>
-          <td>
-            <@ofbizCurrency amount=localOrderReadHelper.getOrderItemAdjustmentsTotal(orderItem) isoCode=currencyUomId/>
           </td>
           <td>
             <#if workEfforts?exists>
@@ -282,25 +279,25 @@ under the License.
 
     <tfoot>
     <tr>
-      <th colspan="7">${uiLabelMap.CommonSubtotal}</th>
+      <th colspan="6">${uiLabelMap.CommonSubtotal}</th>
       <td><@ofbizCurrency amount=orderSubTotal isoCode=currencyUomId/></td>
       <#if maySelectItems?default("N") == "Y"><td colspan="3"></td></#if>
     </tr>
     <#list headerAdjustmentsToShow as orderHeaderAdjustment>
       <tr>
-        <th colspan="7">${localOrderReadHelper.getAdjustmentType(orderHeaderAdjustment)}</th>
+        <th colspan="6">${localOrderReadHelper.getAdjustmentType(orderHeaderAdjustment)}</th>
         <td><@ofbizCurrency amount=localOrderReadHelper.getOrderAdjustmentTotal(orderHeaderAdjustment) isoCode=currencyUomId/></td>
         <#if maySelectItems?default("N") == "Y"><td colspan="3"></td></#if>
       </tr>
     </#list>
     <tr>
-      <th colspan="7">${uiLabelMap.OrderShippingAndHandling}</th>
+      <th colspan="6">${uiLabelMap.OrderShippingAndHandling}</th>
       <td><@ofbizCurrency amount=orderShippingTotal isoCode=currencyUomId/></td>
       <#if maySelectItems?default("N") == "Y"><td colspan="3"></td></#if>
     </tr>
     <#if orderTaxTotal?has_content && orderTaxTotal != 0 >
     <tr>
-      <th colspan="7">${uiLabelMap.OrderSalesTax}</th>
+      <th colspan="6">${uiLabelMap.OrderSalesTax}</th>
       <td><@ofbizCurrency amount=orderTaxTotal isoCode=currencyUomId/></td>
       <#if maySelectItems?default("N") == "Y"><td colspan="3"></td></#if>
     </tr>
@@ -315,16 +312,23 @@ under the License.
     </tr>
     </#if>
     <tr>
-      <th colspan="7">${uiLabelMap.OrderGrandTotal}</th>
+      <th colspan="6">${uiLabelMap.OrderGrandTotal}</th>
       <td>
-        <@ofbizCurrency amount=orderGrandTotal isoCode=currencyUomId/>
+        <strong><@ofbizCurrency amount=orderGrandTotal isoCode=currencyUomId/></strong>
+        <#if currencyUomId == "HRK">
+            <br>(<@ofbizCurrency amount=orderGrandTotal/exchangeRate isoCode=euro/>)
+        </#if>
       </td>
       <#if maySelectItems?default("N") == "Y"><td colspan="3"></td></#if>
     </tr>
+    <#if currencyUomId == "HRK">
+        <th colspan="6">Fiksni tečaj konverzije:</th>
+        <td>${exchangeRate}</td>
+    </#if>
     <#--
     <#if orderVatTotal?has_content && orderVatTotal != 0 >
     <tr>
-      <th colspan="7">${uiLabelMap.OrderTotalSalesTax}</th>
+      <th colspan="6">${uiLabelMap.OrderTotalSalesTax}</th>
       <td><@ofbizCurrency amount=orderVatTotal isoCode=currencyUomId/></td>
       <#if maySelectItems?default("N") == "Y"><td colspan="3"></td></#if>
     </tr>

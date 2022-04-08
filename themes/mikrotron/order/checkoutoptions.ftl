@@ -73,6 +73,7 @@ function submitForm(form, mode, value) {
 //]]>
 </script>
 
+<#include "../includes/common.ftl">
 <#assign shipping = !shoppingCart.containAllWorkEffortCartItems()> <#-- contains items which need shipping? -->
 <form method="post" name="checkoutInfoForm" style="margin:0;">
   <input type="hidden" name="checkoutpage" value="quick"/>
@@ -196,7 +197,11 @@ function submitForm(form, mode, value) {
                           <#assign shippingEst = shippingEstWpr.getShippingEstimate(carrierShipmentMethod)?default(-1)>
                         </#if>
                         <#if carrierShipmentMethod.partyId != "_NA_">${carrierShipmentMethod.partyId?if_exists}&nbsp;</#if>${carrierShipmentMethod.description?if_exists}
-                        <#if shippingEst?has_content> - <#if (shippingEst > -1)><@ofbizCurrency amount=shippingEst isoCode=shoppingCart.getCurrency()/><#else>${uiLabelMap.OrderCalculatedOffline}</#if></#if>
+                        <#if shippingEst?has_content> - <#if (shippingEst > -1)><@ofbizCurrency amount=shippingEst isoCode=shoppingCart.getCurrency()/> 
+                            <#if shoppingCart.getCurrency() == "HRK">&nbsp;(<@ofbizCurrency amount=shippingEst/exchangeRate isoCode=euro/>)</#if>
+                            <#else>
+                                ${uiLabelMap.OrderCalculatedOffline}
+                        </#if></#if>
                         <br/>
                   </#list>
                     </td>

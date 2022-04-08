@@ -1,2 +1,2 @@
-<#assign exchangeRate = 7.53?double>
+<#assign exchangeRate = 7.53450?double>
 <#assign euro = "EUR">
