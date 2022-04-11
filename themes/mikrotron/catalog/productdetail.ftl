@@ -610,13 +610,13 @@ $(function(){
               </#if>
             </#if>
             <#if totalAvailableToPromise?exists && 0.00 < totalAvailableToPromise?double >
-              <b>${uiLabelMap.ProductQuantityOnHand}:${totalAvailableToPromise?if_exists}</b>
+               <div style="color: green;"><b>${uiLabelMap.ProductQuantityOnHand}:${totalAvailableToPromise?if_exists}</b></div>
             <#-- We do have it in inventory, but may be reserved for order - reliable for paypal, unreliable for offline payment
             <#elseif availableInventory?exists && 0.00 < availableInventory?double>
               <b>${uiLabelMap.ProductQuantityOnHand}:${totalAvailableToPromise?if_exists}/${availableInventory?if_exists}</b>
               -->
 			      <#else>
-              <b>${uiLabelMap.FacilityNoItemsAvailableToShip}</b>
+              <span style="color: red;"><b>${uiLabelMap.FacilityNoItemsAvailableToShip}</b></span>
             </#if>
             <#if variantPriceList?exists>
               <#list variantPriceList as vpricing>

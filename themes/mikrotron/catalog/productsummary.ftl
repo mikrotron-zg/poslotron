@@ -141,13 +141,13 @@ ${virtualJavaScript?if_exists}
               </form>
 
               <#if totalAvailableToPromise?exists && (0.00 < totalAvailableToPromise?double)>
-                <div><b>${uiLabelMap.ProductQuantityOnHand}: ${totalAvailableToPromise?string.number}</b></div>
+                <div style="color: green;"><b>${uiLabelMap.ProductQuantityOnHand}: ${totalAvailableToPromise?string.number}</b></div>
                 <#-- available when displaying product category members
               <#elseif prodCatMem?exists && prodCatMem.quantity?exists && (0.00 < prodCatMem.quantity?double)>
                 <div><b>${uiLabelMap.ProductQuantityOnHand}: ${prodCatMem.quantity?string.number}</b></div>
                 -->
               <#else>
-                ${uiLabelMap.FacilityNoItemsAvailableToShip}
+                <span style="color: red;"><b>${uiLabelMap.FacilityNoItemsAvailableToShip}</b></span>
               </#if>
 
             <#else>
