@@ -22022,6 +22022,7 @@
         <value xml:lang="en">Open</value>
         <value xml:lang="es">Abierta</value>
         <value xml:lang="fr">Ouvert</value>
+        <value xml:lang="hr">Otvoreno</value>
         <value xml:lang="it">Aperto</value>
         <value xml:lang="ja">オープン</value>
         <value xml:lang="ru">Открыть</value>
@@ -24039,6 +24040,7 @@
         <value xml:lang="es">Este producto ya no está a la venta</value>
         <value xml:lang="fr">Cet article n'est plus disponible à la vente</value>
         <value xml:lang="hi_IN">यह माल बेचने के लिये उपलब्घ नही</value>
+        <value xml:lang="en">Ovaj proizvod više nije dostupan za prodaju</value>
         <value xml:lang="it">Questo prodotto non è più disponibile per la vendita</value>
         <value xml:lang="ja">この製品はもう販売対象ではありません</value>
         <value xml:lang="nl">Dit produkt wordt niet langer verkocht</value>
@@ -27629,6 +27631,7 @@
         <value xml:lang="en">Shipment Method</value>
         <value xml:lang="es">Método de envío</value>
         <value xml:lang="fr">Mode d'expédition</value>
+        <value xml:lang="hr">Način otpreme</value>
         <value xml:lang="it">Metodo di Spedizione</value>
         <value xml:lang="ja">発送方法</value>
         <value xml:lang="ro">Metoda de Expediere</value>
@@ -27643,6 +27646,7 @@
         <value xml:lang="en">Shipment Method Type</value>
         <value xml:lang="es">Tipo de método de envío</value>
         <value xml:lang="fr">Type de mode d'expédition</value>
+        <value xml:lang="hr">Vrsta dostave</value>
         <value xml:lang="it">Metodo di Spedizione</value>
         <value xml:lang="ja">発送方法種類</value>
         <value xml:lang="ro">Tip Metoda de Expediere</value>
@@ -27657,6 +27661,7 @@
         <value xml:lang="en">Shipment Method Types</value>
         <value xml:lang="es">Tipos de método de envío</value>
         <value xml:lang="fr">Types de mode d'expédition</value>
+        <value xml:lang="hr">Vrste dostave</value>
         <value xml:lang="it">Metodi di Spedizione</value>
         <value xml:lang="ja">発送方法種類</value>
         <value xml:lang="ru">Типы методов доставки</value>

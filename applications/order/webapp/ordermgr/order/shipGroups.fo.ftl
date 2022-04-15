@@ -23,14 +23,13 @@ under the License.
   <#assign data = groupData.get(shipGroup.shipGroupSeqId)>
 
   <#-- print the order ID, ship group, and their bar codes -->
-
   <fo:table table-layout="fixed" space-after.optimum="10pt">
     <fo:table-column/>
     <fo:table-column/>
     <fo:table-body>
       <fo:table-row>
         <fo:table-cell>
-          <fo:block font-size="14pt">${uiLabelMap.OrderOrder} #${shipGroup.orderId}</fo:block>
+          <fo:block font-size="14pt"><#--${uiLabelMap.OrderOrder} #${shipGroup.orderId}--></fo:block>
         </fo:table-cell>
         <fo:table-cell>
           <fo:block text-align="right">
@@ -44,7 +43,7 @@ under the License.
       </fo:table-row>
       <fo:table-row>
         <fo:table-cell>
-          <fo:block font-size="14pt">${uiLabelMap.OrderShipGroup} #${shipGroup.shipGroupSeqId}</fo:block>
+          <fo:block font-size="14pt"><#--${uiLabelMap.OrderShipGroup} #${shipGroup.shipGroupSeqId}--></fo:block>
         </fo:table-cell>
         <fo:table-cell>
           <fo:block text-align="right">
@@ -60,8 +59,8 @@ under the License.
   </fo:table>
 
   <#-- print the address, carrier, and shipment dates -->
-
-  <fo:table table-layout="fixed" space-after.optimum="10pt">
+  <fo:block space-after="1.1in"/>
+  <fo:table font-family="LiberationSans" font-size="10pt" table-layout="fixed" space-after.optimum="10pt">
     <fo:table-column column-width="proportional-column-width(2)"/>
     <fo:table-column column-width="proportional-column-width(1)"/>
     <fo:table-column column-width="proportional-column-width(1)"/>
@@ -69,7 +68,7 @@ under the License.
       <fo:table-row>
         <fo:table-cell number-rows-spanned="4">
           <#assign address = data.address?if_exists>
-          <fo:block>${uiLabelMap.CommonTo}: ${address.toName?if_exists}</fo:block>
+          <fo:block><#--${uiLabelMap.CommonTo}--><fo:block font-family="LiberationSans-Bold">Adresa: </fo:block>${address.toName?if_exists}</fo:block>
           <#if address.attnName?has_content>
           <fo:block>${uiLabelMap.CommonAttn}: ${address.attnName?if_exists}</fo:block>
           </#if>
@@ -86,30 +85,30 @@ under the License.
         </fo:table-cell>
       </fo:table-row>
       <fo:table-row>
-        <fo:table-cell><fo:block font-weight="bold">${uiLabelMap.ProductShipmentMethod}</fo:block></fo:table-cell>
+        <fo:table-cell><fo:block font-family="LiberationSans-Bold">${uiLabelMap.ProductShipmentMethod}</fo:block></fo:table-cell>
         <fo:table-cell><#if data.carrierShipmentMethod?exists><fo:block>${data.carrierShipmentMethod.partyId} ${data.shipmentMethodType.description}</fo:block></#if></fo:table-cell>
       </fo:table-row>
       <fo:table-row>
-        <fo:table-cell><fo:block font-weight="bold">${uiLabelMap.OrderShipBeforeDate}</fo:block></fo:table-cell>
-        <fo:table-cell><fo:block>${shipGroup.shipByDate?default("N/A")}</fo:block></fo:table-cell>
+        <fo:table-cell><fo:block font-family="LiberationSans-Bold">${uiLabelMap.OrderShipBeforeDate}</fo:block></fo:table-cell>
+        <fo:table-cell><fo:block>${shipGroup.shipByDate?default("--")}</fo:block></fo:table-cell>
       </fo:table-row>
       <fo:table-row>
-        <fo:table-cell><fo:block font-weight="bold">${uiLabelMap.OrderShipAfterDate}</fo:block></fo:table-cell>
-        <fo:table-cell><fo:block>${shipGroup.shipAfterDate?default("N/A")}</fo:block></fo:table-cell>
-      </fo:table-row>
+        <fo:table-cell><fo:block font-family="LiberationSans-Bold">${uiLabelMap.OrderShipAfterDate}</fo:block></fo:table-cell>
+        <fo:table-cell><fo:block>${shipGroup.shipAfterDate?default("--")}</fo:block></fo:table-cell>
+      </fo:table-row>>
     </fo:table-body>
   </fo:table>
 
   <#assign lines = data.lines>
-  <fo:table table-layout="fixed">
-    <fo:table-column column-width="proportional-column-width(2)"/>
-    <fo:table-column column-width="proportional-column-width(3)"/>
+  <fo:table table-layout="fixed" font-size="10pt">
+    <fo:table-column column-width="proportional-column-width(1)"/>
+    <fo:table-column column-width="proportional-column-width(4)"/>
     <fo:table-column column-width="proportional-column-width(1)"/>
     <fo:table-column column-width="proportional-column-width(1)"/>
     <fo:table-column column-width="proportional-column-width(1)"/>
 
     <fo:table-header>
-      <fo:table-row font-weight="bold">
+      <fo:table-row font-family="LiberationSans-Bold">
         <fo:table-cell background-color="#D4D0C8" height="20pt" display-align="center" border-top-style="solid" border-bottom-style="solid">
           <fo:block>${uiLabelMap.ProductProduct}</fo:block>
         </fo:table-cell>
@@ -127,7 +126,7 @@ under the License.
         </fo:table-cell>
       </fo:table-row>
     </fo:table-header>
-    <fo:table-body>
+    <fo:table-body font-family="LiberationSans">
 
       <#list lines as line>
         <#if ((line_index % 2) == 0)>
