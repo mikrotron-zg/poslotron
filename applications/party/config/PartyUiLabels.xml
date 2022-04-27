@@ -1645,6 +1645,7 @@
         <value xml:lang="es">Asunto</value>
         <value xml:lang="fr">Sujet</value>
         <value xml:lang="hi_IN">विषय</value>
+        <value xml:lang="hr">Naslov</value>
         <value xml:lang="it">Oggetto</value>
         <value xml:lang="ja">件名</value>
         <value xml:lang="nl">Onderwerp</value>
@@ -4001,6 +4002,7 @@
         <value xml:lang="es">Falta la Ciudad</value>
         <value xml:lang="fr">Ville absente</value>
         <value xml:lang="hi_IN">शहर नही है</value>
+        <value xml:lang="hr">Nedostaje mjesto</value>
         <value xml:lang="it">Città mancante</value>
         <value xml:lang="ja">市区町村が正しくありません</value>
         <value xml:lang="nl">Plaatsnaam ontbreekt</value>
@@ -6007,6 +6009,7 @@
         <value xml:lang="es">Falta dirección de E-mail</value>
         <value xml:lang="fr">Mél absent</value>
         <value xml:lang="hi_IN">ईमेल पता नही है</value>
+        <value xml:lang="hr">Nedostaje e-mail adresa</value>
         <value xml:lang="it">Indirizzo E-mail mancante</value>
         <value xml:lang="ja">Eメールアドレスが正しくありません</value>
         <value xml:lang="nl">E-mail adres mist</value>
@@ -6470,6 +6473,7 @@
         <value xml:lang="es">Falta el Nombre</value>
         <value xml:lang="fr">Prénom absent</value>
         <value xml:lang="hi_IN">पहला नाम नही है</value>
+        <value xml:lang="hr">Nedostaje ime</value>
         <value xml:lang="it">Nome mancante</value>
         <value xml:lang="ja">姓(FN)が正しくありません</value>
         <value xml:lang="nl">Voornaam mist</value>
@@ -7324,6 +7328,7 @@
         <value xml:lang="es">Faltan los Apellidos</value>
         <value xml:lang="fr">Nom absent</value>
         <value xml:lang="hi_IN">अन्त नाम नही है</value>
+        <value xml:lang="hr">Nedostaje prezime</value>
         <value xml:lang="it">Cognome mancante</value>
         <value xml:lang="ja">名(LN)が正しくありません</value>
         <value xml:lang="nl">Familienaam mist</value>
@@ -9912,6 +9917,7 @@
         <value xml:lang="es">Falta Contraseña</value>
         <value xml:lang="fr">Mot de passe absent</value>
         <value xml:lang="hi_IN">पासकोड नही है</value>
+        <value xml:lang="hr">Nedostaje lozinka</value>
         <value xml:lang="it">Password mancante</value>
         <value xml:lang="ja">パスワードが正しくありません</value>
         <value xml:lang="nl">Wachtwoord mist</value>
@@ -10329,6 +10335,7 @@
         <value xml:lang="es">Falta código postal</value>
         <value xml:lang="fr">Code postal manquant</value>
         <value xml:lang="hi_IN">‍‍जिप/डाक कोड नही है</value>
+        <value xml:lang="hr">Nedostaje poštanski broj</value>
         <value xml:lang="it">CAP mancante</value>
         <value xml:lang="ja">郵便番号が正しくありません</value>
         <value xml:lang="nl">Postcode ontbreekt</value>
@@ -11837,6 +11844,7 @@
         <value xml:lang="es">Título</value>
         <value xml:lang="fr">Sujet</value>
         <value xml:lang="hi_IN">विषय</value>
+        <value xml:lang="hr">Naslov</value>
         <value xml:lang="it">Soggetto</value>
         <value xml:lang="ja">件名</value>
         <value xml:lang="nl">Onderwerp</value>
@@ -12540,6 +12548,7 @@
         <value xml:lang="es">Falta nombre de usuario</value>
         <value xml:lang="fr">Nom d'utilisateur absent</value>
         <value xml:lang="hi_IN">उपयोगकर्ता का नाम नही है</value>
+        <value xml:lang="hr">Nedostaje korisničko ime</value>
         <value xml:lang="it">Nome Utente mancante</value>
         <value xml:lang="ja">ユーザ名が正しくありません</value>
         <value xml:lang="nl">Gebruikersnaam mist</value>

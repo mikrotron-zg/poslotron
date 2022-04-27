@@ -6237,6 +6237,7 @@
         <value xml:lang="en">No notes for this order</value>
         <value xml:lang="es">Ninguna nota para este pedido.</value>
         <value xml:lang="fr">Aucune note pour cette commande</value>
+        <value xml:lang="hr">Nema napomena za ovu narudžbu</value>
         <value xml:lang="it">Nessuna nota per questo ordine.</value>
         <value xml:lang="ja">この注文に連絡はありません</value>
         <value xml:lang="nl">Geen notities voor deze bestelling</value>
@@ -10371,6 +10372,7 @@
         <value xml:lang="en">Quick Ship Entire Order</value>
         <value xml:lang="es">Envío rápido de todo el pedido</value>
         <value xml:lang="fr">Livraison rapide de toute la commande</value>
+        <value xml:lang="hr">Brzo isporuči cijelu narudžbu</value>
         <value xml:lang="it">Spedizione Veloce Intero Ordine</value>
         <value xml:lang="ja">注文全体をクイック発送</value>
         <value xml:lang="nl">Quick Ship Entire Bestelling</value>
@@ -10938,7 +10940,7 @@
         <value xml:lang="de">Aus dem Einkaufswagen erstellte Anfrage</value>
         <value xml:lang="en">Request created from shopping cart</value>
         <value xml:lang="fr">Demande de devis créée depuis le panier</value>
-        <value xml:lang="hr">Zahtjev po sadržaju košare</value>
+        <value xml:lang="hr">Prema zahtjevu iz web dućana</value>
         <value xml:lang="ja">買い物かごからリクエストが作成されました</value>
         <value xml:lang="vi">Yêu cầu được tạo từ giỏ hàng</value>
         <value xml:lang="zh">从购物车创建的请求</value>
@@ -12657,6 +12659,7 @@
         <value xml:lang="en">Subject</value>
         <value xml:lang="es">Asunto</value>
         <value xml:lang="fr">Objet</value>
+        <value xml:lang="hr">Naslov</value>
         <value xml:lang="it">Soggetto</value>
         <value xml:lang="ja">件名</value>
         <value xml:lang="nl">Onderwerp</value>
@@ -12845,6 +12848,7 @@
         <value xml:lang="en">Ship Group</value>
         <value xml:lang="es">Grupo de envío</value>
         <value xml:lang="fr">Groupe d'expédition</value>
+        <value xml:lang="hr">Otpremnica</value>
         <value xml:lang="it">Gruppo Spedizione</value>
         <value xml:lang="ja">発送グループ</value>
         <value xml:lang="nl">Ship Group</value>
@@ -14342,6 +14346,7 @@
         <value xml:lang="en">View/Edit Delivery Schedule Info</value>
         <value xml:lang="es">Ver/Editar información de las entregas</value>
         <value xml:lang="fr">Affichage/Modification des paramètres d'expédition</value>
+        <value xml:lang="hr">Pregled/promjena informacija o dostavi</value>
         <value xml:lang="it">Mostra/Modifica Informazione Schedulazione Consegne</value>
         <value xml:lang="ja">配送スケジュールを表示/編集</value>
         <value xml:lang="nl">View/Edit Delivery Schedule Info</value>

@@ -16000,6 +16000,7 @@
         <value xml:lang="es">Cuerpo del correo eletrónico</value>
         <value xml:lang="fr">Corps du courriel</value>
         <value xml:lang="hi_IN">ईमेल बॉडी</value>
+        <value xml:lang="hr">Sadržaj e-maila</value>
         <value xml:lang="it">Corpo Email</value>
         <value xml:lang="ja">Eメール本文</value>
         <value xml:lang="nl">Tekst e-mail</value>
@@ -16529,6 +16530,7 @@
         <value xml:lang="es">Copia de dirección de correo electrónico</value>
         <value xml:lang="fr">Adresse courriel en copie</value>
         <value xml:lang="hi_IN">ईमेलएड्रेस कॉपी करे</value>
+        <value xml:lang="hr">Kopija e-maila (CC)</value>
         <value xml:lang="it">Copia indirizzo Email</value>
         <value xml:lang="ja">Eメールアドレスをコピー</value>
         <value xml:lang="nl">Kopieer e-mailadres</value>
@@ -16546,6 +16548,7 @@
         <value xml:lang="es">Dirección de correo electrónico de origen</value>
         <value xml:lang="fr">Adresse courriel expéditeur</value>
         <value xml:lang="hi_IN">ईमेलएड्रेस से</value>
+        <value xml:lang="hr">E-mail pošiljatelja</value>
         <value xml:lang="it">Da indirizzo Email</value>
         <value xml:lang="ja">Eメールアドレス(元)</value>
         <value xml:lang="nl">Van e-mailadres</value>
@@ -16563,6 +16566,7 @@
         <value xml:lang="es">Dirección de correo electrónico destino</value>
         <value xml:lang="fr">Adresse courriel destinataire</value>
         <value xml:lang="hi_IN">ईमेलएड्रेस को</value>
+        <value xml:lang="hr">E-mail primatelja</value>
         <value xml:lang="it">All'indirizzo Email</value>
         <value xml:lang="ja">Eメールアドレス(先)</value>
         <value xml:lang="nl">Naar e-mailadres</value>
@@ -18009,6 +18013,7 @@
         <value xml:lang="en">Other Currency</value>
         <value xml:lang="fr">Autre devise</value>
         <value xml:lang="hi_IN">अन्य मुद्रा</value>
+        <value xml:lang="hr">Druga valuta</value>
         <value xml:lang="it">Altra Valuta</value>
         <value xml:lang="ja">その他通貨</value>
         <value xml:lang="nl">Andere valuta</value>
