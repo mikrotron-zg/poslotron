@@ -145,6 +145,7 @@ under the License.
         </#if>
         <#if security.hasEntityPermission("ORDERMGR", "_RETURN", session) && orderHeader.statusId == "ORDER_COMPLETED">
           <#if returnableItems?has_content>
+            <#-- TODO: needs new implementation, don't show this options for the moment
             <li>
             <form name="quickRefundOrder" method="post" action="<@ofbizUrl>quickRefundOrder</@ofbizUrl>">
               <input type="hidden" name="orderId" value="${orderId}"/>
@@ -162,6 +163,7 @@ under the License.
             </form>
             <a href="javascript:document.quickreturn.submit()" class="buttontext">${uiLabelMap.OrderCreateReturn}</a>
             </li>
+            -->
           </#if>
         </#if>
 
