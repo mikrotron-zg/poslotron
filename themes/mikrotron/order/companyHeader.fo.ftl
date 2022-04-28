@@ -111,7 +111,7 @@ under the License.
                     <fo:block>Uprava društva:</fo:block>
                 </fo:list-item-label>
                 <fo:list-item-body start-indent="body-start()">
-                    <fo:block>${persons}</fo:block>
+                    <fo:block>Josip Almaši, Tomislav Preksavec</fo:block>
                 </fo:list-item-body>
             </fo:list-item>
             <fo:list-item>

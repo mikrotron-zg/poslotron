@@ -24,12 +24,14 @@ under the License.
 
   <#-- print the order ID, ship group, and their bar codes -->
   <fo:table table-layout="fixed" space-after.optimum="10pt">
-    <fo:table-column/>
-    <fo:table-column/>
+    <fo:table-column column-width="proportional-column-width(4)"/>
+    <fo:table-column column-width="proportional-column-width(5)"/>
+    <fo:table-column column-width="proportional-column-width(1)"/>
     <fo:table-body>
       <fo:table-row>
+        <fo:table-cell></fo:table-cell>
         <fo:table-cell>
-          <fo:block font-size="14pt"><#--${uiLabelMap.OrderOrder} #${shipGroup.orderId}--></fo:block>
+          <fo:block font-family="LiberationSans-Bold" font-size="16pt">Otpremnica: ${shipGroup.orderId}</fo:block>
         </fo:table-cell>
         <fo:table-cell>
           <fo:block text-align="right">
@@ -42,8 +44,9 @@ under the License.
         </fo:table-cell>
       </fo:table-row>
       <fo:table-row>
+        <fo:table-cell></fo:table-cell>
         <fo:table-cell>
-          <fo:block font-size="14pt"><#--${uiLabelMap.OrderShipGroup} #${shipGroup.shipGroupSeqId}--></fo:block>
+          <fo:block font-size="14pt">Isporuka: ${shipGroup.shipGroupSeqId}</fo:block>
         </fo:table-cell>
         <fo:table-cell>
           <fo:block text-align="right">
@@ -59,7 +62,7 @@ under the License.
   </fo:table>
 
   <#-- print the address, carrier, and shipment dates -->
-  <fo:block space-after="1.1in"/>
+  <fo:block space-after="5mm"/>
   <fo:table font-family="LiberationSans" font-size="10pt" table-layout="fixed" space-after.optimum="10pt">
     <fo:table-column column-width="proportional-column-width(2)"/>
     <fo:table-column column-width="proportional-column-width(1)"/>
@@ -75,10 +78,10 @@ under the License.
           <fo:block>${address.address1?if_exists}</fo:block>
           <fo:block>${address.address2?if_exists}</fo:block>
           <fo:block>
-            ${address.city?if_exists}<#if address.stateProvinceGeoId?has_content>, ${address.stateProvinceGeoId}</#if>
-            ${address.postalCode?if_exists} ${address.countryGeoId?if_exists}
+            ${address.postalCode?if_exists} ${address.city?if_exists}<#if address.stateProvinceGeoId?has_content>, ${address.stateProvinceGeoId}</#if>
           </fo:block>
-
+          <fo:block>${address.countryGeoId?if_exists}</fo:block>
+          
           <#if data.phoneNumber?exists>
             <fo:block><#if data.phoneNumber.areaCode?exists>(${data.phoneNumber.areaCode}) </#if>${data.phoneNumber.contactNumber}</fo:block>
           </#if>
@@ -178,7 +181,25 @@ under the License.
 
   </fo:table-body>
 </fo:table>
-
+  <fo:block space-after="10mm"/>
+  <fo:table font-family="LiberationSans" font-size="10pt" table-layout="fixed">
+    <fo:table-column column-width="proportional-column-width(1)"/>
+    <fo:table-column column-width="proportional-column-width(1)"/>
+    <fo:table-column column-width="proportional-column-width(1)"/>
+    <fo:table-body>
+      <fo:table-row>
+        <fo:table-cell>
+          <fo:block>Datum: _________________</fo:block>
+        </fo:table-cell>
+        <fo:table-cell>
+          <fo:block>Robu izdao: _________________</fo:block>
+        </fo:table-cell>
+        <fo:table-cell>
+          <fo:block>Robu preuzeo: _________________</fo:block>
+        </fo:table-cell>
+      </fo:table-row>
+    </fo:table-body>
+  </fo:table>
   <#if shipGroup_has_next><fo:block break-before="page"/></#if>
 </#list>
 

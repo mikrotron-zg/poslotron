@@ -19,15 +19,21 @@ under the License.
 <#escape x as x?xml>
 
 <fo:block text-align="left">
+    <!--
     <#if logoImageUrl?has_content><fo:external-graphic src="<@ofbizContentUrl>${logoImageUrl}</@ofbizContentUrl>" overflow="hidden" height="40px" content-height="scale-to-fit" content-width="2.00in"/></#if>
+    -->
+    <!-- FIXME - HARDCODED HOST -->
+    <#if logoImageUrl?has_content>
+      <fo:external-graphic src="https://www.diykits.eu<@ofbizContentUrl>${logoImageUrl}</@ofbizContentUrl>" overflow="hidden" height="40px" content-height="scale-to-fit" content-width="2.00in"/>
+    </#if>
 </fo:block>
 
-<fo:block font-size="8pt">
+<fo:block font-family="LiberationSerif" font-size="8pt">
     <fo:block>${companyName}</fo:block>
     <#if postalAddress?exists>
         <#if postalAddress?has_content>
             ${setContextField("postalAddress", postalAddress)}
-            ${screens.render("component://party/widget/partymgr/PartyScreens.xml#postalAddressPdfFormatter")}
+            ${screens.render("component://mikrotron/widget/PartyScreens.xml#postalAddressPdfFormatter")}
         </#if>
     <#else>
         <fo:block>${uiLabelMap.CommonNoPostalAddress}</fo:block>
@@ -35,7 +41,7 @@ under the License.
     </#if>
 
     <#if sendingPartyTaxId?exists || phone?exists || email?exists || website?exists || eftAccount?exists>
-    <fo:list-block provisional-distance-between-starts=".5in">
+    <fo:list-block provisional-distance-between-starts=".8in">
         <#if sendingPartyTaxId?exists>
         <fo:list-item>
             <fo:list-item-label>
@@ -101,6 +107,30 @@ under the License.
                 <fo:block>${eftAccount.accountNumber?if_exists}</fo:block>
             </fo:list-item-body>
         </fo:list-item>
+        </#if>
+        <#if companyName == "Mikrotron d.o.o." >
+            <fo:list-item>
+                <fo:list-item-label>
+                    <fo:block>Uprava društva:</fo:block>
+                </fo:list-item-label>
+                <fo:list-item-body start-indent="body-start()">
+                    <fo:block>Josip Almaši, Tomislav Preksavec</fo:block>
+                </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+                <fo:list-item-label>
+                    <fo:block>MBS 080923147 Trgovački sud u Zagrebu</fo:block>
+                </fo:list-item-label>
+                <fo:list-item-body>
+                </fo:list-item-body>
+            </fo:list-item>
+            <fo:list-item>
+                <fo:list-item-label>
+                    <fo:block>Temeljni kapital 20000 kn uplaćen u cijelosti</fo:block>
+                </fo:list-item-label>
+                <fo:list-item-body>
+                </fo:list-item-body>
+            </fo:list-item>
         </#if>
     </fo:list-block>
     </#if>
