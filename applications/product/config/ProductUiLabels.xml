@@ -16254,6 +16254,7 @@
         <value xml:lang="en">Exclude Variants</value>
         <value xml:lang="es">Excluir variantes</value>
         <value xml:lang="fr">Exclure les variantes</value>
+        <value xml:lang="hr">Isključi varijante</value>
         <value xml:lang="it">Escludi Varianti</value>
         <value xml:lang="ja">別型を除外</value>
         <value xml:lang="ru">Исключить варианты</value>
@@ -19129,6 +19130,7 @@
         <value xml:lang="en">any word matches</value>
         <value xml:lang="es">cualquier palabra coincide</value>
         <value xml:lang="fr">Au moins un des mots égal</value>
+        <value xml:lang="hr">bilo koja riječ odgovara</value>
         <value xml:lang="it">qualsiasi parola uguale</value>
         <value xml:lang="ja">キーワードがいずれか一致</value>
         <value xml:lang="ro">orice cuvant egal</value>
@@ -19160,6 +19162,7 @@
         <value xml:lang="en">where</value>
         <value xml:lang="es">donde</value>
         <value xml:lang="fr">où</value>
+        <value xml:lang="hr">gdje</value>
         <value xml:lang="it">dove</value>
         <value xml:lang="ja">条件</value>
         <value xml:lang="ro">Unde</value>
@@ -19307,6 +19310,7 @@
         <value xml:lang="es">Última búsqueda</value>
         <value xml:lang="fr">Dernière recherche</value>
         <value xml:lang="hi_IN">पुराना खोज</value>
+        <value xml:lang="hr">Zadnje pretraživanje</value>
         <value xml:lang="it">Ultima ricerca</value>
         <value xml:lang="ja">前回の検索</value>
         <value xml:lang="nl">Laatste zoekopdracht</value>
@@ -20767,6 +20771,7 @@
         <value xml:lang="en">New Search</value>
         <value xml:lang="es">Nueva búsqueda</value>
         <value xml:lang="fr">Nouvelle recherche</value>
+        <value xml:lang="hr">Nova pretraga</value>
         <value xml:lang="it">Nuova Ricerca</value>
         <value xml:lang="ja">新規検索</value>
         <value xml:lang="nl">Nieuwe zoekopdracht</value>
@@ -30880,6 +30885,7 @@
         <value xml:lang="es">usted buscó</value>
         <value xml:lang="fr">Vous avez cherché</value>
         <value xml:lang="hi_IN">आपने खोजा:</value>
+        <value xml:lang="hr">tražili ste</value>
         <value xml:lang="it">hai cercato</value>
         <value xml:lang="ja">検索対象は</value>
         <value xml:lang="nl">U zocht naar</value>
