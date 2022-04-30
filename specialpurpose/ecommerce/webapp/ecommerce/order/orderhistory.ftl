@@ -27,7 +27,7 @@ under the License.
           <th>${uiLabelMap.OrderOrder} ${uiLabelMap.CommonNbr}</th>
           <th>${uiLabelMap.CommonAmount}</th>
           <th>${uiLabelMap.CommonStatus}</th>
-          <th>${uiLabelMap.OrderInvoices}</th>
+          <!--<th>${uiLabelMap.OrderInvoices}</th>-->
           <th></th>
         </tr>
       </thead>
@@ -40,7 +40,7 @@ under the License.
               <td>${orderHeader.orderId}</td>
               <td><@ofbizCurrency amount=orderHeader.grandTotal isoCode=orderHeader.currencyUom /></td>
               <td>${status.get("description",locale)}</td>
-              <#-- invoices -->
+              <#-- invoices - temporary disabled, should re-implement with correct numbering scheme
               <#assign invoices = delegator.findByAnd("OrderItemBilling", Static["org.ofbiz.base.util.UtilMisc"].toMap("orderId", "${orderHeader.orderId}"), Static["org.ofbiz.base.util.UtilMisc"].toList("invoiceId"), false) />
               <#assign distinctInvoiceIds = Static["org.ofbiz.entity.util.EntityUtil"].getFieldListFromEntityList(invoices, "invoiceId", true)>
               <#if distinctInvoiceIds?has_content>
@@ -52,6 +52,7 @@ under the License.
               <#else>
                 <td></td>
               </#if>
+              -->
               <td><a href="<@ofbizUrl>orderstatus?orderId=${orderHeader.orderId}</@ofbizUrl>" class="button">${uiLabelMap.CommonView}</a></td>
             </tr>
           </#list>
