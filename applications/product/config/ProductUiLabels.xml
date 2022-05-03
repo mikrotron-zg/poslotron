@@ -22691,6 +22691,7 @@
         <value xml:lang="en">Packed Weight</value>
         <value xml:lang="es">Peso empaquetado</value>
         <value xml:lang="fr">Poids emballé</value>
+        <value xml:lang="hr">Težina pakiranog proizvoda</value>
         <value xml:lang="it">Peso imballo</value>
         <value xml:lang="ja">梱包済重量</value>
         <value xml:lang="ru">Упакованный вес</value>
@@ -24447,6 +24448,7 @@
     </property>
     <property key="ProductProductWeight">
         <value xml:lang="en">Product Weight</value>
+        <value xml:lang="hr">Težina proizvoda</value>
         <value xml:lang="it">Peso prodotto</value>
         <value xml:lang="ja">製品重量</value>
         <value xml:lang="vi">Trọng lượng sản phẩm</value>
@@ -27909,6 +27911,7 @@
         <value xml:lang="en">Total Weight</value>
         <value xml:lang="es">Peso total</value>
         <value xml:lang="fr">Poids total</value>
+        <value xml:lang="hr">Ukupna težina</value>
         <value xml:lang="it">Totale Peso</value>
         <value xml:lang="ja">重量合計</value>
         <value xml:lang="ro">Total Greutate </value>
@@ -28087,6 +28090,7 @@
         <value xml:lang="en">Shipping Dimensions and Weights</value>
         <value xml:lang="es">Dimensiones y pesos de envío:</value>
         <value xml:lang="fr">Dimension et poids de l'expédition :</value>
+        <value xml:lang="hr">Transportne dimenzije i težina</value>
         <value xml:lang="it">Dimensioni e pesi spedizione</value>
         <value xml:lang="ja">配送寸法および重量</value>
         <value xml:lang="ro">Dimensiuni si Greutati Expeditie:</value>
@@ -28128,6 +28132,7 @@
         <value xml:lang="en">Shipping Weight</value>
         <value xml:lang="es">Peso del envío</value>
         <value xml:lang="fr">Poids d'expédition</value>
+        <value xml:lang="hr">Transportna težina</value>
         <value xml:lang="it">Peso Per Spedizioni</value>
         <value xml:lang="ja">配送重量</value>
         <value xml:lang="ru">Вес поставки</value>
@@ -30730,6 +30735,7 @@
         <value xml:lang="en">Weight</value>
         <value xml:lang="es">Peso</value>
         <value xml:lang="fr">Poids</value>
+        <value xml:lang="hr">Težina</value>
         <value xml:lang="it">Peso</value>
         <value xml:lang="ja">重量</value>
         <value xml:lang="ro">Greutate</value>
@@ -30765,6 +30771,7 @@
         <value xml:lang="en">Weight Unit</value>
         <value xml:lang="es">Unidad de peso</value>
         <value xml:lang="fr">Unité de poids</value>
+        <value xml:lang="hr">Jedinica težine</value>
         <value xml:lang="it">Unità Peso</value>
         <value xml:lang="ja">重量単位</value>
         <value xml:lang="ro">Unitate Greutate</value>
@@ -30779,6 +30786,7 @@
         <value xml:lang="en">Weight Uom Id</value>
         <value xml:lang="es">UDM de peso</value>
         <value xml:lang="fr">Unité de mesure du poids</value>
+        <value xml:lang="hr">ID jedinice težine</value>
         <value xml:lang="it">UdM Peso</value>
         <value xml:lang="ja">重量単位ID</value>
         <value xml:lang="ro">UdM Greutate</value>

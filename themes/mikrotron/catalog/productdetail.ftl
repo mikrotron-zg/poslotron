@@ -435,7 +435,7 @@ $(function(){
           <#if (product.weight?exists && product.weight != 0) || product.weightUomId?has_content>
             <#assign weightUom = product.getRelatedOne("WeightUom", true)?if_exists />
             <div>
-              ${uiLabelMap.CommonWeight}: ${product.weight?if_exists} ${((weightUom.abbreviation)?default(product.weightUomId))?if_exists}
+              ${uiLabelMap.ProductShippingWeight}: ${product.weight?if_exists} ${((weightUom.abbreviation)?default(product.weightUomId))?if_exists}
             </div>
           </#if>
           <#if (product.productHeight?exists && product.productHeight != 0) || product.heightUomId?has_content>
