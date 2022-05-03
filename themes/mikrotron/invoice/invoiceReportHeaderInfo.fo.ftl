@@ -70,7 +70,12 @@ under the License.
 <#-- dirty hack: mikrotron only code -->
 
 <#if "10000" == sendingParty.partyId >
-
+    <#if countryGeo?has_content && "HR" == countryGeo.geoCode?if_exists>
+      <fo:table-row>
+        <fo:table-cell><fo:block font-family="LiberationSans">Dospijeće:</fo:block></fo:table-cell>
+        <fo:table-cell><fo:block font-family="LiberationSans">${invoiceDate}</fo:block></fo:table-cell>
+      </fo:table-row>
+    </#if>
   <fo:table-row>
     <#if countryGeo?has_content && "HR" == countryGeo.geoCode?if_exists>
       <fo:table-cell>
@@ -109,7 +114,9 @@ under the License.
   </fo:table-row>
   <fo:table-row>
     <fo:table-cell>
-    <fo:block font-family="LiberationSans">Napomena:</fo:block>
+        <#if countryGeo?has_content && "HR" == countryGeo.geoCode?if_exists>
+            <fo:block font-family="LiberationSans">Napomena:</fo:block>
+        </#if>
     </fo:table-cell>
     <fo:table-cell>
     <fo:block font-family="LiberationSans-Italic">

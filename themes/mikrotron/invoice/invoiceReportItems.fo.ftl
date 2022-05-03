@@ -50,6 +50,21 @@ under the License.
             </fo:table-cell>
             </#if>
           </fo:table-row>
+          
+          <#if orderQuote?exists >
+          	<fo:table-row>
+            <fo:table-cell>
+              <fo:block>Otpremnica:</fo:block>
+            </fo:table-cell>
+            <fo:table-cell>
+              <fo:block>
+              	<#list orders as order>
+              		${order}
+              	</#list>
+              </fo:block>
+            </fo:table-cell>
+            </fo:table-row>
+          </#if>
         </fo:table-body>
     </fo:table>
     </#if>
