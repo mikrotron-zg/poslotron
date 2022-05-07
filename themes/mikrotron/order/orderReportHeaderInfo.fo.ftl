@@ -33,7 +33,7 @@ under the License.
                       <fo:table-cell><fo:block font-family="LiberationSans">${uiLabelMap.OrderDateOrdered}</fo:block></fo:table-cell>
                       <#assign dateFormat = Static["java.text.DateFormat"].LONG>
                     <#assign orderDate = Static["java.text.DateFormat"].getDateInstance(dateFormat,locale).format(orderHeader.get("orderDate"))>
-                      <fo:table-cell><fo:block font-family="LiberationSans">${orderDate}</fo:block></fo:table-cell>
+                      <fo:table-cell><fo:block font-family="LiberationSans">${orderHeader.get("orderDate")?if_exists?string("dd. MMMM yyyy.")}</fo:block></fo:table-cell>
                     </fo:table-row>
 
                     <fo:table-row>

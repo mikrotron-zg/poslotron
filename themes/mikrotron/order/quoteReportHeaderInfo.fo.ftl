@@ -40,7 +40,7 @@ under the License.
             <fo:block>${uiLabelMap.OrderOrderQuoteIssueDate}</fo:block>
         </fo:list-item-label>
         <fo:list-item-body start-indent="body-start()">
-            <fo:block>${(quote.issueDate.toString())?if_exists}</fo:block>
+            <fo:block>${(quote.issueDate)?if_exists?string("dd. MMMM yyyy.")}</fo:block>
         </fo:list-item-body>
     </fo:list-item>
     <fo:list-item>

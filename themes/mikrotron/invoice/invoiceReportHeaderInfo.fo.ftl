@@ -35,14 +35,11 @@ under the License.
   <fo:table-cell><fo:block font-family="LiberationSans-Bold"><#if invoice?has_content>${invoice.invoiceId}-1-1</#if></fo:block></fo:table-cell>
 </fo:table-row>
 
-<#assign dateFormat = Static["java.text.DateFormat"].LONG>
-<#assign timeFormat = Static["java.text.DateFormat"].SHORT>
-<#assign invoiceDate = Static["java.text.DateFormat"].getDateInstance(dateFormat,locale).format( invoice.get("invoiceDate") )>
-<#assign invoiceTime = Static["java.text.DateFormat"].getTimeInstance(timeFormat,locale).format( invoice.get("invoiceDate") )>
+<#assign invoiceDate = invoice.get("invoiceDate")>
 
 <fo:table-row>
   <fo:table-cell><fo:block font-family="LiberationSans">${uiLabelMap.AccountingInvoiceDateAbbr}:</fo:block></fo:table-cell>
-  <fo:table-cell><fo:block font-family="LiberationSans">${invoiceDate} ${invoiceTime}</fo:block></fo:table-cell>
+  <fo:table-cell><fo:block font-family="LiberationSans">${invoiceDate?if_exists?string("dd. MMMM yyyy.")} ${invoiceDate?if_exists?string("HH:mm")}</fo:block></fo:table-cell>
 </fo:table-row>
 
 <#--
@@ -73,7 +70,7 @@ under the License.
     <#if countryGeo?has_content && "HR" == countryGeo.geoCode?if_exists>
       <fo:table-row>
         <fo:table-cell><fo:block font-family="LiberationSans">Dospijeće:</fo:block></fo:table-cell>
-        <fo:table-cell><fo:block font-family="LiberationSans">${invoiceDate}</fo:block></fo:table-cell>
+        <fo:table-cell><fo:block font-family="LiberationSans">${invoiceDate?if_exists?string("dd. MMMM yyyy.")}</fo:block></fo:table-cell>
       </fo:table-row>
     </#if>
   <fo:table-row>
@@ -96,7 +93,7 @@ under the License.
 
   <fo:table-row>
     <fo:table-cell><fo:block font-family="LiberationSans">${uiLabelMap.FacilityShip}:</fo:block></fo:table-cell>
-    <fo:table-cell><fo:block font-family="LiberationSans">${invoiceDate}</fo:block></fo:table-cell>
+    <fo:table-cell><fo:block font-family="LiberationSans">${invoiceDate?if_exists?string("dd. MMMM yyyy.")}</fo:block></fo:table-cell>
   </fo:table-row>
 
   <fo:table-row>

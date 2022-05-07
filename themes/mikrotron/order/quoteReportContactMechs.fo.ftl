@@ -78,11 +78,11 @@ under the License.
                 -->
                 <fo:table-row>
                     <fo:table-cell><fo:block font-family="LiberationSans">${uiLabelMap.CommonValidFromDate}:</fo:block></fo:table-cell>
-                    <fo:table-cell><fo:block font-family="LiberationSans">${(quote.validFromDate.toString())?if_exists}</fo:block></fo:table-cell>
+                    <fo:table-cell><fo:block font-family="LiberationSans">${(quote.validFromDate)?if_exists?string("dd.MM.yyyy.")}</fo:block></fo:table-cell>
                 </fo:table-row>
                 <fo:table-row>
                     <fo:table-cell><fo:block font-family="LiberationSans">${uiLabelMap.CommonValidThruDate}:</fo:block></fo:table-cell>
-                    <fo:table-cell><fo:block font-family="LiberationSans">${(quote.validThruDate.toString())?if_exists}</fo:block></fo:table-cell>
+                    <fo:table-cell><fo:block font-family="LiberationSans">${(quote.validThruDate)?if_exists?string("dd.MM.yyyy.")}</fo:block></fo:table-cell>
                 </fo:table-row>
             </fo:table-body>
         </fo:table>
