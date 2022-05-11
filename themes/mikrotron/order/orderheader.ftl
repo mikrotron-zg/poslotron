@@ -228,6 +228,9 @@ under the License.
       </#if>
     </ul>
   </#if>
+  <#if (orderHeader.orderId)?exists && paymentMethodType.paymentMethodTypeId == "EXT_OFFLINE">
+    <#include "../includes/barcode2d.ftl">
+  </#if>
 </div>
 </div>
 <#-- right side -->

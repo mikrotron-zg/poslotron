@@ -627,4 +627,12 @@ under the License.
             </widgets>
         </section>
     </screen>
+    
+    <screen name="barcode2d">
+        <section>
+            <widgets>
+    			<platform-specific><html><html-template location="component://mikrotron/includes/barcode2d.ftl"/></html></platform-specific>
+            </widgets>
+        </section>
+    </screen>
 </screens>
