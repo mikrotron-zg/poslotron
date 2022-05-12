@@ -573,6 +573,15 @@ under the License.
             </td>
             <td width="10%">&nbsp;</td>
           </tr>
+        <#elseif paymentMethodType.paymentMethodTypeId == "EXT_OFFLINE">
+          <tr><td colspan="4"><hr /></td></tr>
+          <tr>
+            <td width="30%">&nbsp;</td>
+            <td>
+                <#include "/mikrotron/includes/barcode2d.ftl">
+            </td>
+            <td>&nbsp;</td>
+          </tr>
         </#if>
    <#else>
     <tr>
