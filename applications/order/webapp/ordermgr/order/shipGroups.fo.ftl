@@ -78,10 +78,11 @@ under the License.
           <fo:block>${address.address1?if_exists}</fo:block>
           <fo:block>${address.address2?if_exists}</fo:block>
           <fo:block>
-            ${address.postalCode?if_exists} ${address.city?if_exists}<#if address.stateProvinceGeoId?has_content>, ${address.stateProvinceGeoId}</#if>
+            ${address.postalCode?if_exists} ${address.city?if_exists}
           </fo:block>
-          <fo:block>${address.countryGeoId?if_exists}</fo:block>
-          
+          <fo:block><#assign countryGeo = (delegator.findOne("Geo", {"geoId", address.countryGeoId?if_exists}, false))?if_exists />
+            <#if countryGeo?has_content>${countryGeo.geoName?if_exists}</#if>
+          </fo:block>
           <#if data.phoneNumber?exists>
             <fo:block><#if data.phoneNumber.areaCode?exists>(${data.phoneNumber.areaCode}) </#if>${data.phoneNumber.contactNumber}</fo:block>
           </#if>
