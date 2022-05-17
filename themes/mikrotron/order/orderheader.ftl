@@ -55,12 +55,14 @@ under the License.
     </#if>
     <#-- order status information -->
     <li>
-      ${uiLabelMap.CommonStatus}
+      ${uiLabelMap.CommonStatus}:
+      <b>
       <#if orderHeader?has_content>
         ${localOrderReadHelper.getStatusString(locale)}
       <#else>
         ${uiLabelMap.OrderNotYetOrdered}
       </#if>
+      </b>
     </li>
     <#-- ordered date -->
     <#if orderHeader?has_content>
@@ -286,8 +288,8 @@ under the License.
                 <#assign shipmentMethodType = cart.getShipmentMethodType(groupIdx)?if_exists>
                 <#assign carrierPartyId = cart.getCarrierPartyId(groupIdx)?if_exists>
               </#if>
-              <#if carrierPartyId?exists && carrierPartyId != "_NA_">${carrierPartyId?if_exists}</#if>
-              ${(shipmentMethodType.description)?default("N/A")}
+              
+              <b>${(shipmentMethodType.description)?default("N/A")}</b>
             </li>
             <li>
               <#if shippingAccount?exists>${uiLabelMap.AccountingUseAccount}: ${shippingAccount}</#if>
