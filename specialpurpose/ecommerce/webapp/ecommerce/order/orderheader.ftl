@@ -55,12 +55,14 @@ under the License.
     </#if>
     <#-- order status information -->
     <li>
-      ${uiLabelMap.CommonStatus}
+      ${uiLabelMap.CommonStatus}:
+      <b>
       <#if orderHeader?has_content>
         ${localOrderReadHelper.getStatusString(locale)}
       <#else>
         ${uiLabelMap.OrderNotYetOrdered}
       </#if>
+      </b>
     </li>
     <#-- ordered date -->
     <#if orderHeader?has_content>
@@ -86,7 +88,7 @@ under the License.
     <ul>
       <#if !paymentMethod?has_content && paymentMethodType?has_content>
         <li>
-          <#if paymentMethodType.paymentMethodTypeId == "EXT_OFFLINE">
+          <#if paymentMethodType.paymentMethodTypeId == "EXT_OFFLINE" || paymentMethodType.paymentMethodTypeId == "COMPANY_ACCOUNT">
             ${uiLabelMap.AccountingOfflinePayment}
             <#if orderHeader?has_content && paymentAddress?has_content>
               ${uiLabelMap.OrderSendPaymentTo}:
@@ -228,6 +230,9 @@ under the License.
       </#if>
     </ul>
   </#if>
+  <#if (orderHeader.orderId)?exists && paymentMethodType.paymentMethodTypeId == "COMPANY_ACCOUNT">
+    <#include "../../../../../../themes/mikrotron/includes/barcode2d.ftl">
+  </#if>
 </div>
 </div>
 <#-- right side -->
@@ -276,7 +281,7 @@ under the License.
           <ul>
             <li>
               ${uiLabelMap.OrderMethod}:
-              <#if orderHeader?has_content>
+              <b><#if orderHeader?has_content>
                 <#assign shipmentMethodType = shipGroup.getRelatedOne("ShipmentMethodType", false)?if_exists>
                 <#assign carrierPartyId = shipGroup.carrierPartyId?if_exists>
               <#else>
@@ -284,7 +289,7 @@ under the License.
                 <#assign carrierPartyId = cart.getCarrierPartyId(groupIdx)?if_exists>
               </#if>
               <#if carrierPartyId?exists && carrierPartyId != "_NA_">${carrierPartyId?if_exists}</#if>
-              ${(shipmentMethodType.description)?default("N/A")}
+              ${(shipmentMethodType.description)?default("N/A")}</b>
             </li>
             <li>
               <#if shippingAccount?exists>${uiLabelMap.AccountingUseAccount}: ${shippingAccount}</#if>
@@ -293,7 +298,7 @@ under the License.
         </li>
         <#-- tracking number -->
         <#if trackingNumber?has_content || orderShipmentInfoSummaryList?has_content>
-          <li>
+          <li style="display: none;">
             ${uiLabelMap.OrderTrackingNumber}
             <#-- TODO: add links to UPS/FEDEX/etc based on carrier partyId  -->
             <#if shipGroup.trackingNumber?has_content>
