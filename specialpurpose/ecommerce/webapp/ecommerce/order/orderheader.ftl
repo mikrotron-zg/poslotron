@@ -29,9 +29,11 @@ under the License.
 <div class="columnLeft">
 <div class="screenlet">
   <h3>
+    <#--
     <#if maySelectItems?default("N") == "Y" && returnLink?default("N") == "Y" && (orderHeader.statusId)?if_exists == "ORDER_COMPLETED" && roleTypeId?if_exists == "PLACING_CUSTOMER">
       <a href="<@ofbizUrl fullPath="true">makeReturn?orderId=${orderHeader.orderId}</@ofbizUrl>" class="submenutextright">${uiLabelMap.OrderRequestReturn}</a>
     </#if>
+    -->
     ${uiLabelMap.OrderOrder}
     <#if orderHeader?has_content>
       ${uiLabelMap.CommonNbr}<a href="<@ofbizUrl fullPath="true">orderstatus?orderId=${orderHeader.orderId}</@ofbizUrl>" class="lightbuttontext">${orderHeader.orderId}</a>
@@ -230,7 +232,9 @@ under the License.
       </#if>
     </ul>
   </#if>
-  <#if (orderHeader.orderId)?exists && paymentMethodType.paymentMethodTypeId == "COMPANY_ACCOUNT">
+  <#if (orderHeader.orderId)?exists && 
+        (paymentMethodType.paymentMethodTypeId == "EXT_OFFLINE" || paymentMethodType.paymentMethodTypeId == "COMPANY_ACCOUNT")
+        && (orderHeader.statusId)?if_exists == "ORDER_CREATED">
     <#include "../../../../../../themes/mikrotron/includes/barcode2d.ftl">
   </#if>
 </div>

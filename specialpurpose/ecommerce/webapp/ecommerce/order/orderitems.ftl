@@ -23,10 +23,12 @@ under the License.
 <div class="screenlet">
   <h3>
       <#assign numColumns = 8>
+      <#--
       <#if maySelectItems?default("N") == "Y" && roleTypeId?if_exists == "PLACING_CUSTOMER">
           <#assign numColumns = 11>
           <a href="javascript:document.addCommonToCartForm.add_all.value='true';document.addCommonToCartForm.submit()" class="submenutext">${uiLabelMap.OrderAddAllToCart}</a><a href="javascript:document.addCommonToCartForm.add_all.value='false';document.addCommonToCartForm.submit()" class="submenutext">${uiLabelMap.OrderAddCheckedToCart}</a><a href="<@ofbizUrl fullPath="true">createShoppingListFromOrder?orderId=${orderHeader.orderId}&amp;frequency=6&amp;intervalNumber=1&amp;shoppingListTypeId=SLT_AUTO_REODR</@ofbizUrl>" class="submenutextright">${uiLabelMap.OrderSendMeThisEveryMonth}</a>
       </#if>
+      -->
       ${uiLabelMap.OrderOrderItems}
   </h3>
   <table>
@@ -35,7 +37,7 @@ under the License.
       <th>${uiLabelMap.OrderProduct}</th>
       <#if maySelectItems?default("N") == "Y">
         <th>${uiLabelMap.OrderQtyOrdered}</th>
-        <th>${uiLabelMap.OrderQtyPicked}</th>
+        <th><#-- ${uiLabelMap.OrderQtyPicked} --></th>
         <th>${uiLabelMap.OrderQtyShipped}</th>
         <th>${uiLabelMap.OrderQtyCanceled}</th>
       <#else>
@@ -70,6 +72,7 @@ under the License.
       <td><@ofbizCurrency amount=orderShippingTotal isoCode=currencyUomId/></td>
       <#if maySelectItems?default("N") == "Y"><td colspan="3"></td></#if>
     </tr>
+    <#--
     <tr>
       <th colspan="7">${uiLabelMap.OrderSalesTax}</th>
       <td><@ofbizCurrency amount=orderTaxTotal isoCode=currencyUomId/></td>
@@ -84,6 +87,7 @@ under the License.
         <td colspan="${numColumns - 3}"></td>
       </#if>
     </tr>
+    -->
     <tr>
       <th colspan="7">${uiLabelMap.OrderGrandTotal}</th>
       <td>
@@ -185,8 +189,10 @@ under the License.
           </td>
           <#if maySelectItems?default("N") == "Y">
           <td>
+            <#--
             <#assign pickedQty = localOrderReadHelper.getItemPickedQuantityBd(orderItem)>
             <#if pickedQty gt 0 && orderHeader.statusId == "ORDER_APPROVED">${pickedQty?default(0)?string.number}<#else>${pickedQty?default(0)?string.number}</#if>
+            -->
           </td>
           <td>
             <#assign shippedQty = localOrderReadHelper.getItemShippedQuantity(orderItem)>
@@ -210,6 +216,7 @@ under the License.
               <@ofbizCurrency amount=localOrderReadHelper.getOrderItemTotal(orderItem) isoCode=currencyUomId/>
             </#if>
           </td>
+          <#--
           <#if maySelectItems?default("N") == "Y" && roleTypeId?if_exists == "PLACING_CUSTOMER">
             <td></td>
             <td>
@@ -217,9 +224,11 @@ under the License.
             </td>
             <td></td>
           </#if>
+          -->
         </#if>
       </tr>
       <#-- now cancel reason and comment field -->
+      <#--
       <#if maySelectItems?default("N") == "Y" && (orderHeader.statusId != "ORDER_SENT" && orderItem.statusId != "ITEM_COMPLETED" && orderItem.statusId != "ITEM_CANCELLED" && pickedQty == 0)>
         <tr>
           <td colspan="7">${uiLabelMap.OrderReturnReason}
@@ -237,6 +246,7 @@ under the License.
           </td>
         </tr>
       </#if>
+      -->
       <#-- show info from workeffort if it was a rental item -->
       <#if orderItem.orderItemTypeId == "RENTAL_ORDER_ITEM">
         <#if workEffortSave?exists>
@@ -244,6 +254,7 @@ under the License.
         </#if>
       </#if>
       <#-- now show adjustment details per line item -->
+      <#--
       <#assign itemAdjustments = localOrderReadHelper.getOrderItemAdjustments(orderItem)>
       <#list itemAdjustments as orderItemAdjustment>
         <tr>
@@ -274,7 +285,9 @@ under the License.
           <#if maySelectItems?default("N") == "Y"><td colspan="3"></td></#if>
         </tr>
       </#list>
+      -->
       <#-- show the order item ship group info -->
+      <#--
       <#assign orderItemShipGroupAssocs = orderItem.getRelated("OrderItemShipGroupAssoc", null, null, false)?if_exists>
       <#if orderItemShipGroupAssocs?has_content>
         <#list orderItemShipGroupAssocs as shipGroupAssoc>
@@ -291,6 +304,7 @@ under the License.
           </tr>
         </#list>
       </#if>
+      -->
     </#list>
     <#if orderItems?size == 0 || !orderItems?has_content>
       <tr><td colspan="${numColumns}">${uiLabelMap.OrderSalesOrderLookupFailed}</td></tr>
