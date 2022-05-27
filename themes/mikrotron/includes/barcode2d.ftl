@@ -91,5 +91,4 @@ under the License.
     </script>
 </head>
 
-<p>2D barkod za plaćanje</p>
 <div id="barcode"></div>
