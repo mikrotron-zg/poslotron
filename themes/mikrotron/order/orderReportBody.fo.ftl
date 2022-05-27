@@ -19,8 +19,7 @@ under the License.
 <#escape x as x?xml>
     <#if orderHeader?has_content>
         <fo:table table-layout="fixed" border-spacing="3pt">
-            <fo:table-column column-width="3in"/>
-            <fo:table-column column-width="1in"/>
+            <fo:table-column column-width="4.5in"/>
             <fo:table-column column-width="1in"/>
             <fo:table-column column-width="1in"/>
             <fo:table-column column-width="1in"/>
@@ -29,7 +28,7 @@ under the License.
                     <fo:table-cell>
                         <fo:block font-weight="bold">${uiLabelMap.OrderProduct}</fo:block>
                     </fo:table-cell>
-                    <fo:table-cell><fo:block></fo:block></fo:table-cell>
+                    
                     <fo:table-cell text-align="right">
                         <fo:block font-family="LiberationSans-Bold">${uiLabelMap.OrderQuantity}</fo:block>
                     </fo:table-cell>
@@ -42,7 +41,7 @@ under the License.
                     </fo:table-cell>
                 </fo:table-row>
             </fo:table-header>
-            <fo:table-body>
+            <fo:table-body font-family="LiberationSans" font-size="10pt">
                 <#list orderItemList as orderItem>
                     <#assign orderItemType = orderItem.getRelatedOne("OrderItemType", false)?if_exists>
                     <#assign productId = orderItem.productId?if_exists>
@@ -51,7 +50,7 @@ under the License.
                     <#assign internalImageUrl = Static["org.ofbiz.product.imagemanagement.ImageManagementHelper"].getInternalImageUrl(request, productId?if_exists)?if_exists>
                     <fo:table-row>
                         <fo:table-cell>
-                            <fo:block font-family="LiberationSans">
+                            <fo:block>
                                 <#if orderItem.supplierProductId?has_content>
                                     ${orderItem.supplierProductId} - ${orderItem.itemDescription?if_exists}
                                 <#elseif productId?exists>
@@ -60,15 +59,6 @@ under the License.
                                     ${orderItemType.get("description",locale)} - ${orderItem.itemDescription?if_exists}
                                 <#else>
                                     ${orderItem.itemDescription?if_exists}
-                                </#if>
-                            </fo:block>
-                        </fo:table-cell>
-                        <fo:table-cell>
-                            <fo:block>
-                                <#if orderHeader.orderTypeId == "PURCHASE_ORDER">
-                                    <#if internalImageUrl?has_content>
-                                        <fo:external-graphic src="${internalImageUrl}" overflow="hidden" content-width="100"/>
-                                    </#if>
                                 </#if>
                             </fo:block>
                         </fo:table-cell>
@@ -106,7 +96,6 @@ under the License.
                     <#if adjustmentAmount != 0>
                         <fo:table-row>
                             <fo:table-cell><fo:block></fo:block></fo:table-cell>
-                            <fo:table-cell><fo:block></fo:block></fo:table-cell>
                             <fo:table-cell number-columns-spanned="2">
                                 <fo:block font-weight="bold">
                                     ${adjustmentType.get("description",locale)} :
@@ -125,7 +114,6 @@ under the License.
                 <#-- summary of order amounts -->
                 <fo:table-row>
                     <fo:table-cell><fo:block></fo:block></fo:table-cell>
-                    <fo:table-cell><fo:block></fo:block></fo:table-cell>
                     <fo:table-cell number-columns-spanned="2">
                         <fo:block font-weight="bold">${uiLabelMap.OrderItemsSubTotal}</fo:block>
                     </fo:table-cell>
@@ -135,7 +123,6 @@ under the License.
                 </fo:table-row>
                 <#if otherAdjAmount != 0>
                     <fo:table-row>
-                        <fo:table-cell><fo:block></fo:block></fo:table-cell>
                         <fo:table-cell><fo:block></fo:block></fo:table-cell>
                         <fo:table-cell number-columns-spanned="2">
                             <fo:block font-weight="bold">${uiLabelMap.OrderTotalOtherOrderAdjustments}</fo:block>
@@ -148,7 +135,6 @@ under the License.
                 <#if shippingAmount != 0>
                     <fo:table-row>
                         <fo:table-cell><fo:block></fo:block></fo:table-cell>
-                        <fo:table-cell><fo:block></fo:block></fo:table-cell>
                         <fo:table-cell number-columns-spanned="2">
                             <fo:block font-weight="bold">${uiLabelMap.OrderTotalShippingAndHandling}</fo:block>
                         </fo:table-cell>
@@ -159,7 +145,6 @@ under the License.
                 </#if>
                 <#if taxAmount != 0>
                     <fo:table-row>
-                        <fo:table-cell><fo:block></fo:block></fo:table-cell>
                         <fo:table-cell><fo:block></fo:block></fo:table-cell>
                         <fo:table-cell number-columns-spanned="2">
                             <fo:block font-weight="bold">${uiLabelMap.OrderTotalSalesTax}</fo:block>
@@ -172,7 +157,6 @@ under the License.
                 <#if grandTotal != 0>
                     <fo:table-row>
                         <fo:table-cell><fo:block></fo:block></fo:table-cell>
-                        <fo:table-cell><fo:block></fo:block></fo:table-cell>
                         <fo:table-cell number-columns-spanned="2" background-color="#EEEEEE">
                             <fo:block font-weight="bold">${uiLabelMap.OrderTotalDue}</fo:block>
                         </fo:table-cell>
@@ -184,7 +168,6 @@ under the License.
                 <#-- mikrotron: we don't need to display VAT amount on order
                 <#if vatAmount != 0>
                     <fo:table-row>
-                        <fo:table-cell><fo:block></fo:block></fo:table-cell>
                         <fo:table-cell><fo:block></fo:block></fo:table-cell>
                         <fo:table-cell number-columns-spanned="2">
                             <fo:block font-weight="bold">${uiLabelMap.OrderTotalSalesTax}</fo:block>
@@ -213,7 +196,7 @@ under the License.
                                 <fo:table-cell number-columns-spanned="1">
                                     <fo:block>${note.noteInfo?if_exists}</fo:block>
                                 </fo:table-cell>
-                                <fo:table-cell number-columns-spanned="2">
+                                <fo:table-cell number-columns-spanned="1">
                                     <fo:block>
                                     <#if note.noteParty?has_content>
                                         <#assign notePartyNameResult = dispatcher.runSync("getPartyNameForDate", Static["org.ofbiz.base.util.UtilMisc"].toMap("partyId", note.noteParty, "compareDate", note.noteDateTime, "lastNameFirst", "Y", "userLogin", userLogin))/>
@@ -230,5 +213,13 @@ under the License.
                 </#if>
             </fo:table-body>
         </fo:table>
+        <fo:block space-after="5mm"/>
+        <fo:block text-align="right">
+          <fo:instream-foreign-object>
+            <barcode:barcode xmlns:barcode="http://barcode4j.krysalis.org/ns" message="HRVHUB30\u000A${currencyUomId}\u000A${grandTotalCentsFormated}\u000A\u000A\u000A\u000AMIKROTRON d.o.o.\u000APAKOSTANSKA 5 K2-9\u000A10000 ZAGREB\u000AHR8023400091110675464\u000AHR00\u000A${orderId}\u000A\u000ANarudzba ${orderId}">
+              <barcode:pdf417><barcode:row-height>0.5mm</barcode:row-height><barcode:module-width>0.6mm</barcode:module-width></barcode:pdf417>
+            </barcode:barcode>
+          </fo:instream-foreign-object>
+        </fo:block>
     </#if>
 </#escape>

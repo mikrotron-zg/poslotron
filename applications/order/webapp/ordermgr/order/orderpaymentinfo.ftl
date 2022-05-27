@@ -573,7 +573,7 @@ under the License.
             </td>
             <td width="10%">&nbsp;</td>
           </tr>
-        <#elseif paymentMethodType.paymentMethodTypeId == "EXT_OFFLINE">
+        <#elseif paymentMethodType.paymentMethodTypeId == "EXT_OFFLINE" && currentStatus.statusId != "ORDER_CANCELLED">
           <tr><td colspan="4"><hr /></td></tr>
           <tr>
             <td width="30%">&nbsp;</td>
