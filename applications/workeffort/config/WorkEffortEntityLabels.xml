@@ -18,10 +18,11 @@
     specific language governing permissions and limitations
     under the License.
 -->
-<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<resource>
     <property key="RateType.description.DISCOUNTED">
         <value xml:lang="en">Discounted Hourly Rate</value>
         <value xml:lang="fr">Taux horaire escompté</value>
+        <value xml:lang="hr">Snižena satnica</value>
         <value xml:lang="it">Percentuale oraria scontata</value>
         <value xml:lang="ja">割引時間給</value>
         <value xml:lang="ro">Procent Orar Redus</value>
@@ -34,6 +35,7 @@
     <property key="RateType.description.OVERTIME">
         <value xml:lang="en">Overtime Hourly Rate</value>
         <value xml:lang="fr">Taux horaire des heures supplémentaires</value>
+        <value xml:lang="hr">Prekovremena satnica</value>
         <value xml:lang="it">Percentuale oraria straordinaria</value>
         <value xml:lang="ja">残業時間給</value>
         <value xml:lang="ro">Procent Orar Straordinar</value>
@@ -46,6 +48,7 @@
     <property key="RateType.description.STANDARD">
         <value xml:lang="en">Standard Hourly Rate</value>
         <value xml:lang="fr">Taux horaire standard</value>
+        <value xml:lang="hr">Standardna satnica</value>
         <value xml:lang="it">Percentuale oraria standard</value>
         <value xml:lang="ja">標準時間給</value>
         <value xml:lang="ro">Procent Orar Standard</value>
@@ -58,6 +61,7 @@
     <property key="WorkEffortAssocType.description.ROUTING_COMPONENT">
         <value xml:lang="en">Routing and Routing Task Association</value>
         <value xml:lang="fr">Routage et association de tâche de routage</value>
+        <value xml:lang="hr">Usmjeravanje i povezani zadaci</value>
         <value xml:lang="it">Associazione rotta e rotta compito</value>
         <value xml:lang="ja">ルーティングとタスク関連付けのルーティング</value>
         <value xml:lang="ru">Связи между маршрутизацией и задачами маршрутизации</value>
@@ -70,6 +74,7 @@
         <value xml:lang="en">Breakdown/Detail</value>
         <value xml:lang="es">Descomposición de esfuerzo de trabajo</value>
         <value xml:lang="fr">Détail/Ventilation</value>
+        <value xml:lang="hr">Analitika/Detalji</value>
         <value xml:lang="it">Interruzione/Dettaglio</value>
         <value xml:lang="ja">ブレークダウン/詳細</value>
         <value xml:lang="ro">Intrerupere/Detaliu</value>
@@ -83,6 +88,7 @@
         <value xml:lang="en">Concurrency</value>
         <value xml:lang="es">Concurrencia de esfuerzo de trabajo</value>
         <value xml:lang="fr">Simultanéité</value>
+        <value xml:lang="hr">Istovremenost</value>
         <value xml:lang="it">Concorrenza</value>
         <value xml:lang="ja">多重度</value>
         <value xml:lang="ro">Concurenta</value>
@@ -96,6 +102,7 @@
         <value xml:lang="en">Dependency</value>
         <value xml:lang="es">Dependencia de esfuerzo de trabajo</value>
         <value xml:lang="fr">Dépendance</value>
+        <value xml:lang="hr">Ovisnost</value>
         <value xml:lang="it">Dipendenza</value>
         <value xml:lang="ja">依存度</value>
         <value xml:lang="ro">Dependenta</value>
@@ -109,6 +116,7 @@
         <value xml:lang="en">Phase</value>
         <value xml:lang="es">Fase de proyecto de esfuerzo de trabajo</value>
         <value xml:lang="fr">Phase</value>
+        <value xml:lang="hr">Faza</value>
         <value xml:lang="it">Fase</value>
         <value xml:lang="ja">フェーズ</value>
         <value xml:lang="th">ขั้นตอน</value>
@@ -120,6 +128,7 @@
         <value xml:lang="en">Precedency</value>
         <value xml:lang="es">Precedencia de esfuerzo de trabajo</value>
         <value xml:lang="fr">Priorité</value>
+        <value xml:lang="hr">Prednost</value>
         <value xml:lang="it">Precedenza</value>
         <value xml:lang="ja">先行度</value>
         <value xml:lang="ro">Precedenta</value>
@@ -133,6 +142,7 @@
         <value xml:lang="en">Task</value>
         <value xml:lang="es">Tarea de fase de esfuerzo de trabajo</value>
         <value xml:lang="fr">Tâche</value>
+        <value xml:lang="hr">Zadatak</value>
         <value xml:lang="it">Compito</value>
         <value xml:lang="ja">タスク</value>
         <value xml:lang="th">ภารกิจ</value>
@@ -143,6 +153,7 @@
     <property key="WorkEffortAssocType.description.WORK_EFF_TEMPLATE">
         <value xml:lang="en">Template of</value>
         <value xml:lang="fr">Gabarit de</value>
+        <value xml:lang="hr">Predložak za</value>
         <value xml:lang="it">Template di</value>
         <value xml:lang="ja">テンプレート:</value>
         <value xml:lang="ro">Template de</value>
@@ -155,6 +166,7 @@
     <property key="WorkEffortPurposeType.description.ROU_ASSEMBLING">
         <value xml:lang="en">Assembling</value>
         <value xml:lang="fr">Assemblage</value>
+        <value xml:lang="hr">Sastavljanje</value>
         <value xml:lang="it">Assemblaggio</value>
         <value xml:lang="ja">組立中</value>
         <value xml:lang="ro">Asamblare</value>
@@ -167,6 +179,7 @@
     <property key="WorkEffortPurposeType.description.ROU_MANUFACTURING">
         <value xml:lang="en">Manufacturing</value>
         <value xml:lang="fr">Fabrication</value>
+        <value xml:lang="hr">Proizvodnja</value>
         <value xml:lang="it">Produzione</value>
         <value xml:lang="ja">生産中</value>
         <value xml:lang="ro">Productie</value>
@@ -179,6 +192,7 @@
     <property key="WorkEffortPurposeType.description.ROU_SUBCONTRACTING">
         <value xml:lang="en">Sub-contracting</value>
         <value xml:lang="fr">Sous-traitance</value>
+        <value xml:lang="hr">Podugovaranje</value>
         <value xml:lang="it">Sotto-contratto</value>
         <value xml:lang="ja">二次請け</value>
         <value xml:lang="ro">Sub-contract</value>
@@ -192,6 +206,7 @@
         <value xml:lang="en">Deployment</value>
         <value xml:lang="es">Despliegue</value>
         <value xml:lang="fr">Déploiement</value>
+        <value xml:lang="hr">Razmještaj</value>
         <value xml:lang="it">Distribuzione</value>
         <value xml:lang="ja">設置</value>
         <value xml:lang="ro">Distributie</value>
@@ -205,6 +220,7 @@
         <value xml:lang="en">Development</value>
         <value xml:lang="es">Desarrollo</value>
         <value xml:lang="fr">Développement</value>
+        <value xml:lang="hr">Razvoj</value>
         <value xml:lang="it">Sviluppo</value>
         <value xml:lang="ja">開発</value>
         <value xml:lang="ro">Dezvoltare</value>
@@ -218,6 +234,7 @@
         <value xml:lang="en">Maintenance</value>
         <value xml:lang="es">Mantenimiento</value>
         <value xml:lang="fr">Maintenance</value>
+        <value xml:lang="hr">Održavanje</value>
         <value xml:lang="it">Manutenzione</value>
         <value xml:lang="ja">保守</value>
         <value xml:lang="ro">Intretinere</value>
@@ -231,6 +248,7 @@
         <value xml:lang="en">Meeting</value>
         <value xml:lang="es">Reunión</value>
         <value xml:lang="fr">Réunion</value>
+        <value xml:lang="hr">Sastanak</value>
         <value xml:lang="it">Incontro</value>
         <value xml:lang="ja">会議</value>
         <value xml:lang="ro">Intalnire</value>
@@ -244,6 +262,7 @@
         <value xml:lang="en">Phase</value>
         <value xml:lang="es">Fase</value>
         <value xml:lang="fr">Phase</value>
+        <value xml:lang="hr">Faza</value>
         <value xml:lang="it">Fase</value>
         <value xml:lang="ja">フェーズ</value>
         <value xml:lang="ro">Faze</value>
@@ -257,6 +276,7 @@
         <value xml:lang="en">Production Run</value>
         <value xml:lang="es">Orden de producción</value>
         <value xml:lang="fr">Ordre de fabrication</value>
+        <value xml:lang="hr">Proizvodni ciklus</value>
         <value xml:lang="it">Ciclo di produzione</value>
         <value xml:lang="ja">本番運用</value>
         <value xml:lang="ro">Ciclu Productie</value>
@@ -270,6 +290,7 @@
         <value xml:lang="en">Project</value>
         <value xml:lang="es">Proyecto</value>
         <value xml:lang="fr">Projet</value>
+        <value xml:lang="hr">Projekt</value>
         <value xml:lang="it">Progetto</value>
         <value xml:lang="ja">プロジェクト</value>
         <value xml:lang="ro">Proiect</value>
@@ -283,6 +304,7 @@
         <value xml:lang="en">Research</value>
         <value xml:lang="es">Investigación</value>
         <value xml:lang="fr">Recherche</value>
+        <value xml:lang="hr">Istraživanje</value>
         <value xml:lang="it">Ricerca</value>
         <value xml:lang="ja">研究</value>
         <value xml:lang="ro">Cautare</value>
@@ -296,6 +318,7 @@
         <value xml:lang="en">Support</value>
         <value xml:lang="es">Soporte</value>
         <value xml:lang="fr">Support</value>
+        <value xml:lang="hr">Podrška</value>
         <value xml:lang="it">Supporto</value>
         <value xml:lang="ja">サポート</value>
         <value xml:lang="ro">Suport</value>
@@ -309,6 +332,7 @@
         <value xml:lang="en">Email</value>
         <value xml:lang="es">E-mail</value>
         <value xml:lang="fr">Courriel</value>
+        <value xml:lang="hr">E-mail</value>
         <value xml:lang="it">Email</value>
         <value xml:lang="ja">Eメール</value>
         <value xml:lang="ro">Email</value>
@@ -321,6 +345,7 @@
     <property key="WorkEffortPurposeType.description.WEPT_TASK_PHONE_CALL">
         <value xml:lang="en">Phone Call</value>
         <value xml:lang="fr">Appel téléphonique</value>
+        <value xml:lang="hr">Telefonski poziv</value>
         <value xml:lang="it">Chiamata telefonica</value>
         <value xml:lang="ja">通話</value>
         <value xml:lang="ro">Chemare Telefonica</value>
@@ -334,6 +359,7 @@
         <value xml:lang="en">Workflow Activity</value>
         <value xml:lang="es">Actividad</value>
         <value xml:lang="fr">Activité</value>
+        <value xml:lang="hr">Aktivnost tijeka rada</value>
         <value xml:lang="it">Attività impegno di lavoro</value>
         <value xml:lang="ja">ワークフローの活動</value>
         <value xml:lang="ro">Activitati Sarcini de Lucru</value>
@@ -346,6 +372,7 @@
     <property key="WorkEffortType.description.ASSET_USAGE">
         <value xml:lang="en">Fixed Asset Usage (rental)</value>
         <value xml:lang="fr">Utilisation d'immobilisation (location)</value>
+        <value xml:lang="hr">Upotreba dugotrajne imovine (najam)</value>
         <value xml:lang="it">Uso cespite (noleggio)</value>
         <value xml:lang="ja">固定資産の使用(レンタル)</value>
         <value xml:lang="ro">Folosire Mijloc Fix (inchiriat)</value>
@@ -360,6 +387,7 @@
         <value xml:lang="en">Available</value>
         <value xml:lang="es">Disponible</value>
         <value xml:lang="fr">Disponible</value>
+        <value xml:lang="hr">Dostupno</value>
         <value xml:lang="it">Disponibile</value>
         <value xml:lang="ja">可能</value>
         <value xml:lang="ro">Disponibil</value>
@@ -372,6 +400,7 @@
     <property key="WorkEffortType.description.BUSINESS_TRAVEL">
         <value xml:lang="en">Business Travel</value>
         <value xml:lang="fr">Voyage professionnel</value>
+        <value xml:lang="hr">Poslovno putovanje</value>
         <value xml:lang="it">Viaggio di lavoro</value>
         <value xml:lang="ja">業務出張</value>
         <value xml:lang="vi">Du lịch thương mại</value>
@@ -381,6 +410,7 @@
     <property key="WorkEffortType.description.COMPANY_EVENT">
         <value xml:lang="en">Company Events</value>
         <value xml:lang="fr">Séminaire d'entreprise</value>
+        <value xml:lang="hr">Događaji tvrtke</value>
         <value xml:lang="it">Eventi aziendali</value>
         <value xml:lang="ja">会社イベント</value>
         <value xml:lang="vi">Sự kiện doanh nghiệp</value>
@@ -391,6 +421,7 @@
         <value xml:lang="en">Event</value>
         <value xml:lang="es">Evento</value>
         <value xml:lang="fr">Evènement</value>
+        <value xml:lang="hr">Događaj</value>
         <value xml:lang="it">Evento</value>
         <value xml:lang="ja">イベント</value>
         <value xml:lang="ro">Eveniment</value>
@@ -403,6 +434,7 @@
     <property key="WorkEffortType.description.MEETING">
         <value xml:lang="en">Meeting</value>
         <value xml:lang="fr">Réunion</value>
+        <value xml:lang="hr">Sastanak</value>
         <value xml:lang="it">Incontri</value>
         <value xml:lang="ja">会議</value>
         <value xml:lang="vi">Cuộc họp</value>
@@ -412,6 +444,7 @@
     <property key="WorkEffortType.description.MILESTONE">
         <value xml:lang="en">Milestone</value>
         <value xml:lang="fr">Jalon</value>
+        <value xml:lang="hr">Prekretnica</value>
         <value xml:lang="ja">マイルストーン</value>
         <value xml:lang="vi">Mốc thời gian</value>
         <value xml:lang="zh">里程碑</value>
@@ -419,6 +452,7 @@
     <property key="WorkEffortType.description.PERSONAL_TIMEOFF">
         <value xml:lang="en">Personal Time Off</value>
         <value xml:lang="fr">Temps libre personnel</value>
+        <value xml:lang="hr">Osobno slobodno vrijeme</value>
         <value xml:lang="it">Tempo libero personale</value>
         <value xml:lang="ja">私用休暇</value>
         <value xml:lang="vi">Thời gian nghỉ cá nhân</value>
@@ -429,6 +463,7 @@
         <value xml:lang="en">Project Phase</value>
         <value xml:lang="es">Fase</value>
         <value xml:lang="fr">Phase de projet</value>
+        <value xml:lang="hr">Faza projekta</value>
         <value xml:lang="it">Fase progetto</value>
         <value xml:lang="ja">プロジェクトフェーズ</value>
         <value xml:lang="ro">Faze Proiect</value>
@@ -441,6 +476,7 @@
     <property key="WorkEffortType.description.PHASE_TEMPLATE">
         <value xml:lang="en">Project Phase Template</value>
         <value xml:lang="fr">Modèle de phase de projet</value>
+        <value xml:lang="hr">Predložak faze projekta</value>
         <value xml:lang="it">Fase progetto template</value>
         <value xml:lang="ja">プロジェクトフェーズテンプレート</value>
         <value xml:lang="vi">Mẫu pha dự án</value>
@@ -450,6 +486,7 @@
     <property key="WorkEffortType.description.PROD_ORDER_HEADER">
         <value xml:lang="en">Production Run Header</value>
         <value xml:lang="fr">En-tête d'ordre de fabrication</value>
+        <value xml:lang="hr">Zaglavlje proizvodnog ciklusa</value>
         <value xml:lang="it">Testata ciclo di produzione</value>
         <value xml:lang="ja">本番運用ヘッダ</value>
         <value xml:lang="ro">Antet Cliclu Productie</value>
@@ -462,6 +499,7 @@
     <property key="WorkEffortType.description.PROD_ORDER_TASK">
         <value xml:lang="en">Production Run Task</value>
         <value xml:lang="fr">Tâche d'ordre de fabrication</value>
+        <value xml:lang="hr">Zadatak proizvodnog ciklusa</value>
         <value xml:lang="it">Compito ciclo di produzione</value>
         <value xml:lang="ja">本番運用タスク</value>
         <value xml:lang="ro">Tema Ciclu Productie</value>
@@ -475,6 +513,7 @@
         <value xml:lang="en">Program</value>
         <value xml:lang="es">Programa</value>
         <value xml:lang="fr">Programme</value>
+        <value xml:lang="hr">Program</value>
         <value xml:lang="it">Programma</value>
         <value xml:lang="ja">プログラム</value>
         <value xml:lang="ro">Program</value>
@@ -488,6 +527,7 @@
         <value xml:lang="en">Project</value>
         <value xml:lang="es">Proyecto</value>
         <value xml:lang="fr">Projet</value>
+        <value xml:lang="hr">Projekt</value>
         <value xml:lang="it">Progetto</value>
         <value xml:lang="ja">プロジェクト</value>
         <value xml:lang="ro">Proiect</value>
@@ -500,6 +540,7 @@
     <property key="WorkEffortType.description.PROJECT_TEMPLATE">
         <value xml:lang="en">Project Template</value>
         <value xml:lang="fr">Modèle de projet</value>
+        <value xml:lang="hr">Predložak projekta</value>
         <value xml:lang="it">Progetto template</value>
         <value xml:lang="ja">プロジェクトテンプレート</value>
         <value xml:lang="vi">Biểu mẫu dự án</value>
@@ -509,6 +550,7 @@
     <property key="WorkEffortType.description.PUBLISH_PROPS">
         <value xml:lang="en">Publish Properties</value>
         <value xml:lang="fr">Propriétés de publication</value>
+        <value xml:lang="hr">Objavi svojstva</value>
         <value xml:lang="it">Pubblica properties</value>
         <value xml:lang="ja">公開プロパティ</value>
         <value xml:lang="vi">Thuộc tính xuất bản</value>
@@ -518,6 +560,7 @@
     <property key="WorkEffortType.description.ROUTING">
         <value xml:lang="en">Routing</value>
         <value xml:lang="fr">Routage</value>
+        <value xml:lang="hr">Usmjeravanje</value>
         <value xml:lang="it">Rotta</value>
         <value xml:lang="ja">ルーティング</value>
         <value xml:lang="ro">Ruta</value>
@@ -530,6 +573,7 @@
     <property key="WorkEffortType.description.ROU_TASK">
         <value xml:lang="en">Routing Task</value>
         <value xml:lang="fr">Tâche de routage</value>
+        <value xml:lang="hr">Zadatak usmjeravanja</value>
         <value xml:lang="it">Compito rotta</value>
         <value xml:lang="ja">タスクのルーティング</value>
         <value xml:lang="ro">Tema Ruta</value>
@@ -543,6 +587,7 @@
         <value xml:lang="en">Task</value>
         <value xml:lang="es">Tarea</value>
         <value xml:lang="fr">Tâche</value>
+        <value xml:lang="hr">Zadatak</value>
         <value xml:lang="it">Compito</value>
         <value xml:lang="ja">タスク</value>
         <value xml:lang="ro">Tema</value>
@@ -555,6 +600,7 @@
     <property key="WorkEffortType.description.TASK_TEMPLATE">
         <value xml:lang="en">Project Task Template</value>
         <value xml:lang="fr">Modèle de tâche de projet</value>
+        <value xml:lang="hr">Predložak projektnog zadatka</value>
         <value xml:lang="it">Compito progetto template</value>
         <value xml:lang="ja">プロジェクトタスクテンプレート</value>
         <value xml:lang="vi">Biểu mẫu công việc dự án</value>
@@ -564,6 +610,7 @@
     <property key="WorkEffortType.description.TEMPLATE">
         <value xml:lang="en">Template</value>
         <value xml:lang="fr">Modèle</value>
+        <value xml:lang="hr">Predložak</value>
         <value xml:lang="it">Template</value>
         <value xml:lang="ja">テンプレート</value>
         <value xml:lang="vi">Biểu mẫu</value>
@@ -573,6 +620,7 @@
     <property key="WorkEffortType.description.TRAINING">
         <value xml:lang="en">Training</value>
         <value xml:lang="fr">Formation</value>
+        <value xml:lang="hr">Trening</value>
         <value xml:lang="it">Formazione</value>
         <value xml:lang="ja">教育訓練</value>
         <value xml:lang="vi">Đào tạo</value>
@@ -582,6 +630,7 @@
         <value xml:lang="en">Workflow Process</value>
         <value xml:lang="es">Flujo de trabajo</value>
         <value xml:lang="fr">Processus de flux de travail</value>
+        <value xml:lang="hr">Proces tijeka rada</value>
         <value xml:lang="it">Processo impegno di lavoro</value>
         <value xml:lang="ja">ワークフロープロセス</value>
         <value xml:lang="ro">Proces Sarcini de Lucru</value>
@@ -595,6 +644,7 @@
         <value xml:lang="en">HUMAN</value>
         <value xml:lang="es">Interacción humana con el sistema a través de una aplicación</value>
         <value xml:lang="fr">Humain</value>
+        <value xml:lang="hr">Ljudski</value>
         <value xml:lang="it">Umano</value>
         <value xml:lang="ja">人</value>
         <value xml:lang="th">เกี่ยวกับคน</value>
@@ -606,6 +656,7 @@
         <value xml:lang="en">ORGANIZATIONAL_UNIT</value>
         <value xml:lang="es">Departamento u otra unidad en una organización</value>
         <value xml:lang="fr">Unité d'organisation</value>
+        <value xml:lang="hr">Organizacijska jedinica</value>
         <value xml:lang="it">Unità organizzativa</value>
         <value xml:lang="ja">組織の単位</value>
         <value xml:lang="th">เกี่ยวกับองค์กร</value>
@@ -617,6 +668,7 @@
         <value xml:lang="en">RESOURCE</value>
         <value xml:lang="es">Un agente específico de recurso</value>
         <value xml:lang="fr">Ressource</value>
+        <value xml:lang="hr">Resurs</value>
         <value xml:lang="it">Risorsa</value>
         <value xml:lang="ja">リソース</value>
         <value xml:lang="th">แหล่งข้อมูล</value>
@@ -628,6 +680,7 @@
         <value xml:lang="en">RESOURCE_SET</value>
         <value xml:lang="es">Un conjunto de recursos</value>
         <value xml:lang="fr">Ensemble de ressources</value>
+        <value xml:lang="hr">Zbirka resursa</value>
         <value xml:lang="it">Gruppo risorse</value>
         <value xml:lang="ja">リソース一式</value>
         <value xml:lang="th">ตั้งแหล่งข้อมูล</value>
@@ -639,6 +692,7 @@
         <value xml:lang="en">ROLE</value>
         <value xml:lang="es">Especifica un rol que se puede asociar a un grupo de personas</value>
         <value xml:lang="fr">Rôle</value>
+        <value xml:lang="hr">Uloga</value>
         <value xml:lang="it">Ruolo</value>
         <value xml:lang="ja">ロール</value>
         <value xml:lang="th">สถานะ</value>
@@ -650,6 +704,7 @@
         <value xml:lang="en">SYSTEM</value>
         <value xml:lang="es">Un agente automático</value>
         <value xml:lang="fr">Système</value>
+        <value xml:lang="hr">Sustav</value>
         <value xml:lang="it">Sistema</value>
         <value xml:lang="ja">システム</value>
         <value xml:lang="th">ระบบ</value>
