@@ -18,7 +18,7 @@
     specific language governing permissions and limitations
     under the License.
 -->
-<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<resource>
     <property key="EcommerceAboutUs">
         <value xml:lang="en">About Us</value>
         <value xml:lang="fr">A propos</value>
@@ -311,6 +311,7 @@
     </property>
     <property key="EcommerceAffiliateCreatedSuccessfully">
         <value xml:lang="en">Affiliate record successfully created.</value>
+        <value xml:lang="hr">Pridruženi zapis uspješno kreiran.</value>
         <value xml:lang="it">Record affiliato creato con successo.</value>
         <value xml:lang="ja">アフェリエイトレコードが正しく作成されました。</value>
         <value xml:lang="vi">Bản đăng ký hội viên được tạo thành công.</value>
@@ -589,6 +590,7 @@
     </property>
     <property key="EcommerceCartToGoogleCheckout">
         <value xml:lang="en">Google Checkout</value>
+        <value xml:lang="hr">Google Checkout</value>
         <value xml:lang="it">Checkout con Google Checkout</value>
         <value xml:lang="ja">Googleチェックアウト</value>
         <value xml:lang="nl">Google checkout</value>
@@ -866,6 +868,7 @@
         <value xml:lang="es">Código de Data Resource</value>
         <value xml:lang="fr">Ref. de ressource de données</value>
         <value xml:lang="hi_IN">आंकड़े सहारा नम्बर</value>
+        <value xml:lang="hr">Id izvora podataka</value>
         <value xml:lang="it">Codice risorsa dati</value>
         <value xml:lang="ja">データリソースID</value>
         <value xml:lang="nl">Databron ID</value>
@@ -2272,6 +2275,7 @@
     </property>
     <property key="EcommerceMonthsAtAddressNotValid">
         <value xml:lang="en">Months at address not a valid number: ${parameters.monthsAtAddress}</value>
+        <value xml:lang="hr">Mjeseci na adresi nisu valjani broj: ${parameters.monthsAtAddress}</value>
         <value xml:lang="it">Mesi all'indirizzo non è un numero valido: ${parameters.monthsAtAddress}</value>
         <value xml:lang="ja">住所が有効でない月数: ${parameters.monthsAtAddress}</value>
         <value xml:lang="vi">Số tháng tại địa chỉ không là số hợp lệ: ${parameters.monthsAtAddress}</value>
@@ -2279,6 +2283,7 @@
     </property>
     <property key="EcommerceMonthsWithEmployeeNotValid">
         <value xml:lang="en">Months with Employer was not a valid number: ${parameters.monthsWithEmployer}</value>
+        <value xml:lang="hr">Broj mjeseci s poslodavcem nije valjan: ${parameters.monthsWithEmployer}</value>
         <value xml:lang="it">Mesi come impiegato non è un numero valido: ${parameters.monthsWithEmployer}</value>
         <value xml:lang="ja">雇用者が有効でない月数: ${parameters.monthsWithEmployer}</value>
         <value xml:lang="vi">Số tháng với nhân viên không là số hợp lệ: ${parameters.monthsWithEmployer}</value>
@@ -3493,6 +3498,7 @@
         <value xml:lang="de">Option wählen</value>
         <value xml:lang="en">Select Option</value>
         <value xml:lang="fr">Sélectionnez une option</value>
+        <value xml:lang="hr">Odaberite opciju</value>
         <value xml:lang="ja">オプションを選択</value>
         <value xml:lang="zh">选择选项</value>
     </property>
@@ -3953,6 +3959,7 @@
         <value xml:lang="de">Tag-Wolke</value>
         <value xml:lang="en">Tag Cloud</value>
         <value xml:lang="fr">Nuage de mots</value>
+        <value xml:lang="hr">Oblak oznaka</value>
         <value xml:lang="ja">クラウドにタグ</value>
         <value xml:lang="vi">Đám mây đánh dấu</value>
         <value xml:lang="zh">标签云</value>
@@ -4376,6 +4383,7 @@
     </property>
     <property key="EcommerceYearsAtAddressNotValid">
         <value xml:lang="en">Years at address not a valid number: ${parameters.yearsAtAddress}</value>
+        <value xml:lang="hr">Broj godina na adresi nije valjan: ${parameters.yearsAtAddress}</value>
         <value xml:lang="it">Anni all'indirizzo non è un numero valido: ${parameters.yearsAtAddress}</value>
         <value xml:lang="ja">住所が有効でない年数: ${parameters.yearsAtAddress}</value>
         <value xml:lang="vi">Số năm không phải là số hợp lệ tại địa chỉ: ${parameters.yearsAtAddress}</value>
@@ -4383,6 +4391,7 @@
     </property>
     <property key="EcommerceYearsWithEmployeeNotValid">
         <value xml:lang="en">Years with Employer was not a valid number: ${parameters.yearsWithEmployer}</value>
+        <value xml:lang="hr">Broj godina s poslodavcem nije bio valjan: ${parameters.yearsWithEmployer}</value>
         <value xml:lang="it">Anni come impiegato non è un numero valido: ${parameters.yearsWithEmployer}</value>
         <value xml:lang="ja">雇用者が有効でない年数: ${parameters.yearsWithEmployer}</value>
         <value xml:lang="vi">Số năm không phải là số hợp lệ với Nhân viên: ${parameters.yearsWithEmployer}</value>
@@ -5259,7 +5268,7 @@
         <value xml:lang="vi">Đánh giá sản phẩm</value>
         <value xml:lang="zh">产品评价</value>
         <value xml:lang="zh_TW">產品評論</value>
-        <!--value xml:lang="zh_TW">產品評價</value--> <!-- duplicate -->
+         
     </property>
     <property key="PageTitleProfileSurvey">
         <value xml:lang="da">Profil rundspørge</value>
@@ -5278,7 +5287,7 @@
         <value xml:lang="vi">Hồ sơ khảo sát</value>
         <value xml:lang="zh">简介调查</value>
         <value xml:lang="zh_TW">問卷簡介</value>
-        <!--value xml:lang="zh_TW">快速增加</value--> <!-- duplicate -->
+         
     </property>
     <property key="PageTitleRequestReturn">
         <value xml:lang="cs">Odpověď na poptávku</value>
@@ -5435,6 +5444,7 @@
         <value xml:lang="de">Tag Suchergebnis</value>
         <value xml:lang="en">Tag results</value>
         <value xml:lang="fr">Résultats de la recherche par étiquette</value>
+        <value xml:lang="hr">Rezultati oznaka</value>
         <value xml:lang="ja">タグ結果</value>
         <value xml:lang="vi">Đánh dấu (Tag) kết quả</value>
         <value xml:lang="zh">标签结果</value>
