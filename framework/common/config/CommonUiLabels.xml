@@ -17,7 +17,7 @@
     specific language governing permissions and limitations
     under the License.
 -->
-<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<resource>
     <property key="AP">
         <value xml:lang="cs">Závazky</value>
         <value xml:lang="de">Kreditoren</value>
@@ -98,6 +98,7 @@
         <value xml:lang="es">Información de negocio</value>
         <value xml:lang="fr">Informat. décis.</value>
         <value xml:lang="hi-IN">व्यापार बुद्धिमत्ता</value>
+        <value xml:lang="hr">Poslovna analitika (BI)</value>
         <value xml:lang="it">Business intelligence</value>
         <value xml:lang="ja">ビジネスインテリジェンス(BI)</value>
         <value xml:lang="nl">Business intelligence</value>
@@ -115,6 +116,7 @@
         <value xml:lang="es">Gestión de contenido</value>
         <value xml:lang="fr">Sites de gestion de contenu</value>
         <value xml:lang="hi-IN">सीऍमएस साईट</value>
+        <value xml:lang="hr">CMS stranica</value>
         <value xml:lang="it">Sito CMS</value>
         <value xml:lang="ja">コンテンツ管理(CMS)</value>
         <value xml:lang="pt-BR">CMS do Site</value>
@@ -149,6 +151,7 @@
         <value xml:lang="cs">Správa katalogu produktů, Kategorií, Produktů, Cenových pravidel, Akcí, Obchodu</value>
         <value xml:lang="en">Product Catalog management, Categories, Product, Price rules, Promotions, Product Store</value>
         <value xml:lang="fr">Gestion des catalogues, Catégories, Articles, Promotions, Règles de prix, Centres de profit </value>
+        <value xml:lang="hr">Upravljanje katalogom proizvoda, Kategorije, Proizvod, Pravila cijena, Promocije, Trgovina proizvoda</value>
         <value xml:lang="ja">製品カタログ管理、カテゴリ、製品、価格ルール、プロモーション、製品店舗</value>
         <value xml:lang="ru">Каталог управления товарами, Категории, Товар, Цены, Акции, Магазин</value>
         <value xml:lang="vi">Quản lý Phân loại Trình diễn, Phân loại Quản lý, Sản phẩm, Công thức giá, Khuyến mãi, Cửa hàng</value>
@@ -1118,6 +1121,7 @@
         <value xml:lang="en">Authenticate</value>
         <value xml:lang="es">Autentificar</value>
         <value xml:lang="fr">Authentifier</value>
+        <value xml:lang="hr">Ovjeri</value>
         <value xml:lang="ja">証明</value>
         <value xml:lang="ru">Аутентификация</value>
         <value xml:lang="zh">认证</value>
@@ -1127,6 +1131,7 @@
         <value xml:lang="en">Authorise</value>
         <value xml:lang="es">Autorizar</value>
         <value xml:lang="fr">Autoriser</value>
+        <value xml:lang="hr">Odobri</value>
         <value xml:lang="ja">許可</value>
         <value xml:lang="ru">Авторизация</value>
         <value xml:lang="vi">Cấp phép</value>
@@ -1358,6 +1363,7 @@
     <property key="CommonBuiltOn">
         <value xml:lang="en">built on</value>
         <value xml:lang="fr">compilée le</value>
+    <value xml:lang="hr">izgrađen na</value>
     </property>
     <property key="CommonBut">
         <value xml:lang="ar">إلا</value>
@@ -1406,6 +1412,7 @@
         <value xml:lang="en">Got AddressError=true from CDyne ReturnCityState service; zipcode=${zipcode}</value>
         <value xml:lang="es">Se obtuvo AddressError=true del servicio CDyne ReturnCityState; zipcode=${zipcode}</value>
         <value xml:lang="fr">Obtention d'AddressError=true depuis le service CDyne ReturnCityState; zipcode = ${zipcode}</value>
+        <value xml:lang="hr">Dobio AddressError=true iz servisa CDyne ReturnCityState; poštanski broj=${poštanski broj}</value>
         <value xml:lang="it">Ottenuto AddressError=true dal servizio CDyne ReturnCityState; zipcode=${zipcode}</value>
         <value xml:lang="ja">CDyne ReturnCityState サービスで AddressError=true を取得しました; zipcode=${zipcode}</value>
         <value xml:lang="ru">Полученная AddressError = true из CDyne ReturnCityState service; zipcode=${zipcode} </value>
@@ -1416,6 +1423,7 @@
         <value xml:lang="en">Error calling CDyne service at URL ${serviceUrl}: ${errorString}</value>
         <value xml:lang="es">Error al llamar al servicio CDyne en la URL ${serviceUrl}: ${errorString}</value>
         <value xml:lang="fr">Erreur de l'appel du service CDyne sur l'adresse ${serviceUrl} : ${errorString}</value>
+        <value xml:lang="hr">Greška pri pozivanju servisa CDyne na URL ${serviceUrl}: ${errorString}</value>
         <value xml:lang="it">Errore durante la chiamata del servizio CDyne dell'URL ${serviceUrl}: ${errorString})</value>
         <value xml:lang="ja">CDyne サービス呼び出し中にエラー URL ${serviceUrl}: ${errorString}</value>
         <value xml:lang="ru">Ошибка вызов CDyne service в ссылке ${serviceUrl}: ${errorString}</value>
@@ -1426,6 +1434,7 @@
         <value xml:lang="en">Error parsing XML result from CDyne service at URL ${serviceUrl}: ${errorString}</value>
         <value xml:lang="es">Error al analizar el XML devuelto por el servicio CDyne en la URL ${serviceUrl}: ${errorString}</value>
         <value xml:lang="fr">Erreur de lecture XML depuis le service CDyne sur l'adresse ${serviceUrl} : ${errorString}</value>
+        <value xml:lang="hr">Greška pri čitanju XML rezultata servisa CDyne na URL-u ${serviceUrl}: ${errorString}</value>
         <value xml:lang="it">Errore di parsing XML risposta dal servizio CDyne dell'URL ${serviceUrl}: ${errorString})</value>
         <value xml:lang="ja">CDyne サービスのXML結果解析中にエラー URL ${serviceUrl}: ${errorString}</value>
         <value xml:lang="ru">Ошибка парса XML результат из CDyne service в ссылке ${serviceUrl}: ${errorString} </value>
@@ -1436,6 +1445,7 @@
         <value xml:lang="en">Got ServiceError=true from CDyne ReturnCityState service; zipcode=${zipcode}</value>
         <value xml:lang="es">Se obtuvo ServiceError=true del servicio CDyne ReturnCityState; zipcode=${zipcode}</value>
         <value xml:lang="fr">Obtention de ServiceError=true depuis le service CDyne ReturnCityState; zipcode=${zipcode}</value>
+        <value xml:lang="hr">Dobio ServiceError=true iz servisa CDyne ReturnCityState; poštanski broj=${poštanski broj}</value>
         <value xml:lang="it">Ottenuto ServiceError=true dal servizio CDyne ReturnCityState; zipcode=${zipcode}</value>
         <value xml:lang="ja">CDyne ReturnCityState サービスで ServiceError=true を取得しました; zipcode=${zipcode}</value>
         <value xml:lang="ru">Получение ServiceError=true из CDyne ReturnCityState service; zipcode=${zipcode}</value>
@@ -1582,6 +1592,7 @@
         <value xml:lang="en">charactors left.</value>
         <value xml:lang="es">caracteres restantes.</value>
         <value xml:lang="fr">caractères restants.</value>
+        <value xml:lang="hr">znakovi lijevo.</value>
         <value xml:lang="ja">文字 残り</value>
         <value xml:lang="pt-BR">Caracteres sobrando.</value>
         <value xml:lang="ru">Осталось символов</value>
@@ -1865,6 +1876,7 @@
         <value xml:lang="es">-</value>
         <value xml:lang="fr">-</value>
         <value xml:lang="hi-IN">-</value>
+        <value xml:lang="hr">-</value>
         <value xml:lang="it">-</value>
         <value xml:lang="ja">-</value>
         <value xml:lang="nl">-</value>
@@ -2055,7 +2067,7 @@
         <value xml:lang="en">Do you confirm the addition?</value>
         <value xml:lang="es">Confirmar</value>
         <value xml:lang="fr">Confirmez-vous l'ajout ?</value>
-        <value xml:lang="hi-IN">à¤ªà¥&#129;à¤·à¥&#141;à¤Ÿà¤¿</value>
+        <value xml:lang="hi-IN">à¤ªà¥à¤·à¥à¤Ÿà¤¿</value>
         <value xml:lang="hr">Potvrđujete li dodavanje?</value>
         <value xml:lang="it">Conferma</value>
         <value xml:lang="ja">追加してもよろしいですか?</value>
@@ -2075,7 +2087,7 @@
         <value xml:lang="en">Do you confirm the suppression?</value>
         <value xml:lang="es">Confirmar</value>
         <value xml:lang="fr">Confirmez vous la suppression ?</value>
-        <value xml:lang="hi-IN">à¤ªà¥&#129;à¤·à¥&#141;à¤Ÿà¤¿</value>
+        <value xml:lang="hi-IN">à¤ªà¥à¤·à¥à¤Ÿà¤¿</value>
         <value xml:lang="hr">Potvrđujete li obustavu?</value>
         <value xml:lang="it">Conferma</value>
         <value xml:lang="ja">削除してもよろしいですか?</value>
@@ -2244,6 +2256,7 @@
         <value xml:lang="es">Copyright</value>
         <value xml:lang="fr">Droit d'auteur</value>
         <value xml:lang="hi-IN">कॉपीराइट</value>
+        <value xml:lang="hr">Autorska prava</value>
         <value xml:lang="it">Copyright</value>
         <value xml:lang="ja">Copyright</value>
         <value xml:lang="pt-BR">Copyright</value>
@@ -2319,6 +2332,7 @@
         <value xml:lang="es">Código de país</value>
         <value xml:lang="fr">Code pays</value>
         <value xml:lang="hi_IN">देश कोड</value>
+        <value xml:lang="hr">Kôd države</value>
         <value xml:lang="it">Codice paese</value>
         <value xml:lang="ja">国コード</value>
         <value xml:lang="nl">Land Kode</value>
@@ -2336,6 +2350,7 @@
         <value xml:lang="en">Country code is Missing</value>
         <value xml:lang="fr">Le code pays manque</value>
         <value xml:lang="hi_IN">देश कोड गायब है</value>
+        <value xml:lang="hr">Nedostaje kôd države</value>
         <value xml:lang="it">Codice paese è mancante</value>
         <value xml:lang="ja">国コードが正しくありません</value>
         <value xml:lang="pt_BR">Código do país está em branco</value>
@@ -2351,6 +2366,7 @@
         <value xml:lang="es">Falta el País</value>
         <value xml:lang="fr">Pays absent</value>
         <value xml:lang="hi_IN">देश नही है</value>
+        <value xml:lang="hr">Država nedostaje</value>
         <value xml:lang="it">Paese mancante</value>
         <value xml:lang="ja">国が正しくありません</value>
         <value xml:lang="nl">Naam van het land mist</value>
@@ -2598,6 +2614,7 @@
         <value xml:lang="es">Panel de control</value>
         <value xml:lang="fr">Tableau de bord</value>
         <value xml:lang="hi-IN">डैशबोर्ड</value>
+        <value xml:lang="hr">Kontrolna ploča</value>
         <value xml:lang="it">Cruscotto</value>
         <value xml:lang="ja">ダッシュボード</value>
         <value xml:lang="pt-BR">Painel</value>
@@ -2733,6 +2750,7 @@
         <value xml:lang="en">Deactivate, set thruDate to Now</value>
         <value xml:lang="es">Desactivar, establecer fecha actual como fecha final</value>
         <value xml:lang="fr">Désactiver, mettre la date du jour comme date de fin</value>
+        <value xml:lang="hr">Deaktiviraj, postavi 'do datuma' na 'sada'</value>
         <value xml:lang="ja">無効化、終了日に現在を設定</value>
         <value xml:lang="pt-BR">Desativar, para definir thruDate para agora</value>
         <value xml:lang="ru">Деактивируйте, чтобы поставить текущую дату</value>
@@ -2926,7 +2944,7 @@
         <value xml:lang="pt-PT">Descrição</value>
         <value xml:lang="ro">Descriere</value>
         <value xml:lang="ru">Описание</value>
-        <!--value xml:lang="th">รายละเอียด</value-->
+        
         <value xml:lang="th">คำอธิบาย</value>
         <value xml:lang="vi">Mô tả</value>
         <value xml:lang="zh">描述</value>
@@ -3269,6 +3287,7 @@
         <value xml:lang="en">[ADDRERR] Address error when sending message to ${sendTo} from ${sendFrom} cc ${sendCc} bcc ${sendBcc} subject ${subject}</value>
         <value xml:lang="es">[ADDRERR] Error en la dirección al enviar el mensaje para ${sendTo} de ${sendFrom} cc ${sendCc} bcc ${sendBcc} asunto ${subject}</value>
         <value xml:lang="fr">[ADDRERR] Erreur lors de l'envoi du courriel à ${sendTo}, depuis ${sendFrom}, en copie, ${sendCc}, en copie cachée ${sendBcc}, avec le sujet ${subject}</value>
+        <value xml:lang="hr">[ADDRERR] Greška u adresi prilikom slanja poruke na ${sendTo} od ${sendFrom} cc ${sendCc} bcc ${sendBcc} naslov ${subject}</value>
         <value xml:lang="it">[ADDRERR] Errore indirizzo durante l'invio del messaggio a ${sendTo} da ${sendFrom} cc ${sendCc} cn ${sendBcc} soggetto ${subject}</value>
         <value xml:lang="ja">[ADDRERR] メッセージの送信中にエラー to ${sendTo} from ${sendFrom} cc ${sendCc} bcc ${sendBcc} 件名 ${subject}</value>
         <value xml:lang="ru">[ADDRERR] Ошибка адреса когда было послано сообщение к ${sendTo} from ${sendFrom} cc ${sendCc} bcc ${sendBcc} subject ${subject}</value>
@@ -3280,6 +3299,7 @@
         <value xml:lang="en">[CON] Connection error when sending message to ${sendTo} from ${sendFrom} cc ${sendCc} bcc ${sendBcc} subject ${subject}</value>
         <value xml:lang="es">[CON] Error de conexión al enviar el mensaje para ${sendTo} de ${sendFrom} cc ${sendCc} bcc ${sendBcc} asunto ${subject}</value>
         <value xml:lang="fr">[CON] Erreur de connexion lors de l'envoi du courriel à ${sendTo}, depuis ${sendFrom}, en copie, ${sendCc}, en copie cachée ${sendBcc}, avec le sujet ${subject}</value>
+        <value xml:lang="hr">[CON] Greška veze prilikom slanja poruke na ${sendTo} od ${sendFrom} cc ${sendCc} bcc ${sendBcc} naslov ${subject}</value>
         <value xml:lang="it">[CON] Errore connessione durante l'invio del messaggio a ${sendTo} da ${sendFrom} cc ${sendCc} cn ${sendBcc} soggetto ${subject}</value>
         <value xml:lang="ja">[CON] メッセージの送信中に接続エラー to ${sendTo} from ${sendFrom} cc ${sendCc} bcc ${sendBcc} 件名 ${subject}</value>
         <value xml:lang="ru">[CON] Ошибка связи когда отправляется сообщение к ${sendTo} from ${sendFrom} cc ${sendCc} bcc ${sendBcc} subject ${subject}</value>
@@ -3291,6 +3311,7 @@
         <value xml:lang="en">Error send email: ${errorString}</value>
         <value xml:lang="es">Error enviando correo electrónico: ${errorString}</value>
         <value xml:lang="fr">Erreur dans l'envoi du courriel : ${errorString}</value>
+        <value xml:lang="hr">Greška pri slanju e-maila: ${errorString}</value>
         <value xml:lang="it">Errore invio email: ${errorString}</value>
         <value xml:lang="ja">メール送信エラー: ${errorString}</value>
         <value xml:lang="ru">Ошибка послания письма: ${errorString}</value>
@@ -3302,6 +3323,7 @@
         <value xml:lang="en">Error getting content: ${errorString}</value>
         <value xml:lang="es">Error obteniendo contenido: ${errorString}</value>
         <value xml:lang="fr">Erreur dans l'obtention du contenu du courriel : ${errorString}</value>
+        <value xml:lang="hr">Greška pri dobivanju sadržaja: ${errorString}</value>
         <value xml:lang="it">Errore nel ricavare contenuto: ${errorString}</value>
         <value xml:lang="ja">内容取得中にエラー: ${errorString}</value>
         <value xml:lang="ru">Ошибка получения содержимого: ${errorString}</value>
@@ -3313,6 +3335,7 @@
         <value xml:lang="en">IOException when creating message to ${sendTo} from ${sendFrom} cc ${sendCc} bcc ${sendBcc} subject ${subject}</value>
         <value xml:lang="es">IOException creando el mensaje para ${sendTo} de ${sendFrom} cc ${sendCc} bcc ${sendBcc} asunto ${subject}</value>
         <value xml:lang="fr">Erreur d'Entrée/Sortie lors de la création du courriel à ${sendTo}, depuis ${sendFrom}, en copie, ${sendCc}, en copie cachée ${sendBcc}, avec le sujet ${subject}</value>
+        <value xml:lang="hr">IOException prilikom izrade poruke za ${sendTo} od ${sendFrom} cc ${sendCc} bcc ${sendBcc} naslov ${subject}</value>
         <value xml:lang="it">IOException durante la creazione del messaggio a ${sendTo} da ${sendFrom} cc ${sendCc} cn ${sendBcc} soggetto ${subject}</value>
         <value xml:lang="ja">メッセージ作成中にI/O例外 to ${sendTo} from ${sendFrom} cc ${sendCc} bcc ${sendBcc} 件名 ${subject}</value>
         <value xml:lang="ru">IOException когда создается сообщение к ${sendTo} from ${sendFrom} cc ${sendCc} bcc ${sendBcc} subject ${subject}</value>
@@ -3323,6 +3346,7 @@
         <value xml:lang="en">Malformed URL: ${bodyUrl}; error was: ${errorString}</value>
         <value xml:lang="es">URL mal formada: ${bodyUrl}; el error fue: ${errorString}</value>
         <value xml:lang="fr">URL invalide : ${bodyUrl}; erreur levée : ${errorString}</value>
+        <value xml:lang="hr">Neispravan URL: ${bodyUrl}; greška je bila: ${errorString}</value>
         <value xml:lang="it">URL malformato : ${bodyUrl}; errore era: ${errorString}</value>
         <value xml:lang="ja">不正なURL: ${bodyUrl}; エラー: ${errorString}</value>
         <value xml:lang="ru">Недействительный URL: ${bodyUrl}; ошибка была: ${errorString}</value>
@@ -3333,6 +3357,7 @@
         <value xml:lang="en">MessagingException when creating message to ${sendTo} from ${sendFrom} cc ${sendCc} bcc ${sendBcc} subject ${subject}</value>
         <value xml:lang="es">MessagingException creando el mensaje para ${sendTo} de ${sendFrom} cc ${sendCc} bcc ${sendBcc} asunto ${subject}</value>
         <value xml:lang="fr">MessagingException lors de la création du courriel à ${sendTo}, depuis ${sendFrom}, en copie, ${sendCc}, en copie cachée ${sendBcc}, avec le sujet ${subject}</value>
+        <value xml:lang="hr">MessagingException prilikom izrade poruke za ${sendTo} od ${sendFrom} cc ${sendCc} bcc ${sendBcc} naslov ${subject}</value>
         <value xml:lang="it">MessagingException durante la creazione del messaggio a ${sendTo} da ${sendFrom} cc ${sendCc} cn ${sendBcc} soggetto ${subject}</value>
         <value xml:lang="ja">メッセージ作成中にメッセージ例外 to ${sendTo} from ${sendFrom} cc ${sendCc} bcc ${sendBcc} 件名 ${subject}</value>
         <value xml:lang="ru">Сообщение об ошибке когда создается сообщение к ${sendTo} from ${sendFrom} cc ${sendCc} bcc ${sendBcc} subject ${subject}</value>
@@ -3343,6 +3368,7 @@
         <value xml:lang="en">Parameter sendVia is required when sendType is not mail.smtp.host</value>
         <value xml:lang="es">El parámetro sendVia debe indicarse cuando sendType no es mail.smtp.host</value>
         <value xml:lang="fr">Le paramêtre sendVia est requis lorsque sendType n'est pas mail.smtp.host</value>
+        <value xml:lang="hr">Parametar sendVia je obavezan kada sendType nije mail.smtp.host</value>
         <value xml:lang="it">Parametro sendVia è richiesto quando sendType non è mail.smtp.host</value>
         <value xml:lang="ja">sendTypeがmail.smtp.hostでない時、sendViaパラメータは必須です。</value>
         <value xml:lang="ru">Параметр sendVia требуется когда sendType не mail.smtp.host </value>
@@ -3353,6 +3379,7 @@
         <value xml:lang="en">Error rendering screen for email: ${errorString}</value>
         <value xml:lang="es">Error componiendo pantalla para el correo electrónico: ${errorString}</value>
         <value xml:lang="fr">Erreur lors du rendu du contenu du courriel : ${errorString}</value>
+        <value xml:lang="hr">Greška pri generiranju ekrana za e-mail: ${errorString}</value>
         <value xml:lang="it">Errore di visualizzazione videata per email: ${errorString}</value>
         <value xml:lang="ja">電子メールの画面レンダリング中にエラー: ${errorString}</value>
         <value xml:lang="ru">Ошибка составления скрина для почты: ${errorString}</value>
@@ -3363,6 +3390,7 @@
         <value xml:lang="en">Error rendering PDF attachment for email: ${errorString}</value>
         <value xml:lang="es">Error componiendo el PDF para adjuntar por correo electrónico: ${errorString}</value>
         <value xml:lang="fr">Erreur dans le rendu des PDF en pièce jointe du courriel : ${errorString}</value>
+        <value xml:lang="hr">Greška pri generiranju PDF privitka za e-mail: ${errorString}</value>
         <value xml:lang="it">Errore di visualizzazione allegato PDF per email: ${errorString}</value>
         <value xml:lang="ja">電子メールのPDF添付レンダリング中にエラー: ${errorString}</value>
         <value xml:lang="ru">Ошибка составления PDF приложения для почты: ${errorString}</value>
@@ -3373,6 +3401,7 @@
         <value xml:lang="en">Undelivered Mail Returned to Sender</value>
         <value xml:lang="es">Correo electrónico que no puede ser entregado devuelto al remitente</value>
         <value xml:lang="fr">Non distribution du courriel, retourné à l'expéditeur</value>
+        <value xml:lang="hr">Nedostavljen e-mail vraćen pošiljatelju</value>
         <value xml:lang="it">Mail non consegnabile restituita a colui che l'ha inviata</value>
         <value xml:lang="ja">配達できなかったメールが送信者に戻されました</value>
         <value xml:lang="ru">Недоставленная почта вернулась к отправителю</value>
@@ -3383,6 +3412,7 @@
         <value xml:lang="en">PartyId or Email Address (sendTo) should be specified!</value>
         <value xml:lang="es">Debe especificarse el código de participante o la dirección de correo electrónico de destino!</value>
         <value xml:lang="fr">Une réf. acteur ou un courriel (sendTo) doit être spécifié</value>
+        <value xml:lang="hr">Treba navesti PartyId ili adresu e-maila (sendTo)!</value>
         <value xml:lang="it">Id soggetto o indirizzo e-mail (inviare a) deve essere specificato!</value>
         <value xml:lang="ja">取引先IDまたは電子メールアドレス(送信先)を指定してください!</value>
         <value xml:lang="pt-BR">ID de participante (PartyId) ou E-mail (SendTo) deve ser especificado!</value>
@@ -3457,8 +3487,8 @@
         <value xml:lang="zh-TW">電子郵件</value>
     </property>
     <property key="CommonEmptyHeader">
-        <!-- do not  remove this! -->
         <value xml:lang="en" xml:space="preserve"> </value>
+        <value xml:lang="hr" xml:space="preserve"> </value>
     </property>
     <property key="CommonEnable">
         <value xml:lang="cs">Povolit</value>
@@ -3562,6 +3592,7 @@
         <value xml:lang="en">Unable to create test entity</value>
         <value xml:lang="es">No se puede crear la entidad de prueba</value>
         <value xml:lang="fr">Impossible de créer l'entité de test</value>
+        <value xml:lang="hr">Nije moguće stvoriti testni entitet</value>
         <value xml:lang="it">Non è possibile creare un test entità</value>
         <value xml:lang="ja">テストエンティティが作成できません</value>
         <value xml:lang="ru">Невозможность создания тестовой сущности</value>
@@ -3676,6 +3707,7 @@
         <value xml:lang="es">Error: cambiar estado de [${lookedUpValue.statusId}] a [${parameters.statusId}] no está permitido</value>
         <value xml:lang="fr">Erreur le changement de status depuis [${lookedUpValue.statusId}] vers [${parameters.statusId}] n'est pas autorisé.</value>
         <value xml:lang="hi-IN">त्रुटि: [${lookedUpValue.statusId}] स्थिति से [${parameters.statusId}] स्थिति में बदलने की अनुमति नहीं है</value>
+        <value xml:lang="hr">Greška: promjena statusa iz [${lookedUpValue.statusId}] u [${parameters.statusId}] nije dopuštena.</value>
         <value xml:lang="it">Errore: stato cambiato da [${lookedUpValue.statusId}] a [${parameters.statusId}] non è permesso</value>
         <value xml:lang="ja">エラー: [${lookedUpValue.statusId}] から [${parameters.statusId}] へステータスの変更はできません。</value>
         <value xml:lang="pt-BR">Erro: alteração de estado de [${lookedUpValue.statusId}] para [${parameters.statusId}] não é permitida.</value>
@@ -3693,6 +3725,7 @@
         <value xml:lang="es">Error: el estado de ${entity} no es válido, es: ${lookedUpValue.statusId} pero debería ser: ${goodStatusId}.</value>
         <value xml:lang="fr">Erreur: le status de ${entity} n'est pas valide : ${lookedUpValue.statusId} devrait être ${goodStatusId}.</value>
         <value xml:lang="hi-IN">त्रुटि: ${entity} की स्थिति मान्य नहीं है, यह : ${lookedUpValue.statusId} है पर होना : ${goodStatusId} चाहिए</value>
+        <value xml:lang="hr">Greška: status ${entity} nije valjan, to je: ${lookedUpValue.statusId}, ali bi trebao biti: ${goodStatusId}.</value>
         <value xml:lang="it">Errore: stato di ${entity} non èp valido, questo è: ${lookedUpValue.statusId} ma dovrebbe essere: ${goodStatusId}.</value>
         <value xml:lang="ja">エラー: ${entity} のステータスは有効ではありません。${lookedUpValue.statusId} でしたが、${goodStatusId}であるべきです。</value>
         <value xml:lang="pt-BR">Erro: estado de ${entity} não é válido, é ${lookedUpValue.statusId} mas deveria ser: ${goodStatusId}.</value>
@@ -3707,6 +3740,7 @@
         <value xml:lang="en">An error occurred submitting form.</value>
         <value xml:lang="es">Ocurrió un error enviando el formulario.</value>
         <value xml:lang="fr">Erreur dans la soumission du formulaire.</value>
+        <value xml:lang="hr">Došlo je do greške prilikom slanja obrasca.</value>
         <value xml:lang="ja">フォームの送信中にエラーが発生しました。</value>
         <value xml:lang="ru">Ошибка которая привела к потверждению формы</value>
         <value xml:lang="vi">Lỗi xảy ra khi gửi thông tin (form) lên máy chủ.</value>
@@ -3941,6 +3975,7 @@
         <value xml:lang="en">Definition, what is it?</value>
         <value xml:lang="es">Definición, ¿qué és?</value>
         <value xml:lang="fr">Définition, qu'est-ce ?</value>
+        <value xml:lang="hr">Definicija, što je to?</value>
         <value xml:lang="it">Definizione, che cose'è ?</value>
         <value xml:lang="ja">定義は何ですか?</value>
         <value xml:lang="pt-BR">Definição, o que é isso?</value>
@@ -3953,6 +3988,7 @@
         <value xml:lang="en">What's on the screen?</value>
         <value xml:lang="es">¿Qué hay en la plantalla?</value>
         <value xml:lang="fr">Que dire sur les écrans (screen) ?</value>
+        <value xml:lang="hr">Što je na ekranu?</value>
         <value xml:lang="it">Che cosa ci sarà in questa videata ?</value>
         <value xml:lang="ja">画面に何がありますか?</value>
         <value xml:lang="pt-BR">O que está na tela?</value>
@@ -3965,6 +4001,7 @@
         <value xml:lang="en">Help screen.</value>
         <value xml:lang="es">Pantalla de ayuda.</value>
         <value xml:lang="fr">Ecran d'aide</value>
+        <value xml:lang="hr">Ekran pomoći.</value>
         <value xml:lang="it">Videata di aiuto.</value>
         <value xml:lang="ja">ヘルプ画面</value>
         <value xml:lang="pt-BR">Tela de Ajuda.</value>
@@ -3977,6 +4014,7 @@
         <value xml:lang="en">What is it used for?</value>
         <value xml:lang="es">¿Para qué se usa?</value>
         <value xml:lang="fr">A quoi cela sert-il ?</value>
+        <value xml:lang="hr">Čemu služi?</value>
         <value xml:lang="it">Per cosa verrà usato ?</value>
         <value xml:lang="ja">何に使いますか?</value>
         <value xml:lang="pt-BR">Para que é usado?</value>
@@ -4003,6 +4041,7 @@
         <value xml:lang="en">External Device</value>
         <value xml:lang="es">Dispositivo externo</value>
         <value xml:lang="fr">Mat. externe</value>
+        <value xml:lang="hr">Vanjski uređaj</value>
         <value xml:lang="ja">外部デバイス</value>
         <value xml:lang="ru">Экстренное устройство</value>
         <value xml:lang="vi">Thiết bị ngoài</value>
@@ -4013,6 +4052,7 @@
         <value xml:lang="en">External Device User Action</value>
         <value xml:lang="es">Acción del usuario del dispositivo externo</value>
         <value xml:lang="fr">Assoc Action/Utilisateur avec Mat. externe</value>
+        <value xml:lang="hr">Radnja korisnika na vanjskom uređaju</value>
         <value xml:lang="ja">外部デバイスユーザアクション</value>
         <value xml:lang="ru">Эксетренное устройство пользователя - Активно</value>
         <value xml:lang="vi">Tác động người dùng</value>
@@ -4224,6 +4264,7 @@
         <value xml:lang="en">Error preparing conditions: ${errorString}</value>
         <value xml:lang="es">Error preparando las condiciones: ${errorString}</value>
         <value xml:lang="fr">Erreur dans la préparation des conditions de recherche : ${errorString}</value>
+        <value xml:lang="hr">Greška pri pripremi uvjeta: ${errorString}</value>
         <value xml:lang="it">Errore duranta la preparazione delle condizioni di ricerca: ${errorString}</value>
         <value xml:lang="ja">条件の準備中にエラー: ${errorString}</value>
         <value xml:lang="ru">Ошибка подготовки условий: ${errorString}</value>
@@ -4235,6 +4276,7 @@
         <value xml:lang="en">Error finding iterator: ${errorString}</value>
         <value xml:lang="es">Error buscando iterador: ${errorString}</value>
         <value xml:lang="fr">Erreur dans la récupération de l'itérateur : ${errorString}</value>
+        <value xml:lang="hr">Greška u pronalaženju iteratora: ${errorString}</value>
         <value xml:lang="it">Errore duranta la ricerca, iterator non restituito: ${errorString}</value>
         <value xml:lang="ja">イテレータの検索中にエラー: ${errorString}</value>
         <value xml:lang="ru">Ошибка поиска итератора: ${errorString}</value>
@@ -4246,6 +4288,7 @@
         <value xml:lang="en">Error running Find on the ${entityName} entity: ${errorString}</value>
         <value xml:lang="es">Error buscando en la entidad ${entityName}: ${errorString}</value>
         <value xml:lang="fr">Erreur dans l'exécution de la recherche sur l'entité ${entityName} : ${errorString}</value>
+        <value xml:lang="hr">Greška pri pokretanju pretrage na entitetu ${entityName}: ${errorString}</value>
         <value xml:lang="it">Errore duranta la ricerca sull'entità ${entityName}: ${errorString}</value>
         <value xml:lang="ja">${entityName} エンティティの検索実行中にエラー: ${errorString}</value>
         <value xml:lang="ru">Ошибка запуска Найти на ${entityName} entity: ${errorString}</value>
@@ -4490,6 +4533,7 @@
         <value xml:lang="es">Alerta de Frame</value>
         <value xml:lang="fr">Alerte de frame</value>
         <value xml:lang="hi-IN">फ़्रेम चेतावनी</value>
+        <value xml:lang="hr">Okvir upozorenja</value>
         <value xml:lang="it">Avviso frame</value>
         <value xml:lang="ja">フレーム警告</value>
         <value xml:lang="pt">Alerta no Frame</value>
@@ -4508,6 +4552,7 @@
         <value xml:lang="es">Debe habilitar frames para ver este documento.</value>
         <value xml:lang="fr">Ce document est conçu pour être vu en utilisant les frames. Si vous voyez ce message, vous utilisez un navigateur un frame ne gérant pas les frames</value>
         <value xml:lang="hi-IN">इस दस्तावेज को फ़्रेम फीचर्स का उपयोग देखने के लिए बनाया गया है! यदि आप इस संदेश को देखे, आप एक गैर फ्रेम-सक्षम वेब ग्राहक का उपयोग कर रहे हैं</value>
+        <value xml:lang="hr">Ovaj dokument predviđen je za pregled unutar okvira. Ako vidite ovu poruku, koristite web-klijent koji ne podržava okvire.</value>
         <value xml:lang="it">Questo documento è disegnato per essere visualizzato usando i frames. Se vedi questo messaggio, tu stai usando un client web senza capacità frame.</value>
         <value xml:lang="ja">この画面はフレーム機能を使用して作成されています。このメッセージが表示される場合は、ブラウザがフレームに対応していません。</value>
         <value xml:lang="pt">Este documento destina-se a ser visto utilizando frames. Se estiver a vêr esta mensagem, então está autilizar um browser que não suporta frames.</value>
@@ -4701,6 +4746,7 @@
         <value xml:lang="en">connection refused</value>
         <value xml:lang="es">conexión rechazada</value>
         <value xml:lang="fr">Connexion refusée</value>
+        <value xml:lang="hr">veza odbijena</value>
         <value xml:lang="it">connessione rifiutata</value>
         <value xml:lang="ja">接続が拒否されました</value>
         <value xml:lang="ru">В связи отказано</value>
@@ -4712,6 +4758,7 @@
         <value xml:lang="en">ERROR: Could not open local file</value>
         <value xml:lang="es">Error: no se puede abrir el fichero local</value>
         <value xml:lang="fr">Erreur : le fichier local n'a pas pu être ouvert</value>
+        <value xml:lang="hr">GREŠKA: Nije moguće otvoriti lokalnu datoteku</value>
         <value xml:lang="it">ERRORE: Non è possibile aprire il file locale</value>
         <value xml:lang="ja">エラー: ローカルファイルをオープンできません</value>
         <value xml:lang="ru">Ошибка: Не можем открыть локальный файл</value>
@@ -4723,6 +4770,7 @@
         <value xml:lang="en">File not sent succesfully: ${replyString}</value>
         <value xml:lang="es">Fichero no enviado correctamente: ${replyString}</value>
         <value xml:lang="fr">L'envoi du fichier a échoué : ${replyString}</value>
+        <value xml:lang="hr">Datoteka nije uspješno poslana: ${reply String}</value>
         <value xml:lang="it">File non inviato con successo: ${replyString}</value>
         <value xml:lang="ja">ファイルが送信できませんでした: ${replyString}</value>
         <value xml:lang="ru">Файл не отправлен успешно: ${replyString}</value>
@@ -4734,6 +4782,7 @@
         <value xml:lang="en">Login failed (${username}, ${password})</value>
         <value xml:lang="es">Fallo de conexión (${username}, ${password})</value>
         <value xml:lang="fr">Échec de l'authentification (${username}, ${password})</value>
+        <value xml:lang="hr">Prijava nije uspjela (${username}, ${password})</value>
         <value xml:lang="it">Login fallito (${username}, ${password})</value>
         <value xml:lang="ja">ログイン失敗 (${username}, ${password})</value>
         <value xml:lang="ru">Логин ошибочен: (${username}, ${password})</value>
@@ -4745,6 +4794,7 @@
         <value xml:lang="en">Problem with FTP transfer: ${errorString}</value>
         <value xml:lang="es">Problema con la transferencia FTP: ${errorString}</value>
         <value xml:lang="fr">Erreur pendant le transfert FTP : ${errorString}</value>
+        <value xml:lang="hr">Problem s FTP prijenosom: ${errorString}</value>
         <value xml:lang="it">Problema durante il trasferimento FTP: ${errorString}</value>
         <value xml:lang="ja">FTP転送でエラー: ${errorString}</value>
         <value xml:lang="ru">Проблемы с FTP: ${errorString}</value>
@@ -4756,6 +4806,7 @@
         <value xml:lang="en">SITE command ${command} failed: ${replyString}</value>
         <value xml:lang="es">Ha fallado el comando ${command}: ${replyString}</value>
         <value xml:lang="fr">La commande ${command} a échoué sur le site distant : ${replyString}</value>
+        <value xml:lang="hr">Naredba SITE ${command} nije uspjela: ${replyString}</value>
         <value xml:lang="it">Comando sito ${command} fallito: ${replyString}</value>
         <value xml:lang="ja">SITE コマンド ${command} でエラー: ${replyString}</value>
         <value xml:lang="ru">Команда не выполнена ${command}: ${replyString}</value>
@@ -4769,6 +4820,7 @@
         <value xml:lang="es">Error de seguridad: Para ejecutar ${resourceDescription} debe tener uno de los siguientes permisos: ${primaryPermission}_${mainAction}, ${primaryPermission}_ADMIN${altPermissionList}</value>
         <value xml:lang="fr">Erreur de sécurité : pour exécuter ${resourceDescription} vous devez avoir une des autorisations suivantes : ${primaryPermission}_${mainAction}, ${primaryPermission}_ADMIN${altPermissionList}</value>
         <value xml:lang="hi-IN">सुरक्षा त्रुटि: ${resourceDescription} चलाने के लिए आप के पास निम्न में से एक अनुमतियाँ हो: ${primaryPermission}_${mainAction}, ${primaryPermission}_ADMIN${altPermissionList}</value>
+        <value xml:lang="hr">Sigurnosna greška: za pokretanje ${resourceDescription} morate imati jedno od sljedećih dopuštenja: ${primaryPermission}_${mainAction}, ${primaryPermission}_ADMIN${altPermissionList}</value>
         <value xml:lang="it">Errore sicurezza: per eseguire ${resourceDescription} tu devi avere uno dei seguenti permessi: ${primaryPermission}_${mainAction}, ${primaryPermission}_ADMIN${altPermissionList}</value>
         <value xml:lang="ja">セキュリティエラー: ${resourceDescription} の実行には次のいずれかの権限が必要です: ${primaryPermission}_${mainAction}, ${primaryPermission}_ADMIN${altPermissionList}</value>
         <value xml:lang="pt">Erro de Segurança: Para executar ${resourceDescription} você deve ter a ${}_${mainAction} ou a permissão ${}_ADMIN</value>
@@ -4784,6 +4836,7 @@
         <value xml:lang="en">Error while executing service</value>
         <value xml:lang="es">Error ejecutando el servicio</value>
         <value xml:lang="fr">Erreur lors de l'exécution du service</value>
+        <value xml:lang="hr">Greška pri pokretanju servisa</value>
         <value xml:lang="ja">サービス実行中にエラー</value>
         <value xml:lang="pt-BR">Erro ao executar serviço</value>
         <value xml:lang="ru">Ошибка при выполнении сервиса</value>
@@ -4795,6 +4848,7 @@
         <value xml:lang="en">Service executed successfully</value>
         <value xml:lang="es">Servicio ejecutado correctamente</value>
         <value xml:lang="fr">Service exécuté avec succès</value>
+        <value xml:lang="hr">Servis je uspječno pokrenut</value>
         <value xml:lang="ja">サービスが正しく実行されました</value>
         <value xml:lang="pt-BR">Serviço executado com sucesso</value>
         <value xml:lang="ru">Сервис выполнен успешно</value>
@@ -4841,6 +4895,7 @@
         <value xml:lang="en">Geo Assoc Type ID</value>
         <value xml:lang="es">Tipo de código de ubicación</value>
         <value xml:lang="fr">Type d'assocation entre zones</value>
+        <value xml:lang="hr">Id vrste geo. veze</value>
         <value xml:lang="ja">位置関連付け種類ID</value>
         <value xml:lang="pt-BR">Tipo de ID de associação geo referencial</value>
         <value xml:lang="ru">Geo Assoc Type ID</value>
@@ -4939,6 +4994,7 @@
         <value xml:lang="es">Tipo de ubicación</value>
         <value xml:lang="fr">Type de zone géographique</value>
         <value xml:lang="hi-IN">भू प्रकार क्रमांक</value>
+        <value xml:lang="hr">Id geografske vrste</value>
         <value xml:lang="it">Tipo Geografia</value>
         <value xml:lang="ja">位置種類ID</value>
         <value xml:lang="pt-BR">ID de tipo de geo referência</value>
@@ -4954,6 +5010,7 @@
         <value xml:lang="en">Well Known Text</value>
         <value xml:lang="es">Texto conocido</value>
         <value xml:lang="fr">Texte connu</value>
+        <value xml:lang="hr">Dobro poznati tekst</value>
         <value xml:lang="ja">通称</value>
         <value xml:lang="pt-BR">Texto bem conhecido</value>
         <value xml:lang="ru">Хорошо знакомый текст</value>
@@ -5186,6 +5243,7 @@
         <value xml:lang="es">Fichero de ayuda o URL no encontrada</value>
         <value xml:lang="fr">Le fichier ou l'URL d'aide n'a pas été trouvé</value>
         <value xml:lang="hi-IN">सहायता फ़ाइल या URL नहीं मिला</value>
+        <value xml:lang="hr">Datoteka pomoći ili URL nije pronađen</value>
         <value xml:lang="it">File di aiuto o URL non trovato</value>
         <value xml:lang="ja">ヘルプファイルまたはURLが見つかりません</value>
         <value xml:lang="pt-BR">Arquivo de Ajuda ou URL não encontrado</value>
@@ -5409,9 +5467,11 @@
     </property>
     <property key="CommonImport">
         <value xml:lang="en">Import</value>
+    <value xml:lang="hr">Uvoz</value>
     </property>
     <property key="CommonImportExport">
         <value xml:lang="en">Import/Export</value>
+    <value xml:lang="hr">Uvoz/Izvoz</value>
     </property>
     <property key="CommonIn">
         <value xml:lang="ar">داخل</value>
@@ -5423,7 +5483,7 @@
         <value xml:lang="hi-IN">अंदर</value>
         <value xml:lang="hr">U</value>
         <value xml:lang="it">In</value>
-        <value xml:lang="ja"></value>
+        <value xml:lang="ja" />
         <value xml:lang="nl">In</value>
         <value xml:lang="pt">Em</value>
         <value xml:lang="ro">In</value>
@@ -5444,7 +5504,7 @@
         <value xml:lang="hi-IN">इस में</value>
         <value xml:lang="hr">U</value>
         <value xml:lang="it">Nel</value>
-        <value xml:lang="ja"></value>
+        <value xml:lang="ja" />
         <value xml:lang="nl">In De</value>
         <value xml:lang="pt">Em</value>
         <value xml:lang="pt-BR">No</value>
@@ -5836,6 +5896,7 @@
         <value xml:lang="en">Last system notes</value>
         <value xml:lang="es">Últimas notas del sistema</value>
         <value xml:lang="fr">Dernières tâches affectées</value>
+        <value xml:lang="hr">Posljednje napomene sustava</value>
         <value xml:lang="it">Ultime note di sistema</value>
         <value xml:lang="ja">最新システムメッセージ</value>
         <value xml:lang="pt-BR">Últimas notas do sistema</value>
@@ -6147,6 +6208,7 @@
         <value xml:lang="es">Buscar: anywho.com</value>
         <value xml:lang="fr">A qui est ce n° ?</value>
         <value xml:lang="hi-IN">लुकअप : anywho.com</value>
+        <value xml:lang="hr">pretraži:anywho.com</value>
         <value xml:lang="it">lookup:anywho.com</value>
         <value xml:lang="ja">検索:anywho.com</value>
         <value xml:lang="pt-BR">Pesquisa: anywho.com</value>
@@ -6162,6 +6224,7 @@
         <value xml:lang="es">http://www.anywho.com/qry/wp_rl?npa=${telecomNumber.areaCode}&amp;telephone=${telecomNumber.contactNumber}&amp;btnsubmit.x=20&amp;btnsubmit.y=8</value>
         <value xml:lang="fr">http://www.pagesjaunes.fr/quidonc/aquiestcenumero.do</value>
         <value xml:lang="hi-IN">http://www.anywho.com/qry/wp_rl?npa=${telecomNumber.areaCode}&amp;telephone=${telecomNumber.contactNumber}&amp;btnsubmit.x=20&amp;btnsubmit.y=8</value>
+        <value xml:lang="hr">http://www.anywho.com/qry/wp_rl?npa=${telecomNumber.areaCode}&amp;telephone=${telecomNumber.contactNumber}&amp;btnsubmit.x=20&amp;btnsubmit.y=8</value>
         <value xml:lang="it">http://www.anywho.com/qry/wp_rl?npa=${telecomNumber.areaCode}&amp;telephone=${telecomNumber.contactNumber}&amp;btnsubmit.x=20&amp;btnsubmit.y=8</value>
         <value xml:lang="ja">http://www.anywho.com/qry/wp_rl?npa=${telecomNumber.areaCode}&amp;telephone=${telecomNumber.contactNumber}&amp;btnsubmit.x=20&amp;btnsubmit.y=8</value>
         <value xml:lang="ru">http://www.anywho.com/qry/wp_rl?npa=${telecomNumber.areaCode}&amp;telephone=${telecomNumber.contactNumber}&amp;btnsubmit.x=20&amp;btnsubmit.y=8</value>
@@ -6173,6 +6236,7 @@
         <value xml:lang="en">Lookup Locale</value>
         <value xml:lang="es">Buscar Locale</value>
         <value xml:lang="fr">Recherche langue</value>
+        <value xml:lang="hr">Traži lokalizaciju</value>
         <value xml:lang="ja">地域を検索</value>
         <value xml:lang="ru">Поиск местности</value>
         <value xml:lang="vi">Chọn Đất nước</value>
@@ -6184,6 +6248,7 @@
         <value xml:lang="es">Páginas Blancas</value>
         <value xml:lang="fr">Chercher dans les pages blanches</value>
         <value xml:lang="hi-IN">श्वेत पन्नों को देखो</value>
+        <value xml:lang="hr">Pretraži oglase</value>
         <value xml:lang="it">Ricerca:whitepages.com</value>
         <value xml:lang="ja">検索:whitepages.com</value>
         <value xml:lang="nl">Opzoeken in whitepages.com</value>
@@ -6200,6 +6265,7 @@
         <value xml:lang="es">http://www.whitepages.com/find_person_results.pl?fid=a&amp;s_n=${addressNum}&amp;s_a=${addressOther}&amp;c=${postalAddress.city}&amp;s=${postalAddress.stateProvinceGeoId}&amp;x=29 y=18</value>
         <value xml:lang="fr">http://www.pagesjaunes.fr/trouverunnom/RecherchePagesBlanches.do</value>
         <value xml:lang="hi-IN">http://www.whitepages.com/find_person_results.pl?fid=a</value>
+        <value xml:lang="hr">http://www.whitepages.com/find_person_results.pl?fid=a&amp;s_n=${addressNum}&amp;s_a=${addressOther}&amp;c=${postalAddress.city}&amp;s=${postalAddress.stateProvinceGeoId}&amp;x=29 y=18</value>
         <value xml:lang="it">http://www.whitepages.com/find_person_results.pl?fid=a&amp;s_n=${addressNum}&amp;s_a=${addressOther}&amp;c=${postalAddress.city}&amp;s=${postalAddress.stateProvinceGeoId}&amp;x=29 y=18</value>
         <value xml:lang="ja">http://www.whitepages.com/find_person_results.pl?fid=a&amp;s_n=${addressNum}&amp;s_a=${addressOther}&amp;c=${postalAddress.city}&amp;s=${postalAddress.stateProvinceGeoId}&amp;x=29 y=18</value>
         <value xml:lang="ru">http://www.whitepages.com/find_person_results.pl?fid=a&amp;s_n=${addressNum}&amp;s_a=${addressOther}&amp;c=${postalAddress.city}&amp;s=${postalAddress.stateProvinceGeoId}&amp;x=29 y=18</value>
@@ -6210,6 +6276,7 @@
         <value xml:lang="en">http://whitepages.com/find_person_results.pl?fid=p&amp;ac=${telecomNumber.areaCode}&amp;s=&amp;p=${telecomNumber.contactNumber}&amp;pt=b&amp;x=40&amp;y=9</value>
         <value xml:lang="es">http://whitepages.com/find_person_results.pl?fid=p&amp;ac=${telecomNumber.areaCode}&amp;s=&amp;p=${telecomNumber.contactNumber}&amp;pt=b&amp;x=40&amp;y=9</value>
         <value xml:lang="fr">http://www.pagesjaunes.fr/quidonc/aquiestcenumero.do</value>
+        <value xml:lang="hr">http://whitepages.com/find_person_results.pl?fid=p&amp;ac=${telecomNumber.areaCode}&amp;s=&amp;p=${telecomNumber.contactNumber}&amp;pt=b&amp;x=40&amp;y=9</value>
         <value xml:lang="it">http://whitepages.com/find_person_results.pl?fid=p&amp;ac=${telecomNumber.areaCode}&amp;s=&amp;p=${telecomNumber.contactNumber}&amp;pt=b&amp;x=40&amp;y=9</value>
         <value xml:lang="ja">http://whitepages.com/find_person_results.pl?fid=p&amp;ac=${telecomNumber.areaCode}&amp;s=&amp;p=${telecomNumber.contactNumber}&amp;pt=b&amp;x=40&amp;y=9</value>
         <value xml:lang="ru">http://whitepages.com/find_person_results.pl?fid=p&amp;ac=${telecomNumber.areaCode}&amp;s=&amp;p=${telecomNumber.contactNumber}&amp;pt=b&amp;x=40&amp;y=9</value>
@@ -6279,6 +6346,7 @@
         <value xml:lang="en">Manage</value>
         <value xml:lang="es">Gestionar</value>
         <value xml:lang="fr">Gestion</value>
+        <value xml:lang="hr">Upravljanje</value>
         <value xml:lang="ja">管理</value>
         <value xml:lang="th">จัดการ</value>
         <value xml:lang="ru">Управление</value>
@@ -6292,6 +6360,7 @@
         <value xml:lang="es">Gestionar las páginas del portal...</value>
         <value xml:lang="fr">Gérez les pages du portail...</value>
         <value xml:lang="hi-IN">पोर्टल पेज प्रबंधन...</value>
+        <value xml:lang="hr">Upravljanje stranicama portala...</value>
         <value xml:lang="it">Gestione pagine...</value>
         <value xml:lang="ja">ポータルページの管理...</value>
         <value xml:lang="pt-BR">Gerenciar Páginas do Portal ...</value>
@@ -6526,6 +6595,7 @@
         <value xml:lang="en">Message is missing</value>
         <value xml:lang="es">Falta el mensaje</value>
         <value xml:lang="fr">Message manquant</value>
+        <value xml:lang="hr">Poruka nedostaje</value>
         <value xml:lang="ja">メッセージが正しくありません</value>
         <value xml:lang="pt-BR">A Mensagem está faltando</value>
         <value xml:lang="ru">Сообщение отсутствует</value>
@@ -7180,6 +7250,7 @@
         <value xml:lang="es">Acceso no autorizado. Póngase en contacto con su administrador de sistemas si piensa que esto es un error.</value>
         <value xml:lang="fr">L'accès à cette fonction ne vous est pas autorisé, contactez votre administrateur système si vous pensez que c'est une erreur.</value>
         <value xml:lang="hi-IN">इस फंक्शन पर पहुँच उपलब्ध नहीं है, अगर आप को यह एक त्रुटि महसूस हो रही है तो अपने सिस्टम व्यवस्थापक से संपर्क करें</value>
+        <value xml:lang="hr">Nema pristupa ovoj funkciji, obratite se administratoru sustava ako smatrate da je to pogreška</value>
         <value xml:lang="it">Nessun accesso a questa funzione, contattare l'amministratore di sistema se pensi che sia un'errore</value>
         <value xml:lang="ja">この機能は使用できません。システム管理者にご連絡ください。</value>
         <value xml:lang="pt-BR">Sem acesso a esta função, entre em contato com o administrador do sistema se você acha que isso é um erro</value>
@@ -7260,6 +7331,7 @@
         <value xml:lang="es">No se encuentra el nombre del Método de Cálculo para la conversión de la Unidad de Medida</value>
         <value xml:lang="fr">La méthode de conversion des unités de mesure n'a pas été trouvée</value>
         <value xml:lang="hi-IN">माप की इकाई रूपांतरण के लिए कस्टम विधि नाम नहीं मिला</value>
+        <value xml:lang="hr">Naziv posebne metode za pretvorbu jedinica mjere nije pronađen</value>
         <value xml:lang="it">Nome metodo personalizzato per conversione Udm non trovata</value>
         <value xml:lang="ja">単位変換の方法名称が入力されていません</value>
         <value xml:lang="pt">Nome do método para conversão UoM conversion não encontrado</value>
@@ -7312,6 +7384,7 @@
         <value xml:lang="es">Localización geográfica no disponible (para demostración debe usar el perfil del participante DemoCustomer)</value>
         <value xml:lang="fr">Aucune géolocalisation disponible (pour une démonstration vous pouvez utiliser le profil de l'acteur DemoCustomer)</value>
         <value xml:lang="hi-IN">भू स्थान उपलब्ध नहीं है (एक डेमो के लिए आप DemoCustomer पार्टी प्रोफ़ाइल का उपयोग करने का प्रयास कर सकते हैं)</value>
+        <value xml:lang="hr">Geolokacija nije dostupna (za demo možete pokušati koristiti profil stranke DemoCustomer)</value>
         <value xml:lang="it">Nessuna locazione geografica disponibile (per un dimostrazione tu puoi usare il soggetto DemoCustomer)</value>
         <value xml:lang="ja">位置情報が有効ではありません(デモの場合はデモ顧客取引先プロファイルを使用してみてください)</value>
         <value xml:lang="pt-BR">Geolocalização Não disponível (para uma demonstração você pode tentar usar o perfil de participante DemoCustomer)</value>
@@ -7326,6 +7399,7 @@
         <value xml:lang="en">No options: _NA_</value>
         <value xml:lang="es">Sin opciones: _NA_</value>
         <value xml:lang="fr">Aucun option: _NA_</value>
+        <value xml:lang="hr">Nema opcija: _NA_</value>
         <value xml:lang="ja">オプションなし: _適用外_</value>
         <value xml:lang="pt-BR">Sem opções: _NA_</value>
         <value xml:lang="ru">Нету выбора: _NA</value>
@@ -7360,6 +7434,7 @@
         <value xml:lang="en">No portal page data found. You may not have the necessary seed or other data for it.</value>
         <value xml:lang="es">Datos de la página del portal no encontrados.</value>
         <value xml:lang="fr">Aucune donnée pour la page portail. Vous n'avez peut être pas chargé les données nécesaires.</value>
+        <value xml:lang="hr">Nisu pronađeni podaci o stranici portala. Možda nedostaje potrebno polazište ili drugi podaci.</value>
         <value xml:lang="it">Dati portal page non trovati.</value>
         <value xml:lang="ja">ポータルページのデータはありません。</value>
         <value xml:lang="pt-BR">Não há dados da página do portal encontrados. Você pode não ter a semente ou outros dados necessários para isso.</value>
@@ -7373,6 +7448,7 @@
         <value xml:lang="en">Please, choose new category again, No portlet in this category.</value>
         <value xml:lang="es">No hay portlets en esta categoría, escoja nuevamente otra categoría.</value>
         <value xml:lang="fr">Aucune portlet n'est présente dans cette catégorie</value>
+        <value xml:lang="hr">Molim ponovno odaberite novu kategoriju, nema portleta u ovoj kategoriji.</value>
         <value xml:lang="it">Nessun portlet in questa categoria.</value>
         <value xml:lang="ja">再度新規カテゴリを選択してください、カテゴリにポートレットはありません。</value>
         <value xml:lang="pt-BR">Por favor, escolha uma nova categoria de novo, sem portlet nesta categoria.</value>
@@ -7420,12 +7496,13 @@
         <value xml:lang="zh-TW">沒有找到記錄</value>
     </property>
     <property key="CommonNoStatesProvinces">
-        <!-- OFBIZ-5246 please use ": _NA_" at end, with a space between the colon and _NA_. getDependentDropdownValues relies on it  -->
+        
         <value xml:lang="cs">Neexistují žádné státy/provincie: _NA_</value>
         <value xml:lang="de">Kein exitierendes Bundesland: _NA_</value>
         <value xml:lang="en">No States/Provinces exist: _NA_</value>
         <value xml:lang="es">No existen provincias: _NA_</value>
         <value xml:lang="fr">Aucun état ou province: _NA_</value>
+        <value xml:lang="hr">Ne postoje države/pokrajine: _NA_</value>
         <value xml:lang="ja">都道府県/州/地方が存在しません: _適用外_</value>
         <value xml:lang="pt-BR">Nenhum estados/municípios existem: _NA_</value>
         <value xml:lang="ru">Не сущестивует ни штата, ни провинции: _NA_</value>
@@ -7438,6 +7515,7 @@
         <value xml:lang="en">No States/Provinces exist</value>
         <value xml:lang="es">No existen provincias</value>
         <value xml:lang="fr">Aucun état ou province</value>
+        <value xml:lang="hr">Ne postoje države/pokrajine</value>
         <value xml:lang="ja">都道府県/州/地方が存在しません</value>
         <value xml:lang="pt-BR">Nenhum estados/municípios existem</value>
         <value xml:lang="ru">Не сущестивует ни штата, ни провинции: _NA_</value>
@@ -7694,6 +7772,7 @@
         <value xml:lang="en">Could update note data (write failure): ${errorString}</value>
         <value xml:lang="es">No se pueden actualizar los datos de la nota (fallo de escritura): ${errorString}</value>
         <value xml:lang="fr">Impossible de mettre à jour la note : ${errorString}</value>
+        <value xml:lang="hr">Ne mogu ažurirati podatke napomene (neuspjeh u pisanju): ${errorString}</value>
         <value xml:lang="it">Non è possibile aggiornare i dati della nota (scrittura fallita): ${errorString}</value>
         <value xml:lang="ja">連絡データが更新できません (書き込み失敗): ${errorString}</value>
         <value xml:lang="ru">Внимание, можете обновить данные (запись провалена) : ${errorString}</value>
@@ -7726,6 +7805,7 @@
         <value xml:lang="en">Email delivery error, see error log</value>
         <value xml:lang="es">Error en el envío de correo electrónico, verifique el log</value>
         <value xml:lang="fr">Erreur de distribution de courriel, voir le journal</value>
+        <value xml:lang="hr">Greška u isporuci e-maila, vidi error log</value>
         <value xml:lang="it">Email delivery error, see error log</value>
         <value xml:lang="ja">メール配送エラー。エラーログを参照してください</value>
         <value xml:lang="ru">Письмо доставлено с ошибкой, посмотрите лог файл</value>
@@ -7737,6 +7817,7 @@
         <value xml:lang="en">Invalid email body; null is not allowed</value>
         <value xml:lang="es">Contenido del correo electrónico no válido; no se permite null</value>
         <value xml:lang="fr">Contenu du courriel non valide. Un contenu vide n'est pas permis</value>
+        <value xml:lang="hr">Nevažeći sadržaj e-maila; null nije dopušten</value>
         <value xml:lang="it">Corpo email invalido; null non è consentito</value>
         <value xml:lang="ja">メールの本文が正しくありません。空は許可されていません</value>
         <value xml:lang="ru">Недействительно содержимое письма; </value>
@@ -7748,6 +7829,7 @@
         <value xml:lang="en">Message body generated successfully</value>
         <value xml:lang="es">Contenido del correo electrónico generado correctamente</value>
         <value xml:lang="fr">Contenu du courriel généré avec succès</value>
+        <value xml:lang="hr">Sadržaj poruke uspješno je generiran</value>
         <value xml:lang="it">Corpo messaggio generato con successo</value>
         <value xml:lang="ja">メッセージ本文が正しく生成されました</value>
         <value xml:lang="ru">Тело сообщения сгенерированно успешно </value>
@@ -7759,6 +7841,7 @@
         <value xml:lang="en">Problem finding template; see logs</value>
         <value xml:lang="es">Problema localizando la plantilla; verifique el log</value>
         <value xml:lang="fr">Problèmpe lors de la récupération du modèle. Voir le journal pour plus de détail</value>
+        <value xml:lang="hr">Problem pri pronalaženju predloška; vidi logove</value>
         <value xml:lang="it">Problema nella ricerca del template; controllare i logs</value>
         <value xml:lang="ja">テンプレートの検索中にエラー: ログを参照してください</value>
         <value xml:lang="ru">Проблема поиска шаблона; смотрите логи </value>
@@ -7770,6 +7853,7 @@
         <value xml:lang="en">Template processing problem, see error logs</value>
         <value xml:lang="es">Problema accediendo a la plantilla, verifique el log de errores</value>
         <value xml:lang="fr">Problème lors de l'exécution du modèle. Voir le journal pour plus de détail</value>
+        <value xml:lang="hr">Problem s obradom predloška, ​​vidi error logove</value>
         <value xml:lang="it">Problema nell'esecuzione del template; controllare gli errori nei logs</value>
         <value xml:lang="ja">テンプレートの処理中にエラー。エラーログを参照してください</value>
         <value xml:lang="ru">Проблема с обработкой шаблонов, смотрите ошибки в логах </value>
@@ -7781,6 +7865,7 @@
         <value xml:lang="en">Template reading problem, see error logs</value>
         <value xml:lang="es">Problema leyendo la plantilla, verifique el log de errores</value>
         <value xml:lang="fr">Problème dans la lecture du modèle. Voir le journal pour plus de détail</value>
+        <value xml:lang="hr">Problem s čitanjem predloška, ​​vidi error logove</value>
         <value xml:lang="it">Problema nella lettura del template; controllare gli errori nei logs</value>
         <value xml:lang="ja">テンプレートの読み込み中にエラー。エラーログを参照してください</value>
         <value xml:lang="ru">Проблема чтения шаблона, смотрите ошибки в логах </value>
@@ -7997,6 +8082,7 @@
         <value xml:lang="es">+</value>
         <value xml:lang="fr">+</value>
         <value xml:lang="hi-IN">+</value>
+        <value xml:lang="hr">+</value>
         <value xml:lang="it">+</value>
         <value xml:lang="ja">+</value>
         <value xml:lang="nl">+</value>
@@ -8154,6 +8240,7 @@
         <value xml:lang="es">(reemplaza cualquiera de las selecciones anteriores)</value>
         <value xml:lang="fr">(remplace l'un ou l'autre des choix ci-dessus)</value>
         <value xml:lang="hi-IN">(उपरोक्त किसी भी चयन को ओवरराइड करे)</value>
+        <value xml:lang="hr">(nadjačava bilo koji od gornjih odabira.)</value>
         <value xml:lang="it">(sovrapponi entrambe le selezioni sopra)</value>
         <value xml:lang="ja">(上記選択を上書き)</value>
         <value xml:lang="nl">vervangt één van bovengenoemde selecties</value>
@@ -8467,6 +8554,7 @@
         <value xml:lang="es">Error de permisos de acceso</value>
         <value xml:lang="fr">Erreur de droits d'accès, autorisations insuffisantes</value>
         <value xml:lang="hi-IN">अनुमति त्रुटि</value>
+        <value xml:lang="hr">Greška dozvole</value>
         <value xml:lang="it">Errore permesso</value>
         <value xml:lang="ja">権限エラー</value>
         <value xml:lang="nl">Toegangsfout</value>
@@ -8486,6 +8574,7 @@
         <value xml:lang="es">Error de seguridad: Para ejecutar ${resourceDescription} debe disponer de alguno de estos permisos EXAMPLE_${mainAction} EXAMPLE_ADMIN</value>
         <value xml:lang="fr">Erreur de sécurité : pour exécuter ${resourceDescription} vous devez avoir les autorisations suivantes :   EXAMPLE_${mainAction} EXAMPLE_ADMIN</value>
         <value xml:lang="hi-IN">सुरक्षा त्रुटि: ${resourceDescription} चलाने के लिए आप के पास निम्न में से एक अनुमतियाँ हो: EXAMPLE_${mainAction} EXAMPLE_ADMIN</value>
+        <value xml:lang="hr">Sigurnosna greška: Za pokretanje ${resourceDescription} morate imati jedno od sljedećih dopuštenja: EXAMPLE_${mainAction} EXAMPLE_ADMIN</value>
         <value xml:lang="it">Errore sicurezza: per eseguire ${resourceDescription}  tu devi avere uno dei seguenti permessi:   EXAMPLE_${mainAction} EXAMPLE_ADMIN</value>
         <value xml:lang="ja">権限エラー: ${resourceDescription} の実行には、次の権限が必要です: EXAMPLE_${mainAction} EXAMPLE_ADMIN</value>
         <value xml:lang="pt">Erro de Segurança: para executar ${resourceDescription} você deve ter o  EXAMPLE_${mainAction} ou permissão EXAMPLE_ADMIN</value>
@@ -8502,6 +8591,7 @@
         <value xml:lang="en">Permission main-action parameter missing!</value>
         <value xml:lang="es">Falta el parámetro de la acción principal (main-action).</value>
         <value xml:lang="fr">Le paramètre d'autorisation d'action principale manque !</value>
+        <value xml:lang="hr">Nedostaje parametar glavne radnje dopuštenja!</value>
         <value xml:lang="it">Parametro permesso mancante!</value>
         <value xml:lang="ja">主処理パラメータの権限が正しくありません</value>
         <value xml:lang="pt">Parâmetro de acção-principal da permissão em falta!</value>
@@ -8518,6 +8608,7 @@
         <value xml:lang="en">Permission primaryPermission parameter missing!</value>
         <value xml:lang="es">Falta el parámetro de permiso principal (primaryPermission).</value>
         <value xml:lang="fr">Le paramètre d'autorisation primaire manque !</value>
+        <value xml:lang="hr">Nedostaje parametar dopuštenja primaryPermission!</value>
         <value xml:lang="it">Permesso parametro primaryPermission mancante!</value>
         <value xml:lang="ja">主権限パラメータが正しくありません</value>
         <value xml:lang="pt">O parâmetro de Permissão primaryPermission está em falta!</value>
@@ -8535,6 +8626,7 @@
         <value xml:lang="es">esta operación</value>
         <value xml:lang="fr">Cette opération</value>
         <value xml:lang="hi-IN">यह ऑपरेशन</value>
+        <value xml:lang="hr">ovu operaciju</value>
         <value xml:lang="it">questa operazione</value>
         <value xml:lang="ja">この権限</value>
         <value xml:lang="pt-BR">esta operação</value>
@@ -8571,6 +8663,7 @@
         <value xml:lang="en">Unable to connect to datasource!</value>
         <value xml:lang="es">No se puede conectar a la fuente de datos!</value>
         <value xml:lang="fr">Impossible de se connecter à la source de données</value>
+        <value xml:lang="hr">Nije moguće povezati se s izvorom podataka!</value>
         <value xml:lang="it">Non è possibile connettersi al datasource!</value>
         <value xml:lang="ja">データソースに接続できません!</value>
         <value xml:lang="ru">Отсутствует соединение к источнику данных! </value>
@@ -8583,6 +8676,7 @@
         <value xml:lang="en">Invalid count returned from database</value>
         <value xml:lang="es">No es válido el contador devuelto por la base de datos</value>
         <value xml:lang="fr">Comptage invalide retourné par la source de données</value>
+        <value xml:lang="hr">Nevažeći zbroj vraćen iz baze podataka</value>
         <value xml:lang="it">Contantore invalido restituito dal database</value>
         <value xml:lang="ja">データベースから戻された件数が正しくありません</value>
         <value xml:lang="ru">Неверный номер возвращаемый из базы данных</value>
@@ -8595,6 +8689,7 @@
         <value xml:lang="en">Please enter a valid number in this field.</value>
         <value xml:lang="es">Por favor, introduzca un número válido en este campo.</value>
         <value xml:lang="fr">SVP, entrer un nombre valide pour ce champ.</value>
+        <value xml:lang="hr">Unesite ispravan broj u ovo polje.</value>
         <value xml:lang="ja">正しい数字を入力してください。</value>
         <value xml:lang="pt-BR">Por favor insira um número válido neste campo.</value>
         <value xml:lang="ru">Пожалуйста введите действительный номер в это поле</value>
@@ -8762,6 +8857,7 @@
         <value xml:lang="es">Powered by</value>
         <value xml:lang="fr">Fonctionne grâce à </value>
         <value xml:lang="hi-IN">द्वारा संचालित</value>
+        <value xml:lang="hr">Powered by</value>
         <value xml:lang="it">Realizzato con</value>
         <value xml:lang="ja">Powered by</value>
         <value xml:lang="pt-BR">Powered by</value>
@@ -8777,6 +8873,7 @@
         <value xml:lang="en">Preference Group</value>
         <value xml:lang="es">Grupo de preferencias</value>
         <value xml:lang="fr">Groupe de préférences</value>
+        <value xml:lang="hr">Grupa postavki</value>
         <value xml:lang="ja">設定グループ</value>
         <value xml:lang="ru">Предпочтительные группы</value>
         <value xml:lang="vi">Nhóm tham chiếu</value>
@@ -8788,6 +8885,7 @@
         <value xml:lang="en">Preference Name</value>
         <value xml:lang="es">Nombre de la preferencia</value>
         <value xml:lang="fr">Nom de la préférence</value>
+        <value xml:lang="hr">Naziv postavke</value>
         <value xml:lang="ja">設定名称</value>
         <value xml:lang="ru">Предпочтительные имена</value>
         <value xml:lang="vi">Tên tham chiếu</value>
@@ -8835,6 +8933,7 @@
         <value xml:lang="en">Preview</value>
         <value xml:lang="es">Vista previa</value>
         <value xml:lang="fr">Prévisualisation</value>
+        <value xml:lang="hr">Pregled</value>
         <value xml:lang="ja">プレビュー</value>
         <value xml:lang="ru">Анонс</value>
         <value xml:lang="th">แสดงตัวอย่าง</value>
@@ -9656,6 +9755,7 @@
         <value xml:lang="en">Requery</value>
         <value xml:lang="es">Reconsulta</value>
         <value xml:lang="fr">Réinterroger</value>
+        <value xml:lang="hr">Ponovi upit</value>
         <value xml:lang="ja">再問合</value>
         <value xml:lang="ru">Повторный запрос</value>
         <value xml:lang="vi">Truy vấn lại</value>
@@ -10241,6 +10341,7 @@
         <value xml:lang="en">Select a portlet you would like to have help on....</value>
         <value xml:lang="es">Seleccione un portlet del que desee obtener ayuda....</value>
         <value xml:lang="fr">Liste des portlets contenues dans cette page, sélectionnez celle pour laquelle vous souhaitez de l'aide</value>
+        <value xml:lang="hr">Odaberite portlet za koji biste željeli imati pomoć....</value>
         <value xml:lang="ja">ヘルプを参照したいポートレットを選択してください....</value>
         <value xml:lang="ru">Выберите портлет, который вам может помочь</value>
         <value xml:lang="vi">Lựa chọn một ứng dụng porlet mà muốn có sự giúp đỡ...</value>
@@ -10483,6 +10584,7 @@
     <property key="CommonServerHour">
         <value xml:lang="en">Server Hour</value>
         <value xml:lang="fr">Heure du serveur </value>
+        <value xml:lang="hr">Sat poslužitelja</value>
         <value xml:lang="ru">Час сервера</value>
         <value xml:lang="zh">服务器小时</value>
     </property>
@@ -10491,6 +10593,7 @@
         <value xml:lang="en">Return Error Service : Returning Error</value>
         <value xml:lang="es">El servicio ha devuelto un error: Devolviendo error</value>
         <value xml:lang="fr">Le service a retourné une erreur</value>
+        <value xml:lang="hr">Servis povratne greške: Vraćanje greške</value>
         <value xml:lang="it">Servizio ha restituito un'errore: errore restituito</value>
         <value xml:lang="ja">サービスがエラーを戻しました</value>
         <value xml:lang="ru">Вернулась серверная ошибка: Вернулась ошибка</value>
@@ -10503,6 +10606,7 @@
         <value xml:lang="en">Your session has expired.  A login is required.  You can refresh the page or save your data to login.</value>
         <value xml:lang="es">No está conectado. Por favor, vuelva a conectarse.</value>
         <value xml:lang="fr">Votre session est terminée. Veuillez vous identifier à nouveau pour utiliser l'application.  Pour vous connecter, vous pouvez actualiser la page, sauvegarder vos données ou utiliser le lien Connexion (ou Déconnexion) en haut à droite.</value>
+        <value xml:lang="hr">Vaša sesija je istekla. Potrebna je prijava. Možete osvježiti stranicu ili spremiti svoje podatke za prijavu.</value>
         <value xml:lang="ja">セッションは失効しています。ログインしてください。ログインすると画面が更新され、データを保存できます。</value>
         <value xml:lang="ru">Ваше время сессии истекло. Требуется авторизация. Вы можете обновить страницу или сохранить ваши данные после авторизации...</value>
         <value xml:lang="vi">Bạn chưa đăng nhập. Vui lòng đăng nhập lại.</value>
@@ -10784,6 +10888,7 @@
         <value xml:lang="es">Lo siento, no puede enviar esta página a un amigo. Seleccione a partir de una categoría o un producto.</value>
         <value xml:lang="fr">Désolé, vous ne pouvez envoyer cette page à un ami. Sélectionnez plutôt à partir d'un catégorie ou d'un article</value>
         <value xml:lang="hi-IN">क्षमा करें, आप इस पृष्ठ को अपने मित्र को नहीं भेज सकते, बल्कि एक वर्ग या एक मद में से चुनें</value>
+        <value xml:lang="hr">Nažalost, ovu stranicu ne možete poslati prijatelju. Radije odaberite iz kategorije ili artikla</value>
         <value xml:lang="it">Spiacente, non è possibile inviare questa pagina ad un'amico.  Seleziona da una categoria o una riga</value>
         <value xml:lang="ja">申し訳ございません、このページを送信できません。他のカテゴリかアイテムを選択してください。</value>
         <value xml:lang="nl">Sorry, u kunt deze pagina niet naar een kennis versturen. Selecteer een categorie of een item</value>
@@ -11013,6 +11118,7 @@
         <value xml:lang="en">Parameter statusTypeIds can not be null and must contain at least one element</value>
         <value xml:lang="es">El parámetro statusTypeIds no puede ser nulo, debe contener al menos un elemento</value>
         <value xml:lang="fr">Le paramêtre statusTypeIds ne peut être vide et doit contenir au moins un élément</value>
+        <value xml:lang="hr">Parametar statusTypeIds ne može biti null i mora sadržavati barem jedan element</value>
         <value xml:lang="it">Parametro statusTypeIds non può essere nullo e deve contenere almeno un'elemento</value>
         <value xml:lang="ja">パラメータ statusTypeIds は空にできません。少なくとも1つの要素が必要です。</value>
         <value xml:lang="ru">Параметр statusTypeIds не может быть null и должен содержать хотя бы один элемент</value>
@@ -11345,6 +11451,7 @@
         <value xml:lang="en">Tenant ID</value>
         <value xml:lang="es">Identificador organización</value>
         <value xml:lang="fr">Instance</value>
+        <value xml:lang="hr">Id zakupnika</value>
         <value xml:lang="ja">テナントID</value>
         <value xml:lang="pt-BR">ID de Inquilino</value>
         <value xml:lang="ru">ID клиента</value>
@@ -11380,6 +11487,7 @@
         <value xml:lang="en">Rolling back!</value>
         <value xml:lang="es">Restableciendo!</value>
         <value xml:lang="fr">Test d'annulation transactionnelle</value>
+        <value xml:lang="hr">Vraćanje!</value>
         <value xml:lang="it">Rolling back!</value>
         <value xml:lang="ja">ロールバック中!</value>
         <value xml:lang="ru">Откат</value>
@@ -11408,14 +11516,15 @@
         <value xml:lang="zh-TW">文本</value>
     </property>
     <property key="CommonThe">
-        <value xml:lang="cs"></value>
+        <value xml:lang="cs" />
         <value xml:lang="de">Der</value>
         <value xml:lang="en">The</value>
         <value xml:lang="es">El/La</value>
         <value xml:lang="fr">Le</value>
         <value xml:lang="hi-IN">इस</value>
+        <value xml:lang="hr" />
         <value xml:lang="it">Il</value>
-        <value xml:lang="ja"></value>
+        <value xml:lang="ja" />
         <value xml:lang="nl">de</value>
         <value xml:lang="pt-BR">O</value>
         <value xml:lang="ru">Это</value>
@@ -11726,7 +11835,7 @@
         <value xml:lang="en">To</value>
         <value xml:lang="es">Para</value>
         <value xml:lang="fr">Vers </value>
-        <!-- put a trailing white space because there are too much use of ${uiLabelMap.CommonTo}: and it seems that we can't prevent this to arise again. I keep Vers instead of A (à) because Vers imply a direction not à -->
+        
         <value xml:lang="hi-IN">को</value>
         <value xml:lang="hr">Kome</value>
         <value xml:lang="it">A</value>
@@ -11871,6 +11980,7 @@
         <value xml:lang="en">Total Cost Mult</value>
         <value xml:lang="es">Coste total múltiple</value>
         <value xml:lang="fr">Coût total multiple</value>
+        <value xml:lang="hr">Višekratnik ukupne cijene</value>
         <value xml:lang="it">Totale costo multiplo</value>
         <value xml:lang="ja">原価計倍</value>
         <value xml:lang="nl">Totale meerkosten</value>
@@ -11888,6 +11998,7 @@
         <value xml:lang="en">Cost To Price Mult</value>
         <value xml:lang="es">Coste a precio múltiplo</value>
         <value xml:lang="fr">Coût vers prix multiple</value>
+        <value xml:lang="hr">Višekratnik cijene u odnosu na cijenu</value>
         <value xml:lang="it">Totale costo di prezzo multiplo</value>
         <value xml:lang="ja">原価の価格倍</value>
         <value xml:lang="pt-BR">Custo para preço múltiplo</value>
@@ -11905,6 +12016,7 @@
         <value xml:lang="es">Porcentaje de margen de beneficio total</value>
         <value xml:lang="fr">Pourcentage total du bénéfice</value>
         <value xml:lang="hi-IN">कुल लाभ प्रतिशत</value>
+        <value xml:lang="hr">Ukupni postotak dobiti</value>
         <value xml:lang="it">Totale percentuale profitto</value>
         <value xml:lang="ja">総利益率</value>
         <value xml:lang="nl">Totale winst in procenten</value>
@@ -12064,6 +12176,7 @@
         <value xml:lang="en">An unspecified error occurred!</value>
         <value xml:lang="es">Ha ocurrido un error no contemplado!</value>
         <value xml:lang="fr">Une erreur non identifiée s'est produite</value>
+        <value xml:lang="hr">Došlo je do nespecificirane greške!</value>
         <value xml:lang="ja">予期しないエラーが発生しました!</value>
         <value xml:lang="ru">Неизвестная ошибка!</value>
         <value xml:lang="vi">Xuất hiện lỗi không xác định!</value>
@@ -12248,6 +12361,7 @@
         <value xml:lang="de">Aktualisiere Daten</value>
         <value xml:lang="en">Updating data</value>
         <value xml:lang="fr">Mise à jour des données</value>
+        <value xml:lang="hr">Ažuriranje podataka</value>
         <value xml:lang="ja">データ更新中</value>
         <value xml:lang="ru">UOM</value>
         <value xml:lang="vi">Đang cập nhật dữ liệu</value>
@@ -12325,6 +12439,7 @@
         <value xml:lang="es">Por el usuario/automáticamente</value>
         <value xml:lang="fr">Saisi par Utilisateur/Auto</value>
         <value xml:lang="hi-IN">उपयोगकर्ता/ऑटो प्रवेश</value>
+        <value xml:lang="hr">Korisnički/Automatski unos</value>
         <value xml:lang="it">Inserito utente/automaticamente</value>
         <value xml:lang="ja">ユーザ/自動入力</value>
         <value xml:lang="pt">Utilizador/Auto Inserido</value>
@@ -12344,6 +12459,7 @@
         <value xml:lang="es">Por el usuario</value>
         <value xml:lang="fr">Saisi uniquement par l'utilisateur</value>
         <value xml:lang="hi-IN">केवल उपयोगकर्ता प्रवेश करे</value>
+        <value xml:lang="hr">Samo korisnički unos</value>
         <value xml:lang="it">Solo inseriti dall'utente</value>
         <value xml:lang="ja">ユーザ入力のみ</value>
         <value xml:lang="pt">Apenas Utilizador Inserido</value>
@@ -12643,6 +12759,7 @@
         <value xml:lang="es">Código de tema visual no encontrado.</value>
         <value xml:lang="fr">Réf. de charte graphique inconnue.</value>
         <value xml:lang="hi-IN">दृश्य शैली क्रमांक(VisualThemeId) नहीं मिला|</value>
+        <value xml:lang="hr">ID vizualne teme nije pronađen.</value>
         <value xml:lang="it">Tema grafico non trovato.</value>
         <value xml:lang="ja">外観のテーマIDが見つかりません</value>
         <value xml:lang="nl">Visueel thema niet gevonden</value>
@@ -12659,6 +12776,7 @@
         <value xml:lang="es">Se ha encontrado una entrada inválida de tema visual: visualThemeId = ${visualThemeId}, resourceTypeEnumId = ${resourceTypeEnumId}.</value>
         <value xml:lang="fr">Ressource de charte graphique trouvée non valable : visualThemeId = ${visualThemeId}, resourceTypeEnumId = ${resourceTypeEnumId}.</value>
         <value xml:lang="hi-IN">अवैध दृश्य शैली संसाधन रिकॉर्ड मिला: visualThemeId = ${visualThemeId}, resourceTypeEnumId = ${resourceTypeEnumId}.</value>
+        <value xml:lang="hr">Pronađen je nevažeći zapis resursa vizualne teme: visualThemeId = ${visualThemeId}, resourceTypeEnumId = ${resourceTypeEnumId}.</value>
         <value xml:lang="it">Risorsa tema grafico non trovato: visualThemeId = ${visualThemeId}, resourceTypeEnumId = ${resourceTypeEnumId}.</value>
         <value xml:lang="ja">外観のテーマリソースが正しくありません: visualThemeId = ${visualThemeId}, resourceTypeEnumId = ${resourceTypeEnumId}。</value>
         <value xml:lang="pt-BR">Registro inválido de Tema visual encontrado: visualThemeId = ${visualThemeId}, resourceTypeEnumId = ${resourceTypeEnumId}.</value>
@@ -12674,6 +12792,7 @@
         <value xml:lang="es">No hay capturas de pantalla</value>
         <value xml:lang="fr">Aucune copie d'écran</value>
         <value xml:lang="hi-IN">कोई स्क्रीनशॉट्स नहीं है</value>
+        <value xml:lang="hr">Nema snimki zaslona</value>
         <value xml:lang="it">Anteprima non disponibile</value>
         <value xml:lang="ja">スクリーンショットはありません</value>
         <value xml:lang="nl">Geen schermafbeeldingen</value>
@@ -12690,6 +12809,7 @@
         <value xml:lang="es">No se han encontrado recursos de tema visual.</value>
         <value xml:lang="fr">Réf. de ressource de charte graphique inconnue.</value>
         <value xml:lang="hi-IN">दृश्य शैली संसाधन नहीं मिला|</value>
+        <value xml:lang="hr">Resursi vizualne teme nisu pronađeni.</value>
         <value xml:lang="it">Risorse tema grafico non trovate.</value>
         <value xml:lang="ja">外観のテーマリソースが見つかりません。</value>
         <value xml:lang="pt-BR">Recursos do tema visual não encontrado.</value>
@@ -12719,6 +12839,7 @@
         <value xml:lang="en">Click on an image to have a preview, on a link to select a theme, and then on Done to validate your choice</value>
         <value xml:lang="es">Click en una imagen para obtener una vista previa, en un enlace para seleccionar un tema, y después en Hecho para validar la elección</value>
         <value xml:lang="fr">Cliquer sur l'image pour afficher un aperçu, sur le lien pour sélectionner le thème puis sur terminer pour valider votre choix</value>
+        <value xml:lang="hr">Kliknite na sliku za pregled, na link za odabir teme, a zatim na Gotovo da potvrdite svoj izbor</value>
         <value xml:lang="ja">プレビューするには画像を、テーマを選択するにはリンクを、選択を有効にするには完了をクリックしてください。</value>
         <value xml:lang="ru">Нажмите на картинку для предварительного просмотра, на ссылке выбранной темы, и затем сделайте потверждение вашего выбора</value>
         <value xml:lang="vi">Bạn có thể xem trước Giao diện bằng cách bấm vào hình, sau đó vào liên kết chọn giao diện, và bấm vào nút 'Hoàn tất' để thực hiện thiết lập Giao diện</value>
@@ -13150,6 +13271,7 @@
         <value xml:lang="es">Fuente de datos</value>
         <value xml:lang="fr">Source de données</value>
         <value xml:lang="hi-IN">डेटा स्रोत</value>
+        <value xml:lang="hr">Izvor podataka</value>
         <value xml:lang="it">Sorgente dati</value>
         <value xml:lang="ja">データソース</value>
         <value xml:lang="nl">Bron data</value>
@@ -13171,6 +13293,7 @@
         <value xml:lang="es">Crear fuente de datos</value>
         <value xml:lang="fr">Nouvelle source de données</value>
         <value xml:lang="hi-IN">डेटा स्रोत बनाएँ</value>
+        <value xml:lang="hr">Stvori izvor podataka</value>
         <value xml:lang="it">Nuova sorgente dati</value>
         <value xml:lang="ja">データソースを作成</value>
         <value xml:lang="nl">Aanmaken bron data</value>
@@ -13192,6 +13315,7 @@
         <value xml:lang="es">Código de la fuente de datos</value>
         <value xml:lang="fr">Réf. de la source de données</value>
         <value xml:lang="hi-IN">डेटा स्रोत क्रमांक(DataSourceId)</value>
+        <value xml:lang="hr">ID izvora podataka</value>
         <value xml:lang="it">Codice sorgente dati</value>
         <value xml:lang="ja">データソースID</value>
         <value xml:lang="nl">Bron data Id</value>
@@ -13213,6 +13337,7 @@
         <value xml:lang="es">Código del tipo de fuente de datos</value>
         <value xml:lang="fr">Réf. du type de source de données</value>
         <value xml:lang="hi-IN">डेटा स्रोत प्रकार क्रमांक(DataSourceTypeId)</value>
+        <value xml:lang="hr">ID vrste izvora podataka</value>
         <value xml:lang="it">Tipo sorgente dati</value>
         <value xml:lang="ja">データソース種類ID</value>
         <value xml:lang="nl">Bron data type Id</value>
@@ -13234,6 +13359,7 @@
         <value xml:lang="es">No se encontró la fuente de datos con código</value>
         <value xml:lang="fr">Aucune source de données trouvée pour cette réf.</value>
         <value xml:lang="hi-IN">इस क्रमांक के साथ डेटा स्रोत नहीं मिला</value>
+        <value xml:lang="hr">Nije pronađen izvor podataka s ID-om</value>
         <value xml:lang="it">Nessuna sorgente dati trovata con il codice</value>
         <value xml:lang="ja">データソースIDが見つかりません</value>
         <value xml:lang="nl">Geen Brondata gevonden met Id</value>
@@ -13255,6 +13381,7 @@
         <value xml:lang="es">Tipo de fuente de datos</value>
         <value xml:lang="fr">Type de source de données</value>
         <value xml:lang="hi-IN">डेटा स्रोत प्रकार</value>
+        <value xml:lang="hr">Vrsta izvora podataka</value>
         <value xml:lang="it">Tipo sorgente dati</value>
         <value xml:lang="ja">データソース種類</value>
         <value xml:lang="nl">Brondata type</value>
@@ -13276,6 +13403,7 @@
         <value xml:lang="es">Crear tipo de fuente de datos</value>
         <value xml:lang="fr">Nouveau type de source de données</value>
         <value xml:lang="hi-IN">डेटा स्रोत प्रकार बनाएँ</value>
+        <value xml:lang="hr">Izradi vrstu izvora podataka</value>
         <value xml:lang="it">Nuovo tipo sorgente dati</value>
         <value xml:lang="ja">データソース種類を作成</value>
         <value xml:lang="nl">Aanmaken Brontype</value>
@@ -13296,6 +13424,7 @@
         <value xml:lang="es">eBay</value>
         <value xml:lang="fr">eBay</value>
         <value xml:lang="hi-IN">eBay</value>
+        <value xml:lang="hr">eBay</value>
         <value xml:lang="it">eBay</value>
         <value xml:lang="ja">eBay</value>
         <value xml:lang="pt-BR">eBay</value>
@@ -13365,6 +13494,7 @@
         <value xml:lang="cs">Správa skladu, lokalit, dodávek, dodacích listů</value>
         <value xml:lang="en">Inventory management, Facility, location, Shipment, Receipt, Physical Inventory</value>
         <value xml:lang="fr">Gestion des stocks, lieux de stockage, emplacement, expédition, réception, inventaire</value>
+        <value xml:lang="hr">Upravljanje zalihama, objekt, lokacija, pošiljka, primitak, fizički inventar</value>
         <value xml:lang="ja">在庫管理、拠点、位置、発送、受領、物理在庫</value>
         <value xml:lang="ru">Управление инвентарем, объект, местность, отправление, получение, переучет</value>
         <value xml:lang="vi">Quản lý Kho bãi, Chi nhánh / Cơ sở, Địa điểm, Vận chuyển, Nhận hàng và Kho vật lý</value>
@@ -13509,6 +13639,7 @@
         <value xml:lang="en">Cmd To Call</value>
         <value xml:lang="es">Comando a llamar</value>
         <value xml:lang="fr">Cmd d'appel</value>
+        <value xml:lang="hr">Naredba za poziv</value>
         <value xml:lang="ja">呼び出しコマンド</value>
         <value xml:lang="ru">вызов CMD</value>
         <value xml:lang="zh">要调用的命令</value>
@@ -13558,10 +13689,10 @@
         <value xml:lang="ja">問い合わせ方法ID</value>
         <value xml:lang="nl">Contact Mech Id</value>
         <value xml:lang="pt-BR">ID de mecanismo de Contato</value>
-        <!--value xml:lang="ro">Cod Contract</value-->
+        
         <value xml:lang="ro">Numar Contact</value>
         <value xml:lang="ru">Код способа контакта</value>
-        <!--value xml:lang="th">รหัสการติดต่อการทำงาน</value-->
+        
         <value xml:lang="th">รหัสวิธีการติดต่อ</value>
         <value xml:lang="vi">Id thông tin liên lạc chi tiết</value>
         <value xml:lang="zh">联系方式标识</value>
@@ -13706,6 +13837,7 @@
         <value xml:lang="es">Número recurrencias actuales</value>
         <value xml:lang="fr">Nombre de récurrences courant</value>
         <value xml:lang="hi-IN">वर्तमान पुनरावृत्ति गणना</value>
+        <value xml:lang="hr">Trenutni broj ponavljanja</value>
         <value xml:lang="it">Numero di ricorrenze attuale</value>
         <value xml:lang="ja">現在繰り返し回数</value>
         <value xml:lang="pt-BR">Contagem de recorrências atual</value>
@@ -13795,6 +13927,7 @@
         <value xml:lang="en">Device Location</value>
         <value xml:lang="es">Emplazamiento dispositivo</value>
         <value xml:lang="fr">Emplacement</value>
+        <value xml:lang="hr">Lokacija uređaja</value>
         <value xml:lang="ja">デバイス位置</value>
         <value xml:lang="ru">Локация устройств</value>
         <value xml:lang="vi">Vị trí thiết bị</value>
@@ -13805,24 +13938,24 @@
         <value xml:lang="cs">Datum účinnosti</value>
         <value xml:lang="de">Effektives Datum</value>
         <value xml:lang="en">Effective Date</value>
-        <!--value xml:lang="es">Fecha efectivo</value-->
+        
         <value xml:lang="es">Fecha efectiva</value>
         <value xml:lang="fr">Date d'effet</value>
         <value xml:lang="hi-IN">प्रभावी दिनांक</value>
         <value xml:lang="hr">Datum važenja</value>
         <value xml:lang="it">Data effettiva</value>
-        <!--value xml:lang="nl">Werkelijke datum</value-->
+        
         <value xml:lang="ja">発効日</value>
         <value xml:lang="nl">Effectieve Datum</value>
         <value xml:lang="pt">Data Efectiva</value>
         <value xml:lang="pt-BR">Data de Vigência</value>
         <value xml:lang="ro">Data Efectiva</value>
-        <!--value xml:lang="ru">Дата вст. в силу</value-->
+        
         <value xml:lang="ru">Дата вступления в силу</value>
-        <!--value xml:lang="th">วันที่มีประสิทธิภาพ</value-->
+        
         <value xml:lang="th">วันที่มีผล</value>
         <value xml:lang="vi">Ngày hiệu lực</value>
-        <!--value xml:lang="zh">生效日期</value-->
+        
         <value xml:lang="zh">有效日期</value>
         <value xml:lang="zh-TW">有效日</value>
     </property>
@@ -13853,6 +13986,7 @@
         <value xml:lang="en">External Device Purpose Action Id</value>
         <value xml:lang="es">Código acción dispositivo externo</value>
         <value xml:lang="fr">Obj. de l'action</value>
+        <value xml:lang="hr">Id svrhe radnje vanjskog uređaja</value>
         <value xml:lang="ja">外部デバイス目的アクションID</value>
         <value xml:lang="ru">Цель действия экстренного устройства ID</value>
         <value xml:lang="zh">外部设备目的操作标识</value>
@@ -13862,6 +13996,7 @@
         <value xml:lang="en">External Device Id</value>
         <value xml:lang="es">Código dispositivo externo</value>
         <value xml:lang="fr">Réf. Mat. Externe</value>
+        <value xml:lang="hr">Id vanjskog uređaja</value>
         <value xml:lang="ja">外部デバイスID</value>
         <value xml:lang="ru">ID экстренного устройства</value>
         <value xml:lang="vi">Thiết bị ngoài</value>
@@ -13872,6 +14007,7 @@
         <value xml:lang="en">External Device Type Id</value>
         <value xml:lang="es">Código tipo dispositivo externo</value>
         <value xml:lang="fr">Type de Mat. Externe</value>
+        <value xml:lang="hr">Id vrste vanjskog uređaja</value>
         <value xml:lang="ja">外部デバイス種類ID</value>
         <value xml:lang="ru">Тип экстренного устройства ID</value>
         <value xml:lang="vi">Loại thiết bị ngoài</value>
@@ -13900,7 +14036,7 @@
     <property key="FormFieldTitle_hasTable">
         <value xml:lang="ar">يحوز على جدول</value>
         <value xml:lang="cs">Má tabulku</value>
-        <!--value xml:lang="de">Hat Tabelle</value-->
+        
         <value xml:lang="de">Besitzt Tabelle</value>
         <value xml:lang="en">Has Table</value>
         <value xml:lang="es">Tiene tabla</value>
@@ -13910,7 +14046,7 @@
         <value xml:lang="it">Ha tabella</value>
         <value xml:lang="ja">テーブルあり</value>
         <value xml:lang="pt-BR">Contém tabela</value>
-        <!--value xml:lang="ro">Are Tabelul</value-->
+        
         <value xml:lang="ro">Are Tabela</value>
         <value xml:lang="ru">Есть таблица?</value>
         <value xml:lang="th">มีตาราง</value>
@@ -14020,6 +14156,7 @@
         <value xml:lang="es">Número máximo de recurrencias</value>
         <value xml:lang="fr">Nombre max de récurrences</value>
         <value xml:lang="hi-IN">अधिकतम पुनरावृत्ति गणना</value>
+        <value xml:lang="hr">Maksimalni broj ponavljanja</value>
         <value xml:lang="it">Numero massimo di ricorrenze</value>
         <value xml:lang="ja">最大繰り返し回数</value>
         <value xml:lang="pt-BR">Contagem de Recorrências Máxima</value>
@@ -14326,6 +14463,7 @@
         <value xml:lang="es">Código geográfico autoridad tributaria</value>
         <value xml:lang="fr">Réf. géo. d'administration fiscale</value>
         <value xml:lang="hi-IN">टैक्स प्राधिकरण भू क्रमांक</value>
+        <value xml:lang="hr">Geo ID porezne uprave</value>
         <value xml:lang="it">Codice autorità tasse geografia</value>
         <value xml:lang="ja">税務機関位置ID</value>
         <value xml:lang="nl">Belasting Gebied</value>
@@ -14443,6 +14581,7 @@
         <value xml:lang="es">Google Base</value>
         <value xml:lang="fr">Google Base</value>
         <value xml:lang="hi-IN">गूगल बेस</value>
+        <value xml:lang="hr">Google baza</value>
         <value xml:lang="it">Googleショッピング</value>
         <value xml:lang="ja">Google Base</value>
         <value xml:lang="pt-BR">Base do Google</value>
@@ -14474,6 +14613,7 @@
         <value xml:lang="en">Handheld Facility</value>
         <value xml:lang="es">Gestión de Almacén PDA</value>
         <value xml:lang="fr">Gestion de stock sur PDA</value>
+        <value xml:lang="hr">Ručni uređaj</value>
         <value xml:lang="it">Gestione stabilimenti su PDA</value>
         <value xml:lang="ja">携帯機器</value>
         <value xml:lang="pt-BR">PDA de gerência de instalação</value>
@@ -14505,6 +14645,7 @@
         <value xml:lang="en">IS Mgr</value>
         <value xml:lang="fr">Parc info.</value>
         <value xml:lang="hi-IN">प्रबंधक है</value>
+        <value xml:lang="hr">IS Mgr</value>
         <value xml:lang="it">Parco infor.</value>
         <value xml:lang="ja">情報管理者</value>
         <value xml:lang="pt-BR">É gerente</value>
@@ -14596,6 +14737,7 @@
         <value xml:lang="es">Oagis</value>
         <value xml:lang="fr">Oagis</value>
         <value xml:lang="hi-IN">Oagis</value>
+        <value xml:lang="hr">Oagis</value>
         <value xml:lang="it">Oagis</value>
         <value xml:lang="ja">Oagis</value>
         <value xml:lang="pt-BR">Oagis</value>
@@ -14630,6 +14772,7 @@
         <value xml:lang="cs">Správa objednávek, požadavků zákazníků, nabídej a jejich statistika</value>
         <value xml:lang="en">Sales Order management, Purchase order, Customer request, Requirement, Quote, Statistics</value>
         <value xml:lang="fr">Gestion des commandes de vente, d'achat, des demandes, des devis, des besoins, des stats</value>
+        <value xml:lang="hr">Upravljanje prodajnim narudžbama, Narudžbenica, Zahtjev kupca, Zahtjev, Ponuda, Statistika</value>
         <value xml:lang="ja">販売注文管理、購買注音、顧客リクエスト、要求、見積、状態</value>
         <value xml:lang="ru">Управление продажами заказов, Покупка заказа, Запрос заказчика, Требования, Голосование, Статистика</value>
         <value xml:lang="vi">Quản lý Đặt hàng bán, Đặt mua, Yêu cầu khách hàng, Nguồn lực nội bộ, Báo giá, thống kê</value>
@@ -14643,6 +14786,7 @@
         <value xml:lang="es">Añadir fuente de datos</value>
         <value xml:lang="fr">Ajout de source de données</value>
         <value xml:lang="hi-IN">नया डेटा स्रोत जोड़ें</value>
+        <value xml:lang="hr">Dodaj novi izvor podataka</value>
         <value xml:lang="it">Aggiungi nuova sorgente dati</value>
         <value xml:lang="ja">新規データソースを追加</value>
         <value xml:lang="nl">Een nieuwe data bron toevoegen</value>
@@ -14664,6 +14808,7 @@
         <value xml:lang="es">Añadir tipo de fuente de datos</value>
         <value xml:lang="fr">Ajout de type de source de données</value>
         <value xml:lang="hi-IN">नया डेटा स्रोत प्रकार जोड़ें</value>
+        <value xml:lang="hr">Dodaj novu vrstu izvora podataka</value>
         <value xml:lang="it">Aggiungi nuovo tipo sorgente dati</value>
         <value xml:lang="ja">新規データソース種類を追加</value>
         <value xml:lang="nl">Voeg een nieuwe bron type toe</value>
@@ -14740,6 +14885,7 @@
         <value xml:lang="es">Editar fuente de datos</value>
         <value xml:lang="fr">Modification de source de données</value>
         <value xml:lang="hi-IN">डेटा स्रोत संपादित करें</value>
+        <value xml:lang="hr">Uredi izvor podataka</value>
         <value xml:lang="it">Aggiorna sorgente dati</value>
         <value xml:lang="ja">データソースを編集</value>
         <value xml:lang="nl">Edit Data Bron</value>
@@ -14761,6 +14907,7 @@
         <value xml:lang="es">Editar tipo de fuente de datos</value>
         <value xml:lang="fr">Modification de type de source de données</value>
         <value xml:lang="hi-IN">डेटा स्रोत प्रकार संपादित करें</value>
+        <value xml:lang="hr">Uredi vrstu izvora podataka</value>
         <value xml:lang="it">Aggiorna tipo sorgente dati</value>
         <value xml:lang="ja">データソース種類を編集</value>
         <value xml:lang="nl">Edit Data Bron Type</value>
@@ -14782,6 +14929,7 @@
         <value xml:lang="es">Listar fuentes de datos</value>
         <value xml:lang="fr">Liste des sources de données</value>
         <value xml:lang="hi-IN">डेटा स्रोत की सूची</value>
+        <value xml:lang="hr">Popis izvora podataka</value>
         <value xml:lang="it">Lista sorgente dati</value>
         <value xml:lang="ja">データソース一覧</value>
         <value xml:lang="nl">List Data Bron</value>
@@ -14803,6 +14951,7 @@
         <value xml:lang="es">Listar tipos de fuentes de datos</value>
         <value xml:lang="fr">Liste des types de source de données</value>
         <value xml:lang="hi-IN">डेटा स्रोत प्रकार की सूची</value>
+        <value xml:lang="hr">Popis vrste izvora podataka</value>
         <value xml:lang="it">Lista tipi sorgente dati</value>
         <value xml:lang="ja">データソース種類一覧</value>
         <value xml:lang="nl">List Data Bron Type</value>
@@ -14952,6 +15101,7 @@
         <value xml:lang="cs">Zákazníci - Dodavatelé - Mamagement, komunikace, klasifikace</value>
         <value xml:lang="en">Customers - Suppliers - Employee Management, Communications, Classifications</value>
         <value xml:lang="fr">Gestion des clients, Fournisseurs, Employés, Communications, Classifications</value>
+        <value xml:lang="hr">Kupci - Dobavljači - Upravljanje zaposlenicima, komunikacije, klasifikacije</value>
         <value xml:lang="ja">顧客 - サプライヤ - 従業員管理、通信、分類</value>
         <value xml:lang="ru">Заказчики - Поставщики - Управление работниками, Коммуникации, Классификации</value>
         <value xml:lang="vi">Khách hàng - Nhà cung cấp - Quản lý nhân viên - Quan hệ thông tin - Sự phân loại - Phân quyền</value>
@@ -14964,6 +15114,7 @@
         <value xml:lang="es">Esta página (${parameters.portalPageId}) no se ha encontrado!</value>
         <value xml:lang="fr">Impossible de trouver la page : (${parameters.portalPageId}) !</value>
         <value xml:lang="hi-IN">यह पृष्ठ (${parameters.portalPageId}) नहीं मिला !</value>
+        <value xml:lang="hr">Ovu stranicu (${parameters.portalPageId}) nije moguće pronaći!</value>
         <value xml:lang="it">Questa pagina (${parameters.portalPageId}) non può essere trovata!</value>
         <value xml:lang="ja">このページ(${parameters.portalPageId})は見つかりません</value>
         <value xml:lang="pt-BR">Esta página (${parameters.portalPageId}) não pode ser encontrado!</value>
@@ -14979,6 +15130,7 @@
         <value xml:lang="es">La página '${portalPage.portalPageName}' [${portalPage.portalPageId}] no es suya, por lo tanto no puede modificarla!</value>
         <value xml:lang="fr">La page : '${portalPage.portalPageName}' [${portalPage.portalPageId}] ne vous appartient pas, vous ne pouvez la changer !</value>
         <value xml:lang="hi-IN">यह पृष्ठ '${portalPage.portalPageName}' [${portalPage.portalPageId}] नहीं मिला,आपके द्वारा नहीं है, तो बदला नहीं जा सकता!</value>
+        <value xml:lang="hr">Stranica '${portalPage.portalPageName}' [${portalPage.portalPageId}] nije u vašem vlasništvu, stoga se ne može promijeniti!</value>
         <value xml:lang="it">La pagina '${portalPage.portalPageName}' [${portalPage.portalPageId}] non ti appartiene, così non può essere cambiata!</value>
         <value xml:lang="ja">'${portalPage.portalPageName}' [${portalPage.portalPageId}] ページは所有していないため、変更できません。</value>
         <value xml:lang="pt-BR">A página '${portalPage.portalPageName}' [${portalPage.portalPageId}] não é de sua propriedade, por isso não pode ser alterado!</value>
@@ -15087,6 +15239,7 @@
         <value xml:lang="es">Árabe</value>
         <value xml:lang="fr">Arabe</value>
         <value xml:lang="hi-IN">अरबी</value>
+        <value xml:lang="hr">arapski</value>
         <value xml:lang="it">Arabo</value>
         <value xml:lang="ja">アラビア語</value>
         <value xml:lang="pt-BR">Árabe</value>
@@ -15104,6 +15257,7 @@
         <value xml:lang="es">Búlgaro</value>
         <value xml:lang="fr">Bulgare</value>
         <value xml:lang="hi-IN">बल्गेरियन्</value>
+        <value xml:lang="hr">bugarski</value>
         <value xml:lang="it">Bulgaro</value>
         <value xml:lang="ja">ブルガリア語</value>
         <value xml:lang="nl">Bulgarisch</value>
@@ -15125,6 +15279,7 @@
         <value xml:lang="es">Checo</value>
         <value xml:lang="fr">Tchèque</value>
         <value xml:lang="hi-IN">चेक</value>
+        <value xml:lang="hr">češki</value>
         <value xml:lang="it">Ceco</value>
         <value xml:lang="ja">チェコ語</value>
         <value xml:lang="nl">Czeck</value>
@@ -15144,6 +15299,7 @@
         <value xml:lang="es">Danés</value>
         <value xml:lang="fr">Danois</value>
         <value xml:lang="fy">Danysk</value>
+        <value xml:lang="hr">danski</value>
         <value xml:lang="ja">デンマーク語</value>
         <value xml:lang="pt-BR">Dinamarquês</value>
         <value xml:lang="ru">Датский</value>
@@ -15158,6 +15314,7 @@
         <value xml:lang="es">Alemán</value>
         <value xml:lang="fr">Allemand</value>
         <value xml:lang="hi-IN">जर्मन</value>
+        <value xml:lang="hr">njemački</value>
         <value xml:lang="it">Tedesco</value>
         <value xml:lang="ja">ドイツ語</value>
         <value xml:lang="nl">Duits</value>
@@ -15179,6 +15336,7 @@
         <value xml:lang="fr">Anglais</value>
         <value xml:lang="fy">Frisian</value>
         <value xml:lang="hi-IN">अंग्रेजी</value>
+        <value xml:lang="hr">engleski</value>
         <value xml:lang="it">Inglese</value>
         <value xml:lang="ja">英語</value>
         <value xml:lang="nl">Engels</value>
@@ -15200,6 +15358,7 @@
         <value xml:lang="es">Inglés británico</value>
         <value xml:lang="fr">Anglais (GB)</value>
         <value xml:lang="hi-IN">अंग्रेजी(GB)</value>
+        <value xml:lang="hr">britanski engleski</value>
         <value xml:lang="it">Inglese Britannico</value>
         <value xml:lang="ja">英語(英国)</value>
         <value xml:lang="nl">Brits Engels</value>
@@ -15220,6 +15379,7 @@
         <value xml:lang="es">Español</value>
         <value xml:lang="fr">Espagnol</value>
         <value xml:lang="hi-IN">स्पेनिश</value>
+        <value xml:lang="hr">španjolski</value>
         <value xml:lang="it">Spagnolo</value>
         <value xml:lang="ja">スペイン語</value>
         <value xml:lang="nl">Spaans</value>
@@ -15240,6 +15400,7 @@
         <value xml:lang="es">Francés</value>
         <value xml:lang="fr">Français</value>
         <value xml:lang="hi-IN">फ्रेंच</value>
+        <value xml:lang="hr">francuski</value>
         <value xml:lang="it">Francese</value>
         <value xml:lang="ja">フランス語</value>
         <value xml:lang="nl">Frans</value>
@@ -15261,6 +15422,7 @@
         <value xml:lang="es">Frisio</value>
         <value xml:lang="fr">Frison</value>
         <value xml:lang="fy">Frysk</value>
+        <value xml:lang="hr">frizijski</value>
         <value xml:lang="ja">フリージア語</value>
         <value xml:lang="pt-BR">Frísio</value>
         <value xml:lang="ru">Фризский</value>
@@ -15274,6 +15436,7 @@
         <value xml:lang="es">Griego</value>
         <value xml:lang="fr">Grec</value>
         <value xml:lang="hi-IN">ग्रीक</value>
+        <value xml:lang="hr">grčki</value>
         <value xml:lang="it">Greco</value>
         <value xml:lang="ja">ギリシャ語</value>
         <value xml:lang="nl">Grieks</value>
@@ -15294,6 +15457,7 @@
         <value xml:lang="es">Italiano</value>
         <value xml:lang="fr">Italien</value>
         <value xml:lang="hi-IN">इतालवी</value>
+        <value xml:lang="hr">talijanski</value>
         <value xml:lang="it">Italiano</value>
         <value xml:lang="ja">イタリア語</value>
         <value xml:lang="pt">Italian</value>
@@ -15313,6 +15477,7 @@
         <value xml:lang="es">Holandés</value>
         <value xml:lang="fr">Hollandais</value>
         <value xml:lang="hi-IN">डच्</value>
+        <value xml:lang="hr">nizozemski</value>
         <value xml:lang="it">Olandese</value>
         <value xml:lang="ja">オランダ語</value>
         <value xml:lang="nl">Nederlands</value>
@@ -15332,6 +15497,7 @@
         <value xml:lang="es">Portugués</value>
         <value xml:lang="fr">Portugais</value>
         <value xml:lang="hi-IN">पुर्तगाली</value>
+        <value xml:lang="hr">portugalski</value>
         <value xml:lang="it">Portoghese</value>
         <value xml:lang="ja">ポルトガル語</value>
         <value xml:lang="nl">Portugese</value>
@@ -15352,6 +15518,7 @@
         <value xml:lang="es">Portugués (Brasil)</value>
         <value xml:lang="fr">Portugais (Brésil)</value>
         <value xml:lang="hi-IN">पुर्तगाली(ब्राज़िल)</value>
+        <value xml:lang="hr">brazilski portugalski</value>
         <value xml:lang="it">Portoghese Braziliano</value>
         <value xml:lang="ja">ポルトガル語(ブラジル)</value>
         <value xml:lang="nl">Portugees (Brazilië)</value>
@@ -15372,6 +15539,7 @@
         <value xml:lang="es">Portugués (Portugal)</value>
         <value xml:lang="fr">Portugais (Portugal)</value>
         <value xml:lang="hi-IN">पुर्तगाली(पुर्तगाल)</value>
+        <value xml:lang="hr">portugalski</value>
         <value xml:lang="it">Portoghese Portogallo</value>
         <value xml:lang="ja">ポルトガル語(ポルトガル)</value>
         <value xml:lang="nl">Portugees (Portugal)</value>
@@ -15391,6 +15559,7 @@
         <value xml:lang="es">Ruso</value>
         <value xml:lang="fr">Russe</value>
         <value xml:lang="hi-IN">रूसी</value>
+        <value xml:lang="hr">ruski</value>
         <value xml:lang="it">Russo</value>
         <value xml:lang="ja">ロシア語</value>
         <value xml:lang="pt-BR">Russo</value>
@@ -15407,6 +15576,7 @@
         <value xml:lang="es">Chino</value>
         <value xml:lang="fr">Chinois</value>
         <value xml:lang="hi-IN">चीनी</value>
+        <value xml:lang="hr">kineski</value>
         <value xml:lang="it">Cinese</value>
         <value xml:lang="ja">中国語</value>
         <value xml:lang="nl">Chinees</value>
