@@ -17,7 +17,7 @@ specific language governing permissions and limitations
 under the License.
 -->
 <#escape x as x?xml>
-<fo:block space-after="1.1in"/>
+<fo:block space-after="1.5in"/>
 <fo:table table-layout="fixed" width="100%" space-after="0.3in">
   <fo:table-column column-width="3.5in"/>
   <fo:table-body>

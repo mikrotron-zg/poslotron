@@ -62,7 +62,7 @@ under the License.
   </fo:table>
 
   <#-- print the address, carrier, and shipment dates -->
-  <fo:block space-after="5mm"/>
+  <fo:block space-after="20mm"/>
   <fo:table font-family="LiberationSans" font-size="10pt" table-layout="fixed" space-after.optimum="10pt">
     <fo:table-column column-width="proportional-column-width(2)"/>
     <fo:table-column column-width="proportional-column-width(1)"/>
