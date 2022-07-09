@@ -18,10 +18,11 @@
     specific language governing permissions and limitations
     under the License.
 -->
-<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<resource>
     <property key="FormFieldTitle_accountNumber">
         <value xml:lang="en">Account Number</value>
         <value xml:lang="fr">N° de compte</value>
+        <value xml:lang="hr">Broj računa</value>
         <value xml:lang="it">Numero Conto</value>
         <value xml:lang="ja">アカウント番号</value>
         <value xml:lang="pt_BR">Número de conta</value>
@@ -33,6 +34,7 @@
     <property key="FormFieldTitle_actualEmployerPaidPercent">
         <value xml:lang="en">Actual Employer Paid Percent</value>
         <value xml:lang="fr">Pourcentage payé par l'employeur actuel</value>
+        <value xml:lang="hr">Stvarni postotak plaćen od strane poslodavca</value>
         <value xml:lang="it">Percentuale Pagata Attualmente all'Impiegato</value>
         <value xml:lang="ja">実績従業員支払割合(%)</value>
         <value xml:lang="pt_BR">Porcentagem efetivamente paga ao empregado</value>
@@ -44,6 +46,7 @@
     <property key="FormFieldTitle_actualFromDate">
         <value xml:lang="en">Actual From Date</value>
         <value xml:lang="fr">Date réelle de début</value>
+        <value xml:lang="hr">Aktualno od datuma</value>
         <value xml:lang="it">Data Inizio Attuale</value>
         <value xml:lang="ja">実績開始日</value>
         <value xml:lang="pt_BR">Data de início real</value>
@@ -56,6 +59,7 @@
         <value xml:lang="de">Entlassungsdatum</value>
         <value xml:lang="en">Actual Thru Date</value>
         <value xml:lang="fr">Date réelle de fin</value>
+        <value xml:lang="hr">Aktualno do datuma</value>
         <value xml:lang="it">Data Fine Attuale</value>
         <value xml:lang="ja">実績終了日</value>
         <value xml:lang="pt_BR">Data final real</value>
@@ -68,6 +72,7 @@
         <value xml:lang="de">Bewerbungsdatum</value>
         <value xml:lang="en">Application Date</value>
         <value xml:lang="fr">Date de demande d'emploi</value>
+        <value xml:lang="hr">Datum prijave</value>
         <value xml:lang="it">Data Applicazione</value>
         <value xml:lang="ja">申請日</value>
         <value xml:lang="pt_BR">Data de requerimento</value>
@@ -80,6 +85,7 @@
         <value xml:lang="de">Einsatzgebiet ID</value>
         <value xml:lang="en">Application Id</value>
         <value xml:lang="fr">Demande d'emploi</value>
+        <value xml:lang="hr">Id prijave</value>
         <value xml:lang="it">Numero Applicazione</value>
         <value xml:lang="ja">申請ID</value>
         <value xml:lang="pt_BR">Id do requerimento</value>
@@ -92,6 +98,7 @@
         <value xml:lang="de">Anwendungsteilnehmer ID</value>
         <value xml:lang="en">Applying Party Id</value>
         <value xml:lang="fr">Acteur en demande</value>
+        <value xml:lang="hr">Id prijavljene stranke</value>
         <value xml:lang="it">Soggetto Applicato</value>
         <value xml:lang="ja">申請者ID</value>
         <value xml:lang="pt_BR">Id do requerente</value>
@@ -103,6 +110,7 @@
     <property key="FormFieldTitle_approvalStatus">
         <value xml:lang="en">Approver Status</value>
         <value xml:lang="fr">Etat d'approbation</value>
+        <value xml:lang="hr">Status odobravatelja</value>
         <value xml:lang="ja">承認ステータス</value>
         <value xml:lang="vi">Trạng thái duyệt</value>
         <value xml:lang="zh">批准人状态</value>
@@ -110,6 +118,7 @@
     <property key="FormFieldTitle_approverId">
         <value xml:lang="en">Approver Party</value>
         <value xml:lang="fr">Approbateur</value>
+        <value xml:lang="hr">Odobravatelj</value>
         <value xml:lang="ja">承認者</value>
         <value xml:lang="pt_BR">Participante responsável</value>
         <value xml:lang="vi">Người duyệt</value>
@@ -118,6 +127,7 @@
     <property key="FormFieldTitle_approverPartyId">
         <value xml:lang="en">Approver Party</value>
         <value xml:lang="fr">Approbateur</value>
+        <value xml:lang="hr">Id odobravatelja</value>
         <value xml:lang="ja">承認者</value>
         <value xml:lang="pt_BR">Participante responsável</value>
         <value xml:lang="vi">Người duyệt</value>
@@ -126,6 +136,7 @@
     <property key="FormFieldTitle_bankName">
         <value xml:lang="en">Bank Name</value>
         <value xml:lang="fr">Nom de la banque</value>
+        <value xml:lang="hr">Naziv banke</value>
         <value xml:lang="it">Nome Banca</value>
         <value xml:lang="ja">銀行名</value>
         <value xml:lang="pt_BR">Nome do banco</value>
@@ -137,6 +148,7 @@
     <property key="FormFieldTitle_benefitTypeId">
         <value xml:lang="en">Benefit Type Id</value>
         <value xml:lang="fr">Type d'avantage</value>
+        <value xml:lang="hr">ID vrste beneficije</value>
         <value xml:lang="it">Codice Tipo Benefit</value>
         <value xml:lang="ja">福利厚生種類ID</value>
         <value xml:lang="pt_BR">Id de tipo de benefício</value>
@@ -148,6 +160,7 @@
     <property key="FormFieldTitle_budgetId">
         <value xml:lang="en">Budget Id</value>
         <value xml:lang="fr">Budget</value>
+        <value xml:lang="hr">Id proračuna</value>
         <value xml:lang="it">Codice Budget</value>
         <value xml:lang="ja">予算ID</value>
         <value xml:lang="pt_BR">Orçamento</value>
@@ -159,6 +172,7 @@
     <property key="FormFieldTitle_budgetItemSeqId">
         <value xml:lang="en">Budget Item Seq Id</value>
         <value xml:lang="fr">Ligne budgétaire</value>
+        <value xml:lang="hr">Redni broj proračunske stavke</value>
         <value xml:lang="it">Numero Seq. Riga Budget</value>
         <value xml:lang="ja">予算アイテム連番ID</value>
         <value xml:lang="pt_BR">Número do Id de sequência do Item</value>
@@ -170,6 +184,7 @@
     <property key="FormFieldTitle_budgetItemTypeId">
         <value xml:lang="en">Budget Item Type Id</value>
         <value xml:lang="fr">Type de ligne budgétaire</value>
+        <value xml:lang="hr">Id vrste proračunske stavke</value>
         <value xml:lang="it">Tipo Budget Riga</value>
         <value xml:lang="ja">予算アイテム種類ID</value>
         <value xml:lang="pt_BR">Id de tipo de item de orçamento</value>
@@ -181,6 +196,7 @@
     <property key="FormFieldTitle_budgetTypeId">
         <value xml:lang="en">Budget Type Id</value>
         <value xml:lang="fr">Type de budget</value>
+        <value xml:lang="hr">Id vrste proračuna</value>
         <value xml:lang="it">Tipo Budget</value>
         <value xml:lang="ja">予算種類ID</value>
         <value xml:lang="pt_BR">Id de tipo de orçamento</value>
@@ -191,6 +207,7 @@
     </property>
     <property key="FormFieldTitle_communicationDate">
         <value xml:lang="en">Communication Date</value>
+        <value xml:lang="hr">Datum komunikacije</value>
         <value xml:lang="it">Data comunicazione</value>
         <value xml:lang="ja">通信日</value>
         <value xml:lang="pt_BR">Data de comunicação</value>
@@ -201,6 +218,7 @@
     <property key="FormFieldTitle_dateModified">
         <value xml:lang="en">Date Modified</value>
         <value xml:lang="fr">Date modifiée</value>
+        <value xml:lang="hr">Datum izmjene</value>
         <value xml:lang="it">Data Modifica</value>
         <value xml:lang="ja">更新日</value>
         <value xml:lang="pt_BR">Data de modificação</value>
@@ -212,6 +230,7 @@
     <property key="FormFieldTitle_deductionTypeId">
         <value xml:lang="en">Deduction Type Id</value>
         <value xml:lang="fr">Réf. dy type de déduction</value>
+        <value xml:lang="hr">Id vrste odbitka</value>
         <value xml:lang="it">Tipo Deduzione</value>
         <value xml:lang="ja">控除種類ID</value>
         <value xml:lang="pt_BR">Id de tipo de dedução</value>
@@ -223,6 +242,7 @@
     <property key="FormFieldTitle_emplLeaveReasonTypeId">
         <value xml:lang="en">Leave Reason Type</value>
         <value xml:lang="fr">Raison du congé</value>
+        <value xml:lang="hr">Vrsta razloga dopusta</value>
         <value xml:lang="ja">休職理由種類</value>
         <value xml:lang="pt_BR">Tipo da razão de licença</value>
         <value xml:lang="vi">Kiểu lí do</value>
@@ -232,6 +252,7 @@
         <value xml:lang="de">Anstellungspositions-ID</value>
         <value xml:lang="en">Empl Position Id</value>
         <value xml:lang="fr">Position de l'employé</value>
+        <value xml:lang="hr">Id radnog mjesta</value>
         <value xml:lang="it">Posizione Impiegato</value>
         <value xml:lang="ja">従業員職位ID</value>
         <value xml:lang="pt_BR">Id da posição do empregado</value>
@@ -243,6 +264,7 @@
     <property key="FormFieldTitle_emplPositionIdManagedBy">
         <value xml:lang="en">Empl Position Id Managed By</value>
         <value xml:lang="fr">Position de l'employé contrôlé par</value>
+        <value xml:lang="hr">Id radnog mjesta upravlja</value>
         <value xml:lang="it">Codice Posizione Impiegato Gestita Da</value>
         <value xml:lang="ja">管理者従業員職位ID</value>
         <value xml:lang="pt_BR">Id de posição do empregado gerenciado por</value>
@@ -253,6 +275,7 @@
     </property>
     <property key="FormFieldTitle_emplPositionIdReportingTo">
         <value xml:lang="en">Empl Position Id Reporting To</value>
+        <value xml:lang="hr">Id radnog mjesta izvješćuje</value>
         <value xml:lang="it">Posizione impiegato gestito da</value>
         <value xml:lang="ja">報告者従業員職位ID</value>
         <value xml:lang="pt_BR">Id de posição de empregado reportando-se para</value>
@@ -263,6 +286,7 @@
     <property key="FormFieldTitle_employeePartyId">
         <value xml:lang="en">Employee Party Id</value>
         <value xml:lang="fr">Employé</value>
+        <value xml:lang="hr">Id zaposlenika</value>
         <value xml:lang="it">Soggetto Impiegato</value>
         <value xml:lang="ja">従業員ID</value>
         <value xml:lang="pt_BR">Id do empregado</value>
@@ -274,6 +298,7 @@
     <property key="FormFieldTitle_employeeRoleTypeId">
         <value xml:lang="en">Employee Role Type Id</value>
         <value xml:lang="fr">Type de rôle de l'employé</value>
+        <value xml:lang="hr">Id vrste uloge zaposlenika</value>
         <value xml:lang="it">Tipo Ruolo Impiegato</value>
         <value xml:lang="ja">従業員ロール種類ID</value>
         <value xml:lang="pt_BR">Id do tipo de papel do empregado</value>
@@ -286,6 +311,7 @@
         <value xml:lang="de">Quelle der Anstellungsanwendungs-ID</value>
         <value xml:lang="en">Employment App Source Type Id</value>
         <value xml:lang="fr">Type d'origine de demande d'emploi</value>
+        <value xml:lang="hr">Id vrste izvora aplikacije za zapošljavanje</value>
         <value xml:lang="it">Tipo Origine Applicazione Impiegato</value>
         <value xml:lang="ja">雇用申請元種類ID</value>
         <value xml:lang="pt_BR">Id do tipo fonte de candidatura do emprego</value>
@@ -297,6 +323,7 @@
     <property key="FormFieldTitle_estimatedFromDate">
         <value xml:lang="en">Estimated From Date</value>
         <value xml:lang="fr">Date de début estimée</value>
+        <value xml:lang="hr">Procijenjeno od datuma</value>
         <value xml:lang="it">Data Inizio Stimata</value>
         <value xml:lang="ja">予定開始日</value>
         <value xml:lang="pt_BR">Data estimada para o início</value>
@@ -308,6 +335,7 @@
     <property key="FormFieldTitle_estimatedThruDate">
         <value xml:lang="en">Estimated Thru Date</value>
         <value xml:lang="fr">Date de fin estimée</value>
+        <value xml:lang="hr">Procijenjeno do datuma</value>
         <value xml:lang="it">Data Fine Stimata</value>
         <value xml:lang="ja">予定終了日</value>
         <value xml:lang="pt_BR">Data estimada par ao fim</value>
@@ -319,6 +347,7 @@
     <property key="FormFieldTitle_examTypeEnumId">
         <value xml:lang="en">Exam Type Enum Id</value>
         <value xml:lang="fr">Type d'examen</value>
+        <value xml:lang="hr">Id vrste ispita</value>
         <value xml:lang="ja">検査種類ID</value>
         <value xml:lang="vi">Các kiểu thi</value>
         <value xml:lang="zh">考试类型枚举标识</value>
@@ -326,6 +355,7 @@
     <property key="FormFieldTitle_exemptFlag">
         <value xml:lang="en">Exempt Flag</value>
         <value xml:lang="fr">Balise d'exemption</value>
+        <value xml:lang="hr">Oznaka izuzeća</value>
         <value xml:lang="it">Flag Esenzione</value>
         <value xml:lang="ja">免税フラグ</value>
         <value xml:lang="pt_BR">Sinal de isenção</value>
@@ -337,6 +367,7 @@
     <property key="FormFieldTitle_experienceMonths">
         <value xml:lang="en">Experience in months</value>
         <value xml:lang="fr">Expérience en mois</value>
+        <value xml:lang="hr">Iskustvo u mjesecima</value>
         <value xml:lang="it">Esperienza in mesi</value>
         <value xml:lang="ja">経験月数</value>
         <value xml:lang="vi">Số Tháng kinh nghiệm</value>
@@ -345,6 +376,7 @@
     <property key="FormFieldTitle_experienceYears">
         <value xml:lang="en">Experience in years</value>
         <value xml:lang="fr">Expérience en années</value>
+        <value xml:lang="hr">Iskustvo u godinama</value>
         <value xml:lang="it">Esperienza in anni</value>
         <value xml:lang="ja">経験年数</value>
         <value xml:lang="vi">Số Năm kinh nghiệm</value>
@@ -353,6 +385,7 @@
     <property key="FormFieldTitle_flatAmount">
         <value xml:lang="en">Flat Amount</value>
         <value xml:lang="fr">Montant fixe</value>
+        <value xml:lang="hr">Paušalni iznos</value>
         <value xml:lang="it">Importo fisso</value>
         <value xml:lang="ja">固定金額</value>
         <value xml:lang="pt_BR">Quantia fixa</value>
@@ -364,6 +397,7 @@
     <property key="FormFieldTitle_fulltimeFlag">
         <value xml:lang="en">Fulltime Flag</value>
         <value xml:lang="fr">Balise de plein temps</value>
+        <value xml:lang="hr">Oznaka punog radnog vremena</value>
         <value xml:lang="it">Flag tempo pieno</value>
         <value xml:lang="ja">フルタイムフラグ</value>
         <value xml:lang="pt_BR">Sinal de período integral</value>
@@ -375,6 +409,7 @@
     <property key="FormFieldTitle_jobLocation">
         <value xml:lang="en">Job Location</value>
         <value xml:lang="fr">Lieu de travail</value>
+        <value xml:lang="hr">Mjesto obavljanja posla</value>
         <value xml:lang="it">Luogo di lavoro</value>
         <value xml:lang="ja">職務場所</value>
         <value xml:lang="vi">Nơi làm việc</value>
@@ -383,6 +418,7 @@
     <property key="FormFieldTitle_jobPostingEnumId">
         <value xml:lang="en">Job Posting Enum Id</value>
         <value xml:lang="fr">Référence d'offre d'emploi</value>
+        <value xml:lang="hr">Id oglasa za posao</value>
         <value xml:lang="it">Codice offerta di impiego</value>
         <value xml:lang="ja">職務配置ID</value>
         <value xml:lang="vi">Thông báo tuyển nhân sự</value>
@@ -391,6 +427,7 @@
     <property key="FormFieldTitle_jobPostingTypeEnumId">
         <value xml:lang="en">Job Posting Type</value>
         <value xml:lang="fr">Type d'offre d'emploi</value>
+        <value xml:lang="hr">Vrsta oglasa za posao</value>
         <value xml:lang="it">Tipo di offerta di impiego</value>
         <value xml:lang="ja">職務配置種類</value>
         <value xml:lang="vi">Loại thông báo tuyển nhân sự</value>
@@ -399,6 +436,7 @@
     <property key="FormFieldTitle_jobRequisitionId">
         <value xml:lang="en">Job Requisition Id</value>
         <value xml:lang="fr">Demande d'emploi</value>
+        <value xml:lang="hr">Id zahtjeva za posao</value>
         <value xml:lang="ja">職務辞令ID</value>
         <value xml:lang="pt_BR">Id de requisição de emprego</value>
         <value xml:lang="vi">Nghề nghiệp tuyển dụng</value>
@@ -407,6 +445,7 @@
     <property key="FormFieldTitle_justification">
         <value xml:lang="en">Justification</value>
         <value xml:lang="fr">Justification</value>
+        <value xml:lang="hr">Opravdanje</value>
         <value xml:lang="it">Giustificazione</value>
         <value xml:lang="ja">根拠</value>
         <value xml:lang="pt_BR">Justificativa</value>
@@ -418,6 +457,7 @@
     <property key="FormFieldTitle_leaveStatus">
         <value xml:lang="en">Leave Status</value>
         <value xml:lang="fr">Etat de congé</value>
+        <value xml:lang="hr">Status dopusta</value>
         <value xml:lang="ja">休職ステータス</value>
         <value xml:lang="pt_BR">Estado da licença</value>
         <value xml:lang="vi">Trạng thái Nghỉ phép</value>
@@ -426,6 +466,7 @@
     <property key="FormFieldTitle_leaveTypeId">
         <value xml:lang="en">Leave Type Id</value>
         <value xml:lang="fr">Type de congé</value>
+        <value xml:lang="hr">Id vrste dopusta</value>
         <value xml:lang="it">Tipo di licenziamento</value>
         <value xml:lang="ja">休職種類ID</value>
         <value xml:lang="pt_BR">Id de tipo de licença</value>
@@ -436,6 +477,7 @@
     <property key="FormFieldTitle_managerPartyId">
         <value xml:lang="en">Manager Party Id</value>
         <value xml:lang="fr">Directeur</value>
+        <value xml:lang="hr">Id upravitelja</value>
         <value xml:lang="it">Manager</value>
         <value xml:lang="ja">管理者ID</value>
         <value xml:lang="pt_BR">Id do Diretor</value>
@@ -447,6 +489,7 @@
     <property key="FormFieldTitle_managerRoleTypeId">
         <value xml:lang="en">Manager Role Type Id</value>
         <value xml:lang="fr">Type de rôle directeur</value>
+        <value xml:lang="hr">Id vrste uloge upravitelja</value>
         <value xml:lang="it">Tipo Ruolo Manager</value>
         <value xml:lang="ja">管理者ロール種類ID</value>
         <value xml:lang="pt_BR">Id de tipo de papel de diretor</value>
@@ -458,6 +501,7 @@
     <property key="FormFieldTitle_partyQualTypeId">
         <value xml:lang="en">Party Qual Type Id</value>
         <value xml:lang="fr">Diplôme</value>
+        <value xml:lang="hr">Id vrste kvalitete stranke</value>
         <value xml:lang="it">Tipo qualifica soggetto</value>
         <value xml:lang="ja">資格種類ID</value>
         <value xml:lang="pt_BR">Id de tipo qualificação de participante</value>
@@ -468,6 +512,7 @@
     <property key="FormFieldTitle_payGradeId">
         <value xml:lang="en">Pay Grade Id</value>
         <value xml:lang="fr">Catégorie de salaire</value>
+        <value xml:lang="hr">Id platnog razreda</value>
         <value xml:lang="it">Grado Paga</value>
         <value xml:lang="ja">給与等級ID</value>
         <value xml:lang="pt_BR">Id de degrau salarial</value>
@@ -479,6 +524,7 @@
     <property key="FormFieldTitle_payGradeName">
         <value xml:lang="en">Pay Grade Name</value>
         <value xml:lang="fr">Nom de catégorie de salaire</value>
+        <value xml:lang="hr">Naziv platnog razreda</value>
         <value xml:lang="it">Nome Grado Paga</value>
         <value xml:lang="ja">給与等級名称</value>
         <value xml:lang="pt_BR">Nome do Degrau salarial</value>
@@ -490,6 +536,7 @@
     <property key="FormFieldTitle_payHistoryFromDate">
         <value xml:lang="en">Pay History From Date</value>
         <value xml:lang="fr">Date de début</value>
+        <value xml:lang="hr">Povijest plaćanja od datuma</value>
         <value xml:lang="it">Storia Data Pagamento Da</value>
         <value xml:lang="ja">給与履歴開始日</value>
         <value xml:lang="pt_BR">Histórico de Data de início</value>
@@ -501,6 +548,7 @@
     <property key="FormFieldTitle_payHistoryPartyIdFrom">
         <value xml:lang="en">Pay History Party Id From</value>
         <value xml:lang="fr">Réf. d'acteur depuis</value>
+        <value xml:lang="hr">Povijest plaćanja za Id sudionika od</value>
         <value xml:lang="it">Storia Soggetto Pagamento Da</value>
         <value xml:lang="ja">給与履歴取引先ID(元)</value>
         <value xml:lang="pt_BR">Id do Histórico de pagamento do participante de</value>
@@ -512,6 +560,7 @@
     <property key="FormFieldTitle_payHistoryPartyIdTo">
         <value xml:lang="en">Pay History Party Id To</value>
         <value xml:lang="fr">Réf. d'acteur vers</value>
+        <value xml:lang="hr">Povijest plaćanja za Id sudionika do</value>
         <value xml:lang="it">Storia Soggetto Pagamento A</value>
         <value xml:lang="ja">給与履歴取引先ID(先)</value>
         <value xml:lang="pt_BR">Id do histórico de pagamento do participante para</value>
@@ -523,6 +572,7 @@
     <property key="FormFieldTitle_payHistoryRoleTypeIdFrom">
         <value xml:lang="en">Pay History Role Type Id From</value>
         <value xml:lang="fr">Type de rôle depuis</value>
+        <value xml:lang="hr">Povijest plaćanja za Id vrste uloge od</value>
         <value xml:lang="it">Storia Tipo Ruolo Pagamento Da</value>
         <value xml:lang="ja">給与履歴ロール種類ID(元)</value>
         <value xml:lang="pt_BR">Id do papel de histórico de pagamento para</value>
@@ -534,6 +584,7 @@
     <property key="FormFieldTitle_payHistoryRoleTypeIdTo">
         <value xml:lang="en">Pay History Role Type Id To</value>
         <value xml:lang="fr">Type de rôle vers</value>
+        <value xml:lang="hr">Povijest plaćanja za Id vrste uloge do</value>
         <value xml:lang="it">Storia Tipo Ruolo Pagamento A</value>
         <value xml:lang="ja">給与履歴ロール種類ID(先)</value>
         <value xml:lang="pt_BR">Id de papel de histórico de pagamento de</value>
@@ -544,6 +595,7 @@
     </property>
     <property key="FormFieldTitle_perfRatingTypeId">
         <value xml:lang="en">Perf Rating Type Id</value>
+        <value xml:lang="hr">Id vrste ocjene učinka</value>
         <value xml:lang="it">Tipo percentuale prestazioni</value>
         <value xml:lang="ja">業績評価種類ID</value>
         <value xml:lang="pt_BR">Id de tipo de avaliação de desempenho</value>
@@ -554,6 +606,7 @@
     <property key="FormFieldTitle_perfReviewId">
         <value xml:lang="en">Perf Review Id</value>
         <value xml:lang="fr">Évaluation des performances</value>
+        <value xml:lang="hr">Id recenzije učinka</value>
         <value xml:lang="it">Rassegna Prestazioni</value>
         <value xml:lang="ja">業績評価ID</value>
         <value xml:lang="pt_BR">Id da avaliação de desempenho</value>
@@ -564,6 +617,7 @@
     </property>
     <property key="FormFieldTitle_perfReviewItemSeqId">
         <value xml:lang="en">Perf Review Item Seq Id</value>
+        <value xml:lang="hr">Redni broj recenzije učinka</value>
         <value xml:lang="it">Riga rassegna prestazioni</value>
         <value xml:lang="ja">業績評価アイテム連番ID</value>
         <value xml:lang="pt_BR">Id de Item de sequência da avaliação de desempenho</value>
@@ -573,6 +627,7 @@
     </property>
     <property key="FormFieldTitle_perfReviewItemTypeId">
         <value xml:lang="en">Perf Review Item Type Id</value>
+        <value xml:lang="hr">Id vrste recenzije učinka</value>
         <value xml:lang="it">Tipo riga rassegna prestazioni</value>
         <value xml:lang="ja">業績評価アイテム種類ID</value>
         <value xml:lang="pt_BR">Id de tipo de Item de avaliação de desempenho</value>
@@ -582,6 +637,7 @@
     </property>
     <property key="FormFieldTitle_position">
         <value xml:lang="en">Position</value>
+        <value xml:lang="hr">Položaj</value>
         <value xml:lang="it">Posizione</value>
         <value xml:lang="ja">職位</value>
         <value xml:lang="pt_BR">Posição</value>
@@ -592,6 +648,7 @@
     <property key="FormFieldTitle_primaryFlag">
         <value xml:lang="en">Primary Flag</value>
         <value xml:lang="fr">Balise primaire</value>
+        <value xml:lang="hr">Primarna oznaka</value>
         <value xml:lang="it">Flag Primario</value>
         <value xml:lang="ja">プライマリフラグ</value>
         <value xml:lang="pt_BR">Sinal primário</value>
@@ -603,6 +660,7 @@
     <property key="FormFieldTitle_purpose">
         <value xml:lang="en">Purpose</value>
         <value xml:lang="fr">But</value>
+        <value xml:lang="hr">Svrha</value>
         <value xml:lang="it">Funzione</value>
         <value xml:lang="ja">目的</value>
         <value xml:lang="pt_BR">Meta</value>
@@ -614,6 +672,7 @@
     <property key="FormFieldTitle_qualificationDesc">
         <value xml:lang="en">Qualification Desc</value>
         <value xml:lang="fr">Desc. compl.</value>
+        <value xml:lang="hr">Opis kvalifikacije</value>
         <value xml:lang="it">Descrizione qualifica</value>
         <value xml:lang="ja">資格詳細</value>
         <value xml:lang="pt_BR">Descrição de qualificação</value>
@@ -624,6 +683,7 @@
     <property key="FormFieldTitle_referredByPartyId">
         <value xml:lang="en">Referred By Party Id</value>
         <value xml:lang="fr">Envoyé par l'acteur</value>
+        <value xml:lang="hr">Preporuka od sudionika Id</value>
         <value xml:lang="it">Riferito Dal Soggetto</value>
         <value xml:lang="ja">推薦者ID</value>
         <value xml:lang="pt_BR">Referido por participante com Id</value>
@@ -635,6 +695,7 @@
     <property key="FormFieldTitle_responsibilityTypeId">
         <value xml:lang="en">Responsibility Type Id</value>
         <value xml:lang="fr">Type de responsabilité</value>
+        <value xml:lang="hr">Id vrste odgovornosti</value>
         <value xml:lang="it">Tipo Responsibilità</value>
         <value xml:lang="ja">職責種類ID</value>
         <value xml:lang="pt_BR">Id de tipo de responsabilidade</value>
@@ -646,6 +707,7 @@
     <property key="FormFieldTitle_resumeDate">
         <value xml:lang="en">Resume Date</value>
         <value xml:lang="fr">Date de CV</value>
+        <value xml:lang="hr">Datum životopisa</value>
         <value xml:lang="it">Data curriculum vitae</value>
         <value xml:lang="ja">復帰日</value>
         <value xml:lang="pt_BR">Data do currículo</value>
@@ -656,6 +718,7 @@
     <property key="FormFieldTitle_resumeId">
         <value xml:lang="en">Resume Id</value>
         <value xml:lang="fr">CV</value>
+        <value xml:lang="hr">Id životopisa</value>
         <value xml:lang="it">Rif. curriculum vitae</value>
         <value xml:lang="ja">復帰ID</value>
         <value xml:lang="pt_BR">Id do currículo</value>
@@ -666,6 +729,7 @@
     <property key="FormFieldTitle_resumeText">
         <value xml:lang="en">Resume Text</value>
         <value xml:lang="fr">Texte de CV</value>
+        <value xml:lang="hr">Tekst životopisa</value>
         <value xml:lang="it">Testo curriculum vitae</value>
         <value xml:lang="ja">復帰内容</value>
         <value xml:lang="pt_BR">Texto do currículo</value>
@@ -676,6 +740,7 @@
     <property key="FormFieldTitle_routingNumber">
         <value xml:lang="en">Routing Number</value>
         <value xml:lang="fr">N° de routage</value>
+        <value xml:lang="hr">Broj usmjeravanja</value>
         <value xml:lang="it">Numero Routing</value>
         <value xml:lang="ja">ルーティング番号</value>
         <value xml:lang="pt_BR">Número de rota</value>
@@ -686,6 +751,7 @@
     </property>
     <property key="FormFieldTitle_salary">
         <value xml:lang="en">Salary</value>
+        <value xml:lang="hr">Plaća</value>
         <value xml:lang="it">Salario</value>
         <value xml:lang="ja">給与</value>
         <value xml:lang="pt_BR">Salário</value>
@@ -696,6 +762,7 @@
     <property key="FormFieldTitle_salaryFlag">
         <value xml:lang="en">Salary Flag</value>
         <value xml:lang="fr">Balise de salaire</value>
+        <value xml:lang="hr">Oznaka plaće</value>
         <value xml:lang="it">Flag Salario</value>
         <value xml:lang="ja">給与フラグ</value>
         <value xml:lang="pt_BR">Sinal de salário</value>
@@ -708,6 +775,7 @@
         <value xml:lang="de">Fähigkeitsniveau</value>
         <value xml:lang="en">Skill Level</value>
         <value xml:lang="fr">Niveau de compétence</value>
+        <value xml:lang="hr">Razina vještine</value>
         <value xml:lang="it">Livello Abilità</value>
         <value xml:lang="ja">スキルレベル</value>
         <value xml:lang="pt_BR">Nível de habilidade</value>
@@ -719,6 +787,7 @@
     <property key="FormFieldTitle_skillTypeId">
         <value xml:lang="en">Skill Type Id</value>
         <value xml:lang="fr">Compétence</value>
+        <value xml:lang="hr">Id vrste vještine</value>
         <value xml:lang="it">Codice Tipo Abilità</value>
         <value xml:lang="ja">スキル種類ID</value>
         <value xml:lang="pt_BR">Id de tipo de habilidade</value>
@@ -731,6 +800,7 @@
         <value xml:lang="de">erste Nutzung</value>
         <value xml:lang="en">Started Using Date</value>
         <value xml:lang="fr">Débutant depuis</value>
+        <value xml:lang="hr">Počeo koristiti datuma</value>
         <value xml:lang="it">Data di Inizio Usata</value>
         <value xml:lang="ja">雇用開始日</value>
         <value xml:lang="pt_BR">Data do início do uso</value>
@@ -742,6 +812,7 @@
     <property key="FormFieldTitle_temporaryFlag">
         <value xml:lang="en">Temporary Flag</value>
         <value xml:lang="fr">Balise temporaire</value>
+        <value xml:lang="hr">Privremena oznaka</value>
         <value xml:lang="it">Flag Temporaneo</value>
         <value xml:lang="ja">一時フラグ</value>
         <value xml:lang="pt_BR">Sinal de temporário</value>
@@ -753,6 +824,7 @@
     <property key="FormFieldTitle_terminationReasonId">
         <value xml:lang="en">Termination Reason Id</value>
         <value xml:lang="fr">Motif de la fin de contrat</value>
+        <value xml:lang="hr">Id razloga raskida</value>
         <value xml:lang="it">Motivazione Licenziamento</value>
         <value xml:lang="ja">終了理由フラグ</value>
         <value xml:lang="pt_BR">Id da razão de encerramento</value>
@@ -764,6 +836,7 @@
     <property key="FormFieldTitle_terminationTypeId">
         <value xml:lang="en">Termination Type Id</value>
         <value xml:lang="fr">Type de fin de contrat</value>
+        <value xml:lang="hr">Id vrste raskida</value>
         <value xml:lang="it">Tipo Licenziamento</value>
         <value xml:lang="ja">終了種類ID</value>
         <value xml:lang="pt_BR">Id de tipo de encerramento</value>
@@ -775,6 +848,7 @@
     <property key="FormFieldTitle_title">
         <value xml:lang="en">Title</value>
         <value xml:lang="fr">Titre</value>
+        <value xml:lang="hr">Titula</value>
         <value xml:lang="ja">タイトル</value>
         <value xml:lang="vi">Tiêu đề</value>
         <value xml:lang="zh">标题</value>
@@ -782,6 +856,7 @@
     <property key="FormFieldTitle_trainingClassTypeId">
         <value xml:lang="en">Training Class Type Id</value>
         <value xml:lang="fr">Type de formation</value>
+        <value xml:lang="hr">Id vrste tečaja</value>
         <value xml:lang="it">Tipo classe corso</value>
         <value xml:lang="ja">トレーニングクラス種類ID</value>
         <value xml:lang="pt_BR">Id de tipo de classe de treinamento</value>
@@ -792,6 +867,7 @@
     <property key="FormFieldTitle_trainingRequestId">
         <value xml:lang="en">Training Request Id</value>
         <value xml:lang="fr">Approbation</value>
+        <value xml:lang="hr">ID zahtjeva za obuku</value>
         <value xml:lang="ja">トレーニングリクエストID</value>
         <value xml:lang="vi">Yêu cầu đào tạo</value>
         <value xml:lang="zh">培训请求标识</value>
@@ -799,6 +875,7 @@
     <property key="FormFieldTitle_unemploymentClaimDate">
         <value xml:lang="en">Unemployment Claim Date</value>
         <value xml:lang="fr">Date de demande du chômage</value>
+        <value xml:lang="hr">Datum podnošenja zahtjeva za nezaposlene</value>
         <value xml:lang="it">Data Reclamo Disoccupazione</value>
         <value xml:lang="ja">解雇申請日</value>
         <value xml:lang="pt_BR">Data de reivindicação de desemprego</value>
@@ -810,6 +887,7 @@
     <property key="FormFieldTitle_unemploymentClaimId">
         <value xml:lang="en">Unemployment Claim Id</value>
         <value xml:lang="fr">Date de demande du chômage</value>
+        <value xml:lang="hr">Id zahtjeva za nezaposlenost</value>
         <value xml:lang="it">Reclamo Disoccupazione</value>
         <value xml:lang="ja">解雇申請ID</value>
         <value xml:lang="pt_BR">Id de reivindicação de desemprego</value>
@@ -821,6 +899,7 @@
     <property key="FormFieldTitle_verifStatusId">
         <value xml:lang="en">Verif Status Id</value>
         <value xml:lang="fr">Verifié</value>
+        <value xml:lang="hr">Id prov. statusa</value>
         <value xml:lang="it">Stato verifica</value>
         <value xml:lang="ja">確認ステータスID</value>
         <value xml:lang="pt_BR">Id de estado de verificação</value>
@@ -832,6 +911,7 @@
         <value xml:lang="de">Jahre der Erfahrung</value>
         <value xml:lang="en">Years Experience</value>
         <value xml:lang="fr">Années d'expérience</value>
+        <value xml:lang="hr">Godine iskustva</value>
         <value xml:lang="it">Anni di Esperienza</value>
         <value xml:lang="ja">経験年数</value>
         <value xml:lang="pt_BR">Anos de experiência</value>
@@ -842,6 +922,7 @@
     </property>
     <property key="HumanHolidayName">
         <value xml:lang="en">Holiday Name</value>
+        <value xml:lang="hr">Naziv praznika</value>
         <value xml:lang="ja">休日名</value>
         <value xml:lang="vi">Tên kỳ Xin nghỉ</value>
         <value xml:lang="zh">假日名称</value>
@@ -849,6 +930,7 @@
     <property key="HumanResAddEmplLeave">
         <value xml:lang="en">Add Employee Leave</value>
         <value xml:lang="fr">Ajouter le congé</value>
+        <value xml:lang="hr">Dodaj dopust zaposlenika</value>
         <value xml:lang="it">Aggiungi uscita di un'impiegato</value>
         <value xml:lang="ja">従業員休職を追加</value>
         <value xml:lang="pt_BR">Adicionar licença de empregado</value>
@@ -859,6 +941,7 @@
     <property key="HumanResAddEmplLeaveReasonType">
         <value xml:lang="en">Add Employee Leave Reason</value>
         <value xml:lang="fr">Ajouter un type de congé</value>
+        <value xml:lang="hr">Dodaj razlog dopusta zaposlenika</value>
         <value xml:lang="ja">従業員休職理由を追加</value>
         <value xml:lang="pt_BR">Adicionar razão para licença de empregado</value>
         <value xml:lang="vi">Thêm Lý do nghỉ phép</value>
@@ -867,6 +950,7 @@
     <property key="HumanResAddEmplLeaveType">
         <value xml:lang="en">Add EmplLeave Types</value>
         <value xml:lang="fr">Ajouter un type de congé</value>
+        <value xml:lang="hr">Dodaj vrstu dopusta</value>
         <value xml:lang="it">Aggiungi tipo licenziamento impiegato</value>
         <value xml:lang="ja">従業員休職種類を追加</value>
         <value xml:lang="pt_BR">Adicionar tipos de licença de empregado</value>
@@ -877,6 +961,7 @@
     <property key="HumanResAddEmplPositionFulfillment">
         <value xml:lang="en">Add Position Fulfillment</value>
         <value xml:lang="fr">Ajouter l'acquisition de position</value>
+        <value xml:lang="hr">Dodaj popunjenost pozicije</value>
         <value xml:lang="it">Aggiungi posizione soddisfazione</value>
         <value xml:lang="ja">職位遂行を追加</value>
         <value xml:lang="pt_BR">Adicionar desempenho de posição</value>
@@ -887,6 +972,7 @@
     <property key="HumanResAddEmplPositionResponsibility">
         <value xml:lang="en">Add Position Responsibility</value>
         <value xml:lang="fr">Ajouter la responsabilité de la position</value>
+        <value xml:lang="hr">Dodaj odgovornost položaja</value>
         <value xml:lang="it">Aggiungi posizione responsabilità</value>
         <value xml:lang="ja">職位職責を追加</value>
         <value xml:lang="pt_BR">Adicionar responsabilidade de posição</value>
@@ -897,6 +983,7 @@
     <property key="HumanResAddJobInterviewType">
         <value xml:lang="en">Add Job Interview Type</value>
         <value xml:lang="fr">Ajouter un type d'entretien</value>
+        <value xml:lang="hr">Dodaj vrstu razgovora za posao</value>
         <value xml:lang="ja">職務面談種類を追加</value>
         <value xml:lang="pt_BR">Adicionar tipo de entrevista de emprego</value>
         <value xml:lang="vi">Thêm Kiểu phỏng vấn</value>
@@ -905,6 +992,7 @@
     <property key="HumanResAddPartyBenefit">
         <value xml:lang="en">Add Party Benefit</value>
         <value xml:lang="fr">Ajouter l'avantage</value>
+        <value xml:lang="hr">Dodaj pogodnost</value>
         <value xml:lang="it">Aggiungi benefit soggetto</value>
         <value xml:lang="ja">取引先福利厚生を追加</value>
         <value xml:lang="pt_BR">Adicionar benefício de participante</value>
@@ -915,6 +1003,7 @@
     <property key="HumanResAddPartyQual">
         <value xml:lang="en">Add Party Qualification</value>
         <value xml:lang="fr">Ajouter la qualification</value>
+        <value xml:lang="hr">Dodaj kvalifikaciju</value>
         <value xml:lang="it">Aggiungi qualifica soggetto</value>
         <value xml:lang="ja">取引先資格を追加</value>
         <value xml:lang="pt_BR">Adicionar qualificação de participante</value>
@@ -925,6 +1014,7 @@
     <property key="HumanResAddPartySkill">
         <value xml:lang="en">Add Party Skill</value>
         <value xml:lang="fr">Ajoutez la compétence</value>
+        <value xml:lang="hr">Dodaj vještinu</value>
         <value xml:lang="it">Aggiungi abilità soggetto</value>
         <value xml:lang="ja">取引先スキルを追加</value>
         <value xml:lang="pt_BR">Adicionar habilidade de participante</value>
@@ -935,6 +1025,7 @@
     <property key="HumanResAddPayrollPreference">
         <value xml:lang="en">Add Payroll Preference</value>
         <value xml:lang="fr">Ajouter la préférence de registre du personnel</value>
+        <value xml:lang="hr">Dodaj preferenciju plaće</value>
         <value xml:lang="it">Aggiungi preferenze paghe</value>
         <value xml:lang="ja">ペイロール設定を追加</value>
         <value xml:lang="pt_BR">Adicionar preferência de folha de pagamento</value>
@@ -945,6 +1036,7 @@
     <property key="HumanResAddPerfNote">
         <value xml:lang="en">Add Performance Note</value>
         <value xml:lang="fr">Ajouter la note de performance</value>
+        <value xml:lang="hr">Dodaj napomenu o izvedbi</value>
         <value xml:lang="it">Aggiungi note di valutazione</value>
         <value xml:lang="ja">業績連絡を追加</value>
         <value xml:lang="pt_BR">Adicionar nota de desempenho</value>
@@ -955,6 +1047,7 @@
     <property key="HumanResAddPerfReviewItems">
         <value xml:lang="en">Add PerfReview Items</value>
         <value xml:lang="fr">Ajouter des lignes d'évaluation de performance</value>
+        <value xml:lang="hr">Dodaj stavke recenzije učinka</value>
         <value xml:lang="it">Aggiungi righe di valutazione</value>
         <value xml:lang="ja">業績評価アイテムを追加</value>
         <value xml:lang="pt_BR">Adicionar itens de avaliação de desempenho</value>
@@ -966,6 +1059,7 @@
         <value xml:lang="de">Personenschulung hinzufügen</value>
         <value xml:lang="en">Add Person Training</value>
         <value xml:lang="fr">Ajouter une formation</value>
+        <value xml:lang="hr">Dodaj obuku osobe</value>
         <value xml:lang="it">Aggiungi corsi persona</value>
         <value xml:lang="ja">個人トレーニングを追加</value>
         <value xml:lang="pt_BR">Adicionar treinamento para pessoa</value>
@@ -976,6 +1070,7 @@
     <property key="HumanResAddReportedToEmplPositionReportingStruct">
         <value xml:lang="en">Add Empl Position Reporting Struct [Reported To ${parameters.emplPositionId}]</value>
         <value xml:lang="fr">Ajouter le compte-rendu de position [en rapport avec ${parameters.emplPositionId}</value>
+        <value xml:lang="hr">Dodaj strukturu izvješćivanja o radnoj poziciji [prijavljeno na ${parameters.emplPositionId}]</value>
         <value xml:lang="it">Aggiungi posizione impiegato per le competenze [competenze di ${parameters.emplPositionId}]</value>
         <value xml:lang="ja">従業員職位報告階層を追加 [${parameters.emplPositionId} に報告]</value>
         <value xml:lang="pt_BR">Adicionar estrutura de relatório de posição de empregado [Relatado para ${parameters.emplPositionId}]</value>
@@ -986,6 +1081,7 @@
     <property key="HumanResAddReportsToEmplPositionReportingStruct">
         <value xml:lang="en">Add Empl Position Reporting Struct [${parameters.emplPositionId} Reports To]</value>
         <value xml:lang="fr">Ajouter le compte-rendu de position [${parameters.emplPositionId} qui se rapporte à]</value>
+        <value xml:lang="hr">Dodaj strukturu izvješćivanja o radnoj poziciji [${parameters.emplPositionId} izvješćuje za]</value>
         <value xml:lang="it">Aggiungi posizione impiegato per le competenze [${parameters.emplPositionId} competenze a]</value>
         <value xml:lang="ja">従業員職位報告階層を追加 [${parameters.emplPositionId} から報告]</value>
         <value xml:lang="pt_BR">Adicionar estrutura de relatório de posição de empregado [${parameters.emplPositionId} se relata a]</value>
@@ -996,6 +1092,7 @@
     <property key="HumanResAddSalaryStep">
         <value xml:lang="en">Add Salary Step</value>
         <value xml:lang="fr">Ajouter l'augmentation de salaire</value>
+        <value xml:lang="hr">Dodaj platni korak</value>
         <value xml:lang="it">Aggiungi avanzamento di salario</value>
         <value xml:lang="ja">昇給を追加</value>
         <value xml:lang="pt_BR">Adicionar aumento salarial</value>
@@ -1006,6 +1103,7 @@
     <property key="HumanResAddSkillType">
         <value xml:lang="en">Add Skill Type</value>
         <value xml:lang="fr">Ajouter un type de compétence</value>
+        <value xml:lang="hr">Dodaj vrstu vještine</value>
         <value xml:lang="it">Aggiungi tipo abilità</value>
         <value xml:lang="ja">スキル種類を追加</value>
         <value xml:lang="pt_BR">Adicionar tipo de habilidade</value>
@@ -1016,6 +1114,7 @@
     <property key="HumanResAddTerminationReason">
         <value xml:lang="en">Add Termination Reason</value>
         <value xml:lang="fr">Ajouter le motif de la fin de contrat</value>
+        <value xml:lang="hr">Dodaj razlog prekida</value>
         <value xml:lang="it">Aggiungi motivazione licenziamento</value>
         <value xml:lang="ja">終了理由を追加</value>
         <value xml:lang="pt_BR">Adicionar razão para encerramento</value>
@@ -1026,6 +1125,7 @@
     <property key="HumanResAddTerminationType">
         <value xml:lang="en">Add Termination Type</value>
         <value xml:lang="fr">Ajouter un type de fin de contrat</value>
+        <value xml:lang="hr">Dodaj vrstu prekida</value>
         <value xml:lang="it">Aggiungi tipo terminazione</value>
         <value xml:lang="ja">終了種類を追加</value>
         <value xml:lang="pt_BR">Adicionar tipo de encerramento</value>
@@ -1036,6 +1136,7 @@
     <property key="HumanResAddUnemploymentClaim">
         <value xml:lang="en">Add Unemployment Claim</value>
         <value xml:lang="fr">Ajouter la demande de chômage</value>
+        <value xml:lang="hr">Dodaj zahtjev za nezaposlene</value>
         <value xml:lang="it">Aggiungi richiesta di disoccupazione</value>
         <value xml:lang="ja">解雇申請を追加</value>
         <value xml:lang="pt_BR">Adicionar reivindicação de desemprego</value>
@@ -1046,6 +1147,7 @@
     <property key="HumanResAddValidResponsibility">
         <value xml:lang="en">Add Valid Responsibility</value>
         <value xml:lang="fr">Ajouter une responsabilité valable</value>
+        <value xml:lang="hr">Dodaj valjanu odgovornost</value>
         <value xml:lang="it">Aggiungi responsibilità valida</value>
         <value xml:lang="ja">有効な職責を追加</value>
         <value xml:lang="pt_BR">Adicionar responsabilidade válida</value>
@@ -1056,6 +1158,7 @@
     <property key="HumanResAgreementEmploymentAppl">
         <value xml:lang="en">Agreement Employment Appl</value>
         <value xml:lang="fr">Application d'accord d'emploi</value>
+        <value xml:lang="hr">Ugovor o zapošljavanju zahtj.</value>
         <value xml:lang="it">Applicazione contratti d'impiego</value>
         <value xml:lang="ja">雇用契約申請</value>
         <value xml:lang="pt_BR">Candidatura ao acordo empregatício</value>
@@ -1067,6 +1170,7 @@
         <value xml:lang="de">Einsatzgebiet ID</value>
         <value xml:lang="en">Application Id</value>
         <value xml:lang="fr">Demande d'emploi</value>
+        <value xml:lang="hr">Id zahtjeva</value>
         <value xml:lang="it">Codice Applicazione</value>
         <value xml:lang="ja">申請ID</value>
         <value xml:lang="pt_BR">Id de candidatura</value>
@@ -1078,6 +1182,7 @@
     <property key="HumanResApproval">
         <value xml:lang="en">Approval</value>
         <value xml:lang="fr">Approbation</value>
+        <value xml:lang="hr">Odobrenje</value>
         <value xml:lang="ja">承認</value>
         <value xml:lang="pt_BR">Aprovação</value>
         <value xml:lang="vi">Duyệt</value>
@@ -1086,6 +1191,7 @@
     <property key="HumanResBudgetID">
         <value xml:lang="en">Budget ID</value>
         <value xml:lang="fr">Budget</value>
+        <value xml:lang="hr">Id proračuna</value>
         <value xml:lang="it">Codice Budget</value>
         <value xml:lang="ja">予算ID</value>
         <value xml:lang="pt_BR">orçamento</value>
@@ -1097,6 +1203,7 @@
     <property key="HumanResBudgetItemSeqId">
         <value xml:lang="en">Budget Item Id</value>
         <value xml:lang="fr">Ligne budgétaire</value>
+        <value xml:lang="hr">Id proračunske stavke</value>
         <value xml:lang="it">Riga Budget</value>
         <value xml:lang="ja">予算アイテムID</value>
         <value xml:lang="pt_BR">Id de item de orçamento</value>
@@ -1108,6 +1215,7 @@
     <property key="HumanResCompanyName">
         <value xml:lang="en">OFBiz: Human Resources Manager</value>
         <value xml:lang="fr">OFBiz : gestion de ressources humaines</value>
+        <value xml:lang="hr">OFBiz: Upravitelj kadrova</value>
         <value xml:lang="it">OFBiz: Gestione Risorse Umane</value>
         <value xml:lang="ja">OFBiz: 人事管理</value>
         <value xml:lang="pt_BR">OFBiz: Gestão de recursos humanos</value>
@@ -1119,6 +1227,7 @@
     <property key="HumanResCompanySubtitle">
         <value xml:lang="en">Part of the Open For Business Family of Open Source Software</value>
         <value xml:lang="fr">Partie de l'ouverture pour la famille d'affaires du logiciel libre</value>
+        <value xml:lang="hr">Dio Open For Business obitelji softvera otvorenog koda</value>
         <value xml:lang="it">Un modulo della famiglia di software open source Open For Business</value>
         <value xml:lang="ja">Part of the Open For Business Family of Open Source Software</value>
         <value xml:lang="pt_BR">Parte da Família Open For Business de Software livre</value>
@@ -1130,6 +1239,7 @@
     <property key="HumanResCurrentEmploymentData">
         <value xml:lang="en">Current Employment information</value>
         <value xml:lang="fr">Informations actuelles sur l'emploi</value>
+        <value xml:lang="hr">Podaci o trenutnom zaposlenju</value>
         <value xml:lang="it">Informazioni attuali sull'impiego</value>
         <value xml:lang="ja">現在の雇用情報</value>
         <value xml:lang="pt_BR">Informação atual de empregado</value>
@@ -1140,6 +1250,7 @@
     <property key="HumanResEditAgreementEmploymentAppl">
         <value xml:lang="en">Edit Agreement Employment Appl</value>
         <value xml:lang="fr">Modifier l'accord d'application d'emploi</value>
+        <value xml:lang="hr">Uredi prijavu za zapošljavanje</value>
         <value xml:lang="it">Aggiorna applicazione contratto d'impiego</value>
         <value xml:lang="ja">雇用契約申請を編集</value>
         <value xml:lang="pt_BR">Alterar acordo de candidatura ao emprego</value>
@@ -1150,6 +1261,7 @@
     <property key="HumanResEditApprovalStatus">
         <value xml:lang="en">Edit Approval Status</value>
         <value xml:lang="fr">Modifier un status d'approbation</value>
+        <value xml:lang="hr">Uredi status odobrenja</value>
         <value xml:lang="ja">承認ステータスを編集</value>
         <value xml:lang="pt_BR">Editar estado de aprovação</value>
         <value xml:lang="vi">Sửa đổi Trạng thái duyệt</value>
@@ -1158,6 +1270,7 @@
     <property key="HumanResEditEmplLeave">
         <value xml:lang="en">Edit Empl Leave</value>
         <value xml:lang="fr">Modifier une demande de congé</value>
+        <value xml:lang="hr">Uredi dopust zaposl.</value>
         <value xml:lang="it">Aggiorna licenziamento impiegato</value>
         <value xml:lang="ja">従業員休職を編集</value>
         <value xml:lang="pt_BR">Alterar licença de empregado</value>
@@ -1168,6 +1281,7 @@
     <property key="HumanResEditEmplLeaveType">
         <value xml:lang="en">Edit Empl Leave Type</value>
         <value xml:lang="fr">Modifier un type de congé</value>
+        <value xml:lang="hr">Uredi vrstu dopusta zaposl.</value>
         <value xml:lang="it">Aggiorna tipo licenziamento impiegato</value>
         <value xml:lang="ja">従業員休職種類を編集</value>
         <value xml:lang="pt_BR">Alterar tipo de licença de empregado</value>
@@ -1178,6 +1292,7 @@
     <property key="HumanResEditEmplPosition">
         <value xml:lang="en">Edit Employee Position</value>
         <value xml:lang="fr">Modifier la position de l'employé</value>
+        <value xml:lang="hr">Uredi poziciju zaposlenika</value>
         <value xml:lang="it">Aggiorna posizione impiegato</value>
         <value xml:lang="ja">従業員職位を編集</value>
         <value xml:lang="pt_BR">Alterar posição de empregado</value>
@@ -1188,6 +1303,7 @@
     <property key="HumanResEditEmplPositionReportingStruct">
         <value xml:lang="en">Edit EmplPosition Reporting Structure</value>
         <value xml:lang="fr">Modifier la structure du rapport de position des employés</value>
+        <value xml:lang="hr">Uredi strukturu izvješća o zapošljavanju</value>
         <value xml:lang="it">Aggiorna Struttura Stampa Posizione Impiegati</value>
         <value xml:lang="ja">従業員職位報告階層を編集</value>
         <value xml:lang="pt_BR">Alterar estrutura de relatórios de posição de empregados</value>
@@ -1199,6 +1315,7 @@
     <property key="HumanResEditEmplPositionType">
         <value xml:lang="en">Edit Position Types</value>
         <value xml:lang="fr">Modifier les types de position</value>
+        <value xml:lang="hr">Uredi vrste pozicija</value>
         <value xml:lang="it">Aggiorna tipi posizione</value>
         <value xml:lang="ja">職位種類を編集</value>
         <value xml:lang="pt_BR">Alterar tipos de posição</value>
@@ -1209,6 +1326,7 @@
     <property key="HumanResEditEmployment">
         <value xml:lang="en">Edit Employment</value>
         <value xml:lang="fr">Modifier l'emploi</value>
+        <value xml:lang="hr">Uredi zaposlenje</value>
         <value xml:lang="it">Aggiorna impiego</value>
         <value xml:lang="ja">雇用を編集</value>
         <value xml:lang="pt_BR">Alterar emprego</value>
@@ -1220,6 +1338,7 @@
     <property key="HumanResEditEmploymentApp">
         <value xml:lang="en">Edit Employment Application</value>
         <value xml:lang="fr">Modifier la demande d'emploi</value>
+        <value xml:lang="hr">Uredi prijavu za zapošljavanje</value>
         <value xml:lang="it">Aggiorna la candidatura d'impiego</value>
         <value xml:lang="ja">雇用申請を編集</value>
         <value xml:lang="pt_BR">Alterar candidatura ao emprego</value>
@@ -1231,6 +1350,7 @@
     <property key="HumanResEditJobInterview">
         <value xml:lang="en">Edit Job Interview</value>
         <value xml:lang="fr">Modifier un entretien</value>        
+        <value xml:lang="hr">Uredi razgovor za posao</value>        
         <value xml:lang="ja">職務面談を編集</value>
         <value xml:lang="pt_BR">Editar entrevista de emprego</value>
         <value xml:lang="vi">Cập nhật phỏng vấn công việc</value>
@@ -1239,6 +1359,7 @@
     <property key="HumanResEditJobRequisition">
         <value xml:lang="en">Edit Job Requisition</value>
         <value xml:lang="fr">Editer une demande de poste</value>
+        <value xml:lang="hr">Uredi zahtjev za posao</value>
         <value xml:lang="ja">職務辞令を編集</value>
         <value xml:lang="pt_BR">Editar requisição de emprego</value>
         <value xml:lang="vi">Cập nhật Yêu cầu tuyển dụng</value>
@@ -1246,6 +1367,7 @@
     </property>
     <property key="HumanResEditLeaveApprovalStatus">
         <value xml:lang="en">Edit Leave Approval Status</value>
+        <value xml:lang="hr">Uredi status odobrenja dopusta</value>
         <value xml:lang="ja">休職承認ステータスを編集</value>
         <value xml:lang="pt_BR">Editar Estado de aprovação de licença</value>
         <value xml:lang="vi">Cập nhật trạng thái duyệt cho Nghỉ phép</value>
@@ -1254,6 +1376,7 @@
     <property key="HumanResEditPartyBenefit">
         <value xml:lang="en">Party Benefits</value>
         <value xml:lang="fr">Avantages</value>
+        <value xml:lang="hr">Pogodnosti sudionika</value>
         <value xml:lang="it">Benefit soggetto</value>
         <value xml:lang="ja">取引先福利厚生</value>
         <value xml:lang="pt_BR">Benefícios do participante</value>
@@ -1264,6 +1387,7 @@
     <property key="HumanResEditPartyQual">
         <value xml:lang="en">Edit party Qualification</value>
         <value xml:lang="fr">Modifier la qualification de l'acteur</value>
+        <value xml:lang="hr">Uredi kvalifikacije sudionika</value>
         <value xml:lang="it">Aggiorna Qualifica Soggetto</value>
         <value xml:lang="ja">取引先資格を編集</value>
         <value xml:lang="pt_BR">Alterar qualificação de participante</value>
@@ -1275,6 +1399,7 @@
     <property key="HumanResEditPartyResume">
         <value xml:lang="en">Edit Party Resume</value>
         <value xml:lang="fr">Modifier le CV de l'acteur</value>
+        <value xml:lang="hr">Uredi životopis sudionika</value>
         <value xml:lang="it">Aggiorna Riassunto Soggetto</value>
         <value xml:lang="ja">取引先復帰を編集</value>
         <value xml:lang="pt_BR">Alterar currículo de participante</value>
@@ -1286,6 +1411,7 @@
     <property key="HumanResEditPartyReview">
         <value xml:lang="en">Party Reviews</value>
         <value xml:lang="fr">Evaluations</value>
+        <value xml:lang="hr">Recenzije sudionika</value>
         <value xml:lang="it">Verifica soggetto</value>
         <value xml:lang="ja">取引先評価を編集</value>
         <value xml:lang="pt_BR">Avaliações de participante</value>
@@ -1296,6 +1422,7 @@
     <property key="HumanResEditPartySkill">
         <value xml:lang="en">Edit party Skill</value>
         <value xml:lang="fr">Modifier les compétences de l'acteur</value>
+        <value xml:lang="hr">Uredi vještinu sudionika</value>
         <value xml:lang="it">Aggiorna Abilità Soggetto</value>
         <value xml:lang="ja">取引先スキルを編集</value>
         <value xml:lang="pt_BR">Alterar habilidade de participante</value>
@@ -1307,6 +1434,7 @@
     <property key="HumanResEditPayGrade">
         <value xml:lang="en">Edit Pay Grade</value>
         <value xml:lang="fr">Modifier l'échelon de salaire</value>
+        <value xml:lang="hr">Uredi platni razred</value>
         <value xml:lang="it">Aggiorna grado paga</value>
         <value xml:lang="ja">給与等級を編集</value>
         <value xml:lang="pt_BR">Alterar degrau salarial</value>
@@ -1317,6 +1445,7 @@
     <property key="HumanResEditPayHistory">
         <value xml:lang="en">Pay Histories</value>
         <value xml:lang="fr">Historique de salaire</value>
+        <value xml:lang="hr">Povijest plaćanja</value>
         <value xml:lang="it">Storia paghe</value>
         <value xml:lang="ja">給与履歴</value>
         <value xml:lang="pt_BR">Histórico salarial</value>
@@ -1327,6 +1456,7 @@
     <property key="HumanResEditPayrollPreference">
         <value xml:lang="en">Payroll Preferences</value>
         <value xml:lang="fr">Préférences de registre du personnel</value>
+        <value xml:lang="hr">Postavke plaća</value>
         <value xml:lang="it">Preferenze paghe</value>
         <value xml:lang="ja">ペイロール設定</value>
         <value xml:lang="pt_BR">Preferências da folha de pagamentos</value>
@@ -1337,6 +1467,7 @@
     <property key="HumanResEditPerfReviewItems">
         <value xml:lang="en">PerfReview Items</value>
         <value xml:lang="fr">Lignes d'évaluation des performances</value>
+        <value xml:lang="hr">Stavke recenzije učinka</value>
         <value xml:lang="it">Righe performance</value>
         <value xml:lang="ja">業績評価アイテム</value>
         <value xml:lang="pt_BR">Itens de avaliação de desempenho</value>
@@ -1347,6 +1478,7 @@
     <property key="HumanResEditSalaryStep">
         <value xml:lang="en">Salary Steps</value>
         <value xml:lang="fr">Augmentations de salaire</value>
+        <value xml:lang="hr">Koraci plaće</value>
         <value xml:lang="it">Aggiorna Passi Salario</value>
         <value xml:lang="ja">昇給</value>
         <value xml:lang="pt_BR">Degraus salariais</value>
@@ -1358,6 +1490,7 @@
     <property key="HumanResEditUnemploymentClaim">
         <value xml:lang="en">Unemployment Claims</value>
         <value xml:lang="fr">Demandes de chômage</value>
+        <value xml:lang="hr">Zahtjevi za nezaposlene</value>
         <value xml:lang="it">Richiesta di disoccupazione</value>
         <value xml:lang="ja">解雇申請</value>
         <value xml:lang="pt_BR">Reivindicações de desemprego</value>
@@ -1369,6 +1502,7 @@
         <value xml:lang="de">Entlassungen</value>
         <value xml:lang="en">Leave</value>
         <value xml:lang="fr">Congé</value>
+        <value xml:lang="hr">Dopust</value>
         <value xml:lang="it">Licenziamento</value>
         <value xml:lang="ja">休職</value>
         <value xml:lang="pt_BR">Licença</value>
@@ -1380,6 +1514,7 @@
         <value xml:lang="de">Kündingungsarten</value>
         <value xml:lang="en">Employee Leave Type</value>
         <value xml:lang="fr">Type de congé des employés</value>
+        <value xml:lang="hr">Vrsta dopusta zaposlenika</value>
         <value xml:lang="it">Tipo licenziamento impiegato</value>
         <value xml:lang="ja">従業員休職種類</value>
         <value xml:lang="pt_BR">Tipo de licença de empregado</value>
@@ -1389,6 +1524,7 @@
     </property>
     <property key="HumanResEmplPartyIdFromNotSpecified">
         <value xml:lang="en">Not specified</value>
+        <value xml:lang="hr">Nije specificirano</value>
         <value xml:lang="it">Non specificato</value>
         <value xml:lang="ja">指定なし</value>
         <value xml:lang="pt_BR">Não especificado</value>
@@ -1399,6 +1535,7 @@
     <property key="HumanResEmplPositionId">
         <value xml:lang="en">Employee Position Id</value>
         <value xml:lang="fr">Position des employés</value>
+        <value xml:lang="hr">ID radnog mjesta zaposlenika</value>
         <value xml:lang="it">Codice Posizione Impiegato</value>
         <value xml:lang="ja">従業員職位ID</value>
         <value xml:lang="pt_BR">Id de posição de empregado</value>
@@ -1410,6 +1547,7 @@
     <property key="HumanResEmplPositionIdManagedBy">
         <value xml:lang="en">EmplPosition Id ManagedBy</value>
         <value xml:lang="fr">Position "dirigée par"</value>
+        <value xml:lang="hr">ID radnog mjesta upravljanog od</value>
         <value xml:lang="it">Codice Posizione Impiegato Gestita Da</value>
         <value xml:lang="ja">従業員職位ID(管理される人)</value>
         <value xml:lang="pt_BR">Id de posição de empregado administrada por</value>
@@ -1421,6 +1559,7 @@
     <property key="HumanResEmplPositionIdReportingFrom">
         <value xml:lang="en">EmplPosition Id ReportingFrom</value>
         <value xml:lang="fr">Position "rapportant depuis"</value>
+        <value xml:lang="hr">Id radnog mjesta izvještavanog od</value>
         <value xml:lang="it">Codice Posizione Impiegato Stampato A</value>
         <value xml:lang="ja">従業員職位ID(報告される人)</value>
         <value xml:lang="pt_BR">Id de Posição de empregado se reportando de</value>
@@ -1432,6 +1571,7 @@
     <property key="HumanResEmplPositionIdReportingTo">
         <value xml:lang="en">EmplPosition Id ReportingTo</value>
         <value xml:lang="fr">Position "rapportant à"</value>
+        <value xml:lang="hr">Id radnog mjesta izvještava prema</value>
         <value xml:lang="it">Codice Posizione Impiegato Stampato Da</value>
         <value xml:lang="ja">従業員職位ID(報告する人)</value>
         <value xml:lang="pt_BR">Id de Posição de empregado se reportando a</value>
@@ -1443,6 +1583,7 @@
     <property key="HumanResEmplPositionReportingStruct">
         <value xml:lang="en">Reporting Structure</value>
         <value xml:lang="fr">Structure de rapport</value>
+        <value xml:lang="hr">Struktura izvješćivanja</value>
         <value xml:lang="it">Struttura delle competenze</value>
         <value xml:lang="ja">報告階層</value>
         <value xml:lang="pt_BR">Estrutura de relatórios</value>
@@ -1453,6 +1594,7 @@
     <property key="HumanResEmplPositionResponsibilities">
         <value xml:lang="en">Responsibilities</value>
         <value xml:lang="fr">Responsabilités</value>
+        <value xml:lang="hr">Odgovornosti</value>
         <value xml:lang="it">Responsibilità</value>
         <value xml:lang="ja">職責</value>
         <value xml:lang="pt_BR">Responsabilidades</value>
@@ -1462,6 +1604,7 @@
     </property>
     <property key="HumanResEmplPositionSummary">
         <value xml:lang="en">Empl Position Summary</value>
+        <value xml:lang="hr">Sažetak radnog mjesta</value>
         <value xml:lang="it">Sommario posizione impiegato</value>
         <value xml:lang="ja">従業員職位サマリ</value>
         <value xml:lang="pt_BR">Resumo da posição do empregado</value>
@@ -1473,6 +1616,7 @@
         <value xml:lang="de">Stellenarten</value>
         <value xml:lang="en">Position Types</value>
         <value xml:lang="fr">Types de position</value>
+        <value xml:lang="hr">Vrste pozicija</value>
         <value xml:lang="it">Tipi posizione</value>
         <value xml:lang="ja">職位種類</value>
         <value xml:lang="pt_BR">Tipos de posição</value>
@@ -1483,6 +1627,7 @@
     <property key="HumanResEmplPositionTypeRate">
         <value xml:lang="en">Position Type Rate</value>
         <value xml:lang="fr">Taux par type de position</value>
+        <value xml:lang="hr">Stopa vrste pozicije</value>
         <value xml:lang="it">Tipo posizione percentuale</value>
         <value xml:lang="ja">職位種類レート</value>
         <value xml:lang="pt_BR">Classe de Tipo de posição</value>
@@ -1493,6 +1638,7 @@
     <property key="HumanResEmplPostitionIdReportingToAndEmplPositionIdManagedByMustBeDiff">
         <value xml:lang="en">emplPositionIdReportingTo and emplPositionIdManagedBy must be different</value>
         <value xml:lang="fr">Les positions "rapportant à" et "dirigée par" doivent être différentes</value>
+        <value xml:lang="hr">emplPositionIdReportingTo i emplPositionIdManagedBy moraju biti različiti</value>
         <value xml:lang="it">emplPositionIdReportingTo e emplPositionIdManagedBy sono differenti</value>
         <value xml:lang="ja">従業員職位ID(報告する人)と従業員職位ID(管理される人)は別の人である必要があります</value>
         <value xml:lang="pt_BR">Participante ao qual se reporta e o que gerencia devem ser diferentes</value>
@@ -1502,6 +1648,7 @@
     </property>
     <property key="HumanResEmplReasonType">
         <value xml:lang="en">EmplLeave Reason Type</value>
+        <value xml:lang="hr">Vrsta razloga dopusta zaposlenika</value>
         <value xml:lang="ja">従業員休職理由種類</value>
         <value xml:lang="pt_BR">Tipo de razão de licença de empregado</value>
         <value xml:lang="vi">Loại lí do</value>
@@ -1511,6 +1658,7 @@
         <value xml:lang="en">an employee</value>
         <value xml:lang="es">un empleado</value>
         <value xml:lang="fr">un employé</value>
+        <value xml:lang="hr">zaposlenik</value>
         <value xml:lang="it">un'impiegato</value>
         <value xml:lang="ja">従業員</value>
         <value xml:lang="pt_BR">um empregado</value>
@@ -1521,6 +1669,7 @@
     <property key="HumanResEmployeeLeave">
         <value xml:lang="en">Employee Leave</value>
         <value xml:lang="fr">Congés d'employés</value>
+        <value xml:lang="hr">Dopust zaposlenika</value>
         <value xml:lang="ja">従業員休職</value>
         <value xml:lang="pt_BR">Licença de empregado</value>
         <value xml:lang="vi">Nhân viên Nghỉ phép</value>
@@ -1528,6 +1677,7 @@
     </property>
     <property key="HumanResEmployeeLeaveType">
         <value xml:lang="en">Leave Type</value>
+        <value xml:lang="hr">Vrsta dopusta</value>
         <value xml:lang="ja">休職種類</value>
         <value xml:lang="pt_BR">Tipo de Licença</value>
         <value xml:lang="vi">Kiểu Nghỉ phép</value>
@@ -1536,6 +1686,7 @@
     <property key="HumanResEmployeePartyIdTo">
         <value xml:lang="en">Employee Party Id</value>
         <value xml:lang="fr">Réf. d'acteur de l'employé</value>
+        <value xml:lang="hr">Id zaposlenika</value>
         <value xml:lang="it">Codice Soggetto A</value>
         <value xml:lang="ja">従業員ID</value>
         <value xml:lang="pt_BR">Id do participante empregado</value>
@@ -1548,6 +1699,7 @@
         <value xml:lang="de">Stellen</value>
         <value xml:lang="en">Employee Position</value>
         <value xml:lang="fr">Positions d'employé</value>
+        <value xml:lang="hr">Pozicija zaposlenika</value>
         <value xml:lang="it">Posizione Impiegato</value>
         <value xml:lang="ja">従業員職位</value>
         <value xml:lang="pt_BR">Posição do empregado</value>
@@ -1559,6 +1711,7 @@
     <property key="HumanResEmployeePositionId">
         <value xml:lang="en">EmployeePosition Id</value>
         <value xml:lang="fr">Position d'employé</value>
+        <value xml:lang="hr">Id pozicije zaposlenika</value>
         <value xml:lang="it">Codice Posizione Impiegato</value>
         <value xml:lang="ja">従業員職位ID</value>
         <value xml:lang="pt_BR">Id da posição do empregado</value>
@@ -1570,6 +1723,7 @@
     <property key="HumanResEmployeePositionTypeId">
         <value xml:lang="en">EmployeePosition Type Id</value>
         <value xml:lang="fr">Type de position d'employé</value>
+        <value xml:lang="hr">Id vrste pozicije zaposlenika</value>
         <value xml:lang="it">Codice Tipo Posizione Impiegato</value>
         <value xml:lang="ja">従業員職位種類ID</value>
         <value xml:lang="pt_BR">Id de tipo de posição do empregado</value>
@@ -1580,6 +1734,7 @@
     </property>
     <property key="HumanResEmployeeType">
         <value xml:lang="en">Reason Type</value>
+        <value xml:lang="hr">Vrsta razloga</value>
         <value xml:lang="ja">理由種類</value>
         <value xml:lang="pt_BR">Tipo de razão</value>
         <value xml:lang="vi">Kiểu nguyên nhân</value>
@@ -1590,6 +1745,7 @@
         <value xml:lang="en">Employees</value>
         <value xml:lang="es">Empleados</value>
         <value xml:lang="fr">Employés</value>
+        <value xml:lang="hr">Zaposlenici</value>
         <value xml:lang="it">Impiegati</value>
         <value xml:lang="ja">従業員</value>
         <value xml:lang="pt_BR">Empregados</value>
@@ -1601,6 +1757,7 @@
         <value xml:lang="de">Anstellungen</value>
         <value xml:lang="en">Employments</value>
         <value xml:lang="fr">Emplois</value>
+        <value xml:lang="hr">Zapošljavanja</value>
         <value xml:lang="it">Impieghi</value>
         <value xml:lang="ja">雇用</value>
         <value xml:lang="pt_BR">Empregos</value>
@@ -1614,6 +1771,7 @@
         <value xml:lang="en">Employment Applications</value>
         <value xml:lang="es">Aplicaciones de Empleo</value>
         <value xml:lang="fr">Demandes d'emploi</value>
+        <value xml:lang="hr">Prijave za zapošljavanje</value>
         <value xml:lang="it">Candidature d'impiego</value>
         <value xml:lang="ja">雇用申請</value>
         <value xml:lang="pt_BR">Candidaturas a emprego</value>
@@ -1625,6 +1783,7 @@
     <property key="HumanResEmploymentPartyIdFrom">
         <value xml:lang="en">Internal Organization</value>
         <value xml:lang="fr">Organisation interne</value>
+        <value xml:lang="hr">Unutarnja organizacija</value>
         <value xml:lang="it">Organizzazione interna</value>
         <value xml:lang="ja">内部組織</value>
         <value xml:lang="pt_BR">Organização interna</value>
@@ -1636,6 +1795,7 @@
     <property key="HumanResEmploymentPartyIdFromToolTip">
         <value xml:lang="en">Internal Organization Employee works in</value>
         <value xml:lang="fr">Organisation interne où l'employé travaille</value>
+        <value xml:lang="hr">Unutarnja organizacija Zaposlenik radi u</value>
         <value xml:lang="it">Organizzazione interna per cui lavora l'impiegato</value>
         <value xml:lang="ja">従業員が職務する内部組織</value>
         <value xml:lang="pt_BR">Organização interna para a qual o empregado trabalha</value>
@@ -1646,6 +1806,7 @@
     <property key="HumanResEstimatedFromDate">
         <value xml:lang="en">Estimated FromDate</value>
         <value xml:lang="fr">Date de début estimée</value>
+        <value xml:lang="hr">Procijenjeni datum od</value>
         <value xml:lang="it">Data Inizio Stimata</value>
         <value xml:lang="ja">予定開始日</value>
         <value xml:lang="pt_BR">Data estimada de início</value>
@@ -1658,6 +1819,7 @@
         <value xml:lang="de">Entlassungssuche</value>
         <value xml:lang="en">Find Employee Leave</value>
         <value xml:lang="fr">Rechercher un congé de l'employé</value>
+        <value xml:lang="hr">Pronađi dopust zaposlenika</value>
         <value xml:lang="it">Ricerca licenziamenti impiegato</value>
         <value xml:lang="ja">従業員休職を検索</value>
         <value xml:lang="pt_BR">Encontrar licença de empregado</value>
@@ -1669,6 +1831,7 @@
         <value xml:lang="de">Stelle suchen</value>
         <value xml:lang="en">Find Employee Position</value>
         <value xml:lang="fr">Rechercher la position de l'employé</value>
+        <value xml:lang="hr">Pronađi poziciju zaposlenika</value>
         <value xml:lang="it">Ricerca posizioni impiegato</value>
         <value xml:lang="ja">従業員職位を検索</value>
         <value xml:lang="pt_BR">Encontrar posição de empregado</value>
@@ -1680,6 +1843,7 @@
         <value xml:lang="de">Einstellung finden</value>
         <value xml:lang="en">Find Employment</value>
         <value xml:lang="fr">Rechercher un emploi</value>
+        <value xml:lang="hr">Pronađi zaposlenje</value>
         <value xml:lang="it">Ricerca impieghi</value>
         <value xml:lang="ja">雇用を検索</value>
         <value xml:lang="pt_BR">Encontrar emprego</value>
@@ -1691,6 +1855,7 @@
         <value xml:lang="de">Bewerbungssuche</value>
         <value xml:lang="en">Find Employment Application</value>
         <value xml:lang="fr">Rechercher la demande d'emploi</value>
+        <value xml:lang="hr">Pronađi prijavu za posao</value>
         <value xml:lang="it">Ricerca candidature d'impiego</value>
         <value xml:lang="ja">雇用申請を検索</value>
         <value xml:lang="pt_BR">Encontrar candidatura a emprego</value>
@@ -1702,6 +1867,7 @@
         <value xml:lang="de">Qualifikationssuche</value>
         <value xml:lang="en">Find Party Qualification</value>
         <value xml:lang="fr">Rechercher la qualification de l'acteur</value>
+        <value xml:lang="hr">Pronađi kvalifikacije sudionika</value>
         <value xml:lang="it">Ricerca qualifica soggetto</value>
         <value xml:lang="ja">取引先資格を検索</value>
         <value xml:lang="pt_BR">Encontrar qualificação do participante</value>
@@ -1713,6 +1879,7 @@
         <value xml:lang="de">Lebenslaufsuche</value>
         <value xml:lang="en">Find Party Resume</value>
         <value xml:lang="fr">Rechercher le CV de l'acteur</value>
+        <value xml:lang="hr">Pronađi životopis sudionika</value>
         <value xml:lang="it">Ricerca riassunto soggetto</value>
         <value xml:lang="ja">取引先復帰を検索</value>
         <value xml:lang="pt_BR">Encontrar currículo do participante</value>
@@ -1724,6 +1891,7 @@
         <value xml:lang="de">Kompetenzsuche</value>
         <value xml:lang="en">Find Party Skills</value>
         <value xml:lang="fr">Rechercher les compétences de l'acteur</value>
+        <value xml:lang="hr">Pronađi vještine sudionika</value>
         <value xml:lang="it">Ricerca abilità soggetto</value>
         <value xml:lang="ja">取引先スキルを検索</value>
         <value xml:lang="pt_BR">Encontrar habilidades do participante</value>
@@ -1735,6 +1903,7 @@
         <value xml:lang="de">Gehaltsklassensuche</value>
         <value xml:lang="en">Find Pay Grade</value>
         <value xml:lang="fr">Rechercher l'échelon de salaire</value>
+        <value xml:lang="hr">Pronađi platni razred</value>
         <value xml:lang="it">Ricerca grado paga</value>
         <value xml:lang="ja">給与等級を検索</value>
         <value xml:lang="pt_BR">Encontrar degrau salarial</value>
@@ -1746,6 +1915,7 @@
         <value xml:lang="de">Leistungbewertungssuche</value>
         <value xml:lang="en">Find Performance Review</value>
         <value xml:lang="fr">Rechercher l'évaluation de performance</value>
+        <value xml:lang="hr">Pronađi recenziju učinka</value>
         <value xml:lang="it">Ricerca verifica performance</value>
         <value xml:lang="ja">業績評価を検索</value>
         <value xml:lang="pt_BR">Encontrar avaliação de desempenho</value>
@@ -1757,6 +1927,7 @@
         <value xml:lang="de">Ausbildungssuche</value>
         <value xml:lang="en">Find Person Training</value>
         <value xml:lang="fr">Rechercher la formation de la personne</value>
+        <value xml:lang="hr">Pronađi obuku</value>
         <value xml:lang="it">Ricerca corsi persona</value>
         <value xml:lang="ja">個人トレーニングを検索</value>
         <value xml:lang="pt_BR">Encontrar treinamento de pessoa</value>
@@ -1767,6 +1938,7 @@
     <property key="HumanResFindPositionTypes">
         <value xml:lang="en">Find Position Types</value>
         <value xml:lang="fr">Rechercher les types de position</value>
+        <value xml:lang="hr">Pronađi vrste pozicija</value>
         <value xml:lang="it">Ricerca tipi posizione</value>
         <value xml:lang="ja">職位種類を検索</value>
         <value xml:lang="pt_BR">Encontrar tipos de posição</value>
@@ -1778,6 +1950,7 @@
         <value xml:lang="de">Globale Personaleinstellungen</value>
         <value xml:lang="en">Global HR Settings</value>
         <value xml:lang="fr">Configuration globales des ressources humaines</value>
+        <value xml:lang="hr">Globalne postavke</value>
         <value xml:lang="it">Impostazioni globali risorse umane</value>
         <value xml:lang="ja">グローバルHR設定</value>
         <value xml:lang="pt_BR">Configurações globais de recursos humanos</value>
@@ -1787,6 +1960,7 @@
     </property>
     <property key="HumanResIJPStatus">
         <value xml:lang="en">IJP Status</value>
+        <value xml:lang="hr">IJP status</value>
         <value xml:lang="ja">内部職務配置ステータス</value>
         <value xml:lang="pt_BR">Estado de IJP</value>
         <value xml:lang="vi">Trạng thái IJP</value>
@@ -1795,6 +1969,7 @@
     <property key="HumanResInternalJobPosting">
         <value xml:lang="en">Internal Job Posting</value>
         <value xml:lang="fr">Offre d'emploi interne</value>
+        <value xml:lang="hr">Interni oglas za posao</value>
         <value xml:lang="ja">内部職務配置</value>
         <value xml:lang="pt_BR">Oferta interna de emprego</value>
         <value xml:lang="vi">Thông báo công việc nội bộ</value>
@@ -1803,6 +1978,7 @@
     <property key="HumanResJobInterview">
         <value xml:lang="en">Job Interview</value>
         <value xml:lang="fr">Entretien</value>
+        <value xml:lang="hr">Razgovor za posao</value>
         <value xml:lang="ja">職務面談</value>
         <value xml:lang="pt_BR">Entrevista de emprego</value>
         <value xml:lang="vi">Phỏng vấn</value>
@@ -1811,6 +1987,7 @@
     <property key="HumanResJobInterviewType">
         <value xml:lang="en">Job Interview Type</value>
         <value xml:lang="fr">Type d'entretien</value>
+        <value xml:lang="hr">Vrsta razgovora za posao</value>
         <value xml:lang="ja">職務面談種類</value>
         <value xml:lang="pt_BR">Tipo de entrevista de emprego</value>
         <value xml:lang="vi">Kiểu phỏng vấn</value>
@@ -1819,6 +1996,7 @@
     <property key="HumanResJobRequisition">
         <value xml:lang="en">Job Requisition</value>
         <value xml:lang="fr">Demande de poste</value>
+        <value xml:lang="hr">Zahtjev za posao</value>
         <value xml:lang="ja">職務辞令</value>
         <value xml:lang="pt_BR">Petição de emprego</value>
         <value xml:lang="vi">Yêu cầu công việc</value>
@@ -1827,6 +2005,7 @@
     <property key="HumanResLeaveApproval">
         <value xml:lang="en">Leave Approval</value>
         <value xml:lang="fr">Approbation de congés</value>
+        <value xml:lang="hr">Odobrenje dopusta</value>
         <value xml:lang="ja">休職承認</value>
         <value xml:lang="pt_BR">Aprovação de licença</value>
         <value xml:lang="vi">Duyệt cho Nghỉ phép</value>
@@ -1834,6 +2013,7 @@
     </property>
     <property key="HumanResLeaveStatus">
         <value xml:lang="en">Leave</value>
+        <value xml:lang="hr">Dopust</value>
         <value xml:lang="ja">休職</value>
         <value xml:lang="pt_BR">Licença</value>
         <value xml:lang="vi">Nghỉ phép</value>
@@ -1842,6 +2022,7 @@
     <property key="HumanResLeaveCreationSuccess">
         <value xml:lang="en">Leave request created successfully</value>
         <value xml:lang="fr">Demande de congés créée avec succès</value>
+        <value xml:lang="hr">Zahtjev za dopust je uspješno stvoren</value>
         <value xml:lang="ja">休暇リクエストが正しく作成されました</value>
         <value xml:lang="vi">Yêu cầu Nghỉ phép đã được gửi đi thành công</value>
         <value xml:lang="zh">离职请求创建成功</value>
@@ -1849,6 +2030,7 @@
     <property key="HumanResListEmployments">
         <value xml:lang="en">List Employment</value>
         <value xml:lang="fr">Liste d'emplois</value>
+        <value xml:lang="hr">Popis zapošljavanja</value>
         <value xml:lang="it">Lista impieghi</value>
         <value xml:lang="ja">雇用一覧</value>
         <value xml:lang="pt_BR">Listar empregos</value>
@@ -1860,6 +2042,7 @@
     <property key="HumanResListPartyBenefits">
         <value xml:lang="en">List Party Benefits</value>
         <value xml:lang="fr">Liste d'avantages de l'acteur</value>
+        <value xml:lang="hr">Popis pogodnosti sudionika</value>
         <value xml:lang="it">Lista Benefits Soggetto</value>
         <value xml:lang="ja">取引先福利厚生一覧</value>
         <value xml:lang="pt_BR">Listar benefícios de participante</value>
@@ -1871,6 +2054,7 @@
     <property key="HumanResListPayHistories">
         <value xml:lang="en">List Pay Histories</value>
         <value xml:lang="fr">Liste d'historique de salaires</value>
+        <value xml:lang="hr">Popis povijesti plaća</value>
         <value xml:lang="it">Lista Storia Paghe</value>
         <value xml:lang="ja">給与履歴一覧</value>
         <value xml:lang="pt_BR">Listar histórico de pagamentos</value>
@@ -1882,6 +2066,7 @@
     <property key="HumanResListPayrollPreferences">
         <value xml:lang="en">List Payroll Preferences</value>
         <value xml:lang="fr">Liste des préférences de registre du personnel</value>
+        <value xml:lang="hr">Popis postavki plaća</value>
         <value xml:lang="it">Lista Preferenze Paghe</value>
         <value xml:lang="ja">ペイロール設定一覧</value>
         <value xml:lang="pt_BR">Listar preferências de folha de pagamento</value>
@@ -1893,6 +2078,7 @@
     <property key="HumanResListSkillTypes">
         <value xml:lang="en">List Skill Types</value>
         <value xml:lang="fr">Liste de types de compétence</value>
+        <value xml:lang="hr">Popis vrsta vještina</value>
         <value xml:lang="it">Lista tipi abilità</value>
         <value xml:lang="ja">スキル種類一覧</value>
         <value xml:lang="pt_BR">Listar tipos de habilidades</value>
@@ -1904,6 +2090,7 @@
     <property key="HumanResListValidResponsibility">
         <value xml:lang="en">List Valid Responsibility</value>
         <value xml:lang="fr">Liste de responsabilité valide</value>
+        <value xml:lang="hr">Popis valjanih odgovornosti</value>
         <value xml:lang="it">Lista Validità Responsibilità</value>
         <value xml:lang="ja">有効な職責一覧</value>
         <value xml:lang="pt_BR">Listar responsabilidades válidas</value>
@@ -1915,6 +2102,7 @@
     <property key="HumanResLookupAgreement">
         <value xml:lang="en">Lookup Agreement</value>
         <value xml:lang="fr">Consultation d'accord</value>
+        <value xml:lang="hr">Pronađi ugovor</value>
         <value xml:lang="it">Ricerca contratto</value>
         <value xml:lang="ja">契約を検索</value>
         <value xml:lang="pt_BR">Procurar por acordos</value>
@@ -1925,6 +2113,7 @@
     <property key="HumanResLookupAgreementEmploymentAppl">
         <value xml:lang="en">Lookup AgreementEmploymentAppl</value>
         <value xml:lang="fr">Consultation d'accord sur demande d'emploi</value>
+        <value xml:lang="hr">Pronađi ugovor prijave za zapošljavanje</value>
         <value xml:lang="it">Ricerca contratti d'impiego</value>
         <value xml:lang="ja">雇用契約申請を検索</value>
         <value xml:lang="pt_BR">Procurar acordo de candidatura ao emprego</value>
@@ -1935,6 +2124,7 @@
     <property key="HumanResLookupAgreementId">
         <value xml:lang="en">Lookup AgreementId</value>
         <value xml:lang="fr">Consultation d'accord</value>
+        <value xml:lang="hr">Pronađi Id ugovora</value>
         <value xml:lang="it">Ricerca contratto</value>
         <value xml:lang="ja">契約IDを検索</value>
         <value xml:lang="pt_BR">Procurar de Id de acordo</value>
@@ -1945,6 +2135,7 @@
     <property key="HumanResLookupAgreementItemSeqId">
         <value xml:lang="en">Lookup AgreementItemSeqId</value>
         <value xml:lang="fr">Consultation de ligne séq. d'accord</value>
+        <value xml:lang="hr">Pronađi redni br. stavke ugovora</value>
         <value xml:lang="it">Ricerca riga contratto</value>
         <value xml:lang="ja">契約アイテム連番IDを検索</value>
         <value xml:lang="pt_BR">Procurar por Id de sequencia de acordo</value>
@@ -1955,6 +2146,7 @@
     <property key="HumanResLookupApplicationId">
         <value xml:lang="en">Lookup ApplicationId</value>
         <value xml:lang="fr">Consultation de réf. d'application</value>
+        <value xml:lang="hr">Pronađi Id prijave</value>
         <value xml:lang="it">Ricerca applicazione</value>
         <value xml:lang="ja">申請IDを検索</value>
         <value xml:lang="pt_BR">Procurar por Id de candidatura</value>
@@ -1965,6 +2157,7 @@
     <property key="HumanResLookupBudgetByName">
         <value xml:lang="en">Lookup Budget by Name</value>
         <value xml:lang="fr">Consultation de budget par nom</value>
+        <value xml:lang="hr">Pronađi proračun prema nazivu</value>
         <value xml:lang="it">Ricerca Budget per Nome</value>
         <value xml:lang="ja">名称で予算を検索</value>
         <value xml:lang="pt_BR">Procurar orçamento por nome</value>
@@ -1976,6 +2169,7 @@
     <property key="HumanResLookupBudgetItemByName">
         <value xml:lang="en">Lookup Budget Item by Name</value>
         <value xml:lang="fr">Consultation de ligne budgétaire par nom</value>
+        <value xml:lang="hr">Pronađi proračunsku stavku prema nazivu</value>
         <value xml:lang="it">Ricerca Riga Budget per Nome</value>
         <value xml:lang="ja">名称で予算アイテムを検索</value>
         <value xml:lang="pt_BR">Procurar item de orçamento por nome</value>
@@ -1987,6 +2181,7 @@
     <property key="HumanResLookupEmplPositionByName">
         <value xml:lang="en">Lookup EmplPosition by Name</value>
         <value xml:lang="fr">Consultation des positions par nom</value>
+        <value xml:lang="hr">Pronađi poziciju prema imenu</value>
         <value xml:lang="it">Ricerca Posizione Impiegato per Nome</value>
         <value xml:lang="ja">名称で従業員職位を検索</value>
         <value xml:lang="pt_BR">Procurar posição por nome</value>
@@ -1998,6 +2193,7 @@
     <property key="HumanResLookupEmploymentApp">
         <value xml:lang="en">Lookup EmploymentApp</value>
         <value xml:lang="fr">Consultation des demandes d'emploi</value>
+        <value xml:lang="hr">Pronađi prijavu za posao</value>
         <value xml:lang="it">Ricerca candidature d'impiego</value>
         <value xml:lang="ja">雇用申請を検索</value>
         <value xml:lang="pt_BR">Procurar candidatura de emprego</value>
@@ -2008,6 +2204,7 @@
     <property key="HumanResLookupPartyResume">
         <value xml:lang="en">Lookup PartyResume</value>
         <value xml:lang="fr">Consultation de CV</value>
+        <value xml:lang="hr">Pronađi životopis sudionika</value>
         <value xml:lang="it">Ricerca riassunto soggetto</value>
         <value xml:lang="ja">取引先復帰を検索</value>
         <value xml:lang="pt_BR">Procurar currículo de participante</value>
@@ -2018,6 +2215,7 @@
     <property key="HumanResLookupPayGrade">
         <value xml:lang="en">Lookup PayGrade</value>
         <value xml:lang="fr">Consultation de catégorie de salaire</value>
+        <value xml:lang="hr">Pronađi platni razred</value>
         <value xml:lang="it">Ricerca Grado Paga</value>
         <value xml:lang="ja">給与等級を検索</value>
         <value xml:lang="pt_BR">Procurar degrau salarial</value>
@@ -2029,6 +2227,7 @@
     <property key="HumanResLookupPayGradeId">
         <value xml:lang="en">Lookup PayGrade Id</value>
         <value xml:lang="fr">Consultation de catégorie de salaire</value>
+        <value xml:lang="hr">Pronađi Id platnog razreda</value>
         <value xml:lang="it">Ricerca Codice Grado Paga</value>
         <value xml:lang="ja">給与等級IDを検索</value>
         <value xml:lang="pt_BR">Procurar Id de degrau salarial</value>
@@ -2040,6 +2239,7 @@
     <property key="HumanResLookupPayRollPreference">
         <value xml:lang="en">Lookup PayRollPreference</value>
         <value xml:lang="fr">Consultation de préférence de registre du personnel</value>
+        <value xml:lang="hr">Pronađi postavke platne liste</value>
         <value xml:lang="it">Ricerca preferenza paghe</value>
         <value xml:lang="ja">ペイロール設定を検索</value>
         <value xml:lang="pt_BR">Procurar configuração de folha de pagamento</value>
@@ -2050,6 +2250,7 @@
     <property key="HumanResLookupPayrollPreferenceSeqId">
         <value xml:lang="en">Lookup PayrollPreferenceSeqId</value>
         <value xml:lang="fr">Consultation de préférence séq. de registre du personnel</value>
+        <value xml:lang="hr">Pronađi redni br. postavke platne liste</value>
         <value xml:lang="it">Ricerca preferenza riga paghe</value>
         <value xml:lang="ja">ペイロール設定連番IDを検索</value>
         <value xml:lang="pt_BR">Procurar Id de Sequência de configuração de folha de pagamento</value>
@@ -2060,6 +2261,7 @@
     <property key="HumanResLookupPerfReview">
         <value xml:lang="en">Lookup PerfReview</value>
         <value xml:lang="fr">Consultation d'évaluation de performance</value>
+        <value xml:lang="hr">Pronađi recenziju učinka</value>
         <value xml:lang="it">Ricerca verifica performance</value>
         <value xml:lang="ja">業績評価を検索</value>
         <value xml:lang="pt_BR">Procurar avaliação de desempenho</value>
@@ -2070,6 +2272,7 @@
     <property key="HumanResLookupPerfReviewId">
         <value xml:lang="en">Lookup PerfReviewId</value>
         <value xml:lang="fr">Consultation de réf. d'évaluation de performance</value>
+        <value xml:lang="hr">Pronađi Id recenzije učinka</value>
         <value xml:lang="it">Ricerca verifica performance</value>
         <value xml:lang="ja">業績評価IDを検索</value>
         <value xml:lang="pt_BR">Procurar Id de avaliação de desempenho</value>
@@ -2080,6 +2283,7 @@
     <property key="HumanResLookupResumeId">
         <value xml:lang="en">Lookup ResumeId</value>
         <value xml:lang="fr">Consultation de CV</value>
+        <value xml:lang="hr">Pronađi Id životopisa</value>
         <value xml:lang="it">Ricerca riassunto</value>
         <value xml:lang="ja">復帰IDを検索</value>
         <value xml:lang="pt_BR">Procurar por de currículo</value>
@@ -2090,6 +2294,7 @@
     <property key="HumanResLookupSalaryStepSeqId">
         <value xml:lang="en">Lookup Salary StepSeq Id</value>
         <value xml:lang="fr">Consultation des augmentations de salaire</value>
+        <value xml:lang="hr">Pronađi Id koraka porasta plaće</value>
         <value xml:lang="it">Ricerca Sequenza Passo Salario</value>
         <value xml:lang="ja">昇給連番IDを検索</value>
         <value xml:lang="pt_BR">Procurar por Id de aumentos salariais</value>
@@ -2101,6 +2306,7 @@
     <property key="HumanResLookupTerminationReason">
         <value xml:lang="en">Lookup Termination Reason</value>
         <value xml:lang="fr">Consultation de motif de fin de contrat</value>
+        <value xml:lang="hr">Pronađi razlog raskida</value>
         <value xml:lang="it">Ricerca Motivazioni Licenziamento</value>
         <value xml:lang="ja">終了理由を検索</value>
         <value xml:lang="pt_BR">Procurar razão de encerramento</value>
@@ -2112,6 +2318,7 @@
     <property key="HumanResLookupUnemploymentClaim">
         <value xml:lang="en">Lookup UnemploymentClaim</value>
         <value xml:lang="fr">Consultation des demandes de chômage</value>
+        <value xml:lang="hr">Pronađi zahtjev za nezaposlenost</value>
         <value xml:lang="it">Ricerca richiesta di disoccupazione</value>
         <value xml:lang="ja">解雇申請を検索</value>
         <value xml:lang="pt_BR">Procurar por reivindicação de desemprego</value>
@@ -2122,6 +2329,7 @@
     <property key="HumanResLookupUnemploymentClaimId">
         <value xml:lang="en">Lookup UnemploymentClaimId</value>
         <value xml:lang="fr">Consultation de demande de chômage</value>
+        <value xml:lang="hr">Pronađi Id zahtjeva za nezaposlenost</value>
         <value xml:lang="it">Ricerca richiesta di disoccupazione</value>
         <value xml:lang="ja">解雇申請IDを検索</value>
         <value xml:lang="pt_BR">Procurar por Id de reivindicação de desemprego</value>
@@ -2133,6 +2341,7 @@
         <value xml:lang="de">Personalverwaltung</value>
         <value xml:lang="en">Human Resources</value>
         <value xml:lang="fr">Application de gestion des ressources humaines</value>
+        <value xml:lang="hr">Kadrovska služba</value>
         <value xml:lang="it">Gestione risorse umane</value>
         <value xml:lang="ja">人事管理</value>
         <value xml:lang="pt_BR">Recursos Humanos</value>
@@ -2145,6 +2354,7 @@
         <value xml:lang="de">Personalverwaltung</value>
         <value xml:lang="en">Human Resources Application</value>
         <value xml:lang="fr">Application de gestion des ressources humaines</value>
+        <value xml:lang="hr">Prijava kadrovske službe</value>
         <value xml:lang="it">Applicazione Gestione Risorse Umane</value>
         <value xml:lang="ja">人事管理業務</value>
         <value xml:lang="pt_BR">Aplicativo de recursos humanos</value>
@@ -2156,6 +2366,7 @@
     <property key="HumanResMyLeaves">
         <value xml:lang="en">My Leaves</value>
         <value xml:lang="fr">Mes congés</value>
+        <value xml:lang="hr">Moji dopusti</value>
         <value xml:lang="ja">私の休暇</value>
         <value xml:lang="vi">Nghỉ phép của Bạn</value>
         <value xml:lang="zh">我的休假</value>
@@ -2163,6 +2374,7 @@
     <property key="HumanResMyTrainings">
         <value xml:lang="en">My Trainings</value>
         <value xml:lang="fr">Mes formations</value>
+        <value xml:lang="hr">Moje obuke</value>
         <value xml:lang="ja">私のトレーニング</value>
         <value xml:lang="vi">Đào tạo của Bạn</value>
         <value xml:lang="zh">我的培训</value>
@@ -2171,6 +2383,7 @@
         <value xml:lang="de">Stelle anlegen</value>
         <value xml:lang="en">New Employee Position</value>
         <value xml:lang="fr">Nouvelle position d'employé</value>
+        <value xml:lang="hr">Novo radno mjesto zaposlenika</value>
         <value xml:lang="it">Nuova Posizione Impiegato</value>
         <value xml:lang="ja">新規従業員職位</value>
         <value xml:lang="pt_BR">Nova posição de empregado</value>
@@ -2182,6 +2395,7 @@
     <property key="HumanResNewEmplPositionFulfillment">
         <value xml:lang="en">New Employee Position Fulfillment</value>
         <value xml:lang="fr">Nouveau pourvoiement de position d'employé</value>
+        <value xml:lang="hr">Popunjenje radnog mjesta novog zaposlenika</value>
         <value xml:lang="it">Nuova Posizione Impiegato Adempimento</value>
         <value xml:lang="ja">新規従業員職位遂行</value>
         <value xml:lang="pt_BR">Novo Preenchimento de posição de empregado</value>
@@ -2193,6 +2407,7 @@
     <property key="HumanResNewEmplPositionReportingStruct">
         <value xml:lang="en">New EmplPositionReportingStruct</value>
         <value xml:lang="fr">Nouvelle Structure de rapport de position d'emploi</value>
+        <value xml:lang="hr">New EmplPositionReportingStruct</value>
         <value xml:lang="it">Nuova Posizione Impiegato Struttura Stampa</value>
         <value xml:lang="ja">新規従業員職位報告階層</value>
         <value xml:lang="pt_BR">Nova estrutura de relatórios de posições de empregados</value>
@@ -2204,6 +2419,7 @@
     <property key="HumanResNewEmplPositionResponsibility">
         <value xml:lang="en">New EmplPosition Responsibility</value>
         <value xml:lang="fr">Nouvelle responsabilité de position d'emploi</value>
+        <value xml:lang="hr">Nova odgovornost pozicije</value>
         <value xml:lang="it">Nuova Posizione Responsabilità Impiegato</value>
         <value xml:lang="ja">新規従業員職位職責</value>
         <value xml:lang="pt_BR">Nova responsabilidade para posição de empregado</value>
@@ -2215,6 +2431,7 @@
     <property key="HumanResNewEmplPositionType">
         <value xml:lang="en">New Position Type</value>
         <value xml:lang="fr">Nouveau type de position</value>
+        <value xml:lang="hr">Nova vrsta pozicije</value>
         <value xml:lang="it">Nuovo tipo posizione</value>
         <value xml:lang="ja">新規職位種類</value>
         <value xml:lang="pt_BR">Novo tipo de posição</value>
@@ -2225,6 +2442,7 @@
     <property key="HumanResNewEmployee">
         <value xml:lang="en">New Employee</value>
         <value xml:lang="fr">Nouvel employé</value>
+        <value xml:lang="hr">Novi zaposlenik</value>
         <value xml:lang="it">Nuovo impiegato</value>
         <value xml:lang="ja">新規従業員</value>
         <value xml:lang="pt_BR">Novo empregado</value>
@@ -2236,6 +2454,7 @@
         <value xml:lang="de">Einstellung</value>
         <value xml:lang="en">New Employment</value>
         <value xml:lang="fr">Nouvel emploi</value>
+        <value xml:lang="hr">Novo zaposlenje</value>
         <value xml:lang="it">Nuovo impiego</value>
         <value xml:lang="ja">新規雇用</value>
         <value xml:lang="pt_BR">Novo emprego</value>
@@ -2248,6 +2467,7 @@
         <value xml:lang="de">Neue Bewerbung</value>
         <value xml:lang="en">New Employment Application</value>
         <value xml:lang="fr">Nouvelle demande d'emploi</value>
+        <value xml:lang="hr">Nova molba za zaposlenje</value>
         <value xml:lang="it">Nuova candidatura d'impiego</value>
         <value xml:lang="ja">新規雇用申請</value>
         <value xml:lang="pt_BR">Nova candidatura a emprego</value>
@@ -2259,6 +2479,7 @@
     <property key="HumanResNewInternalJobPosting">
         <value xml:lang="en">New Internal Job Posting</value>
         <value xml:lang="fr">Nouvelle offre d'emploi interne</value>
+        <value xml:lang="hr">Novi interni oglas za posao</value>
         <value xml:lang="ja">新規内部職務配置</value>
         <value xml:lang="pt_BR">Nova oferta interna de emprego</value>
         <value xml:lang="vi">Thêm mới thông báo công việc nội bộ</value>
@@ -2267,6 +2488,7 @@
     <property key="HumanResNewJobInterview">
         <value xml:lang="en">New Job Interview</value>
         <value xml:lang="fr">Nouvel entretien</value>
+        <value xml:lang="hr">Novi razgovor za posao</value>
         <value xml:lang="ja">新規職務面談</value>
         <value xml:lang="pt_BR">Nova entrevista de emprego</value>
         <value xml:lang="vi">Thêm mới phỏng vấn</value>
@@ -2275,6 +2497,7 @@
     <property key="HumanResNewJobRequisition">
         <value xml:lang="en">New Job Requisition</value>
         <value xml:lang="fr">Nouvelle demande de poste</value>
+        <value xml:lang="hr">Novi zahtjev za posao</value>
         <value xml:lang="ja">新規職務辞令</value>
         <value xml:lang="pt_BR">Nova petição de emprego</value>
         <value xml:lang="vi">Thêm mới Yêu cầu nhân sự</value>
@@ -2283,6 +2506,7 @@
     <property key="HumanResNewLeave">
         <value xml:lang="en">New Leave</value>
         <value xml:lang="fr">Nouveau congé</value>
+        <value xml:lang="hr">Novi dopust</value>
         <value xml:lang="it">Nuovo licenziamento</value>
         <value xml:lang="ja">新規休職</value>
         <value xml:lang="pt_BR">Nova licença</value>
@@ -2293,6 +2517,7 @@
     <property key="HumanResNewPartyBenefit">
         <value xml:lang="en">New Party Benefit</value>
         <value xml:lang="fr">Nouvel d'avantage d'acteur</value>
+        <value xml:lang="hr">Nova olakšica zaposlenika</value>
         <value xml:lang="it">Nuovo Benefit Soggetto</value>
         <value xml:lang="ja">新規取引先福利厚生</value>
         <value xml:lang="pt_BR">Novo benefício de participante</value>
@@ -2305,6 +2530,7 @@
         <value xml:lang="de">Neue Qualifikation</value>
         <value xml:lang="en">New Party Qualification</value>
         <value xml:lang="fr">Nouvelle qualification d'acteur</value>
+        <value xml:lang="hr">Nova kvalifikacija sudionika</value>
         <value xml:lang="it">Nuova Qualifica Soggetto</value>
         <value xml:lang="ja">新規資格</value>
         <value xml:lang="pt_BR">Nova qualificação de participante</value>
@@ -2317,6 +2543,7 @@
         <value xml:lang="de">Neuer Lebenslauf</value>
         <value xml:lang="en">New Party Resume</value>
         <value xml:lang="fr">Nouveau CV d'acteur</value>
+        <value xml:lang="hr">Novi životopis sudionika</value>
         <value xml:lang="it">Nuovo Riassunto Soggetto</value>
         <value xml:lang="ja">新規取引先復帰</value>
         <value xml:lang="pt_BR">Novo currículo de participante</value>
@@ -2329,6 +2556,7 @@
         <value xml:lang="de">Neue Leistungsbewertung</value>
         <value xml:lang="en">New PerfReview</value>
         <value xml:lang="fr">Nouvelle évaluation de performances</value>
+        <value xml:lang="hr">Nova recenzija učinka</value>
         <value xml:lang="it">Nuova Rassegna Prestazioni</value>
         <value xml:lang="ja">新規業績評価</value>
         <value xml:lang="pt_BR">Nova avaliação de desempenho</value>
@@ -2340,6 +2568,7 @@
     <property key="HumanResNewPartyReviewEdit">
         <value xml:lang="en">Create/Update PerfReview</value>
         <value xml:lang="fr">Création/Màj d'une évaluation de performances</value>
+        <value xml:lang="hr">Stvorite/ažurirajte recenziju učinka</value>
         <value xml:lang="it">Crea/Aggiorna Rassegna Prestazioni</value>
         <value xml:lang="ja">業績評価を作成/更新</value>
         <value xml:lang="pt_BR">Criar/Atualizar avaliação de desempenho</value>
@@ -2351,6 +2580,7 @@
     <property key="HumanResNewPartyReviewItem">
         <value xml:lang="en">New PerfReviewItem</value>
         <value xml:lang="fr">Nouvelle ligne d'évaluation de performances</value>
+        <value xml:lang="hr">Nova stavka recenzije učinka</value>
         <value xml:lang="it">Nuova Riga Rassegna Prestazioni</value>
         <value xml:lang="ja">新規業績評価アイテム</value>
         <value xml:lang="pt_BR">Novo item de avaliação de desempenho</value>
@@ -2362,6 +2592,7 @@
     <property key="HumanResNewPartyReviewItemEdit">
         <value xml:lang="en">Create/Update PerfReviewItem</value>
         <value xml:lang="fr">Création/Màj d'une ligne d'évaluation de performances</value>
+        <value xml:lang="hr">Stvori/ažuriraj stavku recenzije učinka</value>
         <value xml:lang="it">Crea/Aggiorna Riga Rassegna Prestazioni</value>
         <value xml:lang="ja">業績評価アイテムを作成/更新</value>
         <value xml:lang="pt_BR">Criar/Atualizar Item de avaliação de desempenho</value>
@@ -2373,6 +2604,7 @@
     <property key="HumanResNewPartySkill">
         <value xml:lang="en">New Party Skill</value>
         <value xml:lang="fr">Nouvelle compétence de l'acteur</value>
+        <value xml:lang="hr">Nova vještina sudionika</value>
         <value xml:lang="it">Nuova Abilità Soggetto</value>
         <value xml:lang="ja">新規取引先スキル</value>
         <value xml:lang="pt_BR">Nova habilidade de participante</value>
@@ -2385,6 +2617,7 @@
         <value xml:lang="de">Interne Organisation</value>
         <value xml:lang="en">New Pay Grade</value>
         <value xml:lang="fr">Nouvel échelon de salaire</value>
+        <value xml:lang="hr">Novi platni razred</value>
         <value xml:lang="it">Nuovo Grado Paga</value>
         <value xml:lang="ja">新規給与等級</value>
         <value xml:lang="pt_BR">Novo degrau salarial</value>
@@ -2396,6 +2629,7 @@
     <property key="HumanResNewPayHistory">
         <value xml:lang="en">New Pay History</value>
         <value xml:lang="fr">Nouvel historique de salaire</value>
+        <value xml:lang="hr">Nova povijest plaćanja</value>
         <value xml:lang="it">Nuovo Storia Paghe</value>
         <value xml:lang="ja">新規給与履歴</value>
         <value xml:lang="pt_BR">Novo histórico de pagamentos</value>
@@ -2407,6 +2641,7 @@
     <property key="HumanResNewPayrollPreferences">
         <value xml:lang="en">New Payroll Preferences</value>
         <value xml:lang="fr">Nouvelles préférences de registre du personnel</value>
+        <value xml:lang="hr">Nove postavke obračuna plaća</value>
         <value xml:lang="it">Nuove Preferenze Paghe</value>
         <value xml:lang="ja">新規ペイロール設定</value>
         <value xml:lang="pt_BR">Novas preferências de folha de pagamento</value>
@@ -2419,6 +2654,7 @@
         <value xml:lang="de">Neue Ausbildung</value>
         <value xml:lang="en">New Person Training</value>
         <value xml:lang="fr">Nouvelle formation</value>
+        <value xml:lang="hr">Nova obuka</value>
         <value xml:lang="it">Nuovo corso persona</value>
         <value xml:lang="ja">新規個人トレーニング</value>
         <value xml:lang="pt_BR">Novo treinamento de pessoal</value>
@@ -2429,6 +2665,7 @@
     <property key="HumanResNewSalaryStep">
         <value xml:lang="en">New Salary Step</value>
         <value xml:lang="fr">Nouvelle augmentation de salaire</value>
+        <value xml:lang="hr">Novi korak plaće</value>
         <value xml:lang="it">Nuova argomentazione salario</value>
         <value xml:lang="ja">新規昇給</value>
         <value xml:lang="pt_BR">Novo aumento salarial</value>
@@ -2440,6 +2677,7 @@
     <property key="HumanResNewSkillType">
         <value xml:lang="en">New Skill Type</value>
         <value xml:lang="fr">Nouveau type de compétence</value>
+        <value xml:lang="hr">Nova vrsta vještine</value>
         <value xml:lang="it">Nuovo Tipo Abilità</value>
         <value xml:lang="ja">新規スキル種類</value>
         <value xml:lang="pt_BR">Novo tipo de habilidade</value>
@@ -2451,6 +2689,7 @@
     <property key="HumanResNewTerminationReason">
         <value xml:lang="en">New Termination Reason</value>
         <value xml:lang="fr">Nouveau motif de fin de contrat</value>
+        <value xml:lang="hr">Novi razlog za raskid</value>
         <value xml:lang="it">Nuova Motivazione Licenziamento</value>
         <value xml:lang="ja">新規終了理由</value>
         <value xml:lang="pt_BR">Nova razão de encerramento</value>
@@ -2462,6 +2701,7 @@
     <property key="HumanResNewUnemploymentClaim">
         <value xml:lang="en">New Unemployment Claim</value>
         <value xml:lang="fr">Nouvelle demande de chômage</value>
+        <value xml:lang="hr">Novi zahtjev za nezaposlene</value>
         <value xml:lang="it">Nuovo Reclamo Disoccupazione</value>
         <value xml:lang="ja">新規解雇申請</value>
         <value xml:lang="pt_BR">Nova reivindicação de desemprego</value>
@@ -2473,6 +2713,7 @@
     <property key="HumanResPartyBenifit">
         <value xml:lang="en">Party Benifit</value>
         <value xml:lang="fr">Avantage de l'acteur</value>
+        <value xml:lang="hr">Olakšice sudionika</value>
         <value xml:lang="it">Benifit Soggetto</value>
         <value xml:lang="ja">取引先福利厚生</value>
         <value xml:lang="pt_BR">Benefício de participante</value>
@@ -2484,6 +2725,7 @@
     <property key="HumanResPartyIdFrom">
         <value xml:lang="en">Party Id From</value>
         <value xml:lang="fr">Acteur de</value>
+        <value xml:lang="hr">Id sudionika od</value>
         <value xml:lang="it">Codice Soggetto Da</value>
         <value xml:lang="ja">取引先ID(元)</value>
         <value xml:lang="pt_BR">Id de participante remetente</value>
@@ -2495,6 +2737,7 @@
     <property key="HumanResPartyIdTo">
         <value xml:lang="en">Party Id To</value>
         <value xml:lang="fr">Acteur à</value>
+        <value xml:lang="hr">Id sudionika do</value>
         <value xml:lang="it">Codice Soggetto A</value>
         <value xml:lang="ja">取引先ID(先)</value>
         <value xml:lang="pt_BR">Id do participante destinatário</value>
@@ -2507,6 +2750,7 @@
         <value xml:lang="de">Qualifikationen</value>
         <value xml:lang="en">Qualifications</value>
         <value xml:lang="fr">Qualifications</value>
+        <value xml:lang="hr">Kvalifikacije</value>
         <value xml:lang="it">Qualifiche</value>
         <value xml:lang="ja">資格</value>
         <value xml:lang="pt_BR">Qualificações</value>
@@ -2519,6 +2763,7 @@
         <value xml:lang="en">Resumes</value>
         <value xml:lang="es">Resúmenes</value>
         <value xml:lang="fr">CV</value>
+        <value xml:lang="hr">Životopisi</value>
         <value xml:lang="it">Curriculum vitae</value>
         <value xml:lang="ja">復帰</value>
         <value xml:lang="pt_BR">Currículos</value>
@@ -2529,6 +2774,7 @@
     <property key="HumanResPartyReview">
         <value xml:lang="en">Party Review</value>
         <value xml:lang="fr">évaluation de l'acteur</value>
+        <value xml:lang="hr">Ocjena sudionika</value>
         <value xml:lang="it">Rassegna Soggetto</value>
         <value xml:lang="ja">取引先評価</value>
         <value xml:lang="pt_BR">Avaliação de participante</value>
@@ -2540,6 +2786,7 @@
     <property key="HumanResPartySkills">
         <value xml:lang="en">Party Skills</value>
         <value xml:lang="fr">Compétences de l'acteur</value>
+        <value xml:lang="hr">Vještine sudionika</value>
         <value xml:lang="it">Abilità soggetto</value>
         <value xml:lang="ja">取引先スキル</value>
         <value xml:lang="pt_BR">Habilidades do participante</value>
@@ -2549,6 +2796,7 @@
     </property>
     <property key="HumanResPartySkillsAlreadyExists">
         <value xml:lang="en">Record with the selected combination already exists.Please try with Other combination.</value>
+        <value xml:lang="hr">Zapis s odabranom kombinacijom već postoji. Pokušajte s drugom kombinacijom.</value>
         <value xml:lang="it">Un record con la combinazione selezionata esiste già.Per favore provare con altre combinazioni.</value>
         <value xml:lang="ja">選択された組み合わせのレコードはすでに存在します。別の組み合わせを試してください。</value>
         <value xml:lang="vi">Bản ghi được chọn để kết hợp đã tồn tại, mời bạn thử lại với sự kết hợp khác.</value>
@@ -2558,6 +2806,7 @@
         <value xml:lang="de">Lohnstufen</value>
         <value xml:lang="en">Pay Grades</value>
         <value xml:lang="fr">Echelon de salaire</value>
+        <value xml:lang="hr">Platni razredi</value>
         <value xml:lang="it">Grado Paga</value>
         <value xml:lang="ja">給与等級</value>
         <value xml:lang="pt_BR">Degrau salarial</value>
@@ -2569,6 +2818,7 @@
     <property key="HumanResPayGradeID">
         <value xml:lang="en">Pay GradeID</value>
         <value xml:lang="fr">Réf. d'échelon de salaire</value>
+        <value xml:lang="hr">Id platnog razreda</value>
         <value xml:lang="it">Codice Grado Paga</value>
         <value xml:lang="ja">給与等級ID</value>
         <value xml:lang="pt_BR">Id de grau salarial</value>
@@ -2580,6 +2830,7 @@
     <property key="HumanResPayHistories">
         <value xml:lang="en">Pay Histories</value>
         <value xml:lang="fr">Historiques des salaires</value>
+        <value xml:lang="hr">Povijest plaćanja</value>
         <value xml:lang="it">Storia Paghe</value>
         <value xml:lang="ja">給与履歴</value>
         <value xml:lang="pt_BR">Históricos de pagamentos</value>
@@ -2591,6 +2842,7 @@
     <property key="HumanResPayHistory">
         <value xml:lang="en">Pay History</value>
         <value xml:lang="fr">Historique de salaire</value>
+        <value xml:lang="hr">Povijest plaćanja</value>
         <value xml:lang="it">Storia Paga</value>
         <value xml:lang="ja">給与履歴</value>
         <value xml:lang="pt_BR">Histórico de pagamento</value>
@@ -2602,6 +2854,7 @@
     <property key="HumanResPayRollHistory">
         <value xml:lang="en">PayRoll History</value>
         <value xml:lang="fr">Historiques des paiements</value>
+        <value xml:lang="hr">Povijest obračuna plaća</value>
         <value xml:lang="ja">ペイロール履歴</value>
         <value xml:lang="vi">Lịch sử lương</value>
         <value xml:lang="zh">薪水支付历史</value>
@@ -2609,6 +2862,7 @@
     <property key="HumanResPayRollPreferences">
         <value xml:lang="en">PayRoll Preferences</value>
         <value xml:lang="fr">Préférences de registre du personnel</value>
+        <value xml:lang="hr">Postavke obračuna plaća</value>
         <value xml:lang="it">Preferenze Paghe</value>
         <value xml:lang="ja">ペイロール設定</value>
         <value xml:lang="pt_BR">Preferências da folha de pagamento</value>
@@ -2620,6 +2874,7 @@
     <property key="HumanResPayrollPreferenceSeqId">
         <value xml:lang="en">Payroll Preference SequenceId</value>
         <value xml:lang="fr">Réf. séq. de préférence de registre du personnel</value>
+        <value xml:lang="hr">Red br. preferencija obračuna plaća</value>
         <value xml:lang="it">Sequenza Preferenze Paghe</value>
         <value xml:lang="ja">ペイロール設定連番ID</value>
         <value xml:lang="pt_BR">Id de sequência de preferência de folha de pagamento</value>
@@ -2631,6 +2886,7 @@
     <property key="HumanResPerfNote">
         <value xml:lang="en">Performance Note</value>
         <value xml:lang="fr">Note de performance</value>
+        <value xml:lang="hr">Napomena o izvedbi</value>
         <value xml:lang="it">Nota performance</value>
         <value xml:lang="ja">業績連絡</value>
         <value xml:lang="pt_BR">Nota de desempenho</value>
@@ -2642,6 +2898,7 @@
         <value xml:lang="de">Leistungsbewertungen</value>
         <value xml:lang="en">Performance Review</value>
         <value xml:lang="fr">Évaluation des performances</value>
+        <value xml:lang="hr">Pregled izvedbe</value>
         <value xml:lang="it">Verifica performance</value>
         <value xml:lang="ja">業績評価</value>
         <value xml:lang="pt_BR">Avaliação de desempenho</value>
@@ -2652,6 +2909,7 @@
     <property key="HumanResPositionFulfillments">
         <value xml:lang="en">Fulfillments</value>
         <value xml:lang="fr">"Pourvoiements"</value>
+        <value xml:lang="hr">Ispunjenja</value>
         <value xml:lang="it">Adempimento</value>
         <value xml:lang="ja">遂行</value>
         <value xml:lang="pt_BR">Execuções</value>
@@ -2661,6 +2919,7 @@
     </property>
     <property key="HumanResPreRequisiteSkill">
         <value xml:lang="en">Pre Requisite Skill</value>
+        <value xml:lang="hr">Potrebna vještina</value>
         <value xml:lang="ja">辞令前スキル</value>
         <value xml:lang="pt_BR">Pré-requisitos de habilidade</value>
         <value xml:lang="vi">Các kỹ năng yêu cầu cơ bản</value>
@@ -2669,6 +2928,7 @@
     <property key="HumanResRecruitment">
         <value xml:lang="en">Recruitment</value>
         <value xml:lang="fr">Recrutement</value>
+        <value xml:lang="hr">Zapošljavanje</value>
         <value xml:lang="it">Reclutamento</value>
         <value xml:lang="ja">採用活動</value>
         <value xml:lang="pt_BR">Recrutamento</value>
@@ -2677,6 +2937,7 @@
     </property>
     <property key="HumanResRelocation">
         <value xml:lang="en">Relocation</value>
+        <value xml:lang="hr">Preseljenje</value>
         <value xml:lang="ja">配置転換</value>
         <value xml:lang="pt_BR">Realocação</value>
         <value xml:lang="vi">Chuyển địa điểm</value>
@@ -2685,6 +2946,7 @@
     <property key="HumanResReportedTo">
         <value xml:lang="en">ReportedTo</value>
         <value xml:lang="fr">Rapporté à</value>
+        <value xml:lang="hr">Prijavljeno</value>
         <value xml:lang="it">a cui riportare</value>
         <value xml:lang="ja">報告済(先)</value>
         <value xml:lang="pt_BR">Relatado a</value>
@@ -2695,6 +2957,7 @@
     <property key="HumanResReportsTo">
         <value xml:lang="en">ReportsTo</value>
         <value xml:lang="fr">Rapports à</value>
+        <value xml:lang="hr">Izvješća za</value>
         <value xml:lang="it">Riporta a</value>
         <value xml:lang="ja">報告(先)</value>
         <value xml:lang="pt_BR">Relata-se a</value>
@@ -2706,6 +2969,7 @@
         <value xml:lang="de">Verantwortungsarten</value>
         <value xml:lang="en">Responsibility Types</value>
         <value xml:lang="fr">Types de responsabilité</value>
+        <value xml:lang="hr">Vrste odgovornosti</value>
         <value xml:lang="it">Tipi responsabilità</value>
         <value xml:lang="ja">職責種類</value>
         <value xml:lang="pt_BR">Tipos de responsabilidade</value>
@@ -2716,6 +2980,7 @@
     <property key="HumanResResponsibilityTypeId">
         <value xml:lang="en">Responsibility TypeId</value>
         <value xml:lang="fr">Type de responsabilité</value>
+        <value xml:lang="hr">Id vrste odgovornosti</value>
         <value xml:lang="it">Tipo Responsabilità</value>
         <value xml:lang="ja">職責種類ID</value>
         <value xml:lang="pt_BR">Id de tipo de responsabilidade</value>
@@ -2728,6 +2993,7 @@
         <value xml:lang="de">Lebenslauf ID</value>
         <value xml:lang="en">Resume Id</value>
         <value xml:lang="fr">CV</value>
+        <value xml:lang="hr">Id životopisa</value>
         <value xml:lang="it">Verifica</value>
         <value xml:lang="ja">復帰ID</value>
         <value xml:lang="pt_BR">Id do currículo</value>
@@ -2738,6 +3004,7 @@
     <property key="HumanResSalaryStepSeqId">
         <value xml:lang="en">Salary Step Sequence Id</value>
         <value xml:lang="fr">Réf. séq. d'augmentation de salaire</value>
+        <value xml:lang="hr">Red br. koraka plaće</value>
         <value xml:lang="it">Sequenza Passo Salario</value>
         <value xml:lang="ja">昇給連番ID</value>
         <value xml:lang="pt_BR">Id de sequência de passo salarial</value>
@@ -2750,6 +3017,7 @@
         <value xml:lang="en">Could not create education entry, it already exists</value>
         <value xml:lang="es">No se pudo crear la entidad educación, dado que ya existe</value>
         <value xml:lang="fr">Impossible de créer l'entrée d'éducation, elle existe déjà</value>
+        <value xml:lang="hr">Nije moguće stvoriti unos obrazovanja, već postoji</value>
         <value xml:lang="it">Non è possibile creare voce educazione, questo è già esistente</value>
         <value xml:lang="ja">教育登録ができません、すでに存在します</value>
         <value xml:lang="pt_BR">Não foi possível criar a entrada de educação, ela já existe</value>
@@ -2763,6 +3031,7 @@
         <value xml:lang="en">Could not create education entry, data source error</value>
         <value xml:lang="es">No se pudo crear la entidad educación, error de base de datos</value>
         <value xml:lang="fr">Impossible de créer l'entrée d'éducation, erreur de base de données</value>
+        <value xml:lang="hr">Nije moguće stvoriti unos obrazovanja, pogreška izvora podataka</value>
         <value xml:lang="it">Non è possibile creare voce educazione, errore sorgente dati</value>
         <value xml:lang="ja">教育登録ができません、データソースエラー</value>
         <value xml:lang="pt_BR">Não foi possível criar a entrada de educação, erro na fonte dos dados</value>
@@ -2776,6 +3045,7 @@
         <value xml:lang="en">Could not create education entry, ID creation failed</value>
         <value xml:lang="es">No se pudo crear la entidad educación, la creación del id fallo</value>
         <value xml:lang="fr">Impossible de créer l'entrée d'éducation, la création d'identifiant a échoué</value>
+        <value xml:lang="hr">Nije moguće stvoriti unos obrazovanja, stvaranje Id-a nije uspjelo</value>
         <value xml:lang="it">Non è possibile creare voce educazione, creazione ID fallita</value>
         <value xml:lang="ja">教育登録ができません、ID生成失敗</value>
         <value xml:lang="pt_BR">Não foi possível criar entrada de educação, criação de Id falhou</value>
@@ -2789,6 +3059,7 @@
         <value xml:lang="en">Could not create education entry, ID starts with digit</value>
         <value xml:lang="es">No se pudo crear la entidad educación, el id empieza con un digito</value>
         <value xml:lang="fr">Impossible de créer l'entrée d'éducation, l'identifiant commence par un chiffre</value>
+        <value xml:lang="hr">Nije moguće stvoriti unos obrazovanja, Id počinje znamenkom</value>
         <value xml:lang="it">Non è possibile creare voce educazione, ID inizia con un numero</value>
         <value xml:lang="ja">教育登録ができません、IDが数字で始まっています</value>
         <value xml:lang="pt_BR">Não foi possível criar entrada de educação, Id deve começar com um dígito</value>
@@ -2802,6 +3073,7 @@
         <value xml:lang="en">Could not create education entry, one or more input entity does not exist</value>
         <value xml:lang="es">No se pudo crear la entidad educación, uno o más entidades asociadas no existen</value>
         <value xml:lang="fr">Impossible de créer l'entrée d'éducation, une ou plusieurs entrée d'entités n'existent pas</value>
+        <value xml:lang="hr">Nije moguće stvoriti unos obrazovanja, jedan ili više entiteta unosa ne postoji</value>
         <value xml:lang="it">Non è possibile creare voce educazione, uno o più entità non esistono</value>
         <value xml:lang="ja">教育登録ができません、エンティティが存在しません</value>
         <value xml:lang="pt_BR">Não foi possível criar entrada de educação, uma ou mais entidades não existem</value>
@@ -2815,6 +3087,7 @@
         <value xml:lang="en">Could not create education entry, required parameters missing</value>
         <value xml:lang="es">No se pudo crear la entidad educación, faltan parametros</value>
         <value xml:lang="fr">Impossible de créer l'entrée d'éducation, il manque des paramètres</value>
+        <value xml:lang="hr">Nije moguće stvoriti unos obrazovanja, nedostaju potrebni parametri</value>
         <value xml:lang="it">Non è possibile creare voce educazione, parametro richiesto mancante</value>
         <value xml:lang="ja">教育登録ができません、必須項目が入力されていません</value>
         <value xml:lang="pt_BR">Não foi possível criar entrada de educação, parâmetros obrigatórios faltando</value>
@@ -2828,6 +3101,7 @@
         <value xml:lang="de">Fähigkeitenarten</value>
         <value xml:lang="en">Skill Types</value>
         <value xml:lang="fr">Types de compétence</value>
+        <value xml:lang="hr">Vrste vještina</value>
         <value xml:lang="it">Tipo Abilità</value>
         <value xml:lang="ja">スキル種類</value>
         <value xml:lang="pt_BR">Tipos de habilidade</value>
@@ -2840,6 +3114,7 @@
         <value xml:lang="de">Fähigkeitsart ID</value>
         <value xml:lang="en">Skill Type Id</value>
         <value xml:lang="fr">Compétence</value>
+        <value xml:lang="hr">Id vrste vještine</value>
         <value xml:lang="it">Codice Tipo Abilità</value>
         <value xml:lang="ja">スキル種類ID</value>
         <value xml:lang="pt_BR">Id de tipo de habilidade</value>
@@ -2851,6 +3126,7 @@
     <property key="HumanResSkills">
         <value xml:lang="en">Skills</value>
         <value xml:lang="fr">Compétences</value>
+        <value xml:lang="hr">Vještine</value>
         <value xml:lang="it">Abilità</value>
         <value xml:lang="ja">スキル</value>
         <value xml:lang="pt_BR">Habilidades</value>
@@ -2862,6 +3138,7 @@
         <value xml:lang="de">Entlassungsgründe</value>
         <value xml:lang="en">Termination Reasons</value>
         <value xml:lang="fr">Raisons de fin de contrat</value>
+        <value xml:lang="hr">Razlozi raskida</value>
         <value xml:lang="it">Motivazione Licenziamento</value>
         <value xml:lang="ja">終了理由</value>
         <value xml:lang="pt_BR">Razões do encerramento</value>
@@ -2873,6 +3150,7 @@
     <property key="HumanResTerminationReasonId">
         <value xml:lang="en">Termination Reason Id</value>
         <value xml:lang="fr">Raisons de fin de contrat</value>
+        <value xml:lang="hr">Id razloga raskida</value>
         <value xml:lang="it">Codice Motivazione Licenziamento</value>
         <value xml:lang="ja">終了理由ID</value>
         <value xml:lang="pt_BR">Id da razão do encerramento</value>
@@ -2885,6 +3163,7 @@
         <value xml:lang="de">Entlassungsart</value>
         <value xml:lang="en">Termination Type Id</value>
         <value xml:lang="fr">Types de fin de contrat</value>
+        <value xml:lang="hr">Id vrste raskida</value>
         <value xml:lang="it">Tipo Licenziamento</value>
         <value xml:lang="ja">終了種類ID</value>
         <value xml:lang="pt_BR">Id de tipo de encerramento</value>
@@ -2897,6 +3176,7 @@
         <value xml:lang="de">Entlassungsarten</value>
         <value xml:lang="en">Termination Types</value>
         <value xml:lang="fr">Types de fin de contrat</value>
+        <value xml:lang="hr">Vrste raskida</value>
         <value xml:lang="it">Tipi di termine rapporto di lavoro</value>
         <value xml:lang="ja">終了種類</value>
         <value xml:lang="pt_BR">Tipos de encerramento</value>
@@ -2909,6 +3189,7 @@
         <value xml:lang="en">Training</value>
         <value xml:lang="es">Entrenamiento</value>
         <value xml:lang="fr">Formation</value>
+        <value xml:lang="hr">Obuka</value>
         <value xml:lang="it">Corsi</value>
         <value xml:lang="ja">トレーニング</value>
         <value xml:lang="pt_BR">Treinamento</value>
@@ -2919,6 +3200,7 @@
     <property key="HumanResTrainingApprovals">
         <value xml:lang="en">Training Approvals</value>
         <value xml:lang="fr">Accords de formation</value>
+        <value xml:lang="hr">Odobrenja za obuku</value>
         <value xml:lang="ja">トレーニング承認</value>
         <value xml:lang="pt_BR">Aprovações de treinamento</value>
         <value xml:lang="vi">Duyệt đào tạo</value>
@@ -2928,6 +3210,7 @@
     <property key="HumanResTrainingClassType">
         <value xml:lang="en">Training Class Type</value>
         <value xml:lang="fr">Catégorie de formation</value>
+        <value xml:lang="hr">Vrsta obuke</value>
         <value xml:lang="ja">トレーニングクラス種類</value>
         <value xml:lang="pt_BR">Tipo de aula de treinamento</value>
         <value xml:lang="vi">Kiểu lớp đào tạo</value>
@@ -2937,6 +3220,7 @@
     <property key="HumanResTrainingStatus">
         <value xml:lang="en">Training Status</value>
         <value xml:lang="fr">Etat de la formation</value>
+        <value xml:lang="hr">Status obuke</value>
         <value xml:lang="ja">トレーニングステータス</value>
         <value xml:lang="pt_BR">Estado do treinamento</value>
         <value xml:lang="vi">Trạng thái</value>
@@ -2946,6 +3230,7 @@
     <property key="HumanResTrainingTypes">
         <value xml:lang="en">Training Types</value>
         <value xml:lang="fr">Types de formation</value>
+        <value xml:lang="hr">Vrste obuke</value>
         <value xml:lang="ja">トレーニング種類</value>
         <value xml:lang="pt_BR">Tipos de treinamento</value>
         <value xml:lang="vi">Kiểu</value>
@@ -2955,6 +3240,7 @@
     <property key="HumanResTrainings">
         <value xml:lang="en">Training</value>
         <value xml:lang="fr">Formation</value>
+        <value xml:lang="hr">Obuka</value>
         <value xml:lang="ja">トレーニング</value>
         <value xml:lang="pt_BR">Treinamento</value>
         <value xml:lang="vi">Đào tạo / Tập huấn</value>
@@ -2964,6 +3250,7 @@
     <property key="HumanResViewPermissionError">
         <value xml:lang="en">View Permission Error</value>
         <value xml:lang="fr">Erreur d'autorisation de visualisation</value>
+        <value xml:lang="hr">Pogreška dopuštenja pogleda</value>
         <value xml:lang="it">Errore Permesso di Visualizzazione</value>
         <value xml:lang="ja">表示権限エラー</value>
         <value xml:lang="pt_BR">Ver erros de permissão</value>
@@ -2975,6 +3262,7 @@
     <property key="LookupJobInterview">
         <value xml:lang="en">LookUp Job Interview</value>
         <value xml:lang="fr">Rechercher un entretien d'embauche</value>
+        <value xml:lang="hr">Pronađi intervju za posao</value>
         <value xml:lang="ja">職務面談を検索</value>
         <value xml:lang="pt_BR">Procurar por entrevista de emprego</value>
         <value xml:lang="vi">Tra cứu Phỏng vấn</value>
@@ -2983,6 +3271,7 @@
     <property key="LookupJobReq">
         <value xml:lang="en">LookUp Job Requisition</value>
         <value xml:lang="fr">Rechercher une demande d'emploi</value>
+        <value xml:lang="hr">Pronađi zahtjev za posao</value>
         <value xml:lang="ja">職務辞令を検索</value>
         <value xml:lang="pt_BR">Procurar pro petição de emrpego</value>
         <value xml:lang="vi">Tra cứu Yêu cầu công việc</value>
@@ -2990,6 +3279,7 @@
     </property>
     <property key="PageTitleAddPublicHoliday">
         <value xml:lang="en">Add Public Holiday</value>
+        <value xml:lang="hr">Dodaj državni praznik</value>
         <value xml:lang="ja">祝日を追加</value>
         <value xml:lang="vi">Thêm Kỳ nghỉ công cộng</value>
         <value xml:lang="zh">添加公众假日</value>
@@ -2997,6 +3287,7 @@
     <property key="PageTitleEditApprovalStatus">
         <value xml:lang="en">Edit Approval Status</value>
         <value xml:lang="fr">Modifier les approbations</value>
+        <value xml:lang="hr">Uredi status odobrenja</value>
         <value xml:lang="ja">承認ステータスを検索</value>
         <value xml:lang="pt_BR">Editar estado de aprovação</value>
         <value xml:lang="vi">Thêm trạng thái duyệt</value>
@@ -3005,6 +3296,7 @@
     <property key="PageTitleEditEmplPosition">
         <value xml:lang="en">Edit Empl Position</value>
         <value xml:lang="fr">Modifier la position d'emploi</value>
+        <value xml:lang="hr">Uredi radno mjesto</value>
         <value xml:lang="it">Aggiorna Posizione Impiegato</value>
         <value xml:lang="ja">従業員職位を編集</value>
         <value xml:lang="pt_BR">Editar posição de empregado</value>
@@ -3016,6 +3308,7 @@
     <property key="PageTitleEditInternalJobPosting">
         <value xml:lang="en">Edit Internal JobPosting</value>
         <value xml:lang="fr">Modifier une offre de travail interne</value>
+        <value xml:lang="hr">Uredi interni oglas za posao</value>
         <value xml:lang="ja">内部職務配置を編集</value>
         <value xml:lang="pt_BR">Editar oferta interna de emprego</value>
         <value xml:lang="vi">Cập nhật Thông báo công việc nội bộ</value>
@@ -3025,6 +3318,7 @@
     <property key="PageTitleEditJobInterview">
         <value xml:lang="en">Edit Interview</value>
         <value xml:lang="fr">Modifier un entretien</value>
+        <value xml:lang="hr">Uredi intervju</value>
         <value xml:lang="ja">面談を編集</value>
         <value xml:lang="pt_BR">Editar entrevista</value>
         <value xml:lang="vi">Cập nhật Phỏng vấn</value>
@@ -3034,6 +3328,7 @@
     <property key="PageTitleEditJobInterviewType">
         <value xml:lang="en">Edit Job Interview Type</value>
         <value xml:lang="fr">Modifier les types d'entretiens</value>
+        <value xml:lang="hr">Uredi vrstu razgovora za posao</value>
         <value xml:lang="ja">職務面談を編集</value>
         <value xml:lang="pt_BR">Editar tipo de entrevista de emprego</value>
         <value xml:lang="vi">Cập nhật Kiểu phỏng vấn</value>
@@ -3043,6 +3338,7 @@
     <property key="PageTitleEditJobRequisition">
         <value xml:lang="en">Edit JobRequisition</value>
         <value xml:lang="fr">Modifier une demande de poste</value>
+        <value xml:lang="hr">Uredi zahtjev za radno mjesto</value>
         <value xml:lang="ja">職務辞令を編集</value>
         <value xml:lang="pt_BR">Editar petição de emprego</value>
         <value xml:lang="vi">Cập nhật Phỏng vấn</value>
@@ -3052,6 +3348,7 @@
     <property key="PageTitleEditPartyReview">
         <value xml:lang="en">Edit PerfReview</value>
         <value xml:lang="fr">Modifier l'évaluation des performances</value>
+        <value xml:lang="hr">Uredi recenziju učinka</value>
         <value xml:lang="it">Aggiorna Rassegna Prestazioni</value>
         <value xml:lang="ja">業績評価を編集</value>
         <value xml:lang="pt_BR">Editar avaliações de desempenho</value>
@@ -3063,6 +3360,7 @@
     <property key="PageTitleEditPartyReviewItem">
         <value xml:lang="en">Edit PerfReviewItem</value>
         <value xml:lang="fr">Modifier la ligne d'évaluation de performances</value>
+        <value xml:lang="hr">Uredi stavku recenzije učinka</value>
         <value xml:lang="it">Aggiorna Riga Rassegna Prestazioni</value>
         <value xml:lang="ja">業績評価アイテムを編集</value>
         <value xml:lang="pt_BR">Editar item de avaliação de desempenho</value>
@@ -3074,6 +3372,7 @@
     <property key="PageTitleEditResponsibilityType">
         <value xml:lang="en">Edit Responsibility Type</value>
         <value xml:lang="fr">Modifier le type de responsabilité</value>
+        <value xml:lang="hr">Uredi vrstu odgovornosti</value>
         <value xml:lang="it">Aggiorna tipo responsibilità</value>
         <value xml:lang="ja">職責種類を編集</value>
         <value xml:lang="pt_BR">Editar tipo de responsabilidade</value>
@@ -3084,6 +3383,7 @@
     <property key="PageTitleEditSkillType">
         <value xml:lang="en">Edit Skill Type</value>
         <value xml:lang="fr">Modifier le type de compétence</value>
+        <value xml:lang="hr">Uredi vrstu vještine</value>
         <value xml:lang="it">Aggiorna Tipo Abilità</value>
         <value xml:lang="ja">スキル種類を編集</value>
         <value xml:lang="pt_BR">Editar tipo de habilidade</value>
@@ -3094,6 +3394,7 @@
     </property>
     <property key="PageTitleEditTrainingTypes">
         <value xml:lang="en">Edit Training Types</value>
+        <value xml:lang="hr">Uredi vrste obuke</value>
         <value xml:lang="ja">トレーニング種類を編集</value>
         <value xml:lang="pt_BR">Editar tipos de treinamento</value>
         <value xml:lang="vi">Cập nhật Loại đào tạo</value>
@@ -3102,6 +3403,7 @@
     <property key="PageTitleEditValidResponsibility">
         <value xml:lang="en">Edit ValidResponsibility</value>
         <value xml:lang="fr">Modifier la validité de responsabilité</value>
+        <value xml:lang="hr">Uredi valjanju odgovornost</value>
         <value xml:lang="it">Aggiorna Validità Responsibilità</value>
         <value xml:lang="ja">有効な職責を編集</value>
         <value xml:lang="pt_BR">Editar validade da responsabilidade</value>
@@ -3113,6 +3415,7 @@
     <property key="PageTitleFindApprovals">
         <value xml:lang="en">Find Approvals</value>
         <value xml:lang="fr">Rechercher des approbations</value>
+        <value xml:lang="hr">Traži odobrenja</value>
         <value xml:lang="ja">承認を検索</value>
         <value xml:lang="pt_BR">Procurar aprovações</value>
         <value xml:lang="vi">Tra cứu Duyệt</value>
@@ -3121,6 +3424,7 @@
     <property key="PageTitleFindInternalJobPosting">
         <value xml:lang="en">Find Internal Job Posting</value>
         <value xml:lang="fr">Rechercher des offres d'emploi internes</value>
+        <value xml:lang="hr">Traži interni oglas za posao</value>
         <value xml:lang="ja">内部職務配置を検索</value>
         <value xml:lang="pt_BR">Procurar oferta interna de emprego</value>
         <value xml:lang="vi">Tra cứu Thông báo công việc nội bộ</value>
@@ -3129,6 +3433,7 @@
     <property key="PageTitleFindJobInterviewDetails">
         <value xml:lang="en">Find Interview Details</value>
         <value xml:lang="fr">Rechercher des détails d'entretiens</value>
+        <value xml:lang="hr">Traži detalje razgovora za posao</value>
         <value xml:lang="ja">面談詳細を検索</value>
         <value xml:lang="pt_BR">Procurar detalhes de entrevista</value>
         <value xml:lang="vi">Tra cứu Phỏng vấn chi tiết</value>
@@ -3137,6 +3442,7 @@
     <property key="PageTitleFindJobRequisition">
         <value xml:lang="en">Find Job Requisition</value>
         <value xml:lang="fr">Rechercher une demande de poste</value>
+        <value xml:lang="hr">Traži zahtjev za posao</value>
         <value xml:lang="ja">職務辞令を検索</value>
         <value xml:lang="pt_BR">Procurar petição de emprego</value>
         <value xml:lang="vi">Tra cứu Yêu cầu công việc</value>
@@ -3144,6 +3450,7 @@
     </property>
     <property key="PageTitleFindRelocationDetails">
         <value xml:lang="en">Find Relocation Details</value>
+        <value xml:lang="hr">Traži pojedinosti o preseljenju</value>
         <value xml:lang="ja">配置転換詳細を検索</value>
         <value xml:lang="pt_BR">Procurar detalhes de realocação</value>
         <value xml:lang="vi">Tra cứu Địa điểm chi tiết</value>
@@ -3152,6 +3459,7 @@
     <property key="PageTitleFindResponsibilityType">
         <value xml:lang="en">Find Responsibility Type</value>
         <value xml:lang="fr">Rechercher le type de responsabilité</value>
+        <value xml:lang="hr">Traži vrstu odgovornosti</value>
         <value xml:lang="it">Ricerca tipo responsibilità</value>
         <value xml:lang="ja">職責種類を検索</value>
         <value xml:lang="pt_BR">Procurar tipo de responsabilidade</value>
@@ -3162,6 +3470,7 @@
     <property key="PageTitleFindTrainingApprovals">
         <value xml:lang="en">Find Training Approvals</value>
         <value xml:lang="fr">Rechercher des accords de formation</value>
+        <value xml:lang="hr">Traži odobrenja za obuku</value>
         <value xml:lang="ja">トレーニング承認を検索</value>
         <value xml:lang="pt_BR">Procurar aprovações de treinamento</value>
         <value xml:lang="vi">Tra cứu duyệt đào tạo</value>
@@ -3170,6 +3479,7 @@
     <property key="PageTitleFindTrainingCalendar">
         <value xml:lang="en">Find Training Calendar</value>
         <value xml:lang="fr">Calendrier de formation</value>
+        <value xml:lang="hr">Traži kalendar obuke</value>
         <value xml:lang="ja">トレーニングのカレンダを検索</value>
         <value xml:lang="vi">Tra cứu lịch đào tạo</value>
         <value xml:lang="zh">查找培训日历</value>
@@ -3177,6 +3487,7 @@
     <property key="PageTitleFindTrainingStatus">
         <value xml:lang="en">Find Training Status</value>
         <value xml:lang="fr">Rechercher les états de formation</value>
+        <value xml:lang="hr">Traži status obuke</value>
         <value xml:lang="ja">トレーニングステータスを検索</value>
         <value xml:lang="pt_BR">Procurar estados de treinamento</value>
         <value xml:lang="vi">Tra cứu trạng thái đào tạo</value>
@@ -3185,6 +3496,7 @@
     <property key="PageTitleListEmplPosition">
         <value xml:lang="en">List EmplPosition</value>
         <value xml:lang="fr">Liste de positions</value>
+        <value xml:lang="hr">Popis radnih mjesta</value>
         <value xml:lang="it">Lista Posizione Impiegato</value>
         <value xml:lang="ja">従業員職位一覧</value>
         <value xml:lang="pt_BR">Listar Posições de empregado</value>
@@ -3196,6 +3508,7 @@
     <property key="PageTitleListEmplPositionFulfillments">
         <value xml:lang="en">List EmplPosition Fulfillments</value>
         <value xml:lang="fr">Liste des "pourvoiements" de position</value>
+        <value xml:lang="hr">Popis ispunjenja radnih mjesta</value>
         <value xml:lang="it">Lista Posizione Impiegato Adempimenti</value>
         <value xml:lang="ja">従業員職位遂行一覧</value>
         <value xml:lang="pt_BR">Listar preenchimento de posições de empregado</value>
@@ -3207,6 +3520,7 @@
     <property key="PageTitleListEmplPositionReportingStructs">
         <value xml:lang="en">List EmplPosition Reporting Structs</value>
         <value xml:lang="fr">Liste des structures de rapport de position d'emploi</value>
+        <value xml:lang="hr">Popis struktura za izvješćivanje rad.mj.</value>
         <value xml:lang="it">Lista Posizione Impiegato Struttura Stampe</value>
         <value xml:lang="ja">従業員職位報告階層一覧</value>
         <value xml:lang="pt_BR">Listar estrutura de relatórios de posições de empregados</value>
@@ -3218,6 +3532,7 @@
     <property key="PageTitleListEmplPositionResponsibilities">
         <value xml:lang="en">List EmplPosition Responsibilities</value>
         <value xml:lang="fr">Liste des responsabilités de position d'emploi</value>
+        <value xml:lang="hr">Popis odgovornosti rad.mj.</value>
         <value xml:lang="it">Lista Posizione Responsabilità Impiegato</value>
         <value xml:lang="ja">従業員職位職責一覧</value>
         <value xml:lang="pt_BR">Listar responsabilidades de posição de empregado</value>
@@ -3229,6 +3544,7 @@
     <property key="PageTitleListPartyReview">
         <value xml:lang="en">List PerfReview</value>
         <value xml:lang="fr">Liste des évaluations de performances</value>
+        <value xml:lang="hr">Popis recenzija učinka</value>
         <value xml:lang="it">Lista Rassegna Prestazioni</value>
         <value xml:lang="ja">業績評価一覧</value>
         <value xml:lang="pt_BR">Listar avaliações de desempenho</value>
@@ -3240,6 +3556,7 @@
     <property key="PageTitleListPartyReviewItems">
         <value xml:lang="en">List PerfReviewItem</value>
         <value xml:lang="fr">Liste d'article d'évaluations de performances</value>
+        <value xml:lang="hr">Popis stavki recenzija učinka</value>
         <value xml:lang="it">Lista Riga Rassegna Prestazioni</value>
         <value xml:lang="ja">業績評価アイテム一覧</value>
         <value xml:lang="pt_BR">Listar itens de avaliação de desempenho</value>
@@ -3251,6 +3568,7 @@
     <property key="PageTitleListSkillTypes">
         <value xml:lang="en">List Skill Types</value>
         <value xml:lang="fr">Liste de types de compétence</value>
+        <value xml:lang="hr">Popis vrsta vještina</value>
         <value xml:lang="it">Lista Tipi Abilità</value>
         <value xml:lang="ja">スキル種類一覧</value>
         <value xml:lang="pt_BR">Listar tipos de habilidades</value>
@@ -3262,6 +3580,7 @@
     <property key="PageTitleListValidResponsibilities">
         <value xml:lang="en">List ValidResponsibilities</value>
         <value xml:lang="fr">Liste de validité des responsabilités</value>
+        <value xml:lang="hr">Popis valjanih odgovornosti</value>
         <value xml:lang="it">Lista Validità Responsibilità</value>
         <value xml:lang="ja">有効な職責一覧</value>
         <value xml:lang="pt_BR">Listar validades de responsabilidades</value>
@@ -3272,12 +3591,14 @@
     </property>
     <property key="PageTitlePublicHoliday">
         <value xml:lang="en">Public Holiday</value>
+        <value xml:lang="hr">Državni praznik</value>
         <value xml:lang="ja">祝日</value>
         <value xml:lang="vi">Kỳ nghỉ công cộng</value>
         <value xml:lang="zh">公众假日</value>
     </property>
     <property key="PageTitlePublicHolidayList">
         <value xml:lang="en">Public Holiday List</value>
+        <value xml:lang="hr">Popis državnih praznika</value>
         <value xml:lang="ja">祝日一覧</value>
         <value xml:lang="vi">Danh sách kỳ nghỉ công cộng</value>
         <value xml:lang="zh">公众假日列表</value>
@@ -3285,6 +3606,7 @@
     <property key="PageTitleViewEmploymentApp">
         <value xml:lang="en">View Employment App</value>
         <value xml:lang="fr">Voir les demandes d'emploi</value>
+        <value xml:lang="hr">Vidi aplikaciju za zapošljavanje</value>
         <value xml:lang="it">Mostra candidature d'impiego</value>
         <value xml:lang="ja">雇用申請を表示</value>
         <value xml:lang="pt_BR">Visualizar candidatura de emprego</value>
@@ -3295,6 +3617,7 @@
     <property key="PageTitleViewPartySkill">
         <value xml:lang="en">View Party Skill</value>
         <value xml:lang="fr">Voir les compétences de l'acteur</value>
+        <value xml:lang="hr">Vidi vještinu sudionika</value>
         <value xml:lang="it">Mostra abilità soggetto</value>
         <value xml:lang="ja">取引先スキルを表示</value>
         <value xml:lang="pt_BR">Visualizar habilidade de participante</value>
@@ -3305,6 +3628,7 @@
     <property key="PageTitleViewPersonTraining">
         <value xml:lang="en">View Person Training</value>
         <value xml:lang="fr">Voir l'expérience de l'acteur</value>
+        <value xml:lang="hr">Vidi obuku</value>
         <value xml:lang="it">Mostra corsi persona</value>
         <value xml:lang="ja">個人トレーニングを表示</value>
         <value xml:lang="pt_BR">Visualizar treinamento de pessoa</value>
