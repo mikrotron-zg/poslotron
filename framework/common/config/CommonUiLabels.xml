@@ -261,7 +261,7 @@
         <value xml:lang="es">Añadir</value>
         <value xml:lang="fr">Ajouter</value>
         <value xml:lang="hi-IN">जोड़ें</value>
-        <value xml:lang="hr">Dodati</value>
+        <value xml:lang="hr">Dodaj</value>
         <value xml:lang="it">Aggiungi</value>
         <value xml:lang="ja">追加</value>
         <value xml:lang="nl">Toevoegen</value>
@@ -314,7 +314,7 @@
         <value xml:lang="es">Añadir un portlet...</value>
         <value xml:lang="fr">Ajouter un portlet...</value>
         <value xml:lang="hi-IN">एक Portlet जोड़ें...</value>
-        <value xml:lang="hr">Dodaj portlet</value>
+        <value xml:lang="hr">Dodaj portlet...</value>
         <value xml:lang="it">Aggiungi un portlet...</value>
         <value xml:lang="ja">ポートレットを追加</value>
         <value xml:lang="nl">Toevoegen portlet...</value>
@@ -371,7 +371,7 @@
         <value xml:lang="es">Añadir código</value>
         <value xml:lang="fr">Ajouter la référence</value>
         <value xml:lang="hi-IN">क्रमांक जोड़ें</value>
-        <value xml:lang="hr">Dodaj ID</value>
+        <value xml:lang="hr">Dodaj Id</value>
         <value xml:lang="it">Aggiungi codice</value>
         <value xml:lang="ja">IDを追加</value>
         <value xml:lang="nl">Toevoegen nummer</value>
@@ -510,7 +510,7 @@
         <value xml:lang="en">Address not found.</value>
         <value xml:lang="es">Dirección no encontrada.</value>
         <value xml:lang="fr">Adresse inconnue</value>
-        <value xml:lang="hr">Nema adrese.</value>
+        <value xml:lang="hr">Adresa nije pronađena.</value>
         <value xml:lang="ja">住所が見つかりません。</value>
         <value xml:lang="ru">Адрес не найден </value>
         <value xml:lang="vi">Không tìm thấy địa chỉ</value>
@@ -1363,7 +1363,7 @@
     <property key="CommonBuiltOn">
         <value xml:lang="en">built on</value>
         <value xml:lang="fr">compilée le</value>
-    <value xml:lang="hr">izgrađen na</value>
+        <value xml:lang="hr">izgrađen na</value>
     </property>
     <property key="CommonBut">
         <value xml:lang="ar">إلا</value>
@@ -1799,7 +1799,7 @@
         <value xml:lang="es">Limpiar actual</value>
         <value xml:lang="fr">Vider l'en cours</value>
         <value xml:lang="hi-IN">वर्तमान को साफ़ करें</value>
-        <value xml:lang="hr">Obriši trenutni</value>
+        <value xml:lang="hr">Obriši trenutno</value>
         <value xml:lang="it">Pulisci attuale</value>
         <value xml:lang="ja">現在をクリア</value>
         <value xml:lang="pt-BR">Limpar atual</value>
@@ -1817,7 +1817,7 @@
         <value xml:lang="es">Haga click aquí</value>
         <value xml:lang="fr">Cliquer ici</value>
         <value xml:lang="hi-IN">यहाँ क्लिक करें</value>
-        <value xml:lang="hr">Kliknite tu</value>
+        <value xml:lang="hr">Kliknite ovdje</value>
         <value xml:lang="it">Clicca qui</value>
         <value xml:lang="ja">ここをクリック</value>
         <value xml:lang="nl">Klik Hier</value>
@@ -2107,7 +2107,7 @@
         <value xml:lang="es">Código de mecanismo de contacto</value>
         <value xml:lang="fr">Coordonnée</value>
         <value xml:lang="hi-IN">संपर्क यांत्रिक क्रमांक(ContactMechId)</value>
-        <value xml:lang="hr">ID mehanizma kontakta</value>
+        <value xml:lang="hr">Id mehanizma kontakta</value>
         <value xml:lang="it">Contatto</value>
         <value xml:lang="ja">問い合わせ方法ID</value>
         <value xml:lang="nl">Kontact Mech Nr</value>
@@ -2311,7 +2311,7 @@
         <value xml:lang="es">País</value>
         <value xml:lang="fr">Pays</value>
         <value xml:lang="hi-IN">देश</value>
-        <value xml:lang="hr">Zemlja</value>
+        <value xml:lang="hr">Država</value>
         <value xml:lang="it">Paese</value>
         <value xml:lang="ja">国</value>
         <value xml:lang="nl">Land</value>
@@ -2873,7 +2873,7 @@
         <value xml:lang="en">Delete Column</value>
         <value xml:lang="es">Eliminar columna</value>
         <value xml:lang="fr">Supprimer la colonne</value>
-        <value xml:lang="hr">Briši kolonu</value>
+        <value xml:lang="hr">Briši stupac</value>
         <value xml:lang="it">Elimina colonna</value>
         <value xml:lang="ja">項目を削除</value>
         <value xml:lang="pt-BR">Excluir Coluna</value>
@@ -2886,7 +2886,7 @@
         <value xml:lang="en">Delete this column</value>
         <value xml:lang="es">Eliminar esta columna</value>
         <value xml:lang="fr">Supprimer cette colonne</value>
-        <value xml:lang="hr">Briši ovu kolonu</value>
+        <value xml:lang="hr">Briši ovaj stupac</value>
         <value xml:lang="it">Elimina questa colonna</value>
         <value xml:lang="ja">この項目を削除</value>
         <value xml:lang="pt-BR">Apagar esta coluna</value>
@@ -3252,7 +3252,7 @@
         <value xml:lang="en">PartyId: ${parameters.partyIdTo} has no valid email address!</value>
         <value xml:lang="es">Id de participante: ${parameters.partyIdTo} no tiene dirección de correo electrónico válida!</value>
         <value xml:lang="fr">La réf. acteur : ${parameters.partyIdTo} n'a aucun courriel valide !</value>
-        <value xml:lang="hr">Participant: ${parameters.partyIdTo} nema valjanih email adresa!</value>
+        <value xml:lang="hr">Sudionik: ${parameters.partyIdTo} nema valjanih email adresa!</value>
         <value xml:lang="it">Id soggetto: ${parameters.partyIdTo} non ha un'indirizzo e-mail valido!</value>
         <value xml:lang="ja">取引先ID: ${parameters.partyIdTo} に有効な電子メールがありません!</value>
         <value xml:lang="pt-BR">ID de Participante (PartyId): ${parameters.partyIdTo} não tem endereço de email válido!</value>
@@ -3287,7 +3287,7 @@
         <value xml:lang="en">[ADDRERR] Address error when sending message to ${sendTo} from ${sendFrom} cc ${sendCc} bcc ${sendBcc} subject ${subject}</value>
         <value xml:lang="es">[ADDRERR] Error en la dirección al enviar el mensaje para ${sendTo} de ${sendFrom} cc ${sendCc} bcc ${sendBcc} asunto ${subject}</value>
         <value xml:lang="fr">[ADDRERR] Erreur lors de l'envoi du courriel à ${sendTo}, depuis ${sendFrom}, en copie, ${sendCc}, en copie cachée ${sendBcc}, avec le sujet ${subject}</value>
-        <value xml:lang="hr">[ADDRERR] Greška u adresi prilikom slanja poruke na ${sendTo} od ${sendFrom} cc ${sendCc} bcc ${sendBcc} naslov ${subject}</value>
+        <value xml:lang="hr">[ADDRERR] Greška u adresi prilikom slanja poruke za ${sendTo} od ${sendFrom} cc ${sendCc} bcc ${sendBcc} naslov ${subject}</value>
         <value xml:lang="it">[ADDRERR] Errore indirizzo durante l'invio del messaggio a ${sendTo} da ${sendFrom} cc ${sendCc} cn ${sendBcc} soggetto ${subject}</value>
         <value xml:lang="ja">[ADDRERR] メッセージの送信中にエラー to ${sendTo} from ${sendFrom} cc ${sendCc} bcc ${sendBcc} 件名 ${subject}</value>
         <value xml:lang="ru">[ADDRERR] Ошибка адреса когда было послано сообщение к ${sendTo} from ${sendFrom} cc ${sendCc} bcc ${sendBcc} subject ${subject}</value>
@@ -3299,7 +3299,7 @@
         <value xml:lang="en">[CON] Connection error when sending message to ${sendTo} from ${sendFrom} cc ${sendCc} bcc ${sendBcc} subject ${subject}</value>
         <value xml:lang="es">[CON] Error de conexión al enviar el mensaje para ${sendTo} de ${sendFrom} cc ${sendCc} bcc ${sendBcc} asunto ${subject}</value>
         <value xml:lang="fr">[CON] Erreur de connexion lors de l'envoi du courriel à ${sendTo}, depuis ${sendFrom}, en copie, ${sendCc}, en copie cachée ${sendBcc}, avec le sujet ${subject}</value>
-        <value xml:lang="hr">[CON] Greška veze prilikom slanja poruke na ${sendTo} od ${sendFrom} cc ${sendCc} bcc ${sendBcc} naslov ${subject}</value>
+        <value xml:lang="hr">[CON] Greška veze prilikom slanja poruke za ${sendTo} od ${sendFrom} cc ${sendCc} bcc ${sendBcc} naslov ${subject}</value>
         <value xml:lang="it">[CON] Errore connessione durante l'invio del messaggio a ${sendTo} da ${sendFrom} cc ${sendCc} cn ${sendBcc} soggetto ${subject}</value>
         <value xml:lang="ja">[CON] メッセージの送信中に接続エラー to ${sendTo} from ${sendFrom} cc ${sendCc} bcc ${sendBcc} 件名 ${subject}</value>
         <value xml:lang="ru">[CON] Ошибка связи когда отправляется сообщение к ${sendTo} from ${sendFrom} cc ${sendCc} bcc ${sendBcc} subject ${subject}</value>
@@ -3428,7 +3428,7 @@
         <value xml:lang="es">Enviar e-mail a</value>
         <value xml:lang="fr">Envoyer un courriel à</value>
         <value xml:lang="hi-IN">ईमेल करे</value>
-        <value xml:lang="hr">E-mail kome</value>
+        <value xml:lang="hr">E-mail za</value>
         <value xml:lang="it">Email a</value>
         <value xml:lang="ja">送信先</value>
         <value xml:lang="nl">Email naar</value>
@@ -3450,7 +3450,7 @@
         <value xml:lang="es">Tipo de e-mail</value>
         <value xml:lang="fr">Type de courriel</value>
         <value xml:lang="hi-IN">ईमेल के प्रकार</value>
-        <value xml:lang="hr">E-mail tip</value>
+        <value xml:lang="hr">Vrsta e-maila</value>
         <value xml:lang="it">Tipo email</value>
         <value xml:lang="ja">Eメール形式</value>
         <value xml:lang="nl">Email Type</value>
@@ -3607,7 +3607,7 @@
         <value xml:lang="es">Entradas</value>
         <value xml:lang="fr">Entrées</value>
         <value xml:lang="hi-IN">प्रविष्टियां</value>
-        <value xml:lang="hr">Stavke</value>
+        <value xml:lang="hr">Unosi</value>
         <value xml:lang="it">Voci</value>
         <value xml:lang="ja">入力</value>
         <value xml:lang="nl">Ingangen</value>
@@ -3628,7 +3628,7 @@
         <value xml:lang="es">Entrada</value>
         <value xml:lang="fr">Entrée</value>
         <value xml:lang="hi-IN">प्रवेश</value>
-        <value xml:lang="hr">Stavka</value>
+        <value xml:lang="hr">Unos</value>
         <value xml:lang="it">Voce</value>
         <value xml:lang="ja">入力</value>
         <value xml:lang="nl">Ingang</value>
@@ -3850,7 +3850,7 @@
         <value xml:lang="es">Expiración</value>
         <value xml:lang="fr">Invalider</value>
         <value xml:lang="hi-IN">निश्वासन</value>
-        <value xml:lang="hr">Isteklo</value>
+        <value xml:lang="hr">Okončaj</value>
         <value xml:lang="it">Scade</value>
         <value xml:lang="ja">失効</value>
         <value xml:lang="nl">Maak verlopen</value>
@@ -3872,7 +3872,7 @@
         <value xml:lang="es">Expirar todos</value>
         <value xml:lang="fr">Tout invalider</value>
         <value xml:lang="hi-IN">सभी निश्वासित</value>
-        <value xml:lang="hr">Isteklo sve</value>
+        <value xml:lang="hr">Okončaj sve</value>
         <value xml:lang="it">Scade tutto</value>
         <value xml:lang="ja">すべて失効</value>
         <value xml:lang="nl">Alles laten verlopen</value>
@@ -3895,7 +3895,7 @@
         <value xml:lang="es">Fecha de expiración</value>
         <value xml:lang="fr">Date d'expiration</value>
         <value xml:lang="hi-IN">निश्वासित दिनांक</value>
-        <value xml:lang="hr">Datum istjecanja</value>
+        <value xml:lang="hr">Datum isteka</value>
         <value xml:lang="it">Data scadenza</value>
         <value xml:lang="ja">期限</value>
         <value xml:lang="nl">Verloop Datum</value>
@@ -3937,7 +3937,7 @@
         <value xml:lang="es">Exportar</value>
         <value xml:lang="fr">Exporter</value>
         <value xml:lang="hi-IN">निर्यात</value>
-        <value xml:lang="hr">Eksport</value>
+        <value xml:lang="hr">Izvezi</value>
         <value xml:lang="it">Esporta</value>
         <value xml:lang="ja">エクスポート</value>
         <value xml:lang="pt">Exportar</value>
@@ -4165,7 +4165,7 @@
         <value xml:lang="es">Filtro</value>
         <value xml:lang="fr">Filtre</value>
         <value xml:lang="hi-IN">फ़िल्टर</value>
-        <value xml:lang="hr">Filter</value>
+        <value xml:lang="hr">Filtar</value>
         <value xml:lang="it">Filtra</value>
         <value xml:lang="ja">フィルタ</value>
         <value xml:lang="pt">Filtrar</value>
@@ -4303,7 +4303,7 @@
         <value xml:lang="es">Fecha/hora de fin</value>
         <value xml:lang="fr">Date de fin</value>
         <value xml:lang="hi-IN">समाप्त दिनांक/समय</value>
-        <value xml:lang="hr">Datum svršetka</value>
+        <value xml:lang="hr">Datum završetka</value>
         <value xml:lang="it">Date/ora fine</value>
         <value xml:lang="ja">完了日時</value>
         <value xml:lang="nl">Eind Datum/Tijd</value>
@@ -4342,7 +4342,7 @@
         <value xml:lang="es">Los siguientes errores ocurrieron</value>
         <value xml:lang="fr">Erreur(s) </value>
         <value xml:lang="hi-IN">निम्नलिखित त्रुटियाँ घटित हुई</value>
-        <value xml:lang="hr">Dogodile su se ove greške</value>
+        <value xml:lang="hr">Dogodile su se slijedeće greške</value>
         <value xml:lang="it">Errore</value>
         <value xml:lang="ja">次のエラーが発生しました</value>
         <value xml:lang="nl">De volgende fouten kwamen voor</value>
@@ -4681,7 +4681,7 @@
         <value xml:lang="es">El formato de la fecha de inicio no es válido</value>
         <value xml:lang="fr">Format (date-heure) de la date de début non valide</value>
         <value xml:lang="hi-IN">'दिनांक से', एक मान्य दिनांक-समय नहीं है</value>
-        <value xml:lang="hr">Datum od nije valjanog formata</value>
+        <value xml:lang="hr">'Datum od' nije valjanog formata</value>
         <value xml:lang="it">Dalla data non è una data-ora valida.</value>
         <value xml:lang="ja">開始日時が正しくありません</value>
         <value xml:lang="nl">Vanaf Datum is geen geldige datum-Tijd</value>
@@ -4746,7 +4746,7 @@
         <value xml:lang="en">connection refused</value>
         <value xml:lang="es">conexión rechazada</value>
         <value xml:lang="fr">Connexion refusée</value>
-        <value xml:lang="hr">veza odbijena</value>
+        <value xml:lang="hr">Veza odbijena</value>
         <value xml:lang="it">connessione rifiutata</value>
         <value xml:lang="ja">接続が拒否されました</value>
         <value xml:lang="ru">В связи отказано</value>
@@ -4925,7 +4925,7 @@
         <value xml:lang="es">Código ubicación</value>
         <value xml:lang="fr">Zone géographique</value>
         <value xml:lang="hi-IN">भू क्रमांक</value>
-        <value xml:lang="hr">Geo ID</value>
+        <value xml:lang="hr">Geo Id</value>
         <value xml:lang="it">Codice Geografia</value>
         <value xml:lang="ja">位置ID</value>
         <value xml:lang="pt-BR">ID de Geo referência</value>
@@ -5010,7 +5010,7 @@
         <value xml:lang="en">Well Known Text</value>
         <value xml:lang="es">Texto conocido</value>
         <value xml:lang="fr">Texte connu</value>
-        <value xml:lang="hr">Dobro poznati tekst</value>
+        <value xml:lang="hr">Poznati tekst</value>
         <value xml:lang="ja">通称</value>
         <value xml:lang="pt-BR">Texto bem conhecido</value>
         <value xml:lang="ru">Хорошо знакомый текст</value>
@@ -5083,7 +5083,7 @@
         <value xml:lang="es">Adelante!</value>
         <value xml:lang="fr">Aller !</value>
         <value xml:lang="hi-IN">जाओ</value>
-        <value xml:lang="hr">Počni!</value>
+        <value xml:lang="hr">Kreni!</value>
         <value xml:lang="it">Vai!</value>
         <value xml:lang="ja">実行!</value>
         <value xml:lang="pt">Ir!</value>
@@ -5145,7 +5145,7 @@
         <value xml:lang="es">Ir al nivel superior</value>
         <value xml:lang="fr">Aller au niveau supérieur</value>
         <value xml:lang="hi-IN">मूल(Parent) पर लौटें</value>
-        <value xml:lang="hr">Idi na nadređeni</value>
+        <value xml:lang="hr">Idi na nadređeno</value>
         <value xml:lang="it">Torna al padre</value>
         <value xml:lang="ja">上位(親)に移動</value>
         <value xml:lang="nl">Ga een nivo omhoog</value>
@@ -5353,7 +5353,7 @@
         <value xml:lang="es">Código</value>
         <value xml:lang="fr">Réf.</value>
         <value xml:lang="hi-IN">क्रमांक</value>
-        <value xml:lang="hr">ID</value>
+        <value xml:lang="hr">Id</value>
         <value xml:lang="it">Codice</value>
         <value xml:lang="ja">ID</value>
         <value xml:lang="nl">ID</value>
@@ -5374,7 +5374,7 @@
         <value xml:lang="es">El código ya existe</value>
         <value xml:lang="fr">Réf. déjà existante</value>
         <value xml:lang="hi-IN">क्रमांक पहले से मौजूद</value>
-        <value xml:lang="hr">ID već postoji</value>
+        <value xml:lang="hr">Id već postoji</value>
         <value xml:lang="it">Codice già esistente</value>
         <value xml:lang="ja">IDはすでに存在します</value>
         <value xml:lang="nl">ID bestaat reeds</value>
@@ -5396,7 +5396,7 @@
         <value xml:lang="es">Código de identificación</value>
         <value xml:lang="fr">Code de référence</value>
         <value xml:lang="hi-IN">क्रमांक कोड</value>
-        <value xml:lang="hr">ID kod</value>
+        <value xml:lang="hr">Id kod</value>
         <value xml:lang="it">Codice</value>
         <value xml:lang="ja">IDコード</value>
         <value xml:lang="nl">ID Code</value>
@@ -5439,7 +5439,7 @@
         <value xml:lang="es">Códigos</value>
         <value xml:lang="fr">Références</value>
         <value xml:lang="hi-IN">क्रमांक</value>
-        <value xml:lang="hr">ID-ovi</value>
+        <value xml:lang="hr">Id-ovi</value>
         <value xml:lang="it">Codici</value>
         <value xml:lang="ja">ID</value>
         <value xml:lang="nl">IDs</value>
@@ -5467,11 +5467,11 @@
     </property>
     <property key="CommonImport">
         <value xml:lang="en">Import</value>
-    <value xml:lang="hr">Uvoz</value>
+        <value xml:lang="hr">Uvoz</value>
     </property>
     <property key="CommonImportExport">
         <value xml:lang="en">Import/Export</value>
-    <value xml:lang="hr">Uvoz/Izvoz</value>
+        <value xml:lang="hr">Uvoz/Izvoz</value>
     </property>
     <property key="CommonIn">
         <value xml:lang="ar">داخل</value>
@@ -6023,7 +6023,7 @@
         <value xml:lang="es">Lista</value>
         <value xml:lang="fr">Liste</value>
         <value xml:lang="hi-IN">सूची</value>
-        <value xml:lang="hr">Lista</value>
+        <value xml:lang="hr">Izlistaj</value>
         <value xml:lang="it">Lista</value>
         <value xml:lang="ja">一覧表示</value>
         <value xml:lang="nl">Lijst</value>
@@ -6377,7 +6377,7 @@
         <value xml:lang="es">Administrador</value>
         <value xml:lang="fr">Responsable</value>
         <value xml:lang="hi-IN">प्रबंधक</value>
-        <value xml:lang="hr">Menađžer</value>
+        <value xml:lang="hr">Upravitelj</value>
         <value xml:lang="it">Responsabile</value>
         <value xml:lang="ja">管理者</value>
         <value xml:lang="nl">Manager</value>
@@ -6860,7 +6860,7 @@
         <value xml:lang="es">Mover el Portlet abajo del todo</value>
         <value xml:lang="fr">Déplacer le portlet tout en bas</value>
         <value xml:lang="hi-IN">Portlet को तल पर स्थानांतरित करे</value>
-        <value xml:lang="hr">Pomjeri portlet na dno</value>
+        <value xml:lang="hr">Pomakni portlet na dno</value>
         <value xml:lang="it">Sposta il portlet in fondo</value>
         <value xml:lang="ja">ポートレットを下部に移動</value>
         <value xml:lang="pt-BR">Mover Portlet no fundo</value>
@@ -6876,7 +6876,7 @@
         <value xml:lang="es">Mover el Portlet hacia abajo</value>
         <value xml:lang="fr">Déplacer le portlet en bas</value>
         <value xml:lang="hi-IN">Portlet नीचे ले जाएँ</value>
-        <value xml:lang="hr">Pomjeri portlet dolje</value>
+        <value xml:lang="hr">Pomakni portlet dolje</value>
         <value xml:lang="it">Sposta il portlet in basso</value>
         <value xml:lang="ja">ポートレットを下に移動</value>
         <value xml:lang="pt-BR">Portlet para baixo</value>
@@ -6892,7 +6892,7 @@
         <value xml:lang="es">Mover el Portlet hacia la izquierda</value>
         <value xml:lang="fr">Déplacer le portlet à gauche</value>
         <value xml:lang="hi-IN">Portlet बाएं ले जाएँ</value>
-        <value xml:lang="hr">Pomjeri portlet lijevo</value>
+        <value xml:lang="hr">Pomakni portlet lijevo</value>
         <value xml:lang="it">Sposta il portlet a sinistra</value>
         <value xml:lang="ja">ポートレットを左に移動</value>
         <value xml:lang="pt-BR">Mover Portlet para Esquerda</value>
@@ -6908,7 +6908,7 @@
         <value xml:lang="es">Mover el Portlet hacia la derecha</value>
         <value xml:lang="fr">Déplacer le portlet à droite</value>
         <value xml:lang="hi-IN">Portlet दाएं ले जाएँ</value>
-        <value xml:lang="hr">Pomjeri portlet desno</value>
+        <value xml:lang="hr">Pomakni portlet desno</value>
         <value xml:lang="it">Sposta il portlet a destra</value>
         <value xml:lang="ja">ポートレットを右に移動</value>
         <value xml:lang="pt-BR">Mover Portlet para Direita</value>
@@ -6924,7 +6924,7 @@
         <value xml:lang="es">Mover el Portlet arriba del todo</value>
         <value xml:lang="fr">Déplacer le portlet tout en haut</value>
         <value xml:lang="hi-IN">Portlet शीर्ष पर ले जाएँ</value>
-        <value xml:lang="hr">Pomjeri portlet na vrh</value>
+        <value xml:lang="hr">Pomakni portlet na vrh</value>
         <value xml:lang="it">Sposta il portlet in cima</value>
         <value xml:lang="ja">ポートレットを上部に移動</value>
         <value xml:lang="pt-BR">Mover Portlet no Topo</value>
@@ -6940,7 +6940,7 @@
         <value xml:lang="es">Mover el Portlet hacia arriba</value>
         <value xml:lang="fr">Déplacer le portlet en haut</value>
         <value xml:lang="hi-IN">Portlet ऊपर की ओर ले जाएँ</value>
-        <value xml:lang="hr">Pomjeri portlet gore</value>
+        <value xml:lang="hr">Pomakni portlet gore</value>
         <value xml:lang="it">Sposta il portlet in alto</value>
         <value xml:lang="ja">ポートレットを上に移動</value>
         <value xml:lang="pt-BR">Mover Portlet para cima</value>
@@ -6956,7 +6956,7 @@
         <value xml:lang="es">Mover a la página del portal...</value>
         <value xml:lang="fr">Aller à la page "portail"</value>
         <value xml:lang="hi-IN">Portlet में ले जाएँ</value>
-        <value xml:lang="hr">Pomjeri na stranicu portala...</value>
+        <value xml:lang="hr">Pomakni na stranicu portala...</value>
         <value xml:lang="it">Sposta nella pagina...</value>
         <value xml:lang="ja">ポータルページに移動...</value>
         <value xml:lang="pt-BR">Vá para a página do Portal ...</value>
@@ -8221,7 +8221,7 @@
         <value xml:lang="es">Otro</value>
         <value xml:lang="fr">Autre</value>
         <value xml:lang="hi-IN">अन्य</value>
-        <value xml:lang="hr">Ostali</value>
+        <value xml:lang="hr">Ostalo</value>
         <value xml:lang="it">Altro</value>
         <value xml:lang="ja">その他</value>
         <value xml:lang="pt">Outro</value>
@@ -8261,7 +8261,7 @@
         <value xml:lang="es">Sumario</value>
         <value xml:lang="fr">Vue d'ensemble</value>
         <value xml:lang="hi-IN">समीक्षा</value>
-        <value xml:lang="hr">Rezime</value>
+        <value xml:lang="hr">Sažetak</value>
         <value xml:lang="it">Sommario</value>
         <value xml:lang="ja">概要</value>
         <value xml:lang="pt-BR">Resumo</value>
@@ -8368,7 +8368,7 @@
         <value xml:lang="es">Código del participante</value>
         <value xml:lang="fr">Réf. de la personne</value>
         <value xml:lang="hi-IN">पार्टी क्रमांक</value>
-        <value xml:lang="hr">ID sudionika</value>
+        <value xml:lang="hr">Id sudionika</value>
         <value xml:lang="it">Codice soggetto</value>
         <value xml:lang="ja">取引先ID</value>
         <value xml:lang="nl">Relatie Id</value>
@@ -8478,7 +8478,7 @@
         <value xml:lang="es">Tipo Metodo de Pago</value>
         <value xml:lang="fr">Type de méthode de paiement</value>
         <value xml:lang="hi-IN">भुगतान पद्धति के प्रकार</value>
-        <value xml:lang="hr">Tip načina plaćanja</value>
+        <value xml:lang="hr">Vrsta načina plaćanja</value>
         <value xml:lang="it">Tipo metodo pagamento</value>
         <value xml:lang="ja">支払方法種類</value>
         <value xml:lang="nl">Type betaalmethode</value>
@@ -8533,7 +8533,7 @@
         <value xml:lang="es">Ejecutar</value>
         <value xml:lang="fr">Exécuter</value>
         <value xml:lang="hi-IN">प्रर्दशित करे</value>
-        <value xml:lang="hr">Izvedi</value>
+        <value xml:lang="hr">Izvrši</value>
         <value xml:lang="it">Esegui</value>
         <value xml:lang="ja">実行</value>
         <value xml:lang="nl">Uitvoeren</value>
@@ -9344,7 +9344,7 @@
         <value xml:lang="es">Tasa</value>
         <value xml:lang="fr">Taux</value>
         <value xml:lang="hi-IN">दर</value>
-        <value xml:lang="hr">Tečaj</value>
+        <value xml:lang="hr">Stopa</value>
         <value xml:lang="it">Percentuale</value>
         <value xml:lang="ja">レート</value>
         <value xml:lang="nl">Tarief</value>
@@ -9366,7 +9366,7 @@
         <value xml:lang="es">Tasas</value>
         <value xml:lang="fr">Taux</value>
         <value xml:lang="hi-IN">दरे</value>
-        <value xml:lang="hr">Tečajevi</value>
+        <value xml:lang="hr">Stope</value>
         <value xml:lang="it">Percentuali</value>
         <value xml:lang="ja">レート</value>
         <value xml:lang="nl">Tarieven</value>
@@ -10018,7 +10018,7 @@
         <value xml:lang="es">Guardar</value>
         <value xml:lang="fr">Enregistrer</value>
         <value xml:lang="hi-IN">सुरक्षित करे</value>
-        <value xml:lang="hr">Snimi</value>
+        <value xml:lang="hr">Spremi</value>
         <value xml:lang="it">Salva</value>
         <value xml:lang="ja">保存</value>
         <value xml:lang="nl">Opslaan</value>
@@ -10220,7 +10220,7 @@
         <value xml:lang="es">Grupo de seguridad</value>
         <value xml:lang="fr">Groupe de sécurité </value>
         <value xml:lang="hi-IN">सुरक्षा समूह क्रमांक</value>
-        <value xml:lang="hr">ID sigurnosne grupe</value>
+        <value xml:lang="hr">Id sigurnosne grupe</value>
         <value xml:lang="it">Codice gruppo sicurezza</value>
         <value xml:lang="ja">セキュリティグループID</value>
         <value xml:lang="nl">ID beveiligingsgroep</value>
@@ -10240,7 +10240,7 @@
         <value xml:lang="es">Seleccionar</value>
         <value xml:lang="fr">Sélectionner</value>
         <value xml:lang="hi-IN">चुनें</value>
-        <value xml:lang="hr">Označi</value>
+        <value xml:lang="hr">Izaberi</value>
         <value xml:lang="it">Seleziona</value>
         <value xml:lang="ja">選択</value>
         <value xml:lang="nl">Selecteer</value>
@@ -10262,7 +10262,7 @@
         <value xml:lang="es">Seleccionar todo</value>
         <value xml:lang="fr">Tout sélectionner</value>
         <value xml:lang="hi-IN">सभी का चयन करें</value>
-        <value xml:lang="hr">Označi sve</value>
+        <value xml:lang="hr">Izaberi sve</value>
         <value xml:lang="it">Seleziona tutto</value>
         <value xml:lang="ja">すべて選択</value>
         <value xml:lang="nl">Selecteer Alle</value>
@@ -10284,7 +10284,7 @@
         <value xml:lang="es">Cualquier</value>
         <value xml:lang="fr">Tous</value>
         <value xml:lang="hi-IN">कोई</value>
-        <value xml:lang="hr">Označi bilo koji</value>
+        <value xml:lang="hr">Izaberi bilo koji</value>
         <value xml:lang="it">Qualsiasi</value>
         <value xml:lang="ja">選択</value>
         <value xml:lang="nl">Een</value>
@@ -10305,7 +10305,7 @@
         <value xml:lang="es">Elija uno</value>
         <value xml:lang="fr">Sélectionner un(e)</value>
         <value xml:lang="hi-IN">एक चुनें</value>
-        <value xml:lang="hr">Odaberite 1</value>
+        <value xml:lang="hr">Izaberi jedan</value>
         <value xml:lang="it">Seleziona uno</value>
         <value xml:lang="ja">選択</value>
         <value xml:lang="nl">Selecteer één</value>
@@ -10341,7 +10341,7 @@
         <value xml:lang="en">Select a portlet you would like to have help on....</value>
         <value xml:lang="es">Seleccione un portlet del que desee obtener ayuda....</value>
         <value xml:lang="fr">Liste des portlets contenues dans cette page, sélectionnez celle pour laquelle vous souhaitez de l'aide</value>
-        <value xml:lang="hr">Odaberite portlet za koji biste željeli imati pomoć....</value>
+        <value xml:lang="hr">Izaberite portlet za koji biste željeli imati pomoć....</value>
         <value xml:lang="ja">ヘルプを参照したいポートレットを選択してください....</value>
         <value xml:lang="ru">Выберите портлет, который вам может помочь</value>
         <value xml:lang="vi">Lựa chọn một ứng dụng porlet mà muốn có sự giúp đỡ...</value>
@@ -10355,7 +10355,7 @@
         <value xml:lang="es">Seleccionar</value>
         <value xml:lang="fr">Sélectionné(e)</value>
         <value xml:lang="hi-IN">चयनित</value>
-        <value xml:lang="hr">Označeno</value>
+        <value xml:lang="hr">Izabrano</value>
         <value xml:lang="it">selezionato</value>
         <value xml:lang="ja">選択済</value>
         <value xml:lang="nl">geselecteerd</value>
@@ -10377,7 +10377,7 @@
         <value xml:lang="es">Selección</value>
         <value xml:lang="fr">Sélection</value>
         <value xml:lang="hi-IN">चयन</value>
-        <value xml:lang="hr">Selekcija</value>
+        <value xml:lang="hr">Izbor</value>
         <value xml:lang="it">Seleziona</value>
         <value xml:lang="ja">選択済</value>
         <value xml:lang="nl">Selectie</value>
@@ -10546,7 +10546,7 @@
         <value xml:lang="es">Secuencia</value>
         <value xml:lang="fr">Séquence</value>
         <value xml:lang="hi-IN">अनुक्रम</value>
-        <value xml:lang="hr">Sekvenca</value>
+        <value xml:lang="hr">Redoslijed</value>
         <value xml:lang="it">Sequenza</value>
         <value xml:lang="ja">順序</value>
         <value xml:lang="nl">Volgorde</value>
@@ -10567,7 +10567,7 @@
         <value xml:lang="es">Número de secuencia</value>
         <value xml:lang="fr">N° de séquence</value>
         <value xml:lang="hi-IN">क्रम संख्या</value>
-        <value xml:lang="hr">Broj sekvence</value>
+        <value xml:lang="hr">Redni broj</value>
         <value xml:lang="it">Num. Sequenza</value>
         <value xml:lang="ja">連番</value>
         <value xml:lang="nl">Nummer in de volgorde</value>
@@ -10657,7 +10657,7 @@
         <value xml:lang="es">Establecer ancho de columna</value>
         <value xml:lang="fr">Définir la largeur de colonne ...</value>
         <value xml:lang="hi-IN">कॉलम की चौड़ाई स्थापित करे...</value>
-        <value xml:lang="hr">Postavi širinu kolone</value>
+        <value xml:lang="hr">Postavi širinu stupca</value>
         <value xml:lang="it">Imposta larghezza colonna</value>
         <value xml:lang="ja">列幅を設定...</value>
         <value xml:lang="pt-BR">Definir largura da coluna</value>
@@ -10674,7 +10674,7 @@
         <value xml:lang="es">(será establecido a la fecha actual si se deja vacío)</value>
         <value xml:lang="fr">(Sera positionné(e) à aujourd'hui si vide)</value>
         <value xml:lang="hi-IN">(अगर खली होगा तो आज की दिनांक के अनुसार निर्धारित किया जाएगा)</value>
-        <value xml:lang="hr">(Bit će postavljeno na sadašnje ako je prazno)</value>
+        <value xml:lang="hr">(Biti će postavljeno na sadašnje ako je prazno)</value>
         <value xml:lang="it">(Sarà impostato adesso se vuoto)</value>
         <value xml:lang="ja">(空の場合、現在を設定)</value>
         <value xml:lang="nl">(Zal worden gezet wanneer nu leeg)</value>
@@ -11035,7 +11035,7 @@
         <value xml:lang="es">Estado/Provincia</value>
         <value xml:lang="fr">Etat/Province</value>
         <value xml:lang="hi-IN">राज्य/प्रांत</value>
-        <value xml:lang="hr">Država/provincija</value>
+        <value xml:lang="hr">Država/pokrajina</value>
         <value xml:lang="it">Stato/Provincia</value>
         <value xml:lang="ja">都道府県/州/地方</value>
         <value xml:lang="nl">Staat/Provincie</value>
@@ -11131,7 +11131,7 @@
         <value xml:lang="es">Poner estado a 'terminado'</value>
         <value xml:lang="fr">Mettre le statut à terminé</value>
         <value xml:lang="hi-IN">'पूर्ण' की स्थिति</value>
-        <value xml:lang="hr">Status na 'svršeno'</value>
+        <value xml:lang="hr">Status na 'završeno'</value>
         <value xml:lang="it">Stato a 'completo'</value>
         <value xml:lang="ja">ｽﾃｰﾀｽを'完了'</value>
         <value xml:lang="pt-BR">Alterar estado para "completo"</value>
@@ -11371,7 +11371,7 @@
         <value xml:lang="es">Cuenta</value>
         <value xml:lang="fr">Contrôle</value>
         <value xml:lang="hi-IN">मिलान</value>
-        <value xml:lang="hr">Brojač</value>
+        <value xml:lang="hr">Obračun</value>
         <value xml:lang="it">Tally</value>
         <value xml:lang="ja">勘定</value>
         <value xml:lang="nl">Tally</value>
@@ -11451,7 +11451,7 @@
         <value xml:lang="en">Tenant ID</value>
         <value xml:lang="es">Identificador organización</value>
         <value xml:lang="fr">Instance</value>
-        <value xml:lang="hr">Id zakupnika</value>
+        <value xml:lang="hr">Id zakupca</value>
         <value xml:lang="ja">テナントID</value>
         <value xml:lang="pt-BR">ID de Inquilino</value>
         <value xml:lang="ru">ID клиента</value>
@@ -11522,7 +11522,7 @@
         <value xml:lang="es">El/La</value>
         <value xml:lang="fr">Le</value>
         <value xml:lang="hi-IN">इस</value>
-        <value xml:lang="hr" />
+        <value xml:lang="hr"> </value>
         <value xml:lang="it">Il</value>
         <value xml:lang="ja" />
         <value xml:lang="nl">de</value>
@@ -11601,7 +11601,7 @@
         <value xml:lang="es">Hasta</value>
         <value xml:lang="fr">Jusqu'à</value>
         <value xml:lang="hi-IN">तक</value>
-        <value xml:lang="hr">Kroz</value>
+        <value xml:lang="hr">Do</value>
         <value xml:lang="it">Fino a </value>
         <value xml:lang="ja">終了</value>
         <value xml:lang="nl">tot</value>
@@ -11792,7 +11792,7 @@
         <value xml:lang="es">Sra.</value>
         <value xml:lang="fr">Mme</value>
         <value xml:lang="hi-IN">श्रीमती</value>
-        <value xml:lang="hr">G-đa</value>
+        <value xml:lang="hr">Gđa.</value>
         <value xml:lang="it">Sig.ra.</value>
         <value xml:lang="ja">ミセス</value>
         <value xml:lang="nl">Mrs.</value>
@@ -11814,7 +11814,7 @@
         <value xml:lang="es">Srta.</value>
         <value xml:lang="fr">Mlle</value>
         <value xml:lang="hi-IN">सुश्री</value>
-        <value xml:lang="hr">G-đica</value>
+        <value xml:lang="hr">Gđica.</value>
         <value xml:lang="it">Sig.na.</value>
         <value xml:lang="ja">ミス</value>
         <value xml:lang="nl">Ms.</value>
@@ -11837,7 +11837,7 @@
         <value xml:lang="fr">Vers </value>
         
         <value xml:lang="hi-IN">को</value>
-        <value xml:lang="hr">Kome</value>
+        <value xml:lang="hr">Za</value>
         <value xml:lang="it">A</value>
         <value xml:lang="ja">先</value>
         <value xml:lang="nl">Aan</value>
@@ -11962,7 +11962,7 @@
         <value xml:lang="es">Coste total</value>
         <value xml:lang="fr">Coût total</value>
         <value xml:lang="hi-IN">कुल लागत</value>
-        <value xml:lang="hr">Sveukupna cijena</value>
+        <value xml:lang="hr">Sveukupni trošak</value>
         <value xml:lang="it">Costo totale</value>
         <value xml:lang="ja">原価計</value>
         <value xml:lang="nl">Totale kosten</value>
@@ -11980,7 +11980,7 @@
         <value xml:lang="en">Total Cost Mult</value>
         <value xml:lang="es">Coste total múltiple</value>
         <value xml:lang="fr">Coût total multiple</value>
-        <value xml:lang="hr">Višekratnik ukupne cijene</value>
+        <value xml:lang="hr">Višekratnik ukupnog troška</value>
         <value xml:lang="it">Totale costo multiplo</value>
         <value xml:lang="ja">原価計倍</value>
         <value xml:lang="nl">Totale meerkosten</value>
@@ -11998,7 +11998,7 @@
         <value xml:lang="en">Cost To Price Mult</value>
         <value xml:lang="es">Coste a precio múltiplo</value>
         <value xml:lang="fr">Coût vers prix multiple</value>
-        <value xml:lang="hr">Višekratnik cijene u odnosu na cijenu</value>
+        <value xml:lang="hr">Višekratnik troška u odnosu na cijenu</value>
         <value xml:lang="it">Totale costo di prezzo multiplo</value>
         <value xml:lang="ja">原価の価格倍</value>
         <value xml:lang="pt-BR">Custo para preço múltiplo</value>
@@ -12136,7 +12136,7 @@
         <value xml:lang="es">Tipo</value>
         <value xml:lang="fr">Type</value>
         <value xml:lang="hi-IN">प्रकार</value>
-        <value xml:lang="hr">Tip</value>
+        <value xml:lang="hr">Vrsta</value>
         <value xml:lang="it">Tipo</value>
         <value xml:lang="ja">種類</value>
         <value xml:lang="nl">Soort</value>
@@ -12211,7 +12211,7 @@
         <value xml:lang="es">UDM</value>
         <value xml:lang="fr">Unité de mesure</value>
         <value xml:lang="hi-IN">माप की इकाई</value>
-        <value xml:lang="hr">UOM</value>
+        <value xml:lang="hr">Mj.jed.</value>
         <value xml:lang="it">UdM</value>
         <value xml:lang="ja">単位</value>
         <value xml:lang="nl">UOM</value>
@@ -12254,7 +12254,7 @@
         <value xml:lang="es">Código de UDM</value>
         <value xml:lang="fr">Unité de mesure</value>
         <value xml:lang="hi-IN">माप की इकाई क्रमांक</value>
-        <value xml:lang="hr">ID valute</value>
+        <value xml:lang="hr">Id mj.jed.</value>
         <value xml:lang="it">Codice UdM</value>
         <value xml:lang="ja">単位ID</value>
         <value xml:lang="nl">UOM ID</value>
@@ -12276,7 +12276,7 @@
         <value xml:lang="es">Actualizar</value>
         <value xml:lang="fr">Màj</value>
         <value xml:lang="hi-IN">अद्यतन करे</value>
-        <value xml:lang="hr">Promijeni</value>
+        <value xml:lang="hr">Ažuriraj</value>
         <value xml:lang="it">Aggiorna</value>
         <value xml:lang="ja">更新</value>
         <value xml:lang="nl">Wijzigen</value>
@@ -12299,7 +12299,7 @@
         <value xml:lang="es">Actualizar enlace</value>
         <value xml:lang="fr">Mettre à jour le lien</value>
         <value xml:lang="hi-IN">अद्यतन लिंक</value>
-        <value xml:lang="hr">Promijeni poveznicu</value>
+        <value xml:lang="hr">Ažuriraj poveznicu</value>
         <value xml:lang="it">Aggiorna link</value>
         <value xml:lang="ja">リンクの更新</value>
         <value xml:lang="nl">Wijzigingslink</value>
@@ -12321,7 +12321,7 @@
         <value xml:lang="es">Actualizado</value>
         <value xml:lang="fr">Mis(e) à jour</value>
         <value xml:lang="hi-IN">अद्यतन</value>
-        <value xml:lang="hr">Obnovljeno</value>
+        <value xml:lang="hr">Ažurirano</value>
         <value xml:lang="it">Aggiornato</value>
         <value xml:lang="ja">更新</value>
         <value xml:lang="nl">Gewijzigd</value>
@@ -12343,7 +12343,7 @@
         <value xml:lang="es">ACtualización efectiva hasta</value>
         <value xml:lang="fr">Mise à jour efficace jusqu'à</value>
         <value xml:lang="hi-IN">अद्यतित(Updated) प्रभावी तक</value>
-        <value xml:lang="hr">Efektivno obnovljeno do</value>
+        <value xml:lang="hr">Efektivno ažurirano do</value>
         <value xml:lang="it">Aggiornamento effetivo fino al</value>
         <value xml:lang="ja">更新有効期限</value>
         <value xml:lang="nl">Gewijzigd effectief tot</value>
@@ -12478,7 +12478,7 @@
         <value xml:lang="es">Código de usuario</value>
         <value xml:lang="fr">Identifiant de connexion</value>
         <value xml:lang="hi-IN">प्रयोक्ता लॉगिन क्रमांक</value>
-        <value xml:lang="hr">ID prijavljenog korisnika</value>
+        <value xml:lang="hr">Id prijavljenog korisnika</value>
         <value xml:lang="it">Codice utente</value>
         <value xml:lang="ja">ユーザログインID</value>
         <value xml:lang="nl">User Login Id</value>
@@ -12566,7 +12566,7 @@
         <value xml:lang="es">Validar</value>
         <value xml:lang="fr">Valider</value>
         <value xml:lang="hi-IN">मान्य</value>
-        <value xml:lang="hr">Verificiraj</value>
+        <value xml:lang="hr">Potvrdi</value>
         <value xml:lang="it">Validare</value>
         <value xml:lang="ja">検証</value>
         <value xml:lang="nl">Testen</value>
@@ -12742,7 +12742,7 @@
         <value xml:lang="es">Tema visual</value>
         <value xml:lang="fr">Charte graphique</value>
         <value xml:lang="hi-IN">दृश्य शैली(Visual Theme)</value>
-        <value xml:lang="hr">Vizualna temaj</value>
+        <value xml:lang="hr">Vizualna tema</value>
         <value xml:lang="it">Tema grafico</value>
         <value xml:lang="ja">外観のテーマ</value>
         <value xml:lang="nl">Visueel thema</value>
@@ -12759,7 +12759,7 @@
         <value xml:lang="es">Código de tema visual no encontrado.</value>
         <value xml:lang="fr">Réf. de charte graphique inconnue.</value>
         <value xml:lang="hi-IN">दृश्य शैली क्रमांक(VisualThemeId) नहीं मिला|</value>
-        <value xml:lang="hr">ID vizualne teme nije pronađen.</value>
+        <value xml:lang="hr">Id vizualne teme nije pronađen.</value>
         <value xml:lang="it">Tema grafico non trovato.</value>
         <value xml:lang="ja">外観のテーマIDが見つかりません</value>
         <value xml:lang="nl">Visueel thema niet gevonden</value>
@@ -12995,7 +12995,7 @@
         <value xml:lang="es">Bienvenido</value>
         <value xml:lang="fr">Bienvenue </value>
         <value xml:lang="hi-IN">स्वागत</value>
-        <value xml:lang="hr">Dobrodošli</value>
+        <value xml:lang="hr">Dobro došli</value>
         <value xml:lang="it">Benvenuto</value>
         <value xml:lang="ja">ようこそ</value>
         <value xml:lang="nl">Welkom</value>
@@ -13017,7 +13017,7 @@
         <value xml:lang="es">Bienvenido al panel de control de OFBiz</value>
         <value xml:lang="fr">Bienvenue sur le tableau de bord d'OFBiz</value>
         <value xml:lang="hi-IN">OFBiz डैशबोर्ड पर आपका स्वागत है</value>
-        <value xml:lang="hr">Dobrodošli na OFBiz dashboard</value>
+        <value xml:lang="hr">Dobro došli na OFBiz dashboard</value>
         <value xml:lang="it">Benvenuto al cruscotto di OFBiz</value>
         <value xml:lang="ja">OFBizダッシュボードにようこそ</value>
         <value xml:lang="nl">Welkom in het OFBiz dashboard</value>
@@ -13077,7 +13077,7 @@
         <value xml:lang="es">Actividades de flujo de trabajo asignadas al usuario</value>
         <value xml:lang="fr">Actions du workflow associés à l'utilisateur</value>
         <value xml:lang="hi-IN">वर्कफ़्लो क्रियाएँ उपयोगकर्ता को निरुपित</value>
-        <value xml:lang="hr">Workflow aktivnosti dodijeljene korisniku</value>
+        <value xml:lang="hr">Aktivnosti tijeka rada dodijeljene korisniku</value>
         <value xml:lang="it">Attività impegno di lavoro assegnate all'utente</value>
         <value xml:lang="ja">ワークフローの活動がユーザに割り当てられました</value>
         <value xml:lang="nl">Workflow Aktieviteiten toegewezen aan gebruiker</value>
@@ -13099,7 +13099,7 @@
         <value xml:lang="es">Actividades de flujo de trabajo asignadas al rol de usuario</value>
         <value xml:lang="fr">Actions du workflow associés au rôle de l'utilisateur</value>
         <value xml:lang="hi-IN">वर्कफ़्लो क्रियाएँ उपयोगकर्ता भूमिका को निरुपित</value>
-        <value xml:lang="hr">Workflow aktivnosti dodijeljene korisničkoj ulozi</value>
+        <value xml:lang="hr">Aktivnosti tijeka rada dodijeljene korisničkoj ulozi</value>
         <value xml:lang="it">Attività impegno di lavoro assegnate al ruolo utente</value>
         <value xml:lang="ja">ワークフローの活動がユーザロールに割り当てられました</value>
         <value xml:lang="nl">Workflow aktiviteiten toegewezen aan de gebruikersrol</value>
@@ -13315,7 +13315,7 @@
         <value xml:lang="es">Código de la fuente de datos</value>
         <value xml:lang="fr">Réf. de la source de données</value>
         <value xml:lang="hi-IN">डेटा स्रोत क्रमांक(DataSourceId)</value>
-        <value xml:lang="hr">ID izvora podataka</value>
+        <value xml:lang="hr">Id izvora podataka</value>
         <value xml:lang="it">Codice sorgente dati</value>
         <value xml:lang="ja">データソースID</value>
         <value xml:lang="nl">Bron data Id</value>
@@ -13337,7 +13337,7 @@
         <value xml:lang="es">Código del tipo de fuente de datos</value>
         <value xml:lang="fr">Réf. du type de source de données</value>
         <value xml:lang="hi-IN">डेटा स्रोत प्रकार क्रमांक(DataSourceTypeId)</value>
-        <value xml:lang="hr">ID vrste izvora podataka</value>
+        <value xml:lang="hr">Id vrste izvora podataka</value>
         <value xml:lang="it">Tipo sorgente dati</value>
         <value xml:lang="ja">データソース種類ID</value>
         <value xml:lang="nl">Bron data type Id</value>
@@ -13359,7 +13359,7 @@
         <value xml:lang="es">No se encontró la fuente de datos con código</value>
         <value xml:lang="fr">Aucune source de données trouvée pour cette réf.</value>
         <value xml:lang="hi-IN">इस क्रमांक के साथ डेटा स्रोत नहीं मिला</value>
-        <value xml:lang="hr">Nije pronađen izvor podataka s ID-om</value>
+        <value xml:lang="hr">Nije pronađen izvor podataka s Id-om</value>
         <value xml:lang="it">Nessuna sorgente dati trovata con il codice</value>
         <value xml:lang="ja">データソースIDが見つかりません</value>
         <value xml:lang="nl">Geen Brondata gevonden met Id</value>
@@ -13403,7 +13403,7 @@
         <value xml:lang="es">Crear tipo de fuente de datos</value>
         <value xml:lang="fr">Nouveau type de source de données</value>
         <value xml:lang="hi-IN">डेटा स्रोत प्रकार बनाएँ</value>
-        <value xml:lang="hr">Izradi vrstu izvora podataka</value>
+        <value xml:lang="hr">Stvori vrstu izvora podataka</value>
         <value xml:lang="it">Nuovo tipo sorgente dati</value>
         <value xml:lang="ja">データソース種類を作成</value>
         <value xml:lang="nl">Aanmaken Brontype</value>
@@ -13459,7 +13459,7 @@
         <value xml:lang="es">Ejemplo extendido</value>
         <value xml:lang="fr">Exemples étendus</value>
         <value xml:lang="hi-IN">उदाहरण Ext</value>
-        <value xml:lang="hr">Primjer ext</value>
+        <value xml:lang="hr">Prošireni primjer</value>
         <value xml:lang="it">Esempi est.</value>
         <value xml:lang="ja">サンプル拡張</value>
         <value xml:lang="pt-BR">Exemplo Ext</value>
@@ -13588,7 +13588,7 @@
         <value xml:lang="en">Approve</value>
         <value xml:lang="es">Aprobar</value>
         <value xml:lang="fr">Approuver</value>
-        <value xml:lang="hr">Dozvoli</value>
+        <value xml:lang="hr">Odobri</value>
         <value xml:lang="ja">承認</value>
         <value xml:lang="th">อนุมัติ</value>
         <value xml:lang="vi">Phê duyệt</value>
@@ -13602,7 +13602,7 @@
         <value xml:lang="es">Nombre de atributo</value>
         <value xml:lang="fr">Nom d'attribut</value>
         <value xml:lang="hi-IN">Attr नाम</value>
-        <value xml:lang="hr">Ime atributa</value>
+        <value xml:lang="hr">Naziv atributa</value>
         <value xml:lang="it">Nome attributo</value>
         <value xml:lang="ja">属性名称</value>
         <value xml:lang="nl">Attr. naam</value>
@@ -13684,7 +13684,7 @@
         <value xml:lang="es">Código de mecanismo de contacto</value>
         <value xml:lang="fr">Coordonnées</value>
         <value xml:lang="hi-IN">संपर्क तंत्र क्रमांक(Contact Mech Id)</value>
-        <value xml:lang="hr">ID mehanizma kontakta</value>
+        <value xml:lang="hr">Id kontakt mehanizma</value>
         <value xml:lang="it">Contatto</value>
         <value xml:lang="ja">問い合わせ方法ID</value>
         <value xml:lang="nl">Contact Mech Id</value>
@@ -13765,7 +13765,7 @@
         <value xml:lang="es">Creado por código de usuario</value>
         <value xml:lang="fr">Créé par l'identifiant de connexion</value>
         <value xml:lang="hi-IN">उपयोगकर्ता लॉगिन द्वारा निर्मित क्रमांक</value>
-        <value xml:lang="hr">Stvoreno od korisnika ID</value>
+        <value xml:lang="hr">Stvoreno od korisnika Id</value>
         <value xml:lang="it">Creato dall'utente</value>
         <value xml:lang="ja">作成ユーザID</value>
         <value xml:lang="pt-BR">Criado através de um login de usuário de ID</value>
@@ -13853,7 +13853,7 @@
         <value xml:lang="es">Código estado actual</value>
         <value xml:lang="fr">Statut actuel</value>
         <value xml:lang="hi-IN">वर्तमान स्थिति क्रमांक</value>
-        <value xml:lang="hr">Trenutni ID statusa</value>
+        <value xml:lang="hr">Trenutni Id statusa</value>
         <value xml:lang="it">Stato attuale</value>
         <value xml:lang="ja">現在のステータスID</value>
         <value xml:lang="pt-BR">ID do Estado atual</value>
@@ -13938,24 +13938,19 @@
         <value xml:lang="cs">Datum účinnosti</value>
         <value xml:lang="de">Effektives Datum</value>
         <value xml:lang="en">Effective Date</value>
-        
         <value xml:lang="es">Fecha efectiva</value>
         <value xml:lang="fr">Date d'effet</value>
         <value xml:lang="hi-IN">प्रभावी दिनांक</value>
         <value xml:lang="hr">Datum važenja</value>
         <value xml:lang="it">Data effettiva</value>
-        
         <value xml:lang="ja">発効日</value>
         <value xml:lang="nl">Effectieve Datum</value>
         <value xml:lang="pt">Data Efectiva</value>
         <value xml:lang="pt-BR">Data de Vigência</value>
         <value xml:lang="ro">Data Efectiva</value>
-        
         <value xml:lang="ru">Дата вступления в силу</value>
-        
         <value xml:lang="th">วันที่มีผล</value>
         <value xml:lang="vi">Ngày hiệu lực</value>
-        
         <value xml:lang="zh">有效日期</value>
         <value xml:lang="zh-TW">有效日</value>
     </property>
@@ -13967,7 +13962,7 @@
         <value xml:lang="es">Expiración</value>
         <value xml:lang="fr">Invalider</value>
         <value xml:lang="hi-IN">निश्वासन</value>
-        <value xml:lang="hr">Zastari</value>
+        <value xml:lang="hr">Okončaj</value>
         <value xml:lang="it">Scade</value>
         <value xml:lang="ja">失効</value>
         <value xml:lang="nl">Maak verlopen</value>
@@ -14036,7 +14031,6 @@
     <property key="FormFieldTitle_hasTable">
         <value xml:lang="ar">يحوز على جدول</value>
         <value xml:lang="cs">Má tabulku</value>
-        
         <value xml:lang="de">Besitzt Tabelle</value>
         <value xml:lang="en">Has Table</value>
         <value xml:lang="es">Tiene tabla</value>
@@ -14046,7 +14040,6 @@
         <value xml:lang="it">Ha tabella</value>
         <value xml:lang="ja">テーブルあり</value>
         <value xml:lang="pt-BR">Contém tabela</value>
-        
         <value xml:lang="ro">Are Tabela</value>
         <value xml:lang="ru">Есть таблица?</value>
         <value xml:lang="th">มีตาราง</value>
@@ -14061,7 +14054,7 @@
         <value xml:lang="en">Is Public</value>
         <value xml:lang="es">Es público</value>
         <value xml:lang="fr">Accès public</value>
-        <value xml:lang="hr">Je javno</value>
+        <value xml:lang="hr">Javno</value>
         <value xml:lang="it">E' Pubblica</value>
         <value xml:lang="ja">公開中</value>
         <value xml:lang="nl">Publiekelijk toegankelijk</value>
@@ -14136,7 +14129,7 @@
         <value xml:lang="en">Line Total</value>
         <value xml:lang="es">Total línea</value>
         <value xml:lang="fr">Ligne total</value>
-        <value xml:lang="hr">Linija ukupno</value>
+        <value xml:lang="hr">Ukupno linija</value>
         <value xml:lang="it">Totale riga</value>
         <value xml:lang="ja">行合計</value>
         <value xml:lang="nl">Lijn Totaal</value>
@@ -14172,7 +14165,7 @@
         <value xml:lang="es">Modificado por el código de usuario</value>
         <value xml:lang="fr">Modifié par l'identifiant de connexion</value>
         <value xml:lang="hi-IN">उपयोगकर्ता लॉगिन क्रमांक द्वारा संशोधित</value>
-        <value xml:lang="hr">Promjenio korisnik ID</value>
+        <value xml:lang="hr">Promjenio korisnik Id</value>
         <value xml:lang="it">Modificato dall'utente</value>
         <value xml:lang="ja">更新ユーザID</value>
         <value xml:lang="pt-BR">Modificado por Login de usuário Id</value>
@@ -14201,7 +14194,7 @@
         <value xml:lang="en">Owner User Login ID</value>
         <value xml:lang="es">Código de usuario del propietario</value>
         <value xml:lang="fr">Propri.</value>
-        <value xml:lang="hr">Vlasnik je korisnik ID</value>
+        <value xml:lang="hr">Vlasnik je korisnik Id</value>
         <value xml:lang="it">Codice login proprietario</value>
         <value xml:lang="ja">所有者ユーザログインID</value>
         <value xml:lang="pt-BR">Proprietário Login User ID</value>
@@ -14332,7 +14325,7 @@
         <value xml:lang="es">Guardar</value>
         <value xml:lang="fr">Conserver</value>
         <value xml:lang="hi-IN">सुरक्षित करे</value>
-        <value xml:lang="hr">Snimi</value>
+        <value xml:lang="hr">Spremi</value>
         <value xml:lang="it">Salva</value>
         <value xml:lang="ja">保存</value>
         <value xml:lang="pt-BR">Salvar</value>
@@ -14385,7 +14378,7 @@
         <value xml:lang="es">Enviar notificación por correo electrónico</value>
         <value xml:lang="fr">Envoyer le courriel de notification</value>
         <value xml:lang="hi-IN">अधिसूचना ईमेल भेजें</value>
-        <value xml:lang="hr">Pošalji notifikacijski e-mail</value>
+        <value xml:lang="hr">Pošalji e-mail obavijesti</value>
         <value xml:lang="it">Invia notifica per email</value>
         <value xml:lang="ja">通知メールを送信</value>
         <value xml:lang="pt-BR">Enviar e-mail de notificação</value>
@@ -14402,7 +14395,7 @@
         <value xml:lang="es">Número de secuencia</value>
         <value xml:lang="fr">Séq.</value>
         <value xml:lang="hi-IN">क्रम संख्या</value>
-        <value xml:lang="hr">Sekvenca br.</value>
+        <value xml:lang="hr">Red.br.</value>
         <value xml:lang="it">Numero sequenza</value>
         <value xml:lang="ja">連番</value>
         <value xml:lang="pt">Número de Sequência</value>
@@ -14422,7 +14415,7 @@
         <value xml:lang="es">Código Estado</value>
         <value xml:lang="fr">Statut</value>
         <value xml:lang="hi-IN">स्थिति क्रमांक</value>
-        <value xml:lang="hr">ID statusa</value>
+        <value xml:lang="hr">Id statusa</value>
         <value xml:lang="it">Stato</value>
         <value xml:lang="ja">ステータスID</value>
         <value xml:lang="nl">Status</value>
@@ -14463,7 +14456,7 @@
         <value xml:lang="es">Código geográfico autoridad tributaria</value>
         <value xml:lang="fr">Réf. géo. d'administration fiscale</value>
         <value xml:lang="hi-IN">टैक्स प्राधिकरण भू क्रमांक</value>
-        <value xml:lang="hr">Geo ID porezne uprave</value>
+        <value xml:lang="hr">Geo Id porezne uprave</value>
         <value xml:lang="it">Codice autorità tasse geografia</value>
         <value xml:lang="ja">税務機関位置ID</value>
         <value xml:lang="nl">Belasting Gebied</value>
@@ -14540,7 +14533,7 @@
         <value xml:lang="es">UDM</value>
         <value xml:lang="fr">Unité de mesure</value>
         <value xml:lang="hi-IN">माप की इकाई</value>
-        <value xml:lang="hr">Valuta</value>
+        <value xml:lang="hr">Mj.jed.</value>
         <value xml:lang="it">Udm</value>
         <value xml:lang="ja">単位</value>
         <value xml:lang="nl">Valuta</value>
@@ -14561,7 +14554,7 @@
         <value xml:lang="es">Actualizar</value>
         <value xml:lang="fr">Mettre à jour</value>
         <value xml:lang="hi-IN">अद्यतन करे</value>
-        <value xml:lang="hr">Promijeni</value>
+        <value xml:lang="hr">Ažuriraj</value>
         <value xml:lang="it">Aggiorna</value>
         <value xml:lang="ja">更新</value>
         <value xml:lang="nl">Wijzigen</value>
@@ -14645,7 +14638,7 @@
         <value xml:lang="en">IS Mgr</value>
         <value xml:lang="fr">Parc info.</value>
         <value xml:lang="hi-IN">प्रबंधक है</value>
-        <value xml:lang="hr">IS Mgr</value>
+        <value xml:lang="hr">Info sustav</value>
         <value xml:lang="it">Parco infor.</value>
         <value xml:lang="ja">情報管理者</value>
         <value xml:lang="pt-BR">É gerente</value>
@@ -14772,7 +14765,7 @@
         <value xml:lang="cs">Správa objednávek, požadavků zákazníků, nabídej a jejich statistika</value>
         <value xml:lang="en">Sales Order management, Purchase order, Customer request, Requirement, Quote, Statistics</value>
         <value xml:lang="fr">Gestion des commandes de vente, d'achat, des demandes, des devis, des besoins, des stats</value>
-        <value xml:lang="hr">Upravljanje prodajnim narudžbama, Narudžbenica, Zahtjev kupca, Zahtjev, Ponuda, Statistika</value>
+        <value xml:lang="hr">Upravljanje prodajnim narudžbama, narudžbenica, zahtjev kupca, zahtjev, ponuda, statistika</value>
         <value xml:lang="ja">販売注文管理、購買注音、顧客リクエスト、要求、見積、状態</value>
         <value xml:lang="ru">Управление продажами заказов, Покупка заказа, Запрос заказчика, Требования, Голосование, Статистика</value>
         <value xml:lang="vi">Quản lý Đặt hàng bán, Đặt mua, Yêu cầu khách hàng, Nguồn lực nội bộ, Báo giá, thống kê</value>
@@ -15163,7 +15156,7 @@
         <value xml:lang="es">Distribución</value>
         <value xml:lang="fr">Ventes</value>
         <value xml:lang="hi-IN">एसऍफ़ए(SFA)</value>
-        <value xml:lang="hr">Automatizacija prodaje</value>
+        <value xml:lang="hr">Distribucija</value>
         <value xml:lang="it">Forze di vendita</value>
         <value xml:lang="ja">営業支援(SFA)</value>
         <value xml:lang="pt-BR">Automação de vendas</value>
@@ -15178,7 +15171,7 @@
         <value xml:lang="es">POS web</value>
         <value xml:lang="fr">POS Web</value>
         <value xml:lang="hi-IN">वेब Pos</value>
-        <value xml:lang="hr">Web PoS</value>
+        <value xml:lang="hr">Web POS</value>
         <value xml:lang="it">POS web</value>
         <value xml:lang="ja">Web POS</value>
         <value xml:lang="pt-BR">Ponto de venda Web</value>
@@ -15217,7 +15210,7 @@
         <value xml:lang="es">Adm. de tareas</value>
         <value xml:lang="fr">Tâches</value>
         <value xml:lang="hi-IN">कार्यप्रयास</value>
-        <value xml:lang="hr">Rad (work effort)</value>
+        <value xml:lang="hr">Rad</value>
         <value xml:lang="it">Impegni di lavoro</value>
         <value xml:lang="ja">作業成果</value>
         <value xml:lang="nl">Activiteiten</value>
