@@ -1734,7 +1734,7 @@
         <value xml:lang="es">es default</value>
         <value xml:lang="fr">Valeur par défaut</value>
         <value xml:lang="hi_IN">सामान्य है</value>
-        <value xml:lang="hr">Je standard</value>
+        <value xml:lang="hr">Zadano</value>
         <value xml:lang="it">E' predefinito</value>
         <value xml:lang="ja">通常使用</value>
         <value xml:lang="nl">Is standaard</value>
@@ -3547,7 +3547,7 @@
         <value xml:lang="es">por Defecto</value>
         <value xml:lang="fr">Choisir comme valeur par défaut</value>
         <value xml:lang="hi_IN">सामान्य स्थापित किजीये</value>
-        <value xml:lang="hr">Postavi kao osnovno</value>
+        <value xml:lang="hr">Postavi kao zadano</value>
         <value xml:lang="it">Imposta come predefinito</value>
         <value xml:lang="ja">通常に設定</value>
         <value xml:lang="nl">Zet op de standaardwaarde</value>

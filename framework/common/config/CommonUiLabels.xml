@@ -3850,7 +3850,7 @@
         <value xml:lang="es">Expiración</value>
         <value xml:lang="fr">Invalider</value>
         <value xml:lang="hi-IN">निश्वासन</value>
-        <value xml:lang="hr">Okončaj</value>
+        <value xml:lang="hr">Poništi</value>
         <value xml:lang="it">Scade</value>
         <value xml:lang="ja">失効</value>
         <value xml:lang="nl">Maak verlopen</value>
@@ -3872,7 +3872,7 @@
         <value xml:lang="es">Expirar todos</value>
         <value xml:lang="fr">Tout invalider</value>
         <value xml:lang="hi-IN">सभी निश्वासित</value>
-        <value xml:lang="hr">Okončaj sve</value>
+        <value xml:lang="hr">Poništi sve</value>
         <value xml:lang="it">Scade tutto</value>
         <value xml:lang="ja">すべて失効</value>
         <value xml:lang="nl">Alles laten verlopen</value>
@@ -6519,7 +6519,7 @@
         <value xml:lang="es">Puede crear una nueva cuenta aquí</value>
         <value xml:lang="fr">Vous pouvez créer un nouveau compte ici</value>
         <value xml:lang="hi-IN">आप यहाँ एक नया खाता बना सकते हैं</value>
-        <value xml:lang="hr">Ovdje se možete prijaviti</value>
+        <value xml:lang="hr">Ovdje se možete registrirati</value>
         <value xml:lang="it">Qui puoi creare un nuovo utente</value>
         <value xml:lang="ja">ここで新規アカウントを作成</value>
         <value xml:lang="nl">Hier een nieuwe rekening aanmaken</value>
@@ -9130,7 +9130,7 @@
         <value xml:lang="es">Provincia</value>
         <value xml:lang="fr">Province</value>
         <value xml:lang="hi-IN">प्रांत</value>
-        <value xml:lang="hr">Provincija</value>
+        <value xml:lang="hr">Pokrajina</value>
         <value xml:lang="it">Provincia</value>
         <value xml:lang="ja">都道府県/州</value>
         <value xml:lang="nl">Provincie</value>
@@ -13962,7 +13962,7 @@
         <value xml:lang="es">Expiración</value>
         <value xml:lang="fr">Invalider</value>
         <value xml:lang="hi-IN">निश्वासन</value>
-        <value xml:lang="hr">Okončaj</value>
+        <value xml:lang="hr">Poništi</value>
         <value xml:lang="it">Scade</value>
         <value xml:lang="ja">失効</value>
         <value xml:lang="nl">Maak verlopen</value>

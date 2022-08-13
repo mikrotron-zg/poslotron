@@ -201,7 +201,7 @@
         <value xml:lang="en">Request For Purchase Quote</value>
         <value xml:lang="es">Petición de presupuesto de compra</value>
         <value xml:lang="fr">Demande de devis pour achat</value>
-        <value xml:lang="hr">Zahtjev za ponudu</value>
+        <value xml:lang="hr">Zahtjev za ponudu za kupnju</value>
         <value xml:lang="it">Richiesta Di Preventivo Acquisto</value>
         <value xml:lang="ja">購入見積に対するリクエスト</value>
         <value xml:lang="pt_BR">Requisição por cotação para compra</value>
@@ -217,7 +217,7 @@
         <value xml:lang="en">Request For Quote</value>
         <value xml:lang="es">Petición de presupuesto</value>
         <value xml:lang="fr">Demande de devis</value>
-        <value xml:lang="hr">Zahtjev ponude</value>
+        <value xml:lang="hr">Zahtjev za ponudu</value>
         <value xml:lang="it">Richiesta di preventivo</value>
         <value xml:lang="ja">見積に対するリクエスト</value>
         <value xml:lang="pt_BR">Requisição por cotação</value>
@@ -249,7 +249,7 @@
         <value xml:lang="en">Additional Feature</value>
         <value xml:lang="es">Característica adicional</value>
         <value xml:lang="fr">Caractéristique additionnelle</value>
-        <value xml:lang="hr">Dodatna svojstva</value>
+        <value xml:lang="hr">Dodatna značajka</value>
         <value xml:lang="it">Caratteristica aggiuntiva</value>
         <value xml:lang="ja">追加機能</value>
         <value xml:lang="pt_BR">Característica adicional</value>
@@ -313,7 +313,7 @@
         <value xml:lang="en">Marketing Package Adjustment</value>
         <value xml:lang="es">Ajuste de paquete de marketing</value>
         <value xml:lang="fr">Offre marketing (ajustement)</value>
-        <value xml:lang="hr">Prilagodbe paketa</value>
+        <value xml:lang="hr">Prilagodbe marketinškog paketa</value>
         <value xml:lang="it">Aggiustamento paccho di vendita</value>
         <value xml:lang="ja">パッケージ/セット販売調整</value>
         <value xml:lang="pt_BR">Ajuste de pacote de marketing</value>
@@ -377,7 +377,7 @@
         <value xml:lang="en">Shipping and Handling</value>
         <value xml:lang="es">Envío y seguimiento</value>
         <value xml:lang="fr">Port et emballage</value>
-        <value xml:lang="hr">Dostava</value>
+        <value xml:lang="hr">Pakiranje i isporuka</value>
         <value xml:lang="it">Spesa di spedizione e imballaggio</value>
         <value xml:lang="ja">配送および取扱手数料</value>
         <value xml:lang="pt_BR">Envio e manuseio</value>
@@ -495,7 +495,7 @@
         <value xml:lang="en">BULK_ORDER_ITEM</value>
         <value xml:lang="es">Ítem a granel</value>
         <value xml:lang="fr">Vrac</value>
-        <value xml:lang="hr">BULK_ORDER_ITEM</value>
+        <value xml:lang="hr">Stavka skupne narudžbe</value>
         <value xml:lang="it">Riga ordine bulk</value>
         <value xml:lang="ja">バルク注文アイテム</value>
         <value xml:lang="pt_BR">Item no atacado</value>
@@ -509,7 +509,7 @@
         <value xml:lang="en">PRODUCT_ORDER_ITEM</value>
         <value xml:lang="es">Ítem de pedido</value>
         <value xml:lang="fr">Article</value>
-        <value xml:lang="hr">PRODUCT_ORDER_ITEM</value>
+        <value xml:lang="hr">Artikl</value>
         <value xml:lang="it">Prodotto riga ordine</value>
         <value xml:lang="ja">製品注文アイテム</value>
         <value xml:lang="pt_BR">Item de pedido</value>
@@ -523,7 +523,7 @@
         <value xml:lang="en">RENTAL_ORDER_ITEM</value>
         <value xml:lang="es">Ítem de alquiler</value>
         <value xml:lang="fr">Location</value>
-        <value xml:lang="hr">RENTAL_ORDER_ITEM</value>
+        <value xml:lang="hr">Najam</value>
         <value xml:lang="it">Riga ordine di affitto</value>
         <value xml:lang="ja">レンタル注文アイテム</value>
         <value xml:lang="pt_BR">Item de aluguel</value>
@@ -537,7 +537,7 @@
         <value xml:lang="en">WORK_ORDER_ITEM</value>
         <value xml:lang="es">Ítem de trabajo</value>
         <value xml:lang="fr">Tâche</value>
-        <value xml:lang="hr">WORK_ORDER_ITEM</value>
+        <value xml:lang="hr">Rad</value>
         <value xml:lang="it">Riga ordine di lavoro</value>
         <value xml:lang="ja">作業注文アイテム</value>
         <value xml:lang="pt_BR">Item de trabalho</value>
@@ -551,7 +551,7 @@
         <value xml:lang="en">Purchase Order</value>
         <value xml:lang="es">Pedido de Compra</value>
         <value xml:lang="fr">Achats</value>
-        <value xml:lang="hr">Nalog za kupnju</value>
+        <value xml:lang="hr">Narudžbenica</value>
         <value xml:lang="it">Ordine di acquisto</value>
         <value xml:lang="ja">購買注文</value>
         <value xml:lang="pt_BR">Pedido de compra</value>
@@ -567,7 +567,7 @@
         <value xml:lang="en">Sales Order</value>
         <value xml:lang="es">Pedido de Venta</value>
         <value xml:lang="fr">Ventes</value>
-        <value xml:lang="hr">Narudžbenica</value>
+        <value xml:lang="hr">Narudžba</value>
         <value xml:lang="it">Ordine di vendita</value>
         <value xml:lang="ja">販売注文</value>
         <value xml:lang="nl">Verkoopbestelling</value>
@@ -584,7 +584,7 @@
         <value xml:lang="en">WORK_ORDER</value>
         <value xml:lang="es">Pedido de Trabajo</value>
         <value xml:lang="fr">Tâche</value>
-        <value xml:lang="hr">RADNI NALOG</value>
+        <value xml:lang="hr">Radni nalog</value>
         <value xml:lang="it">Ordine di lavoro</value>
         <value xml:lang="ja">作業注文</value>
         <value xml:lang="pt_BR">Pedido de trabalho</value>
@@ -659,7 +659,7 @@
         <value xml:lang="en">Product Purchase</value>
         <value xml:lang="es">Presupuesto Compra de producto</value>
         <value xml:lang="fr">Achat</value>
-        <value xml:lang="hr">Kupnja proizvoda</value>
+        <value xml:lang="hr">Nabava proizvoda</value>
         <value xml:lang="it">Prodotto acquistato</value>
         <value xml:lang="ja">製品購入</value>
         <value xml:lang="pt_BR">Compra de produto</value>
@@ -707,7 +707,7 @@
         <value xml:lang="en">MRP_PRO_PROD_ORDER</value>
         <value xml:lang="es">Requisito de producción según MRP</value>
         <value xml:lang="fr">Besoins du cycle de production proposé au processus MRP</value>
-        <value xml:lang="hr">MRP_PRO_PROD_ORDER</value>
+        <value xml:lang="hr">Zahtjev za planiranje proizvodnje MRP</value>
         <value xml:lang="it">Fabbisogno ciclo produzione proposto dal processo MRP</value>
         <value xml:lang="ja">MRP製品注文</value>
         <value xml:lang="pt_BR">Pedido de produção segundo MRP</value>
@@ -721,7 +721,7 @@
         <value xml:lang="en">MRP_PRO_PURCH_ORDER</value>
         <value xml:lang="es">Requisito de compra según MRP</value>
         <value xml:lang="fr">Besoins d'achat proposé au processus MRP</value>
-        <value xml:lang="hr">MRP_PRO_PURCH_ORDER</value>
+        <value xml:lang="hr">Zahtjev za nabavu prema MRP planiranju proizvodnje</value>
         <value xml:lang="it">Fabbisogno ordine acquisto proposto dal processo MRP</value>
         <value xml:lang="ja">MRP購買注文</value>
         <value xml:lang="pt_BR">Pedido de compra segundo MRP</value>
@@ -735,7 +735,7 @@
         <value xml:lang="en">Product Requirement</value>
         <value xml:lang="es">Requisito de producto</value>
         <value xml:lang="fr">Besoin en produit</value>
-        <value xml:lang="hr">Specifikacija proizvoda</value>
+        <value xml:lang="hr">Zahtjev proizvoda</value>
         <value xml:lang="it">Fabbisogno prodotto</value>
         <value xml:lang="ja">製品要求</value>
         <value xml:lang="pt_BR">Requisito de produto</value>
@@ -821,7 +821,7 @@
     <property key="ReturnAdjustmentType.description.RET_MKTG_PKG_ADJ">
         <value xml:lang="de">Retoure Marketing Packet Anpassung</value>
         <value xml:lang="en">Return Marketing Package Adjustment</value>
-        <value xml:lang="hr">Podešavanje povrata marketinškog paketa</value>
+        <value xml:lang="hr">Prilagodba povrata marketinškog paketa</value>
         <value xml:lang="it">Aggiustamento pacco di vendita sul reso</value>
         <value xml:lang="ja">返品-パッケージ/セット販売調整</value>
         <value xml:lang="pt_BR">Ajuste sobre a a devolução de pacote de marketing</value>
@@ -935,7 +935,7 @@
         <value xml:lang="en">Digital Fulfillment Failed</value>
         <value xml:lang="es">Error de entrega via electrónica</value>
         <value xml:lang="fr">Erreur de chargement de fichier </value>
-        <value xml:lang="hr">Digitalno isporuka nije uspjela</value>
+        <value xml:lang="hr">Digitalna isporuka nije uspjela</value>
         <value xml:lang="it">Soddisfazione digitale fallita</value>
         <value xml:lang="ja">データ執行失敗</value>
         <value xml:lang="pt_BR">Falha no processamento eletrônico</value>

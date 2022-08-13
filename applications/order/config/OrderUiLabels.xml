@@ -2199,7 +2199,7 @@
         <value xml:lang="es">Cualquier tipo de orden</value>
         <value xml:lang="fr">Tous types</value>
         <value xml:lang="hi_IN">कोईभी आदेश के प्रकार</value>
-        <value xml:lang="hr">Bilo koji tip narudžbe</value>
+        <value xml:lang="hr">Bilo koja vrsta narudžbe</value>
         <value xml:lang="it">Qualsiasi tipo ordine</value>
         <value xml:lang="ja">任意の注文種類</value>
         <value xml:lang="nl">Elk bestellingstype</value>
@@ -4587,7 +4587,7 @@
         <value xml:lang="en">open past their ETA</value>
         <value xml:lang="es">con fecha de entrega estimada excedida</value>
         <value xml:lang="fr">dont la date de réception est dépassée</value>
-        <value xml:lang="hr">otvoreno nakon roka</value>
+        <value xml:lang="hr">Otvoreno nakon roka</value>
         <value xml:lang="it">aperti passati i loro ETA</value>
         <value xml:lang="ja">到着予定時刻超過オープン</value>
         <value xml:lang="nl">open voorbij geschatte aankomstdatum</value>
@@ -4603,7 +4603,7 @@
         <value xml:lang="en">with rejected items</value>
         <value xml:lang="es">con ítems rechazados</value>
         <value xml:lang="fr">ayant des lignes rejetées</value>
-        <value xml:lang="hr">s odbijenim artiklima</value>
+        <value xml:lang="hr">S odbijenim artiklima</value>
         <value xml:lang="it">con righe rifiutate</value>
         <value xml:lang="ja">否認したアイテム</value>
         <value xml:lang="nl">met geweigerde regels</value>
@@ -4619,7 +4619,7 @@
         <value xml:lang="en">partially received</value>
         <value xml:lang="es">recibido parcialmente</value>
         <value xml:lang="fr">reçus partiellement</value>
-        <value xml:lang="hr">djelomično primljeno</value>
+        <value xml:lang="hr">Djelomično primljeno</value>
         <value xml:lang="it">parzialmente ricevuti</value>
         <value xml:lang="ja">一部受取済</value>
         <value xml:lang="nl">Gedeeltelijk ontvangen</value>
@@ -5778,7 +5778,7 @@
         <value xml:lang="es">Tipo de lista</value>
         <value xml:lang="fr">Type de liste</value>
         <value xml:lang="hi_IN">सूची प्रकार</value>
-        <value xml:lang="hr">Tip liste</value>
+        <value xml:lang="hr">Vrsta popisa</value>
         <value xml:lang="it">Tipo Lista</value>
         <value xml:lang="ja">種類一覧</value>
         <value xml:lang="nl">Lijsttype</value>
@@ -7259,7 +7259,7 @@
         <value xml:lang="en">Bill From Party</value>
         <value xml:lang="es">Participante que factura</value>
         <value xml:lang="fr">Acteur crédité</value>
-        <value xml:lang="hr">Račun od partnera</value>
+        <value xml:lang="hr">Izdavatelj računa</value>
         <value xml:lang="it">Fattura Dal Soggetto</value>
         <value xml:lang="ja">請求元取引先</value>
         <value xml:lang="nl">Facturerende relatie</value>
@@ -7277,7 +7277,7 @@
         <value xml:lang="en">Bill To Party</value>
         <value xml:lang="es">Participante a quien se factura</value>
         <value xml:lang="fr">Acteur débité</value>
-        <value xml:lang="hr">Račun partneru</value>
+        <value xml:lang="hr">Primatelj računa</value>
         <value xml:lang="it">Fattura Al Soggetto</value>
         <value xml:lang="ja">請求先取引先</value>
         <value xml:lang="nl">Factuur-relatie</value>
@@ -8805,7 +8805,7 @@
         <value xml:lang="en">Quote Type</value>
         <value xml:lang="es">Tipo de presupuesto</value>
         <value xml:lang="fr">Type de devis</value>
-        <value xml:lang="hr">Tip ponude</value>
+        <value xml:lang="hr">Vrsta ponude</value>
         <value xml:lang="it">Tipo preventivo</value>
         <value xml:lang="ja">見積種類</value>
         <value xml:lang="nl">Soort offerte</value>
@@ -9177,7 +9177,7 @@
         <value xml:lang="en">Order Type</value>
         <value xml:lang="es">Tipo de pedido</value>
         <value xml:lang="fr">Type de commande</value>
-        <value xml:lang="hr">Tip narudžbe</value>
+        <value xml:lang="hr">Vrsta narudžbe</value>
         <value xml:lang="it">Tipo Ordine</value>
         <value xml:lang="ja">注文種類</value>
         <value xml:lang="nl">Soort bestelling</value>
@@ -9704,7 +9704,7 @@
         <value xml:lang="en">Payment Type</value>
         <value xml:lang="es">Tipo de pago</value>
         <value xml:lang="fr">Type de paiement</value>
-        <value xml:lang="hr">Tip plaćanja</value>
+        <value xml:lang="hr">Vrsta plaćanja</value>
         <value xml:lang="it">Tipo Pagamento</value>
         <value xml:lang="ja">支払種類</value>
         <value xml:lang="nl">Soort betaling</value>
@@ -10142,7 +10142,7 @@
         <value xml:lang="en">Product Store</value>
         <value xml:lang="es">Tienda</value>
         <value xml:lang="fr">Centre de profit</value>
-        <value xml:lang="hr">Dućan</value>
+        <value xml:lang="hr">Trgovina</value>
         <value xml:lang="it">Negozio</value>
         <value xml:lang="ja">製品店舗</value>
         <value xml:lang="nl">Product Store</value>
@@ -12457,7 +12457,7 @@
         <value xml:lang="en">Type</value>
         <value xml:lang="es">Tipo</value>
         <value xml:lang="fr">Type</value>
-        <value xml:lang="hr">Tip</value>
+        <value xml:lang="hr">Vrsta</value>
         <value xml:lang="it">Tipo</value>
         <value xml:lang="ja">種類</value>
         <value xml:lang="nl">Type</value>
@@ -14013,7 +14013,7 @@
         <value xml:lang="es">Por favor Espere, Procesando la Compra...</value>
         <value xml:lang="fr">Attendez SVP, commande en cours de traitement...</value>
         <value xml:lang="hi_IN">कृपया इन्तजार करें, आपके आर्डर पर काम चालू है</value>
-        <value xml:lang="hr">Molimo pričekajte, obrada narudžbe...</value>
+        <value xml:lang="hr">Molimo pricekajte, obrada narudzbe...</value>
         <value xml:lang="it">Attendere prego, elaborazione ordine...</value>
         <value xml:lang="ja">しばらくお待ちください、注文を処理中です...</value>
         <value xml:lang="nl">Een moment, de bestelling wordt verwerkt...</value>

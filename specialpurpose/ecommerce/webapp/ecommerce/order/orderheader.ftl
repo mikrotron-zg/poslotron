@@ -38,7 +38,6 @@ under the License.
     <#if orderHeader?has_content>
       ${uiLabelMap.CommonNbr}<a href="<@ofbizUrl fullPath="true">orderstatus?orderId=${orderHeader.orderId}</@ofbizUrl>" class="lightbuttontext">${orderHeader.orderId}</a>
     </#if>
-    ${uiLabelMap.CommonInformation}
     <#if (orderHeader.orderId)?exists>
       ${externalOrder!} [ <a href="<@ofbizUrl fullPath="true">order.pdf?orderId=${(orderHeader.orderId)!}</@ofbizUrl>" target="_BLANK" class="lightbuttontext">PDF</a> ]
     </#if>
