@@ -932,6 +932,7 @@ $(function(){
         </p>
     </div>
     <hr />
+    -->
     <form action="<@ofbizUrl>tagsearch</@ofbizUrl>" method="post" name="productTagsearchform" id="productTagsearchform">
         <input type="hidden" name="keywordTypeId" value="KWT_TAG"/>
         <input type="hidden" name="statusId" value="KW_APPROVED"/>
@@ -941,5 +942,5 @@ $(function(){
         <input type="hidden" name="SEARCH_STRING" id="productTagStr"/>
     </form>
     </div>
-    -->
+    
 </div>

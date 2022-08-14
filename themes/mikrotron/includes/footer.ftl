@@ -17,10 +17,16 @@ specific language governing permissions and limitations
 under the License.
 -->
 
-<#assign nowTimestamp = Static["org.ofbiz.base.util.UtilDateTime"].nowTimestamp()>
+  <br/>
   <div class="footer">
-      <div class="tabletext">
-        <div class="tabletext">Powered by <a href="http://www.mikrotron.hr/" class="tabletext">Mikrotron</a> <a href="https://github.com/mikrotron-zg/poslotron" class="tabletext">Poslotron</a></div>
+      <div>
+        <div ><a href="https://github.com/mikrotron-zg/poslotron">Poslotron</a> by <a href="http://www.mikrotron.hr/">Mikrotron</a></div>
+        <div>Powered by <a href="http://ofbiz.apache.org">Apache OFBiz</a></div>
+      </div>
+      
+      <div style="color:#808080;">
+        <hr style="height:1px;border-width:0;color:#C0C0C0;background-color:#C0C0C0;">
+        Naziv tvrtke: MIKROTRON društvo s ograničenom odgovornošću za trgovinu i usluge • Skraćeni naziv: MIKROTRON d.o.o. • Sudski registar: Trgovački sud u Zagrebu • MBS: 080923147 • MB: 4251717 • Temeljni kapital: 20.000,00 kn uplaćen u cijelosti • Uprava društva: Josip Almaši, Tomislav Preksavec • OIB: 43227166836 • Poslovni račun kod: Privredna banka d.d. Zagreb • IBAN: HR8023400091110675464
       </div>
   </div>
-<br/>
+
