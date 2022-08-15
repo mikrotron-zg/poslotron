@@ -49,19 +49,6 @@ under the License.
       <a href="/control/setSessionLocale?newLocale=fr"><img src="/mikrotron/flag_fr.gif" alt="" /></a>
       <a href="/control/setSessionLocale?newLocale=it"><img src="/mikrotron/flag_it.gif" alt="" /></a>
 	-->
-      <#-- facebook -->
-      <div id="fb-root">&nbsp</div>
-      <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
-      <!--
-      <div class="fb-like" data-href="https://www.facebook.com/DIY-kits-1820359938191133" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
-      -->
-      <div class="fb-like" data-href="https://www.facebook.com/DIYkitsSHOP" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
     </div>
     <div id="middle">
 
