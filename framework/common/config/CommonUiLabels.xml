@@ -15583,4 +15583,8 @@
         <value xml:lang="zh-CN">中文</value>
         <value xml:lang="zh-TW">中文</value>
     </property>
+    <property key="FixedExchangeRate">
+        <value xml:lang="en">Fixed exchange rate: </value>
+        <value xml:lang="hr">Fiksni tečaj konverzije: </value>
+    </property>
 </resource>

@@ -47,7 +47,9 @@ under the License.
             <tfoot>
               <tr>
                 <td colspan="3">
-                  ${uiLabelMap.OrderTotal}: <@ofbizCurrency amount=shoppingCart.getDisplayGrandTotal() isoCode=shoppingCart.getCurrency()/><#if shoppingCart.getCurrency() == "HRK">&nbsp; (<@ofbizCurrency amount=shoppingCart.getDisplayGrandTotal()/exchangeRate isoCode=euro/>)</#if>
+                  ${uiLabelMap.OrderTotal}: <@ofbizCurrency amount=shoppingCart.getDisplayGrandTotal() isoCode=shoppingCart.getCurrency()/>
+                  <#if shoppingCart.getCurrency() == kuna>&nbsp; (<@ofbizCurrency amount=shoppingCart.getDisplayGrandTotal()/exchangeRate isoCode=euro/>)</#if>
+                  <#if shoppingCart.getCurrency() == euro>&nbsp; (<@ofbizCurrency amount=shoppingCart.getDisplayGrandTotal()*exchangeRate isoCode=kuna/>)</#if>
                 </td>
               </tr>
             </tfoot>
@@ -66,7 +68,11 @@ under the License.
                     <strong>${cartLine.getItemTypeDescription()?if_exists}</strong>
                   </#if>
                 </td>
-                <td><@ofbizCurrency amount=cartLine.getDisplayItemSubTotal() isoCode=shoppingCart.getCurrency()/><#if shoppingCart.getCurrency() == "HRK">&nbsp;(<@ofbizCurrency amount=cartLine.getDisplayItemSubTotal()/exchangeRate isoCode=euro/>)</#if></td>
+                <td>
+                  <@ofbizCurrency amount=cartLine.getDisplayItemSubTotal() isoCode=shoppingCart.getCurrency()/>
+                  <#if shoppingCart.getCurrency() == kuna>&nbsp;(<@ofbizCurrency amount=cartLine.getDisplayItemSubTotal()/exchangeRate isoCode=euro/>)</#if>
+                  <#if shoppingCart.getCurrency() == euro>&nbsp;(<@ofbizCurrency amount=cartLine.getDisplayItemSubTotal()*exchangeRate isoCode=kuna/>)</#if>
+                </td>
               </tr>
               <#if cartLine.getReservStart()?exists>
                 <tr><td>&nbsp;</td><td colspan="2">(${cartLine.getReservStart()?string("yyyy-MM-dd")}, ${cartLine.getReservLength()} <#if cartLine.getReservLength() == 1>${uiLabelMap.CommonDay}<#else>${uiLabelMap.CommonDays}</#if>)</td></tr>
@@ -88,8 +94,8 @@ under the License.
           <p>${uiLabelMap.OrderShoppingCartEmpty}</p>
         </#if>
     </div>
-    <#if shoppingCart.getCurrency() == "HRK">
-        <div><strong>Fiksni tečaj konverzije: <br> 1€ = ${exchangeRate?string("0.00000")}kn</strong></div>
+    <#if shoppingCart.getCurrency() == kuna || shoppingCart.getCurrency() == euro>
+        <div><strong>${uiLabelMap.FixedExchangeRate}<br> 1 € = ${exchangeRate?string("0.00000")} kn</strong></div>
     </#if>
 <#--
 <div class="shrsl_ShareASale_productShowCaseTarget_3837"></div>
