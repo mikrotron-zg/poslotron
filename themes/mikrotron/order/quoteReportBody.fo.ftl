@@ -17,6 +17,7 @@ specific language governing permissions and limitations
 under the License.
 -->
 <#escape x as x?xml>
+    <#include "../includes/common.ftl">
         <fo:block font-family="LiberationSerif">
             <fo:table font-size="9pt">
                 <fo:table-column column-width="50pt"/>
@@ -164,10 +165,25 @@ under the License.
                         <#assign grandTotalQuoteAmount = totalQuoteAmount + totalQuoteHeaderAdjustmentAmount>
                         <fo:table-row>
                             <fo:table-cell padding="2pt">
-                                <fo:block font-weight="bold" text-align="right">${uiLabelMap.OrderGrandTotal}</fo:block>
+                                <fo:block font-family="LiberationSerif-Bold" text-align="right">${uiLabelMap.OrderGrandTotal}</fo:block>
                             </fo:table-cell>
                             <fo:table-cell padding="2pt">
                                 <fo:block text-align="right" font-family="LiberationSerif-Bold"><@ofbizCurrency amount=grandTotalQuoteAmount isoCode=quote.currencyUomId/></fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row>
+                            <fo:table-cell padding="2pt" number-columns-spanned="2">
+                                <fo:block text-align="right">
+                                    <#if quote.currencyUomId == kuna>(<@ofbizCurrency amount=grandTotalQuoteAmount/exchangeRate isoCode=euro/>)</#if>
+                                    <#if quote.currencyUomId == euro>(<@ofbizCurrency amount=grandTotalQuoteAmount*exchangeRate isoCode=kuna/>)</#if>
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row font-family="LiberationSerif-Italic">
+                            <fo:table-cell padding="2pt" number-columns-spanned="2">
+                                <fo:block text-align="right">
+                                    ${uiLabelMap.FixedExchangeRate} 1 € = ${exchangeRate?string("0.00000")} kn
+                                </fo:block>
                             </fo:table-cell>
                         </fo:table-row>
                     </fo:table-body>
@@ -176,11 +192,9 @@ under the License.
         </fo:block>
 
 <fo:block></fo:block>
- <fo:block space-after="0.2in"/>
-  <fo:block font-family="LiberationSerif" text-align="right">
-    <#--    Here is a good place to put policies and return information.
-    Oslobođeno PDV-a po članku 90 Zakona o porezu na dodanu vrijednost.
-    -->
+ <fo:block space-after="5mm"/>
+  <fo:block margin-right="40pt" font-family="LiberationSerif-BoldItalic" text-align="right">
+    <#--    Here is a good place to put policies and return information.-->
     Iskazane cijene uključuju PDV!
 </fo:block>
 
