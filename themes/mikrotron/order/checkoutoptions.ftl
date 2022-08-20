@@ -198,7 +198,8 @@ function submitForm(form, mode, value) {
                         </#if>
                         <#if carrierShipmentMethod.partyId != "_NA_">${carrierShipmentMethod.partyId?if_exists}&nbsp;</#if>${carrierShipmentMethod.description?if_exists}
                         <#if shippingEst?has_content> - <#if (shippingEst > -1)><@ofbizCurrency amount=shippingEst isoCode=shoppingCart.getCurrency()/> 
-                            <#if shoppingCart.getCurrency() == "HRK">&nbsp;(<@ofbizCurrency amount=shippingEst/exchangeRate isoCode=euro/>)</#if>
+                            <#if shoppingCart.getCurrency() == kuna>&nbsp;(<@ofbizCurrency amount=shippingEst/exchangeRate isoCode=euro/>)</#if>
+                            <#if shoppingCart.getCurrency() == euro>&nbsp;(<@ofbizCurrency amount=shippingEst*exchangeRate isoCode=kuna/>)</#if>
                             <#else>
                                 ${uiLabelMap.OrderCalculatedOffline}
                         </#if></#if>

@@ -315,14 +315,13 @@ under the License.
       <th colspan="6">${uiLabelMap.OrderGrandTotal}</th>
       <td>
         <strong><@ofbizCurrency amount=orderGrandTotal isoCode=currencyUomId/></strong>
-        <#if currencyUomId == "HRK">
-            <br>(<@ofbizCurrency amount=orderGrandTotal/exchangeRate isoCode=euro/>)
-        </#if>
+        <#if currencyUomId == kuna><br>(<@ofbizCurrency amount=orderGrandTotal/exchangeRate isoCode=euro/>)</#if>
+        <#if currencyUomId == euro><br>(<@ofbizCurrency amount=orderGrandTotal*exchangeRate isoCode=kuna/>)</#if>
       </td>
       <#if maySelectItems?default("N") == "Y"><td colspan="3"></td></#if>
     </tr>
-    <#if currencyUomId == "HRK">
-        <th colspan="6">Fiksni tečaj konverzije:</th>
+    <#if currencyUomId == kuna || currencyUomId == euro>
+        <th colspan="6">${uiLabelMap.FixedExchangeRate}:</th>
         <td>${exchangeRate?string("0.00000")}</td>
     </#if>
     <#--
