@@ -17,6 +17,7 @@ specific language governing permissions and limitations
 under the License.
 -->
 <#escape x as x?xml>
+    <#include "../includes/common.ftl">
     <#if orderHeader?has_content>
         <fo:table table-layout="fixed" border-spacing="3pt">
             <fo:table-column column-width="4in"/>
@@ -156,12 +157,35 @@ under the License.
                 </#if>
                 <#if grandTotal != 0>
                     <fo:table-row>
+                        <fo:table-cell number-columns-spanned="4"><fo:block white-space-treatment="preserve"> </fo:block></fo:table-cell>
+                    </fo:table-row>
+                    <fo:table-row font-family="LiberationSans-Bold">
                         <fo:table-cell><fo:block></fo:block></fo:table-cell>
                         <fo:table-cell number-columns-spanned="2" background-color="#EEEEEE">
-                            <fo:block font-weight="bold">${uiLabelMap.OrderTotalDue}</fo:block>
+                            <fo:block>${uiLabelMap.OrderTotalDue}</fo:block>
+                        </fo:table-cell>
+                        <fo:table-cell background-color="#EEEEEE" text-align="right">
+                            <fo:block><@ofbizCurrency amount=grandTotal isoCode=currencyUomId/></fo:block>
+                        </fo:table-cell>
+                    </fo:table-row>
+                    <fo:table-row>
+                        <fo:table-cell><fo:block></fo:block></fo:table-cell>
+                        <fo:table-cell number-columns-spanned="2">
+                            <fo:block> </fo:block>
                         </fo:table-cell>
                         <fo:table-cell text-align="right">
-                            <fo:block><@ofbizCurrency amount=grandTotal isoCode=currencyUomId/></fo:block>
+                            <fo:block>
+                                <#if currencyUomId == kuna>(<@ofbizCurrency amount=grandTotal/exchangeRate isoCode=euro/>)</#if>
+                                <#if currencyUomId == euro>(<@ofbizCurrency amount=grandTotal*exchangeRate isoCode=kuna/>)</#if>
+                            </fo:block>
+                        </fo:table-cell>
+                    </fo:table-row>
+                    <fo:table-row font-family="LiberationSans-Italic">
+                        <fo:table-cell><fo:block></fo:block></fo:table-cell>
+                        <fo:table-cell number-columns-spanned="3" text-align="right">
+                            <fo:block>
+                                ${uiLabelMap.FixedExchangeRate} 1 € = ${exchangeRate?string("0.00000")} kn
+                            </fo:block>
                         </fo:table-cell>
                     </fo:table-row>
                 </#if>
