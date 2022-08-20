@@ -17,6 +17,7 @@ specific language governing permissions and limitations
 under the License.
 -->
 <#escape x as x?xml>
+    <#include "../includes/common.ftl">
     <#-- list of orders -->
     <#if orders?has_content>
     <fo:table table-layout="fixed" width="100%">
@@ -320,9 +321,19 @@ under the License.
               <fo:block font-weight="bold"><@ofbizCurrency amount=invoiceTotal isoCode=invoice.currencyUomId?if_exists/></fo:block>
            </fo:table-cell>
         </fo:table-row>
-        <fo:table-row height="7px">
-           <fo:table-cell number-columns-spanned="5">
-              <fo:block/>
+        <fo:table-row>
+           <fo:table-cell number-columns-spanned="8">
+              <fo:block text-align="right">
+                <#if invoice.currencyUomId == kuna>(<@ofbizCurrency amount=invoiceTotal/exchangeRate isoCode=euro/>)</#if>
+                <#if invoice.currencyUomId == euro>(<@ofbizCurrency amount=invoiceTotal*exchangeRate isoCode=kuna/>)</#if>
+              </fo:block>
+           </fo:table-cell>
+        </fo:table-row>
+        <fo:table-row>
+           <fo:table-cell number-columns-spanned="8">
+              <fo:block font-family="LiberationSans-Italic" text-align="right">
+                ${uiLabelMap.FixedExchangeRate} 1 € = ${exchangeRate?string("0.00000")} kn
+              </fo:block>
            </fo:table-cell>
         </fo:table-row>
         <#-- FIXME
