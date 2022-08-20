@@ -96,15 +96,15 @@ under the License.
     </#if>
      -->
 
-    <fo:table table-layout="fixed" width="100%" space-before="0.2in" >
+    <fo:table table-layout="fixed" width="100%" space-before="5mm" >
     <fo:table-column column-width="15mm"/> <#-- product id -->
     <fo:table-column column-width="60mm"/> <#-- product description -->
     <fo:table-column column-width="5mm"/> <#-- quantity -->
-    <fo:table-column column-width="20mm"/> <#-- price -->
-    <fo:table-column column-width="20mm"/> <#-- amount -->
+    <fo:table-column column-width="22mm"/> <#-- price -->
+    <fo:table-column column-width="22mm"/> <#-- amount excl. tax -->
+    <fo:table-column column-width="17mm"/> <#-- tax amount -->
     <fo:table-column column-width="15mm"/> <#-- tax rate -->
-    <fo:table-column column-width="15mm"/> <#-- tax amount -->
-    <fo:table-column column-width="20mm"/> <#-- amount excl. tax -->
+    <fo:table-column column-width="24mm"/> <#-- amount -->
 
     <fo:table-header height="14px" font-size="8px">
       <fo:table-row border-bottom-style="solid" border-bottom-width="thin" border-bottom-color="black">
@@ -121,16 +121,16 @@ under the License.
           <fo:block font-weight="bold" text-align="right">${uiLabelMap.AccountingUnitPrice}</fo:block>
         </fo:table-cell>
         <fo:table-cell>
-          <fo:block font-weight="bold" text-align="right">${uiLabelMap.CommonAmount}</fo:block>
-        </fo:table-cell>
-        <fo:table-cell>
-          <fo:block font-weight="bold" text-align="right">${uiLabelMap.AccountingRates}</fo:block>
+          <fo:block font-weight="bold" text-align="right">${uiLabelMap.AccountingTotalExclTax}</fo:block>
         </fo:table-cell>
         <fo:table-cell>
           <fo:block font-weight="bold" text-align="right">${uiLabelMap.AccountingVat}</fo:block>
         </fo:table-cell>
         <fo:table-cell>
-          <fo:block font-weight="bold" text-align="right">${uiLabelMap.AccountingTotalExclTax}</fo:block>
+          <fo:block font-weight="bold" text-align="right">${uiLabelMap.AccountingRates}</fo:block>
+        </fo:table-cell>
+        <fo:table-cell>
+          <fo:block font-weight="bold" text-align="right">${uiLabelMap.CommonAmount}</fo:block>
         </fo:table-cell>
       </fo:table-row>
     </fo:table-header>
@@ -285,16 +285,16 @@ under the License.
                         <fo:block>${productPrice?if_exists}</fo:block>
                     </fo:table-cell>
                     <fo:table-cell text-align="right">
-                        <fo:block> <@ofbizCurrency amount=productValue?if_exists isoCode=invoice.currencyUomId?if_exists/> </fo:block>
-                    </fo:table-cell>
-                    <fo:table-cell text-align="right">
-                        <fo:block> ${taxName?if_exists}</fo:block>
+                        <fo:block> <@ofbizCurrency amount=productValueNoTax?if_exists isoCode=invoice.currencyUomId?if_exists/> </fo:block>
                     </fo:table-cell>
                     <fo:table-cell text-align="right">
                         <fo:block><@ofbizCurrency amount=taxAmount?if_exists isoCode=invoice.currencyUomId?if_exists/> </fo:block>
                     </fo:table-cell>
                     <fo:table-cell text-align="right">
-                        <fo:block> <@ofbizCurrency amount=productValueNoTax?if_exists isoCode=invoice.currencyUomId?if_exists/> </fo:block>
+                        <fo:block> ${taxName?if_exists}</fo:block>
+                    </fo:table-cell>
+                    <fo:table-cell text-align="right">
+                        <fo:block> <@ofbizCurrency amount=productValue?if_exists isoCode=invoice.currencyUomId?if_exists/> </fo:block>
                     </fo:table-cell>
                 </fo:table-row>
               <#assign itemState = "">
@@ -307,20 +307,17 @@ under the License.
            <fo:table-cell border-top-style="solid" border-top-width="thin">
               <fo:block/>
            </fo:table-cell>
-           <fo:table-cell number-columns-spanned="2" text-align="right" border-top-style="solid" border-top-width="thin">
-              <fo:block font-weight="bold" font-size ="10pt">${uiLabelMap.AccountingTotalCapital}</fo:block>
-           </fo:table-cell>
-           <fo:table-cell number-columns-spanned="2" text-align="right" border-top-style="solid" border-top-width="thin" border-top-color="black">
-              <fo:block font-weight="bold" font-size ="10pt"><@ofbizCurrency amount=invoiceTotal isoCode=invoice.currencyUomId?if_exists/></fo:block>
-           </fo:table-cell>
-           <fo:table-cell text-align="right" border-top-style="solid" border-top-width="thin" border-top-color="black">
-              <fo:block> </fo:block>
+           <fo:table-cell number-columns-spanned="4" text-align="right" border-top-style="solid" border-top-width="thin" border-top-color="black">
+              <fo:block><@ofbizCurrency amount=invoiceNoTaxTotal isoCode=invoice.currencyUomId?if_exists/></fo:block>
            </fo:table-cell>
            <fo:table-cell text-align="right" border-top-style="solid" border-top-width="thin" border-top-color="black">
               <fo:block><@ofbizCurrency amount=invoiceTaxTotal isoCode=invoice.currencyUomId?if_exists/></fo:block>
            </fo:table-cell>
-           <fo:table-cell text-align="right" border-top-style="solid" border-top-width="thin" border-top-color="black">
-              <fo:block><@ofbizCurrency amount=invoiceNoTaxTotal isoCode=invoice.currencyUomId?if_exists/></fo:block>
+           <fo:table-cell text-align="right" border-top-style="solid" border-top-width="thin" background-color="#DDDDDD">
+              <fo:block font-weight="bold">${uiLabelMap.AccountingTotalCapital}</fo:block>
+           </fo:table-cell>
+           <fo:table-cell text-align="right" border-top-style="solid" border-top-width="thin" background-color="#DDDDDD">
+              <fo:block font-weight="bold"><@ofbizCurrency amount=invoiceTotal isoCode=invoice.currencyUomId?if_exists/></fo:block>
            </fo:table-cell>
         </fo:table-row>
         <fo:table-row height="7px">
@@ -347,8 +344,8 @@ under the License.
  </fo:table>
 
 <#if vatTaxIds?has_content>
- <fo:table space-before="0.25in" >
-    <fo:table-column column-width="105mm"/>
+ <fo:table space-before="7mm" >
+    <fo:table-column column-width="115mm"/>
     <fo:table-column column-width="40mm"/>
     <fo:table-column column-width="25mm"/>
 
