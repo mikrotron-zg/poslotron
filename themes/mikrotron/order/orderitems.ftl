@@ -321,7 +321,7 @@ under the License.
       <#if maySelectItems?default("N") == "Y"><td colspan="3"></td></#if>
     </tr>
     <#if currencyUomId == kuna || currencyUomId == euro>
-        <th colspan="6">${uiLabelMap.FixedExchangeRate}:</th>
+        <th colspan="6">${uiLabelMap.FixedExchangeRate}</th>
         <td>${exchangeRate?string("0.00000")}</td>
     </#if>
     <#--

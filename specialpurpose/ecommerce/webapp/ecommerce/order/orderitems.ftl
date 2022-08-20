@@ -20,6 +20,7 @@ under the License.
 <#-- NOTE: this template is used for the orderstatus screen in ecommerce AND for order notification emails through the OrderNoticeEmail.ftl file -->
 <#-- the "urlPrefix" value will be prepended to URLs by the ofbizUrl transform if/when there is no "request" object in the context -->
 <#if baseEcommerceSecureUrl?exists><#assign urlPrefix = baseEcommerceSecureUrl/></#if>
+<#include "../../../../../mikrotron/includes/common.ftl">
 <div class="screenlet">
   <h3>
       <#assign numColumns = 8>
@@ -91,10 +92,18 @@ under the License.
     <tr>
       <th colspan="7">${uiLabelMap.OrderGrandTotal}</th>
       <td>
-        <@ofbizCurrency amount=orderGrandTotal isoCode=currencyUomId/>
+        <strong><@ofbizCurrency amount=orderGrandTotal isoCode=currencyUomId/></strong>
+        <#if currencyUomId == kuna><br>(<@ofbizCurrency amount=orderGrandTotal/exchangeRate isoCode=euro/>)</#if>
+        <#if currencyUomId == euro><br>(<@ofbizCurrency amount=orderGrandTotal*exchangeRate isoCode=kuna/>)</#if>
       </td>
       <#if maySelectItems?default("N") == "Y"><td colspan="3"></td></#if>
     </tr>
+    <#if currencyUomId == kuna || currencyUomId == euro>
+      <tr>
+        <th colspan="7">${uiLabelMap.FixedExchangeRate}</th>
+        <td>${exchangeRate?string("0.00000")}</td>
+      </tr>
+    </#if>
     </tfoot>
     <tbody>
     <#list orderItems as orderItem>
