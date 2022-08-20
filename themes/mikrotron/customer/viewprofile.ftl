@@ -117,6 +117,7 @@ under the License.
                 <div class="tabletext">
                   <#if contactMechPurposeType?exists>
                     ${contactMechPurposeType.get("description",locale)}
+                    <#--
                     <#if contactMechPurposeType.contactMechPurposeTypeId == "SHIPPING_LOCATION" && (profiledefs.defaultShipAddr)?default("") == contactMech.contactMechId>
                       <span class="buttontextdisabled">${uiLabelMap.EcommerceIsDefault}</span>
                     <#elseif contactMechPurposeType.contactMechPurposeTypeId == "SHIPPING_LOCATION">
@@ -127,6 +128,7 @@ under the License.
                         <input type="submit" value="${uiLabelMap.EcommerceSetDefault}" class="button" />
                       </form>
                     </#if>
+                    -->
                   <#else>
                     ${uiLabelMap.PartyPurposeTypeNotFound}: "${partyContactMechPurpose.contactMechPurposeTypeId}"
                   </#if>
