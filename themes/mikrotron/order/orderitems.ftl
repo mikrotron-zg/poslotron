@@ -315,8 +315,8 @@ under the License.
       <th colspan="6">${uiLabelMap.OrderGrandTotal}</th>
       <td>
         <strong><@ofbizCurrency amount=orderGrandTotal isoCode=currencyUomId/></strong>
-        <#if currencyUomId == kuna><br>(<@ofbizCurrency amount=orderGrandTotal/exchangeRate isoCode=euro/>)</#if>
-        <#if currencyUomId == euro><br>(<@ofbizCurrency amount=orderGrandTotal*exchangeRate isoCode=kuna/>)</#if>
+        <#if currencyUomId == kuna><br>(<@ofbizCurrency amount=orderGrandTotal/exchangeRate rounding=2 isoCode=euro/>)</#if>
+        <#if currencyUomId == euro><br>(<@ofbizCurrency amount=orderGrandTotal*exchangeRate rounding=2 isoCode=kuna/>)</#if>
       </td>
       <#if maySelectItems?default("N") == "Y"><td colspan="3"></td></#if>
     </tr>
