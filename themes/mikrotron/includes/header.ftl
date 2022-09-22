@@ -17,7 +17,13 @@ specific language governing permissions and limitations
 under the License.
 -->
 
-
+  <#if (productStore.defaultLocaleString) == "en_US">
+      <div style="margin:0 auto; padding: 0.75em; background:#f07c00; color:#ffffff; font-size:1.5em;">
+            Ukoliko ste kupac iz Hrvatske, molimo Vas da se prebacite na lokalizirani web dućan klikom na
+            <a href="/shophr/control/setSessionLocale?newLocale=hr">ovaj link</a> 
+            ili hrvatsku zastavicu desno. Hvala!
+      </div>
+  </#if>
   <div id="ecom-header">
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -32,6 +38,7 @@ under the License.
   ga('send', 'pageview');
 
 </script>
+
     <div id="left">
       <#if sessionAttributes.overrideLogo?exists>
         <img src="<@ofbizContentUrl>${sessionAttributes.overrideLogo}</@ofbizContentUrl>" alt="Logo"/>
