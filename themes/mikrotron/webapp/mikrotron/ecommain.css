@@ -1881,3 +1881,10 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
     vertical-align: top;
     width: 22px;
 }
+
+@media screen and (max-width: 1000px) {
+    .footer {
+        font-size: 0.5em;
+        line-height: 1.1em;
+    }
+}
