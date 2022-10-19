@@ -21,18 +21,18 @@ under the License.
 <fo:list-block provisional-distance-between-starts="35mm" font-size="10pt">
     <fo:list-item>
         <fo:list-item-label>
-            <fo:block font-family="LiberationSans-Bold">${uiLabelMap.OrderOrderQuoteType}</fo:block>
+            <fo:block font-weight="bold">${uiLabelMap.OrderOrderQuoteType}</fo:block>
         </fo:list-item-label>
         <fo:list-item-body start-indent="body-start()">
-            <fo:block font-family="LiberationSans-Bold">${(quoteType.get("description",locale))?default(quote.quoteTypeId?if_exists)}</fo:block>
+            <fo:block font-weight="bold">${(quoteType.get("description",locale))?default(quote.quoteTypeId?if_exists)}</fo:block>
         </fo:list-item-body>
     </fo:list-item>
     <fo:list-item>
         <fo:list-item-label>
-            <fo:block font-family="LiberationSans-Bold">${uiLabelMap.OrderOrderQuoteId}</fo:block>
+            <fo:block font-weight="bold">${uiLabelMap.OrderOrderQuoteId}</fo:block>
         </fo:list-item-label>
         <fo:list-item-body start-indent="body-start()">
-            <fo:block font-family="LiberationSans-Bold">${quote.quoteId}</fo:block>
+            <fo:block font-weight="bold">${quote.quoteId}</fo:block>
         </fo:list-item-body>
     </fo:list-item>
     <fo:list-item>
@@ -40,15 +40,19 @@ under the License.
             <fo:block>${uiLabelMap.OrderOrderQuoteIssueDate}</fo:block>
         </fo:list-item-label>
         <fo:list-item-body start-indent="body-start()">
-            <fo:block>${(quote.issueDate)?if_exists?string("dd. MMMM yyyy.")}</fo:block>
+            <#if quote.issueDate?exists>
+                <fo:block>${quote.issueDate?string("dd. MMMM yyyy.")}</fo:block>
+            <#else>
+                <fo:block color="red">Obavezan podatak!</fo:block>
+            </#if>
         </fo:list-item-body>
     </fo:list-item>
     <fo:list-item>
         <fo:list-item-label>
-            <fo:block font-family="LiberationSans">${uiLabelMap.CommonStatus}</fo:block>
+            <fo:block>${uiLabelMap.CommonStatus}</fo:block>
         </fo:list-item-label>
         <fo:list-item-body start-indent="body-start()">
-            <fo:block font-family="LiberationSans">${(statusItem.get("description", locale))?default(quote.statusId?if_exists)}</fo:block>
+            <fo:block>${(statusItem.get("description", locale))?default(quote.statusId?if_exists)}</fo:block>
         </fo:list-item-body>
     </fo:list-item>
 </fo:list-block>
