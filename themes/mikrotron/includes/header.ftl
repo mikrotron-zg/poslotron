@@ -16,7 +16,14 @@ KIND, either express or implied.  See the License for the
 specific language governing permissions and limitations
 under the License.
 -->
-
+  <#-- Set info text to show info strip -->
+  <#assign info_text = "">
+  <#assign info_text_label = "Važno! "> <#-- Optional label-->
+  <#if info_text != "">
+      <div style="margin:0 auto; padding: 0.75em; background:#f93300; color:#ffffff; font-size:1.5em;">
+            <span style="font-weight:bold;">${info_text_label}</span>${info_text}
+      </div>
+  </#if>
   <#if (productStore.defaultLocaleString) == "en_US">
       <div style="margin:0 auto; padding: 0.75em; background:#f07c00; color:#ffffff; font-size:1.5em;">
             Ukoliko ste kupac iz Hrvatske, molimo Vas da se prebacite na lokalizirani web dućan klikom na
