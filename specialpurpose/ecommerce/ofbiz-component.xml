@@ -60,6 +60,12 @@ under the License.
         title="eCommerce"
         server="default-server"
         location="webapp/ecommerce"
+        mount-point="/shopeu"
+        app-bar-display="false"/>
+    <webapp name="shop-hr"
+        title="eCommerce - HR"
+        server="default-server"
+        location="webapp/shophr"
         mount-point="/"
         app-bar-display="false"/>
     <webapp name="shop-hr"

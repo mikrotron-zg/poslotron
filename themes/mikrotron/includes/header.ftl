@@ -27,7 +27,7 @@ under the License.
   <#if (productStore.defaultLocaleString) == "en_US">
       <div style="margin:0 auto; padding: 0.75em; background:#f07c00; color:#ffffff; font-size:1.5em;">
             Ukoliko ste kupac iz Hrvatske, molimo Vas da se prebacite na lokalizirani web dućan klikom na
-            <a href="/shophr/control/setSessionLocale?newLocale=hr">ovaj link</a> 
+            <a href="/control/setSessionLocale?newLocale=hr">ovaj link</a> 
             ili hrvatsku zastavicu desno. Hvala!
       </div>
   </#if>
@@ -56,8 +56,8 @@ under the License.
       </#if>
     </div>
     <div id="right">
-      <a href="/shophr/control/setSessionLocale?newLocale=hr"><img src="/mikrotron/flag_hr.gif" alt="" /></a>
-      <a href="/control/setSessionLocale?newLocale=en"><img src="/mikrotron/flag_en.gif" alt="" /></a>
+      <a href="/control/setSessionLocale?newLocale=hr"><img src="/mikrotron/flag_hr.gif" alt="" /></a>
+      <a href="/shopeu/control/setSessionLocale?newLocale=en"><img src="/mikrotron/flag_en.gif" alt="" /></a>
 	<#-- Uncomment to use other languages
       <a href="/control/setSessionLocale?newLocale=de"><img src="/mikrotron/flag_de.gif" alt="" /></a>
       <a href="/control/setSessionLocale?newLocale=fr"><img src="/mikrotron/flag_fr.gif" alt="" /></a>
