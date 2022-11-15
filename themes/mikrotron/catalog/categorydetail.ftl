@@ -127,7 +127,8 @@ Requires modified categoryDetail.groovy to provide valid CategoryContentWrapers
 <#if subcategories.size() != 0>
   <h2>${uiLabelMap.ProductCategories}</h2>
   <#list subcategories as curCategory>
-      <a href="<@ofbizUrl>/category/~category_id=${curCategory.PRODUCT_CATEGORY_ID}/~pcategory=${categoryContentWrapper.PRODUCT_CATEGORY_ID?if_exists}</@ofbizUrl>" class="buttontext">
+      <a href="<@ofbizUrl>/category/~category_id=${curCategory.PRODUCT_CATEGORY_ID}/~pcategory=${categoryContentWrapper.PRODUCT_CATEGORY_ID?if_exists}</@ofbizUrl>" 
+        class="buttontext" style="display: inline-block; padding:0.5rem; margin-bottom:1rem;">
       ${curCategory.CATEGORY_NAME?if_exists}
       </a>
   </#list>
