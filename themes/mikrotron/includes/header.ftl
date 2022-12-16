@@ -97,7 +97,8 @@ under the License.
         <li id="header-bar-logout"><a href="<@ofbizUrl>logout</@ofbizUrl>">${uiLabelMap.CommonLogout}</a></li>
       <#else/>
         <li id="header-bar-login"><a href="<@ofbizUrl>${checkLoginUrl}</@ofbizUrl>">${uiLabelMap.CommonLogin}</a></li>
-        <li id="header-bar-register">${uiLabelMap.EcommerceRegister}: <a href="<@ofbizUrl>newcustomer</@ofbizUrl>">${uiLabelMap.CommonPerson}</a> / <a href="<@ofbizUrl>newcompany</@ofbizUrl>">${uiLabelMap.FormFieldTitle_company}</a></li>
+        <li id="header-bar-register">${uiLabelMap.EcommerceRegister}: <a href="<@ofbizUrl>newcustomer</@ofbizUrl>">${uiLabelMap.CommonPerson}</a></li>
+        <li id="header-bar-register">${uiLabelMap.EcommerceRegister}: <a href="<@ofbizUrl>newcompany</@ofbizUrl>">${uiLabelMap.FormFieldTitle_company}</a></li>
       </#if>
     </ul>
     <ul id="right-links">
