@@ -5,8 +5,16 @@
     <screen name="main">
         <section>
             <widgets>
-                        <label text="Maintenance mode is ON"/>
-            </widgets>
+                <decorator-screen name="CommonMaintDecorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific>
+                            <html>
+                                <html-template location="component://maint/webapp/maint/Maint.ftl"/>
+                            </html>
+                        </platform-specific>
+                    </decorator-section>
+                </decorator-screen>       
+            </widgets>
         </section>
     </screen>
 

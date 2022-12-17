@@ -36,6 +36,6 @@
         server="default-server"
         location="webapp/maint"
         base-permission="OFBTOOLS,MAINT"
-        mount-point="/"/>
+        mount-point=""/>
         <!-- Set mount-point to "/" to turn the maintenance mode on -->
 </ofbiz-component>
