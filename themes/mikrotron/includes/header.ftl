@@ -17,14 +17,21 @@ specific language governing permissions and limitations
 under the License.
 -->
   <#-- Set info text to show info strip -->
-  <#assign info_text = "">
+  <#assign info_text = "Poštovani kupci, zbog inventure skladišta i prelaska na euro, DIYkits web dućan neće raditi 31.12.2022. i 1.1.2023. Očekujemo ponovnu dostupnost stranice 1.1.2023. u toku dana."> <#-- Set to "" to disable-->
+  <#assign info_text_en = "Dear customers, due to the inventory of the warehouse and the conversion to the euro, the DIYkits web store will not be online on December 31, 2022. and January 1, 2023."> <#-- Set to "" to disable-->
   <#assign info_text_label = "Važno! "> <#-- Optional label-->
-  <#if info_text != "">
+  <#assign info_text_label_en = "Important! "> <#-- Optional label-->
+  <#if ((productStore.defaultLocaleString) == "hr") && (info_text != "") >
       <div style="margin:0 auto; padding: 0.75em; background:#f93300; color:#ffffff; font-size:1.5em;">
-            <span style="font-weight:bold;">${info_text_label}</span>${info_text}
+            <span style="font-weight:bold;">${info_text_label}&nbsp;</span>${info_text}
       </div>
   </#if>
   <#if (productStore.defaultLocaleString) == "en_US">
+    <#if info_text_en != "">
+      <div style="margin:0 auto; padding: 0.75em; background:#f93300; color:#ffffff; font-size:1.5em;">
+            <span style="font-weight:bold;">${info_text_label_en}&nbsp;</span>${info_text_en}
+      </div>
+    </#if>
       <div style="margin:0 auto; padding: 0.75em; background:#f07c00; color:#ffffff; font-size:1.5em;">
             Ukoliko ste kupac iz Hrvatske, molimo Vas da se prebacite na lokalizirani web dućan klikom na
             <a href="/control/setSessionLocale?newLocale=hr">ovaj link</a> 
