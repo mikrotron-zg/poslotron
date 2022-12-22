@@ -17,8 +17,8 @@ specific language governing permissions and limitations
 under the License.
 -->
   <#-- Set info text to show info strip -->
-  <#assign info_text = "Poštovani kupci, zbog inventure skladišta i prelaska na euro, DIYkits web dućan neće raditi 31.12.2022. i 1.1.2023. Očekujemo ponovnu dostupnost stranice 1.1.2023. u toku dana."> <#-- Set to "" to disable-->
-  <#assign info_text_en = "Dear customers, due to the inventory of the warehouse and the conversion to the euro, the DIYkits web store will not be online on December 31, 2022. and January 1, 2023."> <#-- Set to "" to disable-->
+  <#assign info_text = ""> <#-- Set to "" to disable-->
+  <#assign info_text_en = ""> <#-- Set to "" to disable-->
   <#assign info_text_label = "Važno! "> <#-- Optional label-->
   <#assign info_text_label_en = "Important! "> <#-- Optional label-->
   <#if ((productStore.defaultLocaleString) == "hr") && (info_text != "") >
