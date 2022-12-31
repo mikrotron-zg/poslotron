@@ -43,7 +43,7 @@ under the License.
         
         <input type="hidden" name="productPriceTypeId" value="DEFAULT_PRICE"/>
         <input type="hidden" name="productPricePurposeId" value="PURCHASE"/>
-        <input type="hidden" name="currencyUomId" value="HRK"/>
+        <input type="hidden" name="currencyUomId" value="EUR"/>
         <input type="hidden" name="productStoreGroupId" value="_NA_"/>
         
         <table cellspacing="0" class="basic-table">

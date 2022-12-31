@@ -36,17 +36,15 @@
     pismenog odobrenja Mikrotrona je zabranjena.<br>
   </p>
   <h2>Cijene</h2>
-  <p > Cijene su izražene u kunama (HRK)
-    i eurima (EUR), i <b>uključuju PDV</b>.
-    Valuta plaćanja za kupce iz Hrvatske su kune, a za
-    kupce iz inozemstva euri.<br>
+  <p > Cijene su izražene u eurima (EUR), i <b>uključuju PDV</b>.
+    Valuta plaćanja za kupce iz Hrvatske i inozemstva su euri (EUR).<br>
     Mikrotron zadržava pravo promjene
     cijena bez prethodne najave - cijene ovise o
     dobavljačima, proizvođačima, tečajevima itd.<br>
   </p>
   <h2>Načini plaćanja</h2>
   <p>Državljani Republike Hrvatske
-    naručenu robu plaćaju u kunama na žiro račun: <br>
+    naručenu robu plaćaju u eurima na žiro račun: <br>
     <b>IBAN HR8023400091110675464</b> otvoren kod Privredne
     banke Zagreb.<br>
     Plaćanje možete izvršiti općom uplatnicom, internet
@@ -86,13 +84,13 @@
   <h2>Reklamacije, garancija i servis</h2>
   <p>Reklamacije primamo telefonom (01/7999194) i mailom (<a href="mailto:shop@diykits.eu">
     shop@diykits.eu</a>). Kako bi smo ubrzali postupak, molimo pripremite broj
-    narudžbenice ili računa prije javljanja.</br>
+    narudžbenice ili računa prije javljanja.<br/>
     U slučaju da je pošiljka oštećena u transportu, a oštećenja su vidljiva
-    pri preuzimanju, i molimo Vas da oštećenu pošiljku ne preuzimate.</br>
+    pri preuzimanju, i molimo Vas da oštećenu pošiljku ne preuzimate.<br/>
     Za elektroničke komponente, sklopove i kitove namjenjene samogradnji nema
     jamstvenog roka, tj. garancija važi samo za prvu uporabu. Ukoliko prilikom
     prve uporabe ustanovite da je uređaj neispravan, javite nam se na neki od
-    gore navedenih načina kako bi dogovorili zamjenu za ispravan uređaj.</br>
+    gore navedenih načina kako bi dogovorili zamjenu za ispravan uređaj.<br/>
     Mikrotron u pravilu ne vrši servisiranje uređaja. Iznimke su moguće -
     kontaktirajte nas mailom ili telefonom.
   </p>
@@ -161,7 +159,7 @@
     predviđeno te ju nećete moći koristiti za naručivanje roba i usluga.
     Analitički i marketinški alati spomenuti u prethodnom poglavlju također
     koriste 'kolačiće' za svoju funkcionalnost, onemogućavanje ovih 'kolačića'
-    ne utječe na funkcionalnost web trgovine.</br>
+    ne utječe na funkcionalnost web trgovine.<br/>
     U sklopu web trgovine postoje linkovi koji vode na druge web stranice,
     Mikrotron ne odgovara za sadržaj i pravila privatnosti tih stranica.
   </p>
@@ -180,10 +178,10 @@
   <h1>Terms and conditions</h1>
 
   <h2>Prices</h2>
-  <p >Prices are displayed in EUR and HRK, and include VAT.
+  <p >Prices are displayed in euros (EUR), and include VAT.
   <br/>
   Mikrotron keeps right to change prices at it's discretion, without prior notice.
-  <p/>
+  </p>
   <h2><strong>Payment</strong></h2>
   <p >Accepted methods of payments are PayPal and bank transfer.<br>
   Goods are delivered after payment has been received.<br>
@@ -192,13 +190,13 @@
   <p>
   Due to business dynamics, there is a slight possibility that quatities on hand
   displayed in web shop do not conform to quantities in inventory.
-  </br>
+  <br/>
   Each order is therefore manually confirmed, and notification is send by mail
   about order status change, from New to Accepted. Accepted orders are shipped next working day.
-  </br>
+  <br/>
   If for any reason we cannot the order cannot be shiped next working day,
   Mikrotron notifies the user by mail with the shipping details, and offers refund.
-  </br>
+  <br/>
   </p>
   <h2><strong>Returns</strong></h2>
   <p > If you are unsatisfied by purchased products for whatever reason,
