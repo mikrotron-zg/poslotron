@@ -325,7 +325,7 @@ under the License.
            <fo:table-cell number-columns-spanned="8">
               <fo:block text-align="right">
                 <#if invoice.currencyUomId == kuna>(<@ofbizCurrency amount=invoiceTotal/exchangeRate isoCode=euro/>)</#if>
-                <#if invoice.currencyUomId == euro>(<@ofbizCurrency amount=invoiceTotal*exchangeRate isoCode=kuna/>)</#if>
+                <#if invoice.currencyUomId == euro>(<@ofbizCurrency amount=invoiceTotal*exchangeRate rounding=2 isoCode=kuna/>)</#if>
               </fo:block>
            </fo:table-cell>
         </fo:table-row>
