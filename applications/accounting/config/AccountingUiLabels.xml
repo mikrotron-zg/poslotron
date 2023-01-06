@@ -1188,7 +1188,7 @@
         <value xml:lang="en">OFBiz: AP Manager</value>
         <value xml:lang="fr">OFBiz : gestion des comptes fourn.</value>
         <value xml:lang="hi_IN">OFBiz: खाता देय प्रबंधक</value>
-        <value xml:lang="hr">OFBiz: Upravitelj ulaznih računa</value>
+        <value xml:lang="hr">OFBiz: upravljanje ulaznim računima</value>
         <value xml:lang="it">OFBiz: Gestione conti debitori</value>
         <value xml:lang="ja">OFBiz: 買掛管理</value>
         <value xml:lang="nl">OFBiz: Credit Manager</value>
@@ -1202,7 +1202,7 @@
         <value xml:lang="en">Account Payable Manager</value>
         <value xml:lang="fr">Application de gestion des comptes fourn.</value>
         <value xml:lang="hi_IN">देय खाता प्रबंधक अनुप्रयोग</value>
-        <value xml:lang="hr">Upravitelj ulaznih računa</value>
+        <value xml:lang="hr">Upravljanje ulaznim računima</value>
         <value xml:lang="it">Gestione conti debitori</value>
         <value xml:lang="ja">買掛管理</value>
         <value xml:lang="nl">Credit Manager applicatie</value>
@@ -1216,7 +1216,7 @@
         <value xml:lang="en">Account Payable Manager Application</value>
         <value xml:lang="fr">Application de gestion des comptes fourn.</value>
         <value xml:lang="hi_IN">देय खाता प्रबंधक अनुप्रयोग</value>
-        <value xml:lang="hr">Aplikacija upravitelja ulaznih računa</value>
+        <value xml:lang="hr">Aplikacija za upravljanje ulaznim računima</value>
         <value xml:lang="it">Applicazione gestione conto debitori</value>
         <value xml:lang="ja">買掛管理業務</value>
         <value xml:lang="nl">Credit Manager applicatie</value>
@@ -1527,7 +1527,7 @@
         <value xml:lang="en">OFBiz: AR Manager</value>
         <value xml:lang="fr">OFBiz : gestion des comptes clients</value>
         <value xml:lang="hi_IN">OFBiz: खाता प्राप्य प्रबंधक</value>
-        <value xml:lang="hr">OFBiz: Upravitelj izlaznih računa</value>
+        <value xml:lang="hr">OFBiz: upravljanje izlaznim računima</value>
         <value xml:lang="it">OFBiz: Gestione conti creditori</value>
         <value xml:lang="ja">OFBiz: 売掛管理</value>
         <value xml:lang="nl">OFBiz: Debiteuren Manager</value>
@@ -1541,7 +1541,7 @@
         <value xml:lang="en">Account Receivable Manager</value>
         <value xml:lang="fr">Application de gestion des comptes clients</value>
         <value xml:lang="hi_IN">प्राप्य खाता प्रबंधक अनुप्रयोग</value>
-        <value xml:lang="hr">Upravitelj izlaznih računa</value>
+        <value xml:lang="hr">Upravljanje izlaznim računima</value>
         <value xml:lang="it">Gestione conti creditori</value>
         <value xml:lang="ja">売掛管理</value>
         <value xml:lang="nl">Debiteuren Manager toepassing</value>
@@ -1555,7 +1555,7 @@
         <value xml:lang="en">Account Receivable Manager Application</value>
         <value xml:lang="fr">Application de gestion des comptes clients</value>
         <value xml:lang="hi_IN">प्राप्य खाता प्रबंधक अनुप्रयोग</value>
-        <value xml:lang="hr">Aplikacija upravitelja izlaznih računa</value>
+        <value xml:lang="hr">Aplikacija za upravljanje izlaznim računima</value>
         <value xml:lang="it">Applicazione gestione conto creditore</value>
         <value xml:lang="ja">売掛管理業務</value>
         <value xml:lang="nl">Debiteuren Manager toepassing</value>
@@ -3107,7 +3107,7 @@
         <value xml:lang="es">OFBiz: Administrador de cuentas</value>
         <value xml:lang="fr">OFBiz: Gestion comptable</value>
         <value xml:lang="hi_IN">OFBiz: लेखा प्रबंधक</value>
-        <value xml:lang="hr">OFBiz: Upravitelj računovodstva</value>
+        <value xml:lang="hr">OFBiz: upravljanje računovodstvom</value>
         <value xml:lang="it">OFBiz: Gestione contabilità</value>
         <value xml:lang="ja">OFBiz: 会計管理</value>
         <value xml:lang="nl">OFBiz: Boekhouding</value>
@@ -9158,7 +9158,7 @@
         <value xml:lang="es">Página principal del Administrador Contable</value>
         <value xml:lang="fr">Page d'accueil de la comptabilité</value>
         <value xml:lang="hi_IN">लेखांकन प्रबंधक मुख्य पृष्ठ</value>
-        <value xml:lang="hr">Glavna stranica upravitelja računovodstva</value>
+        <value xml:lang="hr">Glavna stranica aplikacije za upravljanje računovodstvom</value>
         <value xml:lang="it">Pagina principale gestione contabilità</value>
         <value xml:lang="ja">会計管理メインページ</value>
         <value xml:lang="nl">Beginpagina boekhouding</value>
@@ -9178,7 +9178,7 @@
         <value xml:lang="es">Bienvenido al Administrador Contable!</value>
         <value xml:lang="fr">Bienvenue dans le module de Gestion comptable !</value>
         <value xml:lang="hi_IN">लेखांकन प्रबंधक के लिए आपका स्वागत है!</value>
-        <value xml:lang="hr">Dobrodošli u Upravitelj računovodstva!</value>
+        <value xml:lang="hr">Dobrodošli u aplikaciju za upravljanje računovodstvom!</value>
         <value xml:lang="it">Benvenuto nella gestione contabilità!</value>
         <value xml:lang="ja">会計管理にようこそ!</value>
         <value xml:lang="nl">Welkom op de beginpagina van boekhouding.</value>
@@ -9198,7 +9198,7 @@
         <value xml:lang="es">Aplicación Administrador Contable</value>
         <value xml:lang="fr">Module de Gestion comptable</value>
         <value xml:lang="hi_IN">लेखांकन प्रबंधक अनुप्रयोग</value>
-        <value xml:lang="hr">Upravitelj računovodstva</value>
+        <value xml:lang="hr">Upravljanje računovodstvom</value>
         <value xml:lang="it">Gestione contabilità</value>
         <value xml:lang="ja">会計管理</value>
         <value xml:lang="nl">Boekhoud toepassing</value>
@@ -9218,7 +9218,7 @@
         <value xml:lang="es">Aplicación Administrador Contable</value>
         <value xml:lang="fr">Module de Gestion comptable</value>
         <value xml:lang="hi_IN">लेखांकन प्रबंधक अनुप्रयोग</value>
-        <value xml:lang="hr">Aplikacija upravitelja računovodstva</value>
+        <value xml:lang="hr">Aplikacija za upravljanje računovodstvom</value>
         <value xml:lang="it">Applicazione gestione contabilità</value>
         <value xml:lang="ja">会計管理業務</value>
         <value xml:lang="nl">Boekhoud toepassing</value>
@@ -20706,7 +20706,7 @@
         <value xml:lang="es">Procentaje Impuesto</value>
         <value xml:lang="fr">Pourcentage de la taxe</value>
         <value xml:lang="hi_IN">टैक्स प्रतिशत</value>
-        <value xml:lang="hr">Postotak poreza</value>
+        <value xml:lang="hr">Porezna stopa</value>
         <value xml:lang="it">Percentuale Tasse</value>
         <value xml:lang="ja">税率(%)</value>
         <value xml:lang="nl">Percentage belasting</value>

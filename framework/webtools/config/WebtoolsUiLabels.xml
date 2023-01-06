@@ -455,7 +455,7 @@
         <value xml:lang="en">Framework Web Tools</value>
         <value xml:lang="es">Framework Herramientas Web</value>
         <value xml:lang="fr">Outils web du Framework</value>
-        <value xml:lang="hr">Framework web alati</value>
+        <value xml:lang="hr">Web alati frameworka</value>
         <value xml:lang="it">Strumenti del Framework</value>
         <value xml:lang="ja">Webツール</value>
         <value xml:lang="pt">Framework Web Tools</value>
@@ -1314,7 +1314,7 @@
         <value xml:lang="de">Web-Applikationen (Name, Mountpoint, Pfad)</value>
         <value xml:lang="en">WebApps (Name, Mount, Path)</value>
         <value xml:lang="fr">Applications web (nom, mount, chemin)</value>
-        <value xml:lang="hr">WebApps (naziv, montiranje, putanja)</value>
+        <value xml:lang="hr">Web aplikacije (naziv, ishodište, putanja)</value>
         <value xml:lang="it">Applicazione web (nome, mount, percorso)</value>
         <value xml:lang="ja">Webアプリケーション(名称、マウント、パス)</value>
         <value xml:lang="pt">WebApps (Nome, ponto de montagem, Caminho)</value>
@@ -3059,7 +3059,7 @@
         <value xml:lang="de">Label Manager</value>
         <value xml:lang="en">Label Manager</value>
         <value xml:lang="fr">Gestionnaire de traduction</value>
-        <value xml:lang="hr">Upravitelj natpisa</value>
+        <value xml:lang="hr">Uredivanje natpisa</value>
         <value xml:lang="it">Gestione delle label</value>
         <value xml:lang="ja">ラベル管理</value>
         <value xml:lang="pt">Gestor de labels</value>

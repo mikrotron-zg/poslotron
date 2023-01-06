@@ -10576,7 +10576,7 @@
         <value xml:lang="en">Shipped</value>
         <value xml:lang="es">Enviado</value>
         <value xml:lang="fr">Expédié</value>
-        <value xml:lang="hr">Isporučeno</value>
+        <value xml:lang="hr">U isporuci</value>
         <value xml:lang="it">Qnt Spedita</value>
         <value xml:lang="ja">発送</value>
         <value xml:lang="pt_BR">Enviado</value>
@@ -15085,7 +15085,7 @@
         <value xml:lang="es">¿Adónde lo enviamos?</value>
         <value xml:lang="fr">Où devons-nous l'expédier</value>
         <value xml:lang="hi_IN">माल कहाँ भेजें</value>
-        <value xml:lang="hr">Gdje isporučujemo</value>
+        <value xml:lang="hr">Kome isporučujemo</value>
         <value xml:lang="it">Dove vuoi spedire </value>
         <value xml:lang="ja">どこに発送しますか</value>
         <value xml:lang="nl">Waarheen zullen we het sturen?</value>

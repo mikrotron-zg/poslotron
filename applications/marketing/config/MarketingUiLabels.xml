@@ -399,7 +399,7 @@
         <value xml:lang="en">OFBiz: Marketing Manager</value>
         <value xml:lang="es">OFBiz: Gestión de Marketing</value>
         <value xml:lang="fr">OFBiz: Gestion du Marketing</value>
-        <value xml:lang="hr">OFBiz: Upravitelj marketinga</value>
+        <value xml:lang="hr">OFBiz: upravljanje marketingom</value>
         <value xml:lang="it">OFBiz: Gestione vendite</value>
         <value xml:lang="ja">OFBiz: マーケティング管理</value>
         <value xml:lang="nl">OFBiz: Marketing Manager</value>
@@ -960,7 +960,7 @@
         <value xml:lang="en">Marketing Manager</value>
         <value xml:lang="es">Gestión de Marketing</value>
         <value xml:lang="fr">Application de gestion marketing</value>
-        <value xml:lang="hr">Upravitelj marketinga</value>
+        <value xml:lang="hr">Upravljanje marketingom</value>
         <value xml:lang="it">Gestione vendite</value>
         <value xml:lang="ja">マーケティング管理</value>
         <value xml:lang="nl">Marketing Manager</value>
@@ -976,7 +976,7 @@
         <value xml:lang="en">Marketing Manager Application</value>
         <value xml:lang="es">Gestión de Marketing</value>
         <value xml:lang="fr">Application de gestion marketing</value>
-        <value xml:lang="hr">Aplikacija upravitelja marketinga</value>
+        <value xml:lang="hr">Aplikacija za upravljanje marketingom</value>
         <value xml:lang="it">Applicazione gestione vendite</value>
         <value xml:lang="ja">マーケティング管理業務</value>
         <value xml:lang="nl">Marketing Managment</value>
@@ -991,7 +991,7 @@
         <value xml:lang="de">Willkommen bei der CRM-Anwendung</value>
         <value xml:lang="en">Welcome to the Marketing Manager!</value>
         <value xml:lang="fr">Bienvenue dans l'application de gestion du marketing !</value>
-        <value xml:lang="hr">Dobro došli u Upravitelj marketinga!</value>
+        <value xml:lang="hr">Dobro došli u aplikaciju za upravljanje marketingom!</value>
         <value xml:lang="it">Benvenuto nell'applicazione gestione vendite!</value>
         <value xml:lang="ja">マーケティング管理へようこそ!</value>
         <value xml:lang="pt_BR">Bem-vindo à aplicação de Gestão de Marketing</value>
@@ -3072,7 +3072,7 @@
         <value xml:lang="en">OFBiz: SFA Manager</value>
         <value xml:lang="es">Gestor de fuerzas de ventas</value>
         <value xml:lang="fr">OFBiz: gestion des ventes</value>
-        <value xml:lang="hr">OFBiz: Upravitelj SFA</value>
+        <value xml:lang="hr">OFBiz: upravljanje prodajom</value>
         <value xml:lang="it">OFBiz: Gestione forze di vendita</value>
         <value xml:lang="ja">OFBiz: 営業支援(SFA)管理</value>
         <value xml:lang="pt_BR">OFBiz: gestor da equipe de vendas</value>
@@ -3486,7 +3486,7 @@
         <value xml:lang="de">CRM Manager</value>
         <value xml:lang="en">SFA Manager</value>
         <value xml:lang="fr">Application de gestion des ventes</value>
-        <value xml:lang="hr">Upravitelj SFA</value>
+        <value xml:lang="hr">Upravljanje prodajom</value>
         <value xml:lang="it">Gestione vendite</value>
         <value xml:lang="ja">営業支援(SFA)管理</value>
         <value xml:lang="pt_BR">Gestor de automação de equipe de vendas</value>
@@ -3497,7 +3497,7 @@
     <property key="SfaManagerApplication">
         <value xml:lang="en">CRM-Anwendung</value>
         <value xml:lang="fr">Application de gestion des ventes</value>
-        <value xml:lang="hr">CRM-prijava</value>
+        <value xml:lang="hr">CRM prijava</value>
         <value xml:lang="it">Applicazione gestione forze esterne</value>
         <value xml:lang="ja">営業支援(SFA)管理業務</value>
         <value xml:lang="pt_BR">Applicação de gestão de automação de equipe de vendas</value>
@@ -3509,7 +3509,7 @@
         <value xml:lang="de">Willkommen bei der CRM-Anwendung.</value>
         <value xml:lang="en">Welcome to the Sales Force Automation Manager Application.</value>
         <value xml:lang="fr">Bienvenue dans l'application de gestion des ventes.</value>
-        <value xml:lang="hr">Dobro došli u aplikaciju Sales Force Automation Manager.</value>
+        <value xml:lang="hr">Dobro došli u aplikaciju za upravljanje prodajom.</value>
         <value xml:lang="it">Benvenuto all'applicazione di gestione delle forze esterne.</value>
         <value xml:lang="ja">営業支援(SFA)管理業務へようこそ</value>
         <value xml:lang="pt_BR">Seja bem-vindo à aplicação de atomação da equipe de vendas.</value>
@@ -3591,8 +3591,7 @@
         <value xml:lang="en">New Sales Forecast</value>
         <value xml:lang="fr">Nouvelle prévision de vente</value>
         <value xml:lang="hr">Nova prognoza prodaje</value>
-        <value xml:lang="it">Nuova Previsioni di vendita</value>
-        
+        <value xml:lang="it">Nuova Previsioni di vendita</value>        
         <value xml:lang="ja">新規販売予測</value>
         <value xml:lang="pt_BR">Nova previsão de vendas</value>
         <value xml:lang="vi">Tạo mới Dự báo  bán hàng</value>

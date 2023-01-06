@@ -4693,7 +4693,7 @@
         <value xml:lang="es">OFBiz: Gestión de participantes</value>
         <value xml:lang="fr">OFBiz : Gestionnaire d'acteur</value>
         <value xml:lang="hi_IN">OFBiz: पार्टी प्रबंधक</value>
-        <value xml:lang="hr">OFBiz: Upravitelj sudionika</value>
+        <value xml:lang="hr">OFBiz: upravljanje sudionicima</value>
         <value xml:lang="it">OFBiz: Gestione soggetti</value>
         <value xml:lang="ja">OFBiz: 取引先管理</value>
         <value xml:lang="nl">OFBiz: Relatie Manager</value>
@@ -8319,7 +8319,7 @@
         <value xml:lang="es">Gestión de participantes</value>
         <value xml:lang="fr">Application de gestion des acteurs</value>
         <value xml:lang="hi_IN">पार्टी प्रबंधक अनुप्रयोग</value>
-        <value xml:lang="hr">Upravitelj sudionika</value>
+        <value xml:lang="hr">Upravljanje sudionicima</value>
         <value xml:lang="it">Gestione soggetti</value>
         <value xml:lang="ja">取引先管理</value>
         <value xml:lang="nl">Relatie Manager</value>
@@ -8338,7 +8338,7 @@
         <value xml:lang="es">Gestión de participantes</value>
         <value xml:lang="fr">Application de gestion des acteurs</value>
         <value xml:lang="hi_IN">पार्टी प्रबंधक अनुप्रयोग</value>
-        <value xml:lang="hr">Aplikacija upravitelja sudionika</value>
+        <value xml:lang="hr">Aplikacija za upravljanje sudionicima</value>
         <value xml:lang="it">Applicazione gestione soggetti</value>
         <value xml:lang="ja">取引先管理業務</value>
         <value xml:lang="nl">Relatie Manager</value>
@@ -13382,7 +13382,7 @@
         <value xml:lang="es">Proveedor</value>
         <value xml:lang="fr">Vendeur</value>
         <value xml:lang="hi_IN">विक्रेता</value>
-        <value xml:lang="hr">Dobavljač</value>
+        <value xml:lang="hr">Prodavač</value>
         <value xml:lang="it">Fornitore</value>
         <value xml:lang="ja">ベンダ</value>
         <value xml:lang="nl">Leverancier</value>

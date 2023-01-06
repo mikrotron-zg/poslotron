@@ -211,7 +211,7 @@
     </property>
     <property key="FacilityInventoryItemsMissingCurrencyId">
         <value xml:lang="en">Error: you cannot create inventory items with no currencyUomId; you can set a default currency in the PartyAcctgPreference for the party ${inventoryItem.ownerPartyId}, or in the general.properties file under the key currency.uom.id.default.</value>
-        <value xml:lang="hr">Greška: ne možete kreirati stavke inventara bez Id valute; možete postaviti zadanu valutu u Upravitelju sudionika za sudionika ${inventoryItem.ownerPartyId} ili u datoteci general.properties pod ključem currency.uom.id.default.</value>
+        <value xml:lang="hr">Greška: ne možete kreirati stavke inventara bez Id valute; možete postaviti zadanu valutu u aplikaciji za upravljanje sudionicima za sudionika ${inventoryItem.ownerPartyId} ili u datoteci general.properties pod ključem currency.uom.id.default.</value>
         <value xml:lang="it">Errore: tu non puoi creare una riga di inventario senza indicare la valuta; puoi imposta la valuta di default attraverso le preferenze del soggetto proprietario ${inventoryItem.ownerPartyId}, o nel file general.properties alla chiave currency.uom.id.default.</value>
         <value xml:lang="ja">エラー: 通貨単位IDを指定しないと在庫アイテムの作成ができません。取引先 ${inventoryItem.ownerPartyId} の取引先会計設定、または、general.properties ファイルのキー currency.uom.id.default でデフォルトの通貨を設定することができます。</value>
         <value xml:lang="vi">Báo lỗi: Bạn không thể tạo hàng hóa trong kho chứa thiếu mã tiền tệ; bạn có thể đặt mã tiền tệ mặc địc trong phần ${inventoryItem.ownerPartyId}, hoặc trong tệp tin general.properties với từ khóa là currency.uom.id.default.</value>
@@ -3185,7 +3185,7 @@
         <value xml:lang="en">Agreement Item Seq Id</value>
         <value xml:lang="es">Código de secuenca del ítem del acuerdo</value>
         <value xml:lang="fr">Réf. séq. d'un point d'accord commercial</value>
-        <value xml:lang="hr">Red.br. stavke sporazuma</value>
+        <value xml:lang="hr">Red.br. stavke ugovora</value>
         <value xml:lang="it">N.Seq. Riga Accordo</value>
         <value xml:lang="ja">契約アイテム連番ID</value>
         <value xml:lang="th">รหัสรายการหัวข้อสัญญา</value>
@@ -6345,7 +6345,7 @@
         <value xml:lang="en">Product Content Type Id</value>
         <value xml:lang="es">Código Tipo de contenido de producto</value>
         <value xml:lang="fr">Réf. de type de contenu de produit</value>
-        <value xml:lang="hr">Id vrste sadržaja proizvoda</value>
+        <value xml:lang="hr">Vrsta sadržaja</value>
         <value xml:lang="it">Tipo Contenuto Prodotto</value>
         <value xml:lang="ja">製品コンテンツタイプID</value>
         <value xml:lang="ro">Tip Continut Produs</value>
@@ -7846,7 +7846,7 @@
         <value xml:lang="en">Supplier Pref Order Id</value>
         <value xml:lang="es">Tipo de proveedor</value>
         <value xml:lang="fr">Réf. de fournisseur préféré</value>
-        <value xml:lang="hr">Id narudžbe dobavljača</value>
+        <value xml:lang="hr">Status dobavljača</value>
         <value xml:lang="it">Preferenze Fornitore Numero Ordine</value>
         <value xml:lang="ja">サプライヤ設定注文ID</value>
         <value xml:lang="ro">Preferinte Furnizor Numar Comanda</value>
@@ -7936,7 +7936,7 @@
         <value xml:lang="en">termUomId</value>
         <value xml:lang="es">Código Unidad de medida</value>
         <value xml:lang="fr">Unité de mesure de temps/fréquence [Réf.]</value>
-        <value xml:lang="hr">Mj. jed. roka</value>
+        <value xml:lang="hr">Mj. jedinica</value>
         <value xml:lang="it">Udm Termini</value>
         <value xml:lang="ja">条件単位ID</value>
         <value xml:lang="ro">Udm Termene</value>
@@ -8315,7 +8315,7 @@
         <value xml:lang="en">Weight Unit Price</value>
         <value xml:lang="es">Precio por unidad de peso</value>
         <value xml:lang="fr">Prix unitaire au poids</value>
-        <value xml:lang="hr">Težina Jedinična cijena</value>
+        <value xml:lang="hr">Jedinična cijena po težini</value>
         <value xml:lang="it">Prezzo Unitario Peso</value>
         <value xml:lang="ja">重量単価</value>
         <value xml:lang="ru">Цена за ед. веса</value>
@@ -8739,7 +8739,7 @@
     </property>
     <property key="ImageManagementWelcomeMessage">
         <value xml:lang="en">Welcome to the Image Management</value>
-        <value xml:lang="hr">Dobrodošli u Upravljanje slikama</value>
+        <value xml:lang="hr">Dobrodošli u aplikaciju za upravljanje slikama</value>
         <value xml:lang="ja">画像管理にようこそ</value>
         <value xml:lang="th">ยินดีต้อนรับสู้รบบการจัดการรูปภาพ</value>
         <value xml:lang="vi">Chào mừng đến với ứng dụng hình ảnh</value>
@@ -9181,7 +9181,7 @@
         <value xml:lang="en">Catalog Manager Main Page</value>
         <value xml:lang="es">Página principal del Administrador de Catálogo</value>
         <value xml:lang="fr">Page d'accueil de la gestion des articles</value>
-        <value xml:lang="hr">Glavna stranica upravitelja kataloga</value>
+        <value xml:lang="hr">Glavna stranica aplikacije za upravljanje katalogom</value>
         <value xml:lang="it">Pagina Principale Gestione Cataloghi</value>
         <value xml:lang="ja">カタログ管理メインページ</value>
         <value xml:lang="ro">Pagina Principala Gestiune Cataloage</value>
@@ -10334,7 +10334,7 @@
         <value xml:lang="en">Edit Product Quick Admin</value>
         <value xml:lang="es">Editar gestión rápida de producto</value>
         <value xml:lang="fr">Administration rapide d'article</value>
-        <value xml:lang="hr">Uredi brzi administrator proizvoda</value>
+        <value xml:lang="hr">Brzo uređivanje proizvoda</value>
         <value xml:lang="it">Amministrazione veloce di un prodotto</value>
         <value xml:lang="ja">製品クイック管理を編集</value>
         <value xml:lang="ro">Actualizeaza Produs Administratie Rapida</value>
@@ -12465,7 +12465,7 @@
         <value xml:lang="en">Add Feature Type</value>
         <value xml:lang="es">Añadir tipo de Característica</value>
         <value xml:lang="fr">Ajout de type(s) de caractéristique</value>
-        <value xml:lang="hr">Dodajte vrstu značajke</value>
+        <value xml:lang="hr">Dodaj vrstu značajke</value>
         <value xml:lang="it">Aggiungi tipo caratteristica</value>
         <value xml:lang="ja">機能種類を追加</value>
         <value xml:lang="ro">Adauga Tip Caracteristica</value>
@@ -13092,7 +13092,7 @@
         <value xml:lang="en">Agreements</value>
         <value xml:lang="es">Acuerdos</value>
         <value xml:lang="fr">Accords</value>
-        <value xml:lang="hr">Sporazumi</value>
+        <value xml:lang="hr">Ugovori</value>
         <value xml:lang="it">Contratti</value>
         <value xml:lang="ja">契約</value>
         <value xml:lang="ru">Договора</value>
@@ -14068,7 +14068,7 @@
         <value xml:lang="en">Brand Name</value>
         <value xml:lang="es">Nombre de la Marca</value>
         <value xml:lang="fr">Appellation commerciale</value>
-        <value xml:lang="hr">Naziv branda</value>
+        <value xml:lang="hr">Brand</value>
         <value xml:lang="it">Nome Marca</value>
         <value xml:lang="ja">ブランド名</value>
         <value xml:lang="ro">Nume Marca</value>
@@ -14397,7 +14397,7 @@
         <value xml:lang="en">OFBiz: Catalog Manager</value>
         <value xml:lang="es">OFBiz: Administrador del Catálogo</value>
         <value xml:lang="fr">OFBiz: Gestion des articles</value>
-        <value xml:lang="hr">OFBiz: Upravitelj kataloga</value>
+        <value xml:lang="hr">OFBiz: upravljanje katalogom</value>
         <value xml:lang="it">OFBiz: Gestione cataloghi</value>
         <value xml:lang="ja">OFBiz: カタログ管理</value>
         <value xml:lang="ro">OFBiz: Gestiune Catalog</value>
@@ -14443,7 +14443,7 @@
         <value xml:lang="en">Catalog Manager</value>
         <value xml:lang="es">Aplicación de Administración de Catálogos</value>
         <value xml:lang="fr">Application de gestion des articles</value>
-        <value xml:lang="hr">Upravitelj kataloga</value>
+        <value xml:lang="hr">Upravljanje katalogom</value>
         <value xml:lang="it">Gestione cataloghi</value>
         <value xml:lang="ja">カタログ管理</value>
         <value xml:lang="nl">Catalogus Manager</value>
@@ -16313,7 +16313,7 @@
         <value xml:lang="en">Currency Uom Id</value>
         <value xml:lang="es">Código de UDM de Moneda</value>
         <value xml:lang="fr">Réf. du symbole de la monnaie</value>
-        <value xml:lang="hr">Id mj. jed. valute</value>
+        <value xml:lang="hr">Valuta</value>
         <value xml:lang="it">Valuta</value>
         <value xml:lang="ja">通貨単位ID</value>
         <value xml:lang="ro">Valuta</value>
@@ -16588,7 +16588,7 @@
         <value xml:lang="en">Depth Uom Id</value>
         <value xml:lang="es">Código de la UDM de la profundidad</value>
         <value xml:lang="fr">Unité de mesure de profondeur [Réf.]</value>
-        <value xml:lang="hr">Id mj. jed. dubine</value>
+        <value xml:lang="hr">Mj. jed. dubine</value>
         <value xml:lang="it">UdM Profondità</value>
         <value xml:lang="ja">奥行単位ID</value>
         <value xml:lang="ro">UdM Profunzime </value>
@@ -16759,7 +16759,7 @@
     </property>
     <property key="ProductDiameterUomId">
         <value xml:lang="en">Diameter Uom Id</value>
-        <value xml:lang="hr">Id mj. jed. promjera</value>
+        <value xml:lang="hr">Mj. jed. promjera</value>
         <value xml:lang="it">Udm diametero</value>
         <value xml:lang="ja">倍率単位ID</value>
         <value xml:lang="vi">Đơn vị tính đường kính</value>
@@ -18076,7 +18076,7 @@
         <value xml:lang="en">Facility Manager</value>
         <value xml:lang="es">Aplicación de Administración del Almacén</value>
         <value xml:lang="fr">Application de gestion de stock</value>
-        <value xml:lang="hr">Upravitelj objekata</value>
+        <value xml:lang="hr">Upravljanje objektima</value>
         <value xml:lang="it">Gestione stabilimenti</value>
         <value xml:lang="ja">拠点管理</value>
         <value xml:lang="ro">Aplicatie Gestiune Compartimente</value>
@@ -18091,7 +18091,7 @@
         <value xml:lang="en">Facility Manager Application</value>
         <value xml:lang="es">Aplicación de Administración del Almacén</value>
         <value xml:lang="fr">Application de gestion de stock</value>
-        <value xml:lang="hr">Aplikacija upravljanja objektima</value>
+        <value xml:lang="hr">Aplikacija za upravljanje objektima</value>
         <value xml:lang="it">Applicazione gestione stabilimenti</value>
         <value xml:lang="ja">拠点管理業務</value>
         <value xml:lang="ro">Aplicatie Gestiune Compartimente</value>
@@ -25800,7 +25800,7 @@
         <value xml:lang="en">Product Content Type Id</value>
         <value xml:lang="es">Código de tipo de configuración de producto</value>
         <value xml:lang="fr">Type de contenu</value>
-        <value xml:lang="hr">Id vrste sadržaja proizvoda</value>
+        <value xml:lang="hr">Vrste sadržaja proizvoda</value>
         <value xml:lang="it">Tipo Contenuto Prodotto</value>
         <value xml:lang="ja">製品コンテンツタイプID</value>
         <value xml:lang="ro">Tip Continut Produs</value>
@@ -27487,7 +27487,7 @@
         <value xml:lang="en">Quick Admin</value>
         <value xml:lang="es">Administración rápida</value>
         <value xml:lang="fr">Administration rapide</value>
-        <value xml:lang="hr">Brza administracija</value>
+        <value xml:lang="hr">Brzo uređivanje</value>
         <value xml:lang="it">Amministrazione Veloce</value>
         <value xml:lang="ja">クイック管理</value>
         <value xml:lang="ro">Administrare Rapida</value>
@@ -27591,7 +27591,7 @@
         <value xml:lang="en">Rating</value>
         <value xml:lang="es">Valoración</value>
         <value xml:lang="fr">Taux</value>
-        <value xml:lang="hr">Ocjena</value>
+        <value xml:lang="hr">Stopa</value>
         <value xml:lang="it">Classifica</value>
         <value xml:lang="ja">評価</value>
         <value xml:lang="ro">Clasificare</value>
@@ -27606,7 +27606,7 @@
         <value xml:lang="en">Rating Type Enum</value>
         <value xml:lang="es">Tipo de valoración</value>
         <value xml:lang="fr">Types de taux</value>
-        <value xml:lang="hr">Vrste ocjene</value>
+        <value xml:lang="hr">Vrste stopa</value>
         <value xml:lang="it">Tipo Classificazione</value>
         <value xml:lang="ja">評価種類</value>
         <value xml:lang="ro">Tip Clasificare </value>
@@ -28283,7 +28283,7 @@
         <value xml:lang="en">Requirement Method Enum Id</value>
         <value xml:lang="es">Código de enumeración de método de requisito</value>
         <value xml:lang="fr">Méthode de réapprovisionnement</value>
-        <value xml:lang="hr">Id liste metoda zahtjeva</value>
+        <value xml:lang="hr">Vrste zahtjeva</value>
         <value xml:lang="it">Tipo Metodo Fabbisogno</value>
         <value xml:lang="ja">要求方法ID</value>
         <value xml:lang="ro">Tip Metoda Necesar</value>
@@ -28879,7 +28879,7 @@
         <value xml:lang="en">Sales Discontinuation Thru Date</value>
         <value xml:lang="es">Fecha final de venta</value>
         <value xml:lang="fr">Jusqu'à la date</value>
-        <value xml:lang="hr">Ukidanje prodaje do datuma</value>
+        <value xml:lang="hr">Kraj prodaje od datuma</value>
         <value xml:lang="it">Vendite Sospese Alla Data</value>
         <value xml:lang="ja">販売終了日</value>
         <value xml:lang="ro">Vanzare Suspendata la Data</value>
@@ -32752,7 +32752,7 @@
         <value xml:lang="en">Is VARIANT Product ?</value>
         <value xml:lang="es">Es producto VARIANTE?</value>
         <value xml:lang="fr">Est-ce une variante ?</value>
-        <value xml:lang="hr">Je li varijanta proizvod?</value>
+        <value xml:lang="hr">Varijanta proizvoda?</value>
         <value xml:lang="it">E' un Prodotto con VARIANTE ?</value>
         <value xml:lang="ja">別型製品?</value>
         <value xml:lang="ro">Este un Produs cu VARIANTE ?</value>
@@ -32965,7 +32965,7 @@
         <value xml:lang="en">Is VIRTUAL Product ?</value>
         <value xml:lang="es">Es Producto VIRTUAL?</value>
         <value xml:lang="fr">Est-ce un article virtuel ?</value>
-        <value xml:lang="hr">Je li VIRTUALNI proizvod?</value>
+        <value xml:lang="hr">Virtualni proizvod?</value>
         <value xml:lang="it">E' un Prodotto VIRTUALE ?</value>
         <value xml:lang="ja">仮想製品?</value>
         <value xml:lang="ro">Este un Produs VIRTUAL ?</value>
@@ -33289,7 +33289,7 @@
         <value xml:lang="en">Weight Uom Id</value>
         <value xml:lang="es">UDM de peso</value>
         <value xml:lang="fr">Unité de mesure du poids</value>
-        <value xml:lang="hr">ID jedinice težine</value>
+        <value xml:lang="hr">Mj. jed. težine</value>
         <value xml:lang="it">UdM Peso</value>
         <value xml:lang="ja">重量単位ID</value>
         <value xml:lang="ro">UdM Greutate</value>
@@ -33332,7 +33332,7 @@
         <value xml:lang="en">Width Uom Id</value>
         <value xml:lang="es">UDM de ancho</value>
         <value xml:lang="fr">Unité de mesure de largeur</value>
-        <value xml:lang="hr">Id mj.jed. širine</value>
+        <value xml:lang="hr">Mj. jed. širine</value>
         <value xml:lang="it">UdM Larghezza</value>
         <value xml:lang="ja">幅単位ID</value>
         <value xml:lang="ro">UdM Latime</value>
@@ -33346,7 +33346,7 @@
         <value xml:lang="de">Beschreibung</value>
         <value xml:lang="en">Wording And Comment</value>
         <value xml:lang="fr">Libellés et commentaire</value>
-        <value xml:lang="hr">Tekst i komentar</value>
+        <value xml:lang="hr">Naziv i napomena</value>
         <value xml:lang="it">Parole e commento</value>
         <value xml:lang="ja">説明およびコメント</value>
         <value xml:lang="vi">Diễn giải Và Diễn giải</value>

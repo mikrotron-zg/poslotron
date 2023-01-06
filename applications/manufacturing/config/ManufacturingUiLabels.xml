@@ -1419,7 +1419,7 @@
         <value xml:lang="en">OFBiz: Manufacturing Manager</value>
         <value xml:lang="es">OFBiz: Gestor de producción</value>
         <value xml:lang="fr">OFBiz: Gestion de production</value>
-        <value xml:lang="hr">OFBiz: Upravitelj proizvodnje</value>
+        <value xml:lang="hr">OFBiz: upravljanje proizvodnjom</value>
         <value xml:lang="it">OFBiz: Gestione della produzione</value>
         <value xml:lang="ja">OFBiz: 生産管理</value>
         <value xml:lang="pt_BR">OFBiz: Gestão de produção</value>
@@ -2786,7 +2786,7 @@
         <value xml:lang="en">Manufacturing Manager Main Page</value>
         <value xml:lang="es">Página principal de Producción</value>
         <value xml:lang="fr">Page d'accueil de la gestion de fabrication</value>
-        <value xml:lang="hr">Glavna stranica upravitelja proizvodnje</value>
+        <value xml:lang="hr">Glavna stranica aplikacije za upravljanje proizvodnjom</value>
         <value xml:lang="it">Pagina Principale Gestione della Produzione</value>
         <value xml:lang="ja">生産管理メインページ</value>
         <value xml:lang="pt_BR">Página principal de gestão de produção</value>
@@ -2830,7 +2830,7 @@
         <value xml:lang="en">Manufacturing Manager</value>
         <value xml:lang="es">Gestión de Producción</value>
         <value xml:lang="fr">Gestion de production</value>
-        <value xml:lang="hr">Upravitelj proizvodnje</value>
+        <value xml:lang="hr">Upravljanje proizvodnjom</value>
         <value xml:lang="it">Gestione della produzione</value>
         <value xml:lang="ja">生産管理</value>
         <value xml:lang="pt_BR">Gestor de produção</value>
@@ -2845,7 +2845,7 @@
         <value xml:lang="en">Manufacturing Manager Application</value>
         <value xml:lang="es">Gestión de Producción</value>
         <value xml:lang="fr">Gestion de production</value>
-        <value xml:lang="hr">Aplikacija upravitelja proizvodnje</value>
+        <value xml:lang="hr">Aplikacija za upravljanje proizvodnjom</value>
         <value xml:lang="it">Applicazione Gestione della Produzione</value>
         <value xml:lang="ja">生産管理業務</value>
         <value xml:lang="pt_BR">Aplicativo de gestão de produção</value>

@@ -1215,7 +1215,7 @@
     <property key="HumanResCompanyName">
         <value xml:lang="en">OFBiz: Human Resources Manager</value>
         <value xml:lang="fr">OFBiz : gestion de ressources humaines</value>
-        <value xml:lang="hr">OFBiz: Upravitelj kadrova</value>
+        <value xml:lang="hr">OFBiz: upravljanje kadrovima</value>
         <value xml:lang="it">OFBiz: Gestione Risorse Umane</value>
         <value xml:lang="ja">OFBiz: 人事管理</value>
         <value xml:lang="pt_BR">OFBiz: Gestão de recursos humanos</value>
@@ -2341,7 +2341,7 @@
         <value xml:lang="de">Personalverwaltung</value>
         <value xml:lang="en">Human Resources</value>
         <value xml:lang="fr">Application de gestion des ressources humaines</value>
-        <value xml:lang="hr">Kadrovska služba</value>
+        <value xml:lang="hr">Upravljanje kadrovima</value>
         <value xml:lang="it">Gestione risorse umane</value>
         <value xml:lang="ja">人事管理</value>
         <value xml:lang="pt_BR">Recursos Humanos</value>
@@ -2354,7 +2354,7 @@
         <value xml:lang="de">Personalverwaltung</value>
         <value xml:lang="en">Human Resources Application</value>
         <value xml:lang="fr">Application de gestion des ressources humaines</value>
-        <value xml:lang="hr">Prijava kadrovske službe</value>
+        <value xml:lang="hr">Aplikacija za upravljanje kadrovima</value>
         <value xml:lang="it">Applicazione Gestione Risorse Umane</value>
         <value xml:lang="ja">人事管理業務</value>
         <value xml:lang="pt_BR">Aplicativo de recursos humanos</value>

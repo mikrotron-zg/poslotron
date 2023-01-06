@@ -973,7 +973,7 @@
         <value xml:lang="en">OFBiz: Content Manager</value>
         <value xml:lang="es">OFBiz: Administración de Contenidos</value>
         <value xml:lang="fr">OFBiz: gestion de contenu</value>
-        <value xml:lang="hr">OFBiz: Upravitelj sadržaja</value>
+        <value xml:lang="hr">OFBiz: upravljanje sadržajem</value>
         <value xml:lang="it">OFBiz: Gestione contenuti</value>
         <value xml:lang="ja">OFBiz: コンテンツ管理</value>
         <value xml:lang="pt">OFBiz: Gerenciador de conteúdo</value>
@@ -1049,7 +1049,7 @@
         <value xml:lang="en">Content Manager</value>
         <value xml:lang="es">Aplicación de Administración de Contenidos</value>
         <value xml:lang="fr">Application de gestion de contenu</value>
-        <value xml:lang="hr">Upravitelj sadržaja</value>
+        <value xml:lang="hr">Upravljanje sadržajem</value>
         <value xml:lang="it">Gestione contenuti</value>
         <value xml:lang="ja">コンテンツ管理</value>
         <value xml:lang="nl">Content Manager</value>
@@ -4024,7 +4024,7 @@
         <value xml:lang="da">Velkommen til Content Manager</value>
         <value xml:lang="en">Welcome to the Content Manager!</value>
         <value xml:lang="fr">Gestionnaire de contenu : bienvenue !</value>
-        <value xml:lang="hr">Dobro došli u Upravitelj sadržaja!</value>
+        <value xml:lang="hr">Dobro došli u aplikaciju za upravljanje sadržajem!</value>
         <value xml:lang="it">Benvenuti nella gestione contenuti!</value>
         <value xml:lang="ja">コンテンツ管理へようこそ!</value>
         <value xml:lang="nl">Welkom in de Content Manager</value>

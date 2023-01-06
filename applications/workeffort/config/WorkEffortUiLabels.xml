@@ -750,7 +750,7 @@
         <value xml:lang="de">Arbeitseinsatz Zuordnungstyp ID</value>
         <value xml:lang="en">Work Effort Assoc Type Id</value>
         <value xml:lang="fr">Type d'assoc. de la tâche</value>
-        <value xml:lang="hr">Id tipa veze uloženog rada</value>
+        <value xml:lang="hr">Vrsta veze radne obveze</value>
         <value xml:lang="it">Tipo associazione impegno di lavoro</value>
         <value xml:lang="ja">作業成果関連付け種類ID</value>
         <value xml:lang="nl">Activiteit Assoc Type Id</value>
@@ -764,7 +764,7 @@
         <value xml:lang="de">Arbeitseinsatz Inhaltstyp ID</value>
         <value xml:lang="en">Work Effort Content Type Id</value>
         <value xml:lang="fr">Type de contenu de la tâche</value>
-        <value xml:lang="hr">Id vrste sadržaja uloženog rada</value>
+        <value xml:lang="hr">Vrsta sadržaja radne obveze</value>
         <value xml:lang="it">Tipo di contenuto impegno di lavoro</value>
         <value xml:lang="ja">作業成果コンテンツタイプID</value>
         <value xml:lang="th">รหัสประเภทหัวข้องาน</value>
@@ -777,7 +777,7 @@
         <value xml:lang="en">Work Effort Id</value>
         <value xml:lang="es">Código del esfuerzo de trabajo</value>
         <value xml:lang="fr">Tâche</value>
-        <value xml:lang="hr">Id uloženog rada</value>
+        <value xml:lang="hr">Id radne obveze</value>
         <value xml:lang="it">Impegno di lavoro</value>
         <value xml:lang="ja">作業成果ID</value>
         <value xml:lang="nl">Activiteit Id</value>
@@ -793,7 +793,7 @@
         <value xml:lang="en">Work Effort Id From</value>
         <value xml:lang="es">Código del esfuerzo de trabajo desde</value>
         <value xml:lang="fr">Tâche depuis</value>
-        <value xml:lang="hr">Id uloženog rada od</value>
+        <value xml:lang="hr">Početak radne obveze</value>
         <value xml:lang="it">Impegno di lavoro da</value>
         <value xml:lang="ja">作業成果ID(元)</value>
         <value xml:lang="nl">Actie Id van</value>
@@ -808,7 +808,7 @@
         <value xml:lang="en">Work Effort Id To</value>
         <value xml:lang="es">Código del esfuerzo de trabajo para</value>
         <value xml:lang="fr">Tâche vers</value>
-        <value xml:lang="hr">Id uloženog rada do</value>
+        <value xml:lang="hr">Kraj radne obveze</value>
         <value xml:lang="it">Impegno di lavoro a</value>
         <value xml:lang="ja">作業成果ID(先)</value>
         <value xml:lang="nl">Activiteit Id To</value>
@@ -823,7 +823,7 @@
         <value xml:lang="en">Work Effort Name</value>
         <value xml:lang="es">Nombre del esfuerzo de trabajo</value>
         <value xml:lang="fr">Nom de la tâche</value>
-        <value xml:lang="hr">Naziv uloženog rada</value>
+        <value xml:lang="hr">Naziv radne obveze</value>
         <value xml:lang="it">Nome impegno di lavoro</value>
         <value xml:lang="ja">作業成果名称</value>
         <value xml:lang="nl">Actie naam</value>
@@ -838,7 +838,7 @@
         <value xml:lang="en">Work Effort Parent Id</value>
         <value xml:lang="es">Código del esfuerzo de trabajo precursor</value>
         <value xml:lang="fr">Tâche parente</value>
-        <value xml:lang="hr">Id roditelja uloženog rada</value>
+        <value xml:lang="hr">Id nadređene radne obveze</value>
         <value xml:lang="it">Codice impegno di lavoro padre</value>
         <value xml:lang="ja">作業成果上位(親)ID</value>
         <value xml:lang="nl">Activiteit Parent Id</value>
@@ -851,7 +851,7 @@
     <property key="FormFieldTitle_workEffortPurposeTypeId">
         <value xml:lang="en">Work Effort Purpose Type Id</value>
         <value xml:lang="fr">Type de but de la tâche</value>
-        <value xml:lang="hr">Id svrhe uloženog rada</value>
+        <value xml:lang="hr">Svrha radne obveze</value>
         <value xml:lang="it">Tipo di scopo impegno di lavoro</value>
         <value xml:lang="ja">作業成果目的種類ID</value>
         <value xml:lang="nl">Soort actie doel Id</value>
@@ -865,7 +865,7 @@
         <value xml:lang="de">Arbeitseinsatz Typ ID</value>
         <value xml:lang="en">Work Effort Type Id</value>
         <value xml:lang="fr">Type de tâche</value>
-        <value xml:lang="hr">Id vrste uloženog rada</value>
+        <value xml:lang="hr">Vrsta radne obveze</value>
         <value xml:lang="it">Tipo impegno di lavoro</value>
         <value xml:lang="ja">作業成果種類ID</value>
         <value xml:lang="nl">Actie type Id</value>
@@ -969,7 +969,7 @@
         <value xml:lang="en">Add Work Effort</value>
         <value xml:lang="es">Crear esfuerzo de trabajo</value>
         <value xml:lang="fr">Ajouter une tâche</value>
-        <value xml:lang="hr">Dodaj uloženi rad</value>
+        <value xml:lang="hr">Dodaj radnu obvezu</value>
         <value xml:lang="it">Aggiungi impegno di lavoro</value>
         <value xml:lang="ja">作業成果を追加</value>
         <value xml:lang="nl">Nieuwe actie</value>
@@ -983,7 +983,7 @@
         <value xml:lang="en">Add Work Effort Assignment Rate</value>
         <value xml:lang="es">Añadir tasa de asignación a esfuerzo de trabajo</value>
         <value xml:lang="fr">Ajouter un taux d'affectation à la tâche</value>
-        <value xml:lang="hr">Dodaj stopu dodjele uloženog rada</value>
+        <value xml:lang="hr">Dodaj stopu dodjele radne obveze</value>
         <value xml:lang="it">Aggiungi un tasso di assegnazione all'impegno di lavoro</value>
         <value xml:lang="ja">作業成果割当レートを追加</value>
         <value xml:lang="nl">Add Activiteit Assignment Rate</value>
@@ -1012,7 +1012,7 @@
         <value xml:lang="de">Arbeitseinsatz Ereignis-Erinnerung hinzufügen</value>
         <value xml:lang="en">Add Work Effort Event Reminder</value>
         <value xml:lang="fr">Ajouter un rappel d'évènement de tâche</value>
-        <value xml:lang="hr">Dodaj podsjetnik na događaj uloženog rada</value>
+        <value xml:lang="hr">Dodaj podsjetnik na događaj radne obveze</value>
         <value xml:lang="it">Aggiungi promemoria di impegno di lavoro</value>
         <value xml:lang="ja">作業成果イベントリマインダを追加</value>
         <value xml:lang="vi">Thêm mới nhắc nhở sự kiện của Lượng giá nguồn lực</value>
@@ -1045,7 +1045,7 @@
         <value xml:lang="de">Arbeitseinsatz Notiz hinzufügen</value>
         <value xml:lang="en">Add Work Effort Notes</value>
         <value xml:lang="fr">Ajouter une note à la tâche</value>
-        <value xml:lang="hr">Dodaj bilješke o uloženom radu</value>
+        <value xml:lang="hr">Dodaj bilješke o radnoj obvezi</value>
         <value xml:lang="it">Aggiungi note all'impegno di lavoro</value>
         <value xml:lang="ja">作業成果連絡を追加</value>
         <value xml:lang="th">เพิ่มข้อความงาน</value>
@@ -1058,7 +1058,7 @@
         <value xml:lang="en">Add Order to Work Effort</value>
         <value xml:lang="es">Añadir orden a esfuerzo de trabajo</value>
         <value xml:lang="fr">Ajouter une commande à la tâche</value>
-        <value xml:lang="hr">Dodaj narudžbu uloženom radu</value>
+        <value xml:lang="hr">Dodaj narudžbu radnoj obvezi</value>
         <value xml:lang="it">Aggiungi un ordine all'impegno di lavoro</value>
         <value xml:lang="ja">作業成果に注文を追加</value>
         <value xml:lang="nl">Add Order to Activiteit</value>
@@ -1100,7 +1100,7 @@
         <value xml:lang="en">Add Work Effort QuoteItem</value>
         <value xml:lang="es">Añadir ítem a la cotización</value>
         <value xml:lang="fr">Ajouter une ligne de devis à la tâche</value>
-        <value xml:lang="hr">Dodaj stavku ponude uloženog rada</value>
+        <value xml:lang="hr">Dodaj stavku ponude radne obveze</value>
         <value xml:lang="it">Aggiungi riga di preventivo all'impegno di lavoro</value>
         <value xml:lang="ja">作業成果見積アイテムを追加</value>
         <value xml:lang="nl">Add Activiteit QuoteItem</value>
@@ -1156,7 +1156,7 @@
         <value xml:lang="de">Arbeitseinsatz Überprüfungen hinzufügen</value>
         <value xml:lang="en">Add Work Effort Reviews</value>
         <value xml:lang="fr">Ajouter une vérification de texte à la tâche</value>
-        <value xml:lang="hr">Dodaj recenziju uloženog rada</value>
+        <value xml:lang="hr">Dodaj recenziju radne obveze</value>
         <value xml:lang="it">Aggiungi revisioni all'impegno di lavoro</value>
         <value xml:lang="ja">作業成果レビューを追加</value>
         <value xml:lang="th">เพิ่มการตรวจสอบงาน</value>
@@ -1184,7 +1184,7 @@
         <value xml:lang="en">Add Time Entry to Work Effort</value>
         <value xml:lang="es">Añadir entrada de tiempo a esfuerzo de trabajo</value>
         <value xml:lang="fr">Ajouter une ligne d'activité à la tâche</value>
-        <value xml:lang="hr">Dodaj unos vremena uloženom radu</value>
+        <value xml:lang="hr">Dodaj unos vremena radnoj obvezi</value>
         <value xml:lang="it">Aggiungi una riga di tempo all'impegno di lavoro</value>
         <value xml:lang="ja">作業成果に予定エントリを追加</value>
         <value xml:lang="nl">Add Time Entry to Activiteit</value>
@@ -1353,7 +1353,7 @@
         <value xml:lang="en">Edit Work Effort</value>
         <value xml:lang="es">Editar esfuerzo de trabajo</value>
         <value xml:lang="fr">Modifier la tâche</value>
-        <value xml:lang="hr">Uredi uloženi rad</value>
+        <value xml:lang="hr">Uredi radnu obvezu</value>
         <value xml:lang="it">Aggiorna impegno di lavoro</value>
         <value xml:lang="ja">作業成果を編集</value>
         <value xml:lang="nl">Wijzig actie</value>
@@ -1366,7 +1366,7 @@
     <property key="PageTitleEditWorkEffortAssoc">
         <value xml:lang="en">Edit Work Effort Assoc</value>
         <value xml:lang="fr">Modifier l'association de la tâche</value>
-        <value xml:lang="hr">Uredi veze uloženog rada</value>
+        <value xml:lang="hr">Uredi veze radne obveze</value>
         <value xml:lang="it">Aggiorna associazione impegno di lavoro</value>
         <value xml:lang="ja">作業成果の関連付けを編集</value>
         <value xml:lang="th">แก้ไขกลุ่มงาน</value>
@@ -1402,7 +1402,7 @@
     <property key="PageTitleEditWorkEffortContent">
         <value xml:lang="en">Work Effort Content</value>
         <value xml:lang="fr">Contenu de la tâche</value>
-        <value xml:lang="hr">Sadržaj uloženog rada</value>
+        <value xml:lang="hr">Sadržaj radne obveze</value>
         <value xml:lang="it">Contenuto dell'impegno di lavoro</value>
         <value xml:lang="ja">作業成果コンテンツ</value>
         <value xml:lang="th">หัวข้องาน</value>
@@ -1413,7 +1413,7 @@
     <property key="PageTitleEditWorkEffortGoodStandards">
         <value xml:lang="en">Work Effort Good Standards </value>
         <value xml:lang="fr">Biens standarts</value>
-        <value xml:lang="hr">Standard robe uloženog rada</value>
+        <value xml:lang="hr">Standard robe radne obveze</value>
         <value xml:lang="it">Beni standard</value>
         <value xml:lang="ja">作業成果の参考指針</value>
         <value xml:lang="th">งานมีวามสามาถมาตรฐาน</value>
@@ -1425,7 +1425,7 @@
         <value xml:lang="en">Edit Work Effort Party Assignment</value>
         <value xml:lang="es">Editar asignación de participante a esfuerzo de trabajo</value>
         <value xml:lang="fr">Modifier l'affectation de l'acteur à la tâche</value>
-        <value xml:lang="hr">Uredi dodjelu stranke uloženom radu</value>
+        <value xml:lang="hr">Uredi dodjelu sudionika radnoj obvezi</value>
         <value xml:lang="it">Aggiorna assegnazione del soggetto all'impegno di lavoro</value>
         <value xml:lang="ja">作業成果の取引先割当を編集</value>
         <value xml:lang="nl">Wijzig toegewezen actie van relatie</value>
@@ -1439,7 +1439,7 @@
         <value xml:lang="en">Edit Work Effort Quote</value>
         <value xml:lang="es">Editar cotización de esfuerzo de trabajo</value>
         <value xml:lang="fr">Modifier le devis de la tâche</value>
-        <value xml:lang="hr">Uredi ponudu uloženog rada</value>
+        <value xml:lang="hr">Uredi ponudu radne obveze</value>
         <value xml:lang="it">Aggiorna preventivo dell'impegno di lavoro</value>
         <value xml:lang="ja">作業成果見積を編集</value>
         <value xml:lang="nl">Edit Activiteit Quote</value>
@@ -1453,7 +1453,7 @@
         <value xml:lang="en">Edit Work Effort QuoteItem</value>
         <value xml:lang="es">Editar ítem de cotización de esfuerzo de trabajo</value>
         <value xml:lang="fr">Modifier la ligne de devis de la tâche</value>
-        <value xml:lang="hr">Uredi stavku ponude uloženog rada</value>
+        <value xml:lang="hr">Uredi stavku ponude radne obveze</value>
         <value xml:lang="it">Aggiorna riga preventivo dell'impegno di lavoro</value>
         <value xml:lang="ja">作業成果見積アイテムを編集</value>
         <value xml:lang="nl">Edit Activiteit QuoteItem</value>
@@ -1467,7 +1467,7 @@
         <value xml:lang="en">Edit Work Effort Request</value>
         <value xml:lang="es">Editar petición de esfuerzo de trabajo</value>
         <value xml:lang="fr">Modifier la demande de tâche</value>
-        <value xml:lang="hr">Uredi zahtjev za uloženim radom</value>
+        <value xml:lang="hr">Uredi zahtjev za radnu obvezu</value>
         <value xml:lang="it">Aggiorna richiesta di impegno di lavoro</value>
         <value xml:lang="ja">作業成果リクエストを編集</value>
         <value xml:lang="nl">Edit Activiteit Request</value>
@@ -1481,7 +1481,7 @@
         <value xml:lang="en">Edit Work Effort RequestItem</value>
         <value xml:lang="es">Editar ítem de petición de esfuerzo de trabajo</value>
         <value xml:lang="fr">Modifier la ligne de demande de tâche</value>
-        <value xml:lang="hr">Uredi stavku zahtjeva za uloženim radom</value>
+        <value xml:lang="hr">Uredi stavku zahtjeva za radnu obvezu</value>
         <value xml:lang="it">Aggiorna riga richiesta di impegno di lavoro</value>
         <value xml:lang="ja">作業成果リクエストアイテムを編集</value>
         <value xml:lang="nl">Edit Activiteit RequestItem</value>
@@ -1525,7 +1525,7 @@
         <value xml:lang="en">Find Work Effort</value>
         <value xml:lang="es">Buscar esfuerzo de trabajo</value>
         <value xml:lang="fr">Rechercher la tâche</value>
-        <value xml:lang="hr">Pronađi uloženi rad</value>
+        <value xml:lang="hr">Pronađi radnu obvezu</value>
         <value xml:lang="it">Ricerca impegno di lavoro</value>
         <value xml:lang="ja">作業成果を検索</value>
         <value xml:lang="nl">Find Activiteit</value>
@@ -1586,7 +1586,7 @@
     <property key="PageTitleListWorkEffortKeyword">
         <value xml:lang="en">Work Effort Keywords</value>
         <value xml:lang="fr">Mots-clés de la tâche</value>
-        <value xml:lang="hr">Ključne riječi uloženog rada</value>
+        <value xml:lang="hr">Ključne riječi radne obveze</value>
         <value xml:lang="it">Chiavi dell'impegno di lavoro</value>
         <value xml:lang="ja">作業成果キーワード</value>
         <value xml:lang="th">คีย์เวิร์ดงาน</value>
@@ -1598,7 +1598,7 @@
         <value xml:lang="de">Arbeitseinsatz Notizen</value>
         <value xml:lang="en">Work Effort Notes</value>
         <value xml:lang="fr">Notes de la tâche</value>
-        <value xml:lang="hr">Napomene o uloženom radu</value>
+        <value xml:lang="hr">Napomene o radnoj obvezi</value>
         <value xml:lang="it">Note dell'impegno di lavoro</value>
         <value xml:lang="ja">作業成果連絡</value>
         <value xml:lang="th">ข้อความงาน</value>
@@ -1625,7 +1625,7 @@
         <value xml:lang="en">Work Effort Party Assignments</value>
         <value xml:lang="es">Participantes asociados</value>
         <value xml:lang="fr">Affectations de l'acteur à la tâche</value>
-        <value xml:lang="hr">Uloženi rad zadaci stranaka</value>
+        <value xml:lang="hr">Radne obveze sudionika</value>
         <value xml:lang="it">Soggetti assegnati all'impegno di lavoro</value>
         <value xml:lang="ja">作業成果取引先割当</value>
         <value xml:lang="nl">Acties toegewezen aan relaties</value>
@@ -1639,7 +1639,7 @@
         <value xml:lang="en">Work Effort Quotes</value>
         <value xml:lang="es">Cotizaciones</value>
         <value xml:lang="fr">Devis de la tâche</value>
-        <value xml:lang="hr">Ponude za uloženi rad</value>
+        <value xml:lang="hr">Ponude za radne obveze</value>
         <value xml:lang="it">Preventivi dell'iimpegno di lavoro</value>
         <value xml:lang="ja">作業成果見積</value>
         <value xml:lang="nl">Activiteit Quotes</value>
@@ -1653,7 +1653,7 @@
         <value xml:lang="en">Work Effort Requests</value>
         <value xml:lang="es">Peticiones</value>
         <value xml:lang="fr">Demandes de la tâche</value>
-        <value xml:lang="hr">Zahtjevi za uloženi rad</value>
+        <value xml:lang="hr">Zahtjevi za radne obveze</value>
         <value xml:lang="it">Richieste dell'mpegno di lavoro</value>
         <value xml:lang="ja">作業成果リクエスト</value>
         <value xml:lang="nl">Activiteit Requests</value>
@@ -1681,7 +1681,7 @@
         <value xml:lang="de">Arbeitseinsatz Überprüfungen</value>
         <value xml:lang="en">Work Effort Reviews</value>
         <value xml:lang="fr">Vérifications de textes liés à la tâche</value>
-        <value xml:lang="hr">Recenzije uloženog rada</value>
+        <value xml:lang="hr">Recenzije radne obveze</value>
         <value xml:lang="it">Revisioni dell'impegno di lavoro</value>
         <value xml:lang="ja">作業成果レビュー</value>
         <value xml:lang="th">ตรวจสอบงาน</value>
@@ -1693,7 +1693,7 @@
         <value xml:lang="en">Work Effort Shopping Lists</value>
         <value xml:lang="es">Listas de compras</value>
         <value xml:lang="fr">Liste d'achats de la tâche</value>
-        <value xml:lang="hr">Popisi za kupovinu uloženog rada</value>
+        <value xml:lang="hr">Popisi za kupovinu radne obveze</value>
         <value xml:lang="it">Liste di acquisto dell'impegno di lavoro</value>
         <value xml:lang="ja">作業成果買い物リスト</value>
         <value xml:lang="nl">Activiteit Shopping Lists</value>
@@ -1722,7 +1722,7 @@
         <value xml:lang="en">Work Efforts</value>
         <value xml:lang="es">Hojas de trabajo</value>
         <value xml:lang="fr">Tâches</value>
-        <value xml:lang="hr">Uloženi rad</value>
+        <value xml:lang="hr">Radna obveza</value>
         <value xml:lang="it">Impegni di lavoro</value>
         <value xml:lang="ja">作業成果</value>
         <value xml:lang="nl">Acties</value>
@@ -1790,7 +1790,7 @@
         <value xml:lang="en">Work Effort Related Summary</value>
         <value xml:lang="es">Resumen realcionado al esfuerzo de trabajo</value>
         <value xml:lang="fr">Résumé lié à la tâche</value>
-        <value xml:lang="hr">Sažetak o uloženom radu</value>
+        <value xml:lang="hr">Sažetak radne obveze</value>
         <value xml:lang="it">Sommario degli impegni di lavoro</value>
         <value xml:lang="ja">作業成果関連サマリ</value>
         <value xml:lang="nl">Activiteit Related Summary</value>
@@ -1804,7 +1804,7 @@
         <value xml:lang="en">Work Effort Shopping Lists</value>
         <value xml:lang="es">Listas de compras de esfuerzo de trabajo</value>
         <value xml:lang="fr">Listes d'achats de la tâche</value>
-        <value xml:lang="hr">Popisi za kupovinu uloženog rada</value>
+        <value xml:lang="hr">Popisi za kupovinu radne obveze</value>
         <value xml:lang="it">Liste di acquisto dell'impegno di lavoro</value>
         <value xml:lang="ja">作業成果買い物リスト</value>
         <value xml:lang="nl">Activiteit Shopping Lists</value>
@@ -2045,7 +2045,7 @@
     <property key="WorkEffortAssoc">
         <value xml:lang="en">WorkEffort Association</value>
         <value xml:lang="fr">Association de la tâche</value>
-        <value xml:lang="hr">Povezivanje uloženog rada</value>
+        <value xml:lang="hr">Povezivanje radne obveze</value>
         <value xml:lang="it">Associazione impegno di lavoro </value>
         <value xml:lang="ja">作業成果関連付け</value>
         <value xml:lang="th">กลุ่มงาน</value>
@@ -2138,7 +2138,7 @@
     <property key="WorkEffortBannerAddWorkEffortAndAssoc1">
         <value xml:lang="en">Enter an existing workEffortId below,</value>
         <value xml:lang="fr">Entrer la réf. de tâche existante ci-dessous,</value>
-        <value xml:lang="hr">Unesite postojeći Id uloženog rada ispod,</value>
+        <value xml:lang="hr">Unesite postojeći Id radne obveze ispod,</value>
         <value xml:lang="it">Inserire qui sotto un'impegno di lavoro esistente,</value>
         <value xml:lang="ja">次の既存作業リクエストIDを入力してください</value>
         <value xml:lang="nl">Enter an existing workEffortId below,</value>
@@ -2151,7 +2151,7 @@
     <property key="WorkEffortBannerAddWorkEffortAndAssoc2">
         <value xml:lang="en">OR enter the WorkEffort Details below</value>
         <value xml:lang="fr">OU entrer les détails de la tâche ci-dessous</value>
-        <value xml:lang="hr">ILI unesite pojedinosti o uloženom radu u nastavku</value>
+        <value xml:lang="hr">ILI unesite pojedinosti o radnoj obvezi u nastavku</value>
         <value xml:lang="it">O inserisci qui sotto l'Impegno di Lavoro (lasciando vuoto)</value>
         <value xml:lang="ja">または次の作業成果詳細を入力してください</value>
         <value xml:lang="nl">OR enter the WorkEffort Details below</value>
@@ -2392,7 +2392,7 @@
     </property>
     <property key="WorkEffortCannotDeleteContactInfo">
         <value xml:lang="en">ERROR: Cannot delete specified contact info because it does not correspond to the specified work effort</value>
-        <value xml:lang="hr">GREŠKA: Nije moguće izbrisati navedene podatke za kontakt jer ne odgovaraju navedenom uloženom radu</value>
+        <value xml:lang="hr">GREŠKA: Nije moguće izbrisati navedene podatke za kontakt jer ne odgovaraju navedenoj radnoj obvezi</value>
         <value xml:lang="it">ERRORE: Non è possibile cancellare il contatto perchè non corrisponde all'impegno di lavoro specificato</value>
         <value xml:lang="ja">エラー: 指定した作業成果に対応しないため、指定した連絡情報を削除できません</value>
         <value xml:lang="vi">Lỗi xảy ra: Không thể xóa Liên hệ này vì không liên quan đến Lượng giá nguồn lực hiện tại</value>
@@ -2400,7 +2400,7 @@
     </property>
     <property key="WorkEffortCannotUpdateContactInfo">
         <value xml:lang="en">ERROR: Cannot update specified contact info because it does not correspond to the specified work effort</value>
-        <value xml:lang="hr">GREŠKA: Nije moguće ažurirati navedene podatke za kontakt jer ne odgovaraju navedenom uloženom radu</value>
+        <value xml:lang="hr">GREŠKA: Nije moguće ažurirati navedene podatke za kontakt jer ne odgovaraju navedenoj radnoj obvezi</value>
         <value xml:lang="it">ERRORE: Non è possibile aggiornare il contatto perchè non corrisponde all'impegno di lavoro specificato</value>
         <value xml:lang="ja">エラー: 指定した作業成果に対応しないため、指定した連絡情報を更新できません</value>
         <value xml:lang="vi">Lỗi xảy ra: Không thể cập nhật Liên hệ này vì không liên quan đến Lượng giá nguồn lực hiện tại</value>
@@ -2451,7 +2451,7 @@
         <value xml:lang="en">OFBiz: WorkEffort Manager</value>
         <value xml:lang="es">OFBiz: Administración de tareas</value>
         <value xml:lang="fr">OFBiz: Gestion de tâches</value>
-        <value xml:lang="hr">OFBiz: Upravitelj rada</value>
+        <value xml:lang="hr">OFBiz: upravljanje radom</value>
         <value xml:lang="it">OFBiz: Gestione impegni di lavoro</value>
         <value xml:lang="ja">OFBiz: 作業成果管理</value>
         <value xml:lang="nl">OFBiz: WorkEffort Manager</value>
@@ -2548,7 +2548,7 @@
         <value xml:lang="en">Create Work Effort</value>
         <value xml:lang="es">Crear esfuerzo de trabajo</value>
         <value xml:lang="fr">Créer une tâche</value>
-        <value xml:lang="hr">Stvori uloženi rad</value>
+        <value xml:lang="hr">Stvori radnu obvezu</value>
         <value xml:lang="it">Nuovo impegno di lavoro</value>
         <value xml:lang="ja">作業成果を作成</value>
         <value xml:lang="nl">Nieuw actie</value>
@@ -2587,7 +2587,7 @@
     </property>
     <property key="WorkEffortCreatedSuccessfully">
         <value xml:lang="en">Work Effort successfully created.</value>
-        <value xml:lang="hr">Uloženi rad uspješno kreiran.</value>
+        <value xml:lang="hr">Radna obveza uspješno stvorena.</value>
         <value xml:lang="it">Impegno di lavoro creato con successo.</value>
         <value xml:lang="ja">作業成果が正しく作成されました。</value>
         <value xml:lang="vi">Lượng giá nguồn lực được tạo thành công.</value>
@@ -2677,7 +2677,7 @@
         <value xml:lang="de">Dupliziere Arbeitseinsatz</value>
         <value xml:lang="en">Duplicate Work Effort</value>
         <value xml:lang="fr">Dupliquer la tâche</value>
-        <value xml:lang="hr">Duplicirani uloženi rad</value>
+        <value xml:lang="hr">Dupliciraj radnu obvezu</value>
         <value xml:lang="it">Duplica impegno di lavoro</value>
         <value xml:lang="ja">作業成果をコピー</value>
         <value xml:lang="th">งานที่เหมือนกัน</value>
@@ -3169,7 +3169,7 @@
         <value xml:lang="de">Arbeitseinsatz ID fehlt.</value>
         <value xml:lang="en">Work Effort ID is missing.</value>
         <value xml:lang="fr">La réf. de tâche est manquante</value>
-        <value xml:lang="hr">Nedostaje Id uloženog rada.</value>
+        <value xml:lang="hr">Nedostaje Id radne obveze.</value>
         <value xml:lang="it">Impegno di lavoro è mancante.</value>
         <value xml:lang="ja">作業成果IDが正しくありません</value>
         <value xml:lang="ro">Sarcina de Lucru lipseste.</value>
@@ -3289,7 +3289,7 @@
         <value xml:lang="de">Arbeitseinsatz - Schlüsselwort existiert bereits</value>
         <value xml:lang="en">WorkEffort - Keyword already exist</value>
         <value xml:lang="fr">Tâche - Mot-clé existant déjà</value>
-        <value xml:lang="hr">Uloženi rad - ključna riječ već postoji</value>
+        <value xml:lang="hr">Radna obveza - ključna riječ već postoji</value>
         <value xml:lang="it">Impegno di lavoro - chiave già esistente</value>
         <value xml:lang="ja">作業成果 - キーワードがすでに存在します</value>
         <value xml:lang="th">งาน - ยังคงมีคีย์เวิร์ดอยู่แล้ว</value>
@@ -3410,7 +3410,7 @@
         <value xml:lang="en">Work Effort Manager</value>
         <value xml:lang="es">Aplicación de administración de tareas</value>
         <value xml:lang="fr">Application de gestion de tâches</value>
-        <value xml:lang="hr">Upravitelj uloženog rada</value>
+        <value xml:lang="hr">Upravljanje radnim obvezama</value>
         <value xml:lang="it">Gestione impegni di lavoro</value>
         <value xml:lang="ja">作業成果管理</value>
         <value xml:lang="nl">Activiteiten Manager</value>
@@ -3426,7 +3426,7 @@
         <value xml:lang="en">Work Effort Manager Application</value>
         <value xml:lang="es">Aplicación de administración de tareas</value>
         <value xml:lang="fr">Application de gestion de tâches</value>
-        <value xml:lang="hr">Aplikacija upravitelja uloženog rada</value>
+        <value xml:lang="hr">Aplikacija za upravljanje radnim obvezama</value>
         <value xml:lang="it">Applicazione gestione impegni di lavoro</value>
         <value xml:lang="ja">作業成果管理業務</value>
         <value xml:lang="nl">Activiteiten Manager Application</value>
@@ -3632,7 +3632,7 @@
         <value xml:lang="de">Arbeitseinsatz Name fehlt.</value>
         <value xml:lang="en">Work Effort Name is missing.</value>
         <value xml:lang="fr">Le nom de tâche est manquant</value>
-        <value xml:lang="hr">Nedostaje naziv uloženog rada.</value>
+        <value xml:lang="hr">Nedostaje naziv radne obveze.</value>
         <value xml:lang="it">Il nome impegno di Lavoro è mancante.</value>
         <value xml:lang="ja">作業成果名称が正しくありません</value>
         <value xml:lang="ro">Nume Sarcina de Lucru lipseste.</value>
@@ -3929,7 +3929,7 @@
     <property key="WorkEffortNotInRolePermissionError">
         <value xml:lang="en">Security Error: to run ${resourceDescription} you must be in ${roleTypeId} role with WorkEffort: ${workEffortId}</value>
         <value xml:lang="fr">Erreur de sécurité: Pour exécuter ${resourceDescription} vous devez être dans le rôle ${roleTypeId} avec la tâche : ${workEffortId}</value>
-        <value xml:lang="hr">Sigurnosna greška: da biste pokrenuli ${resourceDescription} morate biti u ulozi ${roleTypeId} s uloženim radom: ${workEffortId}</value>
+        <value xml:lang="hr">Sigurnosna greška: da biste pokrenuli ${resourceDescription} morate biti u ulozi ${roleTypeId} s radnom obvezom: ${workEffortId}</value>
         <value xml:lang="it">Errore sicurezza: per eseguire ${resourceDescription} devi avere il ruolo ${roleTypeId} con l'impegno di lavoro: ${workEffortId}</value>
         <value xml:lang="ja">セキュリティエラー: 作業成果: ${workEffortId} で ${resourceDescription} の実行は ${roleTypeId} ロールが必要です</value>
         <value xml:lang="th">Security Error: ความปลอดภัยผิดพลาด ! ถึงการดำเนินการ ${resourceDescription} คุณต้องเป็น ${roleTypeId} สถานะงาน: ${workEffortId}</value>
@@ -4100,7 +4100,7 @@
     <property key="WorkEffortPartyAssignmentError">
         <value xml:lang="en">Party ${parameters.partyId} with role ${parameters.roleTypeId} is already assigned to work effort Id ${parameters.workEffortId}, not adding again</value>
         <value xml:lang="fr">L'acteur ${parameters.partyId} avec le rôle ${parameters.roleTypeId} est déjà affecté à la tâche de réf. ${parameters.workEffortId}</value>
-        <value xml:lang="hr">Stranka ${parameters.partyId} s ulogom ${parameters.roleTypeId} već je dodijeljena uloženom radu pod Id ${parameters.workEffortId}, ne dodaje se ponovno</value>
+        <value xml:lang="hr">Stranka ${parameters.partyId} s ulogom ${parameters.roleTypeId} već je dodijeljena radnoj obvezi pod Id ${parameters.workEffortId}, ne dodaje se ponovno</value>
         <value xml:lang="it">Soggetto ${parameters.partyId} con il ruolo ${parameters.roleTypeId} è già stato assegnato all'impegno di lavoro ${parameters.workEffortId}, non aggiungerlo nuovamente</value>
         <value xml:lang="ja">${parameters.roleTypeId} ロールの取引先 ${parameters.partyId} は、すでに作業成果ID ${parameters.workEffortId} に割当られています、追加できません</value>
         <value xml:lang="vi">Tác nhân ${parameters.partyId} với Vai trò ${parameters.roleTypeId} đã được gán đến Lượng giá nguồn lực ${parameters.workEffortId}, bạn không nên thêm vào lần nữa</value>
@@ -4567,7 +4567,7 @@
     </property>
     <property key="WorkEffortQuoteAlreadyExists">
         <value xml:lang="en">ERROR: QuoteWorkEffort [${parameters.quoteId}][${parameters.workEffortId}] already exists.</value>
-        <value xml:lang="hr">GREŠKA: Ponuda za uloženi rad [${parameters.quoteId}][${parameters.workEffortId}] već postoji.</value>
+        <value xml:lang="hr">GREŠKA: Ponuda za radnu obvezu [${parameters.quoteId}][${parameters.workEffortId}] već postoji.</value>
         <value xml:lang="it">ERRORE: Preventivo impegno di lavoro [${parameters.quoteId}][${parameters.workEffortId}] esiste già.</value>
         <value xml:lang="ja">エラー: 見積作業成果 [${parameters.quoteId}][${parameters.workEffortId}] はすでに存在します。</value>
         <value xml:lang="vi">Lỗi xảy ra: Báo giá Lượng giá nguồn lực [${parameters.quoteId}][${parameters.workEffortId}] ĐÃ tồn tại.</value>
@@ -4575,7 +4575,7 @@
     </property>
     <property key="WorkEffortQuoteDoesNotExists">
         <value xml:lang="en">ERROR: QuoteWorkEffort [${parameters.quoteId}][${parameters.workEffortId}] does not exists.</value>
-        <value xml:lang="hr">GREŠKA: Ponuda za uloženi rad [${parameters.quoteId}][${parameters.workEffortId}] ne postoji.</value>
+        <value xml:lang="hr">GREŠKA: Ponuda za radnu obvezu [${parameters.quoteId}][${parameters.workEffortId}] ne postoji.</value>
         <value xml:lang="it">ERRORE: Preventivo impegno di lavoro [${parameters.quoteId}][${parameters.workEffortId}] non esiste.</value>
         <value xml:lang="ja">エラー: 見積作業成果 [${parameters.quoteId}][${parameters.workEffortId}] は存在しません。</value>
         <value xml:lang="vi">Lỗi xảy ra: Báo giá Lượng giá nguồn lực [${parameters.quoteId}][${parameters.workEffortId}] CHƯA tồn tại.</value>
@@ -4685,7 +4685,7 @@
         <value xml:lang="en">Request Manager</value>
         <value xml:lang="es">Adminstración de peticiones</value>
         <value xml:lang="fr">Administrateur de la requête</value>
-        <value xml:lang="hr">Upravitelj zahtjeva</value>
+        <value xml:lang="hr">Upravljanje zahtjevima</value>
         <value xml:lang="it">Gestore della richiesta</value>
         <value xml:lang="ja">リクエスト管理</value>
         <value xml:lang="nl">Request Manager</value>
@@ -4954,7 +4954,7 @@
         <value xml:lang="de">Suche Arbeitseinsätze</value>
         <value xml:lang="en">Search WorkEfforts</value>
         <value xml:lang="fr">Recherche de tâches</value>
-        <value xml:lang="hr">Pretraži uloženi rad</value>
+        <value xml:lang="hr">Pretraži radne obveze</value>
         <value xml:lang="it">Ricerca impegni di lavoro</value>
         <value xml:lang="ja">作業成果を検索</value>
         <value xml:lang="th">ค้นหางาน</value>
@@ -5405,7 +5405,7 @@
     <property key="WorkEffortTimesheetNotInRolePermissionError">
         <value xml:lang="en">Security Error: to run ${resourceDescription} you must be in ${roleTypeId} role with WorkEffort: ${workEffortId}</value>
         <value xml:lang="fr">Erreur de sécurité: pour exécuter ${resourceDescription} vous devez être dans le rôle ${roleTypeId} avec la tâche ${workEffortId}</value>
-        <value xml:lang="hr">Sigurnosna greška: da biste pokrenuli ${resourceDescription} morate imati ulogu ${roleTypeId} za uloženi rad: ${workEffortId}</value>
+        <value xml:lang="hr">Sigurnosna greška: da biste pokrenuli ${resourceDescription} morate imati ulogu ${roleTypeId} za radnu obvezu: ${workEffortId}</value>
         <value xml:lang="it">Errore sicurezza: per eseguire ${resourceDescription} devi avere il ruolo ${roleTypeId} con l'impegno di lavoro: ${workEffortId}</value>
         <value xml:lang="ja">セキュリティーエラー: 作業成果ID: ${workEffortId} で ${resourceDescription} の実行は、${roleTypeId} ロールが必要です</value>
         <value xml:lang="th">Security Error: ความปลอดภัยผิดพลาด ! การดำเนินการ ${resourceDescription} คุณต้องเป็น ${roleTypeId} ด้วยสถานะงาน: ${workEffortId}</value>
@@ -5624,7 +5624,7 @@
         <value xml:lang="en">Work Effort</value>
         <value xml:lang="es">Esfuerzo de trabajo</value>
         <value xml:lang="fr">Tâche</value>
-        <value xml:lang="hr">Uloženi rad</value>
+        <value xml:lang="hr">Radna obveza</value>
         <value xml:lang="it">Impegno di lavoro</value>
         <value xml:lang="ja">作業成果</value>
         <value xml:lang="nl">Actie</value>
@@ -5638,7 +5638,7 @@
         <value xml:lang="en">WorkEffortAssocId already Exist</value>
         <value xml:lang="es">El código de asociación del esfuerzo de trabajo ya existe.</value>
         <value xml:lang="fr">La référence de l'association de tâche existe déja</value>
-        <value xml:lang="hr">Id veze uloženog rada već postoji</value>
+        <value xml:lang="hr">Id veze radne obveze već postoji</value>
         <value xml:lang="it">Associazione impegno di lavoro già esistente</value>
         <value xml:lang="ja">作業成果関連付けIDはすでに存在します</value>
         <value xml:lang="nl">WorkEffortAssocId already Exist</value>
@@ -5653,7 +5653,7 @@
         <value xml:lang="en">WorkEffort - GoodStandard association already exist</value>
         <value xml:lang="es">La asociación esfuerzo de trabajo - buen estándar ya existe</value>
         <value xml:lang="fr">L'association Tâche - Bien standard existe déja</value>
-        <value xml:lang="hr">Već postoji veza uloženi rad - standard kvalitete</value>
+        <value xml:lang="hr">Već postoji veza radna obveza - standard kvalitete</value>
         <value xml:lang="it">Associazione impegno di lavoro - Bene standard già esistente</value>
         <value xml:lang="ja">作業成果 - 参考指針の関連付けはすでに存在します</value>
         <value xml:lang="nl">WorkEffort - GoodStandard association already exist</value>
@@ -5669,7 +5669,7 @@
         <value xml:lang="en">WorkEffort Id</value>
         <value xml:lang="es">Código de esfuerzo de trabajo</value>
         <value xml:lang="fr">Tâche</value>
-        <value xml:lang="hr">Id uloženog rada</value>
+        <value xml:lang="hr">Id radne obveze</value>
         <value xml:lang="it">Numero impegno di lavoro</value>
         <value xml:lang="ja">作業成果ID</value>
         <value xml:lang="nl">Taak ID</value>
@@ -5684,7 +5684,7 @@
         <value xml:lang="en">WorkEffort Id is empty</value>
         <value xml:lang="es">El código del esfuerzo de trabajo está vacío</value>
         <value xml:lang="fr">La réf. de tâche est vide</value>
-        <value xml:lang="hr">Id uloženog rada je prazan</value>
+        <value xml:lang="hr">Id radne obveze je prazan</value>
         <value xml:lang="it">Il codice impegno di lavoro è vuoto</value>
         <value xml:lang="ja">作業成果IDが入力されていません</value>
         <value xml:lang="nl">Taak ID is empty</value>
@@ -5699,7 +5699,7 @@
         <value xml:lang="en">Work Effort Manager Main Page</value>
         <value xml:lang="es">Página principal de adminstración de tareas</value>
         <value xml:lang="fr">Page d'accueil de gestion des tâches</value>
-        <value xml:lang="hr">Glavna stranica Upravitelja uloženog rada</value>
+        <value xml:lang="hr">Glavna stranica aplikacije za upravljanje radnim zadacima</value>
         <value xml:lang="it">Pagina principale gestione impegni di lavoro</value>
         <value xml:lang="ja">作業成果管理メインページ</value>
         <value xml:lang="nl">WorkEffort Manager Main Page</value>
@@ -5714,7 +5714,7 @@
         <value xml:lang="de">Arbeitseinsatz - Überprüfung existiert bereits</value>
         <value xml:lang="en">Work Effort - Review already exist</value>
         <value xml:lang="fr">Tâche - Cette vérification existe déjà</value>
-        <value xml:lang="hr">Uloženi rad - Pregled već postoji</value>
+        <value xml:lang="hr">Radna obveza - Pregled već postoji</value>
         <value xml:lang="it">Revisione impegno di lavoro già esistente</value>
         <value xml:lang="ja">作業成果 - レビューはすでに存在します</value>
         <value xml:lang="th">งาน - ยังคงมีการตรวจสอบอยู่แล้ว</value>
@@ -5727,7 +5727,7 @@
         <value xml:lang="en">Work Efforts</value>
         <value xml:lang="es">Hojas de trabajo</value>
         <value xml:lang="fr">Tâches</value>
-        <value xml:lang="hr">Uloženi rad</value>
+        <value xml:lang="hr">Radne obveze</value>
         <value xml:lang="it">Impegni di lavoro</value>
         <value xml:lang="ja">作業成果</value>
         <value xml:lang="nl">Acties</value>
