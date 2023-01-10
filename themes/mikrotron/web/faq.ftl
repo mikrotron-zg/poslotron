@@ -16,7 +16,6 @@
       <li><a href="#tocQuote">Molimo ponudu (kupovina: pravne
           osobe)</a></li>
       <li><a href="#tocCard">Zašto ne mogu platiti karticom?</a></li>
-      <li><a href="#tocPaypal">Zašto nemate paypal?</a></li>
 	  <li><a href="#tocHPE">Zašto više nemate HP Express?</a></li>
       <li><a href="#tocDelivery">Koje su cijene i rokovi isporuke?</a></li>
       <li><a href="#tocHP">Koju vrstu pošiljke šaljete kada izaberem stavku dostave
@@ -34,7 +33,7 @@
     Fiskalizacija, hvala, ne treba.<br/>
     <br/>
     Imate tu na ćošku PBZ, malo dalje ZABA a preko puta Erste, pokažete
-    im narudžbenicu i platite usput dok idete po robu. (oderu vas 8 kn)
+    im narudžbenicu i platite usput dok idete po robu.
     <br/><br/>
 </div>
 <div>
@@ -44,7 +43,9 @@
     stranici <a href="http://www.diykits.eu/shophr/control/aboutus">O
       nama</a>.<br/>
     U model i poziv na broj primatelja upišite HR 00 broj narudžbe.<br/>
-    (nama to ne treba, ali bankarske aplikacije na tome insistiraju)<br/>
+    (nama to ne treba, ali neke bankarske aplikacije na tome inzistiraju)<br/>
+    Alternativno, ako plaćate putem mobilnog bankarstva, možete koristiti<br/>
+    2D barkod koji se prikazuje kod potvrđivanja narudžbe i u PDF-u narudžbenice<br/>
 <br/>
 </div>
 <div>
@@ -65,7 +66,7 @@
       (kupovina: fizičke osobe)<br/>
     </h2>
     1) Registrirajte se u dućan (Registracija: Osoba)<br/>
-    2) Popunite košaru i kliknite <b>Narudžba</b><br/>
+    2) Popunite košaru i kliknite <b>Napravi narudžbu</b><br/>
     3) Potvrdite narudžbu<br/>
     4) Platite narudžbu<br/>
     <br/>
@@ -82,7 +83,7 @@
       (kupovina: pravne osobe)</h2>
     1) Registrirajte se u dućan (Registracija: Tvrtka)<br/>
     2) Popunite košaru<br/>
-    3) Kliknite <b>Ponuda za firmu</b><br/>
+    3) Kliknite <b>Ponuda na firmu</b><br/>
     <br/>
     I to je to - dobijete e-mail sa ponudom. Naravno, ukoliko Vam nije potrebna
     ponuda, možete skratiti priču tako da kliknete <b>Narudžba</b> i napravite
@@ -98,28 +99,6 @@
     S obzirom da danas svatko ima internet i na mobitelu, a praktički
     sve banke nude i internet bankarstvo i mobilno bankarstvo, ne želimo
     se gnjaviti sa karticama na štetu kupaca koji plaćaju na račun.<br/>
-<br/>
-</div>
-<div>
-    <h2><a class="mozTocH1" name="tocPaypal"></a>Zašto nemate
-      paypal?</h2>
-    Imamo, ali ne za Hrvatske građane:<br/>
-    u Hrvata je zabranjeno izdavati račune u drugim valutama osim kune.<br/>
-    <br/>
-    Odnosno, po čl. 15 Zakona o deviznom poslovanju, dopušteno je u
-    slučajevima propisanima zakonom ili odlukom HNB, (i to pri
-    posredničkim poslovima u međunarodnom prijevozu i
-    turističko-agencijskim uslugama, između posrednika i drugog
-    rezidenta fizičke osobe, za uslugu koju je pružio nerezident
-    ), a tko ne sluša - kazna 15-200 tisuća kuna (čl. 63).<br/>
-    Zakonodavac i HNB nisu još čuli za PayPal, pa nerezidentima ne
-    dopuštaju posredovanje u financijskim uslugama.<br/>
-    Paypal, pogađate, još nije čuo za kune, a ni neće.<br/>
-    <br/>
-    Tehnički, možemo svakodnevno upisivati tečaj eura, cijene interno
-    voditi u eurima, a kupcima iz Hrvatske prikazivati kunski iznos,
-    uvećan za paypal mjenjačku proviziju.<br/>
-    No to je pravna siva zona i knjigovodstvena noćna mora.<br/>
 <br/>
 </div>
 <div>
@@ -143,14 +122,14 @@
     osnovu cijena Hrvatske pošte i cijena ambalaže. Izračunata cijena
     prikazuje se kada u narudžbi izaberete adresu dostave.<br/>
     <br/>
-    HP: od 10.00 kn naviše<br/>
-    GLS: od 40 kn naviše</br>
+    HP: od 1.33 € (10.00 kn) naviše<br/>
+    GLS: od 5,44 € (41.00 kn) naviše<br/>
     <br/>
     Za uplate vidljive na našem računu (ili ako pošaljete potvrdu na email) do 12 sati
     pošiljku predajemo na dostavu do kraja dana. Ne brinite ako ste zakasnili, u 99%
-    slučajeva i za uplate iza 12 sati isporuka kreće isti dan :)<br/></br>
+    slučajeva i za uplate iza 12 sati isporuka kreće isti dan :)<br/><br/>
     HP: Vrste pošiljki i rokovi dostave detaljnije su objašnjeni <a href="#tocHP">ovdje</a><br/>
-    GLS: idući radni dan (iznimno dva, izuzetci su nabrojani na GLS-ovoj web stranici)</br>
+    GLS: idući radni dan (iznimno dva, izuzetci su nabrojani na GLS-ovoj web stranici)<br/>
     <br/>
     Ako neki naručeni artikl trenutno nemamo u dućanu, rokove isporuke
     javljamo mailom ili telefonski. U tom slučaju, po dogovoru, možete
@@ -164,19 +143,19 @@
        'Hrvatska pošta'?</h2>
     Kako bi dobili optimalnu (ako je to ikako moguće) poštansku dostavu bez previše stavki kod
     izbora dostave i uz najmanje moguće troškove, isporuka poštom podjeljena je u tri kategorije,
-    ovisno o težini pošiljke:</br></br>
+    ovisno o težini pošiljke:<br/><br/>
 
       1) Pošiljke <b>do 250 g</b> šalju se kao prioritetno pismo. Obično pismo više ne šaljemo
         jer je znalo putovati i do dva tjedna. Prema tvrdnjama pošte 85% ovih pošiljaka uručuje se
         za jedan radni dan (D+1), 95% za dva (D+2), a sve ostale za tri (D+3). Za otoke, svi rokovi su duži za jedan dan.
-        Pomnožite navedene rokove s faktorom 2 - 4 pa je to onda bliže stvarnosti.</br>
+        Pomnožite navedene rokove s faktorom 2 - 4 pa je to onda bliže stvarnosti.<br/>
       2) Pošiljke u rasponu <b>od 251-1000 g</b> šaljemo kao preporučenu pošiljku. Iznimno, pošiljku do
-        250 g ćemo također poslati kao preporučenu pošiljku ako joj vrijednost prelazi 200 kuna. Razlika u
-        cijeni u tom slučaju ide na naš trošak. Rok dostave = D+3 puta faktor iz točke 1)</br>
+        250 g ćemo također poslati kao preporučenu pošiljku ako joj vrijednost prelazi 25.00 € (188.36 kn). Razlika u
+        cijeni u tom slučaju ide na naš trošak. Rok dostave = D+3 puta faktor iz točke 1)<br/>
       3) Pošiljke <b>teže od 1 kg</b> šaljemo kao paket s dostavom na adresu, tamo gdje je takva vrsta
       dostave moguća (<a target="_blank" href="http://bit.ly/2CI42Ew">Popis mjesta s dostavom na adresu</a>).
       Tamo gdje nije, nažalost morati ćete otići po Vašu pošiljku u poštanski ured. Rok dostave za pakete je
-      tri radna dana (D+3).</br></br>
+      tri radna dana (D+3).<br/><br/>
       Vrijedi napomenuti da za pakete koji su uručeni s prekoračenjem roka dostave, možete pokrenuti
       <a target="_blank" href="https://www.posta.hr/reklamacije-275/275">Potražni postupak</a> (iako
       zapravo znate gdje je pošiljka, pošta ne poznaje pojam žalbe ili reklamacije), a na isti način
@@ -201,9 +180,8 @@
 <div>
     <h2><a class="mozTocH1" name="tocRejected"></a>Zašto je moja
       narudžba odbijena?</h2>
-    Narudžbe koje nisu realizirane u roku od mjesec dana, poništavaju se, osim
-    ako se nismo drugačije dogovorili. Najčešće ćemo Vas kontaktirati prije isteka
-    emailom, za slučaj da ste zaboravili da ste napravili narudžbu.<br/>
+    Narudžbe koje nisu realizirane u roku od dva tjedna, poništavaju se, osim
+    ako se nismo drugačije dogovorili. <br/>
 <br/>
 </div>
 <div>
@@ -236,7 +214,7 @@
 </div>
 <div>
     <h2><a class="mozTocH1" name="tocPay"></a>How do I pay?</h2>
-    Paypal, or wire transfer.</br>
+    Paypal, or wire transfer.<br/>
     Just select appropriate payment method during checkout process.<br/>
     PDF Order available after checkout contains all the data required for wire transfer - our bank routing number and IBAN.<br/>
 <br/>
@@ -257,12 +235,12 @@
     <h2><a class="mozTocH1" name="tocDelivery"></a>What are shipping prices and durations?</h2>
     Shipping prices are calculated automatically when you make an order. At this moment, shipping by post is the only option,
     but this should be updated shortly. Your order will be sent as a registered letter if under 2 kg, or as an international
-    package if over 2 kg.</br>
+    package if over 2 kg.<br/>
     Currently we ship to EU countries only. All EU countries are supported.
-    EU is divided into 4 zones, and shipping may last 3 to 10 days, depending on zone.</br>
-    Please contact us if shipping options do not display.</br>
-    </br>
-    Goods we have on stock are shipped on daily basis.</br>
+    EU is divided into 4 zones, and shipping may last 3 to 10 days, depending on zone.<br/>
+    Please contact us if shipping options do not display.<br/>
+    <br/>
+    Goods we have on stock are shipped on daily basis.<br/>
 <br/>
 </div>
 <div>
