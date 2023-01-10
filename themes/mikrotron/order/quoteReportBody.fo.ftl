@@ -17,7 +17,7 @@ specific language governing permissions and limitations
 under the License.
 -->
 <#escape x as x?xml>
-    <#include "../includes/common.ftl">
+<#include "../includes/common.ftl">
         <fo:block font-family="LiberationSerif">
             <fo:table font-size="9pt">
                 <fo:table-column column-width="50pt"/>
@@ -129,73 +129,76 @@ under the License.
                 </fo:table-body>
             </fo:table>
 
-<fo:block-container height="10mm">
- <fo:block>
- </fo:block>
-</fo:block-container>
-
-            <fo:block text-align="right">
-                <fo:table>
-                    <fo:table-column column-width="400pt"/>
-                    <fo:table-column column-width="100pt"/>
-                    <fo:table-body>
+   <fo:block text-align="right" margin-top="5mm">
+        <fo:table>
+            <fo:table-column column-width="400pt"/>
+            <fo:table-column column-width="100pt"/>
+            <fo:table-body>
+                <fo:table-row>
+                    <fo:table-cell padding="2pt">
+                        <fo:block text-align="right">${uiLabelMap.CommonSubtotal}</fo:block>
+                    </fo:table-cell>
+                    <fo:table-cell padding="2pt">
+                        <fo:block text-align="right"><@ofbizCurrency amount=totalQuoteAmount isoCode=quote.currencyUomId/></fo:block>
+                    </fo:table-cell>
+                </fo:table-row>
+                <#assign totalQuoteHeaderAdjustmentAmount = 0.0>
+                <#list quoteAdjustments as quoteAdjustment>
+                    <#assign adjustmentType = quoteAdjustment.getRelatedOne("OrderAdjustmentType", false)>
+                    <#if !quoteAdjustment.quoteItemSeqId?exists>
+                        <#assign totalQuoteHeaderAdjustmentAmount = quoteAdjustment.amount?default(0) + totalQuoteHeaderAdjustmentAmount>
                         <fo:table-row>
                             <fo:table-cell padding="2pt">
-                                <fo:block text-align="right">${uiLabelMap.CommonSubtotal}</fo:block>
+                                <fo:block text-align="right">${adjustmentType.get("description", locale)?if_exists}</fo:block>
                             </fo:table-cell>
                             <fo:table-cell padding="2pt">
-                                <fo:block text-align="right"><@ofbizCurrency amount=totalQuoteAmount isoCode=quote.currencyUomId/></fo:block>
+                                <fo:block text-align="right"><@ofbizCurrency amount=quoteAdjustment.amount isoCode=quote.currencyUomId/></fo:block>
                             </fo:table-cell>
                         </fo:table-row>
-                        <#assign totalQuoteHeaderAdjustmentAmount = 0.0>
-                        <#list quoteAdjustments as quoteAdjustment>
-                            <#assign adjustmentType = quoteAdjustment.getRelatedOne("OrderAdjustmentType", false)>
-                            <#if !quoteAdjustment.quoteItemSeqId?exists>
-                                <#assign totalQuoteHeaderAdjustmentAmount = quoteAdjustment.amount?default(0) + totalQuoteHeaderAdjustmentAmount>
-                                <fo:table-row>
-                                    <fo:table-cell padding="2pt">
-                                        <fo:block text-align="right">${adjustmentType.get("description", locale)?if_exists}</fo:block>
-                                    </fo:table-cell>
-                                    <fo:table-cell padding="2pt">
-                                        <fo:block text-align="right"><@ofbizCurrency amount=quoteAdjustment.amount isoCode=quote.currencyUomId/></fo:block>
-                                    </fo:table-cell>
-                                </fo:table-row>
-                            </#if>
-                        </#list>
-                        <#assign grandTotalQuoteAmount = totalQuoteAmount + totalQuoteHeaderAdjustmentAmount>
-                        <fo:table-row>
-                            <fo:table-cell padding="2pt">
-                                <fo:block font-family="LiberationSerif-Bold" text-align="right">${uiLabelMap.OrderGrandTotal}</fo:block>
-                            </fo:table-cell>
-                            <fo:table-cell padding="2pt">
-                                <fo:block text-align="right" font-family="LiberationSerif-Bold"><@ofbizCurrency amount=grandTotalQuoteAmount isoCode=quote.currencyUomId/></fo:block>
-                            </fo:table-cell>
-                        </fo:table-row>
-                        <fo:table-row>
-                            <fo:table-cell padding="2pt" number-columns-spanned="2">
-                                <fo:block text-align="right">
-                                    <#if quote.currencyUomId == kuna>(<@ofbizCurrency amount=grandTotalQuoteAmount/exchangeRate isoCode=euro/>)</#if>
-                                    <#if quote.currencyUomId == euro>(<@ofbizCurrency amount=grandTotalQuoteAmount*exchangeRate isoCode=kuna/>)</#if>
-                                </fo:block>
-                            </fo:table-cell>
-                        </fo:table-row>
-                        <fo:table-row font-family="LiberationSerif-Italic">
-                            <fo:table-cell padding="2pt" number-columns-spanned="2">
-                                <fo:block text-align="right">
-                                    ${uiLabelMap.FixedExchangeRate} 1 € = ${exchangeRate?string("0.00000")} kn
-                                </fo:block>
-                            </fo:table-cell>
-                        </fo:table-row>
-                    </fo:table-body>
-                </fo:table>
-            </fo:block>
-        </fo:block>
+                    </#if>
+                </#list>
+                <#assign grandTotalQuoteAmount = totalQuoteAmount + totalQuoteHeaderAdjustmentAmount>
+                <#assign grandTotalQuoteAmountCents = grandTotalQuoteAmount*100>
+                <fo:table-row>
+                    <fo:table-cell padding="2pt">
+                        <fo:block font-family="LiberationSerif-Bold" text-align="right">${uiLabelMap.OrderGrandTotal}</fo:block>
+                    </fo:table-cell>
+                    <fo:table-cell padding="2pt">
+                        <fo:block text-align="right" font-family="LiberationSerif-Bold"><@ofbizCurrency amount=grandTotalQuoteAmount isoCode=quote.currencyUomId/></fo:block>
+                    </fo:table-cell>
+                </fo:table-row>
+                <fo:table-row>
+                    <fo:table-cell padding="2pt" number-columns-spanned="2">
+                        <fo:block text-align="right">
+                            <#if quote.currencyUomId == kuna>(<@ofbizCurrency amount=grandTotalQuoteAmount/exchangeRate isoCode=euro/>)</#if>
+                            <#if quote.currencyUomId == euro>(<@ofbizCurrency amount=grandTotalQuoteAmount*exchangeRate isoCode=kuna/>)</#if>
+                        </fo:block>
+                    </fo:table-cell>
+                </fo:table-row>
+                <fo:table-row font-family="LiberationSerif-Italic">
+                    <fo:table-cell padding="2pt" number-columns-spanned="2">
+                        <fo:block text-align="right">
+                            ${uiLabelMap.FixedExchangeRate} 1 € = ${exchangeRate?string("0.00000")} kn
+                        </fo:block>
+                    </fo:table-cell>
+                </fo:table-row>
+            </fo:table-body>
+        </fo:table>
+    </fo:block>
+</fo:block>
 
 <fo:block></fo:block>
- <fo:block space-after="5mm"/>
-  <fo:block margin-right="40pt" font-family="LiberationSerif-BoldItalic" text-align="right">
+<fo:block space-after="2mm"/>
+<fo:block margin-right="40pt" font-family="LiberationSerif-BoldItalic" text-align="right" space-after="2mm">
     <#--    Here is a good place to put policies and return information.-->
     Iskazane cijene uključuju PDV!
 </fo:block>
-
+<fo:block text-align="right" margin-right="40pt">
+    <fo:instream-foreign-object>
+    <barcode:barcode xmlns:barcode="http://barcode4j.krysalis.org/ns" message="HRVHUB30\u000A${quote.currencyUomId}\u000A${grandTotalQuoteAmountCents}\u000A\u000A\u000A\u000AMIKROTRON d.o.o.\u000APAKOSTANSKA 5 K2-9\u000A10000 ZAGREB\u000AHR8023400091110675464\u000AHR00\u000A${quote.quoteId}\u000A\u000APonuda ${quote.quoteId}">
+        <barcode:pdf417><barcode:row-height>0.4mm</barcode:row-height><barcode:module-width>0.6mm</barcode:module-width></barcode:pdf417>
+    </barcode:barcode>
+    </fo:instream-foreign-object>
+</fo:block>
+<fo:block text-align="right" font-family="LiberationSans" font-size="7pt" margin-right="40pt">******************* 2D barkod za plaćanje *******************</fo:block>
 </#escape>
