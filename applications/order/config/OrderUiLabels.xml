@@ -3498,7 +3498,7 @@
         <value xml:lang="de">Neue Anmerkung zu Angebot erstellen</value>
         <value xml:lang="de_CH">Neue Anmerkung zu Offerte erstellen</value>
         <value xml:lang="en">Create New Quote Note</value>
-        <value xml:lang="hr">Napravi novu bilješku ponude</value>
+        <value xml:lang="hr">Napravi novu napomenu ponude</value>
         <value xml:lang="zh">新建询价便笺</value>
     </property>
     <property key="OrderCreateOrderQuoteRole">
@@ -5310,7 +5310,7 @@
         <value xml:lang="es">es un ítem promocional</value>
         <value xml:lang="fr">C'est un article en promotion</value>
         <value xml:lang="hi_IN">एक प्रोत्साहन सामान है</value>
-        <value xml:lang="hr">Je promocijski artikl</value>
+        <value xml:lang="hr">Promocijski artikl</value>
         <value xml:lang="it">E' una Voce Promozionale</value>
         <value xml:lang="ja">プロモーションアイテム</value>
         <value xml:lang="nl">Is een promo</value>
@@ -5329,7 +5329,7 @@
         <value xml:lang="es">es Regalo</value>
         <value xml:lang="fr">C'est un cadeau</value>
         <value xml:lang="hi_IN">उपहार है</value>
-        <value xml:lang="hr">Je poklon</value>
+        <value xml:lang="hr">Poklon</value>
         <value xml:lang="it">E' omaggio</value>
         <value xml:lang="ja">ギフト</value>
         <value xml:lang="nl">Het is een geschenk</value>
@@ -7332,7 +7332,7 @@
         <value xml:lang="en">Order Entry</value>
         <value xml:lang="es">Crear pedido</value>
         <value xml:lang="fr">Création</value>
-        <value xml:lang="hr">Stavka narudžbe</value>
+        <value xml:lang="hr">Izrada narudžbe</value>
         <value xml:lang="it">Inserimento ordine</value>
         <value xml:lang="ja">注文エントリ</value>
         <value xml:lang="nl">Invoeren bestelling</value>
@@ -8473,7 +8473,7 @@
         <value xml:lang="en">Quote Item Seq Id</value>
         <value xml:lang="es">Nº sec. ítem</value>
         <value xml:lang="fr">Réf. séq. de ligne de devis</value>
-        <value xml:lang="hr">Sekv. Id stavke ponude</value>
+        <value xml:lang="hr">Red.br. stavke ponude</value>
         <value xml:lang="it">Numero Sequenza Riga Preventivo</value>
         <value xml:lang="ja">見積アイテム連番ID</value>
         <value xml:lang="nl">Volgnr. offerte-element</value>
