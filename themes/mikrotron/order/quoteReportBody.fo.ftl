@@ -160,7 +160,7 @@ under the License.
             <#-- Grand total -->
             <#assign grandTotalQuoteAmount = totalQuoteAmount + totalQuoteHeaderAdjustmentAmount>
             <#assign grandTotalQuoteAmountCents = grandTotalQuoteAmount*100>
-            <#assign grandTotalQuoteBaseAmount = totalQuoteAmount / (1 + taxRate)>
+            <#assign grandTotalQuoteBaseAmount = grandTotalQuoteAmount / (1 + taxRate)>
             <#assign grandTotalQuoteTaxAmount = grandTotalQuoteAmount - grandTotalQuoteBaseAmount>
             <fo:table-row border-top="thin solid grey">
                 <fo:table-cell padding="2pt"></fo:table-cell>
