@@ -386,7 +386,8 @@ under the License.
             <fo:block>${taxRate.description?if_exists}</fo:block>
         </fo:table-cell>
         <fo:table-cell number-columns-spanned="1" text-align="right">
-            <fo:block><@ofbizCurrency amount=vatTaxesByType[vatTaxId] isoCode=invoice.currencyUomId?if_exists/></fo:block>
+            <fo:block><@ofbizCurrency amount=invoiceTaxTotal isoCode=invoice.currencyUomId?if_exists/></fo:block>
+            <#--<fo:block><@ofbizCurrency amount=vatTaxesByType[vatTaxId] isoCode=invoice.currencyUomId?if_exists/></fo:block>-->
         </fo:table-cell>
     </fo:table-row>
     </#list>
