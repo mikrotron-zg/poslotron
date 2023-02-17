@@ -44,7 +44,7 @@ under the License.
       </#if>
       <#if errorMessageList?has_content>
         <#list errorMessageList as errorMsg>
-          <p>${StringUtil.wrapString(errorMsg)}</p>
+          <li>${StringUtil.wrapString(errorMsg)}</li>
         </#list>
       </#if>
     </div>
@@ -58,7 +58,7 @@ under the License.
       </#if>
       <#if eventMessageList?has_content>
         <#list eventMessageList as eventMsg>
-          <p>${StringUtil.wrapString(eventMsg)}</p>
+          <li>${StringUtil.wrapString(eventMsg)}</li>
         </#list>
       </#if>
     </div>

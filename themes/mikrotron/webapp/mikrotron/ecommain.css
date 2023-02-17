@@ -334,7 +334,6 @@ margin:0 10px 0 0;
 
 #content-messages {
 color:red;
-font-size:12pt;
 font-weight:700;
 }
 
@@ -689,6 +688,18 @@ color:red;
 color:red;
 font-size:8pt;
 font-weight:700;
+}
+
+ul.errormessage{
+margin:0;
+}
+
+.errorMessage {
+background-color: #FFFFEE;
+border: solid #000000 0.1em;
+font-weight: bold;
+margin: 1em;
+padding: 1em;
 }
 
 .eventmessage {

@@ -3400,7 +3400,7 @@
         <value xml:lang="es">Linea de Dirección 1</value>
         <value xml:lang="fr">1ère ligne d'adresse</value>
         <value xml:lang="hi_IN">पता लाइन १</value>
-        <value xml:lang="hr">Adresa - red 1</value>
+        <value xml:lang="hr">Ulica i kućni broj</value>
         <value xml:lang="it">Indirizzo riga 1</value>
         <value xml:lang="ja">住所行1</value>
         <value xml:lang="nl">Adres lijn 1</value>
@@ -3419,7 +3419,7 @@
         <value xml:lang="es">Falta ingresar dirección línea 1</value>
         <value xml:lang="fr">1ère ligne d'adresse vide</value>
         <value xml:lang="hi_IN">पता लाइन १ गायब है</value>
-        <value xml:lang="hr">Nedostaje adresa, red 1</value>
+        <value xml:lang="hr">Nedostaje ulica i kućni broj</value>
         <value xml:lang="it">Indirizzo riga 1 è mancante</value>
         <value xml:lang="ja">住所行1が正しくありません</value>
         <value xml:lang="nl">Adresregel 1 ontbreekt</value>
@@ -3459,7 +3459,7 @@
         <value xml:lang="es">Linea de Dirección 2</value>
         <value xml:lang="fr">2ème ligne d'adresse</value>
         <value xml:lang="hi_IN">पता लाइन २</value>
-        <value xml:lang="hr">Adresa - red 2</value>
+        <value xml:lang="hr">Adresa - dodatni podaci</value>
         <value xml:lang="it">Indirizzo riga 2</value>
         <value xml:lang="ja">住所行2</value>
         <value xml:lang="nl">Adreslijn 2</value>
@@ -5090,7 +5090,7 @@
         <value xml:lang="es">Teléfono de Contacto</value>
         <value xml:lang="fr">N° de téléphone</value>
         <value xml:lang="hi_IN">सम्पर्क नम्बर</value>
-        <value xml:lang="hr">Telefon za kontakt</value>
+        <value xml:lang="hr">Telefonski broj</value>
         <value xml:lang="it">Contatto numero</value>
         <value xml:lang="ja">連絡番号</value>
         <value xml:lang="nl">Contactnummer</value>
@@ -5110,7 +5110,7 @@
         <value xml:lang="es">Falta Teléfono de Contacto</value>
         <value xml:lang="fr">N° de téléphone absent</value>
         <value xml:lang="hi_IN">सम्पर्क नम्बर नही है</value>
-        <value xml:lang="hr">Nedostaje kontakt broj</value>
+        <value xml:lang="hr">Nedostaje telefonski broj</value>
         <value xml:lang="it">N° Contatto mancante</value>
         <value xml:lang="ja">連絡番号が正しくありません</value>
         <value xml:lang="nl">Contactnummer mist</value>
@@ -7249,7 +7249,7 @@
         <value xml:lang="es">Teléfono de casa</value>
         <value xml:lang="fr">Téléphone personnel</value>
         <value xml:lang="hi_IN">घर का नम्बर</value>
-        <value xml:lang="hr">Doma</value>
+        <value xml:lang="hr">Fiksni</value>
         <value xml:lang="it">Telefono di casa</value>
         <value xml:lang="ja">自宅電話番号</value>
         <value xml:lang="nl">Huis telefoon</value>
