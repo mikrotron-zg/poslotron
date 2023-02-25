@@ -16034,6 +16034,10 @@
     	<value xml:lang="en">VAT ID</value>
     	<value xml:lang="hr">OIB</value>
     </property>
+    <property key="AccountingVatIdMissing">
+    	<value xml:lang="en">VAT ID is missing</value>
+    	<value xml:lang="hr">Nedostaje OIB</value>
+    </property>
     <property key="AccountingVendorParty">
         <value xml:lang="en">Vendor Party</value>
         <value xml:lang="fr">Réf. vendeur</value>

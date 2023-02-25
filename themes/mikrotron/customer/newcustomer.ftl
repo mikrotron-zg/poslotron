@@ -79,10 +79,14 @@ will generally always be reserved for the logo at the top of the page.
 ------------------------------------------------------------------------------->
 <div style="width: -webkit-max-content; width: -moz-max-content; width: max-content; margin:0 auto;">
   <h2>${uiLabelMap.PartyRequestNewAccount}</h2>
-    <span>
-      ${uiLabelMap.PartyAlreadyHaveAccount}, <a href='<@ofbizUrl>checkLogin/main</@ofbizUrl>'>${uiLabelMap.CommonLoginHere}</a>
-    </span>
-
+  <span>
+    ${uiLabelMap.PartyAlreadyHaveAccount}, <a href='<@ofbizUrl>checkLogin/main</@ofbizUrl>'>${uiLabelMap.CommonLoginHere}</a>,
+    <#if (locale == 'hr')>
+      a firmu (pravnu osobu) možete <a href='<@ofbizUrl>newcompany</@ofbizUrl>'>registrirati ovdje</a>.
+    <#else>
+      if you want to register as company <a href='<@ofbizUrl>newcompany</@ofbizUrl>'>click here</a>.
+    </#if>
+  </span>
 
   <#macro fieldErrors fieldName>
     <#if errorMessageList?has_content>
@@ -168,7 +172,7 @@ will generally always be reserved for the logo at the top of the page.
       <div>
         <label for="USER_FIRST_NAME">${uiLabelMap.PartyFirstName}*</label>
         <@fieldErrors fieldName="USER_FIRST_NAME"/>
-        <input type="text" name="USER_FIRST_NAME" id="USER_FIRST_NAME" style="background-color:#FFFFE0; border:solid 1px;"
+        <input type="text" name="USER_FIRST_NAME" id="USER_FIRST_NAME" style="background-color:#FFFFE0; border:#999 solid 1px;"
           value="${requestParameters.USER_FIRST_NAME?if_exists}" />
       </div>
 
@@ -181,7 +185,7 @@ will generally always be reserved for the logo at the top of the page.
       <div>
         <label for="USER_LAST_NAME">${uiLabelMap.PartyLastName}*</label>
         <@fieldErrors fieldName="USER_LAST_NAME"/>
-        <input type="text" name="USER_LAST_NAME" id="USER_LAST_NAME" style="background-color:#FFFFE0; border:solid 1px;"
+        <input type="text" name="USER_LAST_NAME" id="USER_LAST_NAME" style="background-color:#FFFFE0; border:#999 solid 1px;"
           value="${requestParameters.USER_LAST_NAME?if_exists}" />
       </div>
 
@@ -198,7 +202,7 @@ will generally always be reserved for the logo at the top of the page.
       <div>
         <label for="CUSTOMER_ADDRESS1">${uiLabelMap.PartyAddressLine1}*</label>
         <@fieldErrors fieldName="CUSTOMER_ADDRESS1"/>
-        <input type="text" name="CUSTOMER_ADDRESS1" id="CUSTOMER_ADDRESS1" style="background-color:#FFFFE0; border:solid 1px;"
+        <input type="text" name="CUSTOMER_ADDRESS1" id="CUSTOMER_ADDRESS1" style="background-color:#FFFFE0; border:#999 solid 1px;"
           value="${requestParameters.CUSTOMER_ADDRESS1?if_exists}" />
       </div>
 
@@ -211,21 +215,21 @@ will generally always be reserved for the logo at the top of the page.
       <div>
         <label for="CUSTOMER_CITY">${uiLabelMap.PartyCity}*</label>
         <@fieldErrors fieldName="CUSTOMER_CITY"/>
-        <input type="text" name="CUSTOMER_CITY" id="CUSTOMER_CITY" style="background-color:#FFFFE0; border:solid 1px;"
+        <input type="text" name="CUSTOMER_CITY" id="CUSTOMER_CITY" style="background-color:#FFFFE0; border:#999 solid 1px;"
           value="${requestParameters.CUSTOMER_CITY?if_exists}" />
       </div>
 
       <div>
         <label for="CUSTOMER_POSTAL_CODE">${uiLabelMap.PartyZipCode}*</label>
         <@fieldErrors fieldName="CUSTOMER_POSTAL_CODE"/>
-        <input type="text" name="CUSTOMER_POSTAL_CODE" id="CUSTOMER_POSTAL_CODE" style="background-color:#FFFFE0; border:solid 1px;" 
+        <input type="text" name="CUSTOMER_POSTAL_CODE" id="CUSTOMER_POSTAL_CODE" style="background-color:#FFFFE0; border:#999 solid 1px;" 
           value="${requestParameters.CUSTOMER_POSTAL_CODE?if_exists}" />
       </div>
 
       <div>
           <label for="customerCountry">${uiLabelMap.CommonCountry}*</label>
           <@fieldErrors fieldName="CUSTOMER_COUNTRY"/>
-          <select name="CUSTOMER_COUNTRY" id="newuserform_countryGeoId" style="width:184px; background-color:#FFFFE0; border:solid 1px;">
+          <select name="CUSTOMER_COUNTRY" id="newuserform_countryGeoId" style="width:184px; background-color:#FFFFE0; border:#999 solid 1px;">
               ${screens.render("component://common/widget/CommonScreens.xml#countries")}
               <#assign defaultCountryGeoId = Static["org.ofbiz.base.util.UtilProperties"].getPropertyValue("general.properties", "country.geo.id.default")>
               <option selected="selected" value="${defaultCountryGeoId}">
@@ -260,7 +264,7 @@ will generally always be reserved for the logo at the top of the page.
       <div>
         <label for= "CUSTOMER_EMAIL">${uiLabelMap.PartyEmailAddress}*</label>
         <@fieldErrors fieldName="CUSTOMER_EMAIL"/>
-        <input type="text" name="CUSTOMER_EMAIL" id="CUSTOMER_EMAIL" style="width:386px; background-color:#FFFFE0; border:solid 1px;" 
+        <input type="text" name="CUSTOMER_EMAIL" id="CUSTOMER_EMAIL" style="width:386px; background-color:#FFFFE0; border:#999 solid 1px;" 
           value="${requestParameters.CUSTOMER_EMAIL?if_exists}" onchange="changeEmail()" onkeyup="changeEmail()" />
       </div>
   <#--
@@ -375,7 +379,20 @@ will generally always be reserved for the logo at the top of the page.
     <fieldset class="col">
       <legend><#if getUsername>${uiLabelMap.CommonUsername}</#if></legend>
       <#if getUsername>
-        <@fieldErrors fieldName="USERNAME"/>
+
+        <div>
+          <label for="USERNAME">${uiLabelMap.CommonUsername}*</label>
+          <@fieldErrors fieldName="USERNAME"/>
+          <#if requestParameters.preferredUsername?has_content>
+              <input type="text" name="showUserName" id="showUserName" style="background-color:#FFFFE0; border:#999 solid 1px;"
+                value="${requestParameters.USERNAME?if_exists}" disabled="disabled"/>
+              <input type="hidden" name="USERNAME" id="USERNAME" value="${requestParameters.USERNAME?if_exists}"/>
+          <#else>
+              <input type="text" name="USERNAME" id="USERNAME" style="background-color:#FFFFE0; border:#999 solid 1px;"
+                value="${requestParameters.USERNAME?if_exists}" onfocus="clickUsername();" onchange="changeEmail();"/>
+          </#if>
+        </div>
+
         <#if !requestParameters.preferredUsername?has_content>
           <div class="form-row inline">
             <label for="UNUSEEMAIL">
@@ -383,18 +400,6 @@ will generally always be reserved for the logo at the top of the page.
             </label>
           </div>
         </#if>
-
-        <div>
-          <label for="USERNAME">${uiLabelMap.CommonUsername}*</label>
-          <#if requestParameters.preferredUsername?has_content>
-              <input type="text" name="showUserName" id="showUserName" style="background-color:#FFFFE0; border:solid 1px;"
-                value="${requestParameters.USERNAME?if_exists}" disabled="disabled"/>
-              <input type="hidden" name="USERNAME" id="USERNAME" value="${requestParameters.USERNAME?if_exists}"/>
-          <#else>
-              <input type="text" name="USERNAME" id="USERNAME" style="background-color:#FFFFE0; border:solid 1px;"
-                value="${requestParameters.USERNAME?if_exists}" onfocus="clickUsername();" onchange="changeEmail();"/>
-          </#if>
-        </div>
       </#if>
     </fieldset>
 
@@ -404,13 +409,13 @@ will generally always be reserved for the logo at the top of the page.
         <div>
           <label for="PASSWORD">${uiLabelMap.CommonPassword}*</label>
           <@fieldErrors fieldName="PASSWORD"/>
-          <input type="password" name="PASSWORD" id="PASSWORD" style="background-color:#FFFFE0; border:solid 1px;" onfocus="setLastFocused(this);"/>
+          <input type="password" name="PASSWORD" id="PASSWORD" style="background-color:#FFFFE0; border:#999 solid 1px;" onfocus="setLastFocused(this);"/>
         </div>
 
         <div>
           <label for="CONFIRM_PASSWORD">${uiLabelMap.PartyRepeatPassword}*</label>
           <@fieldErrors fieldName="CONFIRM_PASSWORD"/>
-          <input type="password" class='inputBox' name="CONFIRM_PASSWORD" id="CONFIRM_PASSWORD" style="background-color:#FFFFE0; border:solid 1px;" value="" maxlength="50"/>
+          <input type="password" class='inputBox' name="CONFIRM_PASSWORD" id="CONFIRM_PASSWORD" style="background-color:#FFFFE0; border:#999 solid 1px;" value="" maxlength="50"/>
         </div>
 
         <div>

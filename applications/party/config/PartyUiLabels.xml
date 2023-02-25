@@ -3439,7 +3439,7 @@
         <value xml:lang="es">Falta Linea de Dirección 1</value>
         <value xml:lang="fr">1ère ligne d'adresse vide</value>
         <value xml:lang="hi_IN">पता लाइन १ नही है</value>
-        <value xml:lang="hr">Nedostaje adresa red 1</value>
+        <value xml:lang="hr">Nedostaje ulica i kućni broj</value>
         <value xml:lang="it">Indirizzo riga 1 mancante</value>
         <value xml:lang="ja">住所行1が正しくありません</value>
         <value xml:lang="nl">Adreslijn 1 mist</value>
@@ -3471,6 +3471,10 @@
         <value xml:lang="vi">Dòng địa chỉ 2</value>
         <value xml:lang="zh">地址行2</value>
         <value xml:lang="zh_TW">地址行2</value>
+    </property>
+    <property key="PartyAddressMailing">
+        <value xml:lang="en">Mailing Address</value>
+        <value xml:lang="hr">Poštanska adresa</value>
     </property>
     <property key="PartyAddressMailingShipping">
         <value xml:lang="de">Versandadresse</value>
@@ -4037,7 +4041,7 @@
         <value xml:lang="es">Teléfono del Trabajo</value>
         <value xml:lang="fr">Téléphone professionnel</value>
         <value xml:lang="hi_IN">व्यापार फोन</value>
-        <value xml:lang="hr">Posao</value>
+        <value xml:lang="hr">Poslovni</value>
         <value xml:lang="it">Telefono di lavoro</value>
         <value xml:lang="ja">会社電話番号</value>
         <value xml:lang="nl">Zakelijk telefoonnummer</value>
@@ -6675,7 +6679,7 @@
         <value xml:lang="es">Extension</value>
         <value xml:lang="fr">Extension</value>
         <value xml:lang="hi_IN">विस्तार</value>
-        <value xml:lang="hr">Lokal</value>
+        <value xml:lang="hr">Kućni</value>
         <value xml:lang="it">Interno</value>
         <value xml:lang="ja">内線</value>
         <value xml:lang="nl">Toestel</value>

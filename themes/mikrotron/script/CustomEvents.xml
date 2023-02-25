@@ -42,6 +42,7 @@
             <simple-map-processor name="newPartyGroup">
                 <process field="partyId"><copy/></process>
                 <process field="groupName"><copy to-field="groupName"/><not-empty><fail-property resource="SetupUiLabels" property="SetupOrganizationNameIsMissing"/></not-empty></process>
+                <process field="TAX_ID"><not-empty><fail-property resource="AccountingUiLabels" property="AccountingVatIdMissing"/></not-empty></process>
             </simple-map-processor>
         </call-map-processor>
 
@@ -56,6 +57,7 @@
                     <simple-map-processor name="newPerson">
                         <process field="roleTypeId"><copy/></process>
                         <process field="groupName"><copy to-field="toName"/></process>
+                        <process field="USER_FIRST_NAME"><copy to-field="attnName"/><not-empty><fail-property resource="PartyUiLabels" property="PartyFirstNameMissing"/></not-empty></process>
                         <process field="USER_ADDRESS1"><copy to-field="address1"/><not-empty><fail-property resource="PartyUiLabels" property="PartyAddressLine1Missing"/></not-empty></process>
                         <process field="USER_ADDRESS2"><copy to-field="address2"/></process>
                         <process field="USER_CITY"><copy to-field="city"/><not-empty><fail-property resource="PartyUiLabels" property="PartyCityMissing"/></not-empty></process>
@@ -79,6 +81,18 @@
                 </if-compare>
             </else>
         </if-compare>
+        <!-- Create the Mobile Phone -->
+        <if-not-empty field="parameters.USER_MOBILE_CONTACT">
+            <call-map-processor in-map-name="parameters" out-map-name="mobilePhoneContext">
+                <simple-map-processor name="newTelecomNumber">
+                    <process field="roleTypeId"><copy/></process>
+                    <process field="USER_MOBILE_COUNTRY"><copy to-field="countryCode"/></process>
+                    <process field="USER_MOBILE_AREA"><copy to-field="areaCode"/></process>
+                    <process field="USER_MOBILE_CONTACT"><copy to-field="contactNumber"/></process>
+                    <process field="USER_MOBILE_ALLOW_SOL"><copy to-field="allowSolicitation"/></process>
+                </simple-map-processor>
+            </call-map-processor>
+        </if-not-empty>
         <!-- Create the Work Phone -->
         <if-not-empty field="parameters.USER_WORK_CONTACT">
             <call-map-processor in-map-name="parameters" out-map-name="workPhoneContext">
@@ -134,8 +148,9 @@
             <if-empty field="emailContext.emailAddress">
                 <call-map-processor in-map-name="emailContext" out-map-name="dummymap">
                     <simple-map-processor name="checkRequiredEmail">
-                        <process field="emailAddress">
-                            <not-empty><fail-property resource="PartyUiLabels" property="PartyEmailAddressMissing"/></not-empty>
+                        <process field="USER_EMAIL">
+                            <copy to-field="emailAddress"/>
+                            <not-empty><fail-property resource="PartyUiLabels" property="PartyEmailAddressMissingError"/></not-empty>
                         </process>
                     </simple-map-processor>
                 </call-map-processor>
@@ -152,6 +167,16 @@
                 </call-map-processor>
             </if-not-empty>
         </if-compare>
+        <call-map-processor in-map-name="parameters" out-map-name="userLoginContext">
+            <simple-map-processor name="newUserLogin">
+                <process field="USERNAME"><not-empty><fail-property resource="PartyUiLabels" property="PartyUserLoginMissingError"/></not-empty></process>
+                <process field="PASSWORD"><not-empty><fail-property resource="PartyUiLabels" property="PartyPasswordMissing"/></not-empty></process>
+                <process field="CONFIRM_PASSWORD">
+                    <compare-field operator="equals" field="PASSWORD"><fail-property resource="PartyUiLabels" property="PartyPasswordMatchError"/></compare-field>                    
+                </process>
+            </simple-map-processor>
+        </call-map-processor>
+        
         <!-- get the visit from the session to get the visitId -->
         <session-to-field field="visit"/>
 

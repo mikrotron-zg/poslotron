@@ -27,9 +27,11 @@ under the License.
         <#if billingAddress?has_content>
           <#assign billingPartyNameResult = dispatcher.runSync("getPartyNameForDate", Static["org.ofbiz.base.util.UtilMisc"].toMap("partyId", billingParty.partyId, "compareDate", invoice.invoiceDate, "userLogin", userLogin))/>
           <fo:block font-family="LiberationSans-Bold">${billingPartyNameResult.fullName?default(billingAddress.toName)?default("Billing Name Not Found")}</fo:block>
+          <#--
           <#if billingAddress.attnName?exists>
               <fo:block font-family="LiberationSans">${billingAddress.attnName}</fo:block>
           </#if>
+          -->
           <fo:block font-family="LiberationSans">${billingAddress.address1?if_exists}</fo:block>
           <#if billingAddress.address2?exists>
               <fo:block font-family="LiberationSans">${billingAddress.address2}</fo:block>
