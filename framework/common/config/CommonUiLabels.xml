@@ -1472,6 +1472,10 @@
         <value xml:lang="zh-CN">取消</value>
         <value xml:lang="zh-TW">取消</value>
     </property>
+    <property key="CommonCancelItem">
+        <value xml:lang="en">Cancel item</value>
+        <value xml:lang="hr">Otkaži stavku</value>
+    </property>
     <property key="CommonCancelAll">
         <value xml:lang="ar">إلغاء الكل</value>
         <value xml:lang="cs">Stornovat vše</value>
