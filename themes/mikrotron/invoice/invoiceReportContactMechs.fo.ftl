@@ -33,9 +33,9 @@ under the License.
           </#if>
           -->
           <fo:block font-family="LiberationSans">${billingAddress.address1?if_exists}</fo:block>
-          <#if billingAddress.address2?exists>
+          <#--<#if billingAddress.address2?exists>
               <fo:block font-family="LiberationSans">${billingAddress.address2}</fo:block>
-          </#if>
+          </#if>-->
           <fo:block font-family="LiberationSans">
             ${billingAddress.postalCode?if_exists} ${billingAddress.city?if_exists}
             <#if billingAddress.stateProvinceGeoId?exists && billingAddress.stateProvinceGeoId != "_NA_">
