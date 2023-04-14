@@ -339,10 +339,10 @@ will generally always be reserved for the logo at the top of the page.
           </tr>
           <tr>
             <th scope="row">${uiLabelMap.PartyBusinessPhone}</th>
-            <td><input type="text" name="USER_WORK_COUNTRY" size="5" value="${requestParameters.USER_WORK_COUNTRY?default('+385')}" /></td>
-            <td><input type="text" name="USER_WORK_AREA" size="5" value="${requestParameters.USER_WORK_AREA?if_exists}" /></td>
-            <td><input type="text" name="USER_WORK_CONTACT" value="${requestParameters.USER_WORK_CONTACT?if_exists}" /></td>
-            <td><input type="text" name="USER_WORK_EXT" size="6" value="${requestParameters.USER_WORK_EXT?if_exists}" /></td>
+            <td><input type="text" name="USER_WORK_COUNTRY" maxlength="5" size="5" value="${requestParameters.USER_WORK_COUNTRY?default('+385')}" /></td>
+            <td><input type="text" name="USER_WORK_AREA" maxlength="5" size="5" value="${requestParameters.USER_WORK_AREA?if_exists}" /></td>
+            <td><input type="text" name="USER_WORK_CONTACT" maxlength="20" value="${requestParameters.USER_WORK_CONTACT?if_exists}" /></td>
+            <td><input type="text" name="USER_WORK_EXT" maxlength="6" size="6" value="${requestParameters.USER_WORK_EXT?if_exists}" /></td>
             <#--
             <td>
               <select name="USER_WORK_ALLOW_SOL">
