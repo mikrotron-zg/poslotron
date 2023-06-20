@@ -865,14 +865,14 @@ $(function(){
             <#else>
                 <#assign assocProductId = productAssoc.productId />
             </#if>
-            <div>
+            <#--<div>
               <a href="<@ofbizUrl>${targetRequest}/<#if categoryId?exists>~category_id=${categoryId}/</#if>~product_id=${assocProductId}</@ofbizUrl>" class="buttontext">
                 ${assocProductId}
               </a>
             <#if productAssoc.reason?has_content>
               - <strong>${productAssoc.reason}</strong>
             </#if>
-            </div>
+            </div>-->
           ${setRequestAttribute("optProductId", assocProductId)}
           ${setRequestAttribute("listIndex", listIndex)}
           ${setRequestAttribute("formNamePrefix", formNamePrefix)}
