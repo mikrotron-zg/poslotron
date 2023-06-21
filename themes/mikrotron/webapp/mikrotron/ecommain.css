@@ -1899,3 +1899,12 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
         line-height: 1.1em;
     }
 }
+
+.logo-image {
+    filter: grayscale(100%) opacity(50%);
+    margin: 0.5em 1.5em 1.5em 1.5em;
+}
+
+.logo-image:hover {
+    filter: none;
+}
