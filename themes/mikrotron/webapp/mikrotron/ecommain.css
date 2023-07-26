@@ -61,7 +61,7 @@ dl dt { font-weight: bold; }
 dd { margin-left: 1.5em;}
 
 a, a:link, a:visited {text-decoration: none; color:#1C334D; font-weight:700;}
-a:hover {text-decoration: none; color:#111;}
+a:hover {text-decoration: none; color:#FF0000;}
 abbr,acronym {border-bottom: 1px dotted; cursor: help;}
 del {text-decoration: line-through;}
 ins {text-decoration: overline;}
