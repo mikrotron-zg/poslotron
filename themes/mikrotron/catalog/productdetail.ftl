@@ -796,6 +796,7 @@ $(function(){
       <div id="long-description">
           <div>${productContentWrapper.get("LONG_DESCRIPTION")?if_exists}</div>
           <div>${productContentWrapper.get("WARNINGS")?if_exists}</div>
+          <br>
       </div>
       <#-- Digital Download Files Associated with this Product -->
       <#if downloadProductContentAndInfoList?has_content>
@@ -856,6 +857,7 @@ $(function(){
         <#assign targetRequest = targetRequestName />
       </#if>
       <#if assocProducts?has_content>
+        <br>
         <h2>${beforeName?if_exists}<#if showName == "Y">${productContentWrapper.get("PRODUCT_NAME")?if_exists}</#if>${afterName?if_exists}</h2>
 
         <div class="productsummary-container">
