@@ -68,7 +68,6 @@ under the License.
 
 
 <#if productCategory?exists>
-    <br>
     <#assign categoryName = categoryContentWrapper.get("CATEGORY_NAME")?if_exists/>
     <#assign categoryDescription = categoryContentWrapper.get("DESCRIPTION")?if_exists/>
     <#--
