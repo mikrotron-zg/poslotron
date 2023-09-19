@@ -97,4 +97,14 @@ under the License.
     </#list>
     </script>
   </#if>
+  
+  <#-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYRV2LCL0M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYRV2LCL0M');
+  </script>
 </head>
