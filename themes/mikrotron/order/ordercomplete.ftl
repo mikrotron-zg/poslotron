@@ -22,6 +22,13 @@ under the License.
   ${screens.render("component://mikrotron/widget/OrderScreens.xml#orderheader")}
   ${screens.render("component://mikrotron/widget/OrderScreens.xml#orderitems")}
   <a href="<@ofbizUrl>main</@ofbizUrl>" class="buttontextbig">${uiLabelMap.EcommerceContinueShopping}</a>
+  <#-- Event snippet for Website sale conversion page -->
+  <script>
+    gtag('event', 'conversion', {
+        'send_to': 'AW-11340369487/JLD4CIeP1uIYEM-cwZ8q',
+        'transaction_id': ''
+    });
+  </script>
 <#else>
   <h3>${uiLabelMap.OrderSpecifiedNotFound}.</h3>
 </#if>

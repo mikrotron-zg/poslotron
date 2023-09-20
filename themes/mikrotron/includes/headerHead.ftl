@@ -106,5 +106,6 @@ under the License.
     gtag('js', new Date());
 
     gtag('config', 'G-PYRV2LCL0M');
+    gtag('config', 'AW-11340369487');
   </script>
 </head>
