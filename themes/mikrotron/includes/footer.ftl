@@ -28,32 +28,32 @@ under the License.
         Brandovi u našem web dućanu
       </#if>
     </h4>
-    <div style="margin-bottom: 1em">
-      <a target="_blank" href="https://www.adafruit.com/">
+    <div style="margin-bottom: 1em;">
+      <a href="/control/category/~category_id=adafruit/~pcategory=brands">
         <img class="logo-image" src="<@ofbizContentUrl>/images/logo/adafruit_logo.png</@ofbizContentUrl>" alt="Adafruit logo"/>
       </a>
-      <a target="_blank" href="https://www.arduino.cc/">
+      <a href="/control/category/~category_id=arduino_original/~pcategory=brands">
         <img class="logo-image" src="<@ofbizContentUrl>/images/logo/arduino_logo.png</@ofbizContentUrl>" alt="Arduino logo"/>
       </a>
-      <a target="_blank" href="https://www.creality.com/">
+      <a href="/control/category/~category_id=creality/~pcategory=brands">
         <img class="logo-image" src="<@ofbizContentUrl>/images/logo/creality_logo.png</@ofbizContentUrl>" alt="Creality logo"/>
       </a>
-      <a target="_blank" href="https://devildesign.com/">
+      <a href="/control/category/~category_id=devildesign/~pcategory=brands">
         <img class="logo-image" src="<@ofbizContentUrl>/images/logo/devil_logo.png</@ofbizContentUrl>" alt="Devil Design logo"/>
       </a>
-      <a target="_blank" href="https://e3d-online.com/">
+      <a href="/control/category/~category_id=e3d/~pcategory=brands">
         <img class="logo-image" src="<@ofbizContentUrl>/images/logo/e3d_logo.png</@ofbizContentUrl>" alt="E3D logo"/>
       </a>
-      <a target="_blank" href="https://soldered.com/">
+      <a href="/control/category/~category_id=e-radionica/~pcategory=brands">
         <img class="logo-image" src="<@ofbizContentUrl>/images/logo/soldered_logo.png</@ofbizContentUrl>" alt="Soldered logo"/>
       </a>
-      <a target="_blank" href="https://fiberlogy.com/en/">
+      <a href="/control/category/~category_id=fiberlogy/~pcategory=brands">
         <img class="logo-image" src="<@ofbizContentUrl>/images/logo/fiberlogy_logo.png</@ofbizContentUrl>" alt="Fiberlogy logo"/>
       </a>
-      <a target="_blank" href="https://www.raspberrypi.org/">
+      <a href="/control/category/~category_id=raspberry/~pcategory=brands">
         <img class="logo-image" src="<@ofbizContentUrl>/images/logo/rpi_logo.png</@ofbizContentUrl>" alt="Raspberry Pi logo"/>
       </a>
-      <a target="_blank" href="https://www.robotdigg.com/">
+      <a href="/control/category/~category_id=robotdigg/~pcategory=brands">
         <img class="logo-image" src="<@ofbizContentUrl>/images/logo/robotdigg_logo.png</@ofbizContentUrl>" alt="Robotdigg logo"/>
       </a>
     </div>
@@ -64,8 +64,7 @@ under the License.
     <div>Powered by <a href="http://ofbiz.apache.org">Apache OFBiz</a></div>
   </div>
 
-  <div style="color:#808080;">
-    <hr style="height:1px;border-width:0;color:#C0C0C0;background-color:#C0C0C0;">
+  <div style="color:#ffffff;background-color:#A0A0A0;margin-top:1em;padding-top:1em;padding-bottom:1em;">
     Naziv tvrtke: MIKROTRON društvo s ograničenom odgovornošću za trgovinu i usluge • Skraćeni naziv: MIKROTRON d.o.o. • Sudski registar: Trgovački sud u Zagrebu • MBS: 080923147 • MB: 4251717 • Temeljni kapital: 20.000,00 kn uplaćen u cijelosti • Uprava društva: Josip Almaši, Tomislav Preksavec • OIB: 43227166836 • Poslovni račun kod: Privredna banka d.d. Zagreb • IBAN: HR8023400091110675464
   </div>
 </div>
