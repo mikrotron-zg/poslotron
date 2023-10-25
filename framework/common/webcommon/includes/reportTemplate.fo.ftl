@@ -29,7 +29,7 @@ under the License.
               margin-top="1.0cm" margin-bottom="1.0cm"
               margin-left="1.5cm" margin-right="0.5cm">
             <#-- main body -->
-            <fo:region-body margin-top="3.0cm" margin-bottom="1.0cm"/>
+            <fo:region-body margin-top="7.0cm" margin-bottom="1.0cm"/>
             <#-- the header -->
             <fo:region-before extent="2.5cm"/>
             <#-- the footer -->

@@ -22,47 +22,8 @@ under the License.
 <#list shipGroups as shipGroup>
   <#assign data = groupData.get(shipGroup.shipGroupSeqId)>
 
-  <#-- print the order ID, ship group, and their bar codes -->
-  <fo:table table-layout="fixed" space-after.optimum="10pt">
-    <fo:table-column column-width="proportional-column-width(4)"/>
-    <fo:table-column column-width="proportional-column-width(5)"/>
-    <fo:table-column column-width="proportional-column-width(1)"/>
-    <fo:table-body>
-      <fo:table-row>
-        <fo:table-cell></fo:table-cell>
-        <fo:table-cell>
-          <fo:block font-family="LiberationSans-Bold" font-size="16pt">Otpremnica: ${shipGroup.orderId}</fo:block>
-        </fo:table-cell>
-        <fo:table-cell>
-          <fo:block text-align="right">
-            <fo:instream-foreign-object>
-              <barcode:barcode xmlns:barcode="http://barcode4j.krysalis.org/ns" message="${shipGroup.orderId}">
-                <barcode:code39><barcode:height>8mm</barcode:height></barcode:code39>
-              </barcode:barcode>
-            </fo:instream-foreign-object>
-          </fo:block>
-        </fo:table-cell>
-      </fo:table-row>
-      <fo:table-row>
-        <fo:table-cell></fo:table-cell>
-        <fo:table-cell>
-          <fo:block font-size="14pt">Isporuka: ${shipGroup.shipGroupSeqId}</fo:block>
-        </fo:table-cell>
-        <fo:table-cell>
-          <fo:block text-align="right">
-            <fo:instream-foreign-object>
-              <barcode:barcode xmlns:barcode="http://barcode4j.krysalis.org/ns" message="${shipGroup.shipGroupSeqId}">
-                <barcode:code39><barcode:height>8mm</barcode:height></barcode:code39>
-              </barcode:barcode>
-            </fo:instream-foreign-object>
-          </fo:block>
-        </fo:table-cell>
-      </fo:table-row>
-    </fo:table-body>
-  </fo:table>
-
   <#-- print the address, carrier, and shipment dates -->
-  <fo:block space-after="20mm"/>
+  <fo:block space-after="2mm"/>
   <fo:table font-family="LiberationSans" font-size="10pt" table-layout="fixed" space-after.optimum="10pt">
     <fo:table-column column-width="proportional-column-width(2)"/>
     <fo:table-column column-width="proportional-column-width(1)"/>

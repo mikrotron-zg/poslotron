@@ -17,7 +17,6 @@ specific language governing permissions and limitations
 under the License.
 -->
 <#escape x as x?xml>
-<fo:block space-after="1.5in"/>
 
 <#if hasPermission>
 
