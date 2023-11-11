@@ -30,12 +30,12 @@ under the License.
       </#if>
       ${uiLabelMap.OrderOrderItems}
   </h3>
-  <table>
+  <table width="100%">
     <thead>
     <tr>
-      <th>${uiLabelMap.OrderProduct}</th>
+      <th style="vertical-align:middle;">${uiLabelMap.OrderProduct}</th>
       <#if maySelectItems?default("N") == "Y">
-        <th>${uiLabelMap.OrderQtyOrdered}</th>
+        <th style="vertical-align:middle;">${uiLabelMap.OrderQtyOrdered}</th>
         <th>${uiLabelMap.OrderQtyPicked}</th>
         <th>${uiLabelMap.OrderQtyShipped}</th>
         <th>${uiLabelMap.OrderQtyCanceled}</th>
@@ -43,10 +43,10 @@ under the License.
         <th></th>
         <th></th>
         <th></th>
-        <th>${uiLabelMap.OrderQtyOrdered}</th>
+        <th style="vertical-align:middle;">${uiLabelMap.OrderQtyOrdered}</th>
       </#if>
-      <th >${uiLabelMap.EcommerceUnitPrice}</th>
-      <th >${uiLabelMap.CommonSubtotal}</th>
+      <th style="vertical-align:middle;text-align:right;">${uiLabelMap.EcommerceUnitPrice}</th>
+      <th style="vertical-align:middle;text-align:right;">${uiLabelMap.CommonSubtotal}</th>
       <#if maySelectItems?default("N") == "Y" && roleTypeId?if_exists == "PLACING_CUSTOMER">
         <th colspan="3"></th>
       </#if>
@@ -104,7 +104,7 @@ under the License.
               </#if>
               <#if (product.weight?exists && product.weight != 0) || product.weightUomId?has_content>
                 <#assign weightUom = product.getRelatedOne("WeightUom", true)?if_exists/>
-                  [${uiLabelMap.CommonWeight}: ${product.weight?if_exists} ${((weightUom.abbreviation)?default(product.weightUomId))?if_exists}]
+                  <br/>[${uiLabelMap.ProductShippingWeight}: ${product.weight?if_exists} ${((weightUom.abbreviation)?default(product.weightUomId))?if_exists}]
               </#if>
               <#if (product.productHeight?exists && product.productHeight != 0) || product.heightUomId?has_content>
                 <#assign heightUom = product.getRelatedOne("HeightUom", true)?if_exists/>
@@ -141,7 +141,7 @@ under the License.
             <td></td>
             <td></td>
           </#if>
-          <td>
+          <td style="vertical-align:middle;text-align:right;">
             ${orderItem.quantity?string.number}
           </td>
           <#if maySelectItems?default("N") == "Y">
@@ -158,10 +158,10 @@ under the License.
             ${canceledQty?default(0)?string.number}
           </td>
           </#if>
-          <td>
+          <td style="vertical-align:middle;text-align:right;">
             <@ofbizCurrency amount=orderItem.unitPrice isoCode=currencyUomId/>
           </td>
-          <td>
+          <td style="vertical-align:middle;text-align:right;">
             <#if workEfforts?exists>
               <@ofbizCurrency amount=localOrderReadHelper.getOrderItemTotal(orderItem)*rentalQuantity isoCode=currencyUomId/>
             <#else>

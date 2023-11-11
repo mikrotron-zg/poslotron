@@ -16,12 +16,17 @@ KIND, either express or implied.  See the License for the
 specific language governing permissions and limitations
 under the License.
 -->
-<h2>${uiLabelMap.EcommerceOrderConfirmation}</h2>
+
 <#if !isDemoStore?exists || isDemoStore><p>${uiLabelMap.OrderDemoFrontNote}.</p></#if>
 <#if orderHeader?has_content>
-  ${screens.render("component://mikrotron/widget/OrderScreens.xml#orderheader")}
-  ${screens.render("component://mikrotron/widget/OrderScreens.xml#orderitems")}
-  <a href="<@ofbizUrl>main</@ofbizUrl>" class="buttontextbig">${uiLabelMap.EcommerceContinueShopping}</a>
+  <div style="width:600px;margin:auto;">
+    <h2>${uiLabelMap.EcommerceOrderConfirmation}</h2>
+    ${screens.render("component://mikrotron/widget/OrderScreens.xml#orderheader")}
+    ${screens.render("component://mikrotron/widget/OrderScreens.xml#orderitems")}
+    <div style="width:100%;text-align:center;">
+      <a href="<@ofbizUrl>main</@ofbizUrl>" class="buttontextbig">${uiLabelMap.EcommerceContinueShopping}</a>
+    </div>
+  </div>
   <#-- Event snippet for Website sale conversion page -->
   <script>
     gtag('event', 'conversion', {

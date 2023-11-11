@@ -34,32 +34,25 @@ under the License.
 // -->
 </script>
 
-<h1>${uiLabelMap.OrderFinalCheckoutReview}</h1>
-<#if !isDemoStore?exists && isDemoStore><p>${uiLabelMap.OrderDemoFrontNote}.</p></#if>
+<div style="width:600px;margin:auto;">
+  <h1>${uiLabelMap.OrderFinalCheckoutReview}</h1>
+  <#if !isDemoStore?exists && isDemoStore><p>${uiLabelMap.OrderDemoFrontNote}.</p></#if>
 
-<#if cart?exists && 0 < cart.size()>
-  ${screens.render("component://mikrotron/widget/OrderScreens.xml#orderheader")}
-  <br />
-  ${screens.render("component://mikrotron/widget/OrderScreens.xml#orderitems")}
-  <table border="0" cellpadding="1" width="100%">
-   <tr>
-      <td colspan="4">
-        &nbsp;
-      </td>
-      <td align="right">
-        <form type="post" action="<@ofbizUrl>processorder</@ofbizUrl>" name="${parameters.formNameValue}">
-          <#if (requestParameters.checkoutpage)?has_content>
-            <input type="hidden" name="checkoutpage" value="${requestParameters.checkoutpage}" />
-          </#if>
-          <#if (requestAttributes.issuerId)?has_content>
-            <input type="hidden" name="issuerId" value="${requestAttributes.issuerId}" />
-          </#if>
-          <input type="button" name="processButton" value="${uiLabelMap.OrderSubmitOrder}" onclick="processOrder();" class="mediumsubmit" />
-        </form>
-        <#-- doesn't work with Safari, seems to work with IE, Mozilla <a href="#" onclick="processOrder();" class="buttontextbig">[${uiLabelMap.OrderSubmitOrder}]&nbsp;</a> -->
-      </td>
-    </tr>
-  </table>
-<#else>
-  <h3>${uiLabelMap.OrderErrorShoppingCartEmpty}.</h3>
-</#if>
+  <#if cart?exists && 0 < cart.size()>
+    ${screens.render("component://mikrotron/widget/OrderScreens.xml#orderheader")}
+    <br />
+    ${screens.render("component://mikrotron/widget/OrderScreens.xml#orderitems")}
+    <form type="post" action="<@ofbizUrl>processorder</@ofbizUrl>" name="${parameters.formNameValue}" style="text-align:center;">
+      <#if (requestParameters.checkoutpage)?has_content>
+        <input type="hidden" name="checkoutpage" value="${requestParameters.checkoutpage}" />
+      </#if>
+      <#if (requestAttributes.issuerId)?has_content>
+        <input type="hidden" name="issuerId" value="${requestAttributes.issuerId}" />
+      </#if>
+      <input type="button" name="processButton" value="${uiLabelMap.OrderSubmitOrder}" onclick="processOrder();" class="mediumsubmit" style="font-size:1.5em;" />
+    </form>
+    <#-- doesn't work with Safari, seems to work with IE, Mozilla <a href="#" onclick="processOrder();" class="buttontextbig">[${uiLabelMap.OrderSubmitOrder}]&nbsp;</a> -->
+  <#else>
+    <h3>${uiLabelMap.OrderErrorShoppingCartEmpty}.</h3>
+  </#if>
+</div>
