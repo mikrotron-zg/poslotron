@@ -79,9 +79,9 @@ function submitForm(form, mode, value) {
   <input type="hidden" name="checkoutpage" value="quick"/>
   <input type="hidden" name="BACK_PAGE" value="quickcheckout"/>
 
-  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <table width="600px" border="0" cellpadding="0" cellspacing="0" style="margin:auto;">
     <tr valign="top">
-      <td height="100%">
+      <td height="100%" style="border-top:0;">
         <div class="screenlet" style="height: 100%; min-width:350px;">
             <div class="screenlet-title-bar">
                 <#if shipping == true>
@@ -91,8 +91,8 @@ function submitForm(form, mode, value) {
                 </#if>
             </div>
             <div class="screenlet-body" style="height: 100%;">
-                <table width="100%" border="0" cellpadding="1" cellspacing="0">
-<!--
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <!--
                   <tr>
                     <td colspan="2">
                       <span>${uiLabelMap.OrderShipToParty}:</span>
@@ -110,9 +110,9 @@ function submitForm(form, mode, value) {
                     </td>
                   </tr>
                   <#if (shoppingCart.getTotalQuantity() > 1) && !shoppingCart.containAllWorkEffortCartItems()> <#-- no splitting when only rental items -->
-                    <tr><td colspan="2"><hr /></td></tr>
+                    <#--<tr><td colspan="2"><hr /></td></tr>-->
                     <tr>
-                      <td colspan="2" align="center">
+                      <td colspan="2" align="center" style="border-top:0;">
                         <a href="<@ofbizUrl>splitship</@ofbizUrl>" class="buttontext">${uiLabelMap.OrderSplitIntoMultipleShipments}</a>
                         <#if (shoppingCart.getShipGroupSize() > 1)>
                           <div style="color: red;">${uiLabelMap.OrderNOTEMultipleShipmentsExist}.</div>
@@ -120,13 +120,13 @@ function submitForm(form, mode, value) {
                       </td>
                     </tr>
                   </#if>
--->
-                   <#if shippingContactMechList?has_content>
-<!--                     <tr><td colspan="2"><hr /></td></tr> -->
-                     <#list shippingContactMechList as shippingContactMech>
+                  -->
+                    <#if shippingContactMechList?has_content>
+                      <!--                     <tr><td colspan="2"><hr /></td></tr> -->
+                      <#list shippingContactMechList as shippingContactMech>
                        <#assign shippingAddress = shippingContactMech.getRelatedOne("PostalAddress")>
                        <tr>
-                         <td valign="top" width="1%">
+                         <td valign="top" width="1%" style="border-top:0;">
                            <input type="radio" name="shipping_contact_mech_id" 
                             value="${shippingAddress.contactMechId}" 
                             onclick="javascript:submitForm(document.checkoutInfoForm, 'SA', null);"
@@ -136,26 +136,31 @@ function submitForm(form, mode, value) {
                             <#if shoppingCart.getShippingContactMechId()?default("") == shippingAddress.contactMechId> checked="checked"</#if>
                          />
                          </td>
-                         <td valign="top" width="99%">
+                         <td valign="top" width="99%" style="border-top:0;">
                            <div>
                              <#if shippingAddress.toName?has_content><b>${uiLabelMap.CommonTo}:</b>&nbsp;${shippingAddress.toName}<br /></#if>
                              <#if shippingAddress.attnName?has_content><b>${uiLabelMap.PartyAddrAttnName}:</b>&nbsp;${shippingAddress.attnName}<br /></#if>
                              <#if shippingAddress.address1?has_content>${shippingAddress.address1}<br /></#if>
                              <#if shippingAddress.address2?has_content>${shippingAddress.address2}<br /></#if>
+                             <#if shippingAddress.postalCode?has_content>${shippingAddress.postalCode}</#if>
                              <#if shippingAddress.city?has_content>${shippingAddress.city}</#if>
-                             <#if shippingAddress.stateProvinceGeoId?has_content><br />${shippingAddress.stateProvinceGeoId}</#if>
-                             <#if shippingAddress.postalCode?has_content><br />${shippingAddress.postalCode}</#if>
                              <#if shippingAddress.countryGeoId?has_content><br />${shippingAddress.countryGeoId}</#if>
+                             <br />
                              <a href="javascript:submitForm(document.checkoutInfoForm, 'EA', '${shippingAddress.contactMechId}');" class="buttontext">${uiLabelMap.CommonUpdate}</a>
                            </div>
                          </td>
                        </tr>
-                       <#if shippingContactMech_has_next>
+                       <#--<#if shippingContactMech_has_next>
                          <tr><td colspan="2"><hr /></td></tr>
-                       </#if>
-                     </#list>
-                   </#if>
-                 </table>
+                       </#if>-->
+                      </#list>
+                    </#if>
+                  <tr>
+                    <td colspan="2" style="text-align:right;">
+                      <a href="javascript:submitForm(document.checkoutInfoForm, 'NA', '');" class="buttontext">${uiLabelMap.PartyAddNewAddress}</a>
+                    </td>
+                   </tr>
+                </table>
 
                 <#-- Party Tax Info -->
                 <#-- commented out by default because the TaxAuthority drop-down is just too wide...
@@ -166,8 +171,10 @@ function submitForm(form, mode, value) {
             </div>
         </div>
       </td>
-      <td bgcolor="white" width="1">&nbsp;&nbsp;</td>
-      <td height="100%">
+    </tr>
+    <tr>
+      <#--<td bgcolor="white" width="1">&nbsp;&nbsp;</td>-->
+      <td height="100%" style="border-top:0;">
         <div class="screenlet" style="height: 100%; min-width:350px;">
             <div class="screenlet-title-bar">
                 <#if shipping == true>
@@ -177,47 +184,46 @@ function submitForm(form, mode, value) {
                 </#if>
             </div>
             <div class="screenlet-body" style="height: 100%;">
-                <table width="100%" cellpadding="1" border="0" cellpadding="0" cellspacing="0">
-				<tr>
-				  <td width="1%" valign="top">
-                 <#if shipping == true>
-                  <#assign checkFirst = true />
-                  <#list carrierShipmentMethodList as carrierShipmentMethod>
-                    <#assign shippingMethod = carrierShipmentMethod.shipmentMethodTypeId + "@" + carrierShipmentMethod.partyId>
-                        <input type="radio" name="shipping_method" value="${shippingMethod}"
-                          <#--
-                          <#if shippingMethod == chosenShippingMethod?default("N@A")>checked="checked"</#if>
-                          -->
-                          <#if checkFirst>
-                            checked="checked"
-                            <#assign checkFirst = false />
-                          </#if>
+              <table width="100%" cellpadding="1" border="0" cellpadding="0" cellspacing="0">
+                <#if shipping == true && shoppingCart.getShippingContactMechId()?exists>
+                  <tr>
+                    <td colspan="2" valign="top" style="border-top:0;">
+                      <#list carrierShipmentMethodList as carrierShipmentMethod>
+                        <#assign shippingMethod = carrierShipmentMethod.shipmentMethodTypeId + "@" + carrierShipmentMethod.partyId>
+                        <input type="radio" name="shipping_method" value="${shippingMethod}" 
+                          <#--<#if shippingMethod == chosenShippingMethod?default("N@A")>checked="checked"</#if>-->
                         />
                         <#if shoppingCart.getShippingContactMechId()?exists>
                           <#assign shippingEst = shippingEstWpr.getShippingEstimate(carrierShipmentMethod)?default(-1)>
                         </#if>
-                        <#if carrierShipmentMethod.partyId != "_NA_">${carrierShipmentMethod.partyId?if_exists}&nbsp;</#if>${carrierShipmentMethod.description?if_exists}
-                        <#if shippingEst?has_content> - <#if (shippingEst > -1)><@ofbizCurrency amount=shippingEst isoCode=shoppingCart.getCurrency()/> 
+                        <#if carrierShipmentMethod.partyId != "_NA_">${carrierShipmentMethod.description?if_exists}</#if>
+                        <#if shippingEst?has_content>
+                          &nbsp;-&nbsp; 
+                          <#if (shippingEst > -1)><@ofbizCurrency amount=shippingEst isoCode=shoppingCart.getCurrency()/> 
                             <#if shoppingCart.getCurrency() == kuna>&nbsp;(<@ofbizCurrency amount=shippingEst/exchangeRate isoCode=euro/>)</#if>
                             <#if shoppingCart.getCurrency() == euro>&nbsp;(<@ofbizCurrency amount=shippingEst*exchangeRate isoCode=kuna/>)</#if>
-                            <#else>
-                                ${uiLabelMap.OrderCalculatedOffline}
-                        </#if></#if>
+                          <#else>
+                            ${uiLabelMap.OrderCalculatedOffline}
+                          </#if>
+                        </#if>
                         <br/>
-                  </#list>
+                      </#list>
                     </td>
                   </tr>
                   <#if !carrierShipmentMethodList?exists || carrierShipmentMethodList?size == 0>
                     <tr>
-                      <td width="1%" valign="top">
+                      <td width="1%" valign="top" style="border-top:0;">
                         <input type="radio" name="shipping_method" value="Default" checked="checked"/>
                       </td>
-                      <td valign="top">
+                      <td valign="top" style="border-top:0;">
                         <div>${uiLabelMap.OrderUseDefault}.</div>
                       </td>
                     </tr>
                   </#if>
-<!--
+                  <#-- Override splitting and gift options -->
+                  <input type="hidden" name="may_split" value="false"/>
+                  <input type="hidden" name="is_gift" value="false"/>
+                  <!--
                   <tr>
                     <td colspan="2">
                       <h2>${uiLabelMap.OrderShipAllAtOnce}?</h2>
@@ -240,25 +246,32 @@ function submitForm(form, mode, value) {
                     </td>
                   </tr>
                   <tr><td colspan="2"><hr /></td></tr>
-                 <#else/>
-                    <input type="hidden" name="shipping_method" value="NO_SHIPPING@_NA_"/>
-                    <input type="hidden" name="may_split" value="false"/>
-                    <input type="hidden" name="is_gift" value="false"/>
-                 </#if>
--->
-                    <input type="hidden" name="may_split" value="false"/>
-                    <input type="hidden" name="is_gift" value="false"/>
-
+                  -->
+                <#else/>
+                  <tr>
+                    <td colspan="2" style="color:red;" style="border-top:0;">
+                      <#if locale=="hr">
+                        Izaberite adresu pod stavkom <b>"1) Kome isporučujemo?"</b> kako bi vidjeli opcije isporuke 
+                        <br/> (potrebno i u slučaju osobnog preuzimanja)
+                      <#else>
+                        Please choose the shipping address first in order to see the shipping options.
+                      </#if>
+                    </td>
+                  </tr>
+                  <input type="hidden" name="shipping_method" value="NO_SHIPPING@_NA_"/>
+                  <input type="hidden" name="may_split" value="false"/>
+                  <input type="hidden" name="is_gift" value="false"/>
+                </#if>
                   <tr>
                     <td colspan="2">
                       <h2>${uiLabelMap.OrderSpecialInstructions}</h2>
-<!--
-                    </td>
-                  </tr>
-                  <tr>
-                    <td colspan="2">
--->
-                      <textarea cols="30" rows="3" wrap="hard" name="shipping_instructions">${shoppingCart.getShippingInstructions()?if_exists}</textarea>
+                        <!--
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">
+                        -->
+                      <textarea cols="60" rows="3" wrap="hard" name="shipping_instructions">${shoppingCart.getShippingInstructions()?if_exists}</textarea>
                     </td>
                   </tr>
                  <#if shipping == true>
@@ -288,18 +301,18 @@ function submitForm(form, mode, value) {
                   <input type="hidden" name="is_gift" value="false"/>
                   </#if>
                  </#if>
-<!--
+                  <!--
                   <tr><td colspan="2"><hr /></td></tr>
--->
+                  -->
                   <tr>
                     <td colspan="2">
                       <h2>${uiLabelMap.PartyEmailAddresses}</h2>
-<!--
-                    </td>
-                  </tr>
-                  <tr>
-                    <td colspan="2">
--->
+                        <!--
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">
+                        -->
                       <div>${uiLabelMap.OrderEmailSentToFollowingAddresses}:
                       <b>
                       <#list emailList as email>
@@ -307,31 +320,28 @@ function submitForm(form, mode, value) {
                       </#list>
                       </b>
                       </div>
-<!--
+                      <!--
                       <div>${uiLabelMap.OrderUpdateEmailAddress} <a href="<#if customerDetailLink?exists>${customerDetailLink}${shoppingCart.getPartyId()}" target="partymgr"
                         <#else><@ofbizUrl>viewprofile?DONE_PAGE=quickcheckout</@ofbizUrl>"</#if> class="buttontext">${uiLabelMap.PartyProfile}</a>.</div>
                       <br />
                       <div>${uiLabelMap.OrderCommaSeperatedEmailAddresses}:</div>
                       <input type="text" size="30" name="order_additional_emails" value="${shoppingCart.getOrderAdditionalEmails()?if_exists}"/>
--->
+                      -->
                     </td>
                   </tr>
-                  <tr>
-					<td colspan="2"  style="text-align:center">
-					  <a href="javascript:submitForm(document.checkoutInfoForm, 'DN', '');" class="buttontextbig">${uiLabelMap.OrderContinueToFinalOrderReview}</a>
-					</td>
-				  </tr>
                 </table>
             </div>
         </div>
       </td>
-      <td bgcolor="white" width="1">&nbsp;&nbsp;</td>
-      <td height="100%">
+    </tr>
+    <tr>
+      <#--<td bgcolor="white" width="1">&nbsp;&nbsp;</td>-->
+      <td height="100%" style="border-top:0;">
           <#-- Payment Method Selection -->
-
+        <#assign checkFirst = true />
         <div class="screenlet" style="height: 100%; min-width:350px;">
             <div class="screenlet-title-bar">
-                <div class="h3">3)${uiLabelMap.OrderHowShallYouPay}?</div>
+                <div class="h3">3) ${uiLabelMap.OrderHowShallYouPay}?</div>
             </div>
             <div class="screenlet-body" style="height: 100%;">
                 <table width="100%" cellpadding="1" cellspacing="0" border="0">
@@ -358,7 +368,7 @@ function submitForm(form, mode, value) {
                   <#assign checkFirst = true />
                   <#if productStorePaymentMethodTypeIdMap.EXT_PAYPAL?exists>
                   <tr>
-                    <td width="1%">
+                    <td width="1%" valign="top" style="border-top:0;">
                       <input type="radio" name="checkOutPaymentId" value="EXT_PAYPAL" 
                         <#if "EXT_PAYPAL" == checkOutPaymentId || checkFirst>
                           checked="checked"
@@ -366,27 +376,32 @@ function submitForm(form, mode, value) {
                         </#if>
                       />
                     </td>
-                    <td width="50%">
-                      <span>${uiLabelMap.AccountingPayWithPayPal}</span>
+                    <td width="50%" valign="top" style="border-top:0;">
+                      ${uiLabelMap.AccountingPayWithPayPal}
                     </td>
                   </tr>
                   </#if>
                   <#if productStorePaymentMethodTypeIdMap.EXT_OFFLINE?exists>
                   <tr>
-                    <td width="1%">
-                      <input type="radio" name="checkOutPaymentId" value="EXT_OFFLINE" <#if "EXT_OFFLINE" == checkOutPaymentId>checked="checked"</#if>/>
+                    <td width="1%" valign="top" style="border-top:0;">
+                      <input type="radio" name="checkOutPaymentId" value="EXT_OFFLINE" 
+                        <#if "EXT_OFFLINE" == checkOutPaymentId|| checkFirst>
+                          checked="checked"
+                          <#assign checkFirst=false/>
+                        </#if>
+                      />
                     </td>
-                    <td width="50%">
-                      <span>${uiLabelMap.OrderMoneyOrder}</span>
+                    <td width="50%" valign="top" style="border-top:0;">
+                      ${uiLabelMap.OrderMoneyOrder}
                     </td>
                   </tr>
                   </#if>
                   <#if productStorePaymentMethodTypeIdMap.EFT_ACCOUNT?exists>
                   <tr>
-                    <td width="1%">
+                    <td width="1%" valign="top">
                       <input type="radio" name="checkOutPaymentId" value="EFT_ACCOUNT" <#if "EFT_ACCOUNT" == checkOutPaymentId>checked="checked"</#if>/>
                     </td>
-                    <td width="50%">
+                    <td width="99%" valign="top">
                       <span>${uiLabelMap.PartyEftAccount}</span>
                     </td>
                   </tr>
@@ -595,6 +610,11 @@ function submitForm(form, mode, value) {
         <#-- End Payment Method Selection -->
       </td>
     </tr>
+    <tr>
+			<td colspan="2" style="text-align:center; border-top:0;">
+			  <a href="javascript:submitForm(document.checkoutInfoForm, 'DN', '');" class="buttontextbig">${uiLabelMap.OrderContinueToFinalOrderReview}</a>
+			</td>
+		</tr>
   </table>
 </form>
 
