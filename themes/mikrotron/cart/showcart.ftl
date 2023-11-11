@@ -526,14 +526,14 @@ function setAlternateGwp(field) {
 
 -->
 
-<#if associatedProducts?has_content>
+<#--<#if associatedProducts?has_content>
 <div>
     <div>
         <h2>${uiLabelMap.EcommerceYouMightAlsoIntrested}:</h2>
     </div>
-    <div>
+    <div>-->
         <#-- random complementary products -->
-        <#list associatedProducts as assocProduct>
+        <#--<#list associatedProducts as assocProduct>
             <div>
                 ${setRequestAttribute("optProduct", assocProduct)}
                 ${setRequestAttribute("listIndex", assocProduct_index)}
@@ -542,7 +542,7 @@ function setAlternateGwp(field) {
         </#list>
     </div>
 </div>
-</#if>
+</#if>-->
 
 <#--
 <#if (shoppingCartSize?default(0) > 0)>
