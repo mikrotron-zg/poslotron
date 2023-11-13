@@ -98,7 +98,7 @@ under the License.
               <#if product.piecesIncluded?exists && product.piecesIncluded?long != 0>
                   [${uiLabelMap.OrderPieces}: ${product.piecesIncluded}]
               </#if>
-              <#if (product.quantityIncluded?exists && product.quantityIncluded != 0) || product.quantityUomId?has_content>
+              <#--<#if (product.quantityIncluded?exists && product.quantityIncluded != 0) || product.quantityUomId?has_content>
                 <#assign quantityUom = product.getRelatedOne("QuantityUom", true)?if_exists/>
                   [${uiLabelMap.CommonQuantity}: ${product.quantityIncluded?if_exists} ${((quantityUom.abbreviation)?default(product.quantityUomId))?if_exists}]
               </#if>
@@ -117,7 +117,7 @@ under the License.
               <#if (product.productDepth?exists && product.productDepth != 0) || product.depthUomId?has_content>
                 <#assign depthUom = product.getRelatedOne("DepthUom", true)?if_exists/>
                   [${uiLabelMap.CommonDepth}: ${product.productDepth?if_exists} ${((depthUom.abbreviation)?default(product.depthUomId))?if_exists}]
-              </#if>
+              </#if>-->
             </#if>
             <#if maySelectItems?default("N") == "Y">
               <#assign returns = orderItem.getRelated("ReturnItem", null, null, false)?if_exists>
