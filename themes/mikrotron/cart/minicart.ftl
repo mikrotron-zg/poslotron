@@ -23,7 +23,6 @@ under the License.
 <#else>
     <#assign shoppingCartSize = 0>
 </#if>
-<#include "../includes/common.ftl">
 
 <div id="minicart">
     <h3>${uiLabelMap.OrderCartSummary}</h3>
@@ -48,8 +47,6 @@ under the License.
               <tr>
                 <td colspan="3">
                   ${uiLabelMap.OrderTotal}: <@ofbizCurrency amount=shoppingCart.getDisplayGrandTotal() isoCode=shoppingCart.getCurrency()/>
-                  <#if shoppingCart.getCurrency() == kuna>&nbsp; (<@ofbizCurrency amount=shoppingCart.getDisplayGrandTotal()/exchangeRate isoCode=euro/>)</#if>
-                  <#if shoppingCart.getCurrency() == euro>&nbsp; (<@ofbizCurrency amount=shoppingCart.getDisplayGrandTotal()*exchangeRate isoCode=kuna/>)</#if>
                 </td>
               </tr>
             </tfoot>
@@ -70,8 +67,6 @@ under the License.
                 </td>
                 <td>
                   <@ofbizCurrency amount=cartLine.getDisplayItemSubTotal() isoCode=shoppingCart.getCurrency()/>
-                  <#if shoppingCart.getCurrency() == kuna>&nbsp;(<@ofbizCurrency amount=cartLine.getDisplayItemSubTotal()/exchangeRate isoCode=euro/>)</#if>
-                  <#if shoppingCart.getCurrency() == euro>&nbsp;(<@ofbizCurrency amount=cartLine.getDisplayItemSubTotal()*exchangeRate isoCode=kuna/>)</#if>
                 </td>
               </tr>
               <#if cartLine.getReservStart()?exists>
@@ -94,9 +89,6 @@ under the License.
           <p>${uiLabelMap.OrderShoppingCartEmpty}</p>
         </#if>
     </div>
-    <#if shoppingCart.getCurrency() == kuna || shoppingCart.getCurrency() == euro>
-        <div><strong>${uiLabelMap.FixedExchangeRate}<br> 1 € = ${exchangeRate?string("0.00000")} kn</strong></div>
-    </#if>
 <#--
 <div class="shrsl_ShareASale_productShowCaseTarget_3837"></div>
 <script type="text/javascript"  src="http://showcase.shareasale.com/shareASale_liveWidget_loader.js?dt=11242014064552"></script>

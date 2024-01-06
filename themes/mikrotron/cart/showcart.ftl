@@ -141,8 +141,6 @@ function setAlternateGwp(field) {
 //]]>
 </script>
 
-<#include "../includes/common.ftl">
-
 <div>
     <div>
         <div>
@@ -367,13 +365,9 @@ function setAlternateGwp(field) {
                 </#if>
             </td>
             <td><@ofbizCurrency amount=cartLine.getDisplayPrice() isoCode=shoppingCart.getCurrency()/>
-                <#if shoppingCart.getCurrency() == kuna><br>(<@ofbizCurrency amount=cartLine.getDisplayPrice()/exchangeRate isoCode=euro/>)</#if>
-                <#if shoppingCart.getCurrency() == euro><br>(<@ofbizCurrency amount=cartLine.getDisplayPrice()*exchangeRate isoCode=kuna/>)</#if>
             </td>
             <!--<td><@ofbizCurrency amount=cartLine.getOtherAdjustments() isoCode=shoppingCart.getCurrency()/></td>-->
             <td><@ofbizCurrency amount=cartLine.getDisplayItemSubTotal() isoCode=shoppingCart.getCurrency()/>
-                <#if shoppingCart.getCurrency() == kuna><br>(<@ofbizCurrency amount=cartLine.getDisplayItemSubTotal()/exchangeRate isoCode=euro/>)</#if>
-                <#if shoppingCart.getCurrency() == euro><br>(<@ofbizCurrency amount=cartLine.getDisplayItemSubTotal()*exchangeRate isoCode=kuna/>)</#if>
             </td>
             <td><#if !cartLine.getIsPromo()><input type="checkbox" name="selectedItem" value="${cartLineIndex}" onclick="javascript:checkToggle(this);" /><#else>&nbsp;</#if></td>
           </tr>
@@ -408,10 +402,7 @@ function setAlternateGwp(field) {
         </#if>
         <tr>
           <th>${uiLabelMap.EcommerceCartTotal}:</th>
-          <td><@ofbizCurrency amount=shoppingCart.getDisplayGrandTotal() isoCode=shoppingCart.getCurrency()/>
-            <#if shoppingCart.getCurrency() == "HRK">&nbsp;(<@ofbizCurrency amount=shoppingCart.getDisplayGrandTotal()/exchangeRate isoCode=euro/>)</#if>
-            <#if shoppingCart.getCurrency() == "EUR">&nbsp;(<@ofbizCurrency amount=shoppingCart.getDisplayGrandTotal()*exchangeRate isoCode=kuna/>)</#if>
-          </td>
+          <td><@ofbizCurrency amount=shoppingCart.getDisplayGrandTotal() isoCode=shoppingCart.getCurrency()/></td>
         </tr>
         <#if itemsFromList>
         <tr>
@@ -470,9 +461,6 @@ function setAlternateGwp(field) {
         -->
       </table>
       </fieldset>
-      <#if shoppingCart.getCurrency() == kuna || shoppingCart.getCurrency() == euro>
-        <strong>${uiLabelMap.FixedExchangeRate}<br> 1 € = ${exchangeRate?string("0.00000")} kn</strong>
-      </#if>
     </form>
   <#else>
     <h2>${uiLabelMap.EcommerceYourShoppingCartEmpty}.</h2>

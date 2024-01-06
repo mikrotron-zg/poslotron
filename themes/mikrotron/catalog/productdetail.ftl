@@ -339,7 +339,6 @@ $(function(){
     <#assign productAdditionalImage2 = productContentWrapper.get("ADDITIONAL_IMAGE_2")?if_exists />
     <#assign productAdditionalImage3 = productContentWrapper.get("ADDITIONAL_IMAGE_3")?if_exists />
     <#assign productAdditionalImage4 = productContentWrapper.get("ADDITIONAL_IMAGE_4")?if_exists />
-    <#include "../includes/common.ftl">
 
       <#-- Category next/previous -->
       <#if category?exists>
@@ -387,8 +386,6 @@ $(function(){
             <div>
               ${uiLabelMap.ProductListPrice}: 
               <span class="basePrice"><@ofbizCurrency amount=price.listPrice isoCode=price.currencyUsed />
-                <#if price.currencyUsed == kuna>&nbsp;(<@ofbizCurrency amount=price.listPrice/exchangeRate isoCode=euro/>)</#if>
-                <#if price.currencyUsed == euro>&nbsp;(<@ofbizCurrency amount=price.listPrice*exchangeRate isoCode=kuna/>)</#if>
               </span>
             </div>
           </#if>
@@ -409,8 +406,6 @@ $(function(){
                 ${uiLabelMap.OrderYourPrice}: 
                 <#if "Y" = product.isVirtual?if_exists> ${uiLabelMap.CommonFrom} </#if>
                 <span class="${priceStyle}"><@ofbizCurrency amount=price.price isoCode=price.currencyUsed />
-                  <#if price.currencyUsed == kuna>&nbsp;(<@ofbizCurrency amount=price.price/exchangeRate isoCode=euro/>)</#if>
-                  <#if price.currencyUsed == euro>&nbsp;(<@ofbizCurrency amount=price.price*exchangeRate isoCode=kuna/>)</#if>
                 </span>
                  <#if product.productTypeId?if_exists == "ASSET_USAGE" || product.productTypeId?if_exists == "ASSET_USAGE_OUT_IN">
                 <#if product.reserv2ndPPPerc?exists && product.reserv2ndPPPerc != 0><br /><span class="${priceStyle}">${uiLabelMap.ProductReserv2ndPPPerc}<#if !product.reservNthPPPerc?exists || product.reservNthPPPerc == 0>${uiLabelMap.CommonUntil} ${product.reservMaxPersons?if_exists}</#if> <@ofbizCurrency amount=product.reserv2ndPPPerc*price.price/100 isoCode=price.currencyUsed /></span></#if>
@@ -425,8 +420,6 @@ $(function(){
             <div>
               ${uiLabelMap.OrderSave}: 
               <span class="basePrice"><@ofbizCurrency amount=priceSaved isoCode=price.currencyUsed />
-                <#if price.currencyUsed == kuna>&nbsp;(<@ofbizCurrency amount=priceSaved/exchangeRate isoCode=euro/>)</#if>&nbsp;
-                <#if price.currencyUsed == euro>&nbsp;(<@ofbizCurrency amount=priceSaved*exchangeRate isoCode=kuna/>)</#if>&nbsp;
                 (${percentSaved?int}%)
               </span>
             </div>

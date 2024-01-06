@@ -73,7 +73,6 @@ function submitForm(form, mode, value) {
 //]]>
 </script>
 
-<#include "../includes/common.ftl">
 <#assign shipping = !shoppingCart.containAllWorkEffortCartItems()> <#-- contains items which need shipping? -->
 <form method="post" name="checkoutInfoForm" style="margin:0;">
   <input type="hidden" name="checkoutpage" value="quick"/>
@@ -200,8 +199,6 @@ function submitForm(form, mode, value) {
                         <#if shippingEst?has_content>
                           &nbsp;-&nbsp; 
                           <#if (shippingEst > -1)><@ofbizCurrency amount=shippingEst isoCode=shoppingCart.getCurrency()/> 
-                            <#if shoppingCart.getCurrency() == kuna>&nbsp;(<@ofbizCurrency amount=shippingEst/exchangeRate isoCode=euro/>)</#if>
-                            <#if shoppingCart.getCurrency() == euro>&nbsp;(<@ofbizCurrency amount=shippingEst*exchangeRate isoCode=kuna/>)</#if>
                           <#else>
                             ${uiLabelMap.OrderCalculatedOffline}
                           </#if>

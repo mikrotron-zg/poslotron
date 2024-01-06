@@ -69,7 +69,6 @@ ${virtualJavaScript?if_exists}
     <#assign productInfoLinkId = productInfoLinkId + product.productId/>
     <#assign productDetailId = "productDetailId"/>
     <#assign productDetailId = productDetailId + product.productId/>
-    <#include "../includes/common.ftl">
     <div class="productsummary">
         <div class="smallimage">
             <a href="${productUrl}">
@@ -222,10 +221,7 @@ ${virtualJavaScript?if_exists}
             </#if>
             <#if price.listPrice?exists && price.price?exists && price.price?double < price.listPrice?double>
               ${uiLabelMap.ProductListPrice}: 
-              <span class="basePrice"><@ofbizCurrency amount=price.listPrice isoCode=price.currencyUsed/>
-                <#if price.currencyUsed == kuna>&nbsp;(<@ofbizCurrency amount=price.listPrice/exchangeRate isoCode=euro/>)</#if>
-                <#if price.currencyUsed == euro>&nbsp;(<@ofbizCurrency amount=price.listPrice*exchangeRate isoCode=kuna/>)</#if>
-              </span>
+              <span class="basePrice"><@ofbizCurrency amount=price.listPrice isoCode=price.currencyUsed/></span>
             </#if>
             <b>
               <#if price.isSale?exists && price.isSale>
@@ -237,10 +233,7 @@ ${virtualJavaScript?if_exists}
 
               <#if (price.price?default(0) > 0 && product.requireAmount?default("N") == "N")>
                 ${uiLabelMap.OrderYourPrice}: <#if "Y" = product.isVirtual?if_exists> ${uiLabelMap.CommonFrom} </#if>
-                <span class="${priceStyle}"><@ofbizCurrency amount=price.price isoCode=price.currencyUsed/>
-                  <#if price.currencyUsed == kuna>&nbsp;(<@ofbizCurrency amount=price.price/exchangeRate isoCode=euro/>)</#if>
-                  <#if price.currencyUsed == euro>&nbsp;(<@ofbizCurrency amount=price.price*exchangeRate isoCode=kuna/>)</#if>
-                </span>
+                <span class="${priceStyle}"><@ofbizCurrency amount=price.price isoCode=price.currencyUsed/></span>
               </#if>
             </b>
             <#if price.listPrice?exists && price.price?exists && price.price?double < price.listPrice?double>
@@ -248,9 +241,7 @@ ${virtualJavaScript?if_exists}
               <#assign percentSaved = (priceSaved?double / price.listPrice?double) * 100>
                 ${uiLabelMap.OrderSave}: 
                 <span class="basePrice"><@ofbizCurrency amount=priceSaved isoCode=price.currencyUsed/>
-                  <#if price.currencyUsed == kuna>&nbsp;(<@ofbizCurrency amount=priceSaved/exchangeRate isoCode=euro/>)</#if>
-                  <#if price.currencyUsed == euro>&nbsp;(<@ofbizCurrency amount=priceSaved*exchangeRate isoCode=kuna/>)</#if>
-                  &nbsp;<strong>(${percentSaved?int}%)</strong>
+                  <strong>(${percentSaved?int}%)</strong>
                 </span>
             </#if>
             </#if>

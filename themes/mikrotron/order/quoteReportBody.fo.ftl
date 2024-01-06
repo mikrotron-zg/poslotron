@@ -17,7 +17,6 @@ specific language governing permissions and limitations
 under the License.
 -->
 <#escape x as x?xml>
-<#include "../includes/common.ftl">
 <fo:block>
     <fo:table font-size="8pt" table-layout="fixed" width="100%">
         <fo:table-column column-width="15mm"/> <#-- product id -->
@@ -219,21 +218,6 @@ under the License.
                     </fo:table-cell>
                     <fo:table-cell padding="2pt">
                         <fo:block><@ofbizCurrency amount=grandTotalQuoteAmount rounding=2 isoCode=quote.currencyUomId/></fo:block>
-                    </fo:table-cell>
-                </fo:table-row>
-                <fo:table-row font-size="8pt">
-                    <fo:table-cell padding="2pt" number-columns-spanned="2">
-                        <fo:block text-align="right">
-                            <#if quote.currencyUomId == kuna>(<@ofbizCurrency amount=grandTotalQuoteAmount/exchangeRate isoCode=euro/>)</#if>
-                            <#if quote.currencyUomId == euro>(<@ofbizCurrency amount=grandTotalQuoteAmount*exchangeRate isoCode=kuna/>)</#if>
-                        </fo:block>
-                    </fo:table-cell>
-                </fo:table-row>
-                <fo:table-row font-size="8pt">
-                    <fo:table-cell padding="2pt" number-columns-spanned="2">
-                        <fo:block text-align="right">
-                            ${uiLabelMap.FixedExchangeRate} 1 € = ${exchangeRate?string("0.00000")} kn
-                        </fo:block>
                     </fo:table-cell>
                 </fo:table-row>
             </fo:table-body>
