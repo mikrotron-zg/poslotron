@@ -171,6 +171,20 @@ function submitForm(form, mode, value) {
         </div>
       </td>
     </tr>
+    <#if productStore.defaultLocaleString == "hr">
+      <tr>
+        <td colspan="2" style="border-top:0;">
+          <div class="screenlet" style="height: 100%; min-width:350px; background-color: #f7d680;">
+            <div class="screenlet-body" style="color:#1c334d; background-color: #f7d680; padding: 1em 1em 0em 1em;">
+              <b>NAPOMENA: </b>Zbog učestalih problema koje u zadnje vrijeme imamo kod dostave poštom 
+              (kašnjenja, zagubljene pošiljke, neisporučene/vraćene pošiljke), za pošiljke kod kojih je 
+              bitno da stignu u nekom roku preporučamo da izaberete dostavu GLS-om (rok isporuke 1-2 radna dana). Iz 
+              tog razloga privremeno smo smanjili cijene dostave GLS-om za pakete do 2 kg težine s 8,00 € na 4,00 €.
+            </div>
+          </div>
+        </td>
+      </tr>
+    </#if>
     <tr>
       <#--<td bgcolor="white" width="1">&nbsp;&nbsp;</td>-->
       <td height="100%" style="border-top:0;">
@@ -189,21 +203,22 @@ function submitForm(form, mode, value) {
                     <td colspan="2" valign="top" style="border-top:0;">
                       <#list carrierShipmentMethodList as carrierShipmentMethod>
                         <#assign shippingMethod = carrierShipmentMethod.shipmentMethodTypeId + "@" + carrierShipmentMethod.partyId>
-                        <input type="radio" name="shipping_method" value="${shippingMethod}" 
-                          <#--<#if shippingMethod == chosenShippingMethod?default("N@A")>checked="checked"</#if>-->
-                        />
                         <#if shoppingCart.getShippingContactMechId()?exists>
                           <#assign shippingEst = shippingEstWpr.getShippingEstimate(carrierShipmentMethod)?default(-1)>
                         </#if>
-                        <#if carrierShipmentMethod.partyId != "_NA_">${carrierShipmentMethod.description?if_exists}</#if>
-                        <#if shippingEst?has_content>
-                          &nbsp;-&nbsp; 
-                          <#if (shippingEst > -1)><@ofbizCurrency amount=shippingEst isoCode=shoppingCart.getCurrency()/> 
-                          <#else>
-                            ${uiLabelMap.OrderCalculatedOffline}
-                          </#if>
+                        <#if shippingEst?has_content && (shippingEst > -1)>
+                          <input type="radio" name="shipping_method" value="${shippingMethod}" 
+                            <#--<#if shippingMethod == chosenShippingMethod?default("N@A")>checked="checked"</#if>-->
+                          />
+                          <#if carrierShipmentMethod.partyId != "_NA_">${carrierShipmentMethod.description?if_exists}</#if>
+                            &nbsp;-&nbsp; 
+                            <#if (shippingEst > -1)>
+                              <@ofbizCurrency amount=shippingEst isoCode=shoppingCart.getCurrency()/> 
+                            <#else>
+                              ${uiLabelMap.OrderCalculatedOffline}
+                            </#if>
+                          <br/>
                         </#if>
-                        <br/>
                       </#list>
                     </td>
                   </tr>
@@ -261,14 +276,16 @@ function submitForm(form, mode, value) {
                 </#if>
                   <tr>
                     <td colspan="2">
-                      <h2>${uiLabelMap.OrderSpecialInstructions}</h2>
-                        <!--
+                      <!--<h4>${uiLabelMap.OrderSpecialInstructions}</h4>
+                        
                       </td>
                     </tr>
                     <tr>
                       <td colspan="2">
                         -->
-                      <textarea cols="60" rows="3" wrap="hard" name="shipping_instructions">${shoppingCart.getShippingInstructions()?if_exists}</textarea>
+                      <label for="shp_instr">${uiLabelMap.OrderSpecialInstructions}</label>
+                      <textarea id="shp_instr" cols="60" rows="3" wrap="hard" name="shipping_instructions" maxlength="1024" style="resize:none;">${shoppingCart.getShippingInstructions()?if_exists}
+                      </textarea>
                     </td>
                   </tr>
                  <#if shipping == true>
@@ -303,20 +320,20 @@ function submitForm(form, mode, value) {
                   -->
                   <tr>
                     <td colspan="2">
-                      <h2>${uiLabelMap.PartyEmailAddresses}</h2>
-                        <!--
+                      <!--<h4>${uiLabelMap.PartyEmailAddresses}</h4>
+                        
                         </td>
                       </tr>
                       <tr>
                         <td colspan="2">
                         -->
-                      <div>${uiLabelMap.OrderEmailSentToFollowingAddresses}:
+                      ${uiLabelMap.OrderEmailSentToFollowingAddresses}:
                       <b>
                       <#list emailList as email>
                         ${email.infoString?if_exists}<#if email_has_next>,</#if>
                       </#list>
                       </b>
-                      </div>
+                      
                       <!--
                       <div>${uiLabelMap.OrderUpdateEmailAddress} <a href="<#if customerDetailLink?exists>${customerDetailLink}${shoppingCart.getPartyId()}" target="partymgr"
                         <#else><@ofbizUrl>viewprofile?DONE_PAGE=quickcheckout</@ofbizUrl>"</#if> class="buttontext">${uiLabelMap.PartyProfile}</a>.</div>
