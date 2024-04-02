@@ -171,20 +171,6 @@ function submitForm(form, mode, value) {
         </div>
       </td>
     </tr>
-    <#if productStore.defaultLocaleString == "hr">
-      <tr>
-        <td colspan="2" style="border-top:0;">
-          <div class="screenlet" style="height: 100%; min-width:350px; background-color: #f7d680;">
-            <div class="screenlet-body" style="color:#1c334d; background-color: #f7d680; padding: 1em 1em 0em 1em;">
-              <b>NAPOMENA: </b>Zbog učestalih problema koje u zadnje vrijeme imamo kod dostave poštom 
-              (kašnjenja, zagubljene pošiljke, neisporučene/vraćene pošiljke), za pošiljke kod kojih je 
-              bitno da stignu u nekom roku preporučamo da izaberete dostavu GLS-om (rok isporuke 1-2 radna dana). Iz 
-              tog razloga privremeno smo smanjili cijene dostave GLS-om za pakete do 2 kg težine s 8,00 € na 4,00 €.
-            </div>
-          </div>
-        </td>
-      </tr>
-    </#if>
     <tr>
       <#--<td bgcolor="white" width="1">&nbsp;&nbsp;</td>-->
       <td height="100%" style="border-top:0;">
@@ -213,7 +199,7 @@ function submitForm(form, mode, value) {
                           <#if carrierShipmentMethod.partyId != "_NA_">${carrierShipmentMethod.description?if_exists}</#if>
                             &nbsp;-&nbsp; 
                             <#if (shippingEst > -1)>
-                              <@ofbizCurrency amount=shippingEst isoCode=shoppingCart.getCurrency()/> 
+                              <strong><@ofbizCurrency amount=shippingEst isoCode=shoppingCart.getCurrency()/></strong>
                             <#else>
                               ${uiLabelMap.OrderCalculatedOffline}
                             </#if>
