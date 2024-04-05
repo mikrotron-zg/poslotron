@@ -13,3 +13,4 @@ context.urlBase = server;
 context.mountPoints = new java.util.LinkedList();
 context.mountPoints.add("/");
 context.mountPoints.add("/shophr/");
+context.mountPoints.add("/shopeu/");
