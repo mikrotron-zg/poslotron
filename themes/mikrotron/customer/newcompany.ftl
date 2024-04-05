@@ -378,7 +378,7 @@ will generally always be reserved for the logo at the top of the page.
       </table>
       <#if ( locale == "hr" )>
         <p class="desc">
-          <b>Napomena:</b> Ukoliko namjeravate izabrati dostavu GLS-om, molimo da unesete kontakt broj kako bi olakšali i ubrzali dostavu. Hvala!
+          <b>Napomena:</b> Ukoliko namjeravate izabrati dostavu nekom od dostavnih službi, <br/>molimo da unesete kontakt broj kako bi olakšali i ubrzali dostavu. Hvala!
         </p>
       </#if>
     </fieldset>
