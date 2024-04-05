@@ -16,7 +16,6 @@
       <li><a href="#tocQuote">Molimo ponudu (kupovina: pravne
           osobe)</a></li>
       <li><a href="#tocCard">Zašto ne mogu platiti karticom?</a></li>
-	  <li><a href="#tocHPE">Zašto više nemate HP Express?</a></li>
       <li><a href="#tocDelivery">Koje su cijene i rokovi isporuke?</a></li>
       <li><a href="#tocHP">Koju vrstu pošiljke šaljete kada izaberem stavku dostave
          'Hrvatska pošta'?</a></li>
@@ -102,66 +101,41 @@
 <br/>
 </div>
 <div>
-    <h2><a class="mozTocH1" name="tocHPE"></a>Zašto više nemate HP Express?</h2>
-	Hrvatska pošta je s 1.1.2020. godine, bez prethodne najave, ukinula uslugu "HP Express" 
-	i zamjenila ju "novom" uslugom "Paket 24". Uz to, dosadašnji rokovi isporuke (do 10, 15 i 20 sati) 
-	zamjenjeni su novim rokovima (do 9, 11 i 20 sati). Kako smo mi do sada koristili opciju 'do 15 sati' 
-	kao najoptimalniju, provjerili smo cijene za opciju 'do 11 sati' i, naravno, ona je sada oko 
-	60% skuplja! Ali, čak niti uz opciju 'do 20 sati' cijene ne bi mogle ostati na nivou prijašnje 
-	opcije 'do 15 sati', nego bi morale porasti za 15-20%. <br/>
-	S obzirom na to da je HP Express i do sada bila najskuplja vrsta dostave, zaključili smo da 
-	nema smisla zadržati je u ponudi, pa je s 04.01.2020. ova opcija uklonjena iz web dućana. Naravno, 
-	ukoliko dođe do pozitivnih promjena po pitanju cijene ove usluge, ponovno ćemo razmisliti o njenom 
-	uvođenju, ma kako se ona tada zvala.<br/>
-<br/>
-</div>
-<div>
-    <h2><a class="mozTocH1" name="tocDelivery"></a>Koje su cijene i
-      rokovi isporuke?</h2>
-    Cijena isporuke računa se prema težini, uključujući ambalažu, na
-    osnovu cijena Hrvatske pošte i cijena ambalaže. Izračunata cijena
-    prikazuje se kada u narudžbi izaberete adresu dostave.<br/>
-    <br/>
-    HP: od 1.33 € (10.00 kn) naviše<br/>
-    GLS: od 5,44 € (41.00 kn) naviše<br/>
-    <br/>
+    <h2><a class="mozTocH1" name="tocDelivery"></a>Koje su cijene i rokovi isporuke?</h2>
+    Cijena isporuke računa se prema težini, uključujući ambalažu, na osnovu cijena dostave i cijena ambalaže. 
+    Izračunata cijena prikazuje se kada u narudžbi izaberete adresu dostave, a cijene kreću od:<br/>
+    <ul style="list-style-type:disc;padding-left: 40px;">
+      <li><b>HP:</b> od 3,40 € naviše</li>
+      <li><b>DPD:</b> od 4,50 € naviše</li>
+      <li><b>GLS:</b> od 8,50 € naviše</li>
+    </ul>
     Za uplate vidljive na našem računu (ili ako pošaljete potvrdu na email) do 12 sati
-    pošiljku predajemo na dostavu do kraja dana. Ne brinite ako ste zakasnili, u 99%
+    pošiljku predajemo na dostavu do kraja dana. Izuzeak je DPD koji pošiljku prikuplja idući
+    radni dan. Ne brinite ako ste zakasnili, u velikoj većini
     slučajeva i za uplate iza 12 sati isporuka kreće isti dan :)<br/><br/>
-    HP: Vrste pošiljki i rokovi dostave detaljnije su objašnjeni <a href="#tocHP">ovdje</a><br/>
-    GLS: idući radni dan (iznimno dva, izuzetci su nabrojani na GLS-ovoj web stranici)<br/>
-    <br/>
+    Rokovi isporuke su slijedeći:
+    <ul style="list-style-type:disc;padding-left: 40px;">
+      <li><b>HP:</b> 4-8 radnih dana</li>
+      <li><b>DPD:</b> 2-3 radna dana</li>
+      <li><b>GLS:</b> 1-2 radna dana</li>
+    </ul>
+    <b>Napomena:</b> Dan predaje pošiljke dostavljaču ne računa se u rok isporuke.<br/>
     Ako neki naručeni artikl trenutno nemamo u dućanu, rokove isporuke
     javljamo mailom ili telefonski. U tom slučaju, po dogovoru, možete
     poništiti narudžbu u cijelosti ili djelomično, a cijenu otkazane
     robe refundiramo odmah.<br/>
     <br/>
-<br/>
 </div>
 <div>
     <h2><a class="mozTocH1" name="tocHP"></a>Koju vrstu pošiljke šaljete kada izaberem stavku dostave
        'Hrvatska pošta'?</h2>
-    Kako bi dobili optimalnu (ako je to ikako moguće) poštansku dostavu bez previše stavki kod
-    izbora dostave i uz najmanje moguće troškove, isporuka poštom podjeljena je u tri kategorije,
-    ovisno o težini pošiljke:<br/><br/>
-
-      1) Pošiljke <b>do 250 g</b> šalju se kao prioritetno pismo. Obično pismo više ne šaljemo
-        jer je znalo putovati i do dva tjedna. Prema tvrdnjama pošte 85% ovih pošiljaka uručuje se
-        za jedan radni dan (D+1), 95% za dva (D+2), a sve ostale za tri (D+3). Za otoke, svi rokovi su duži za jedan dan.
-        Pomnožite navedene rokove s faktorom 2 - 4 pa je to onda bliže stvarnosti.<br/>
-      2) Pošiljke u rasponu <b>od 251-1000 g</b> šaljemo kao preporučenu pošiljku. Iznimno, pošiljku do
-        250 g ćemo također poslati kao preporučenu pošiljku ako joj vrijednost prelazi 25.00 € (188.36 kn). Razlika u
-        cijeni u tom slučaju ide na naš trošak. Rok dostave = D+3 puta faktor iz točke 1)<br/>
-      3) Pošiljke <b>teže od 1 kg</b> šaljemo kao paket s dostavom na adresu, tamo gdje je takva vrsta
-      dostave moguća (<a target="_blank" href="http://bit.ly/2CI42Ew">Popis mjesta s dostavom na adresu</a>).
-      Tamo gdje nije, nažalost morati ćete otići po Vašu pošiljku u poštanski ured. Rok dostave za pakete je
-      tri radna dana (D+3).<br/><br/>
-      Vrijedi napomenuti da za pakete koji su uručeni s prekoračenjem roka dostave, možete pokrenuti
-      <a target="_blank" href="https://www.posta.hr/reklamacije-275/275">Potražni postupak</a> (iako
-      zapravo znate gdje je pošiljka, pošta ne poznaje pojam žalbe ili reklamacije), a na isti način
-      možete se žaliti i na bilo kakve druge nepravilnosti u isporuci. Ako Vam uvaže žalbu, imate pravo i
-      na naknadu u iznosu trostruke poštarine :)
-	<br/>
+      Zbog problema s dostavom poštom, zagubljenih i zakašnjelih pošiljki, šaljemo isključivo preporučene
+      pošiljke, što znači da je najveća težina pošiljke koju šaljemo poštom ograničena na 2 kg. Također, 
+      ukoliko vas poštar "ne pronađe" kod kuće, u sandučić dobivate samo obavijest pa po pošiljku morate u 
+      najbliži poštanski ured. Svaka pošiljka dobiva broj za praćenje koji vam šaljemo na e-mail, pa status
+      svoje pošiljke možete provjeriti na linku <a target="_blank" href="https://posiljka.posta.hr/">
+      https://posiljka.posta.hr/</a> ili u poštanskom uredu.
+	<br/><br/>
 </div>
 <div>
     <h2><a class="mozTocH1" name="tocPouzece"></a>Zašto ne mogu
