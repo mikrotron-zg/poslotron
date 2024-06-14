@@ -27,7 +27,7 @@ under the License.
   <div class="screenlet-body">
     <form name="keywordsearchform" id="keywordsearchbox_keywordsearchform" method="post" action="<@ofbizUrl>keywordsearch</@ofbizUrl>">
       <fieldset class="inline">
-        <input type="hidden" name="VIEW_SIZE" value="10" />
+        <input type="hidden" name="VIEW_SIZE" value="50" />
         <input type="hidden" name="PAGING" value="Y" />
         <div>
           <input type="text" name="SEARCH_STRING" size="14" maxlength="50" value="${requestParameters.SEARCH_STRING?if_exists}" />
