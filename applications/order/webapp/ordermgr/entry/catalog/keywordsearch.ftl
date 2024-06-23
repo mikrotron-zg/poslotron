@@ -17,7 +17,8 @@ specific language governing permissions and limitations
 under the License.
 -->
 
-<h1>${uiLabelMap.ProductProductSearch}, <span class="h2">${uiLabelMap.ProductYouSearchedFor}:</span></h1>
+<h1>${uiLabelMap.ProductProductSearch}</h1>
+<#--
 <br />
 <ul>
 <#list searchConstraintStrings as searchConstraintString>
@@ -28,6 +29,7 @@ under the License.
 <div>${uiLabelMap.CommonSortedBy}: ${searchSortOrderString}</div>
 <br />
 <div><a href="<@ofbizUrl>advancedsearch?SEARCH_CATEGORY_ID=${(requestParameters.SEARCH_CATEGORY_ID)?if_exists}</@ofbizUrl>" class="buttontext">${uiLabelMap.CommonRefineSearch}</a></div>
+-->
 
 <#if !productIds?has_content>
   <h2>&nbsp;${uiLabelMap.ProductNoResultsFound}.</h2>
