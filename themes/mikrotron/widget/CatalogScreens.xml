@@ -96,7 +96,7 @@ under the License.
                 <script location="component://ecommerce/webapp/ecommerce/WEB-INF/actions/catalog/MiniProductSummary.groovy"/>
             </actions>
             <widgets>
-                <platform-specific><html><html-template location="component://ecommerce/webapp/ecommerce/catalog/minilastviewedproducts.ftl"/></html></platform-specific>
+                <platform-specific><html><html-template location="component://mikrotron/catalog/minilastviewedproducts.ftl"/></html></platform-specific>
             </widgets>
         </section>
     </screen>
@@ -121,7 +121,7 @@ under the License.
                 <script location="component://ecommerce/webapp/ecommerce/WEB-INF/actions/catalog/MiniProductSummary.groovy"/>
             </actions>
             <widgets>
-                <platform-specific><html><html-template location="component://ecommerce/webapp/ecommerce/catalog/miniproductsummary.ftl"/></html></platform-specific>
+                <platform-specific><html><html-template location="component://mikrotron/catalog/miniproductsummary.ftl"/></html></platform-specific>
             </widgets>
         </section>
     </screen>
@@ -345,7 +345,7 @@ under the License.
             <widgets>
                 <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
                     <decorator-section name="body">
-                        <platform-specific><html><html-template location="component://ecommerce/webapp/ecommerce/catalog/lastviewedproducts.ftl"/></html></platform-specific>
+                        <platform-specific><html><html-template location="component://mikrotron/catalog/lastviewedproducts.ftl"/></html></platform-specific>
                     </decorator-section>
                 </decorator-screen>
             </widgets>

@@ -222,7 +222,9 @@ under the License.
                     <include-screen name="miniassocprods" location="component://mikrotron/widget/CatalogScreens.xml"/>
                     <include-screen name="factoids" location="component://ecommerce/widget/ContentScreens.xml"/>
                     <include-screen name="minilastviewedcategories" location="component://mikrotron/widget/CatalogScreens.xml"/>
+-->
                     <include-screen name="minilastviewedproducts" location="component://mikrotron/widget/CatalogScreens.xml"/>
+<!--
                     <include-screen name="minilastproductsearches" location="component://mikrotron/widget/CatalogScreens.xml"/>
                     <include-screen name="recentlyviewed" location="component://ecommerce/widget/ContentScreens.xml"/>
                     <include-screen name="populartags" location="component://mikrotron/widget/CatalogScreens.xml"/>
