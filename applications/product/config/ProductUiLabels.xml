@@ -28953,6 +28953,18 @@
         <value xml:lang="zh">搜索目录</value>
         <value xml:lang="zh_TW">搜索目錄</value>
     </property>
+    <property key="ProductSearchCatalogInputPlaceholder">
+        <value xml:lang="en">Enter min 3 letters</value>
+        <value xml:lang="hr">Upišite min. 3 slova</value>
+    </property>
+    <property key="ProductSearchCatalogAny">
+        <value xml:lang="en">Any word matches</value>
+        <value xml:lang="hr">Bilo koja riječ odgovara</value>
+    </property>
+    <property key="ProductSearchCatalogAll">
+        <value xml:lang="en">All words match</value>
+        <value xml:lang="hr">Sve riječi odgovaraju</value>
+    </property>
     <property key="ProductSearchExport">
         <value xml:lang="de">Exportieren</value>
         <value xml:lang="en">Export</value>
