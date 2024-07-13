@@ -49,8 +49,6 @@
     banke Zagreb.<br>
     Plaćanje možete izvršiti općom uplatnicom, internet
     ili mobilnim bankarstvom.<br>
-    Stranci plaćaju kao i obično, u
-    eurima, putem PayPal servisa.<br>
   </p>
   <p>Proizvode isporučujemo po primljenoj uplati.<br>
   Ako naručenu robu preuzimate osobno u našem uredu,
