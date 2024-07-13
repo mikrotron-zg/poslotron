@@ -211,17 +211,13 @@ ${virtualJavaScript?if_exists}
               </#list>
             </div>
           </#if>
-          <div>
-          <b>${product.productId?if_exists}</b>
+          <div style="margin-left:57px; margin-top:5px;">
+            <i>ID: ${product.productId?if_exists}</i>&nbsp;&nbsp;
             <#if totalPrice?exists>
               <div>${uiLabelMap.ProductAggregatedPrice}: <span class='basePrice'><@ofbizCurrency amount=totalPrice isoCode=totalPrice.currencyUsed/></span></div>
             <#else>
             <#if price.competitivePrice?exists && price.price?exists && price.price?double < price.competitivePrice?double>
               ${uiLabelMap.ProductCompareAtPrice}: <span class='basePrice'><@ofbizCurrency amount=price.competitivePrice isoCode=price.currencyUsed/></span>
-            </#if>
-            <#if price.listPrice?exists && price.price?exists && price.price?double < price.listPrice?double>
-              ${uiLabelMap.ProductListPrice}: 
-              <span class="basePrice"><@ofbizCurrency amount=price.listPrice isoCode=price.currencyUsed/></span>
             </#if>
             <b>
               <#if price.isSale?exists && price.isSale>
@@ -237,11 +233,16 @@ ${virtualJavaScript?if_exists}
               </#if>
             </b>
             <#if price.listPrice?exists && price.price?exists && price.price?double < price.listPrice?double>
+              <span class="basePrice" style="text-decoration: line-through;">
+                (<@ofbizCurrency amount=price.listPrice isoCode=price.currencyUsed/>)
+              </span>
+            </#if>
+            <#if price.listPrice?exists && price.price?exists && price.price?double < price.listPrice?double>
               <#assign priceSaved = price.listPrice?double - price.price?double>
               <#assign percentSaved = (priceSaved?double / price.listPrice?double) * 100>
                 ${uiLabelMap.OrderSave}: 
-                <span class="basePrice"><@ofbizCurrency amount=priceSaved isoCode=price.currencyUsed/>
-                  <strong>(${percentSaved?int}%)</strong>
+                <span class="basePrice">
+                  <strong>${percentSaved?int}%</strong>
                 </span>
             </#if>
             </#if>
