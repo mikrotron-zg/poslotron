@@ -27,13 +27,6 @@ under the License.
       <a href="<@ofbizUrl>main</@ofbizUrl>" class="buttontextbig">${uiLabelMap.EcommerceContinueShopping}</a>
     </div>
   </div>
-  <#-- Event snippet for Website sale conversion page -->
-  <script>
-    gtag('event', 'conversion', {
-        'send_to': 'AW-11340369487/JLD4CIeP1uIYEM-cwZ8q',
-        'transaction_id': ''
-    });
-  </script>
 <#else>
   <h3>${uiLabelMap.OrderSpecifiedNotFound}.</h3>
 </#if>
