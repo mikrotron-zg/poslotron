@@ -31,6 +31,17 @@ under the License.
             </#if>
           </#if>
           </strong>
+          <#if priceResult.listPrice?exists && priceResult.price?exists && priceResult.price < priceResult.listPrice>
+            <span class="basePrice" style="text-decoration: line-through;">
+              (<@ofbizCurrency amount=priceResult.listPrice isoCode=priceResult.currencyUsed/>)
+            </span>
+            &nbsp;
+            <#assign percentSaved = ((priceResult.listPrice?double - priceResult.price?double) / priceResult.listPrice?double) * 100>
+            ${uiLabelMap.OrderSave}: 
+            <span class="basePrice">
+              <strong>${percentSaved?int}%</strong>
+            </span>
+          </#if>
         </li>
     <#if (miniProduct.introductionDate?exists) && (nowTimeLong < miniProduct.introductionDate.getTime())>
         <#-- check to see if introductionDate hasn't passed yet -->

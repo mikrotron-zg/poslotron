@@ -240,6 +240,7 @@ ${virtualJavaScript?if_exists}
             <#if price.listPrice?exists && price.price?exists && price.price?double < price.listPrice?double>
               <#assign priceSaved = price.listPrice?double - price.price?double>
               <#assign percentSaved = (priceSaved?double / price.listPrice?double) * 100>
+                &nbsp;
                 ${uiLabelMap.OrderSave}: 
                 <span class="basePrice">
                   <strong>${percentSaved?int}%</strong>
