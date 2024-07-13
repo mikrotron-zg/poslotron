@@ -316,7 +316,8 @@ $(function(){
         }
     });
 })
- </script>
+
+</script>
 
 <#macro showUnavailableVarients>
   <#if unavailableVariants?exists>
@@ -382,13 +383,6 @@ $(function(){
           <#if price.competitivePrice?exists && price.price?exists && price.price &lt; price.competitivePrice>
             <div>${uiLabelMap.ProductCompareAtPrice}: <span class="basePrice"><@ofbizCurrency amount=price.competitivePrice isoCode=price.currencyUsed /></span></div>
           </#if>
-          <#if price.listPrice?exists && price.price?exists && price.price &lt; price.listPrice>
-            <div>
-              ${uiLabelMap.ProductListPrice}: 
-              <span class="basePrice"><@ofbizCurrency amount=price.listPrice isoCode=price.currencyUsed />
-              </span>
-            </div>
-          </#if>
           <#if price.listPrice?exists && price.defaultPrice?exists && price.price?exists && price.price &lt; price.defaultPrice && price.defaultPrice &lt; price.listPrice>
             <div>${uiLabelMap.ProductRegularPrice}: <span class="basePrice"><@ofbizCurrency amount=price.defaultPrice isoCode=price.currencyUsed /></span></div>
           </#if>
@@ -413,15 +407,18 @@ $(function(){
                 <#if (!product.reserv2ndPPPerc?exists || product.reserv2ndPPPerc == 0) && (!product.reservNthPPPerc?exists || product.reservNthPPPerc == 0)><br />${uiLabelMap.ProductMaximum} ${product.reservMaxPersons?if_exists} ${uiLabelMap.ProductPersons}.</#if>
                  </#if>
              </strong>
+              <#if price.listPrice?exists && price.price?exists && price.price &lt; price.listPrice>
+                &nbsp;
+                (<span class="basePrice" style="text-decoration: line-through;"><@ofbizCurrency amount=price.listPrice isoCode=price.currencyUsed /></span>)
+                <span style="background:#eee;"><em>*${uiLabelMap.OrderSalePriceInfo}</em></span>
+              </#if>
           </div>
           <#if price.listPrice?exists && price.price?exists && price.price &lt; price.listPrice>
             <#assign priceSaved = price.listPrice - price.price />
             <#assign percentSaved = (priceSaved / price.listPrice) * 100 />
             <div>
               ${uiLabelMap.OrderSave}: 
-              <span class="basePrice"><@ofbizCurrency amount=priceSaved isoCode=price.currencyUsed />
-                (${percentSaved?int}%)
-              </span>
+              <strong>${percentSaved?int}%</strong>
             </div>
           </#if>
           <#-- show price details ("showPriceDetails" field can be set in the screen definition) -->
@@ -448,7 +445,7 @@ $(function(){
 
           <#if (product.weight?exists && product.weight != 0) || product.weightUomId?has_content>
             <#assign weightUom = product.getRelatedOne("WeightUom", true)?if_exists />
-            <div>
+            <div style="margin-top:5px;">
               ${uiLabelMap.ProductShippingWeight}: ${product.weight?if_exists} ${((weightUom.abbreviation)?default(product.weightUomId))?if_exists}
             </div>
           </#if>

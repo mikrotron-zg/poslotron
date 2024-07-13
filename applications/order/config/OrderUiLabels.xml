@@ -7142,6 +7142,10 @@
         <value xml:lang="zh">销售中</value>
         <value xml:lang="zh_TW">促銷</value>
     </property>
+    <property key="OrderSalePriceInfo">
+        <value xml:lang="en">the lowest price during the period of 30 days before the implementation of the special form of sale</value>
+        <value xml:lang="hr">najniža cijena tijekom razdoblja od 30 dana prije provođenja posebnog oblika prodaje</value>
+    </property>
     <property key="OrderOnlineUPSShippingEstimates">
         <value xml:lang="de">Online UPS Versandschätzungen basieren auf dem Gewicht und den Maßen des Pakets</value>
         <value xml:lang="en">Online UPS Shipping estimates based on weight and dimensions of packages</value>
