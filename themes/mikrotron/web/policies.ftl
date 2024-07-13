@@ -144,22 +144,10 @@
      2018. godine i nadzornom tijelu unutar EU-a.
   </p>
   <p>
-    Tijekom Vaše posjete web trgovini prikupljaju se i analitčki podaci koji
-    sadrže isključivo neidentifikacijske osobne podatke kao što su IP adresa,
-    web preglednik, web stranica s koje ste došli na ovu stranicu, Vaš internet
-    provider itsl. Mikrotron web trgovina koristi Google Analytics kao vanjskog
-    prikupitelja tih podataka, a isti se mogu koristiti i u marketinške svrhe –
-    više o tome pročitajte na <a href="https://policies.google.com/privacy/partners"
-    target="_blank">https://policies.google.com/privacy/partners</a>.
-  </p>
-  <p>
-    Mikrotron web trgovina koristi tzv. 'kolačiće' (eng. cookies) za osiguravanje
-    pune funkcionalnosti, ukoliko isključite korištenje 'kolačića' u Vašem web
+    Mikrotron web trgovina koristi samo nužne 'kolačiće' (eng. cookies) za osiguravanje
+    funkcionalnosti web trgovine, ukoliko isključite korištenje 'kolačića' u Vašem web
     pregledniku, web trgovina možda neće biti u stanju funkcionirati kako je
-    predviđeno te ju nećete moći koristiti za naručivanje roba i usluga.
-    Analitički i marketinški alati spomenuti u prethodnom poglavlju također
-    koriste 'kolačiće' za svoju funkcionalnost, onemogućavanje ovih 'kolačića'
-    ne utječe na funkcionalnost web trgovine.<br/>
+    predviđeno te ju nećete moći koristiti za naručivanje roba i usluga.<br/>
     U sklopu web trgovine postoje linkovi koji vode na druge web stranice,
     Mikrotron ne odgovara za sadržaj i pravila privatnosti tih stranica.
   </p>
@@ -263,21 +251,11 @@
     agency as of May 25, 2018.
   </p>
   <p>
-    During your visit to the web shop, some analytic data is being collected
-    which contain only the non-identifying personal data (e.g. your IP address,
-    your web browser type, web site you came from). Our web shop uses Google
-    Analytics to do the job, and this data can be used in the advertising –
-    you can find out more about it at <a href="https://policies.google.com/privacy/partners"
-    target="_blank">https://policies.google.com/privacy/partners</a>.
-  </p>
-  <p>
-    Mikrotron web shop uses cookies for the full web shop functionality – if
+    Mikrotron web shop uses only necessary cookies for the web shop functionality - if
     you turn of cookies in your web browser, web shop might not have full
     functionality and you might not be able to complete an order in the web
-    shop. Analytical tools also use cookies, disabling this cookies has no
-    impact on the web shop functionality. Web shop may contain links to the
-    other web sites, Mikrotron is in no way responsible for those site's
-    content and privacy policy.
+    shop. Web shop may contain links to the other web sites, Mikrotron is in 
+    no way responsible for those site's content and privacy policy.
   </p>
   <p>
     This Privacy Statement can be changed by Mikrotron with no prior notice,
