@@ -568,7 +568,7 @@ under the License.
         <field name="emailAddressFrom" entry-name="mapTo.emailAddress" parameter-name="sendFrom" use-when="&quot;${invoice.invoiceTypeId}&quot;.equals(&quot;PURCHASE_INVOICE&quot;)"><text/></field>
         <field name="emailAddressTo" entry-name="mapTo.emailAddress" parameter-name="sendTo" use-when="&quot;${invoice.invoiceTypeId}&quot;.equals(&quot;SALES_INVOICE&quot;)"><text/></field>
         <field name="emailAddressTo" entry-name="mapFrom.emailAddress" parameter-name="sendTo" use-when="&quot;${invoice.invoiceTypeId}&quot;.equals(&quot;PURCHASE_INVOICE&quot;)"><text/></field>
-        <field name="emailAddressCc" entry-name="ccEmailAddress" parameter-name="sendCc"><text default-value="shop@diykits.eu"/></field>
+        <field name="emailAddressCc" entry-name="ccEmailAddress" parameter-name="sendCc"><text default-value="diykits.shop@mikrotron.hr"/></field>
         <field name="subject"><text default-value="Vaš račun je u prilogu"/></field>
         <field name="otherCurrency" entry-name="parameters.other" parameter-name="other"><check/></field>
         <field name="bodyText"><textarea/></field>
