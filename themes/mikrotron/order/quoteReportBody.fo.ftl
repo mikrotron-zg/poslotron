@@ -233,4 +233,5 @@ under the License.
     </fo:instream-foreign-object>
 </fo:block>
 <fo:block text-align="right" font-size="7pt" margin-right="40pt">******************* 2D barkod za plaćanje *******************</fo:block>
+<fo:block text-align="right" font-size="11pt" margin-right="40pt">OVO NIJE FISKALIZIRANI RAČUN</fo:block>
 </#escape>

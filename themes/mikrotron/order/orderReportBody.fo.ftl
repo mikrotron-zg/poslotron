@@ -217,12 +217,14 @@ under the License.
             </fo:table-body>
         </fo:table>
         <fo:block space-after="5mm"/>
-        <fo:block text-align="right">
+        <fo:block text-align="right" margin-right="40pt">
           <fo:instream-foreign-object>
             <barcode:barcode xmlns:barcode="http://barcode4j.krysalis.org/ns" message="HRVHUB30\u000A${currencyUomId}\u000A${grandTotalCentsFormated}\u000A\u000A\u000A\u000AMIKROTRON d.o.o.\u000APAKOSTANSKA 5 K2-9\u000A10000 ZAGREB\u000AHR8023400091110675464\u000AHR00\u000A${orderId}\u000A\u000ANarudzba ${orderId}">
               <barcode:pdf417><barcode:row-height>0.5mm</barcode:row-height><barcode:module-width>0.6mm</barcode:module-width></barcode:pdf417>
             </barcode:barcode>
           </fo:instream-foreign-object>
         </fo:block>
+        <fo:block text-align="right" font-size="7pt" margin-right="40pt">******************* 2D barkod za plaćanje *******************</fo:block>
+        <fo:block text-align="right" font-size="11pt" margin-right="40pt">OVO NIJE FISKALIZIRANI RAČUN</fo:block>
     </#if>
 </#escape>
